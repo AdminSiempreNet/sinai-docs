@@ -1,0 +1,1 @@
+- Configuracion de storage / almacenamiento de imagenes

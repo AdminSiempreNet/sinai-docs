@@ -1,4 +1,5 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { UserMenu } from '@/components/auth/user-menu';
 
 /**
  * Opciones compartidas de layout.
@@ -10,5 +11,12 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: 'Sinai Docs',
     },
+    links: [
+      {
+        type: 'custom',
+        children: <UserMenu />,
+        secondary: true,
+      },
+    ],
   };
 }
