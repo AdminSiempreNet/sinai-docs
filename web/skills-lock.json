@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "fumadocs-mdx-structure": {
+      "source": "theorcdev/8bitcn-ui",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/fumadocs-mdx-structure/SKILL.md",
+      "computedHash": "f1b810c9074c3d9b7fae58fa1dde5eb21a5a60d37cff5089156fc750f8a91d77"
+    }
+  }
+}
