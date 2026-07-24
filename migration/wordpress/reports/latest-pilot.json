@@ -1,0 +1,13 @@
+{
+  "mode": "pilot",
+  "source": "C:\\Users\\andyg\\Desktop\\SIEMPRE.NET\\sinai-docs\\migration\\wordpress\\source\\basedeconocimientosinai.WordPress.2026-07-15.xml",
+  "wordpressId": 28229,
+  "slug": "faq-administrativos",
+  "status": "publish",
+  "role": "Administrativo",
+  "category": "Inicio de calendario",
+  "sourceFormat": "content:encoded",
+  "youtubeVideo": "I3UsYBLh4LE",
+  "target": "C:\\Users\\andyg\\Desktop\\SIEMPRE.NET\\sinai-docs\\web\\content\\docs\\administrativo\\__repair_faq\\faq-administrativos.mdx",
+  "generatedAt": "2026-07-17T05:58:04.363Z"
+}

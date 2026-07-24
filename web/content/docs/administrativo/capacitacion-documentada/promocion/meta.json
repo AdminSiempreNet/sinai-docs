@@ -1,0 +1,13 @@
+{
+  "title": "Promoción",
+  "defaultOpen": false,
+  "pages": [
+    "comision-de-evaluacion",
+    "promocion",
+    "recuperaciones",
+    "trasladar-matricula",
+    "foliar-libro",
+    "informes-de-promocion"
+  ],
+  "icon": "Award"
+}

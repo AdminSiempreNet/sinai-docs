@@ -1,0 +1,10 @@
+{
+  "title": "Docente",
+  "pages": [
+    "mi-horario",
+    "actividades-complementarias-docente",
+    "diario-pedagogico-docente",
+    "buscar-estudiante"
+  ],
+  "icon": "NotebookPen"
+}

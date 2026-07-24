@@ -1,0 +1,16 @@
+{
+  "title": "Capacitación documentada",
+  "defaultOpen": true,
+  "pages": [
+    "inicio",
+    "establecimiento",
+    "personal",
+    "matricula",
+    "seguimiento",
+    "planeacion",
+    "evaluacion",
+    "promocion",
+    "herramientas"
+  ],
+  "icon": "BookOpenCheck"
+}

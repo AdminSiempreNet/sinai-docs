@@ -1,0 +1,9 @@
+{
+  "title": "Finalización de periodo",
+  "defaultOpen": false,
+  "pages": [
+    "inconsistencias",
+    "consolidacion-calculo-de-puestos-y-boletines"
+  ],
+  "icon": "CalendarCheck"
+}

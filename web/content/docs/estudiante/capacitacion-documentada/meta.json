@@ -1,0 +1,10 @@
+{
+  "title": "Capacitación Documentada",
+  "defaultOpen": true,
+  "pages": [
+    "inicio",
+    "evaluacion-capacitacion-documentada",
+    "seguimiento-capacitacion-documentada"
+  ],
+  "icon": "BookOpenCheck"
+}

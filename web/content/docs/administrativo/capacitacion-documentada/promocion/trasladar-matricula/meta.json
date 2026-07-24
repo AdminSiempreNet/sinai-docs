@@ -1,0 +1,8 @@
+{
+  "title": "Trasladar matrícula",
+  "defaultOpen": false,
+  "pages": [
+    "trasladar-matricula-por-grupo",
+    "trasladar-matricula-por-estudiante"
+  ]
+}

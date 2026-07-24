@@ -1,0 +1,10 @@
+{
+  "title": "Estudiantes nuevos",
+  "defaultOpen": false,
+  "pages": [
+    "estudiantes-nuevos",
+    "inscripciones",
+    "configuracion-de-requisitos-de-matricula",
+    "importar-matricula"
+  ]
+}

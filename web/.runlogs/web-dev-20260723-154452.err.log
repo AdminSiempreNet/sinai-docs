@@ -1,0 +1,5 @@
+(node:17212) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 

@@ -1,0 +1,13 @@
+{
+  "title": "Calificaciones",
+  "defaultOpen": false,
+  "pages": [
+    "registro-de-calificaciones",
+    "calificacion-definitiva-directa",
+    "modificar-calificaciones-individuales",
+    "calificaciones-de-estudiantes-trasladados",
+    "copiar-calificaciones",
+    "planilla-de-calificaciones-excel",
+    "cuadro-de-honor"
+  ]
+}

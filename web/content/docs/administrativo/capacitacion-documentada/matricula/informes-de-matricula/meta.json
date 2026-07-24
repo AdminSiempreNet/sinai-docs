@@ -1,0 +1,8 @@
+{
+  "title": "Informes de matrícula",
+  "defaultOpen": false,
+  "pages": [
+    "informes-de-matricula",
+    "libros-de-matricula"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "fumadocs-component-docs": {
+      "source": "theorcdev/8bitcn-ui",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/fumadocs-component-docs/SKILL.md",
+      "computedHash": "a138321af90f7f6806996dea4ca59e4e613f8de588dbdda5aa259db2513d0ff2"
+    },
+    "fumadocs-mdx-structure": {
+      "source": "TheOrcDev/8bitcn-ui",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/fumadocs-mdx-structure/SKILL.md",
+      "computedHash": "f1b810c9074c3d9b7fae58fa1dde5eb21a5a60d37cff5089156fc750f8a91d77"
+    },
+    "interface-design": {
+      "source": "dammyjay93/interface-design",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/interface-design/SKILL.md",
+      "computedHash": "55a83a96d1e3d161b8c3630dab8ae2dd4547d92636d3d9b4b447d7d59163e084"
+    },
+    "motion-react": {
+      "source": "pedronauck/skills",
+      "sourceType": "github",
+      "skillPath": "skills/community/motion-react/SKILL.md",
+      "computedHash": "def581a9f41a0b6235ed5403bbba79dd3feb676ce38dd16acf72d7d1637936c4"
+    }
+  }
+}

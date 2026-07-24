@@ -9,3 +9,3271 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+:root {
+  --sinai-role-accent: #4976ff;
+  --sinai-role-accent-hover: #011ac7;
+  --sinai-menu-accent: var(--sinai-role-accent);
+  --sinai-menu-active: color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
+  --sinai-menu-active-hover: color-mix(in srgb, var(--sinai-role-accent) 18%, transparent);
+}
+
+/* Colores de marca por rol. Al estar definidos en body, se propagan a la
+   navegación, contenidos, botones e indicadores de Fumadocs. */
+body:has(.sinai-role-administrativo) {
+  --sinai-role-accent: #4976ff;
+  --sinai-role-accent-hover: #012287;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+body:has(.sinai-role-docente) {
+  --sinai-role-accent: #0cc50c;
+  --sinai-role-accent-hover: #2ddb2e;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+body:has(.sinai-role-estudiante) {
+  --sinai-role-accent: #d98e00;
+  --sinai-role-accent-hover: #b87300;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+.dark body:has(.sinai-role-estudiante) {
+  --sinai-role-accent: #f1dc55;
+  --sinai-role-accent-hover: #ffe875;
+}
+
+/* El atributo se establece desde la ruta activa y alcanza también los
+   elementos que Fumadocs renderiza fuera del contenido principal. */
+html[data-sinai-role="administrativo"] {
+  --sinai-role-accent: #4976ff;
+  --sinai-role-accent-hover: #4976ff;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+html[data-sinai-role="docente"] {
+  --sinai-role-accent: #00aa01;
+  --sinai-role-accent-hover: #2ddb2e;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+html[data-sinai-role="estudiante"] {
+  --sinai-role-accent: #d98e00;
+  --sinai-role-accent-hover: #b87300;
+  --color-fd-primary: var(--sinai-role-accent);
+}
+
+html.dark[data-sinai-role="estudiante"] {
+  --sinai-role-accent: #f1dc55;
+  --sinai-role-accent-hover: #ffe875;
+}
+
+/* El selector y el Ã¡rbol lateral viven fuera del contenido de la pÃ¡gina;
+   reciben el color del rol de forma explÃ­cita para acompaÃ±ar la selecciÃ³n. */
+body:has(.sinai-role-docente) :is(#nd-sidebar, #nd-sidebar-mobile) {
+  --sinai-menu-accent: #00aa01;
+  --sinai-menu-active: color-mix(in srgb, #00aa01 14%, transparent);
+  --sinai-menu-active-hover: color-mix(in srgb, #00aa01 20%, transparent);
+}
+
+body:has(.sinai-role-estudiante) :is(#nd-sidebar, #nd-sidebar-mobile) {
+  --sinai-menu-accent: var(--sinai-role-accent);
+  --sinai-menu-active: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  --sinai-menu-active-hover: color-mix(in srgb, var(--sinai-role-accent) 20%, transparent);
+}
+
+html[data-sinai-role="docente"] :is(#nd-sidebar, #nd-sidebar-mobile),
+html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
+  --sinai-menu-accent: var(--sinai-role-accent);
+  --sinai-menu-active: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  --sinai-menu-active-hover: color-mix(in srgb, var(--sinai-role-accent) 20%, transparent);
+}
+
+.sinai-menu-icon {
+  color: var(--color-fd-foreground);
+  stroke-width: 1.4;
+}
+
+.sinai-role-icon {
+  margin-inline-end: 0;
+}
+
+#nd-sidebar button .sinai-role-icon,
+#nd-sidebar-mobile button .sinai-role-icon {
+  color: var(--sinai-menu-accent);
+}
+
+/* El logo ocupa el espacio de identidad del menú sin desplazar el control
+   para contraer la barra lateral. */
+.sinai-sidebar-logo {
+  width: 4.5rem;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+#nd-sidebar-mobile .sinai-sidebar-logo {
+  width: 5rem;
+}
+
+/* Cada opciÃ³n del selector conserva el color de su propio rol, sin heredar
+   el acento de la pÃ¡gina que estÃ¡ activa. */
+.sinai-role-icon-administrativo {
+  color: #011ac7 !important;
+}
+
+.sinai-role-icon-docente {
+  color: #008c01 !important;
+}
+
+.sinai-role-icon-estudiante {
+  color: #d98e00 !important;
+}
+
+.dark .sinai-role-icon-administrativo {
+  color: #6f91ff !important;
+}
+
+.dark .sinai-role-icon-docente {
+  color: #31d832 !important;
+}
+
+.dark .sinai-role-icon-estudiante {
+  color: #f1dc55 !important;
+}
+
+#nd-sidebar [data-active="true"] .sinai-menu-icon,
+#nd-sidebar-mobile [data-active="true"] .sinai-menu-icon,
+#nd-sidebar [data-state]:has([data-active="true"]) > a .sinai-menu-icon,
+#nd-sidebar [data-state]:has([data-active="true"]) > button .sinai-menu-icon,
+#nd-sidebar-mobile [data-state]:has([data-active="true"]) > a .sinai-menu-icon,
+#nd-sidebar-mobile [data-state]:has([data-active="true"]) > button .sinai-menu-icon {
+  color: var(--sinai-menu-accent);
+}
+
+div:has(> .sinai-role-icon) {
+  margin-inline-end: 0.5rem;
+}
+
+/* Las páginas iniciales mantienen las rutas de cada rol, pero no se repiten
+   como elementos dentro del árbol lateral debajo del selector. */
+#nd-sidebar a:is(
+  [href="/docs/administrativo"],
+  [href="/docs/docente"],
+  [href="/docs/estudiante"]
+),
+#nd-sidebar-mobile a:is(
+  [href="/docs/administrativo"],
+  [href="/docs/docente"],
+  [href="/docs/estudiante"]
+) {
+  display: none;
+}
+
+/* Acerca el árbol al selector de rol sin alterar la separación entre opciones. */
+#nd-sidebar [data-radix-scroll-area-viewport],
+#nd-sidebar-mobile [data-radix-scroll-area-viewport] {
+  padding-top: 0 !important;
+}
+
+/* Refuerza el segundo nivel del árbol para que las guías se perciban como
+   hijas del módulo abierto, sin competir con el indicador de página activa. */
+#nd-sidebar [data-state][id] > div > [data-state] > [data-state][id],
+#nd-sidebar-mobile [data-state][id] > div > [data-state] > [data-state][id] {
+  position: relative;
+}
+
+#nd-sidebar [data-state][id] > div > [data-state] > [data-state][id]::before,
+#nd-sidebar-mobile [data-state][id] > div > [data-state] > [data-state][id]::before {
+  content: "";
+  position: absolute;
+  inset-block: 0.25rem;
+  inset-inline-start: 1.25rem;
+  width: 1px;
+  border-radius: 999px;
+  background-color: color-mix(in srgb, var(--color-fd-border) 72%, var(--color-fd-muted-foreground));
+  pointer-events: none;
+}
+
+#nd-sidebar [data-active="true"],
+#nd-sidebar-mobile [data-active="true"] {
+  color: var(--sinai-menu-accent);
+  background-color: var(--sinai-menu-active);
+}
+
+#nd-sidebar [data-active="true"]:hover,
+#nd-sidebar-mobile [data-active="true"]:hover {
+  color: var(--sinai-menu-accent);
+  background-color: var(--sinai-menu-active-hover);
+}
+
+#nd-sidebar [data-active="true"]::before,
+#nd-sidebar-mobile [data-active="true"]::before {
+  background-color: var(--sinai-menu-accent);
+}
+
+/* Una rama conserva el color del rol cuando contiene la página activa,
+   incluso si la persona decide contraerla. */
+#nd-sidebar [data-state]:has([data-active="true"]) > :is(a, button),
+#nd-sidebar-mobile [data-state]:has([data-active="true"]) > :is(a, button) {
+  color: var(--sinai-menu-accent);
+}
+
+#nd-sidebar [data-sinai-active-branch],
+#nd-sidebar-mobile [data-sinai-active-branch],
+#nd-sidebar [data-sinai-active-branch] .sinai-menu-icon,
+#nd-sidebar-mobile [data-sinai-active-branch] .sinai-menu-icon {
+  color: var(--sinai-menu-accent);
+}
+
+/* Las categorías principales se distinguen sin competir con la opción activa. */
+/* Accesos compactos para reducir la necesidad de recorrer el árbol completo. */
+.sinai-sidebar-section-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.1rem 0 0.15rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sinai-sidebar-section-title svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.sinai-help {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 40;
+}
+
+.sinai-sidebar-copyright {
+  position: absolute;
+  z-index: 1;
+  inset-inline-start: 1.75rem;
+  bottom: 1.5625rem;
+  max-width: calc(100% - 6rem);
+  overflow: hidden;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: color 150ms ease;
+}
+
+.sinai-sidebar-copyright:hover {
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-sidebar-copyright:focus-visible {
+  border-radius: 0.25rem;
+  outline: 2px solid var(--sinai-menu-accent);
+  outline-offset: 0.25rem;
+}
+
+.sinai-help-trigger {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-fd-background) 94%, transparent);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+  backdrop-filter: blur(10px);
+  color: var(--color-fd-foreground);
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  list-style: none;
+  transition: border-color 150ms ease, color 150ms ease, transform 120ms ease;
+}
+
+.sinai-help-trigger:hover,
+.sinai-help-toggle:checked + .sinai-help-trigger {
+  border-color: var(--sinai-menu-accent);
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-help-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.sinai-help-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sinai-help-toggle:focus-visible + .sinai-help-trigger {
+  outline: 2px solid var(--sinai-menu-accent);
+  outline-offset: 2px;
+}
+
+.sinai-help-trigger:active {
+  transform: scale(0.97);
+}
+
+.sinai-help-trigger:focus-visible,
+.sinai-help-popover :is(a, button):focus-visible {
+  outline: 2px solid var(--sinai-menu-accent);
+  outline-offset: 2px;
+}
+
+.sinai-help-trigger svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-help-popover {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.65rem);
+  display: none;
+  width: min(23rem, calc(100vw - 2rem));
+  max-height: min(34rem, calc(100vh - 6.5rem));
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.9rem;
+  background: var(--color-fd-popover);
+  box-shadow: 0 18px 48px rgb(0 0 0 / 22%);
+  color: var(--color-fd-popover-foreground);
+  transform-origin: bottom right;
+  animation: sinai-help-in 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sinai-help-toggle:checked ~ .sinai-help-popover {
+  display: flex;
+}
+
+.sinai-help-heading,
+.sinai-help-heading > span,
+.sinai-help-form,
+.sinai-help-support,
+.sinai-help-sources a {
+  display: flex;
+  align-items: center;
+}
+
+.sinai-help-heading {
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.sinai-help-heading > span:first-child {
+  min-width: 0;
+  gap: 0.55rem;
+}
+
+.sinai-help-heading > span:first-child > svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: none;
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-help-heading strong,
+.sinai-help-heading small {
+  display: block;
+}
+
+.sinai-help-heading strong {
+  font-size: 0.8125rem;
+}
+
+.sinai-help-heading small {
+  margin-top: 0.1rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+}
+
+.sinai-help-heading button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 0.4rem;
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-help-heading button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-help-messages {
+  display: flex;
+  min-height: 12rem;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+  padding: 0.8rem;
+  scrollbar-width: thin;
+}
+
+.sinai-help-message {
+  max-width: 92%;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.7rem;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
+.sinai-help-message p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.sinai-help-message-assistant {
+  align-self: flex-start;
+  background: var(--color-fd-accent);
+}
+
+.sinai-help-message-user {
+  align-self: flex-end;
+  border-color: color-mix(in srgb, var(--sinai-menu-accent) 45%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-menu-accent) 12%, var(--color-fd-popover));
+}
+
+.sinai-help-loading {
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-help-loading svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  animation: sinai-help-spin 900ms linear infinite;
+}
+
+.sinai-help-sources {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.55rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--color-fd-border);
+}
+
+.sinai-help-sources > span {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sinai-help-sources a {
+  gap: 0.25rem;
+  color: var(--sinai-menu-accent);
+  font-size: 0.6875rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.sinai-help-sources a:hover {
+  text-decoration: underline;
+}
+
+.sinai-help-sources svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  flex: none;
+}
+
+.sinai-help-error {
+  margin: 0 0.8rem 0.6rem;
+  color: #c93434;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+
+.sinai-help-form {
+  gap: 0.45rem;
+  margin: 0 0.8rem 0.65rem;
+  padding: 0.35rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.65rem;
+  background: var(--color-fd-background);
+}
+
+.sinai-help-form input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 0.35rem 0.25rem 0.35rem 0.4rem;
+  color: var(--color-fd-foreground);
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.sinai-help-form input::placeholder {
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-help-form button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  place-items: center;
+  border-radius: 0.45rem;
+  background: var(--sinai-menu-accent);
+  color: white;
+  transition: opacity 150ms ease, transform 120ms ease;
+}
+
+.sinai-help-form button:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.sinai-help-form button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.sinai-help-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.sinai-help-form button svg,
+.sinai-help-support svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.sinai-help-support {
+  gap: 0.35rem;
+  padding: 0.6rem 0.8rem;
+  border-top: 1px solid var(--color-fd-border);
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.sinai-help-support:hover {
+  background: var(--color-fd-accent);
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-assistant {
+  display: grid;
+  width: min(100%, 46rem);
+  min-height: 32rem;
+  grid-template-rows: auto minmax(16rem, 1fr) auto auto;
+  overflow: hidden;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 1rem;
+  background: var(--color-fd-card);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 8%);
+}
+
+.sinai-assistant-heading {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.sinai-assistant-close {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  place-items: center;
+  margin-left: auto;
+  border-radius: 0.5rem;
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-assistant-close:hover {
+  background: var(--color-fd-accent);
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-assistant-close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-assistant-heading > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  color: var(--sinai-menu-accent);
+}
+
+.sinai-assistant-heading h1,
+.sinai-assistant-heading p {
+  margin: 0;
+}
+
+.sinai-assistant-heading h1 {
+  font-size: 1rem;
+}
+
+.sinai-assistant-heading p {
+  margin-top: 0.15rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+}
+
+.sinai-assistant-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding: 1.1rem;
+  scrollbar-width: thin;
+}
+
+.sinai-assistant-message {
+  max-width: min(88%, 34rem);
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.sinai-assistant-message p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.sinai-assistant-message-assistant {
+  align-self: flex-start;
+  background: var(--color-fd-accent);
+}
+
+.sinai-assistant-message-user {
+  align-self: flex-end;
+  border-color: color-mix(in srgb, var(--sinai-menu-accent) 45%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-menu-accent) 10%, var(--color-fd-card));
+}
+
+.sinai-assistant-loading {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-assistant-loading svg {
+  width: 1rem;
+  height: 1rem;
+  animation: sinai-help-spin 900ms linear infinite;
+}
+
+.sinai-assistant-sources {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 0.65rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--color-fd-border);
+}
+
+.sinai-assistant-sources > span {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sinai-assistant-sources a,
+.sinai-assistant-support {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  color: var(--sinai-menu-accent);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.sinai-help-popover > .sinai-assistant {
+  width: 100%;
+  min-height: 0;
+  height: min(32rem, calc(100vh - 7rem));
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sinai-help-popover .sinai-assistant-heading {
+  padding: 0.75rem 0.85rem;
+}
+
+.sinai-help-popover .sinai-assistant-heading p,
+.sinai-help-popover .sinai-assistant-form label {
+  font-size: 0.6875rem;
+}
+
+.sinai-help-popover .sinai-assistant-messages {
+  padding: 0.8rem;
+}
+
+.sinai-help-popover .sinai-assistant-message {
+  max-width: 94%;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.75rem;
+}
+
+.sinai-help-popover .sinai-assistant-form {
+  padding: 0 0.8rem 0.75rem;
+}
+
+.sinai-help-popover .sinai-assistant-support {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.6875rem;
+}
+
+.sinai-assistant-sources a:hover,
+.sinai-assistant-support:hover {
+  text-decoration: underline;
+}
+
+.sinai-assistant-sources svg,
+.sinai-assistant-support svg {
+  width: 0.75rem;
+  height: 0.75rem;
+  flex: none;
+}
+
+.sinai-assistant-error {
+  margin: 0 1.1rem 0.7rem;
+  color: #c93434;
+  font-size: 0.8125rem;
+}
+
+.sinai-assistant-form {
+  padding: 0 1.1rem 1rem;
+}
+
+.sinai-assistant-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+}
+
+.sinai-assistant-form > div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.35rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.7rem;
+  background: var(--color-fd-background);
+}
+
+.sinai-assistant-form input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 0.45rem 0.55rem;
+  color: var(--color-fd-foreground);
+  font-size: 0.875rem;
+  outline: none;
+}
+
+.sinai-assistant-form button {
+  display: inline-flex;
+  min-height: 2.25rem;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  background: var(--sinai-menu-accent);
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 650;
+}
+
+.sinai-assistant-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.sinai-assistant-form button svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.sinai-assistant-support {
+  padding: 0.75rem 1.1rem;
+  border-top: 1px solid var(--color-fd-border);
+  color: var(--color-fd-muted-foreground);
+}
+
+@media (max-width: 640px) {
+  .sinai-assistant {
+    min-height: calc(100vh - 9rem);
+    border-radius: 0.75rem;
+  }
+
+  .sinai-assistant-message {
+    max-width: 95%;
+  }
+
+  .sinai-assistant-form button {
+    width: 2.25rem;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sinai-assistant-form button {
+    font-size: 0;
+  }
+}
+
+/* Nueva portada: el selector de rol forma parte de la primera decisión del usuario. */
+.sinai-welcome {
+  --color-fd-primary: #4976ff;
+  width: min(100%, 92rem);
+  margin-inline: auto;
+  padding: 0.4rem clamp(1.25rem, 4vw, 4rem) 5rem;
+}
+
+.dark .sinai-welcome {
+  --color-fd-primary: #7395ff;
+}
+
+.sinai-welcome-header,
+.sinai-welcome-brand,
+.sinai-welcome-header-actions,
+.sinai-welcome-nav,
+.sinai-welcome-nav a,
+.sinai-welcome-kicker,
+.sinai-welcome-picker-heading,
+.sinai-welcome-role-card,
+.sinai-welcome-menu-note,
+.sinai-welcome-steps ol,
+.sinai-welcome-steps li,
+.sinai-welcome-start,
+.sinai-welcome-start-icon,
+.sinai-welcome-start-action,
+.sinai-welcome-banner figcaption,
+.sinai-welcome-banner figcaption strong {
+  display: flex;
+  align-items: center;
+}
+
+.sinai-welcome-header {
+  min-height: 4.1rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.sinai-welcome-brand {
+  gap: 0.75rem;
+  min-width: 0;
+  color: var(--color-fd-foreground);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sinai-welcome-brand .sinai-sidebar-logo {
+  width: 5.25rem;
+  height: auto;
+  max-height: 2.125rem;
+  object-fit: contain;
+}
+
+.sinai-welcome-brand > span {
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--color-fd-border);
+}
+
+.sinai-welcome-header-actions {
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+.sinai-welcome-theme-switch {
+  flex: none;
+  border-color: color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-primary) 5%, var(--color-fd-card));
+}
+
+.sinai-welcome-nav {
+  justify-content: flex-end;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.sinai-welcome-nav a {
+  gap: 0.35rem;
+  min-height: 2.25rem;
+  padding: 0 0.65rem;
+  border-radius: 0.5rem;
+  color: var(--color-fd-muted-foreground);
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.sinai-welcome-nav a:hover {
+  color: var(--color-fd-foreground);
+  background: color-mix(in srgb, var(--color-fd-muted) 70%, transparent);
+}
+
+.sinai-welcome-nav a:last-child {
+  color: var(--color-fd-primary);
+}
+
+.sinai-welcome-nav svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.sinai-welcome-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(20rem, 0.65fr);
+  gap: clamp(1rem, 3vw, 2.75rem);
+  align-items: stretch;
+  padding-top: clamp(0.75rem, 1.4vw, 1.25rem);
+}
+
+.sinai-welcome-content {
+  min-width: 0;
+}
+
+.sinai-welcome-intro {
+  max-width: 45rem;
+}
+
+.sinai-welcome-kicker,
+.sinai-welcome-section-intro > p,
+.sinai-welcome-picker-heading p,
+.sinai-welcome-start > div > p {
+  gap: 0.45rem;
+  margin: 0;
+  color: var(--color-fd-primary);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.105em;
+  text-transform: uppercase;
+}
+
+.sinai-welcome-kicker svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-welcome-intro h1 {
+  max-width: 47rem;
+  margin: 0.9rem 0 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(2.2rem, 3.9vw, 4rem);
+  font-weight: 730;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.sinai-welcome-intro > p:last-child {
+  max-width: 39rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  line-height: 1.65;
+}
+
+.sinai-welcome-role-picker {
+  margin-top: clamp(1.75rem, 3.2vw, 2.75rem);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid color-mix(in srgb, var(--color-fd-primary) 20%, var(--color-fd-border));
+  border-radius: 1.15rem;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--color-fd-primary) 7%, transparent), transparent 48%),
+    var(--color-fd-card);
+  box-shadow: 0 1.25rem 3.5rem color-mix(in srgb, var(--color-fd-foreground) 5%, transparent);
+}
+
+.sinai-welcome-picker-heading {
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sinai-welcome-picker-heading h2,
+.sinai-welcome-section-intro h2,
+.sinai-welcome-start h2 {
+  margin: 0.3rem 0 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.sinai-welcome-picker-heading > span {
+  flex: none;
+  padding: 0.34rem 0.55rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.68rem;
+  font-weight: 650;
+}
+
+.sinai-welcome-role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.sinai-welcome-role-card {
+  position: relative;
+  gap: 0.75rem;
+  min-height: 5.7rem;
+  padding: 0.85rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.8rem;
+  color: var(--color-fd-foreground);
+  background: color-mix(in srgb, var(--color-fd-background) 72%, transparent);
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.sinai-welcome-role-card::before {
+  position: absolute;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  left: -1px;
+  width: 2px;
+  border-radius: 999px;
+  background: var(--sinai-role-accent);
+  content: '';
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.sinai-welcome-role-card:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 50%, var(--color-fd-border));
+  background: var(--color-fd-background);
+  box-shadow: 0 0.75rem 1.5rem color-mix(in srgb, var(--color-fd-foreground) 7%, transparent);
+  transform: translateY(-2px);
+}
+
+.sinai-welcome-role-card:hover::before {
+  opacity: 1;
+}
+
+.sinai-welcome-role-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-welcome-role-card[data-role='general'] { --sinai-role-accent: #8658cb; }
+.sinai-welcome-role-card[data-role='administrativo'] { --sinai-role-accent: #4976ff; }
+.sinai-welcome-role-card[data-role='docente'] { --sinai-role-accent: #00aa01; }
+.sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #d98e00; }
+
+.dark .sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #f1dc55; }
+
+.sinai-welcome-role-icon {
+  display: grid;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 0.65rem;
+  color: var(--sinai-role-accent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 11%, transparent);
+}
+
+.sinai-welcome-role-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.sinai-welcome-role-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.2rem;
+}
+
+.sinai-welcome-role-copy strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sinai-welcome-role-copy small {
+  overflow: hidden;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.74rem;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sinai-welcome-role-arrow {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-left: auto;
+  color: var(--color-fd-muted-foreground);
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.sinai-welcome-role-card:hover .sinai-welcome-role-arrow {
+  color: var(--sinai-role-accent);
+  transform: translateX(2px);
+}
+
+.sinai-welcome-menu-note {
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.sinai-welcome-menu-note svg {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-fd-primary);
+}
+
+.sinai-welcome-banner {
+  position: relative;
+  isolation: isolate;
+  min-height: 36rem;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
+  border-radius: 1.35rem;
+  background: #071325;
+  box-shadow: 0 1.75rem 4rem color-mix(in srgb, var(--color-fd-foreground) 14%, transparent);
+}
+
+.sinai-welcome-banner::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(2, 11, 28, 0.05) 42%, rgba(2, 11, 28, 0.72));
+  content: '';
+  pointer-events: none;
+}
+
+.sinai-welcome-banner img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.sinai-welcome-banner figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 1.05rem;
+  bottom: 1.05rem;
+  left: 1.05rem;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.8rem;
+  color: rgba(255, 255, 255, 0.68);
+  background: rgba(7, 18, 38, 0.68);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.sinai-welcome-banner figcaption strong {
+  gap: 0.45rem;
+  color: #fff;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.sinai-welcome-banner figcaption i {
+  width: 0.22rem;
+  height: 0.22rem;
+  border-radius: 99px;
+  background: #8ab2ff;
+}
+
+.sinai-welcome-steps {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.45fr) minmax(0, 1.55fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: center;
+  margin-top: clamp(3rem, 7vw, 6.5rem);
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--color-fd-border);
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.sinai-welcome-steps ol {
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sinai-welcome-steps li {
+  position: relative;
+  flex: 1;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.sinai-welcome-step-number {
+  position: absolute;
+  top: -0.9rem;
+  color: color-mix(in srgb, var(--color-fd-muted-foreground) 66%, transparent);
+  font-size: 0.58rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.sinai-welcome-steps li > svg {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--color-fd-primary);
+}
+
+.sinai-welcome-steps h3 {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.sinai-welcome-steps li p {
+  margin: 0.18rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.sinai-welcome-start {
+  gap: 0.9rem;
+  margin-top: clamp(2rem, 4.5vw, 4rem);
+  padding: clamp(1rem, 2.5vw, 1.45rem);
+  border: 1px solid color-mix(in srgb, var(--color-fd-primary) 22%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-fd-primary) 6%, var(--color-fd-card));
+}
+
+.sinai-welcome-start-icon {
+  justify-content: center;
+  flex: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.75rem;
+  color: var(--color-fd-primary);
+  background: color-mix(in srgb, var(--color-fd-primary) 12%, transparent);
+}
+
+.sinai-welcome-start-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sinai-welcome-start > div:nth-child(2) {
+  min-width: 0;
+}
+
+.sinai-welcome-start > div > span {
+  display: block;
+  max-width: 42rem;
+  margin-top: 0.35rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.sinai-welcome-start-action {
+  gap: 0.45rem;
+  flex: none;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.sinai-welcome-start-action svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Portada de /docs: una entrada breve que lleva directamente al perfil y al menú. */
+.sinai-docs-home {
+  display: grid;
+  gap: 1.25rem;
+  margin: 1.75rem 0 0;
+}
+
+.sinai-docs-home-intro {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+  gap: 1.5rem;
+  overflow: hidden;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
+  border-radius: 1.15rem;
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--color-fd-primary) 15%, transparent), transparent 39%),
+    linear-gradient(125deg, color-mix(in srgb, var(--color-fd-primary) 6%, var(--color-fd-card)), var(--color-fd-card) 58%);
+  box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--color-fd-foreground) 6%, transparent);
+}
+
+.sinai-docs-home-intro-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 40rem;
+}
+
+.sinai-docs-home-kicker,
+.sinai-docs-home-heading > div > p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  color: var(--color-fd-primary);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sinai-docs-home-kicker svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.sinai-docs-home-intro h2 {
+  max-width: 33rem;
+  margin: 0.7rem 0 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 730;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.sinai-docs-home-intro-copy > p:last-child {
+  max-width: 35rem;
+  margin: 0.85rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.sinai-docs-home-route {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-content: center;
+  gap: 0.45rem 0.75rem;
+  padding-inline-start: 1.35rem;
+  border-inline-start: 1px solid color-mix(in srgb, var(--color-fd-primary) 28%, var(--color-fd-border));
+}
+
+.sinai-docs-home-route > span {
+  color: var(--color-fd-primary);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.67rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.sinai-docs-home-route > div {
+  padding-bottom: 0.7rem;
+}
+
+.sinai-docs-home-route > div:last-child {
+  padding-bottom: 0;
+}
+
+.sinai-docs-home-route strong {
+  display: block;
+  color: var(--color-fd-foreground);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.sinai-docs-home-route p {
+  margin: 0.15rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.sinai-docs-home-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.35rem;
+}
+
+.sinai-docs-home-heading h2 {
+  margin: 0.3rem 0 0;
+  color: var(--color-fd-foreground);
+  font-size: 1.28rem;
+  font-weight: 720;
+  letter-spacing: -0.03em;
+}
+
+.sinai-docs-home-heading > span {
+  flex: none;
+  padding: 0.32rem 0.55rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.68rem;
+  font-weight: 650;
+}
+
+.sinai-docs-home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.sinai-docs-home-card {
+  --sinai-docs-card-accent: #8658cb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 6.65rem;
+  padding: 0.95rem;
+  overflow: hidden;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.9rem;
+  color: var(--color-fd-foreground);
+  background: color-mix(in srgb, var(--color-fd-card) 94%, var(--sinai-docs-card-accent) 6%);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.sinai-docs-home-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--sinai-docs-card-accent);
+  content: '';
+  opacity: 0.72;
+}
+
+.sinai-docs-home-card[data-role='administrativo'] { --sinai-docs-card-accent: #4976ff; }
+.sinai-docs-home-card[data-role='docente'] { --sinai-docs-card-accent: #00aa01; }
+.sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #d98e00; }
+.dark .sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #f1dc55; }
+
+.sinai-docs-home-card:hover {
+  border-color: color-mix(in srgb, var(--sinai-docs-card-accent) 50%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-card) 89%, var(--sinai-docs-card-accent) 11%);
+  box-shadow: 0 0.75rem 1.5rem color-mix(in srgb, var(--sinai-docs-card-accent) 12%, transparent);
+  transform: translateY(-2px);
+}
+
+.sinai-docs-home-card:active {
+  transform: scale(0.99);
+}
+
+.sinai-docs-home-card:focus-visible {
+  outline: 2px solid var(--sinai-docs-card-accent);
+  outline-offset: 3px;
+}
+
+.sinai-docs-home-card-icon {
+  display: grid;
+  flex: none;
+  width: 2.45rem;
+  height: 2.45rem;
+  place-items: center;
+  border-radius: 0.72rem;
+  color: var(--sinai-docs-card-accent);
+  background: color-mix(in srgb, var(--sinai-docs-card-accent) 13%, transparent);
+}
+
+.sinai-docs-home-card-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.sinai-docs-home-card-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.12rem;
+}
+
+.sinai-docs-home-card-copy small {
+  color: var(--sinai-docs-card-accent);
+  font-size: 0.62rem;
+  font-weight: 720;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.sinai-docs-home-card-copy strong {
+  font-size: 0.95rem;
+  font-weight: 720;
+  letter-spacing: -0.02em;
+}
+
+.sinai-docs-home-card-copy > span {
+  overflow: hidden;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.74rem;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sinai-docs-home-card-arrow {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-left: auto;
+  color: var(--sinai-docs-card-accent);
+  transition: transform 160ms ease;
+}
+
+.sinai-docs-home-card:hover .sinai-docs-home-card-arrow {
+  transform: translateX(2px);
+}
+
+.sinai-docs-home-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 0.95rem;
+  border: 1px dashed color-mix(in srgb, var(--color-fd-primary) 30%, var(--color-fd-border));
+  border-radius: 0.85rem;
+  color: var(--color-fd-muted-foreground);
+  background: color-mix(in srgb, var(--color-fd-primary) 4%, transparent);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.sinai-docs-home-note svg {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-fd-primary);
+}
+
+@media (max-width: 900px) {
+  .sinai-welcome-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-welcome-banner {
+    min-height: 23rem;
+    max-height: 31rem;
+  }
+
+  .sinai-welcome-banner img {
+    object-position: center 60%;
+  }
+
+  .sinai-docs-home-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-docs-home-route {
+    padding: 1rem 0 0;
+    border-top: 1px solid color-mix(in srgb, var(--color-fd-primary) 28%, var(--color-fd-border));
+    border-inline-start: 0;
+  }
+
+  .sinai-welcome-steps {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sinai-welcome {
+    padding: 0.25rem 1rem 3.5rem;
+  }
+
+  .sinai-welcome-header {
+    min-height: 3.95rem;
+  }
+
+  .sinai-welcome-brand > span,
+  .sinai-welcome-nav a:not(:last-child) {
+    display: none;
+  }
+
+  .sinai-welcome-header-actions {
+    gap: 0.35rem;
+  }
+
+  .sinai-welcome-nav a:last-child {
+    padding-inline: 0.45rem;
+  }
+
+  .sinai-welcome-hero {
+    padding-top: 0.75rem;
+  }
+
+  .sinai-welcome-intro h1 {
+    font-size: clamp(2.2rem, 12.5vw, 3.35rem);
+  }
+
+  .sinai-welcome-role-picker {
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .sinai-welcome-picker-heading > span {
+    display: none;
+  }
+
+  .sinai-welcome-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-docs-home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-welcome-role-card {
+    min-height: 4.8rem;
+  }
+
+  .sinai-welcome-banner {
+    min-height: 20rem;
+  }
+
+  .sinai-welcome-banner figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sinai-welcome-steps {
+    margin-top: 3.25rem;
+  }
+
+  .sinai-welcome-steps ol {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .sinai-welcome-steps li {
+    flex: initial;
+  }
+
+  .sinai-welcome-start {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .sinai-welcome-start-action {
+    grid-column: 1 / -1;
+    justify-content: center;
+    width: 100%;
+    margin: 0.35rem 0 0;
+  }
+}
+
+.sinai-search-hint {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  text-align: right;
+}
+
+.sinai-ai-toggle {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sinai-ai-toggle:not(:checked) ~ .sinai-ai-panel {
+  display: none;
+}
+
+.sinai-ai-toggle:checked ~ .sinai-ai-trigger {
+  transform: translateY(2.5rem);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sinai-ai-toggle:focus-visible ~ .sinai-ai-trigger {
+  outline: 2px solid var(--sinai-menu-accent);
+  outline-offset: 2px;
+}
+
+/* El índice de las guías crea su propia capa sticky. El disparador y el panel
+   deben quedar por encima para conservar el patrón lateral de Fumadocs. */
+#nd-docs-layout .sinai-ai-trigger,
+#nd-docs-layout .sinai-ai-panel {
+  z-index: 60 !important;
+}
+
+#nd-docs-layout .sinai-ai-trigger {
+  pointer-events: auto;
+}
+
+/* Al alcanzar el pie, el disparador deja libre el cierre institucional. El
+   panel abierto no se ve afectado: se muestra como una capa fija superior. */
+html[data-sinai-footer-visible] #nd-docs-layout .sinai-ai-toggle:not(:checked) ~ .sinai-ai-trigger {
+  opacity: 0;
+  pointer-events: none !important;
+  transform: translateY(1rem);
+}
+
+/* La onda nace donde se posa el cursor: una señal breve de que el asistente
+   está disponible, sin restar protagonismo al contenido de la guía. */
+.sinai-ai-ripple {
+  isolation: isolate;
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--sinai-menu-accent) 34%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-secondary) 92%, var(--sinai-menu-accent) 8%);
+  transition: border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.sinai-ai-ripple::before,
+.sinai-ai-ripple::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: var(--sinai-ripple-x, 50%);
+  top: var(--sinai-ripple-y, 50%);
+  width: 2.25rem;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.15);
+}
+
+.sinai-ai-ripple::before {
+  border: 1px solid color-mix(in srgb, var(--sinai-menu-accent) 72%, white);
+}
+
+.sinai-ai-ripple::after {
+  background: color-mix(in srgb, var(--sinai-menu-accent) 24%, transparent);
+}
+
+.sinai-ai-ripple:hover {
+  color: var(--color-fd-foreground);
+  border-color: color-mix(in srgb, var(--sinai-menu-accent) 62%, var(--color-fd-border));
+  transform: translateY(-1px);
+}
+
+.sinai-ai-ripple:hover::before {
+  animation: sinai-ai-ripple-ring 900ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.sinai-ai-ripple:hover::after {
+  animation: sinai-ai-ripple-surface 900ms cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.sinai-ai-trigger-icon,
+.sinai-ai-trigger-label {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes sinai-ai-ripple-ring {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.15);
+  }
+
+  12% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4.4);
+  }
+}
+
+@keyframes sinai-ai-ripple-surface {
+  0% {
+    opacity: 0.34;
+    transform: translate(-50%, -50%) scale(0.12);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-ai-ripple:hover::before,
+  .sinai-ai-ripple:hover::after {
+    animation: none;
+    opacity: 0.24;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+@keyframes sinai-help-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes sinai-help-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-help-popover,
+  .sinai-help-loading svg {
+    animation: none;
+  }
+}
+
+/* Encabezado compacto para las guÃ­as: la descripciÃ³n acompaÃ±a al tÃ­tulo sin
+   alejarse del resumen de la pÃ¡gina. */
+.sinai-guide-page > h1 {
+  margin-block: 0 !important;
+}
+
+.sinai-guide-page > h1 + p {
+  margin-block: 0.35rem 0.85rem !important;
+}
+
+.sinai-guide-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.sinai-guide-heading > h1,
+.sinai-guide-heading > p {
+  margin: 0 !important;
+}
+
+/* La tabla de contenidos de las guÃ­as usa el conector jerÃ¡rquico de Fumadocs.
+   Se vincula al mismo color de acento que el menÃº lateral: azul en modo claro
+   y verde en modo oscuro. */
+body:has(.sinai-role-administrativo) #sinai-guide-toc {
+  --sinai-toc-accent: #4976ff;
+}
+
+body:has(.sinai-role-docente) #sinai-guide-toc {
+  --sinai-toc-accent: #00aa01;
+}
+
+body:has(.sinai-role-estudiante) #sinai-guide-toc {
+  --sinai-toc-accent: var(--sinai-role-accent);
+}
+
+html[data-sinai-role="administrativo"] #sinai-guide-toc,
+html[data-sinai-role="docente"] #sinai-guide-toc,
+html[data-sinai-role="estudiante"] #sinai-guide-toc {
+  --sinai-toc-accent: var(--sinai-role-accent);
+}
+
+.guide-toc-link[data-active="true"] {
+  color: var(--sinai-toc-accent, var(--sinai-role-accent)) !important;
+}
+
+/* Mantiene la columna reservada por Fumadocs, pero sustituye su lista lineal
+   por el índice jerárquico propio de las guías. */
+body:has(.sinai-custom-toc) #nd-toc {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.guide-toc-active-path {
+  stroke: var(--sinai-toc-accent, var(--sinai-role-accent));
+  transition: d 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.guide-toc-marker {
+  position: absolute;
+  z-index: 1;
+  width: 0.625rem;
+  height: 0.625rem;
+  border: 2px solid var(--color-fd-background);
+  border-radius: 999px;
+  background: var(--sinai-toc-accent, var(--sinai-role-accent));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--sinai-toc-accent, var(--sinai-role-accent)) 22%, transparent);
+  transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.guide-toc-marker::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-inline: 2px solid transparent;
+  border-top: 3px solid var(--color-fd-primary-foreground);
+  content: '';
+  transform: translate(-50%, -25%);
+}
+
+.guide-toc-marker[data-direction="up"]::after {
+  transform: translate(-50%, -75%) rotate(180deg);
+}
+
+/* Capturas migradas desde WordPress: mismas proporciones, marco y ampliación
+   sin necesidad de reescribir cada guía individualmente. */
+#nd-page .prose img:not([data-image-modal-managed]) {
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  max-width: min(100%, 56rem);
+  max-height: 30rem;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+  cursor: zoom-in;
+  object-fit: contain;
+}
+
+#nd-page .prose a:has(> img:not([data-image-modal-managed])) {
+  display: block;
+  width: fit-content;
+  max-width: min(100%, 56rem);
+  margin: 1.5rem auto;
+  padding: 0.35rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.8rem;
+  background: color-mix(in srgb, var(--color-fd-card) 94%, var(--sinai-role-accent) 6%);
+  box-shadow: 0 8px 22px color-mix(in srgb, black 10%, transparent);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+#nd-page .prose a:has(> img:not([data-image-modal-managed])):hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 38%, var(--color-fd-border));
+  box-shadow: 0 10px 28px color-mix(in srgb, black 15%, transparent);
+}
+
+#nd-page .prose a:has(> img:not([data-image-modal-managed])) > img {
+  margin: 0;
+}
+
+#nd-page .prose :is(p, div):has(> img:not([data-image-modal-managed])) {
+  margin-block: 1.5rem;
+}
+
+#nd-page .prose img[data-image-modal-trigger]:focus-visible,
+#nd-page .prose a[data-image-modal-trigger]:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--sinai-role-accent) 72%, transparent);
+  outline-offset: 4px;
+}
+
+/* Todos los enlaces escritos en las guías se identifican con el color del rol.
+   Se excluyen las capturas enlazadas, que usan su propia tarjeta visual. */
+#nd-page .prose :is(p, li, blockquote) a:not(:has(> img)) {
+  color: var(--sinai-menu-accent) !important;
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, currentColor 72%, transparent);
+  text-underline-offset: 0.2em;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+#nd-page .prose :is(p, li, blockquote) a:not(:has(> img)):hover {
+  color: var(--sinai-role-accent-hover) !important;
+  text-decoration-thickness: 2px;
+}
+.sinai-link-code :is(code, code span) {
+  color: var(--sinai-role-accent) !important;
+  -webkit-text-fill-color: var(--sinai-role-accent) !important;
+  font-weight: 600;
+}
+
+#nd-page .prose .sinai-link-code button[data-checked] {
+  width: auto !important;
+  gap: 0.375rem;
+  padding-inline: 0.5rem;
+  color: light-dark(#15803d, #56d364);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+#nd-page .prose .sinai-link-code button[data-checked]::after {
+  content: "Copiado";
+}
+
+/* Estado de cambio de plataforma del reproductor. La señal confirma que la
+   acción fue recibida mientras el iframe de YouTube u Odysee termina de cargar. */
+.sinai-video-loading {
+  animation: sinai-video-loading-in 180ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.sinai-video-signal {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+
+.sinai-video-signal-core {
+  position: absolute;
+  inset: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--sinai-role-accent, #315efb);
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 16%), 0 0 2rem color-mix(in srgb, var(--sinai-role-accent, #315efb) 48%, transparent);
+}
+
+.sinai-video-signal-orbit,
+.sinai-video-signal-pulse {
+  position: absolute;
+  inset: 0.35rem;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+}
+
+.sinai-video-signal-orbit {
+  border-top-color: color-mix(in srgb, var(--sinai-role-accent, #315efb) 85%, white);
+  animation: sinai-video-signal-spin 1.2s linear infinite;
+}
+
+.sinai-video-signal-pulse {
+  animation: sinai-video-signal-pulse 1.8s cubic-bezier(0.23, 1, 0.32, 1) infinite;
+}
+
+.sinai-video-signal-node {
+  position: absolute;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 0 0.75rem rgb(255 255 255 / 70%);
+  animation: sinai-video-signal-node 1.5s ease-in-out infinite;
+}
+
+.sinai-video-signal-node-a { top: 0.15rem; left: 50%; }
+.sinai-video-signal-node-b { right: 0.35rem; bottom: 1rem; animation-delay: 180ms; }
+.sinai-video-signal-node-c { bottom: 1rem; left: 0.35rem; animation-delay: 360ms; }
+
+.sinai-video-loading-track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 12%);
+}
+
+.sinai-video-loading-track > span {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 42%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--sinai-role-accent, #315efb) 70%, white), transparent);
+  animation: sinai-video-loading-track 1.25s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@keyframes sinai-video-loading-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sinai-video-signal-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sinai-video-signal-pulse {
+  0% { opacity: 0.5; transform: scale(0.72); }
+  70%, 100% { opacity: 0; transform: scale(1.22); }
+}
+
+@keyframes sinai-video-signal-node {
+  0%, 100% { opacity: 0.35; transform: scale(0.75); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sinai-video-loading-track {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(340%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-video-loading,
+  .sinai-video-signal-orbit,
+  .sinai-video-signal-pulse,
+  .sinai-video-signal-node,
+  .sinai-video-loading-track > span {
+    animation: none;
+  }
+
+  .sinai-video-signal-pulse {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  .sinai-video-loading-track > span {
+    left: 29%;
+  }
+}
+
+/* Pie institucional: concentra la ayuda y los accesos útiles sin competir con
+   la lectura de cada guía. El acento cambia junto con el rol activo. */
+.sinai-site-footer {
+  border-top: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--color-fd-card) 96%, var(--sinai-role-accent) 4%);
+  color: var(--color-fd-foreground);
+}
+
+.sinai-footer-shell {
+  width: min(100% - 2rem, 80rem);
+  margin-inline: auto;
+  padding-block: 2rem 2.5rem;
+}
+
+.sinai-footer-callout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 32%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 10%, var(--color-fd-card));
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+}
+
+.sinai-footer-eyebrow {
+  margin: 0 0 0.375rem;
+  color: var(--sinai-role-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-footer-callout h2,
+.sinai-footer-main h2 {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.sinai-footer-callout h2 {
+  font-size: 1.25rem;
+}
+
+.sinai-footer-callout p:not(.sinai-footer-eyebrow) {
+  max-width: 42rem;
+  margin: 0.5rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  line-height: 1.55;
+}
+
+.sinai-footer-support-action {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.625rem;
+  background: var(--sinai-role-accent);
+  color: var(--color-fd-primary-foreground);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.sinai-footer-support-action svg,
+.sinai-footer-legal a svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-footer-support-action:hover {
+  background: var(--sinai-role-accent-hover);
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--sinai-role-accent) 28%, transparent);
+}
+
+.sinai-footer-support-action:active {
+  transform: scale(0.97);
+}
+
+.sinai-footer-support-action:focus-visible,
+.sinai-footer-main a:focus-visible,
+.sinai-footer-legal a:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-footer-main {
+  display: grid;
+  grid-template-columns: minmax(13rem, 1.35fr) repeat(3, minmax(10rem, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 0 0;
+}
+
+.sinai-footer-brand {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 0.75rem;
+  align-content: start;
+}
+
+.sinai-footer-mark {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  color: var(--sinai-role-accent);
+}
+
+.sinai-footer-mark svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.sinai-footer-brand-name,
+.sinai-footer-brand-subtitle,
+.sinai-footer-brand-copy {
+  margin: 0;
+}
+
+.sinai-footer-brand-name {
+  color: var(--color-fd-foreground);
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.sinai-footer-brand-subtitle {
+  margin-top: 0.125rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.sinai-footer-brand-copy {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.sinai-footer-main h2 {
+  margin-bottom: 0.875rem;
+}
+
+.sinai-footer-contact-list,
+.sinai-footer-link-list {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sinai-footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.sinai-footer-contact-list svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin-top: 0.125rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-footer-main a {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.sinai-footer-main a:hover {
+  color: var(--sinai-role-accent);
+}
+
+.sinai-footer-legal {
+  border-top: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--color-fd-muted) 76%, var(--sinai-role-accent) 6%);
+}
+
+.sinai-footer-legal-content {
+  display: flex;
+  width: min(100% - 2rem, 80rem);
+  min-height: 3.5rem;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+}
+
+.sinai-footer-legal a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sinai-footer-legal a:hover {
+  color: var(--sinai-role-accent);
+}
+
+@media (max-width: 900px) {
+  .sinai-footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .sinai-footer-shell {
+    width: min(100% - 1.5rem, 80rem);
+    padding-block: 1.25rem 2rem;
+  }
+
+  .sinai-footer-callout,
+  .sinai-footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-footer-callout {
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .sinai-footer-support-action {
+    width: 100%;
+  }
+
+  .sinai-footer-main {
+    gap: 1.75rem;
+    padding-top: 2rem;
+  }
+
+  .sinai-footer-legal-content {
+    width: min(100% - 1.5rem, 80rem);
+    min-height: 0;
+    padding-block: 0.875rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+}
+
+/* Pie de aplicación: las superficies y controles se apoyan en los tokens de
+   Fumadocs para conservar contraste, tema y color del rol activo. */
+.sinai-site-footer {
+  position: relative;
+  border-top-color: color-mix(in srgb, var(--sinai-role-accent) 24%, var(--color-fd-border));
+  background: var(--color-fd-background);
+}
+
+.sinai-footer-shell {
+  padding-block: 3rem;
+}
+
+.sinai-footer-support-hub {
+  display: grid;
+  grid-template-columns: minmax(20rem, 1fr) auto auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 26%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-fd-card) 92%, var(--sinai-role-accent) 8%);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%), 0 12px 28px color-mix(in srgb, var(--sinai-role-accent) 6%, transparent);
+}
+
+.sinai-footer-support-copy {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  align-content: center;
+}
+
+.sinai-footer-support-icon {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: var(--sinai-role-accent);
+  color: var(--color-fd-primary-foreground);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+}
+
+.sinai-footer-support-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sinai-footer-support-copy .sinai-footer-eyebrow {
+  margin-bottom: 0.25rem;
+  font-size: 0.6875rem;
+}
+
+.sinai-footer-support-copy h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.sinai-footer-support-copy p:not(.sinai-footer-eyebrow) {
+  margin: 0.375rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.sinai-footer-platform-details {
+  display: grid;
+  gap: 0.375rem;
+  min-width: 10rem;
+  padding-inline-start: 1.5rem;
+  border-inline-start: 1px solid color-mix(in srgb, var(--sinai-role-accent) 22%, var(--color-fd-border));
+}
+
+.sinai-footer-platform-address {
+  color: var(--color-fd-foreground);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.sinai-footer-platform-guide {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  width: fit-content;
+  min-height: 1.75rem;
+  color: var(--sinai-role-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.sinai-footer-platform-guide svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  transition: transform 150ms ease;
+}
+
+.sinai-footer-platform-guide:hover {
+  color: var(--color-fd-foreground);
+}
+
+.sinai-footer-platform-guide:hover svg {
+  transform: translateX(2px);
+}
+
+.sinai-footer-platform-guide:focus-visible,
+.sinai-footer-contact-panel a:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-footer-support-action {
+  align-self: center;
+  min-height: 2.75rem;
+  padding-inline: 1rem;
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--sinai-role-accent) 24%, transparent);
+}
+
+.sinai-footer-content-grid {
+  display: grid;
+  grid-template-columns: minmax(15rem, 1.35fr) minmax(9rem, 0.8fr) minmax(9rem, 0.8fr) minmax(15rem, 1.1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.sinai-footer-brand-panel,
+.sinai-footer-link-group,
+.sinai-footer-contact-panel {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.875rem;
+  background: var(--color-fd-card);
+}
+
+.sinai-footer-brand-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sinai-footer-logo {
+  width: 6.5rem;
+  height: auto;
+}
+
+.sinai-footer-brand-panel > p {
+  max-width: 20rem;
+  margin: 1rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.sinai-footer-trust-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.sinai-footer-trust-mark svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-footer-group-kicker {
+  margin: 0 0 0.375rem;
+  color: var(--sinai-role-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-footer-link-group h2,
+.sinai-footer-contact-panel h2 {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sinai-footer-link-group ul {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.875rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sinai-footer-link-group a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 2rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  transition: color 150ms ease, transform 150ms ease;
+}
+
+.sinai-footer-link-group a svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--sinai-role-accent);
+  transition: transform 150ms ease;
+}
+
+.sinai-footer-link-group a:hover {
+  color: var(--color-fd-foreground);
+}
+
+.sinai-footer-link-group a:hover svg {
+  transform: translateX(2px);
+}
+
+.sinai-footer-contact-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem;
+  background: color-mix(in srgb, var(--color-fd-card) 94%, var(--sinai-role-accent) 6%);
+}
+
+.sinai-footer-contact-panel > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.125rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-footer-contact-panel > div > p:not(.sinai-footer-group-kicker) {
+  margin: 0.5rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+.sinai-footer-contact-panel a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.875rem;
+  color: var(--sinai-role-accent);
+  font-size: 0.75rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sinai-footer-contact-panel a svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.sinai-footer-legal {
+  border-top-color: var(--color-fd-border);
+  background: var(--color-fd-muted);
+}
+
+.sinai-footer-legal-content {
+  justify-content: flex-start;
+  min-height: 3.25rem;
+  font-size: 0.6875rem;
+}
+
+.sinai-footer-legal-divider {
+  width: 1px;
+  height: 0.75rem;
+  background: var(--color-fd-border);
+}
+
+.sinai-footer-legal a {
+  margin-inline-start: auto;
+}
+
+@media (max-width: 1100px) {
+  .sinai-footer-support-hub {
+    grid-template-columns: minmax(16rem, 1fr) auto;
+  }
+
+  .sinai-footer-support-action {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .sinai-footer-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sinai-footer-shell {
+    padding-block: 2rem;
+  }
+
+  .sinai-footer-support-hub,
+  .sinai-footer-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-footer-platform-details {
+    min-width: 0;
+    padding-inline-start: 0;
+    border-inline-start: 0;
+  }
+
+  .sinai-footer-support-action {
+    grid-column: auto;
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .sinai-footer-content-grid {
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .sinai-footer-brand-panel,
+  .sinai-footer-link-group,
+  .sinai-footer-contact-panel {
+    padding: 1rem;
+  }
+
+  .sinai-footer-legal-content {
+    gap: 0.5rem;
+  }
+
+  .sinai-footer-legal-divider {
+    display: none;
+  }
+
+  .sinai-footer-legal a {
+    margin-inline-start: 0;
+  }
+}
+
+/* Portada: una bienvenida institucional que conduce desde el rol hasta la
+   guía, manteniendo la documentación como acción principal. */
+.sinai-home {
+  min-height: 100vh;
+  padding: 0 1.5rem 5rem;
+  background: var(--color-fd-background);
+  color: var(--color-fd-foreground);
+}
+
+.sinai-home-header,
+.sinai-home-hero,
+.sinai-home-explore,
+.sinai-home-help {
+  width: min(100%, 76rem);
+  margin-inline: auto;
+}
+
+.sinai-home-header {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.sinai-home-brand,
+.sinai-home-header-links,
+.sinai-home-header-links a,
+.sinai-home-hero-actions,
+.sinai-home-primary-action,
+.sinai-home-secondary-action,
+.sinai-home-section-card em,
+.sinai-home-help,
+.sinai-home-help-icon,
+.sinai-home-help-action {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sinai-home-brand {
+  gap: 0.625rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sinai-home-brand .sinai-sidebar-logo {
+  width: 4.5rem;
+}
+
+.sinai-home-header-links {
+  gap: 0.25rem;
+}
+
+.sinai-home-header-links a {
+  gap: 0.25rem;
+  min-height: 2.25rem;
+  padding-inline: 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.sinai-home-header-links a:hover {
+  background: var(--color-fd-accent);
+  color: var(--color-fd-foreground);
+}
+
+.sinai-home-header-links svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.sinai-home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-fd-card) 92%, var(--sinai-role-accent) 8%);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%), 0 16px 36px color-mix(in srgb, var(--sinai-role-accent) 7%, transparent);
+}
+
+.sinai-home-hero-copy {
+  padding: 3.5rem;
+}
+
+.sinai-home-kicker,
+.sinai-home-section-heading > p,
+.sinai-home-help p {
+  display: inline-flex;
+  gap: 0.375rem;
+  align-items: center;
+  margin: 0;
+  color: var(--sinai-role-accent);
+  font-size: 0.6875rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-home-kicker {
+  padding: 0.375rem 0.625rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 30%, var(--color-fd-border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-fd-card) 80%, transparent);
+}
+
+.sinai-home-kicker svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.sinai-home-hero h1 {
+  max-width: 42rem;
+  margin: 1.5rem 0 0;
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 730;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.sinai-home-lead {
+  max-width: 38rem;
+  margin: 1.5rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.sinai-home-hero-actions {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.sinai-home-primary-action,
+.sinai-home-secondary-action,
+.sinai-home-help-action {
+  gap: 0.5rem;
+  min-height: 2.875rem;
+  padding-inline: 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sinai-home-primary-action {
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--sinai-role-accent) 25%, transparent);
+}
+
+.sinai-home-primary-action:active,
+.sinai-home-help-action:active {
+  transform: scale(0.97);
+}
+
+.sinai-home-secondary-action {
+  color: var(--color-fd-foreground);
+}
+
+.sinai-home-secondary-action:hover {
+  color: var(--sinai-role-accent);
+}
+
+.sinai-home-primary-action svg,
+.sinai-home-secondary-action svg,
+.sinai-home-help-action svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-home-route {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.5rem;
+  border-inline-start: 1px solid color-mix(in srgb, var(--sinai-role-accent) 20%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-card) 80%, var(--sinai-role-accent) 20%);
+}
+
+.sinai-home-route-heading > span {
+  color: var(--sinai-role-accent);
+  font-size: 0.6875rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-home-route h2 {
+  margin: 0.5rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.sinai-home-route ol {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sinai-home-route li {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  gap: 0.625rem;
+  align-items: start;
+  padding: 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--color-fd-border) 88%, transparent);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--color-fd-card) 90%, transparent);
+}
+
+.sinai-home-step-index {
+  color: var(--sinai-role-accent);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+}
+
+.sinai-home-route li > svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: 0.0625rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-home-route li > span:last-child {
+  display: grid;
+  gap: 0.1875rem;
+}
+
+.sinai-home-route strong {
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.sinai-home-route small {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.sinai-home-explore {
+  padding-top: 5.5rem;
+}
+
+.sinai-home-section-heading {
+  max-width: 38rem;
+}
+
+.sinai-home-section-heading h2,
+.sinai-home-help h2 {
+  margin: 0.625rem 0 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 730;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.sinai-home-section-heading > span,
+.sinai-home-help > div > span {
+  display: block;
+  margin-top: 0.875rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.sinai-home-section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sinai-home-section-card {
+  --sinai-home-card-accent: var(--sinai-role-accent);
+  position: relative;
+  display: flex;
+  min-height: 15rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 1rem;
+  background: var(--color-fd-card);
+  color: var(--color-fd-foreground);
+  text-decoration: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.sinai-home-section-card[data-role='administrativo'] {
+  --sinai-home-card-accent: #011ac7;
+}
+
+.sinai-home-section-card[data-role='docente'] {
+  --sinai-home-card-accent: #00aa01;
+}
+
+.sinai-home-section-card[data-role='estudiante'] {
+  --sinai-home-card-accent: #d98e00;
+}
+
+.dark .sinai-home-section-card[data-role='estudiante'] {
+  --sinai-home-card-accent: #f1dc55;
+}
+
+.sinai-home-section-card:hover {
+  border-color: color-mix(in srgb, var(--sinai-home-card-accent) 44%, var(--color-fd-border));
+  box-shadow: 0 10px 24px color-mix(in srgb, var(--sinai-home-card-accent) 10%, transparent);
+  transform: translateY(-2px);
+}
+
+.sinai-home-section-card:active {
+  transform: scale(0.99);
+}
+
+.sinai-home-section-card-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--sinai-home-card-accent) 12%, transparent);
+  color: var(--sinai-home-card-accent);
+}
+
+.sinai-home-section-card-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sinai-home-section-card > p {
+  margin: 1.25rem 0 0;
+  color: var(--sinai-home-card-accent);
+  font-size: 0.6875rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-home-section-card h3 {
+  margin: 0.375rem 0 0;
+  font-size: 1.125rem;
+  font-weight: 720;
+  letter-spacing: -0.02em;
+}
+
+.sinai-home-section-card > span {
+  margin-top: 0.625rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.sinai-home-section-card em {
+  gap: 0.25rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  color: var(--sinai-home-card-accent);
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 650;
+}
+
+.sinai-home-section-card em svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  transition: transform 150ms ease;
+}
+
+.sinai-home-section-card:hover em svg {
+  transform: translateX(2px);
+}
+
+.sinai-home-help {
+  gap: 1rem;
+  margin-top: 4.5rem;
+  padding: 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-fd-card) 94%, var(--sinai-role-accent) 6%);
+}
+
+.sinai-home-help-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: none;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: var(--sinai-role-accent);
+  color: var(--color-fd-primary-foreground);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+}
+
+.sinai-home-help-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sinai-home-help > div {
+  min-width: 0;
+}
+
+.sinai-home-help h2 {
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.sinai-home-help > div > span {
+  margin-top: 0.375rem;
+  font-size: 0.8125rem;
+}
+
+.sinai-home-help-action {
+  flex: none;
+  margin-inline-start: auto;
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 32%, var(--color-fd-border));
+}
+
+.sinai-home-brand:focus-visible,
+.sinai-home-header-links a:focus-visible,
+.sinai-home-secondary-action:focus-visible,
+.sinai-home-section-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .sinai-home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-home-route {
+    border-top: 1px solid color-mix(in srgb, var(--sinai-role-accent) 20%, var(--color-fd-border));
+    border-inline-start: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .sinai-home {
+    padding-inline: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .sinai-home-header {
+    min-height: 4.5rem;
+  }
+
+  .sinai-home-brand > span,
+  .sinai-home-header-links a:not(:last-child) {
+    display: none;
+  }
+
+  .sinai-home-header-links a {
+    padding-inline: 0.5rem;
+  }
+
+  .sinai-home-hero-copy,
+  .sinai-home-route {
+    padding: 2rem 1.5rem;
+  }
+
+  .sinai-home-hero h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .sinai-home-lead {
+    font-size: 0.9375rem;
+  }
+
+  .sinai-home-primary-action,
+  .sinai-home-secondary-action {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sinai-home-explore {
+    padding-top: 3.5rem;
+  }
+
+  .sinai-home-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-home-section-card {
+    min-height: 13.5rem;
+  }
+
+  .sinai-home-help {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    margin-top: 3rem;
+  }
+
+  .sinai-home-help-action {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: center;
+    margin-inline-start: 0;
+  }
+}

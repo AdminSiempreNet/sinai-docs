@@ -1,0 +1,13 @@
+{
+  "title": "Seguimiento",
+  "defaultOpen": false,
+  "pages": [
+    "inasistencias",
+    "excusas",
+    "anotaciones",
+    "f-observador",
+    "tareas-en-linea",
+    "informes-de-seguimiento"
+  ],
+  "icon": "ChartNoAxesCombined"
+}

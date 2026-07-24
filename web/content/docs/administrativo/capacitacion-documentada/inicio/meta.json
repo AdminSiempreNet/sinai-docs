@@ -1,0 +1,14 @@
+{
+  "title": "Inicio",
+  "defaultOpen": false,
+  "pages": [
+    "autoevaluacion",
+    "actualizar-datos-de-perfil-de-usuario",
+    "mensajes",
+    "inconsistencias",
+    "como-ingresar-a-sinai",
+    "recuperar-contrasena",
+    "consultas"
+  ],
+  "icon": "House"
+}

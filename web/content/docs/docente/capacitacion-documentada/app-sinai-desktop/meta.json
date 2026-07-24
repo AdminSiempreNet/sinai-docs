@@ -1,0 +1,11 @@
+{
+  "title": "APP SINAI DESKTOP",
+  "pages": [
+    "inicio-desktop",
+    "planeacion-desktop",
+    "evaluacion-desktop",
+    "seguimiento-desktop",
+    "herramientas-desktop"
+  ],
+  "icon": "MonitorCog"
+}

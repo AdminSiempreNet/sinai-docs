@@ -1,0 +1,11 @@
+{
+  "title": "Docente",
+  "description": "Procesos y guías para el rol Docente",
+  "root": true,
+  "icon": "Presentation",
+  "pages": [
+    "index",
+    "capacitacion-documentada",
+    "procesos-de-temporada"
+  ]
+}

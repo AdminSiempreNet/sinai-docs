@@ -1,0 +1,9 @@
+$ next dev --disable-source-maps --no-server-fast-refresh "--port" "3010"
+⨯ Another next dev server is already running.
+
+- Local:        http://localhost:3000
+- PID:          11520
+- Dir:          C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web
+- Log:          .next\dev\logs\next-development.log
+
+Run taskkill /PID 11520 /F to stop it.

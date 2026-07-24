@@ -1,0 +1,11 @@
+{
+  "title": "Promoción",
+  "defaultOpen": false,
+  "pages": [
+    "promocion-anticipada",
+    "estudiantes-sin-calificaciones",
+    "estudiantes-que-reprobarian-por-inasistencias",
+    "criterios-de-promocion",
+    "procesos-promocion"
+  ]
+}

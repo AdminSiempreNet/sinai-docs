@@ -1,0 +1,12 @@
+{
+  "title": "Usuarios",
+  "defaultOpen": false,
+  "pages": [
+    "gestion-de-usuarios",
+    "asignacion-de-permisos",
+    "denegar-funciones-a-estudiantes",
+    "comunidad-educativa-morce",
+    "verificacion-de-datos",
+    "generar-correos-institucionales"
+  ]
+}

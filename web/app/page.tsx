@@ -1,65 +1,186 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BookOpenCheck,
+  Building2,
+  GraduationCap,
+  ListTree,
+  Presentation,
+  Search,
+  ShieldCheck,
+} from 'lucide-react';
+import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
+import { SinaiSiteFooter } from '@/components/sinai-site-footer';
+import { SinaiThemeSwitch } from '@/components/sinai-theme-switch';
+import { buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/cn';
+
+const roles = [
+  {
+    title: 'Guías generales',
+    description: 'Acceso y procesos comunes.',
+    href: '/docs/generales',
+    icon: BookOpenCheck,
+    role: 'general',
+  },
+  {
+    title: 'Administrativo',
+    description: 'Gestión institucional y académica.',
+    href: '/docs/administrativo',
+    icon: Building2,
+    role: 'administrativo',
+  },
+  {
+    title: 'Docente',
+    description: 'Planeación, evaluación y seguimiento.',
+    href: '/docs/docente',
+    icon: Presentation,
+    role: 'docente',
+  },
+  {
+    title: 'Estudiante',
+    description: 'Consulta de información académica.',
+    href: '/docs/estudiante',
+    icon: GraduationCap,
+    role: 'estudiante',
+  },
+];
+
+const steps = [
+  {
+    number: '01',
+    title: 'Elija su perfil',
+    description: 'Entre al espacio que corresponde a su tarea.',
+    icon: ShieldCheck,
+  },
+  {
+    number: '02',
+    title: 'Abra el proceso',
+    description: 'Use el menú lateral para ubicar la categoría.',
+    icon: ListTree,
+  },
+  {
+    number: '03',
+    title: 'Siga la guía',
+    description: 'Avance con información clara y actualizada.',
+    icon: Search,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <main className="sinai-welcome">
+        <header className="sinai-welcome-header">
+          <Link href="/" className="sinai-welcome-brand" aria-label="Inicio de la base de conocimiento SINAI">
+            <SinaiBrandLogo />
+            <span>Base de conocimiento</span>
+          </Link>
+
+          <div className="sinai-welcome-header-actions">
+            <nav className="sinai-welcome-nav" aria-label="Navegación principal">
+              <Link href="/docs/generales">Guías generales</Link>
+              <Link href="/docs/administrativo">Guías por rol</Link>
+              <a href="https://www.sinai.net.co" target="_blank" rel="noopener noreferrer">
+                Ir a SINAI <ArrowUpRight aria-hidden="true" />
+              </a>
+            </nav>
+            <SinaiThemeSwitch className="sinai-welcome-theme-switch" />
+          </div>
+        </header>
+
+        <section className="sinai-welcome-hero" aria-labelledby="sinai-welcome-title">
+          <div className="sinai-welcome-content">
+            <div className="sinai-welcome-intro">
+              <p className="sinai-welcome-kicker">
+                <BookOpenCheck aria-hidden="true" />
+                Centro de orientación SINAI
+              </p>
+              <h1 id="sinai-welcome-title">La guía correcta para cada proceso en SINAI.</h1>
+              <p>
+                Encuentre tutoriales, respuestas y rutas paso a paso organizadas para acompañar su trabajo en la plataforma.
+              </p>
+            </div>
+
+            <section className="sinai-welcome-role-picker" aria-labelledby="sinai-welcome-roles-title">
+              <div className="sinai-welcome-picker-heading">
+                <div>
+                  <p>¿Con qué perfil trabaja?</p>
+                  <h2 id="sinai-welcome-roles-title">Elija su espacio de consulta</h2>
+                </div>
+                <span>4 rutas disponibles</span>
+              </div>
+
+              <div className="sinai-welcome-role-grid">
+                {roles.map(({ title, description, href, icon: Icon, role }) => (
+                  <Link key={href} href={href} className="sinai-welcome-role-card" data-role={role}>
+                    <span className="sinai-welcome-role-icon"><Icon aria-hidden="true" /></span>
+                    <span className="sinai-welcome-role-copy">
+                      <strong>{title}</strong>
+                      <small>{description}</small>
+                    </span>
+                    <ArrowRight className="sinai-welcome-role-arrow" aria-hidden="true" />
+                  </Link>
+                ))}
+              </div>
+            </section>
+
+            <p className="sinai-welcome-menu-note">
+              <ListTree aria-hidden="true" />
+              Dentro de cada módulo, el menú lateral organiza todos los procesos y sus guías.
+            </p>
+          </div>
+
+          <figure className="sinai-welcome-banner">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/home/sinai-knowledge-route.png"
+              alt="Ilustración abstracta de una guía abierta y rutas de conocimiento conectadas"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 42vw"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <figcaption>
+              <span>Una ruta para avanzar</span>
+              <strong>Perfil <i /> proceso <i /> guía</strong>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section className="sinai-welcome-steps" aria-labelledby="sinai-welcome-steps-title">
+          <div className="sinai-welcome-section-intro">
+            <p>Así funciona</p>
+            <h2 id="sinai-welcome-steps-title">De la consulta a la acción</h2>
+          </div>
+          <ol>
+            {steps.map(({ number, title, description, icon: Icon }) => (
+              <li key={number}>
+                <span className="sinai-welcome-step-number">{number}</span>
+                <Icon aria-hidden="true" />
+                <div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="sinai-welcome-start" aria-labelledby="sinai-welcome-start-title">
+          <div className="sinai-welcome-start-icon"><BookOpenCheck aria-hidden="true" /></div>
+          <div>
+            <p>¿Es su primera vez en SINAI?</p>
+            <h2 id="sinai-welcome-start-title">Comience por las guías generales</h2>
+            <span>Conozca el acceso a la plataforma y las acciones que aplican para todos los usuarios.</span>
+          </div>
+          <Link href="/docs/generales" className={cn(buttonVariants({ variant: 'outline' }), 'sinai-welcome-start-action')}>
+            Ver guías generales
+            <ArrowRight aria-hidden="true" />
+          </Link>
+        </section>
       </main>
-    </div>
+      <SinaiSiteFooter />
+    </>
   );
 }

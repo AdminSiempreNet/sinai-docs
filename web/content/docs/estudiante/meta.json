@@ -1,0 +1,10 @@
+{
+  "title": "Estudiante",
+  "description": "Procesos y guías para el rol Estudiante",
+  "root": true,
+  "icon": "GraduationCap",
+  "pages": [
+    "index",
+    "capacitacion-documentada"
+  ]
+}

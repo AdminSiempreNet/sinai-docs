@@ -1,0 +1,16 @@
+{
+  "title": "Evaluación",
+  "defaultOpen": false,
+  "pages": [
+    "calificaciones",
+    "asignar-logros",
+    "comportamiento",
+    "refuerzos",
+    "consolidar",
+    "detallado-individual",
+    "notas-finales",
+    "ajuste-de-nota-final",
+    "informes-de-evaluacion"
+  ],
+  "icon": "ClipboardCheck"
+}

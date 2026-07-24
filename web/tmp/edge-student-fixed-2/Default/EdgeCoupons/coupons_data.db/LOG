@@ -1,0 +1,5 @@
+2026/07/17-03:38:03.053 9074 Creating DB C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\tmp\edge-student-fixed-2\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/07/17-03:38:03.069 9074 Reusing MANIFEST C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\tmp\edge-student-fixed-2\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/07/17-03:38:03.761 2d00 Level-0 table #5: started
+2026/07/17-03:38:03.769 2d00 Level-0 table #5: 683041 bytes OK
+2026/07/17-03:38:03.773 2d00 Delete type=0 #3

@@ -1,0 +1,11 @@
+{
+  "title": "Autoevaluación institucional",
+  "defaultOpen": false,
+  "pages": [
+    "gestionar-autoevaluacion",
+    "gestionar-cuestionarios",
+    "gestionar-encuestas",
+    "responder-autoevaluacion"
+  ],
+  "icon": "Landmark"
+}

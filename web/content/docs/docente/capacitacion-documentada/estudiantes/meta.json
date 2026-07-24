@@ -1,0 +1,10 @@
+{
+  "title": "Estudiantes",
+  "pages": [
+    "lista-por-grupo",
+    "tareas-en-linea-estudiantes",
+    "cargar-fotografias",
+    "estudiantes-piar"
+  ],
+  "icon": "UsersRound"
+}

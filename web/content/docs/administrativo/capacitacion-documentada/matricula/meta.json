@@ -1,0 +1,16 @@
+{
+  "title": "Matrícula",
+  "defaultOpen": false,
+  "pages": [
+    "estudiantes-nuevos",
+    "listados",
+    "ajustes-de-matricula",
+    "cambio-de-grupo",
+    "reingreso",
+    "matricula-semestral",
+    "prematricula",
+    "especialidades",
+    "informes-de-matricula"
+  ],
+  "icon": "ClipboardPenLine"
+}

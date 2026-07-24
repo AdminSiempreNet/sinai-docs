@@ -1,0 +1,73 @@
+{
+   "checksum": "c060776100a5d3fd24944f50d17ce0ae",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13425176775261017",
+            "date_last_used": "0",
+            "guid": "47525dfd-e60b-4efe-921d-530ea4f5d02e",
+            "id": "7",
+            "name": "Citofonia Movil",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://localhost:8082/",
+            "visit_count": 1
+         }, {
+            "date_added": "13425176787696173",
+            "date_last_used": "0",
+            "guid": "181ec5c2-dafe-471e-9c20-7f5876b5b719",
+            "id": "8",
+            "name": "Citofonia WEB",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "http://localhost:3000/admin",
+            "visit_count": 1
+         } ],
+         "date_added": "13428751014174780",
+         "date_last_used": "0",
+         "date_modified": "13425176787696173",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Barra de favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13428751014174780",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Otros favoritos",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13428751014174780",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Favoritos móviles",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "workspaces_v2": {
+         "children": [  ],
+         "date_added": "13428751014174780",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "75aa6670-344f-549d-b742-660f029506ab",
+         "id": "5",
+         "name": "Áreas de trabajo",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCJc6NW+fAQAAKg4QABgBIAAoBTAAOABAABIAKhhkYzBteUsxNFVZbEE0dzNDU0s3Mk5RPT1IA6AGDBKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiQ4MjdkOTQxOS01Y2JjLTUyMGMtOWRmYi1lMzEzODQyOTVkODAYACAAKAAwr7H55uIzOPW2+ebiM0D1tvnm4jNKHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAASjgEIBRKJAQocd1JCclpMKzZQQTlhdktnak5QN0pYRExjZnZzPRIkNDAxYjBjNjYtMjc0YS01NTE3LTg1ZTUtNGQ1YTNiYzllMGEyGAAgACgAMK6x+ebiMzjJtvnm4jNAybb55uIzShxubXg2NXNRRHZ4SThUZ0VlditBK250dG9TbjQ9WgBlAAAAAMI+AmAAEqwBCAgSpwEKHDNnRUtNcERNMENmd3JVVklUUzhWM1V6VzhsTT0SJDE4MWVjNWMyLWRhZmUtNDcxZS05YzIwLTdmNTg3NmI1YjcxORgAIAAoADC+4LnR6TM4isS50ekzQIrEudHpM0ocb3poUGZ1VmtRdGFsTnVxMWlnL29mRDFNN05zPVoeIhxuVE1JUlMrV1VSZFozUE1hUmVpekZVYUZCMnM9ZUEg9KbCPgJgBRKsAQgHEqcBChxiYzVYU2x3OC9WTEZ3S0J5dGRRejlPTUpZaGc9EiQ0NzUyNWRmZC1lNjBiLTRlZmUtOTIxZC01MzBlYTRmNWQwMmUYACAAKAAwkpa50ekzOJHjuNHpM0CR47jR6TNKHGdLY25FckNSQUJ6QU8wVE93OGwxbnVLcXNMVT1aHiIcTUtQRHZiQlhVODJEbS8zaGZzOGZNZFN6V29jPWWDMS/Ywj4CYAUSjgEIARKJAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRIkZDZiNDEwNWYtYzkxZC01NDUzLTgzNzctY2ZlMDc2ZWZmNzVlGAAgACgAMKix+ebiMzjLtfnm4jNAy7X55uIzShxhUkNXTGdoRjliNUlucUtJRHZ1Si9qdlFrRmM9WgBlAAAAAMI+AmAAEo4BCAISiQEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJDA3ZmNiMzM3LTFlNDQtNTM0NS1iZmY0LTFmMmZjNWU5ODYyYhgAIAAoADCpsfnm4jM48LX55uIzQPC1+ebiM0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAADCPgJgADAAOAA=",
+   "version": 1
+}

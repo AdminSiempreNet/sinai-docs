@@ -1,0 +1,9 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3010
+- Network:       http://192.168.80.31:3010
+- Environments: .env.local
+✓ Ready in 478ms
+[MDX] generated files in 37.85680000000002ms
+[MDX] closing dev server
+[?25h
+[ELIFECYCLE] Command failed with exit code 1.

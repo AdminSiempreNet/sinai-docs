@@ -1,0 +1,9 @@
+{
+  "title": "Sistema electoral",
+  "defaultOpen": false,
+  "pages": [
+    "con-mesas",
+    "sin-mesas"
+  ],
+  "icon": "Vote"
+}

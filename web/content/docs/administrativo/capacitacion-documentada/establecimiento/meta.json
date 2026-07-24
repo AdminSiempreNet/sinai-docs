@@ -1,0 +1,16 @@
+{
+  "title": "Establecimiento",
+  "defaultOpen": false,
+  "pages": [
+    "institucion",
+    "calendario",
+    "areas-y-asignatura",
+    "configuracion-academica",
+    "configuracion-fisica",
+    "grupos",
+    "usuarios",
+    "copia-de-seguridad",
+    "informes-del-establecimiento"
+  ],
+  "icon": "School"
+}

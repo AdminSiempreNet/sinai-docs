@@ -1,0 +1,16 @@
+{
+  "title": "Personal",
+  "defaultOpen": false,
+  "pages": [
+    "planta-de-cargos",
+    "funcionarios",
+    "asignacion-academica",
+    "trasladar-asignacion",
+    "horas-dictadas",
+    "actividades-complementarias",
+    "diario-pedagogico",
+    "autorizaciones",
+    "informes-de-personal"
+  ],
+  "icon": "Users"
+}

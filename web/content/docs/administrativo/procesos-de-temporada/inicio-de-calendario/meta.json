@@ -1,0 +1,8 @@
+{
+  "title": "Inicio de calendario",
+  "defaultOpen": false,
+  "pages": [
+    "proceso-de-inicio-de-calendario"
+  ],
+  "icon": "CalendarClock"
+}

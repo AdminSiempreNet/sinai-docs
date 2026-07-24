@@ -1,0 +1,2 @@
+$ next dev --disable-source-maps --no-server-fast-refresh "--" "--port" "3000"
+Invalid project directory provided, no such directory: C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\--port

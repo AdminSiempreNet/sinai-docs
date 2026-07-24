@@ -1,0 +1,9 @@
+{
+  "title": "Funcionarios",
+  "defaultOpen": false,
+  "pages": [
+    "registro-de-funcionarios",
+    "novedades-de-personal",
+    "asistencia-docentes"
+  ]
+}

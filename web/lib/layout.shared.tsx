@@ -1,4 +1,6 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
+import { SinaiThemeSwitch } from '@/components/sinai-theme-switch';
 
 /**
  * Opciones compartidas de layout.
@@ -8,7 +10,10 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: 'Sinai Docs',
+      title: <SinaiBrandLogo />,
+    },
+    slots: {
+      themeSwitch: SinaiThemeSwitch,
     },
   };
 }

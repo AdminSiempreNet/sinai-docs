@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "index",
+    "generales",
+    "administrativo",
+    "docente",
+    "estudiante"
+  ]
+}

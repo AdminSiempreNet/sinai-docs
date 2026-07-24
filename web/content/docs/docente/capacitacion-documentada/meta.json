@@ -1,0 +1,17 @@
+{
+  "title": "Capacitación Documentada",
+  "defaultOpen": true,
+  "pages": [
+    "inicio",
+    "general",
+    "estudiantes",
+    "evaluacion-capacitacion-documentada",
+    "docente",
+    "planeacion-capacitacion-documentada",
+    "herramientas-capacitacion-documentada",
+    "seguimiento-capacitacion-documentada",
+    "ficha-observador-capacitacion-documentada",
+    "app-sinai-desktop"
+  ],
+  "icon": "BookOpenCheck"
+}

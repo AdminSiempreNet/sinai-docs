@@ -1,0 +1,13 @@
+{
+  "title": "Administrativo",
+  "defaultOpen": false,
+  "pages": [
+    "index",
+    "capacitacion-documentada",
+    "procesos-de-temporada",
+    "preguntas-frecuentes"
+  ],
+  "description": "Procesos y guías para el rol Administrativo",
+  "root": true,
+  "icon": "Building2"
+}

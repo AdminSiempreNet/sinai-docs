@@ -1,0 +1,12 @@
+{
+  "title": "Ajustes de matrícula",
+  "defaultOpen": false,
+  "pages": [
+    "ajuste-individual-de-matricula",
+    "actualizacion-de-datos-por-grupo",
+    "renovacion-de-matricula",
+    "control-de-legalizacion-de-matricula",
+    "historial-de-matricula",
+    "registro-de-validacion"
+  ]
+}
