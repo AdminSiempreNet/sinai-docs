@@ -26,36 +26,6 @@ export function SinaiSiteFooter() {
   return (
     <footer className="sinai-site-footer" aria-labelledby="sinai-footer-title">
       <div className="sinai-footer-shell">
-        <section className="sinai-footer-support-hub" aria-labelledby="sinai-footer-title">
-          <div className="sinai-footer-support-copy">
-            <div className="sinai-footer-support-icon" aria-hidden="true">
-              <LogIn />
-            </div>
-            <div>
-              <p className="sinai-footer-eyebrow">Acceso a la plataforma</p>
-              <h2 id="sinai-footer-title">Ingrese a SINAI</h2>
-              <p>Acceda a la plataforma de su institución para continuar con sus procesos académicos y administrativos.</p>
-            </div>
-          </div>
-
-          <div className="sinai-footer-platform-details">
-            <span className="sinai-footer-platform-address">www.sinai.net.co</span>
-            <Link href="/docs/generales/como-ingresar-a-sinai" className="sinai-footer-platform-guide">
-              Ver guía de acceso
-              <ChevronRight aria-hidden="true" />
-            </Link>
-          </div>
-
-          <a
-            className={cn(buttonVariants({ variant: 'primary' }), 'sinai-footer-support-action')}
-            href="https://www.sinai.net.co"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ir a la plataforma
-            <ArrowUpRight aria-hidden="true" />
-          </a>
-        </section>
 
         <div className="sinai-footer-content-grid">
           <section className="sinai-footer-brand-panel" aria-label="SINAI y SIEMPRE.NET">

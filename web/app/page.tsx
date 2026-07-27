@@ -74,9 +74,9 @@ export default function Home() {
     <>
       <main className="sinai-welcome">
         <header className="sinai-welcome-header">
-          <Link href="/" className="sinai-welcome-brand" aria-label="Inicio de la base de conocimiento SINAI">
+          <Link href="/" className="sinai-welcome-brand" aria-label="Inicio del centro de ayuda SINAI">
             <SinaiBrandLogo />
-            <span>Base de conocimiento</span>
+            <span>Centro de ayuda</span>
           </Link>
 
           <div className="sinai-welcome-header-actions">
@@ -94,11 +94,7 @@ export default function Home() {
         <section className="sinai-welcome-hero" aria-labelledby="sinai-welcome-title">
           <div className="sinai-welcome-content">
             <div className="sinai-welcome-intro">
-              <p className="sinai-welcome-kicker">
-                <BookOpenCheck aria-hidden="true" />
-                Centro de orientación SINAI
-              </p>
-              <h1 id="sinai-welcome-title">La guía correcta para cada proceso en SINAI.</h1>
+              <h1 id="sinai-welcome-title">El respaldo que necesitas para gestionar tu día a día en SINAI.</h1>
               <p>
                 Encuentre tutoriales, respuestas y rutas paso a paso organizadas para acompañar su trabajo en la plataforma.
               </p>
