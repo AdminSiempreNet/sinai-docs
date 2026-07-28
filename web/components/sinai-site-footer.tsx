@@ -22,15 +22,19 @@ const roleLinks = [
   { label: 'Estudiante', href: '/docs/estudiante' },
 ];
 
-export function SinaiSiteFooter() {
+interface SinaiSiteFooterProps {
+  compact?: boolean;
+}
+
+export function SinaiSiteFooter({ compact = false }: SinaiSiteFooterProps) {
   return (
-    <footer className="sinai-site-footer" aria-labelledby="sinai-footer-title">
+    <footer className={cn('sinai-site-footer', compact && 'sinai-site-footer-compact')} aria-labelledby="sinai-footer-title">
       <div className="sinai-footer-shell">
 
         <div className="sinai-footer-content-grid">
           <section className="sinai-footer-brand-panel" aria-label="SINAI y SIEMPRE.NET">
             <Image
-              src="/images/brand/sinai.png"
+              src="/images/brand/sinai-white.png"
               alt="SINAI"
               width={850}
               height={394}
