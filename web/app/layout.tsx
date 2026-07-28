@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { SinaiSearchDialog } from "@/components/sinai-search-dialog";
+import { SinaiAssistant } from "@/components/sinai-assistant";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -74,7 +75,7 @@ export default function RootLayout({
           }}
           search={{ SearchDialog: SinaiSearchDialog }}
         >
-          {children}
+          <SinaiAssistant>{children}</SinaiAssistant>
         </RootProvider>
       </body>
     </html>

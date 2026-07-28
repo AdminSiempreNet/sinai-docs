@@ -1714,48 +1714,6 @@ div:has(> .sinai-role-icon) {
   text-align: right;
 }
 
-.sinai-ai-toggle {
-  position: fixed;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sinai-ai-toggle:not(:checked) ~ .sinai-ai-panel {
-  display: none;
-}
-
-.sinai-ai-toggle:checked ~ .sinai-ai-trigger {
-  transform: translateY(2.5rem);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.sinai-ai-toggle:focus-visible ~ .sinai-ai-trigger {
-  outline: 2px solid var(--sinai-menu-accent);
-  outline-offset: 2px;
-}
-
-/* El índice de las guías crea su propia capa sticky. El disparador y el panel
-   deben quedar por encima para conservar el patrón lateral de Fumadocs. */
-#nd-docs-layout .sinai-ai-trigger,
-#nd-docs-layout .sinai-ai-panel {
-  z-index: 60 !important;
-}
-
-#nd-docs-layout .sinai-ai-trigger {
-  pointer-events: auto;
-}
-
-/* Al alcanzar el pie, el disparador deja libre el cierre institucional. El
-   panel abierto no se ve afectado: se muestra como una capa fija superior. */
-html[data-sinai-footer-visible] #nd-docs-layout .sinai-ai-toggle:not(:checked) ~ .sinai-ai-trigger {
-  opacity: 0;
-  pointer-events: none !important;
-  transform: translateY(1rem);
-}
-
 /* La onda nace donde se posa el cursor: una señal breve de que el asistente
    está disponible, sin restar protagonismo al contenido de la guía. */
 .sinai-ai-ripple {
