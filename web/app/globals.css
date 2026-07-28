@@ -2381,6 +2381,39 @@ body:has(.sinai-custom-toc) #nd-toc {
   color: #f8fafc;
 }
 
+/* En las vistas de documentación el pie pertenece al área de lectura: el
+   panel lateral de Fumadocs conserva su propia columna y el pie usa solo el
+   espacio que queda a su derecha. Al contraer el panel, Fumadocs actualiza el
+   atributo y el pie recupera automáticamente el ancho completo. */
+@media (min-width: 768px) {
+  .sinai-docs-frame:has(#nd-docs-layout[data-sidebar-collapsed="false"]) {
+    background-image: linear-gradient(
+      to right,
+      var(--color-fd-card) 0,
+      var(--color-fd-card) calc(268px - 1px),
+      var(--color-fd-border) calc(268px - 1px),
+      var(--color-fd-border) 268px,
+      transparent 268px
+    );
+  }
+
+  /* Fumadocs limita el sticky del panel al alto de su contenedor. Como el
+     footer vive después de ese contenedor, anclamos el panel abierto al
+     viewport para que sus opciones sigan disponibles durante todo el scroll. */
+  .sinai-docs-frame:has(#nd-docs-layout[data-sidebar-collapsed="false"]) #nd-sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 268px;
+    height: 100dvh;
+  }
+
+  .sinai-docs-frame:has(#nd-docs-layout[data-sidebar-collapsed="false"]) > .sinai-site-footer {
+    width: calc(100% - 268px);
+    margin-inline-start: 268px;
+    transition: width 250ms ease, margin-inline-start 250ms ease;
+  }
+}
+
 .sinai-footer-shell {
   padding-block: 3rem;
 }
@@ -2501,7 +2534,6 @@ body:has(.sinai-custom-toc) #nd-toc {
   display: grid;
   grid-template-columns: minmax(15rem, 1.35fr) minmax(9rem, 0.8fr) minmax(9rem, 0.8fr) minmax(15rem, 1.1fr);
   gap: 1.5rem;
-  padding-top: 2rem;
 }
 
 .sinai-footer-brand-panel,

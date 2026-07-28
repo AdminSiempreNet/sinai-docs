@@ -11,7 +11,7 @@ import { SinaiSiteFooter } from '@/components/sinai-site-footer';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <>
+    <div className="sinai-docs-frame">
       <DocsLayout
       {...baseOptions()}
       tree={source.pageTree}
@@ -46,6 +46,6 @@ export default function Layout({ children }: { children: ReactNode }) {
         {children}
       </DocsLayout>
       <SinaiSiteFooter />
-    </>
+    </div>
   );
 }
