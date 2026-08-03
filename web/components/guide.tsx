@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { AlertTriangle, CheckCircle2, Clock3, ExternalLink, Info } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, Info } from 'lucide-react';
 import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger } from '@/components/content-image';
 
 export function GuideOverview({ children }: { children: ReactNode }) {
@@ -139,7 +139,7 @@ export function GuideCallout({
   return (
     <aside
       className={[
-        'not-prose my-4 flex gap-3 rounded-lg border p-3 text-sm leading-6',
+        'sinai-guide-callout not-prose my-4 flex gap-3 rounded-lg border p-3 text-sm leading-6',
         isWarning
           ? 'border-amber-500/30 bg-amber-500/10 text-fd-foreground'
           : 'border-fd-primary/25 bg-fd-primary/8 text-fd-foreground',
@@ -148,6 +148,59 @@ export function GuideCallout({
       <Icon className={isWarning ? 'mt-0.5 size-5 shrink-0 text-amber-600 dark:text-amber-400' : 'mt-0.5 size-5 shrink-0 text-fd-primary'} />
       <div>{children}</div>
     </aside>
+  );
+}
+
+export function GuideFAQ({ children }: { children: ReactNode }) {
+  return (
+    <section className="sinai-guide-faq not-prose my-8 overflow-hidden rounded-2xl border bg-fd-card shadow-sm" aria-labelledby="guide-faq-title">
+      <header className="sinai-guide-faq-header border-b px-5 py-5 sm:px-6 sm:py-6">
+        <div className="flex items-start gap-3">
+          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-fd-primary text-fd-primary-foreground shadow-sm">
+            <CircleHelp className="size-5" aria-hidden="true" />
+          </span>
+          <div>
+            <p className="m-0 text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-fd-primary">Centro de ayuda</p>
+            <h2 id="guide-faq-title" className="mt-1 text-xl font-semibold tracking-tight text-fd-foreground">
+              Preguntas frecuentes
+            </h2>
+            <p className="mt-1.5 max-w-2xl text-sm leading-6 text-fd-muted-foreground">
+              Consulte las situaciones más comunes relacionadas con este proceso.
+            </p>
+          </div>
+        </div>
+      </header>
+      <div className="divide-y">{children}</div>
+    </section>
+  );
+}
+
+export function GuideFAQItem({
+  index,
+  question,
+  children,
+}: {
+  index: string;
+  question: string;
+  children: ReactNode;
+}) {
+  return (
+    <details className="sinai-guide-faq-item group bg-fd-card transition-colors">
+      <summary className="flex min-h-16 cursor-pointer list-none items-center gap-3 px-5 py-4 text-start outline-none transition-colors hover:bg-fd-muted/55 focus-visible:bg-fd-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-fd-primary sm:px-6 [&::-webkit-details-marker]:hidden">
+        <span className="sinai-guide-faq-index font-mono text-xs font-bold tabular-nums text-fd-primary" aria-hidden="true">
+          {index}
+        </span>
+        <span className="min-w-0 flex-1 text-[0.95rem] font-semibold leading-6 text-fd-foreground">{question}</span>
+        <span className="sinai-guide-faq-chevron grid size-8 shrink-0 place-items-center rounded-full border bg-fd-card text-fd-muted-foreground transition-transform duration-200 group-open:rotate-180 group-open:border-fd-primary/30 group-open:text-fd-primary">
+          <ChevronDown className="size-4" aria-hidden="true" />
+        </span>
+      </summary>
+      <div className="px-5 pb-5 sm:px-6 sm:pb-6">
+        <div className="sinai-guide-faq-answer border-s-2 border-fd-primary/35 ps-4 text-[0.95rem] leading-7 text-fd-muted-foreground [&_p]:m-0 [&_strong]:font-semibold [&_strong]:text-fd-foreground">
+          {children}
+        </div>
+      </div>
+    </details>
   );
 }
 

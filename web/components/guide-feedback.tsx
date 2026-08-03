@@ -22,7 +22,7 @@ export function GuideFeedback({
   const reviewNote = [status, lastReviewed && `Revisión estructural: ${lastReviewed}`].filter(Boolean).join(' · ');
 
   return (
-    <aside className="not-prose my-10 rounded-xl border bg-fd-card p-4 shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-5">
+    <aside className="sinai-guide-feedback not-prose my-10 rounded-xl border bg-fd-card p-4 shadow-sm sm:flex sm:items-center sm:justify-between sm:gap-6 sm:p-5">
       <div className="flex gap-3">
         {feedback === 'useful' ? (
           <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-fd-primary" aria-hidden="true" />
