@@ -9,6 +9,17 @@ type ImageSequenceItem = {
   alt: string;
 };
 
+export type ImageTriggerVariant = 'default' | 'contextual' | 'microchip' | 'reference';
+
+function triggerClassName(variant: ImageTriggerVariant, compact: boolean) {
+  // La misma referencia visual se utiliza en todas las guías. `compact` se
+  // conserva por compatibilidad con el contenido existente, sin alterar el
+  // patrón visual seleccionado.
+  void compact;
+  const selectedVariant = variant === 'default' ? 'reference' : variant;
+  return `sinai-example-trigger sinai-example-trigger-${selectedVariant} not-prose inline-flex items-center gap-2 text-sm font-semibold focus-visible:outline-none`;
+}
+
 function ExamplePreview({ images }: { images: ImageSequenceItem[] }) {
   return (
     <span className="sinai-example-preview" aria-hidden="true">
@@ -122,11 +133,15 @@ export function ContentImage({ alt = '', className, onClick, onKeyDown, src, ...
 export function ContentImageTrigger({
   src,
   alt,
-  children = 'Ver captura de referencia',
+  children: _children,
+  compact = false,
+  variant = 'default',
 }: {
   src: string;
   alt: string;
   children?: ReactNode;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
 }) {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -151,10 +166,11 @@ export function ContentImageTrigger({
         ref={triggerRef}
         type="button"
         onClick={() => setOpen(true)}
-        className="sinai-example-trigger not-prose inline-flex min-h-11 items-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-semibold text-fd-foreground focus-visible:outline-none"
+        className={triggerClassName(variant, compact)}
+        aria-label={`Ver referencia visual: ${alt}`}
       >
         <ImageIcon className="size-4 text-fd-primary" aria-hidden="true" />
-        {children}
+        <span className="sinai-example-trigger-reference-label">Referencia visual</span>
         <ExamplePreview images={[{ src, alt }]} />
       </button>
       {open && <ImageDialog src={src} alt={alt} onClose={closeModal} />}
@@ -164,10 +180,14 @@ export function ContentImageTrigger({
 
 export function ContentImageSequenceTrigger({
   images,
-  children = 'Ver ejemplos visuales',
+  children: _children,
+  compact = false,
+  variant = 'default',
 }: {
   images: ImageSequenceItem[];
   children?: ReactNode;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
 }) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -205,10 +225,11 @@ export function ContentImageSequenceTrigger({
           setActiveIndex(0);
           setOpen(true);
         }}
-        className="sinai-example-trigger not-prose inline-flex min-h-11 items-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-semibold text-fd-foreground focus-visible:outline-none"
+        className={triggerClassName(variant, compact)}
+        aria-label={`Ver referencia visual: ${total} ${total === 1 ? 'captura' : 'capturas'}`}
       >
         <Images className="size-4 text-fd-primary" aria-hidden="true" />
-        {children}
+        <span className="sinai-example-trigger-reference-label">Referencia visual</span>
         <ExamplePreview images={images} />
       </button>
 

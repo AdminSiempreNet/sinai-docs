@@ -12,6 +12,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
+import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
 import { SinaiThemeSwitch } from '@/components/sinai-theme-switch';
 import { buttonVariants } from '@/components/ui/button';
@@ -87,6 +88,7 @@ export default function Home() {
                 Ir a SINAI <ArrowUpRight aria-hidden="true" />
               </a>
             </nav>
+            <SinaiFontSizeSwitch className="sinai-welcome-font-size-switch" />
             <SinaiThemeSwitch className="sinai-welcome-theme-switch" />
           </div>
         </header>

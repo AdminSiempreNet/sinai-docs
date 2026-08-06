@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { SinaiSearchDialog } from "@/components/sinai-search-dialog";
 import { SinaiAssistant } from "@/components/sinai-assistant";
+import { SINAI_FONT_SIZE_BOOTSTRAP } from "@/lib/sinai-font-size";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,6 +37,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          id="sinai-font-size-bootstrap"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: SINAI_FONT_SIZE_BOOTSTRAP }}
+        />
         <RootProvider
           theme={{
             defaultTheme: "system",

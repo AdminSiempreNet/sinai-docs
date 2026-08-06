@@ -16,6 +16,191 @@
   --sinai-menu-accent: var(--sinai-role-accent);
   --sinai-menu-active: color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
   --sinai-menu-active-hover: color-mix(in srgb, var(--sinai-role-accent) 18%, transparent);
+  --sinai-font-scale: 1;
+}
+
+/* Escala tipográfica global (pequeña / mediana / grande). */
+html {
+  font-size: calc(100% * var(--sinai-font-scale));
+}
+
+html[data-sinai-font-size="small"] {
+  --sinai-font-scale: 0.9;
+}
+
+html[data-sinai-font-size="medium"],
+html:not([data-sinai-font-size]) {
+  --sinai-font-scale: 1;
+}
+
+html[data-sinai-font-size="large"] {
+  --sinai-font-scale: 1.125;
+}
+
+/* Selector de tamaño de letra: icono único que se expande al hover/foco. */
+.sinai-font-size-switch {
+  --sinai-fs-pad: 0.2rem;
+  --sinai-fs-gap: 0.1rem;
+  --sinai-fs-btn: 1.625rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  height: calc(var(--sinai-fs-btn) + var(--sinai-fs-pad) * 2);
+  padding: var(--sinai-fs-pad);
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-fd-secondary) 70%, transparent);
+  color: var(--color-fd-muted-foreground);
+  overflow: hidden;
+  transition:
+    width 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+  width: calc(var(--sinai-fs-btn) + var(--sinai-fs-pad) * 2);
+}
+
+.sinai-font-size-switch.is-compact {
+  --sinai-fs-btn: 1.5rem;
+  --sinai-fs-pad: 0.15rem;
+  border-color: transparent;
+  background: transparent;
+}
+
+.sinai-font-size-switch:hover,
+.sinai-font-size-switch:focus-within,
+.sinai-font-size-switch.is-open {
+  width: calc(var(--sinai-fs-btn) * 3 + var(--sinai-fs-gap) * 2 + var(--sinai-fs-pad) * 2);
+  background: var(--color-fd-card);
+  border-color: color-mix(in srgb, var(--color-fd-primary) 28%, var(--color-fd-border));
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-fd-primary) 8%, transparent);
+}
+
+.sinai-font-size-switch-trigger {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 140ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sinai-font-size-switch-trigger-mark {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.01em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: currentColor;
+  user-select: none;
+  transform: translateY(0.5px);
+}
+
+.sinai-font-size-switch-trigger-mark > span:first-child {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sinai-font-size-switch-trigger-mark > span:last-child {
+  font-size: 0.58rem;
+  font-weight: 650;
+  line-height: 1;
+  opacity: 0.82;
+}
+
+.sinai-font-size-switch:hover .sinai-font-size-switch-trigger,
+.sinai-font-size-switch:focus-within .sinai-font-size-switch-trigger,
+.sinai-font-size-switch.is-open .sinai-font-size-switch-trigger {
+  opacity: 0;
+  transform: scale(0.75);
+}
+
+.sinai-font-size-switch-options {
+  display: flex;
+  align-items: center;
+  gap: var(--sinai-fs-gap);
+  opacity: 0;
+  transform: translateX(0.35rem) scale(0.92);
+  pointer-events: none;
+  transition:
+    opacity 160ms ease 40ms,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sinai-font-size-switch:hover .sinai-font-size-switch-options,
+.sinai-font-size-switch:focus-within .sinai-font-size-switch-options,
+.sinai-font-size-switch.is-open .sinai-font-size-switch-options {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.sinai-font-size-switch-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sinai-fs-btn);
+  height: var(--sinai-fs-btn);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
+}
+
+.sinai-font-size-switch-option:hover {
+  background: color-mix(in srgb, var(--color-fd-accent) 70%, transparent);
+  color: var(--color-fd-accent-foreground);
+}
+
+.sinai-font-size-switch-option:focus-visible {
+  outline: 2px solid var(--color-fd-primary);
+  outline-offset: 1px;
+}
+
+.sinai-font-size-switch-option.is-active {
+  background: var(--color-fd-accent);
+  color: var(--color-fd-accent-foreground);
+}
+
+.sinai-font-size-switch-option[data-size="small"] span {
+  opacity: 0.85;
+}
+
+.sinai-font-size-switch-option[data-size="large"] span {
+  letter-spacing: -0.03em;
+}
+
+.sinai-font-size-switch--sidebar-header {
+  align-self: center;
+}
+
+.sinai-font-size-switch--panel {
+  margin-inline-start: 0.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-font-size-switch,
+  .sinai-font-size-switch-trigger,
+  .sinai-font-size-switch-options,
+  .sinai-font-size-switch-option {
+    transition: none;
+  }
 }
 
 /* Colores de marca por rol. Al estar definidos en body, se propagan a la
@@ -913,6 +1098,12 @@ div:has(> .sinai-role-icon) {
 }
 
 .sinai-welcome-theme-switch {
+  flex: none;
+  border-color: color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-primary) 5%, var(--color-fd-card));
+}
+
+.sinai-welcome-font-size-switch {
   flex: none;
   border-color: color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
   background: color-mix(in srgb, var(--color-fd-primary) 5%, var(--color-fd-card));
@@ -1970,6 +2161,29 @@ body:has(.sinai-custom-toc) #nd-toc {
 
 .sinai-example-trigger svg {
   color: var(--sinai-role-accent);
+}
+
+/* Variante de enlace para ejemplos que acompaña el texto sin interrumpir la lectura. */
+.sinai-example-trigger-compact {
+  min-height: 2rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  padding: 0.25rem 0.375rem;
+  color: var(--sinai-role-accent);
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sinai-role-accent) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.sinai-example-trigger-compact:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, transparent);
+  color: var(--sinai-role-accent-hover);
+  box-shadow: none;
+  text-decoration-color: currentColor;
 }
 
 .sinai-example-trigger:hover {
@@ -3403,6 +3617,100 @@ body:has(.sinai-custom-toc) #nd-toc {
   transform: translateY(0) scale(1);
 }
 
+/* Variantes compactas para validar cómo se muestran las referencias visuales
+   en línea con el contenido de una guía. */
+.sinai-example-trigger-contextual,
+.sinai-example-trigger-microchip,
+.sinai-example-trigger-reference {
+  min-height: 2rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-example-trigger-contextual {
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  padding: 0.25rem 0.375rem;
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sinai-role-accent) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.sinai-example-trigger-contextual:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, transparent);
+  color: var(--sinai-role-accent-hover);
+  box-shadow: none;
+  text-decoration-color: currentColor;
+}
+
+.sinai-example-trigger-microchip {
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 10%, var(--color-fd-card));
+  padding: 0.3rem 0.65rem;
+  box-shadow: none;
+}
+
+.sinai-example-trigger-microchip:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 44%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 16%, var(--color-fd-card));
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
+}
+
+.sinai-example-trigger-reference {
+  min-height: 2.35rem;
+  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 5%, transparent);
+  padding: 0.4rem 0.6rem;
+  box-shadow: none;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.sinai-example-trigger-reference:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 24%, transparent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+}
+
+.sinai-example-trigger-reference > svg {
+  box-sizing: content-box;
+  border-radius: 0.375rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  padding: 0.3rem;
+}
+
+.sinai-example-trigger-reference-label {
+  color: var(--sinai-role-accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.sinai-example-trigger-reference-kicker {
+  color: color-mix(in srgb, var(--color-fd-muted-foreground) 90%, var(--sinai-role-accent));
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.sinai-example-trigger-reference-divider {
+  color: color-mix(in srgb, var(--sinai-role-accent) 38%, var(--color-fd-muted-foreground));
+  font-weight: 400;
+}
+
+.sinai-example-trigger-reference-action {
+  color: var(--sinai-role-accent);
+  font-weight: 750;
+}
+
+.sinai-example-trigger-reference:hover .sinai-example-trigger-reference-action {
+  color: var(--sinai-role-accent-hover);
+}
+
 .sinai-image-dialog-backdrop {
   background: rgb(2 6 23 / 84%);
   backdrop-filter: blur(10px);
@@ -3566,12 +3874,22 @@ body:has(.sinai-custom-toc) #nd-toc {
   font-weight: 750;
 }
 
-.sinai-guide-callout,
 .sinai-guide-feedback,
 .sinai-guide-faq {
+  border-color: var(--color-fd-border) !important;
+  background: var(--color-fd-card) !important;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 4%),
+    0 6px 16px rgb(15 23 42 / 5%);
+}
+
+/* Las alertas sí conservan el matiz del rol para destacar información importante. */
+.sinai-guide-callout {
   border-color: color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border)) !important;
-  background: color-mix(in srgb, var(--sinai-role-accent) 7%, var(--color-fd-card)) !important;
-  box-shadow: inset 3px 0 0 var(--sinai-role-accent), 0 8px 20px color-mix(in srgb, var(--sinai-role-accent) 6%, transparent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 6%, var(--color-fd-card)) !important;
+  box-shadow:
+    inset 3px 0 0 var(--sinai-role-accent),
+    0 4px 12px color-mix(in srgb, var(--sinai-role-accent) 5%, transparent);
 }
 
 .sinai-guide-callout svg,
@@ -3580,17 +3898,30 @@ body:has(.sinai-custom-toc) #nd-toc {
 }
 
 .sinai-guide-faq-header {
-  border-color: color-mix(in srgb, var(--sinai-role-accent) 18%, var(--color-fd-border)) !important;
-  background: color-mix(in srgb, var(--sinai-role-accent) 10%, var(--color-fd-card));
+  border-color: var(--color-fd-border) !important;
+  background: var(--color-fd-card);
+}
+
+.sinai-guide-faq-icon {
+  background: var(--sinai-role-accent);
+  color: white;
+}
+
+.sinai-guide-feedback-primary {
+  background: var(--sinai-role-accent);
+}
+
+.sinai-guide-feedback-primary:hover {
+  background: var(--sinai-role-accent-hover);
 }
 
 .sinai-guide-faq-item {
-  background: color-mix(in srgb, var(--color-fd-card) 96%, var(--sinai-role-accent) 4%);
+  background: var(--color-fd-card);
 }
 
 .sinai-guide-faq-item:hover,
 .sinai-guide-faq-item[open] {
-  background: color-mix(in srgb, var(--sinai-role-accent) 9%, var(--color-fd-card));
+  background: color-mix(in srgb, var(--sinai-role-accent) 4%, var(--color-fd-card));
 }
 
 .sinai-guide-faq-index {

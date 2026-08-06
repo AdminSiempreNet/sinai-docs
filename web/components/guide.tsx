@@ -1,6 +1,8 @@
-import type { ReactNode } from 'react';
+'use client';
+
+import { Children, cloneElement, isValidElement, useState, type ReactElement, type ReactNode } from 'react';
 import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, Info } from 'lucide-react';
-import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger } from '@/components/content-image';
+import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger, type ImageTriggerVariant } from '@/components/content-image';
 
 export function GuideOverview({ children }: { children: ReactNode }) {
   return (
@@ -112,18 +114,22 @@ export function GuideFocusGrid({ children }: { children: ReactNode }) {
   return <div className="not-prose my-6 grid grid-cols-1 gap-3 sm:grid-cols-3 [&_figure]:my-0 [&_figure]:max-w-none">{children}</div>;
 }
 
-export function GuideImageTrigger({ src, alt, children }: { src: string; alt: string; children?: ReactNode }) {
-  return <ContentImageTrigger src={src} alt={alt}>{children}</ContentImageTrigger>;
+export function GuideImageTrigger({ src, alt, children, compact = false, variant = 'default' }: { src: string; alt: string; children?: ReactNode; compact?: boolean; variant?: ImageTriggerVariant }) {
+  return <ContentImageTrigger src={src} alt={alt} compact={compact} variant={variant}>{children}</ContentImageTrigger>;
 }
 
 export function GuideImageSequence({
   images,
   children,
+  compact = false,
+  variant = 'default',
 }: {
   images: { src: string; alt: string }[];
   children?: ReactNode;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
 }) {
-  return <ContentImageSequenceTrigger images={images}>{children}</ContentImageSequenceTrigger>;
+  return <ContentImageSequenceTrigger images={images} compact={compact} variant={variant}>{children}</ContentImageSequenceTrigger>;
 }
 
 export function GuideCallout({
@@ -152,11 +158,13 @@ export function GuideCallout({
 }
 
 export function GuideFAQ({ children }: { children: ReactNode }) {
+  const [openItem, setOpenItem] = useState<string | null>(null);
+
   return (
     <section className="sinai-guide-faq not-prose my-8 overflow-hidden rounded-2xl border bg-fd-card shadow-sm" aria-labelledby="guide-faq-title">
       <header className="sinai-guide-faq-header border-b px-5 py-5 sm:px-6 sm:py-6">
         <div className="flex items-start gap-3">
-          <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-fd-primary text-fd-primary-foreground shadow-sm">
+          <span className="sinai-guide-faq-icon grid size-10 shrink-0 place-items-center rounded-xl text-white shadow-sm">
             <CircleHelp className="size-5" aria-hidden="true" />
           </span>
           <div>
@@ -170,22 +178,48 @@ export function GuideFAQ({ children }: { children: ReactNode }) {
           </div>
         </div>
       </header>
-      <div className="divide-y">{children}</div>
+      <div className="divide-y">
+        {Children.map(children, (child) => {
+          if (!isValidElement<GuideFAQItemProps>(child)) return child;
+
+          return cloneElement(child as ReactElement<GuideFAQItemProps>, {
+            open: openItem === child.props.index,
+            onToggle: (isOpen) => {
+              if (isOpen) {
+                setOpenItem(child.props.index);
+                return;
+              }
+
+              setOpenItem((currentItem) => (currentItem === child.props.index ? null : currentItem));
+            },
+          });
+        })}
+      </div>
     </section>
   );
 }
+
+type GuideFAQItemProps = {
+  index: string;
+  question: string;
+  children: ReactNode;
+  open?: boolean;
+  onToggle?: (isOpen: boolean) => void;
+};
 
 export function GuideFAQItem({
   index,
   question,
   children,
-}: {
-  index: string;
-  question: string;
-  children: ReactNode;
-}) {
+  open = false,
+  onToggle,
+}: GuideFAQItemProps) {
   return (
-    <details className="sinai-guide-faq-item group bg-fd-card transition-colors">
+    <details
+      className="sinai-guide-faq-item group bg-fd-card transition-colors"
+      open={open}
+      onToggle={(event) => onToggle?.(event.currentTarget.open)}
+    >
       <summary className="flex min-h-16 cursor-pointer list-none items-center gap-3 px-5 py-4 text-start outline-none transition-colors hover:bg-fd-muted/55 focus-visible:bg-fd-muted focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-fd-primary sm:px-6 [&::-webkit-details-marker]:hidden">
         <span className="sinai-guide-faq-index font-mono text-xs font-bold tabular-nums text-fd-primary" aria-hidden="true">
           {index}
@@ -196,7 +230,7 @@ export function GuideFAQItem({
         </span>
       </summary>
       <div className="px-5 pb-5 sm:px-6 sm:pb-6">
-        <div className="sinai-guide-faq-answer border-s-2 border-fd-primary/35 ps-4 text-[0.95rem] leading-7 text-fd-muted-foreground [&_p]:m-0 [&_strong]:font-semibold [&_strong]:text-fd-foreground">
+        <div className="sinai-guide-faq-answer border-s-2 border-fd-primary/35 ps-4 text-[0.95rem] font-normal leading-7 text-fd-muted-foreground [&_p]:m-0 [&_strong]:font-normal [&_strong]:text-fd-muted-foreground">
           {children}
         </div>
       </div>
@@ -266,15 +300,19 @@ export function GuideImage({
   src,
   alt,
   caption,
-  size = 'wide',
-  presentation = 'balanced',
-  showCaption = false,
-  focusPosition = 'center',
-  focusFit = 'cover',
+  compact = false,
+  variant = 'default',
+  size: _size = 'wide',
+  presentation: _presentation = 'balanced',
+  showCaption: _showCaption = false,
+  focusPosition: _focusPosition = 'center',
+  focusFit: _focusFit = 'cover',
 }: {
   src: string;
   alt: string;
   caption?: string;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
   size?: 'compact' | 'medium' | 'wide';
   /**
    * Keeps smaller source captures at a calm, readable scale and adds a
@@ -287,40 +325,9 @@ export function GuideImage({
   focusPosition?: 'left' | 'center' | 'right';
   focusFit?: 'cover' | 'contain';
 }) {
-  const widthClass =
-    presentation === 'balanced'
-      ? {
-          compact: 'mx-auto max-w-sm',
-          medium: 'mx-auto max-w-xl',
-          wide: 'mx-auto w-full max-w-4xl',
-        }[size]
-      : {
-          compact: 'mx-auto max-w-lg',
-          medium: 'mx-auto max-w-2xl',
-          wide: 'w-full',
-        }[size];
-
-  const objectPositionClass = {
-    left: 'object-left',
-    center: 'object-center',
-    right: 'object-right',
-  }[focusPosition];
-  const objectFitClass = focusFit === 'contain' ? 'object-contain' : 'object-cover';
-  const imageClass =
-    presentation === 'focused'
-      ? `h-48 w-full bg-fd-muted/25 ${objectFitClass} ${objectPositionClass} transition duration-300 hover:scale-[1.01]`
-      : 'mx-auto block h-auto max-h-[30rem] w-auto max-w-full object-contain transition duration-300 hover:scale-[1.01]';
-  const image = <ContentImage src={src} alt={alt} className={imageClass} />;
-
   return (
-    <figure className={`not-prose my-5 overflow-hidden rounded-xl border bg-fd-card shadow-sm ${widthClass}`}>
-      {presentation === 'balanced' ? <div className="bg-fd-muted/35 p-3 sm:p-4">{image}</div> : image}
-      {showCaption && (
-        <figcaption className="flex items-center gap-2 border-t px-4 py-3 text-xs leading-5 text-fd-muted-foreground">
-          <ExternalLink className="size-3.5 shrink-0" />
-          {caption ?? 'Haz clic en la imagen para ampliarla.'}
-        </figcaption>
-      )}
-    </figure>
+    <ContentImageTrigger src={src} alt={alt} compact={compact} variant={variant}>
+      {caption ?? 'Ver ejemplo'}
+    </ContentImageTrigger>
   );
 }
