@@ -1,0 +1,135 @@
+<style>
+  #sinai-capture-options {
+    --accent: #4976ff;
+    --accent-soft: #eef3ff;
+    --accent-border: #bed0ff;
+    --ink: #172033;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    box-sizing: border-box;
+    max-width: 900px;
+    margin: 12px auto;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    color: var(--ink);
+    background: #fff;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .08);
+  }
+  #sinai-capture-options * { box-sizing: border-box; }
+  #sinai-capture-options .intro {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, #f8faff, #fff 58%);
+  }
+  #sinai-capture-options h2 { margin: 0 0 6px; font-size: 20px; letter-spacing: -.02em; }
+  #sinai-capture-options .intro p { margin: 0; color: var(--muted); font-size: 14px; }
+  #sinai-capture-options .options { display: grid; gap: 0; }
+  #sinai-capture-options .option {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 22px;
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+  }
+  #sinai-capture-options .option:last-child { border-bottom: 0; }
+  #sinai-capture-options .label { display: grid; gap: 4px; align-content: center; }
+  #sinai-capture-options .number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  #sinai-capture-options .name { font-size: 14px; font-weight: 750; }
+  #sinai-capture-options .sample { min-width: 0; }
+  #sinai-capture-options .guide-copy { margin: 0 0 12px; color: #334155; font-size: 14px; line-height: 1.55; }
+  #sinai-capture-options .icon { width: 16px; height: 16px; flex: 0 0 auto; }
+  #sinai-capture-options .link-reference {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  #sinai-capture-options .link-reference .count { color: var(--muted); font-weight: 550; }
+  #sinai-capture-options .micro-chip {
+    display: inline-flex;
+    min-height: 30px;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--accent-border);
+    border-radius: 8px;
+    padding: 0 10px;
+    background: var(--accent-soft);
+    color: #315fdb;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  #sinai-capture-options .reference-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    border-left: 2px solid var(--accent);
+    padding: 3px 0 3px 10px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+  #sinai-capture-options .reference-row strong { color: var(--accent); font-weight: 750; }
+  #sinai-capture-options .separator { color: #b6c0cf; }
+  #sinai-capture-options .recommended {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 5px;
+    border-radius: 999px;
+    padding: 3px 7px;
+    background: var(--accent-soft);
+    color: #315fdb;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 620px) {
+    #sinai-capture-options .option { grid-template-columns: 1fr; gap: 11px; padding: 20px; }
+    #sinai-capture-options .intro { padding: 20px; }
+  }
+</style>
+
+<section id="sinai-capture-options" aria-label="Opciones para referencias visuales">
+  <div class="intro">
+    <h2>Referencias visuales en la guía</h2>
+    <p>Tres formas compactas de abrir una o varias capturas, conservando el color del rol.</p>
+  </div>
+  <div class="options">
+    <div class="option">
+      <div class="label"><span class="number">Opción 1</span><span class="name">Enlace contextual</span><span class="recommended">Recomendada</span></div>
+      <div class="sample">
+        <p class="guide-copy">Seleccione <strong>Autoevaluación</strong> en el menú superior para ver los datos y acciones disponibles.</p>
+        <span class="link-reference">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          Ver ejemplos <span class="count">· 3 capturas</span>
+        </span>
+      </div>
+    </div>
+    <div class="option">
+      <div class="label"><span class="number">Opción 2</span><span class="name">Microchip</span></div>
+      <div class="sample">
+        <p class="guide-copy">Seleccione <strong>Autoevaluación</strong> en el menú superior para ver los datos y acciones disponibles.</p>
+        <span class="micro-chip">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          Ver ejemplos <span style="font-weight:550; opacity:.8">(3)</span>
+        </span>
+      </div>
+    </div>
+    <div class="option">
+      <div class="label"><span class="number">Opción 3</span><span class="name">Nota de referencia</span></div>
+      <div class="sample">
+        <p class="guide-copy">Seleccione <strong>Autoevaluación</strong> en el menú superior para ver los datos y acciones disponibles.</p>
+        <span class="reference-row">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          Referencia visual <span class="separator">·</span> <strong>Ver 3 capturas</strong>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
