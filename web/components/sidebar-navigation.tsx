@@ -3,6 +3,21 @@
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
+const ADMIN_SECTION_HREFS = [
+  '/docs/administrativo/primeros-pasos',
+  '/docs/administrativo/configuracion-institucional',
+  '/docs/administrativo/gestion-de-personal',
+  '/docs/administrativo/gestion-de-estudiantes',
+  '/docs/administrativo/registro-de-logros-y-calificaciones',
+  '/docs/administrativo/curriculo',
+  '/docs/administrativo/convivencia-escolar',
+  '/docs/administrativo/cierre-academico-periodo',
+  '/docs/administrativo/cierre-de-ano',
+  '/docs/administrativo/gestion-de-usuarios-y-permisos',
+  '/docs/administrativo/herramientas',
+  '/docs/administrativo/ayuda',
+] as const;
+
 export function SidebarHelp() {
   return (
     <>
@@ -18,7 +33,7 @@ export function SidebarHelp() {
   );
 }
 
-/** Keeps the active top-level section highlighted after its content is collapsed. */
+/** Resaltado de rama activa y exclusividad de carpetas abiertas. */
 export function SidebarMenuDecoration() {
   const pathname = usePathname();
 
@@ -43,7 +58,32 @@ export function SidebarMenuDecoration() {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '');
 
+    const markAdminSectionTitles = (sidebar: HTMLElement) => {
+      const sectionHrefs = new Set<string>(ADMIN_SECTION_HREFS);
+
+      sidebar.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((link) => {
+        const href = link.getAttribute('href') ?? '';
+        if (!sectionHrefs.has(href)) {
+          if (link.hasAttribute('data-sinai-section-title')) {
+            link.removeAttribute('data-sinai-section-title');
+            link.removeAttribute('data-sinai-active-branch');
+          }
+          return;
+        }
+
+        link.setAttribute('data-sinai-section-title', '');
+        const active = pathname === href || pathname.startsWith(`${href}/`);
+        if (active) link.setAttribute('data-sinai-active-branch', '');
+        else link.removeAttribute('data-sinai-active-branch');
+      });
+    };
+
     const markPrimaryFolders = (sidebar: HTMLElement) => {
+      if (activeRole === 'administrativo') {
+        markAdminSectionTitles(sidebar);
+        return;
+      }
+
       sidebar.querySelectorAll<HTMLElement>('[data-state]').forEach((folder) => {
         const parentFolder = folder.parentElement?.closest<HTMLElement>('[data-state]');
         if (parentFolder && parentFolder !== sidebar) return;
@@ -57,7 +97,6 @@ export function SidebarMenuDecoration() {
           activator.removeAttribute('data-sinai-active-branch');
         }
       });
-
     };
 
     const makeFoldersExclusive = (sidebar: HTMLElement) => {

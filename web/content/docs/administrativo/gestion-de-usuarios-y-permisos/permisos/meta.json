@@ -1,0 +1,10 @@
+{
+  "title": "Permisos",
+  "description": "Permisos de estudiantes y personal.",
+  "defaultOpen": false,
+  "pages": [
+    "denegar-funciones-a-estudiantes",
+    "gestionar-permisos-de-personal"
+  ],
+  "icon": "ShieldCheck"
+}

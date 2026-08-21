@@ -1,0 +1,10 @@
+{
+  "title": "Trasladar matrícula",
+  "description": "Traslado por grupo o por estudiante.",
+  "defaultOpen": false,
+  "pages": [
+    "por-grupo",
+    "por-estudiante"
+  ],
+  "icon": "ArrowRightLeft"
+}

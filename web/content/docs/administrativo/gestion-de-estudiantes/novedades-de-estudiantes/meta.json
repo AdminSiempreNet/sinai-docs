@@ -1,0 +1,12 @@
+{
+  "title": "Novedades de estudiantes",
+  "description": "Ajustes de matrícula, cambio de grupo y reingresos.",
+  "defaultOpen": false,
+  "pages": [
+    "ajuste-de-matricula",
+    "cambio-de-grupo",
+    "reingresos",
+    "reingreso-de-validantes"
+  ],
+  "icon": "ArrowRightLeft"
+}

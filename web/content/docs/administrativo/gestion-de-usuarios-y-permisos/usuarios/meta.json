@@ -1,0 +1,13 @@
+{
+  "title": "Usuarios",
+  "description": "Generación y administración de usuarios.",
+  "defaultOpen": false,
+  "pages": [
+    "generar-usuarios",
+    "cambiar-estado-de-usuarios",
+    "restablecer-contrasena",
+    "agregar-o-eliminar-sie",
+    "auditoria"
+  ],
+  "icon": "Users"
+}

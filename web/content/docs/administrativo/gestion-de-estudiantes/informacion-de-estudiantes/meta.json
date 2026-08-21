@@ -1,0 +1,12 @@
+{
+  "title": "Información de estudiantes",
+  "description": "Actualización de datos, fotografías y acudientes.",
+  "defaultOpen": false,
+  "pages": [
+    "actualizacion-individual",
+    "actualizacion-de-datos-por-grupo",
+    "cargar-fotografia",
+    "informacion-de-acudientes"
+  ],
+  "icon": "Contact"
+}

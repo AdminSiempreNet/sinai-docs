@@ -1,0 +1,11 @@
+{
+  "title": "Primeros pasos",
+  "description": "Acceso a la plataforma y configuración inicial de su cuenta.",
+  "defaultOpen": false,
+  "pages": [
+    "ingresar-a-sinai",
+    "recuperar-contrasena",
+    "actualizar-perfil"
+  ],
+  "icon": "House"
+}

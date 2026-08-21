@@ -1,0 +1,2623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Calibri" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="Header">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Bold="1" ss:Color="#FFFFFF"/>
+   <Interior ss:Color="#1F4E79" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="Yes">
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#166534"/>
+   <Interior ss:Color="#DCFCE7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="No">
+   <Font ss:FontName="Calibri" ss:Size="11" ss:Color="#991B1B"/>
+   <Interior ss:Color="#FEE2E2" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Guías">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="242">
+   <Column ss:Width="110"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="170"/>
+   <Column ss:Width="280"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="420"/>
+   <Row ss:StyleID="Header">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">ROL</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Área</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Proceso</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Título</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Tiene vídeo</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Tiene guía</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">URL del local</Data></Cell>
+   </Row>
+   <Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Áreas y asignatura</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/areas-y-asignatura</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Asignación de permisos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/asignacion-de-permisos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Calendarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/calendario/calendarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Comunidad educativa MORCE</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/comunidad-educativa-morce</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración Académica</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/configuracion-academica/configuracion-academica</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración caracterización de estudiantes - PIAR</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/institucion/configuracion-de-caracterizacion-de-estudiantes-piar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración de componentes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/configuracion-academica/configuracion-de-componentes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración de grupos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/grupos/configuracion-de-grupos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración de la Institución</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/institucion/configuracion-de-la-institucion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración física</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/configuracion-fisica/configuracion-fisica</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración Sistema Evaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/configuracion-academica/configuracion-sistema-evaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Copia de seguridad</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/copia-de-seguridad/copia-de-seguridad</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Criterios y métodos para el cálculo de puestos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/institucion/criterios-y-metodos-para-el-calculo-de-puestos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Denegar funciones a estudiantes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/denegar-funciones-a-estudiantes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Disponibilidad de cupos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/grupos/disponibilidad-de-cupos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Generar correos institucionales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/generar-correos-institucionales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de usuarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/gestion-de-usuarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/informes-del-establecimiento/informes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Mallas curriculares y planes de área</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/institucion/mallas-curriculares-y-planes-de-area</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Verificación de Datos</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/establecimiento/usuarios/verificacion-de-datos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Ajuste de nota final</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/ajuste-de-nota-final/ajuste-de-nota-final</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Asignar Logros</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/asignar-logros/asignar-logros</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Calificación definitiva directa</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/calificacion-definitiva-directa</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Calificaciones de estudiantes trasladados</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/calificaciones-de-estudiantes-trasladados</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Comportamiento</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/comportamiento/a-comportamiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Consolidar</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/consolidar/consolidar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Copiar calificaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/copiar-calificaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Cuadro de honor</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/cuadro-de-honor</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Detallado individual</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/detallado-individual/a-detallado-individual</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Informes de evaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/informes-de-evaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Modificar calificaciones individuales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/modificar-calificaciones-individuales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Notas finales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/notas-finales/notas-finales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Planilla de calificaciones excel</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/planilla-de-calificaciones-excel</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Refuerzos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/refuerzos/refuerzos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de calificaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/evaluacion/calificaciones/registro-de-calificaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Banco de logros</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/banco-de-logros/banco-de-logros</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/actas/configuracion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Desarrollo de Actas</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/actas/desarrollo-de-actas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de cuestionarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/autoevaluacion-institucional/gestion-de-cuestionarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de encuestas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/autoevaluacion-institucional/gestion-de-encuestas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de Reuniones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/gestion-de-reuniones/a-gestion-de-reuniones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestionar autoevaluaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/autoevaluacion-institucional/gestionar-autoevaluaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Importar Funcionarios</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/importaciones/importar-funcionarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Informes Digitales</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/informes-digitales/informes-digitales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos formativos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/procesos-formativos/procesos-formativos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Usuarios Aula Virtual</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/herramientas/usuarios-aula-virtual/usuarios-aula-virtual</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo ingresar a SINAI?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/como-ingresar-a-sinai</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Actualizar Datos de Perfil de usuario</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/actualizar-datos-de-perfil-de-usuario</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional y encuestas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/autoevaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Consultas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/consultas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Inconsistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/inconsistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Mensajes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/mensajes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Recuperar contraseña</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/inicio/recuperar-contrasena</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Actualización de datos por grupo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/actualizacion-de-datos-por-grupo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Acudientes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/acudientes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Ajuste individual de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/ajuste-individual-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Cambio de grupo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/cambio-de-grupo/cambio-de-grupo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Cargar fotografía</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/cargar-fotografia</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración de requisitos de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/estudiantes-nuevos/configuracion-de-requisitos-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Control de legalización de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/control-de-legalizacion-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Educación inclusiva</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/especialidades/educacion-inclusiva</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes desplazados</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/estudiantes-con-discapacidad</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes en especialidad</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/especialidades/estudiantes-en-especialidad</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes nuevos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/estudiantes-nuevos/estudiantes-nuevos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes PIAR</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/estudiantes-piar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Historial de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/historial-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Importar Matrícula</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/estudiantes-nuevos/importar-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Informes de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/informes-de-matricula/informes-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Inscripciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/estudiantes-nuevos/inscripciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Libros de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/informes-de-matricula/libros-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Lista de estudiantes por grupo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/lista-de-estudiantes-por-grupo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula semestral</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/matricula-semestral/matricula-semestral</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Prematrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/prematricula/a-prematricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de validación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/registro-de-validacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Reingreso</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/reingreso/reingreso</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Reingreso de validantes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/reingreso/reingreso-de-validantes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Renovación de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/ajustes-de-matricula/renovacion-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="String">Requisitos pendientes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/matricula/listados/requisitos-pendientes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Actividades Complementarias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/actividades-complementarias/actividades-complementarias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Asignación Académica</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/asignacion-academica/asignacion-academica</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Asistencia Docentes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/funcionarios/asistencia-docentes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Autorizaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/autorizaciones/autorizaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Diario pedagógico</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/diario-pedagogico/diario-pedagogico</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Horas dictadas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/horas-dictadas/horas-dictadas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/informes-de-personal/informes-de-personal</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Novedades de personal</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/funcionarios/novedades-de-personal</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Planta de cargos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/planta-de-cargos/planta-de-cargos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de  Funcionarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/funcionarios/registro-de-funcionarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de Act. complementarias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/actividades-complementarias/registro-de-act-complementarias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Tipos de Act. Complementarias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/actividades-complementarias/tipos-de-act-complementarias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="String">Trasladar Asignación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/personal/trasladar-asignacion/trasladar-asignacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Actividades Periodo</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/actividades-periodo/actividades-periodo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Estándares</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/estandares-y-dba/estandares</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Logros comportamiento</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/gestion-de-logros/logros-comportamiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Logros periodos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/gestion-de-logros/logros-periodos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación de clases - Versión archivo adjunto</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/planeacion-curricular/planeacion-de-clases-version-archivo-adjunto</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación de clases - Versión estándar</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/planeacion-curricular/planeacion-de-clases-version-estandar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Trasladar planeación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/planeacion/trasladar-planeacion/trasladar-planeacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Actas de la comisión de evaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/comision-de-evaluacion/actas-de-la-comision-de-evaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Actas de recuperación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/recuperaciones/actas-de-recuperacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Cambio de situación académica</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/recuperaciones/cambio-de-situacion-academica</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Criterios de promoción</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/promocion/criterios-de-promocion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Cuadro de honor</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/comision-de-evaluacion/cuadro-de-honor</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes que reprobarían por inasistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/promocion/estudiantes-que-reprobarian-por-inasistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes sin calificaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/promocion/estudiantes-sin-calificaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Foliar libro</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/foliar-libro/foliar-libro</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Informes de promoción</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/informes-de-promocion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos promoción</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/promocion/procesos-promocion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción anticipada</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/promocion/promocion-anticipada</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Trasladar Matrícula por Estudiante</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/trasladar-matricula/trasladar-matricula-por-estudiante</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="String">Trasladar matrícula por grupo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/promocion/trasladar-matricula/trasladar-matricula-por-grupo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Anotaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/anotaciones/anotaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Caracterización adicional</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-anterior/caracterizacion-adicional</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Configuración de aspectos y criterios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-anterior/configuracion-de-aspectos-y-criterios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Consolidado de inasistencias por asignaturas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/inasistencias/consolidado-de-inasistencias-por-asignaturas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Consolidado individual de inasistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/inasistencias/consolidado-individual-de-inasistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Detallado individual de estudiantes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/inasistencias/detallado-individual-estudiantes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Excusas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/excusas/excusas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador del estudiante</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-anterior/ficha-observador-del-estudiante</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Informes de seguimiento</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/informes-de-seguimiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Registro consolidado de inasistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/inasistencias/registro-consolidado-de-inasistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Reportes de caracterización</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-anterior/reportes-de-caracterizacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Tareas en línea</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/tareas-en-linea/tareas-en-linea</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Valoración individual y grupo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-anterior/valoracion-individual-y-grupo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Versión actualizada</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/capacitacion-documentada/seguimiento/f-observador/version-actualizada</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional</Data></Cell>
+      <Cell><Data ss:Type="String">Gestionar autoevaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/autoevaluacion-institucional/gestionar-autoevaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional</Data></Cell>
+      <Cell><Data ss:Type="String">Gestionar cuestionarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/autoevaluacion-institucional/gestionar-cuestionarios</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional</Data></Cell>
+      <Cell><Data ss:Type="String">Gestionar encuestas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/autoevaluacion-institucional/gestionar-encuestas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional</Data></Cell>
+      <Cell><Data ss:Type="String">Responder autoevaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/autoevaluacion-institucional/responder-autoevaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Comportamiento y convivencia</Data></Cell>
+      <Cell><Data ss:Type="String">Anotaciones disciplinarias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/comportamiento-y-convivencia/anotaciones-disciplinarias/anotaciones-disciplinarias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Educación para adultos</Data></Cell>
+      <Cell><Data ss:Type="String">Educación para adultos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/educacion-para-adultos/educacion-para-adultos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Finalización de periodo</Data></Cell>
+      <Cell><Data ss:Type="String">Consolidación, cálculo de puestos y boletines</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/finalizacion-de-periodo/consolidacion-calculo-de-puestos-y-boletines</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Finalización de periodo</Data></Cell>
+      <Cell><Data ss:Type="String">Inconsistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/finalizacion-de-periodo/inconsistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">Proceso de inicio de calendario</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/inicio-de-calendario/proceso-de-inicio-de-calendario</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Prematricula e inscripciones</Data></Cell>
+      <Cell><Data ss:Type="String">Prematricula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/prematricula-e-inscripciones/prematricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo procesar la promoción de los estudiantes?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/como-procesar-la-promocion-de-los-estudiantes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">¿Qué debo hacer antes de procesar la promoción?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/que-debo-hacer-antes-de-procesar-la-promocion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">Comisión de evaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/comision-de-evaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">Libro de calificaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/libro-de-calificaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">Nivelaciones finales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/nivelaciones-finales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="String">Nuevo calendario y traslado de matrícula</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/promocion-y-finalizacion-de-calendario/nuevo-calendario-y-traslado-de-matricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Sistema electoral</Data></Cell>
+      <Cell><Data ss:Type="String">Con mesas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/sistema-electoral/con-mesas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Sistema electoral</Data></Cell>
+      <Cell><Data ss:Type="String">Sin mesas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/administrativo/procesos-de-temporada/sistema-electoral/sin-mesas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo descargar e instalar?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-descargar-e-instalar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo descargar planillas de listados e inasistencias en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-descargar-planillas-de-listados-e-inasistencias-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo envíar los datos a SINAI en línea en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/como-enviar-los-datos-a-sinai-en-linea-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo iniciar sesión en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-iniciar-sesion-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo puedo cambiar de Institución Educativa en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-puedo-cambiar-de-institucion-educativa-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo registrar inasistencias en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/seguimiento-desktop/como-registrar-inasistencias-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo revisar mis autorizaciones en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-revisar-mis-autorizaciones-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo sincronizar los datos en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/como-sincronizar-los-datos-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">¿Donde visualizar las escalas de desempeño en Desktop?</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/donde-visualizar-las-escalas-de-desempeno-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Asignación académica en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/asignacion-academica-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Descriptores por estudiante en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/descriptores-por-estudiante-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Descriptores por grupo en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/descriptores-por-grupo-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Dimensiones y actividades predeterminadas en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/dimensiones-y-actividades-predeterminadas-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Generalidades del menú herramientas en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/generalidades-del-menu-herramientas-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Generar actividades en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/generar-actividades-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Listados de estudiantes en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/listados-de-estudiantes-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Planilla de nota directa en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/planilla-de-nota-directa-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="String">Planilla general de calificaciones en Desktop</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/planilla-general-de-calificaciones-en-desktop</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Actividades complementarias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/docente/actividades-complementarias-docente/d-actividades-complementarias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Buscar Estudiantes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/docente/buscar-estudiante</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Diario pedagógico</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/docente/diario-pedagogico-docente/d-diario-pedagogico</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Mi horario</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/docente/mi-horario/mi-horario</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes</Data></Cell>
+      <Cell><Data ss:Type="String">Cargar fotografía</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/estudiantes/cargar-fotografias/d-cargar-fotografias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes PIAR</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/estudiantes/estudiantes-piar/d-estudiantes-piar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes</Data></Cell>
+      <Cell><Data ss:Type="String">Lista por grupos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/estudiantes/lista-por-grupo/lista-por-grupos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes</Data></Cell>
+      <Cell><Data ss:Type="String">Tareas en línea</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/estudiantes/tareas-en-linea-estudiantes/d-tareas-en-linea</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Ajuste de nota final</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/ajuste-de-nota-final-evaluacion-capacitacion-documentada/d-ajuste-de-nota-final</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Calificación definitiva directa</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/calificacion-definitiva-directa</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Cuadro de honor</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/d-cuadro-de-honor</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Detallado individual</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/detallado-individual-evaluacion-capacitacion-documentada/d-detallado-individual</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación del comportamiento</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/comportamiento-evaluacion-capacitacion-documentada/evaluacion-del-comportamiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/informes-evaluacion-d/d-informes-evaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Notas finales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/notas-finales-evaluacion-capacitacion-documentada/d-notas-finales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Observaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/observaciones/observaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Planilla de calificaciones Excel</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/d-planilla-de-calificaciones-excel</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Recuperaciones finales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/recuperaciones-finales/recuperaciones-finales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Refuerzos</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/refuerzos-evaluacion-capacitacion-documentada/d-refuerzos</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de calificaciones en línea</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/registro-de-calificaciones-en-linea</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="String">Caracterización</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/caracterizacio/caracterizacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/informes-ficha-observador-capacitacion-documentada/informes-ficha-observado</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="String">Nueva versión Ficha Observador</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/nueva-version-ficha-observador/nueva-version-ficha-observador-2</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de seguimiento</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/registro-de-seguimiento/d-registro-de-seguimiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="String">Valoración por grupo e individual</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/valoracion/valoracion-por-grupo-e-individual</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">General</Data></Cell>
+      <Cell><Data ss:Type="String">Backup</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/general/back-up/back-up</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">General</Data></Cell>
+      <Cell><Data ss:Type="String">Inconsistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/general/inconsistencia/inconsistencias-2</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">General</Data></Cell>
+      <Cell><Data ss:Type="String">Mi asignación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/general/mi-asignacion/mi-asignacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Aula virtual CHAMILO</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/aula-virtual-chamilo/aula-virtual-chamilo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de reuniones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/gestion-de-reuniones-herramientas-capacitacion-documentada/d-gestion-de-reuniones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de usuarios</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/gestion-de-usuarios-chamilo/gestion-de-usuarios-chamilo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/informes-herramienta-d/informes-herramientas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Informes Digitales</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/informes-digitales-herramientas-capacitacion-documentada/d-informes-digitales</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Mallas curriculares</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/mallas-curriculares/mallas-curriculares</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="String">Notas aula virtual</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/notas-aula-virtual/notas-aula-virtual</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo ingresar a SINAI?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/inicio/como-ingresar-a-sinai</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/inicio/autoevaluacion-2</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Como Actualizar el Perfil</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/inicio/como-actualizar-foto-de-perfil</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Mensajes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/inicio/d-mensajes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Recuperar contraseña</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/inicio/d-recuperar-contrasena</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Actividades del periodo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/actividades-del-periodo/actividades-del-periodo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Banco de logros</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/banco-de-logros-planeacion-capacitacion-documentada/d-banco-de-logros</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Copiar planeación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/copiar-actividades/copiar-actividades</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Estándares</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/estandares-planeacion-capacitacion-documentada/d-estandares</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Mallas curriculares</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/planeacion-curricular-planeacion-capacitacion-documentada/curriculo-estandar</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación de clases</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/planeacion-curricular-planeacion-capacitacion-documentada/curriculo-adjunto</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Consultar o modificar inasistencia</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/consultar-o-modificar-inasistencia</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Excusas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/excusas-seguimiento-capacitacion-documentada/d-excusas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Registro consolidado de inasistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/d-registro-consolidado-de-inasistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de anotaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/e-anotaciones/registro-de-anotaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de inasistencia por día</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/registro-de-inasistencia-por-dia</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Registro detallado de inasistencias</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/registro-detallado-de-inasistencias</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación PT</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de actividades</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-actividades-2</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación PT</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de calificaciones en línea</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-calificaciones-en-linea-2</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación PT</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de calificaciones en línea</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-calificaciones-en-linea-3</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de logros.</Data></Cell>
+      <Cell><Data ss:Type="String">Logros periodo</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/gestion-de-logros-planeacion-procesos-de-temporada/d-logros-periodo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación de clases</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/planeacion-de-clases</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación o asignación de desempeños al periodo</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/planeacion-o-asignacion-de-desempenos-al-periodo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de actividades</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/registro-de-actividades</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="String">Registro de desempeños (Logros)</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/registro-de-desempenos-logros</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Boletín del periodo</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/boletin-del-periodo/boletin-del-periodo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Boletín final</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/boletin-final/boletin-final</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="String">Calificaciones consolidadas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-consolidadas/calificaciones-consolidadas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo ingresar a SINAI?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-como-ingresar-a-sinai</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Aula virtual CHAMILO</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-aula-virtual-chamilo</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-autoevaluacion</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Cómo actualizar el perfil</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/como-actualizar-el-perfil</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Cómo cambiar mi contraseña</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-como-cambiar-mi-contrasena</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Informes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-informes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Mensajes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-mensajes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Mis docentes</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/mis-docentes</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Mis tareas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/mis-tareas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="String">Prematrícula</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/inicio/e-prematricula</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Anotaciones</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/anotaciones-seguimiento-capacitacion-documentada/e-anotaciones</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Excusas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/excusas-seguimiento-capacitacion-documentada/e-excusas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha Observador</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/ficha-observador-seguimiento-capacitacion-documentada/e-ficha-observador</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Inasistencias Consolidadas y Detalladas</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/inasistencias-consolidadas-y-detalladas</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell ss:StyleID="No"><Data ss:Type="String">No</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/seguimiento-seguimiento-capacitacion-documentada/seguimiento</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">¿Cómo ingresar a SINAI?</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/generales/como-ingresar-a-sinai</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Recuperar contraseña</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell ss:StyleID="Yes"><Data ss:Type="String">Sí</Data></Cell>
+      <Cell><Data ss:Type="String">http://localhost:3000/docs/generales/recuperar-contrasena</Data></Cell>
+    </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>1</SplitHorizontal>
+   <TopRowBottomPane>1</TopRowBottomPane>
+   <ActivePane>2</ActivePane>
+  </WorksheetOptions>
+  <AutoFilter x:Range="R1C1:R242C7" xmlns="urn:schemas-microsoft-com:office:excel"/>
+ </Worksheet>
+ <Worksheet ss:Name="Resumen">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="35">
+   <Column ss:Width="110"/>
+   <Column ss:Width="160"/>
+   <Column ss:Width="170"/>
+   <Column ss:Width="70"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="110"/>
+   <Row ss:StyleID="Header">
+    <Cell ss:StyleID="Header"><Data ss:Type="String">ROL</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Área</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Proceso</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Total</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Con vídeo</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Sin vídeo</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Con guía</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Sin guía</Data></Cell>
+    <Cell ss:StyleID="Header"><Data ss:Type="String">Sin ambos</Data></Cell>
+   </Row>
+   <Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Establecimiento</Data></Cell>
+      <Cell><Data ss:Type="Number">20</Data></Cell>
+      <Cell><Data ss:Type="Number">19</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">19</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="Number">15</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="Number">11</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Matrícula</Data></Cell>
+      <Cell><Data ss:Type="Number">25</Data></Cell>
+      <Cell><Data ss:Type="Number">24</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">24</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Personal</Data></Cell>
+      <Cell><Data ss:Type="Number">13</Data></Cell>
+      <Cell><Data ss:Type="Number">13</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción</Data></Cell>
+      <Cell><Data ss:Type="Number">13</Data></Cell>
+      <Cell><Data ss:Type="Number">13</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">13</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="Number">14</Data></Cell>
+      <Cell><Data ss:Type="Number">14</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">14</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Autoevaluación institucional</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Comportamiento y convivencia</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Educación para adultos</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Finalización de periodo</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio de calendario</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Prematricula e inscripciones</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Promoción y finalización de calendario</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Administrativo</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Sistema electoral</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">APP SINAI DESKTOP</Data></Cell>
+      <Cell><Data ss:Type="Number">18</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">18</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">16</Data></Cell>
+      <Cell><Data ss:Type="Number">16</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Estudiantes</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">12</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Ficha observador</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">General</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Herramientas</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">6</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación PT</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Gestión de logros.</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Docente</Data></Cell>
+      <Cell><Data ss:Type="String">Procesos de temporada</Data></Cell>
+      <Cell><Data ss:Type="String">Planeación</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Evaluación</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Inicio</Data></Cell>
+      <Cell><Data ss:Type="Number">10</Data></Cell>
+      <Cell><Data ss:Type="Number">8</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">7</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Estudiante</Data></Cell>
+      <Cell><Data ss:Type="String">Capacitación documentada</Data></Cell>
+      <Cell><Data ss:Type="String">Seguimiento</Data></Cell>
+      <Cell><Data ss:Type="Number">5</Data></Cell>
+      <Cell><Data ss:Type="Number">4</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+      <Cell><Data ss:Type="Number">3</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">1</Data></Cell>
+    </Row>
+<Row>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="String">Generales</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">2</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+      <Cell><Data ss:Type="Number">0</Data></Cell>
+    </Row>
+  </Table>
+  <AutoFilter x:Range="R1C1:R35C9" xmlns="urn:schemas-microsoft-com:office:excel"/>
+ </Worksheet>
+</Workbook>

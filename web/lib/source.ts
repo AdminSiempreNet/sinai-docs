@@ -121,23 +121,26 @@ function getSemanticMetaIcon(metaPath: string) {
   const path = metaPath.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
   if (/app-sinai-desktop|desktop/.test(path)) return 'MonitorCog';
+  if (/primeros-pasos|ayuda/.test(path)) return 'House';
   if (/copia-de-seguridad|back-up/.test(path)) return 'ShieldCheck';
-  if (/calendario|periodo/.test(path)) return 'CalendarDays';
-  if (/matricula|prematricula|inscripcion|reingreso|especialidades|cambio-de-grupo/.test(path)) return 'UsersRound';
+  if (/cierre-de-ano|promocion/.test(path)) return 'Award';
+  if (/cierre-academico|calendario|periodo/.test(path)) return 'CalendarDays';
+  if (/gestion-de-estudiantes|matricula|prematricula|inscripcion|reingreso|especialidades|cambio-de-grupo/.test(path)) return 'UsersRound';
   if (/estudiantes|piar|fotografias|lista-por-grupo/.test(path)) return 'UsersRound';
-  if (/personal|funcionarios|horario|asignacion|autorizaciones|planta-de-cargos/.test(path)) return 'UserRoundCheck';
-  if (/evaluacion|calificaciones|nota|boletin|refuerzos|recuperaciones|consolidar|detallado/.test(path)) return 'ClipboardCheck';
-  if (/planeacion|curricular|mallas|estandares|logros|actividades|diario-pedagogico/.test(path)) return 'NotebookPen';
-  if (/seguimiento|anotaciones|inasistencias|excusas|observador|comportamiento|convivencia/.test(path)) return 'ScanSearch';
+  if (/gestion-de-personal|personal|funcionarios|horario|asignacion|autorizaciones|planta-de-cargos/.test(path)) return 'UserRoundCheck';
+  if (/gestion-de-usuarios|usuarios-y-permisos/.test(path)) return 'UserCog';
+  if (/registro-de-logros|evaluacion|calificaciones|nota|boletin|refuerzos|recuperaciones|consolidar|detallado/.test(path)) return 'ClipboardCheck';
+  if (/curriculo|planeacion|curricular|mallas|estandares|logros|actividades|diario-pedagogico/.test(path)) return 'NotebookPen';
+  if (/convivencia|seguimiento|anotaciones|inasistencias|excusas|observador|comportamiento/.test(path)) return 'ScanSearch';
   if (/informes|listados/.test(path)) return 'FileBarChart2';
   if (/herramientas|aula-virtual|chamilo|importaciones/.test(path)) return 'Wrench';
-  if (/institucion|establecimiento|configuracion-academica|configuracion-fisica/.test(path)) return 'Landmark';
-  if (/promocion/.test(path)) return 'BadgeCheck';
+  if (/configuracion-institucional|institucion|establecimiento|configuracion-academica|configuracion-fisica/.test(path)) return 'Landmark';
   if (/procesos-de-temporada/.test(path)) return 'CalendarRange';
   if (/actas|reuniones/.test(path)) return 'ClipboardList';
   if (/tareas/.test(path)) return 'ListTodo';
   if (/trasladar|cambio/.test(path)) return 'ArrowRightLeft';
   if (/banco|foliar/.test(path)) return 'BookMarked';
+  if (/archivo/.test(path)) return 'History';
   if (/general|inicio/.test(path)) return 'BookOpenText';
 
   return 'BookOpenCheck';
@@ -151,9 +154,97 @@ for (const meta of docs.meta) {
   }
 }
 
+const ADMIN_SECTION_BY_NAME: Record<string, string> = {
+  'Primeros pasos': '/docs/administrativo/primeros-pasos',
+  'Configuración Institucional': '/docs/administrativo/configuracion-institucional',
+  'Gestión de personal': '/docs/administrativo/gestion-de-personal',
+  'Gestión de estudiantes': '/docs/administrativo/gestion-de-estudiantes',
+  'Registro de logros y calificaciones':
+    '/docs/administrativo/registro-de-logros-y-calificaciones',
+  Currículo: '/docs/administrativo/curriculo',
+  'Convivencia escolar': '/docs/administrativo/convivencia-escolar',
+  'Cierre académico (periodo)': '/docs/administrativo/cierre-academico-periodo',
+  'Cierre de año': '/docs/administrativo/cierre-de-ano',
+  'Gestión de usuarios y permisos':
+    '/docs/administrativo/gestion-de-usuarios-y-permisos',
+  Herramientas: '/docs/administrativo/herramientas',
+  Ayuda: '/docs/administrativo/ayuda',
+};
+
+const ADMIN_SECTION_LANDINGS = new Set(Object.values(ADMIN_SECTION_BY_NAME));
+
 export const source = loader({
   baseUrl: '/docs',
   source: docs.toFumadocsSource(),
+  pageTree: {
+    transformers: [
+      {
+        // Separador Fumadocs → enlace al aterrizaje (se estiliza como título de grupo).
+        separator(node) {
+          const label = typeof node.name === 'string' ? node.name : '';
+          const url = ADMIN_SECTION_BY_NAME[label];
+          if (!url) return node;
+
+          return {
+            type: 'page' as const,
+            name: node.name,
+            url,
+            $id: node.$id,
+          };
+        },
+        folder(node, folderPath) {
+          const normalized = folderPath.replaceAll('\\', '/');
+          const isAdminRoot =
+            normalized.endsWith('/administrativo') || folderPath === 'administrativo';
+
+          if (!isAdminRoot) return node;
+
+          // `...folder` inserta también el index: queda 1 duplicado por sección.
+          // Conservamos el primero (viene del separador) y descartamos el resto.
+          const seenLandings = new Set<string>();
+
+          const stripIconUnlessPrimeros = (child: typeof node.children[number]): typeof node.children[number] => {
+            if (child.type === 'page') {
+              const url = child.url ? String(child.url) : '';
+              if (url.includes('/primeros-pasos/')) return child;
+              return { ...child, icon: undefined };
+            }
+
+            if (child.type === 'folder') {
+              return {
+                ...child,
+                icon: undefined,
+                children: child.children.map(stripIconUnlessPrimeros),
+              };
+            }
+
+            return child;
+          };
+
+          return {
+            ...node,
+            children: node.children
+              .filter((child) => {
+                const url = 'url' in child && child.url ? String(child.url) : '';
+                const name = 'name' in child && child.name ? String(child.name) : '';
+
+                if (url.includes('/_archivo') || name.toLowerCase().includes('archivo (fuera')) {
+                  return false;
+                }
+
+                if (child.type === 'page' && ADMIN_SECTION_LANDINGS.has(url)) {
+                  if (seenLandings.has(url)) return false;
+                  seenLandings.add(url);
+                }
+
+                return true;
+              })
+              .map(stripIconUnlessPrimeros),
+          };
+        },
+      },
+    ],
+  },
   icon(icon) {
     if (!icon) return;
 

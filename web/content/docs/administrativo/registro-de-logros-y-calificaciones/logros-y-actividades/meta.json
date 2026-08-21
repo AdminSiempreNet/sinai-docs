@@ -1,0 +1,11 @@
+{
+  "title": "Logros y actividades",
+  "description": "Logros por asignatura y planeación de actividades.",
+  "defaultOpen": false,
+  "pages": [
+    "logros-por-asignatura",
+    "planeacion-de-actividades",
+    "asignar-logros"
+  ],
+  "icon": "Target"
+}

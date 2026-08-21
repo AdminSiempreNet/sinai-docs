@@ -1,0 +1,14 @@
+{
+  "title": "Observador del estudiante",
+  "description": "Configuración, seguimientos, caracterización, valoración e informes.",
+  "defaultOpen": false,
+  "pages": [
+    "configuracion",
+    "seguimientos",
+    "ficha-observador",
+    "caracterizacion",
+    "valoracion",
+    "informes"
+  ],
+  "icon": "Eye"
+}

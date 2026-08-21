@@ -1,0 +1,17 @@
+{
+  "title": "Seguimiento docente",
+  "description": "Novedades, asistencia, horas y actividades del docente.",
+  "defaultOpen": false,
+  "pages": [
+    "novedades",
+    "asistencia-de-docente",
+    "horas-dictadas",
+    "observador-docente",
+    "actividades-complementarias",
+    "registro-de-actividades-complementarias",
+    "tipos-de-actividades-complementarias",
+    "diario-pedagogico",
+    "tareas-en-linea"
+  ],
+  "icon": "ScanSearch"
+}

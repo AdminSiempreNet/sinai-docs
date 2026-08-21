@@ -1,0 +1,13 @@
+{
+  "title": "Gestión de personal",
+  "description": "Planta, funcionarios, asignación y seguimiento docente.",
+  "defaultOpen": false,
+  "pages": [
+    "planta-de-cargos",
+    "funcionarios",
+    "configuracion-academica",
+    "asignacion-academica",
+    "seguimiento-docente"
+  ],
+  "icon": "Users"
+}

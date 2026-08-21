@@ -1,0 +1,15 @@
+{
+  "title": "Seguimiento a estudiantes",
+  "description": "Inasistencias, excusas, anotaciones y observador.",
+  "defaultOpen": false,
+  "pages": [
+    "inasistencias",
+    "inasistencias-por-asignatura",
+    "inasistencias-individual",
+    "inasistencias-detallado",
+    "excusas",
+    "anotaciones-internas",
+    "observador-del-estudiante"
+  ],
+  "icon": "ChartNoAxesCombined"
+}

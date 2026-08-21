@@ -1,0 +1,10 @@
+{
+  "title": "Currículo",
+  "description": "Currículo estándar y por archivo adjunto.",
+  "defaultOpen": false,
+  "pages": [
+    "curriculo-estandar",
+    "curriculo-archivo-adjunto"
+  ],
+  "icon": "BookOpen"
+}

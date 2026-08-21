@@ -1,0 +1,10 @@
+{
+  "title": "Asignación académica",
+  "description": "Asignación por periodo y por estudiante.",
+  "defaultOpen": false,
+  "pages": [
+    "asignacion-por-periodo",
+    "asignacion-por-estudiante"
+  ],
+  "icon": "UserRoundCheck"
+}

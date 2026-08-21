@@ -1,13 +1,34 @@
 {
   "title": "Administrativo",
+  "description": "Procesos y guías para el rol Administrativo",
+  "root": true,
+  "icon": "Building2",
   "defaultOpen": false,
   "pages": [
     "index",
-    "capacitacion-documentada",
-    "procesos-de-temporada",
-    "preguntas-frecuentes"
-  ],
-  "description": "Procesos y guías para el rol Administrativo",
-  "root": true,
-  "icon": "Building2"
+    "---Primeros pasos---",
+    "...primeros-pasos",
+    "---Configuración Institucional---",
+    "...configuracion-institucional",
+    "---Gestión de personal---",
+    "...gestion-de-personal",
+    "---Gestión de estudiantes---",
+    "...gestion-de-estudiantes",
+    "---Registro de logros y calificaciones---",
+    "...registro-de-logros-y-calificaciones",
+    "---Currículo---",
+    "...curriculo",
+    "---Convivencia escolar---",
+    "...convivencia-escolar",
+    "---Cierre académico (periodo)---",
+    "...cierre-academico-periodo",
+    "---Cierre de año---",
+    "...cierre-de-ano",
+    "---Gestión de usuarios y permisos---",
+    "...gestion-de-usuarios-y-permisos",
+    "---Herramientas---",
+    "...herramientas",
+    "---Ayuda---",
+    "...ayuda"
+  ]
 }

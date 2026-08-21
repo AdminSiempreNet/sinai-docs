@@ -288,6 +288,21 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
   color: var(--sinai-menu-accent);
 }
 
+/* Centra el icono del selector de rol con el texto (como Fumadocs). */
+#nd-sidebar button:has(.sinai-role-icon),
+#nd-sidebar-mobile button:has(.sinai-role-icon) {
+  display: inline-flex;
+  align-items: center;
+}
+
+#nd-sidebar button:has(.sinai-role-icon) .sinai-role-icon,
+#nd-sidebar-mobile button:has(.sinai-role-icon) .sinai-role-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
 /* El logo ocupa el espacio de identidad del menú sin desplazar el control
    para contraer la barra lateral. */
 .sinai-sidebar-logo {
@@ -337,7 +352,11 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
 }
 
 div:has(> .sinai-role-icon) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-inline-end: 0.5rem;
+  line-height: 0;
 }
 
 /* Las páginas iniciales mantienen las rutas de cada rol, pero no se repiten
@@ -355,7 +374,7 @@ div:has(> .sinai-role-icon) {
   display: none;
 }
 
-/* Acerca el árbol al selector de rol sin alterar la separación entre opciones. */
+/* Acerca el árbol al selector de rol; el aire del primer título lo da su margin. */
 #nd-sidebar [data-radix-scroll-area-viewport],
 #nd-sidebar-mobile [data-radix-scroll-area-viewport] {
   padding-top: 0 !important;
@@ -384,6 +403,7 @@ div:has(> .sinai-role-icon) {
 #nd-sidebar-mobile [data-active="true"] {
   color: var(--sinai-menu-accent);
   background-color: var(--sinai-menu-active);
+  font-weight: 600;
 }
 
 #nd-sidebar [data-active="true"]:hover,
@@ -411,23 +431,198 @@ div:has(> .sinai-role-icon) {
   color: var(--sinai-menu-accent);
 }
 
-/* Las categorías principales se distinguen sin competir con la opción activa. */
-/* Accesos compactos para reducir la necesidad de recorrer el árbol completo. */
-.sinai-sidebar-section-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0.1rem 0 0.15rem;
-  color: var(--color-fd-muted-foreground);
-  font-size: 0.6875rem;
+/* Títulos de agrupación Administrativo (estilo Introduction de Fumadocs).
+   Más peso y contraste que las opciones; aire amplio entre grupos. */
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"],
+#nd-sidebar a[href="/docs/administrativo/curriculo"],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"],
+#nd-sidebar a[href="/docs/administrativo/herramientas"],
+#nd-sidebar a[href="/docs/administrativo/ayuda"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"] {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  padding-block: 0.25rem;
+  color: var(--color-fd-foreground);
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
-.sinai-sidebar-section-title svg {
-  width: 0.8rem;
-  height: 0.8rem;
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"] {
+  /* Aire bajo el selector de rol, sin tocar el viewport. */
+  margin-top: 0.75rem;
+}
+
+/* Solo Primeros pasos muestra iconos en sus opciones. */
+html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar [data-state] > :is(a, button) .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile [data-state] > :is(a, button) .sinai-menu-icon {
+  display: none;
+}
+
+html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon {
+  display: inline-block;
+}
+
+/* El icono del selector de rol siempre visible. */
+html[data-sinai-role="administrativo"] #nd-sidebar button .sinai-role-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile button .sinai-role-icon {
+  display: inline-block;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"]:hover,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"]:hover,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]:hover,
+#nd-sidebar a[href="/docs/administrativo/curriculo"]:hover,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"]:hover,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"]:hover,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]:hover,
+#nd-sidebar a[href="/docs/administrativo/herramientas"]:hover,
+#nd-sidebar a[href="/docs/administrativo/ayuda"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"]:hover,
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/curriculo"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/herramientas"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/ayuda"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/curriculo"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/herramientas"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/ayuda"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"][data-sinai-active-branch] {
+  color: var(--sinai-menu-accent);
+  background: transparent;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"]::before,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"]::before,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]::before,
+#nd-sidebar a[href="/docs/administrativo/curriculo"]::before,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"]::before,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"]::before,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]::before,
+#nd-sidebar a[href="/docs/administrativo/herramientas"]::before,
+#nd-sidebar a[href="/docs/administrativo/ayuda"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"]::before {
+  display: none;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"] svg,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"] svg,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"] svg,
+#nd-sidebar a[href="/docs/administrativo/curriculo"] svg,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"] svg,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"] svg,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"] svg,
+#nd-sidebar a[href="/docs/administrativo/herramientas"] svg,
+#nd-sidebar a[href="/docs/administrativo/ayuda"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"] svg {
+  display: none;
 }
 
 .sinai-help {
@@ -2041,8 +2236,132 @@ div:has(> .sinai-role-icon) {
   margin: 0 !important;
 }
 
-/* La tabla de contenidos de las guÃ­as usa el conector jerÃ¡rquico de Fumadocs.
-   Se vincula al mismo color de acento que el menÃº lateral: azul en modo claro
+/* Banner de aterrizaje por rol (ocupa el espacio del título + descripción). */
+.sinai-role-landing-banner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+  padding: 1.35rem 1.35rem 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 1rem;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--sinai-role-accent) 16%, var(--color-fd-card)) 0%,
+      color-mix(in srgb, var(--sinai-role-accent) 5%, var(--color-fd-card)) 48%,
+      var(--color-fd-card) 100%
+    );
+}
+
+.sinai-role-landing-banner-glow {
+  position: absolute;
+  inset: auto -15% -55% auto;
+  width: min(22rem, 70%);
+  height: min(14rem, 90%);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--sinai-role-accent) 34%, transparent) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.sinai-role-landing-banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 44rem;
+}
+
+.sinai-role-landing-banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: var(--sinai-role-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sinai-role-landing-banner-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}
+
+.sinai-role-landing-banner-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.sinai-role-landing-banner-description {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+@media (min-width: 640px) {
+  .sinai-role-landing-banner {
+    padding: 1.6rem 1.7rem 1.75rem;
+  }
+}
+
+/* Banner sencillo de agrupación (Primeros pasos, Configuración, etc.). */
+.sinai-section-landing-banner {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin: 0 0 1.25rem;
+  padding: 0.95rem 0 1.05rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--sinai-role-accent) 18%, var(--color-fd-border));
+}
+
+.sinai-section-landing-banner-bar {
+  flex-shrink: 0;
+  width: 0.22rem;
+  align-self: stretch;
+  min-height: 2.75rem;
+  border-radius: 999px;
+  background: var(--sinai-role-accent);
+}
+
+.sinai-section-landing-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.sinai-section-landing-banner-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.55rem, 2.4vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.sinai-section-landing-banner-description {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* La tabla de contenidos de las guias usa el conector jerarquico de Fumadocs.
+   Se vincula al mismo color de acento que el menu lateral: azul en modo claro
    y verde en modo oscuro. */
 body:has(.sinai-role-administrativo) #sinai-guide-toc {
   --sinai-toc-accent: #4976ff;

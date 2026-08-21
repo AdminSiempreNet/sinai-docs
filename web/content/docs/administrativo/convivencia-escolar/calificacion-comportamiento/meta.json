@@ -1,0 +1,10 @@
+{
+  "title": "Calificación Comportamiento",
+  "description": "Logros y evaluación de comportamiento.",
+  "defaultOpen": false,
+  "pages": [
+    "logros-comportamiento",
+    "evaluacion-de-comportamiento"
+  ],
+  "icon": "ClipboardPenLine"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Cierre académico (periodo)",
+  "description": "Consolidados, nivelaciones, puestos e informes de periodo.",
+  "defaultOpen": false,
+  "pages": [
+    "reportes-consolidados",
+    "nivelaciones-de-periodo",
+    "nivelaciones-finales",
+    "consolidacion-y-calculo-de-puestos",
+    "informes"
+  ],
+  "icon": "CalendarCheck"
+}

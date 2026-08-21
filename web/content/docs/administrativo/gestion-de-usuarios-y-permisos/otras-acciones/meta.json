@@ -1,0 +1,9 @@
+{
+  "title": "Otras acciones",
+  "description": "Verificación de datos de usuarios.",
+  "defaultOpen": false,
+  "pages": [
+    "verificacion-de-datos-de-usuarios"
+  ],
+  "icon": "Settings"
+}
