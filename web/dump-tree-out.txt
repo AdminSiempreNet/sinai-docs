@@ -1,0 +1,32 @@
+﻿corepack.cmd : node:internal/modules/run_main:107
+En C:\Users\andyg\AppData\Local\Temp\ps-script-c20dbe05-637e-42ae-8c2a-d4b859664e43.ps1: 108 Carácter: 1
++ corepack.cmd pnpm exec tsx ./scripts/dump-tree.mts 2>&1 | Out-File -F ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (node:internal/modules/run_main:107:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    triggerUncaughtException(
+    ^
+
+Error: Transform failed with 1 error:
+C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\.source\server.ts:406:20: ERROR: Top-level await is currently not 
+supported with the "cjs" output format
+    at failureErrorWithLog (C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\node_modules\.pnpm\esbuild@0.28.0\node_mo
+dules\esbuild\lib\main.js:1748:15)
+    at C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\node_modules\.pnpm\esbuild@0.28.0\node_modules\esbuild\lib\mai
+n.js:1017:50
+    at responseCallbacks.<computed> (C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\node_modules\.pnpm\esbuild@0.28.
+0\node_modules\esbuild\lib\main.js:884:9)
+    at handleIncomingPacket (C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\node_modules\.pnpm\esbuild@0.28.0\node_m
+odules\esbuild\lib\main.js:939:12)
+    at Socket.readFromStdout (C:\Users\andyg\Desktop\SIEMPRE.NET\sinai-docs\web\node_modules\.pnpm\esbuild@0.28.0\node_
+modules\esbuild\lib\main.js:862:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  name: 'TransformError'
+}
+
+Node.js v24.18.0
