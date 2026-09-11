@@ -78,7 +78,7 @@ function ImageDialog({ src, alt, onClose }: { src: string; alt: string; onClose:
       onClick={onClose}
     >
       <ImageDialogFrame title={alt || 'Captura de SINAI'} onClose={onClose}>
-        <img src={src} alt={alt} className="sinai-image-dialog-image" />
+        <img src={src} alt={alt} className="sinai-image-dialog-image" data-image-modal-managed />
       </ImageDialogFrame>
     </div>
   );
@@ -260,7 +260,7 @@ export function ContentImageSequenceTrigger({
               </div>
             ) : undefined}
           >
-            <img src={activeImage.src} alt={activeImage.alt} className="sinai-image-dialog-image" />
+            <img src={activeImage.src} alt={activeImage.alt} className="sinai-image-dialog-image" data-image-modal-managed />
           </ImageDialogFrame>
         </div>
       )}

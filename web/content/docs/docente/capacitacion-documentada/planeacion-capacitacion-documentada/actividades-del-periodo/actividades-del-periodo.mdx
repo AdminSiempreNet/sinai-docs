@@ -1,12 +1,12 @@
 ---
 title: "Actividades del periodo"
-description: "Conozca las opciones de actividades del periodo y siga el procedimiento correspondiente en SINAI."
+description: "Agregue, genere, edite o elimine actividades del periodo por grupo, asignatura y componente."
 guide: true
 wordpressId: 30033
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/actividades-del-periodo/"
-lastModified: "2023-11-15 13:44:06"
+lastModified: "2026-09-11"
 ---
-## Video tutorial
+## Tutorial
 
 <GuideVideos compact>
 <YouTube id="Y4WXm5GZ1hQ" title="Actividades del periodo"
@@ -14,93 +14,80 @@ lastModified: "2023-11-15 13:44:06"
 />
 </GuideVideos>
 
-## Guía paso a paso
+## Actividades del periodo
 
-### Actividades del Periodo
+**Actividades del período** permite gestionar las actividades académicas de los componentes de una asignatura: agregarlas una a una, generarlas todas, editarlas o eliminarlas (según la configuración institucional).
 
-Para gestionar las actividades del período, normalmente se ingrese desde el módulo del docente a través del menú principal **“Planeación”, submenú “Actividad Período**”, sin embargo esta ruta puede variar de acuerdo con la parametrización establecida por cada institución al momento de implementar SINAI.
+**Ruta de acceso:** Planeación → Actividad Período.
 
-#### Agregar una actividad a la vez
+> **Importante:** editar o eliminar actividades depende de lo que haya configurado la institución en SINAI.
 
-Una vez que se encuentre en la ventana para la gestión de actividades deberá seguir los siguientes pasos:
+## Paso a paso
 
-Seleccione “Grupo”, Periodo” y “Asignatura” en el panel izquierdo Gestionar Actividades.
+### Agregar una actividad
 
-Seleccione el componente y luego seleccione la actividad.
+1. Ingrese a **Planeación → Actividad Período**.
+2. En **Gestionar Actividades**, seleccione **grupo**, **período**, **asignatura**, **componente** y la **actividad**.
+3. Haga clic en **Agregar**.
+4. La actividad aparecerá en la **Lista de Actividades de la Asignatura** (panel derecho).
 
-Haga clic en el botón “Agregar”.
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/acceso-actividades-periodo.png" alt="Acceso a Actividad Período desde Planeación">Referencia visual</GuideImageTrigger>
 
-Notará que al lado derecho de la ventana se agregará la actividad a la lista. <GuideImageTrigger src={"/images/wordpress/2023/11/Agregar-actividad-1024x576.gif"} alt={"Captura de Agregar actividad"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/step-01.png" alt="Agregar una actividad al periodo">Referencia visual</GuideImageTrigger>
 
+### Generar todas las actividades
 
+1. Seleccione **grupo**, **período** y **asignatura**.
+2. Haga clic en **Generar**.
+3. SINAI incorporará las actividades de los componentes configurados.
 
-#### Generar todas las actividades de los componentes
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/step-02.png" alt="Generar todas las actividades de la asignatura">Referencia visual</GuideImageTrigger>
 
-Se cuenta además con una opción para generar todas las actividades a la misma vez, al igual que en la forma anterior, se debe seleccionar el “Grupo”, Período” y “Asignatura”, luego clic en el botón “Generar”. <GuideImageTrigger src={"/images/wordpress/2023/11/Generar-todas-las-actividades.gif"} alt={"Captura de Generar todas las actividades"}>Ver ejemplo</GuideImageTrigger>
+> **Nota:** las actividades generadas dependen de la configuración institucional previa.
 
+### Editar una actividad
 
+1. Ubique la actividad en la lista.
+2. Confirme que la opción de edición esté habilitada.
+3. Haga clic sobre el texto, realice los cambios y pulse **Guardar** (superior derecha).
 
-#### Editar una actividad agregada
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/step-03.png" alt="Editar una actividad en la lista">Referencia visual</GuideImageTrigger>
 
-La edición de las actividades se realiza de forma directa, es decir, haciendo los ajustes directamente sobre el texto, recuerde que para hacer esto, debe fijarse que en la actividad se encuentre habilitada la opción de edición.
+> **Importante:** si **Editable** está desmarcada, el docente no podrá modificarla.
 
-haga clic en el texto de la actividad.
+### Eliminar una actividad
 
-Realice los ajustes al texto.
+1. Marque la casilla a la izquierda de la actividad.
+2. Haga clic en **Eliminar** y confirme con **Aceptar**.
 
-Haga clic en el botón “Guardar” ubicado en la parte superior derecha de la lista. <GuideImageTrigger src={"/images/wordpress/2023/11/Edicion-de-actividad-1024x576.gif"} alt={"Captura de Edicion de actividad"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/step-04.png" alt="Eliminar una actividad de la asignatura">Referencia visual</GuideImageTrigger>
 
+> **Importante:** una actividad marcada como **obligatoria** no puede eliminarla el docente.
 
+### Actividades obligatorias y editables
 
-#### Eliminar Actividades de la Asignatura
+En la columna de opciones puede ver combinaciones como:
 
-El proceso de eliminación de actividades es muy simple, basta con seleccionar la actividad en la casilla ubicada al lado izquierdo de cada una de ellas y luego hacer clic en el botón “Eliminar”, aparecerá así un mensaje de confirmación, en este deberá hacer clic en “Aceptar”. <GuideImageTrigger src={"/images/wordpress/2023/11/Eliminar-actividad-1024x576.gif"} alt={"Captura de Eliminar actividad"}>Ver ejemplo</GuideImageTrigger>
+- Obligatoria y no editable
+- Editable y no obligatoria
+- Obligatoria y editable
 
+<GuideImageTrigger src="/images/guides/actividades-del-periodo/step-05.png" alt="Identificar actividades obligatorias y editables">Referencia visual</GuideImageTrigger>
 
+> **Importante:** si una actividad obligatoria no tiene calificación, SINAI asignará la nota mínima de la escala institucional.
 
-Recuerde que la actividad únicamente podrá ser eliminada si esta no se encuentra marcada como obligatoria.
-
-#### Obligatoriedad y edición de las actividades
-
-de acuerdo con la dinámica de la institución, para cada componente se establece un número mínimo de actividades, las cuales pueden ser editables por el docente, sin embargo, al momento de configurar SINAI para cada institución, estas pueden definir cuales actividades pueden ser editables y cuales serán obligatorias, o ambas posibilidades. <GuideImageTrigger src={"/images/wordpress/2023/11/Actividades-Obligatoria.png"} alt={"Captura de Actividades Obligatoria"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-En la columna de opciones de la “Lista de Actividades de la Asignatura” se dispone para las actividades agregadas de cada componente, dos parámetros que son definidos por la institución, estos determinan si una actividad es obligatoria y/o editable.
-
-Las posibles situaciones que se pueden presentar son:
-
-Que una actividad sea obligatoria pero no editable.
-
-Qué una actividad sea editable pero no obligatoria.
-
-Qué una actividad sea obligatoria y editable.
-
-Aquellas actividades que no están marcadas como obligatorias, pueden ser fácilmente eliminadas por el docente si así lo dispone. Por otro lado, aquellas que son obligatorias, son de tener mucho cuidado al momento de registrar una nota en la planilla de calificaciones, puesto que al no registrarla, SINAI asignará a esta la nota mínima de la escala de valoración establecida por la institución. <GuideImageTrigger src={"/images/wordpress/2023/11/Actividad-obligatoria-1024x576.gif"} alt={"Captura de Actividad obligatoria"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-#### Opciones adicionales de la lista planeación de actividades
-
-Entre las opciones adicionales que podemos encontrar en la planeación de actividades, específicamente de la ventana “Actividades Período”, encontramos “Copiar Actividades”, la cual es muy útil cuando se trata de trasferir la misma estructura ya organizada de planeación de actividades a otro grupo del mismo grado. <GuideImageTrigger src={"/images/wordpress/2023/11/Copiar-actividades-1024x449.png"} alt={"Captura de Copiar actividades"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-Es necesario tener en cuenta que si el “Grupo Destino” ya tiene actividades asignadas, para que SINAI realice el proceso, es necesario seleccionar la casilla “Reemplazar grupo destino”.
-
+Para copiar la planeación a otro grupo, use la guía **Copiar planeación**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Actividades del periodo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Cómo agrego actividades a mi planilla o asignatura?">
+    Vaya a **Planeación → Actividad Período**, elija grupo, período, asignatura y componente, seleccione la actividad y pulse **Agregar**. También puede usar **Generar** para cargar todas las del componente.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Actividades del periodo» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué no puedo editar o borrar una actividad?">
+    Depende de la configuración institucional. Si no está marcada como editable, o es obligatoria, el docente no podrá modificarla o eliminarla.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Actividades del periodo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Qué pasa si no califico una actividad obligatoria?">
+    SINAI asignará la nota mínima de la escala de valoración de la institución.
   </GuideFAQItem>
 </GuideFAQ>

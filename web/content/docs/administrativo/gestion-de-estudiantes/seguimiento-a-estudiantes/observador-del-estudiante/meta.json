@@ -1,14 +1,8 @@
 {
-  "title": "Observador del estudiante",
-  "description": "Configuración, seguimientos, caracterización, valoración e informes.",
+  "title": "Ficha observador del estudiante",
+  "description": "Identifique la versión de la ficha que usa su institución y consulte la guía correspondiente.",
   "defaultOpen": false,
-  "pages": [
-    "configuracion",
-    "seguimientos",
-    "ficha-observador",
-    "caracterizacion",
-    "valoracion",
-    "informes"
-  ],
+  "collapsible": false,
+  "pages": [],
   "icon": "Eye"
 }

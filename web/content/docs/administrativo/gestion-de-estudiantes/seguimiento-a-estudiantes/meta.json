@@ -1,6 +1,6 @@
 {
   "title": "Seguimiento a estudiantes",
-  "description": "Inasistencias, excusas, anotaciones y observador.",
+  "description": "Inasistencias, excusas, anotaciones y ficha observador.",
   "defaultOpen": false,
   "pages": [
     "inasistencias",

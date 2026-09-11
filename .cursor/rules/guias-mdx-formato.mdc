@@ -1,0 +1,126 @@
+---
+description: Formato estándar al convertir guías pegadas en texto a MDX (Fumadocs SINAI).
+globs: web/content/docs/**/*.mdx
+alwaysApply: true
+---
+
+# Formato de guías MDX (texto → documentación)
+
+Cuando el usuario comparta el contenido de una guía en texto (chat, Word, Markdown, etc.), conviértelo al patrón de las guías SINAI **sin aplanar ni reinventar la estructura del texto fuente**.
+
+## Principio principal
+
+**Conserva el tipo de lista y el ritmo del texto original.**
+
+| En el texto fuente | En el MDX |
+| --- | --- |
+| Viñetas (`-` / `•`) | Viñetas (`-`) |
+| Lista numerada de acciones | Lista numerada (`1. 2. 3.`) |
+| Párrafo de contexto / ruta de menú | Párrafo (no lo conviertas en paso numerado) |
+| Bloque `>` de advertencia | `> **Importante:**` o `> **Nota:**` |
+| Lista de opciones, códigos, dimensiones | Viñetas |
+| Resumen del proceso (orden general) | Lista numerada propia, separada de los pasos |
+
+**Prohibido:** meter todo en una sola lista numerada. Si el texto dice “ingrese a X” en prosa y luego “para hacer Y:” con pasos, mantén esa forma.
+
+## Estructura de página (envoltorio)
+
+```mdx
+## Tutorial
+
+<GuideVideos compact>
+  <YouTube id="..." title="..." />
+</GuideVideos>
+
+## [Título del tema]
+
+Párrafo introductorio (qué hace / para qué sirve).
+
+Lista del orden del proceso **si el texto la trae** (numerada).
+
+### Escala / conceptos / requisitos
+(solo si el texto trae esa sección — con viñetas si aplica)
+
+## Paso a paso
+
+### [Nombre descriptivo del bloque]
+Párrafo con la ruta: Ingrese a **Menú → Submenú**.
+
+Párrafo de contexto si el texto lo trae.
+
+Para [acción]:
+
+1. Paso de acción.
+2. Paso de acción.
+
+Lista con viñetas si el texto lista opciones/elementos.
+
+> **Importante:** o **Nota:** …
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿...?">
+    Respuesta completa derivada del contenido.
+  </GuideFAQItem>
+</GuideFAQ>
+```
+
+## Patrón de cada bloque de paso
+
+Modelo correcto (mezcla prosa + numeración + viñetas):
+
+```mdx
+### Configurar los grupos
+
+Ingrese a **Establecimiento → Grupos**.
+
+En esta sección puede consultar los grupos creados, filtrando por sede y estado.
+
+Para asignar el sistema de evaluación:
+
+1. Seleccione el grupo o los grupos correspondientes.
+2. Haga clic en **Asignar Sistem. Eval.**
+3. Seleccione el sistema **Especial para Preescolar**.
+4. Confirme la asignación.
+
+> **Importante:** el grupo debe tener asignado el sistema …
+```
+
+Modelo incorrecto (todo aplanado a números — **no usar**):
+
+```mdx
+### Configurar los grupos
+
+1. Ingrese a **Establecimiento → Grupos**.
+2. Consulte los grupos…
+3. Verifique…
+4. Seleccione…
+```
+
+## Convenciones
+
+- `## Tutorial` (no “Video tutorial”), luego título del tema, luego `## Paso a paso`.
+- Subpasos: `###` con nombre descriptivo (**sin** `1.` / `2.` en el heading).
+- Menús: `**Establecimiento → Grupos**` (flecha `→`; si el texto trae `>`, normalízalo a `→`).
+- Callouts: `> **Importante:**` / `> **Nota:**` / `> **Advertencia:**`.
+- FAQ: respuestas útiles; índices `01`, `02`, …
+- Dentro de `<PlanillaGuide>`, el mismo esquema **dentro** del bloque.
+- Conserva datos factuales (códigos de informe, límites, escalas, IDs de video).
+- No inventes capturas; `GuideImageTrigger` solo con imágenes existentes en `public/images/guides/`.
+- Idioma: español, tono de ayuda SINAI (usted / haga clic).
+
+## Checklist antes de entregar
+
+1. ¿Las viñetas del texto siguen siendo viñetas?
+2. ¿La prosa de “Ingrese a…” sigue siendo párrafo?
+3. ¿Solo las acciones están numeradas?
+4. ¿Hay secciones conceptuales (escala, dimensiones, códigos) con viñetas?
+5. ¿El video quedó en `## Tutorial` arriba?
+
+## Referencia de estilo
+
+- `web/content/docs/docente/.../como-actualizar-foto-de-perfil.mdx`
+- `web/content/docs/docente/.../calificacion-definitiva-directa.mdx`
+- `web/content/docs/docente/.../registro-de-calificaciones-en-linea.mdx`
+- Guía Especial preescolar dentro de `registro-por-actividades.mdx` (bloque `preescolar/especial`)

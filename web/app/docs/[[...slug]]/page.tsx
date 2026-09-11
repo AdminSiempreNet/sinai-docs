@@ -35,6 +35,9 @@ export default async function Page(props: {
     !!role &&
     ['administrativo', 'docente', 'estudiante'].includes(role);
   const isSectionLanding = !isRoleLanding && !isGuide && pageMeta.section === true;
+  const isAdministrativo = role === 'administrativo';
+  /** Reserva la columna derecha en Administrativo y muestra arte temático si no hay índice. */
+  const showAdminAside = isAdministrativo && !isRoleLanding;
   const roleClass = role && ['administrativo', 'docente', 'estudiante'].includes(role)
     ? `sinai-role-${role}`
     : undefined;
@@ -42,7 +45,7 @@ export default async function Page(props: {
   const guideUrl = `/docs/${params.slug?.join('/') ?? ''}`;
   const pageClassName = [
     isGuide && 'sinai-guide-page',
-    hasToc && 'sinai-custom-toc',
+    (hasToc || showAdminAside) && 'sinai-custom-toc',
     isRoleLanding && 'sinai-role-landing-page',
     isSectionLanding && 'sinai-section-landing-page',
     roleClass,
@@ -88,7 +91,9 @@ export default async function Page(props: {
           lastReviewed={pageMeta.lastReviewed}
         />
       )}
-      {hasToc && <GuideToc toc={toc} />}
+      {(hasToc || showAdminAside) && (
+        <GuideToc toc={toc} emptyArt={showAdminAside} />
+      )}
       <ContentImageModal />
     </DocsPage>
   );

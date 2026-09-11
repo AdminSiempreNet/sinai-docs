@@ -3,6 +3,7 @@
 import { Text } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
+import { GuideAsideArt } from '@/components/guide-aside-art';
 
 type GuideTocItem = {
   title: ReactNode;
@@ -35,13 +36,70 @@ function createPath(positions: Position[], start = 0, end = positions.length - 1
   return path;
 }
 
-export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
+function headingExists(url: string, root: ParentNode = document) {
+  const id = url.startsWith('#') ? url.slice(1) : url;
+  if (!id) return false;
+  try {
+    return Boolean(root.querySelector(`#${CSS.escape(id)}`));
+  } catch {
+    return Boolean(document.getElementById(id));
+  }
+}
+
+/**
+ * When a PlanillaGuideSwitcher is on the page, only list headings that are
+ * currently rendered for the selected planilla/version. Hide the TOC while
+ * the picker is visible (no selection yet).
+ */
+function resolveVisibleToc(toc: GuideTocItem[]): GuideTocItem[] {
+  const switcher = document.querySelector('.sinai-planilla-switcher');
+  if (!switcher) return toc;
+
+  const guidePanel = document.querySelector('.sinai-planilla-guide-panel');
+  if (!guidePanel) return [];
+
+  return toc.filter((item) => headingExists(item.url, guidePanel));
+}
+
+export function GuideToc({
+  toc,
+  emptyArt = false,
+}: {
+  toc: GuideTocItem[];
+  /** When the outline is empty, show a thematic illustration instead of a blank column. */
+  emptyArt?: boolean;
+}) {
   const listRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const [positions, setPositions] = useState<Position[]>([]);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [direction, setDirection] = useState<'up' | 'down'>('down');
   const [footerVisible, setFooterVisible] = useState(false);
+  // null = still syncing on the client (avoids flashing both versions in the TOC)
+  const [visibleToc, setVisibleToc] = useState<GuideTocItem[] | null>(null);
+
+  useEffect(() => {
+    let frame2 = 0;
+    const sync = () => {
+      setVisibleToc(resolveVisibleToc(toc));
+      // Second pass after the selected guide panel mounts.
+      frame2 = window.requestAnimationFrame(() => {
+        setVisibleToc(resolveVisibleToc(toc));
+      });
+    };
+
+    sync();
+    window.addEventListener('sinai-planilla-change', sync);
+    window.addEventListener('popstate', sync);
+
+    return () => {
+      window.cancelAnimationFrame(frame2);
+      window.removeEventListener('sinai-planilla-change', sync);
+      window.removeEventListener('popstate', sync);
+    };
+  }, [toc]);
+
+  const items = visibleToc ?? [];
 
   useEffect(() => {
     const updateActiveItem = () => {
@@ -49,13 +107,13 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
       // superior de la pantalla, no necesariamente junto al borde superior.
       // Así el recorrido alcanza el último elemento visible de cada sección.
       const offset = Math.min(360, Math.max(180, window.innerHeight * 0.36));
-      const nextIndex = toc.findLastIndex((item) => {
+      const nextIndex = items.findLastIndex((item) => {
         const element = document.getElementById(item.url.slice(1));
         return element ? element.getBoundingClientRect().top <= offset : false;
       });
 
       setActiveIndex((currentIndex) => {
-        const resolvedIndex = nextIndex === -1 ? 0 : nextIndex;
+        const resolvedIndex = nextIndex === -1 ? (items.length ? 0 : -1) : nextIndex;
         if (currentIndex !== -1 && currentIndex !== resolvedIndex) {
           setDirection(resolvedIndex < currentIndex ? 'up' : 'down');
         }
@@ -66,12 +124,14 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
     updateActiveItem();
     window.addEventListener('scroll', updateActiveItem, { passive: true });
     window.addEventListener('resize', updateActiveItem);
+    window.addEventListener('sinai-planilla-change', updateActiveItem);
 
     return () => {
       window.removeEventListener('scroll', updateActiveItem);
       window.removeEventListener('resize', updateActiveItem);
+      window.removeEventListener('sinai-planilla-change', updateActiveItem);
     };
-  }, [toc]);
+  }, [items]);
 
   useEffect(() => {
     const list = listRef.current;
@@ -79,7 +139,7 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
 
     const updatePositions = () => {
       setPositions(
-        toc.map((item, index) => {
+        items.map((item, index) => {
           const element = linkRefs.current[index];
           const top = element?.offsetTop ?? 0;
           const height = element?.offsetHeight ?? 0;
@@ -98,7 +158,7 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
     observer.observe(list);
     updatePositions();
     return () => observer.disconnect();
-  }, [toc]);
+  }, [items]);
 
   useEffect(() => {
     const footer = document.querySelector<HTMLElement>('.sinai-site-footer');
@@ -112,9 +172,17 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
     return () => observer.disconnect();
   }, []);
 
+  if (visibleToc === null) {
+    return emptyArt ? <GuideAsideArt /> : null;
+  }
+
+  if (items.length === 0) {
+    return emptyArt ? <GuideAsideArt /> : null;
+  }
+
   const activeRootIndex = activeIndex === -1
     ? -1
-    : toc.slice(0, activeIndex + 1).findLastIndex((item) => item.depth <= 2);
+    : items.slice(0, activeIndex + 1).findLastIndex((item) => item.depth <= 2);
   const activePosition = activeIndex === -1 ? undefined : positions[activeIndex];
 
   return (
@@ -144,9 +212,9 @@ export function GuideToc({ toc }: { toc: GuideTocItem[] }) {
           />
         )}
         <div ref={listRef} className="relative flex flex-col">
-          {toc.map((item, index) => (
+          {items.map((item, index) => (
             <a
-              key={item.url}
+              key={`${item.url}-${index}`}
               ref={(element) => {
                 linkRefs.current[index] = element;
               }}
