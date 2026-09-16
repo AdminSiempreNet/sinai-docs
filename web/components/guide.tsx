@@ -118,6 +118,11 @@ export function GuideImageTrigger({ src, alt, children, compact = false, variant
   return <ContentImageTrigger src={src} alt={alt} compact={compact} variant={variant}>{children}</ContentImageTrigger>;
 }
 
+/** Agrupa capturas consecutivas para que compartan una fila y se ajusten al ancho disponible. */
+export function GuideImageRow({ children }: { children: ReactNode }) {
+  return <div className="sinai-reference-row not-prose">{children}</div>;
+}
+
 export function GuideImageSequence({
   images,
   children,

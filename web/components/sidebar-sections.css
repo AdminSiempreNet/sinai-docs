@@ -71,3 +71,59 @@ html[data-sinai-role="docente"] :is(#nd-sidebar, #nd-sidebar-mobile) .sinai-menu
 html[data-sinai-role="docente"] :is(#nd-sidebar, #nd-sidebar-mobile) a[href^="/docs/docente/primeros-pasos/"] .sinai-menu-icon {
   display: inline-block;
 }
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a:is(
+  [href="/docs/estudiante/primeros-pasos"],
+  [href="/docs/estudiante/mi-cuenta-y-comunicaciones"],
+  [href="/docs/estudiante/actividad-academica"],
+  [href="/docs/estudiante/resultados-academicos"],
+  [href="/docs/estudiante/matricula"],
+  [href="/docs/estudiante/asistencia-y-convivencia"]
+) {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  padding-block: 0.25rem;
+  color: var(--color-fd-foreground);
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a[href="/docs/estudiante/primeros-pasos"] {
+  margin-top: 0.75rem;
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a:is(
+  [href="/docs/estudiante/primeros-pasos"],
+  [href="/docs/estudiante/mi-cuenta-y-comunicaciones"],
+  [href="/docs/estudiante/actividad-academica"],
+  [href="/docs/estudiante/resultados-academicos"],
+  [href="/docs/estudiante/matricula"],
+  [href="/docs/estudiante/asistencia-y-convivencia"]
+):is(:hover, [data-active="true"], [data-sinai-active-branch]) {
+  color: var(--sinai-menu-accent);
+  background: transparent;
+}
+
+:is(#nd-sidebar, #nd-sidebar-mobile) a:is(
+  [href="/docs/estudiante/primeros-pasos"],
+  [href="/docs/estudiante/mi-cuenta-y-comunicaciones"],
+  [href="/docs/estudiante/actividad-academica"],
+  [href="/docs/estudiante/resultados-academicos"],
+  [href="/docs/estudiante/matricula"],
+  [href="/docs/estudiante/asistencia-y-convivencia"]
+)::before {
+  display: none;
+}
+
+html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) .sinai-menu-icon:not(.sinai-role-icon) {
+  display: none;
+}
+
+html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) a[href^="/docs/estudiante/primeros-pasos/"] .sinai-menu-icon {
+  display: inline-block;
+}

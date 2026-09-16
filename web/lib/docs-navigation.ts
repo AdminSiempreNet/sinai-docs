@@ -30,9 +30,19 @@ const DOCENTE_SECTION_BY_NAME: Record<string, string> = {
   "SINAI Desktop": "/docs/docente/sinai-desktop"
 };
 
+const ESTUDIANTE_SECTION_BY_NAME: Record<string, string> = {
+  "Primeros pasos": "/docs/estudiante/primeros-pasos",
+  "Mi cuenta y comunicaciones": "/docs/estudiante/mi-cuenta-y-comunicaciones",
+  "Actividad académica": "/docs/estudiante/actividad-academica",
+  "Resultados académicos": "/docs/estudiante/resultados-academicos",
+  "Matrícula": "/docs/estudiante/matricula",
+  "Asistencia y convivencia": "/docs/estudiante/asistencia-y-convivencia",
+};
+
 export const ROLE_SECTIONS: Record<string, Record<string, string>> = {
   administrativo: ADMIN_SECTION_BY_NAME,
   docente: DOCENTE_SECTION_BY_NAME,
+  estudiante: ESTUDIANTE_SECTION_BY_NAME,
 };
 
 export const SECTION_HREFS = Object.values(ROLE_SECTIONS).flatMap((sections) => Object.values(sections));

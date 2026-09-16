@@ -1,0 +1,9 @@
+{
+  "title": "Primeros pasos",
+  "description": "Acceda a SINAI y recupere el acceso a su cuenta.",
+  "defaultOpen": false,
+  "pages": [
+    "ingresar-a-sinai",
+    "cambiar-contrasena"
+  ]
+}

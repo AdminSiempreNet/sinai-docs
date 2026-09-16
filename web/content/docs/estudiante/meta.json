@@ -3,8 +3,20 @@
   "description": "Procesos y guías para el rol Estudiante",
   "root": true,
   "icon": "GraduationCap",
+  "defaultOpen": false,
   "pages": [
     "index",
-    "capacitacion-documentada"
+    "---Primeros pasos---",
+    "...primeros-pasos",
+    "---Mi cuenta y comunicaciones---",
+    "...mi-cuenta-y-comunicaciones",
+    "---Actividad académica---",
+    "...actividad-academica",
+    "---Resultados académicos---",
+    "...resultados-academicos",
+    "---Matrícula---",
+    "...matricula",
+    "---Asistencia y convivencia---",
+    "...asistencia-y-convivencia"
   ]
 }
