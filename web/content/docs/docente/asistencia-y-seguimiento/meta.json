@@ -1,0 +1,9 @@
+{
+  "title": "Asistencia y seguimiento",
+  "description": "Registre inasistencias, consulte consolidados y gestione excusas.",
+  "defaultOpen": false,
+  "pages": [
+    "inasistencias",
+    "excusas"
+  ]
+}

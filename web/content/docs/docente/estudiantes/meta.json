@@ -1,0 +1,11 @@
+{
+  "title": "Estudiantes",
+  "description": "Consulte sus grupos y la información de sus estudiantes.",
+  "defaultOpen": false,
+  "pages": [
+    "buscar-estudiante",
+    "listas-por-grupo",
+    "cargar-fotografias",
+    "estudiantes-piar"
+  ]
+}

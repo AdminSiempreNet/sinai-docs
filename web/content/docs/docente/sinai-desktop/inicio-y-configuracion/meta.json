@@ -1,0 +1,14 @@
+{
+  "title": "Inicio y configuración",
+  "description": "Instale SINAI Desktop y consulte su institución, asignación, autorizaciones y listados.",
+  "defaultOpen": false,
+  "pages": [
+    "como-descargar-e-instalar",
+    "como-iniciar-sesion-en-desktop",
+    "como-puedo-cambiar-de-institucion-educativa-en-desktop",
+    "como-descargar-planillas-de-listados-e-inasistencias-en-desktop",
+    "listados-de-estudiantes-en-desktop",
+    "como-revisar-mis-autorizaciones-en-desktop",
+    "asignacion-academica-en-desktop"
+  ]
+}

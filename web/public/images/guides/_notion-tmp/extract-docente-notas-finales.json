@@ -1,0 +1,43 @@
+{
+  "name": "Notas Finales",
+  "lines": [
+    "Notas Finales",
+    "TUTORIAL",
+    "La opción Notas Finales permite a los docentes consultar la valoración final de los estudiantes por asignatura, teniendo en cuenta las calificaciones registradas durante los diferentes periodos académicos.",
+    "Esta funcionalidad permite revisar el resultado final, los ajustes realizados, la valoración requerida y las inasistencias de cada estudiante, además de generar reportes por asignatura o por grupo.",
+    "Ruta de acceso: Evaluación → Notas Finales",
+    "Paso a paso",
+    "Ingrese al Módulo del Docente.",
+    "Diríjase a Evaluación → Notas Finales.",
+    "Seleccione el Calendario correspondiente.",
+    "Seleccione el Grupo.",
+    "Seleccione el Periodo que desea consultar.",
+    "Seleccione la Asignatura.",
+    "En la tabla podrá consultar, para cada estudiante, la información correspondiente a:",
+    "Periodos: calificaciones obtenidas durante los periodos disponibles.",
+    "Final: resultado final calculado.",
+    "Ajuste: modificación realizada sobre la valoración final, cuando corresponda.",
+    "Definitiva: calificación definitiva obtenida por el estudiante.",
+    "Requerida: valoración que el estudiante requiere, cuando aplique.",
+    "Inasistencias: registro de las faltas o inasistencias del estudiante.",
+    "Si necesita consultar información más detallada de un estudiante, utilice el ícono Ampliar ubicado en la fila correspondiente.",
+    "Descargar reportes",
+    "En la parte superior de la consulta encontrará las opciones disponibles para descargar los reportes.",
+    "Por asignatura: genera el reporte correspondiente a la asignatura seleccionada.",
+    "Por grupo: genera el reporte de los estudiantes pertenecientes al grupo seleccionado.",
+    "Para descargar un reporte:",
+    "Verifique los filtros seleccionados.",
+    "Seleccione el tipo de reporte que desea generar.",
+    "Haga clic en la opción correspondiente.",
+    "Descargue el archivo generado.",
+    "Importante: El reporte se genera tomando como referencia los filtros seleccionados y la información visible en la consulta. Por esta razón, revise cuidadosamente el calendario, grupo, periodo y asignatura antes de descargarlo."
+  ],
+  "images": [
+    { "file": "acceso-notas-finales.png", "altHint": "Ruta de acceso Notas Finales" },
+    { "file": "step-01.png", "altHint": "Tabla de notas finales" },
+    { "file": "step-02.png", "altHint": "Detalle ampliado del estudiante" },
+    { "file": "step-03.png", "altHint": "Descargar reportes" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

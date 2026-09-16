@@ -1,0 +1,56 @@
+.sinai-reference-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-block: 0.625rem 1rem;
+  max-width: 100%;
+}
+
+.sinai-reference-card {
+  display: grid;
+  flex: 0 1 17rem;
+  width: 17rem;
+  max-width: 100%;
+  min-width: 0;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 0.875rem;
+  background: color-mix(in srgb, var(--color-fd-card) 96%, var(--sinai-role-accent) 4%);
+  cursor: zoom-in;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.sinai-reference-card:hover {
+  border-color: var(--sinai-role-accent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, var(--color-fd-card));
+}
+
+.sinai-reference-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-reference-card-image {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  background: var(--color-fd-muted);
+}
+
+.sinai-reference-card-image img {
+  display: block;
+  width: 100%;
+  height: 6.25rem;
+  margin: 0;
+  object-fit: contain;
+}
+
+.sinai-reference-card-caption {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 650;
+  line-height: 1.4;
+  text-align: center;
+}

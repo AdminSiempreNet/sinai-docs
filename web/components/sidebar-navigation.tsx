@@ -2,21 +2,8 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
-
-const ADMIN_SECTION_HREFS = [
-  '/docs/administrativo/primeros-pasos',
-  '/docs/administrativo/configuracion-institucional',
-  '/docs/administrativo/gestion-de-personal',
-  '/docs/administrativo/gestion-de-estudiantes',
-  '/docs/administrativo/registro-de-logros-y-calificaciones',
-  '/docs/administrativo/curriculo',
-  '/docs/administrativo/convivencia-escolar',
-  '/docs/administrativo/cierre-academico-periodo',
-  '/docs/administrativo/cierre-de-ano',
-  '/docs/administrativo/gestion-de-usuarios-y-permisos',
-  '/docs/administrativo/herramientas',
-  '/docs/administrativo/ayuda',
-] as const;
+import { ROLE_SECTIONS, SECTION_HREFS } from '@/lib/docs-navigation';
+import './sidebar-sections.css';
 
 export function SidebarHelp() {
   return (
@@ -58,8 +45,8 @@ export function SidebarMenuDecoration() {
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '');
 
-    const markAdminSectionTitles = (sidebar: HTMLElement) => {
-      const sectionHrefs = new Set<string>(ADMIN_SECTION_HREFS);
+    const markSectionTitles = (sidebar: HTMLElement) => {
+      const sectionHrefs = new Set<string>(SECTION_HREFS);
 
       sidebar.querySelectorAll<HTMLAnchorElement>('a[href]').forEach((link) => {
         const href = link.getAttribute('href') ?? '';
@@ -79,8 +66,8 @@ export function SidebarMenuDecoration() {
     };
 
     const markPrimaryFolders = (sidebar: HTMLElement) => {
-      if (activeRole === 'administrativo') {
-        markAdminSectionTitles(sidebar);
+      if (ROLE_SECTIONS[activeRole]) {
+        markSectionTitles(sidebar);
         return;
       }
 

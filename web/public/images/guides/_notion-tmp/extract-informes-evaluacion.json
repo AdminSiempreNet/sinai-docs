@@ -1,0 +1,32 @@
+{
+  "name": "Informes Evaluación Docente",
+  "lines": [
+    "Informes Evaluación Docente",
+    "TUTORIAL",
+    "La opción Informes permite a los docentes consultar y generar diferentes informes relacionados con la evaluación académica de los estudiantes. Esta funcionalidad facilita la revisión y descarga de información de acuerdo con los filtros seleccionados.",
+    "Ruta de acceso: Evaluación → Informes",
+    "Paso a paso",
+    "Ingrese al Módulo del Docente.",
+    "Diríjase al menú Evaluación.",
+    "Seleccione la opción Informes.",
+    "Seleccione el tipo de informe que desea consultar.",
+    "Complete los filtros solicitados por el sistema.",
+    "Generar y revisar el informe",
+    "Una vez diligenciados los filtros, genere la vista previa del informe.",
+    "Revise la información presentada para confirmar que los datos sean correctos.",
+    "Si encuentra alguna inconsistencia, verifique nuevamente los filtros seleccionados antes de continuar.",
+    "Descargar el informe",
+    "Cuando la opción de descarga esté disponible:",
+    "Haga clic en la opción Descargar.",
+    "Espere a que el sistema genere el archivo.",
+    "Guarde el informe en la ubicación deseada.",
+    "Importante: Revise el informe antes de compartirlo o entregarlo, especialmente cuando contenga información académica de los estudiantes."
+  ],
+  "images": [
+    { "file": "acceso-informes-evaluacion.png", "altHint": "Ruta de acceso Informes" },
+    { "file": "step-01.png", "altHint": "Filtros y tipo de informe" },
+    { "file": "step-02.png", "altHint": "Vista previa y descarga del informe" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

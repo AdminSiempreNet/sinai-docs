@@ -1,0 +1,10 @@
+{
+  "title": "Evaluación",
+  "description": "Consulte las planillas de calificaciones y las escalas de desempeño.",
+  "defaultOpen": false,
+  "pages": [
+    "planilla-de-nota-directa-en-desktop",
+    "planilla-general-de-calificaciones-en-desktop",
+    "donde-visualizar-las-escalas-de-desempeno-en-desktop"
+  ]
+}

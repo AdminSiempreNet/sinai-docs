@@ -1,3 +1,4 @@
+import { ROLE_SECTIONS } from '@/lib/docs-navigation';
 import { docs } from '@/.source/server';
 import { loader } from 'fumadocs-core/source';
 import { createElement } from 'react';
@@ -154,50 +155,17 @@ for (const meta of docs.meta) {
   }
 }
 
-const ADMIN_SECTION_BY_NAME: Record<string, string> = {
-  'Primeros pasos': '/docs/administrativo/primeros-pasos',
-  'Configuración Institucional': '/docs/administrativo/configuracion-institucional',
-  'Gestión de personal': '/docs/administrativo/gestion-de-personal',
-  'Gestión de estudiantes': '/docs/administrativo/gestion-de-estudiantes',
-  'Registro de logros y calificaciones':
-    '/docs/administrativo/registro-de-logros-y-calificaciones',
-  Currículo: '/docs/administrativo/curriculo',
-  'Convivencia escolar': '/docs/administrativo/convivencia-escolar',
-  'Cierre académico (periodo)': '/docs/administrativo/cierre-academico-periodo',
-  'Cierre de año': '/docs/administrativo/cierre-de-ano',
-  'Gestión de usuarios y permisos':
-    '/docs/administrativo/gestion-de-usuarios-y-permisos',
-  Herramientas: '/docs/administrativo/herramientas',
-  Ayuda: '/docs/administrativo/ayuda',
-};
-
-const ADMIN_SECTION_LANDINGS = new Set(Object.values(ADMIN_SECTION_BY_NAME));
-
 export const source = loader({
   baseUrl: '/docs',
   source: docs.toFumadocsSource(),
   pageTree: {
     transformers: [
       {
-        // Separador Fumadocs → enlace al aterrizaje (se estiliza como título de grupo).
-        separator(node) {
-          const label = typeof node.name === 'string' ? node.name : '';
-          const url = ADMIN_SECTION_BY_NAME[label];
-          if (!url) return node;
-
-          return {
-            type: 'page' as const,
-            name: node.name,
-            url,
-            $id: node.$id,
-          };
-        },
         folder(node, folderPath) {
-          const normalized = folderPath.replaceAll('\\', '/');
-          const isAdminRoot =
-            normalized.endsWith('/administrativo') || folderPath === 'administrativo';
-
-          if (!isAdminRoot) return node;
+          const role = folderPath.replaceAll('\\', '/').split('/').filter(Boolean).at(-1) ?? '';
+          const sections = ROLE_SECTIONS[role];
+          if (!sections) return node;
+          const sectionLandings = new Set(Object.values(sections));
 
           // `...folder` inserta también el index: queda 1 duplicado por sección.
           // Conservamos el primero (viene del separador) y descartamos el resto.
@@ -224,6 +192,11 @@ export const source = loader({
           return {
             ...node,
             children: node.children
+              .map((child): typeof node.children[number] => {
+                if (child.type !== 'separator' || typeof child.name !== 'string') return child;
+                const url = sections[child.name];
+                return url ? { type: 'page', name: child.name, url, $id: child.$id } : child;
+              })
               .filter((child) => {
                 const url = 'url' in child && child.url ? String(child.url) : '';
                 const name = 'name' in child && child.name ? String(child.name) : '';
@@ -232,7 +205,7 @@ export const source = loader({
                   return false;
                 }
 
-                if (child.type === 'page' && ADMIN_SECTION_LANDINGS.has(url)) {
+                if (child.type === 'page' && sectionLandings.has(url)) {
                   if (seenLandings.has(url)) return false;
                   seenLandings.add(url);
                 }

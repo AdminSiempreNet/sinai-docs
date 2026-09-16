@@ -3,7 +3,6 @@
 import { Text } from 'lucide-react';
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { GuideAsideArt } from '@/components/guide-aside-art';
 
 type GuideTocItem = {
   title: ReactNode;
@@ -63,11 +62,8 @@ function resolveVisibleToc(toc: GuideTocItem[]): GuideTocItem[] {
 
 export function GuideToc({
   toc,
-  emptyArt = false,
 }: {
   toc: GuideTocItem[];
-  /** When the outline is empty, show a thematic illustration instead of a blank column. */
-  emptyArt?: boolean;
 }) {
   const listRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
@@ -172,12 +168,8 @@ export function GuideToc({
     return () => observer.disconnect();
   }, []);
 
-  if (visibleToc === null) {
-    return emptyArt ? <GuideAsideArt /> : null;
-  }
-
-  if (items.length === 0) {
-    return emptyArt ? <GuideAsideArt /> : null;
+  if (visibleToc === null || items.length === 0) {
+    return null;
   }
 
   const activeRootIndex = activeIndex === -1

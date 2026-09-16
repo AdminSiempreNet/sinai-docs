@@ -1,0 +1,37 @@
+{
+  "name": "Mi Horario",
+  "lines": [
+    "Mi Horario",
+    "TUTORIAL",
+    "La opción Mi Horario permite al docente configurar su horario de clases en la plataforma SINAI. Esta funcionalidad facilita el registro de inasistencias por día y permite comparar las horas asignadas con las horas registradas.",
+    "Ruta de acceso: Docente → Mi horario",
+    "Importante: Antes de configurar el horario, verifique que la jornada, los grupos, las asignaturas y las horas seleccionadas correspondan a la asignación académica del docente.",
+    "Paso a paso",
+    "Configurar la clase",
+    "Para agregar una clase al horario:",
+    "Seleccione la Jornada correspondiente.",
+    "Seleccione los grupos que desea agregar.",
+    "Seleccione la Asignatura.",
+    "En la cuadrícula del horario, marque las horas y los días de la semana en los que se desarrolla la clase.",
+    "Una vez configurada la clase, haga clic en Agregar.",
+    "Revise que la clase haya sido incluida correctamente en el horario.",
+    "Repita el procedimiento para las demás asignaturas, grupos y horarios que correspondan.",
+    "Verificar el horario",
+    "Una vez agregadas las clases, revise la información registrada en el horario.",
+    "También podrá consultar los Totales por asignatura, donde se muestran datos como:",
+    "Horas semanales: horas que corresponden a la asignatura.",
+    "Horas registradas: horas configuradas en el horario.",
+    "Diferencia: permite identificar si existe alguna diferencia entre las horas asignadas y las horas registradas.",
+    "Importante: Verifique especialmente las horas semanales y la diferencia mostrada para cada asignatura, con el fin de garantizar que el horario corresponda a la asignación académica.",
+    "Descargar el horario",
+    "Si necesita conservar o consultar el horario fuera de la plataforma, utilice la opción Descargar disponible en la pantalla."
+  ],
+  "images": [
+    { "file": "acceso-mi-horario.png", "altHint": "Ruta de acceso Mi horario" },
+    { "file": "step-01.png", "altHint": "Configurar clase en el horario" },
+    { "file": "step-02.png", "altHint": "Totales por asignatura" },
+    { "file": "step-03.png", "altHint": "Descargar el horario" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

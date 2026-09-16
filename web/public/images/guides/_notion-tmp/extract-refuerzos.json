@@ -1,0 +1,40 @@
+{
+  "name": "Refuerzos",
+  "lines": [
+    "Registro de Refuerzos o Recuperaciones",
+    "TUTORIAL",
+    "La opción Refuerzos permite registrar las calificaciones obtenidas por los estudiantes que requieren recuperación o refuerzo académico.",
+    "Esta funcionalidad está disponible tanto en el Módulo del Docente como en el Módulo Administrativo y permite consultar los estudiantes con desempeño bajo, registrar la nota de recuperación y obtener la calificación definitiva de acuerdo con la configuración establecida por la institución.",
+    "Ruta de acceso: Evaluación → Refuerzos",
+    "Paso a paso",
+    "Ingresar a Refuerzos",
+    "Ingrese al Módulo del Docente, según los permisos asignados.",
+    "Diríjase al menú Evaluación.",
+    "Seleccione la opción Refuerzos.",
+    "Seleccione el Grupo.",
+    "Seleccione el Periodo.",
+    "Seleccione la Asignatura.",
+    "Ubique al estudiante en la lista.",
+    "Registre en la casilla correspondiente la nota obtenida en el refuerzo o recuperación.",
+    "Verifique que la calificación ingresada sea correcta.",
+    "Haga clic en Guardar.",
+    "Una vez registrada la nota, SINAI calculará automáticamente la nota definitiva, de acuerdo con el método de recuperación establecido por la institución.",
+    "Generar las actas de recuperación",
+    "Después de registrar las notas de recuperación, se pueden generar las actas de recuperación o refuerzo correspondientes a los estudiantes que realizaron este proceso.",
+    "Para generar el acta:",
+    "Ingrese a la opción correspondiente a Actas dentro del proceso de recuperación.",
+    "Seleccione los criterios solicitados, como grupo, periodo y asignatura, según corresponda.",
+    "Genere el acta de recuperación.",
+    "Revise la información presentada en el documento.",
+    "Verifique que los estudiantes, calificaciones y resultados sean correctos.",
+    "Descargue o genere el acta para su respectivo trámite institucional."
+  ],
+  "images": [
+    { "file": "acceso-refuerzos.png", "altHint": "Ruta de acceso Refuerzos" },
+    { "file": "step-01.png", "altHint": "Lista de estudiantes para refuerzo" },
+    { "file": "step-02.png", "altHint": "Registrar nota de refuerzo" },
+    { "file": "step-03.png", "altHint": "Generar actas de recuperación" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

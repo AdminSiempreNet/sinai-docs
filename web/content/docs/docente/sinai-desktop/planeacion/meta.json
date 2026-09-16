@@ -1,0 +1,11 @@
+{
+  "title": "Planeación",
+  "description": "Gestione actividades y descriptores desde SINAI Desktop.",
+  "defaultOpen": false,
+  "pages": [
+    "generar-actividades-en-desktop",
+    "dimensiones-y-actividades-predeterminadas-en-desktop",
+    "descriptores-por-estudiante-en-desktop",
+    "descriptores-por-grupo-en-desktop"
+  ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/donde-visualizar-las-escalas-de-desempeno-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/evaluacion/donde-visualizar-las-escalas-de-desempeno-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/planilla-de-nota-directa-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/evaluacion/planilla-de-nota-directa-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/planilla-general-de-calificaciones-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/evaluacion/planilla-general-de-calificaciones-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/como-enviar-los-datos-a-sinai-en-linea-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/herramientas-y-sincronizacion/como-enviar-los-datos-a-sinai-en-linea-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/como-sincronizar-los-datos-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/herramientas-y-sincronizacion/como-sincronizar-los-datos-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/herramientas-desktop/generalidades-del-menu-herramientas-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/herramientas-y-sincronizacion/generalidades-del-menu-herramientas-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/asignacion-academica-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/asignacion-academica-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-descargar-e-instalar",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/como-descargar-e-instalar",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-descargar-planillas-de-listados-e-inasistencias-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/como-descargar-planillas-de-listados-e-inasistencias-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-iniciar-sesion-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/como-iniciar-sesion-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-puedo-cambiar-de-institucion-educativa-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/como-puedo-cambiar-de-institucion-educativa-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/como-revisar-mis-autorizaciones-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/como-revisar-mis-autorizaciones-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/inicio-desktop/listados-de-estudiantes-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/inicio-y-configuracion/listados-de-estudiantes-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/descriptores-por-estudiante-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/planeacion/descriptores-por-estudiante-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/descriptores-por-grupo-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/planeacion/descriptores-por-grupo-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/dimensiones-y-actividades-predeterminadas-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/planeacion/dimensiones-y-actividades-predeterminadas-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/planeacion-desktop/generar-actividades-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/planeacion/generar-actividades-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/seguimiento-desktop/como-registrar-inasistencias-en-desktop",
+    "destination": "/docs/docente/sinai-desktop/asistencia/como-registrar-inasistencias-en-desktop",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/docente/actividades-complementarias-docente/d-actividades-complementarias",
+    "destination": "/docs/docente/mi-labor-docente/actividades-complementarias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/docente/buscar-estudiante",
+    "destination": "/docs/docente/estudiantes/buscar-estudiante",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/docente/diario-pedagogico-docente/d-diario-pedagogico",
+    "destination": "/docs/docente/mi-labor-docente/diario-pedagogico",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/docente/mi-horario/mi-horario",
+    "destination": "/docs/docente/mi-labor-docente/mi-horario",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/estudiantes/cargar-fotografias/d-cargar-fotografias",
+    "destination": "/docs/docente/estudiantes/cargar-fotografias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/estudiantes/estudiantes-piar/d-estudiantes-piar",
+    "destination": "/docs/docente/estudiantes/estudiantes-piar",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/estudiantes/lista-por-grupo/lista-por-grupos",
+    "destination": "/docs/docente/estudiantes/listas-por-grupo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/estudiantes/tareas-en-linea-estudiantes/d-tareas-en-linea",
+    "destination": "/docs/docente/aula-virtual/tareas-en-linea",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/ajuste-de-nota-final-evaluacion-capacitacion-documentada/d-ajuste-de-nota-final",
+    "destination": "/docs/docente/cierre-de-ano/ajuste-de-nota-final",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/calificacion-definitiva-directa",
+    "destination": "/docs/docente/registro-de-calificaciones/calificacion-definitiva-directa",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/d-cuadro-de-honor",
+    "destination": "/docs/docente/cierre-academico-periodo/cuadro-de-honor",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/d-planilla-de-calificaciones-excel",
+    "destination": "/docs/docente/registro-de-calificaciones/planilla-excel",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/registro-de-calificaciones-en-linea",
+    "destination": "/docs/docente/registro-de-calificaciones/registro-en-linea",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/comportamiento-evaluacion-capacitacion-documentada/evaluacion-del-comportamiento",
+    "destination": "/docs/docente/convivencia-y-observador/evaluacion-del-comportamiento",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/detallado-individual-evaluacion-capacitacion-documentada/d-detallado-individual",
+    "destination": "/docs/docente/registro-de-calificaciones/detallado-individual",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/informes-evaluacion-d/d-informes-evaluacion",
+    "destination": "/docs/docente/cierre-academico-periodo/informes-de-evaluacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/notas-finales-evaluacion-capacitacion-documentada/d-notas-finales",
+    "destination": "/docs/docente/cierre-de-ano/notas-finales",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/observaciones/observaciones",
+    "destination": "/docs/docente/cierre-academico-periodo/observaciones",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/recuperaciones-finales/recuperaciones-finales",
+    "destination": "/docs/docente/cierre-de-ano/recuperaciones-finales",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/refuerzos-evaluacion-capacitacion-documentada/d-refuerzos",
+    "destination": "/docs/docente/cierre-academico-periodo/refuerzos",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/caracterizacio/caracterizacion",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/caracterizacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/informes-ficha-observador-capacitacion-documentada/informes-ficha-observado",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/informes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/nueva-version-ficha-observador/nueva-version-ficha-observador-2",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/nueva-version",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/registro-de-seguimiento/d-registro-de-seguimiento",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/registro-de-seguimiento",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/valoracion/valoracion-por-grupo-e-individual",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/valoracion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/general/back-up/back-up",
+    "destination": "/docs/docente/herramientas/copia-de-seguridad",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/general/inconsistencia/inconsistencias-2",
+    "destination": "/docs/docente/herramientas/inconsistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/general/mi-asignacion/mi-asignacion",
+    "destination": "/docs/docente/mi-labor-docente/mi-asignacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/aula-virtual-chamilo/aula-virtual-chamilo",
+    "destination": "/docs/docente/aula-virtual/chamilo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/gestion-de-reuniones-herramientas-capacitacion-documentada/d-gestion-de-reuniones",
+    "destination": "/docs/docente/herramientas/reuniones",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/gestion-de-usuarios-chamilo/gestion-de-usuarios-chamilo",
+    "destination": "/docs/docente/aula-virtual/gestion-de-usuarios",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/informes-digitales-herramientas-capacitacion-documentada/d-informes-digitales",
+    "destination": "/docs/docente/herramientas/informes-digitales",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/informes-herramienta-d/informes-herramientas",
+    "destination": "/docs/docente/herramientas/informes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/mallas-curriculares/mallas-curriculares",
+    "destination": "/docs/docente/planeacion-y-curriculo/mallas-curriculares/consultar-y-descargar",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/notas-aula-virtual/notas-aula-virtual",
+    "destination": "/docs/docente/aula-virtual/notas",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/inicio/autoevaluacion-2",
+    "destination": "/docs/docente/herramientas/autoevaluacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/inicio/como-actualizar-foto-de-perfil",
+    "destination": "/docs/docente/primeros-pasos/actualizar-perfil",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/inicio/como-ingresar-a-sinai",
+    "destination": "/docs/docente/primeros-pasos/ingresar-a-sinai",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/inicio/d-mensajes",
+    "destination": "/docs/docente/herramientas/mensajes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/inicio/d-recuperar-contrasena",
+    "destination": "/docs/docente/primeros-pasos/recuperar-contrasena",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/actividades-del-periodo/actividades-del-periodo",
+    "destination": "/docs/docente/planeacion-y-curriculo/actividades-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/banco-de-logros-planeacion-capacitacion-documentada/d-banco-de-logros",
+    "destination": "/docs/docente/planeacion-y-curriculo/banco-de-logros",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/copiar-actividades/copiar-actividades",
+    "destination": "/docs/docente/planeacion-y-curriculo/copiar-planeacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/estandares-planeacion-capacitacion-documentada/d-estandares",
+    "destination": "/docs/docente/planeacion-y-curriculo/estandares",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/planeacion-curricular-planeacion-capacitacion-documentada/curriculo-adjunto",
+    "destination": "/docs/docente/planeacion-y-curriculo/planeacion-de-clases",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/planeacion-curricular-planeacion-capacitacion-documentada/curriculo-estandar",
+    "destination": "/docs/docente/planeacion-y-curriculo/mallas-curriculares/crear-y-organizar",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/e-anotaciones/registro-de-anotaciones",
+    "destination": "/docs/docente/convivencia-y-observador/anotaciones",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/excusas-seguimiento-capacitacion-documentada/d-excusas",
+    "destination": "/docs/docente/asistencia-y-seguimiento/excusas",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/consultar-o-modificar-inasistencia",
+    "destination": "/docs/docente/asistencia-y-seguimiento/inasistencias/consultar-o-modificar",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/d-registro-consolidado-de-inasistencias",
+    "destination": "/docs/docente/asistencia-y-seguimiento/inasistencias/consolidado",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/registro-de-inasistencia-por-dia",
+    "destination": "/docs/docente/asistencia-y-seguimiento/inasistencias/registro-por-dia",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/registro-detallado-de-inasistencias",
+    "destination": "/docs/docente/asistencia-y-seguimiento/inasistencias/registro-detallado",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-actividades-2",
+    "destination": "/docs/docente/planeacion-y-curriculo/actividades-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-calificaciones-en-linea-2",
+    "destination": "/docs/docente/registro-de-calificaciones/registro-en-linea",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/evaluacion-pt/registro-de-calificaciones-en-linea-3",
+    "destination": "/docs/docente/registro-de-calificaciones/registro-en-linea",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/gestion-de-logros-planeacion-procesos-de-temporada/d-logros-periodo",
+    "destination": "/docs/docente/planeacion-y-curriculo/logros-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/planeacion-de-clases",
+    "destination": "/docs/docente/planeacion-y-curriculo/planeacion-de-clases",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/planeacion-o-asignacion-de-desempenos-al-periodo",
+    "destination": "/docs/docente/planeacion-y-curriculo/logros-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/registro-de-actividades",
+    "destination": "/docs/docente/planeacion-y-curriculo/actividades-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/registro-de-desempenos-logros",
+    "destination": "/docs/docente/planeacion-y-curriculo/registro-de-desempenos",
+    "permanent": true
+  }
+]

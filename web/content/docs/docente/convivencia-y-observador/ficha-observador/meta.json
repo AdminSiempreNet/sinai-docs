@@ -1,0 +1,12 @@
+{
+  "title": "Ficha observador",
+  "description": "Consulte la caracterización, valoración y seguimiento del estudiante.",
+  "defaultOpen": false,
+  "pages": [
+    "nueva-version",
+    "caracterizacion",
+    "valoracion",
+    "registro-de-seguimiento",
+    "informes"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Evaluación del Comportamiento",
+  "lines": [
+    "Evaluación del Comportamiento",
+    "TUTORIAL",
+    "La opción Comportamiento permite a los docentes realizar la evaluación del comportamiento o convivencia escolar de los estudiantes desde el Módulo del Docente.",
+    "Esta funcionalidad permite registrar la valoración de acuerdo con los descriptores y parámetros definidos previamente por cada institución educativa.",
+    "Ruta de acceso: Evaluación → Comportamiento",
+    "Importante: La configuración de esta funcionalidad puede variar entre instituciones. El número de columnas disponibles para registrar descriptores puede ser de hasta 10, y la institución puede definir si se habilita el registro de observaciones y si la valoración se realiza de forma numérica o por desempeño.",
+    "Paso a paso",
+    "Ingresar a la evaluación del comportamiento",
+    "Al ingresar, el sistema mostrará la información correspondiente a los estudiantes y los campos habilitados para realizar la evaluación, de acuerdo con la configuración establecida por la institución.",
+    "Ubique el grupo y los estudiantes que desea evaluar.",
+    "Registre la valoración correspondiente en los campos disponibles.",
+    "Seleccione los descriptores que correspondan al comportamiento o convivencia del estudiante, según los criterios definidos por la institución.",
+    "Registre una observación, cuando esta opción se encuentre habilitada y sea necesario complementar la valoración.",
+    "Revise la información registrada.",
+    "Guarde los cambios realizados.",
+    "Modelos de selección de descriptores",
+    "La institución puede configurar uno de los siguientes modelos para la selección de los descriptores: Descriptores por director de grupo y Descriptores por institución",
+    "Descriptores por director de grupo",
+    "Este modelo permite que cada director de grupo pueda realizar ajustes a la lista de descriptores de comportamiento que serán utilizados para evaluar a los estudiantes de su grupo.",
+    "Descriptores por institución",
+    "En este modelo, la lista de descriptores es definida de manera general para la institución y se utiliza para los diferentes grados.",
+    "Los docentes no pueden modificar estos descriptores. Los ajustes deben ser realizados por los usuarios administrativos desde la opción Logros Comportamiento, ubicada en:",
+    "Planeación → Logros Comportamiento"
+  ],
+  "images": [
+    { "file": "acceso-comportamiento.png", "altHint": "Ruta de acceso Comportamiento" },
+    { "file": "step-01.png", "altHint": "Planilla de evaluación del comportamiento" },
+    { "file": "step-02.png", "altHint": "Modelos de descriptores" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

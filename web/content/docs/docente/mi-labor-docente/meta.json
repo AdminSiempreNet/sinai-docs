@@ -1,0 +1,11 @@
+{
+  "title": "Mi labor docente",
+  "description": "Consulte su asignación y horario, y documente su labor pedagógica.",
+  "defaultOpen": false,
+  "pages": [
+    "mi-asignacion",
+    "mi-horario",
+    "diario-pedagogico",
+    "actividades-complementarias"
+  ]
+}

@@ -1,6 +1,8 @@
 'use client';
 
-import { ChevronLeft, ChevronRight, ImageIcon, Images, X } from 'lucide-react';
+import './content-image.css';
+
+import { ChevronLeft, ChevronRight, Images, X } from 'lucide-react';
 import type { ComponentProps, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
@@ -11,27 +13,14 @@ type ImageSequenceItem = {
 
 export type ImageTriggerVariant = 'default' | 'contextual' | 'microchip' | 'reference';
 
-function triggerClassName(variant: ImageTriggerVariant, compact: boolean) {
-  // La misma referencia visual se utiliza en todas las guías. `compact` se
-  // conserva por compatibilidad con el contenido existente, sin alterar el
-  // patrón visual seleccionado.
-  void compact;
-  const selectedVariant = variant === 'default' ? 'reference' : variant;
-  return `sinai-example-trigger sinai-example-trigger-${selectedVariant} not-prose inline-flex items-center gap-2 text-sm font-semibold focus-visible:outline-none`;
-}
-
-function ExamplePreview({ images }: { images: ImageSequenceItem[] }) {
+function ExamplePreview({ image, caption = 'Vista previa' }: { image: ImageSequenceItem; caption?: string }) {
   return (
-    <span className="sinai-example-preview" aria-hidden="true">
-      <span className="sinai-example-preview-images">
-        {images.slice(0, 2).map((image) => (
-          <img key={image.src} src={image.src} alt="" data-image-modal-managed />
-        ))}
+    <>
+      <span className="sinai-reference-card-image">
+        <img src={image.src} alt="" loading="lazy" data-image-modal-managed />
       </span>
-      <span className="sinai-example-preview-caption">
-        {images.length === 1 ? 'Vista previa' : `${images.length} ejemplos disponibles`}
-      </span>
-    </span>
+      <span className="sinai-reference-card-caption">{caption}</span>
+    </>
   );
 }
 
@@ -133,9 +122,6 @@ export function ContentImage({ alt = '', className, onClick, onKeyDown, src, ...
 export function ContentImageTrigger({
   src,
   alt,
-  children: _children,
-  compact = false,
-  variant = 'default',
 }: {
   src: string;
   alt: string;
@@ -162,17 +148,17 @@ export function ContentImageTrigger({
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => setOpen(true)}
-        className={triggerClassName(variant, compact)}
-        aria-label={`Ver referencia visual: ${alt}`}
-      >
-        <ImageIcon className="size-4 text-fd-primary" aria-hidden="true" />
-        <span className="sinai-example-trigger-reference-label">Referencia visual</span>
-        <ExamplePreview images={[{ src, alt }]} />
-      </button>
+      <span className="sinai-reference-cards not-prose">
+        <button
+          ref={triggerRef}
+          type="button"
+          onClick={() => setOpen(true)}
+          className="sinai-reference-card"
+          aria-label={`Ver referencia visual: ${alt}`}
+        >
+          <ExamplePreview image={{ src, alt }} />
+        </button>
+      </span>
       {open && <ImageDialog src={src} alt={alt} onClose={closeModal} />}
     </>
   );
@@ -180,9 +166,6 @@ export function ContentImageTrigger({
 
 export function ContentImageSequenceTrigger({
   images,
-  children: _children,
-  compact = false,
-  variant = 'default',
 }: {
   images: ImageSequenceItem[];
   children?: ReactNode;
@@ -218,20 +201,23 @@ export function ContentImageSequenceTrigger({
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => {
-          setActiveIndex(0);
-          setOpen(true);
-        }}
-        className={triggerClassName(variant, compact)}
-        aria-label={`Ver referencia visual: ${total} ${total === 1 ? 'captura' : 'capturas'}`}
-      >
-        <Images className="size-4 text-fd-primary" aria-hidden="true" />
-        <span className="sinai-example-trigger-reference-label">Referencia visual</span>
-        <ExamplePreview images={images} />
-      </button>
+      <span className="sinai-reference-cards not-prose">
+        {images.map((image, index) => (
+          <button
+            key={`${image.src}-${index}`}
+            type="button"
+            onClick={(event) => {
+              triggerRef.current = event.currentTarget;
+              setActiveIndex(index);
+              setOpen(true);
+            }}
+            className="sinai-reference-card"
+            aria-label={`Ver referencia visual ${index + 1} de ${total}: ${image.alt}`}
+          >
+            <ExamplePreview image={image} caption={total > 1 ? `Vista previa ${index + 1} de ${total}` : 'Vista previa'} />
+          </button>
+        ))}
+      </span>
 
       {open && (
         <div

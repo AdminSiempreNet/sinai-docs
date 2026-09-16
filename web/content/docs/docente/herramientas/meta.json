@@ -1,0 +1,14 @@
+{
+  "title": "Herramientas",
+  "description": "Consulte mensajes, reuniones, informes y utilidades de apoyo.",
+  "defaultOpen": false,
+  "pages": [
+    "mensajes",
+    "reuniones",
+    "autoevaluacion",
+    "informes-digitales",
+    "informes",
+    "copia-de-seguridad",
+    "inconsistencias"
+  ]
+}
