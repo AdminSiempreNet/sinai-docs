@@ -1,0 +1,10 @@
+{
+  "title": "Convivencia y observador",
+  "description": "Documente el comportamiento, las anotaciones y el seguimiento del estudiante.",
+  "defaultOpen": false,
+  "pages": [
+    "anotaciones",
+    "evaluacion-del-comportamiento",
+    "ficha-observador"
+  ]
+}

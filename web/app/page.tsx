@@ -12,6 +12,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
+import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
 import { SinaiThemeSwitch } from '@/components/sinai-theme-switch';
 import { buttonVariants } from '@/components/ui/button';
@@ -87,6 +88,7 @@ export default function Home() {
                 Ir a SINAI <ArrowUpRight aria-hidden="true" />
               </a>
             </nav>
+            <SinaiFontSizeSwitch className="sinai-welcome-font-size-switch" />
             <SinaiThemeSwitch className="sinai-welcome-theme-switch" />
           </div>
         </header>
@@ -131,15 +133,24 @@ export default function Home() {
 
           <figure className="sinai-welcome-banner">
             <Image
-              src="/images/home/sinai-knowledge-route.png"
-              alt="Ilustración abstracta de una guía abierta y rutas de conocimiento conectadas"
+              src="/images/home/sinai-knowledge-base-light.png"
+              alt="Base de conocimiento SINAI: isologo oficial y rutas de consulta del centro de ayuda"
               fill
               priority
               sizes="(max-width: 900px) 100vw, 42vw"
+              className="sinai-welcome-banner-image sinai-welcome-banner-image-light"
+            />
+            <Image
+              src="/images/home/sinai-knowledge-base.png"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className="sinai-welcome-banner-image sinai-welcome-banner-image-dark"
             />
             <figcaption>
-              <span>Una ruta para avanzar</span>
-              <strong>Perfil <i /> proceso <i /> guía</strong>
+              <span>Base de conocimiento</span>
+              <strong>Guías <i /> roles <i /> soporte</strong>
             </figcaption>
           </figure>
         </section>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1050" viewBox="0 0 1400 1050">
+  <rect width="1400" height="1050" fill="#f7f9fd"/>
+  <rect x="70" y="55" width="1260" height="940" rx="26" fill="#fff" stroke="#dce4f0" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="120" y="125" fill="#172033" font-size="34" font-weight="700">Referencias visuales en la guía</text>
+    <text x="120" y="168" fill="#64748b" font-size="22">Tres alternativas compactas para abrir una o varias capturas.</text>
+    <line x1="70" y1="205" x2="1330" y2="205" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="120" y="270" fill="#4976ff" font-size="19" font-weight="700" letter-spacing="2">OPCIÓN 1</text>
+    <text x="120" y="306" fill="#172033" font-size="26" font-weight="700">Enlace contextual</text>
+    <rect x="120" y="327" width="150" height="29" rx="15" fill="#eef3ff"/>
+    <text x="135" y="348" fill="#4976ff" font-size="15" font-weight="700" letter-spacing="1">RECOMENDADA</text>
+    <text x="400" y="270" fill="#172033" font-size="26">Seleccione </text><text x="530" y="270" fill="#172033" font-size="26" font-weight="700">Autoevaluación</text><text x="715" y="270" fill="#172033" font-size="26"> en el menú superior.</text>
+    <rect x="400" y="302" width="35" height="35" rx="8" fill="#eef3ff"/><rect x="410" y="312" width="15" height="15" rx="2" fill="none" stroke="#4976ff" stroke-width="2"/><circle cx="416" cy="317" r="2" fill="#4976ff"/><path d="M411 325l5-5 8 8" fill="none" stroke="#4976ff" stroke-width="2"/>
+    <text x="448" y="327" fill="#4976ff" font-size="26" font-weight="700">Ver ejemplos</text><text x="637" y="327" fill="#64748b" font-size="26">· 3 capturas</text>
+    <line x1="70" y1="390" x2="1330" y2="390" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="120" y="455" fill="#4976ff" font-size="19" font-weight="700" letter-spacing="2">OPCIÓN 2</text>
+    <text x="120" y="491" fill="#172033" font-size="26" font-weight="700">Microchip</text>
+    <text x="400" y="455" fill="#172033" font-size="26">Seleccione </text><text x="530" y="455" fill="#172033" font-size="26" font-weight="700">Autoevaluación</text><text x="715" y="455" fill="#172033" font-size="26"> en el menú superior.</text>
+    <rect x="400" y="487" width="235" height="50" rx="12" fill="#eef3ff" stroke="#bed0ff" stroke-width="2"/><rect x="415" y="498" width="26" height="26" rx="6" fill="#dce7ff"/><text x="452" y="520" fill="#315fdb" font-size="22" font-weight="700">▧  Ver ejemplos</text><text x="585" y="520" fill="#64748b" font-size="22">(3)</text>
+    <line x1="70" y1="580" x2="1330" y2="580" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="120" y="645" fill="#4976ff" font-size="19" font-weight="700" letter-spacing="2">OPCIÓN 3</text>
+    <text x="120" y="681" fill="#172033" font-size="26" font-weight="700">Nota de referencia</text>
+    <text x="400" y="645" fill="#172033" font-size="26">Seleccione </text><text x="530" y="645" fill="#172033" font-size="26" font-weight="700">Autoevaluación</text><text x="715" y="645" fill="#172033" font-size="26"> en el menú superior.</text>
+    <rect x="400" y="677" width="5" height="40" rx="2.5" fill="#4976ff"/><text x="425" y="704" fill="#64748b" font-size="22">▧  Referencia visual  ·  </text><text x="654" y="704" fill="#4976ff" font-size="22" font-weight="700">Ver 3 capturas</text>
+    <rect x="120" y="785" width="1160" height="138" rx="16" fill="#f8faff" stroke="#dce7ff" stroke-width="2"/><circle cx="162" cy="832" r="19" fill="#4976ff"/><text x="157" y="841" fill="#fff" font-size="24" font-weight="700">i</text><text x="200" y="827" fill="#172033" font-size="26" font-weight="700">Cómo se verán las capturas</text><text x="200" y="867" fill="#64748b" font-size="22">Al seleccionar cualquiera de estas referencias se abrirá el mismo modal con las capturas, títulos y navegación.</text>
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+{
+  "guides": [
+    {
+      "name": "Planilla Excel",
+      "notionId": "3c05ac55-fec1-807f-8289-e30f656724cf",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-evaluacion-capacitacion-documentada/d-planilla-de-calificaciones-excel.mdx",
+      "imageDir": "web/public/images/guides/planilla-excel"
+    },
+    {
+      "name": "Detallado Individual",
+      "notionId": "3c05ac55-fec1-8083-b2d9-e3d7298b499e",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/detallado-individual-evaluacion-capacitacion-documentada/d-detallado-individual.mdx",
+      "imageDir": "web/public/images/guides/detallado-individual"
+    },
+    {
+      "name": "Ajuste a la Nota Final",
+      "notionId": "3c15ac55-fec1-800e-b682-f71b25464220",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/ajuste-de-nota-final-evaluacion-capacitacion-documentada/d-ajuste-de-nota-final.mdx",
+      "imageDir": "web/public/images/guides/docente-ajuste-nota-final"
+    },
+    {
+      "name": "Informes Evaluación Docente",
+      "notionId": "3c15ac55-fec1-8075-9b0f-d5d7f4b4201a",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/informes-evaluacion-d/d-informes-evaluacion.mdx",
+      "imageDir": "web/public/images/guides/informes-evaluacion"
+    },
+    {
+      "name": "Observaciones",
+      "notionId": "3c15ac55-fec1-80c7-a88d-cdd4cac9b0aa",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/observaciones/observaciones.mdx",
+      "imageDir": "web/public/images/guides/observaciones"
+    },
+    {
+      "name": "Refuerzos",
+      "notionId": "3c15ac55-fec1-80ba-913b-c0cdab4cf28a",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/refuerzos-evaluacion-capacitacion-documentada/d-refuerzos.mdx",
+      "imageDir": "web/public/images/guides/refuerzos"
+    },
+    {
+      "name": "Notas Finales",
+      "notionId": "3c15ac55-fec1-80d7-b042-dd555d191dbf",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/notas-finales-evaluacion-capacitacion-documentada/d-notas-finales.mdx",
+      "imageDir": "web/public/images/guides/docente-notas-finales"
+    },
+    {
+      "name": "Evaluación del Comportamiento",
+      "notionId": "3c25ac55-fec1-80cc-879c-e9a8cc153e57",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/comportamiento-evaluacion-capacitacion-documentada/evaluacion-del-comportamiento.mdx",
+      "imageDir": "web/public/images/guides/comportamiento"
+    },
+    {
+      "name": "Mi Horario",
+      "notionId": "3c25ac55-fec1-80d4-b441-de35e469bd5d",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/docente/mi-horario/mi-horario.mdx",
+      "imageDir": "web/public/images/guides/docente-mi-horario"
+    },
+    {
+      "name": "Actividades Complementarias",
+      "notionId": "3c25ac55-fec1-8015-b8eb-fcde0eb321da",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/docente/actividades-complementarias-docente/d-actividades-complementarias.mdx",
+      "imageDir": "web/public/images/guides/docente-actividades-complementarias"
+    },
+    {
+      "name": "Diario Pedagógico",
+      "notionId": "3c25ac55-fec1-8026-be88-fe47f191d9b5",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/docente/diario-pedagogico-docente/d-diario-pedagogico.mdx",
+      "imageDir": "web/public/images/guides/docente-diario-pedagogico"
+    },
+    {
+      "name": "Buscar Estudiantes",
+      "notionId": "3c35ac55-fec1-8029-83d7-db53ec599b68",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/docente/buscar-estudiante.mdx",
+      "imageDir": "web/public/images/guides/buscar-estudiante"
+    },
+    {
+      "name": "Estándares",
+      "notionId": "3c35ac55-fec1-8092-a062-e19e883bd83c",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/estandares-planeacion-capacitacion-documentada/d-estandares.mdx",
+      "imageDir": "web/public/images/guides/estandares"
+    },
+    {
+      "name": "Banco de Logros",
+      "notionId": "3c35ac55-fec1-80f7-bd2a-ed17da232510",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/banco-de-logros-planeacion-capacitacion-documentada/d-banco-de-logros.mdx",
+      "imageDir": "web/public/images/guides/banco-de-logros"
+    },
+    {
+      "name": "Actividades del Período",
+      "notionId": "3c35ac55-fec1-805a-9f35-f736cab4038b",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/actividades-del-periodo/actividades-del-periodo.mdx",
+      "imageDir": "web/public/images/guides/actividades-del-periodo"
+    },
+    {
+      "name": "Copias Actividades",
+      "notionId": "3c35ac55-fec1-80c5-9c06-e3ce6149c845",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/planeacion-capacitacion-documentada/copiar-actividades/copiar-actividades.mdx",
+      "imageDir": "web/public/images/guides/docente-copiar-planeacion"
+    },
+    {
+      "name": "Mallas Curriculares",
+      "notionId": "3c35ac55-fec1-8016-a8f5-fe6cfa45c942",
+      "mdx": "web/content/docs/docente/capacitacion-documentada/herramientas-capacitacion-documentada/mallas-curriculares/mallas-curriculares.mdx",
+      "imageDir": "web/public/images/guides/mallas-curriculares"
+    }
+  ]
+}

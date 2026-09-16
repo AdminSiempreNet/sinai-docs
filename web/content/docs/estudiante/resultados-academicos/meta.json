@@ -1,0 +1,11 @@
+{
+  "title": "Resultados académicos",
+  "description": "Revise calificaciones, informes y boletines.",
+  "defaultOpen": false,
+  "pages": [
+    "informes",
+    "calificaciones-consolidadas",
+    "boletin-del-periodo",
+    "boletin-final"
+  ]
+}

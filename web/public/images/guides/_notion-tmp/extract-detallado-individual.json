@@ -1,0 +1,40 @@
+{
+    "images":  [
+                   {
+                       "altHint":  "Ruta de acceso Detallado Individual",
+                       "file":  "acceso-detallado-individual.png"
+                   },
+                   {
+                       "altHint":  "Seleccionar periodo y estudiante",
+                       "file":  "step-01.png"
+                   },
+                   {
+                       "altHint":  "Detalle académico del estudiante",
+                       "file":  "step-02.png"
+                   }
+               ],
+    "lines":  [
+                  "Detallado Individual",
+                  "Tutorial La opción Detallado Individual permite a los docentes consultar de manera detallada las calificaciones de cada estudiante y realizar un seguimiento de su desempeño académico hasta el periodo seleccionado.",
+                  "Esta funcionalidad permite visualizar la información consolidada de las calificaciones y conocer el resultado académico del estudiante con corte al periodo que se está consultando.",
+                  "Nota: La información presentada corresponde a las calificaciones registradas y consolidadas en la plataforma hasta el periodo seleccionado.",
+                  "Ruta de acceso: Evaluación → Calificaciones → Detallado Individual",
+                  "Paso a paso",
+                  "Ingresar al Detallado Individual",
+                  "Ingrese al Módulo del Docente.",
+                  "Diríjase al menú Evaluación → Calificaciones → Detallado Individual.",
+                  "Seleccione el periodo que desea consultar.",
+                  "Seleccione el estudiante que desea consultar.",
+                  "Una vez seleccionado el estudiante y el periodo, el sistema mostrará el detalle de su información académica.",
+                  "En esta consulta podrá visualizar:",
+                  "Notas definitivas: corresponden a las calificaciones obtenidas por el estudiante hasta el periodo seleccionado.",
+                  "Nota final: muestra el resultado académico acumulado con corte al periodo consultado.",
+                  "Desempeño: permite identificar el desempeño académico obtenido por el estudiante.",
+                  "Nota requerida: indica la calificación que el estudiante requiere, cuando esta información aplique.",
+                  "La información se puede consultar por áreas o por asignaturas, según la forma en que se requiera visualizar el detalle académico del estudiante.",
+                  "Esta funcionalidad permite al docente realizar un seguimiento individual del desempeño académico y conocer el estado de las calificaciones del estudiante durante el periodo seleccionado."
+              ],
+    "hasFaq":  false,
+    "name":  "Detallado Individual",
+    "tutorialAtTop":  true
+}

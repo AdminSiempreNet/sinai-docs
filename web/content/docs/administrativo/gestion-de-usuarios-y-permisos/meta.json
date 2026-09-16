@@ -1,0 +1,11 @@
+{
+  "title": "Gestión de usuarios y permisos",
+  "description": "Usuarios, permisos y verificación de datos.",
+  "defaultOpen": false,
+  "pages": [
+    "usuarios",
+    "permisos",
+    "otras-acciones"
+  ],
+  "icon": "UserCog"
+}

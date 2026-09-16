@@ -1,0 +1,10 @@
+{
+  "title": "Educación Inclusiva",
+  "description": "PIAR cuestionario y pedagógico.",
+  "defaultOpen": false,
+  "pages": [
+    "piar-cuestionario",
+    "piar-pedagogico"
+  ],
+  "icon": "UsersRound"
+}

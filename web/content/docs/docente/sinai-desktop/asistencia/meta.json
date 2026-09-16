@@ -1,0 +1,8 @@
+{
+  "title": "Asistencia",
+  "description": "Registre las inasistencias desde SINAI Desktop.",
+  "defaultOpen": false,
+  "pages": [
+    "como-registrar-inasistencias-en-desktop"
+  ]
+}

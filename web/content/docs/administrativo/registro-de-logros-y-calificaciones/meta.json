@@ -1,0 +1,11 @@
+{
+  "title": "Registro de logros y calificaciones",
+  "description": "Calificaciones, educación inclusiva, logros y actividades.",
+  "defaultOpen": false,
+  "pages": [
+    "calificaciones",
+    "educacion-inclusiva",
+    "logros-y-actividades"
+  ],
+  "icon": "ClipboardCheck"
+}

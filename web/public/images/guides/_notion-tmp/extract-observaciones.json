@@ -1,0 +1,29 @@
+{
+  "name": "Observaciones",
+  "lines": [
+    "Observaciones",
+    "TUTORIAL",
+    "La opción Observaciones permite a los docentes registrar comentarios relacionados con el desempeño y seguimiento académico de los estudiantes durante un periodo determinado.",
+    "Esta funcionalidad facilita el registro de información relevante sobre el proceso académico de cada estudiante, permitiendo dejar constancia de aspectos que requieren seguimiento.",
+    "Ruta de acceso: Evaluación → Observaciones",
+    "Paso a paso",
+    "Ingresar a Observaciones",
+    "Ingrese al Módulo del Docente.",
+    "Diríjase al menú Evaluación.",
+    "Seleccione la opción Observaciones.",
+    "Seleccione el Grupo correspondiente.",
+    "Seleccione la Asignatura.",
+    "Seleccione el Periodo que desea consultar.",
+    "Ubique en la lista al estudiante al que desea registrar la observación.",
+    "Ingrese la observación general correspondiente.",
+    "Haga clic en Guardar para registrar la observación.",
+    "Confirme que la observación haya quedado registrada correctamente en la lista.",
+    "Recomendación: Utilice una redacción clara, respetuosa y pertinente. La observación debe corresponder a situaciones relacionadas con el proceso y seguimiento académico del estudiante."
+  ],
+  "images": [
+    { "file": "acceso-observaciones.png", "altHint": "Ruta de acceso Observaciones" },
+    { "file": "step-01.png", "altHint": "Registrar observación del estudiante" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

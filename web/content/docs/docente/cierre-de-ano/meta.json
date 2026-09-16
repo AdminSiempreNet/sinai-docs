@@ -1,0 +1,10 @@
+{
+  "title": "Cierre de año",
+  "description": "Revise notas finales, ajustes y recuperaciones de cierre anual.",
+  "defaultOpen": false,
+  "pages": [
+    "notas-finales",
+    "ajuste-de-nota-final",
+    "recuperaciones-finales"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Convivencia escolar",
+  "description": "Comportamiento, ficha observador y anotaciones disciplinarias.",
+  "defaultOpen": false,
+  "pages": [
+    "calificacion-comportamiento",
+    "ficha-observador",
+    "registro-de-anotaciones-disciplinarias"
+  ],
+  "icon": "ShieldCheck"
+}

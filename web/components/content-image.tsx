@@ -1,8 +1,61 @@
 'use client';
 
-import { ChevronLeft, ChevronRight, ImageIcon, Images, X } from 'lucide-react';
+import './content-image.css';
+
+import { ChevronLeft, ChevronRight, Images, X } from 'lucide-react';
 import type { ComponentProps, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
+
+type ImageSequenceItem = {
+  src: string;
+  alt: string;
+};
+
+export type ImageTriggerVariant = 'default' | 'contextual' | 'microchip' | 'reference';
+
+function ExamplePreview({ image, caption = 'Vista previa' }: { image: ImageSequenceItem; caption?: string }) {
+  return (
+    <>
+      <span className="sinai-reference-card-image">
+        <img src={image.src} alt="" loading="lazy" data-image-modal-managed />
+      </span>
+      <span className="sinai-reference-card-caption">{caption}</span>
+    </>
+  );
+}
+
+function ImageDialogFrame({
+  title,
+  onClose,
+  children,
+  footer,
+}: {
+  title: string;
+  onClose: () => void;
+  children: ReactNode;
+  footer?: ReactNode;
+}) {
+  return (
+    <div className="sinai-image-dialog" onClick={(event) => event.stopPropagation()}>
+      <header className="sinai-image-dialog-header">
+        <div className="sinai-image-dialog-title">
+          <Images aria-hidden="true" />
+          <div>
+            <p>Referencia del proceso</p>
+            <h2>{title}</h2>
+          </div>
+        </div>
+        <div className="sinai-image-dialog-actions">
+          <button type="button" onClick={onClose} className="sinai-image-dialog-close" aria-label="Cerrar visor de imágenes">
+            <X aria-hidden="true" />
+          </button>
+        </div>
+      </header>
+      <div className="sinai-image-dialog-stage">{children}</div>
+      {footer && <footer className="sinai-image-dialog-footer">{footer}</footer>}
+    </div>
+  );
+}
 
 function ImageDialog({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) {
   return (
@@ -10,20 +63,12 @@ function ImageDialog({ src, alt, onClose }: { src: string; alt: string; onClose:
       role="dialog"
       aria-modal="true"
       aria-label={alt || 'Imagen ampliada'}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-8"
+      className="sinai-image-dialog-backdrop fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6"
       onClick={onClose}
     >
-      <div className="relative flex max-h-full max-w-6xl rounded-xl bg-fd-card p-3 shadow-2xl" onClick={(event) => event.stopPropagation()}>
-        <button
-          type="button"
-          onClick={onClose}
-          className="absolute -right-2 -top-2 z-10 inline-flex size-11 items-center justify-center rounded-full border bg-fd-card text-fd-foreground shadow-md transition hover:bg-fd-accent"
-          aria-label="Cerrar imagen ampliada"
-        >
-          <X className="size-4" />
-        </button>
-        <img src={src} alt={alt} className="max-h-[calc(100dvh-7rem)] max-w-full rounded-lg object-contain" />
-      </div>
+      <ImageDialogFrame title={alt || 'Captura de SINAI'} onClose={onClose}>
+        <img src={src} alt={alt} className="sinai-image-dialog-image" data-image-modal-managed />
+      </ImageDialogFrame>
     </div>
   );
 }
@@ -77,11 +122,12 @@ export function ContentImage({ alt = '', className, onClick, onKeyDown, src, ...
 export function ContentImageTrigger({
   src,
   alt,
-  children = 'Ver captura de referencia',
 }: {
   src: string;
   alt: string;
   children?: ReactNode;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
 }) {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -102,31 +148,29 @@ export function ContentImageTrigger({
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => setOpen(true)}
-        className="not-prose inline-flex min-h-11 items-center gap-2 rounded-lg border bg-fd-card px-3.5 py-2 text-sm font-medium text-fd-foreground shadow-sm transition hover:bg-fd-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fd-ring"
-      >
-        <ImageIcon className="size-4 text-fd-primary" aria-hidden="true" />
-        {children}
-      </button>
+      <span className="sinai-reference-cards not-prose">
+        <button
+          ref={triggerRef}
+          type="button"
+          onClick={() => setOpen(true)}
+          className="sinai-reference-card"
+          aria-label={`Ver referencia visual: ${alt}`}
+        >
+          <ExamplePreview image={{ src, alt }} />
+        </button>
+      </span>
       {open && <ImageDialog src={src} alt={alt} onClose={closeModal} />}
     </>
   );
 }
 
-type ImageSequenceItem = {
-  src: string;
-  alt: string;
-};
-
 export function ContentImageSequenceTrigger({
   images,
-  children = 'Ver ejemplos visuales',
 }: {
   images: ImageSequenceItem[];
   children?: ReactNode;
+  compact?: boolean;
+  variant?: ImageTriggerVariant;
 }) {
   const [open, setOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -157,67 +201,53 @@ export function ContentImageSequenceTrigger({
 
   return (
     <>
-      <button
-        ref={triggerRef}
-        type="button"
-        onClick={() => {
-          setActiveIndex(0);
-          setOpen(true);
-        }}
-        className="not-prose inline-flex min-h-11 items-center gap-2 rounded-lg border bg-fd-card px-3.5 py-2 text-sm font-medium text-fd-foreground shadow-sm transition hover:bg-fd-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fd-ring"
-      >
-        <Images className="size-4 text-fd-primary" aria-hidden="true" />
-        {children}
-      </button>
+      <span className="sinai-reference-cards not-prose">
+        {images.map((image, index) => (
+          <button
+            key={`${image.src}-${index}`}
+            type="button"
+            onClick={(event) => {
+              triggerRef.current = event.currentTarget;
+              setActiveIndex(index);
+              setOpen(true);
+            }}
+            className="sinai-reference-card"
+            aria-label={`Ver referencia visual ${index + 1} de ${total}: ${image.alt}`}
+          >
+            <ExamplePreview image={image} caption={total > 1 ? `Vista previa ${index + 1} de ${total}` : 'Vista previa'} />
+          </button>
+        ))}
+      </span>
 
       {open && (
         <div
           role="dialog"
           aria-modal="true"
           aria-label="Ejemplos visuales del proceso"
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm sm:p-8"
+          className="sinai-image-dialog-backdrop fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6"
           onClick={closeModal}
         >
-          <div className="relative flex max-h-full max-w-6xl rounded-xl bg-fd-card p-3 shadow-2xl" onClick={(event) => event.stopPropagation()}>
-            <button
-              type="button"
-              onClick={closeModal}
-              className="absolute -right-2 -top-2 z-10 inline-flex size-11 items-center justify-center rounded-full border bg-fd-card text-fd-foreground shadow-md transition hover:bg-fd-accent"
-              aria-label="Cerrar visor de imágenes"
-            >
-              <X className="size-4" />
-            </button>
-
-            <img
-              src={activeImage.src}
-              alt={activeImage.alt}
-              className="max-h-[calc(100dvh-9rem)] max-w-full rounded-lg object-contain"
-            />
-
-            {total > 1 && (
-              <div className="absolute inset-x-5 bottom-5 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={showPrevious}
-                  className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-black/65 text-white shadow-sm transition hover:bg-black/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                  aria-label="Ver imagen anterior"
-                >
-                  <ChevronLeft className="size-5" />
+          <ImageDialogFrame
+            title={activeImage.alt}
+            onClose={closeModal}
+            footer={total > 1 ? (
+              <div className="sinai-image-dialog-navigation">
+                <button type="button" onClick={showPrevious} className="sinai-image-dialog-nav" aria-label="Ver imagen anterior">
+                  <ChevronLeft aria-hidden="true" />
+                  Anterior
                 </button>
-                <span className="rounded-full bg-black/65 px-3 py-1.5 text-xs font-medium text-white" aria-live="polite">
-                  {activeIndex + 1} de {total}
+                <span className="sinai-image-dialog-progress" aria-live="polite">
+                  Captura <strong>{activeIndex + 1}</strong> de {total}
                 </span>
-                <button
-                  type="button"
-                  onClick={showNext}
-                  className="inline-flex size-11 items-center justify-center rounded-full border border-white/20 bg-black/65 text-white shadow-sm transition hover:bg-black/85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                  aria-label="Ver imagen siguiente"
-                >
-                  <ChevronRight className="size-5" />
+                <button type="button" onClick={showNext} className="sinai-image-dialog-nav" aria-label="Ver imagen siguiente">
+                  Siguiente
+                  <ChevronRight aria-hidden="true" />
                 </button>
               </div>
-            )}
-          </div>
+            ) : undefined}
+          >
+            <img src={activeImage.src} alt={activeImage.alt} className="sinai-image-dialog-image" data-image-modal-managed />
+          </ImageDialogFrame>
         </div>
       )}
     </>

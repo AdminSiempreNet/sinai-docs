@@ -1,0 +1,9 @@
+{
+  "title": "Mallas curriculares",
+  "description": "Cree unidades curriculares o consulte las mallas publicadas por su institución.",
+  "defaultOpen": false,
+  "pages": [
+    "crear-y-organizar",
+    "consultar-y-descargar"
+  ]
+}

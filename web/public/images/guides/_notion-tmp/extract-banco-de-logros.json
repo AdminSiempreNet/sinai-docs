@@ -1,0 +1,28 @@
+{
+  "name": "Banco de Logros",
+  "lines": [
+    "Banco de Logros",
+    "Tutorial",
+    "El Banco de Logros es una funcionalidad de la plataforma SINAI que permite a los docentes consultar logros o desempeños registrados para diferentes grados y áreas fundamentales. Esta herramienta facilita la búsqueda de contenidos que pueden ser utilizados como referencia para la planeación y evaluación académica.",
+    "Nota: El Banco de Logros es construido con los aportes de la comunidad de docentes usuarios de SINAI. Por esta razón, pueden encontrarse diferencias en la redacción u ortografía de algunos registros.",
+    "Ruta de Acceso: Planeación > Banco de Logros",
+    "Paso a paso",
+    "Al ingresar, encontrará en el lado izquierdo de la pantalla los filtros disponibles para realizar la consulta.",
+    "Para realizar la búsqueda, seleccione los criterios correspondientes:",
+    "Seleccione previamente el Año, Grado y Área fundamental.",
+    "Escriba la palabra clave en el campo correspondiente.",
+    "Haga clic en el icono de la lupa .",
+    "El sistema mostrará los resultados relacionados con la palabra ingresada.",
+    "Importante: La búsqueda por palabra clave se realiza teniendo en cuenta el año, grado y área fundamental seleccionados. Al utilizar una palabra clave, los resultados se restringen a los registros que contienen dicha palabra.",
+    "El sistema mostrará los logros disponibles de acuerdo con los filtros seleccionados.",
+    "Inicialmente, se pueden mostrar hasta 150 resultados aleatorios.",
+    "Para consultar más resultados, haga clic sobre el encabezado de la lista.",
+    "Importante: Las áreas fundamentales corresponden a grupos de áreas afines. Por lo tanto, en esta consulta no se muestran directamente las áreas o asignaturas específicas configuradas por la institución."
+  ],
+  "images": [
+    { "file": "acceso-banco-de-logros.png", "altHint": "Ruta de acceso Planeación > Banco de Logros" },
+    { "file": "step-01.png", "altHint": "Filtros y resultados del Banco de Logros" }
+  ],
+  "tutorialAtTop": true,
+  "hasFaq": false
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Validación y electivas",
+  "description": "Validación, matrícula semestral y modalidades.",
+  "defaultOpen": false,
+  "pages": [
+    "procesos-de-validacion",
+    "matricula-semestral",
+    "asignacion-de-modalidades"
+  ],
+  "icon": "BadgeCheck"
+}

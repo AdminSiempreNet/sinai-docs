@@ -1,0 +1,11 @@
+{
+  "title": "Inasistencias",
+  "description": "Registre y consulte la asistencia por día o de forma detallada.",
+  "defaultOpen": false,
+  "pages": [
+    "registro-detallado",
+    "registro-por-dia",
+    "consultar-o-modificar",
+    "consolidado"
+  ]
+}

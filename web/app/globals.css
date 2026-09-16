@@ -16,6 +16,191 @@
   --sinai-menu-accent: var(--sinai-role-accent);
   --sinai-menu-active: color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
   --sinai-menu-active-hover: color-mix(in srgb, var(--sinai-role-accent) 18%, transparent);
+  --sinai-font-scale: 1;
+}
+
+/* Escala tipográfica global (pequeña / mediana / grande). */
+html {
+  font-size: calc(100% * var(--sinai-font-scale));
+}
+
+html[data-sinai-font-size="small"] {
+  --sinai-font-scale: 0.9;
+}
+
+html[data-sinai-font-size="medium"],
+html:not([data-sinai-font-size]) {
+  --sinai-font-scale: 1;
+}
+
+html[data-sinai-font-size="large"] {
+  --sinai-font-scale: 1.125;
+}
+
+/* Selector de tamaño de letra: icono único que se expande al hover/foco. */
+.sinai-font-size-switch {
+  --sinai-fs-pad: 0.2rem;
+  --sinai-fs-gap: 0.1rem;
+  --sinai-fs-btn: 1.625rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  height: calc(var(--sinai-fs-btn) + var(--sinai-fs-pad) * 2);
+  padding: var(--sinai-fs-pad);
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-fd-secondary) 70%, transparent);
+  color: var(--color-fd-muted-foreground);
+  overflow: hidden;
+  transition:
+    width 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+  width: calc(var(--sinai-fs-btn) + var(--sinai-fs-pad) * 2);
+}
+
+.sinai-font-size-switch.is-compact {
+  --sinai-fs-btn: 1.5rem;
+  --sinai-fs-pad: 0.15rem;
+  border-color: transparent;
+  background: transparent;
+}
+
+.sinai-font-size-switch:hover,
+.sinai-font-size-switch:focus-within,
+.sinai-font-size-switch.is-open {
+  width: calc(var(--sinai-fs-btn) * 3 + var(--sinai-fs-gap) * 2 + var(--sinai-fs-pad) * 2);
+  background: var(--color-fd-card);
+  border-color: color-mix(in srgb, var(--color-fd-primary) 28%, var(--color-fd-border));
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-fd-primary) 8%, transparent);
+}
+
+.sinai-font-size-switch-trigger {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 140ms ease,
+    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sinai-font-size-switch-trigger-mark {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.01em;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: currentColor;
+  user-select: none;
+  transform: translateY(0.5px);
+}
+
+.sinai-font-size-switch-trigger-mark > span:first-child {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sinai-font-size-switch-trigger-mark > span:last-child {
+  font-size: 0.58rem;
+  font-weight: 650;
+  line-height: 1;
+  opacity: 0.82;
+}
+
+.sinai-font-size-switch:hover .sinai-font-size-switch-trigger,
+.sinai-font-size-switch:focus-within .sinai-font-size-switch-trigger,
+.sinai-font-size-switch.is-open .sinai-font-size-switch-trigger {
+  opacity: 0;
+  transform: scale(0.75);
+}
+
+.sinai-font-size-switch-options {
+  display: flex;
+  align-items: center;
+  gap: var(--sinai-fs-gap);
+  opacity: 0;
+  transform: translateX(0.35rem) scale(0.92);
+  pointer-events: none;
+  transition:
+    opacity 160ms ease 40ms,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sinai-font-size-switch:hover .sinai-font-size-switch-options,
+.sinai-font-size-switch:focus-within .sinai-font-size-switch-options,
+.sinai-font-size-switch.is-open .sinai-font-size-switch-options {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.sinai-font-size-switch-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--sinai-fs-btn);
+  height: var(--sinai-fs-btn);
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    transform 140ms ease;
+}
+
+.sinai-font-size-switch-option:hover {
+  background: color-mix(in srgb, var(--color-fd-accent) 70%, transparent);
+  color: var(--color-fd-accent-foreground);
+}
+
+.sinai-font-size-switch-option:focus-visible {
+  outline: 2px solid var(--color-fd-primary);
+  outline-offset: 1px;
+}
+
+.sinai-font-size-switch-option.is-active {
+  background: var(--color-fd-accent);
+  color: var(--color-fd-accent-foreground);
+}
+
+.sinai-font-size-switch-option[data-size="small"] span {
+  opacity: 0.85;
+}
+
+.sinai-font-size-switch-option[data-size="large"] span {
+  letter-spacing: -0.03em;
+}
+
+.sinai-font-size-switch--sidebar-header {
+  align-self: center;
+}
+
+.sinai-font-size-switch--panel {
+  margin-inline-start: 0.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-font-size-switch,
+  .sinai-font-size-switch-trigger,
+  .sinai-font-size-switch-options,
+  .sinai-font-size-switch-option {
+    transition: none;
+  }
 }
 
 /* Colores de marca por rol. Al estar definidos en body, se propagan a la
@@ -33,14 +218,14 @@ body:has(.sinai-role-docente) {
 }
 
 body:has(.sinai-role-estudiante) {
-  --sinai-role-accent: #d98e00;
-  --sinai-role-accent-hover: #b87300;
+  --sinai-role-accent: #00CEC8;
+  --sinai-role-accent-hover: #00CEC8;
   --color-fd-primary: var(--sinai-role-accent);
 }
 
 .dark body:has(.sinai-role-estudiante) {
-  --sinai-role-accent: #f1dc55;
-  --sinai-role-accent-hover: #ffe875;
+  --sinai-role-accent: #00CEC8;
+  --sinai-role-accent-hover: #00CEC8;
 }
 
 /* El atributo se establece desde la ruta activa y alcanza también los
@@ -58,14 +243,14 @@ html[data-sinai-role="docente"] {
 }
 
 html[data-sinai-role="estudiante"] {
-  --sinai-role-accent: #d98e00;
-  --sinai-role-accent-hover: #b87300;
+  --sinai-role-accent: #00CEC8;
+  --sinai-role-accent-hover: #00CEC8;
   --color-fd-primary: var(--sinai-role-accent);
 }
 
 html.dark[data-sinai-role="estudiante"] {
-  --sinai-role-accent: #f1dc55;
-  --sinai-role-accent-hover: #ffe875;
+  --sinai-role-accent: #00CEC8;
+  --sinai-role-accent-hover: #00CEC8;
 }
 
 /* El selector y el Ã¡rbol lateral viven fuera del contenido de la pÃ¡gina;
@@ -103,6 +288,21 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
   color: var(--sinai-menu-accent);
 }
 
+/* Centra el icono del selector de rol con el texto (como Fumadocs). */
+#nd-sidebar button:has(.sinai-role-icon),
+#nd-sidebar-mobile button:has(.sinai-role-icon) {
+  display: inline-flex;
+  align-items: center;
+}
+
+#nd-sidebar button:has(.sinai-role-icon) .sinai-role-icon,
+#nd-sidebar-mobile button:has(.sinai-role-icon) .sinai-role-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+}
+
 /* El logo ocupa el espacio de identidad del menú sin desplazar el control
    para contraer la barra lateral. */
 .sinai-sidebar-logo {
@@ -127,7 +327,7 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
 }
 
 .sinai-role-icon-estudiante {
-  color: #d98e00 !important;
+  color: #00CEC8 !important;
 }
 
 .dark .sinai-role-icon-administrativo {
@@ -139,7 +339,7 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
 }
 
 .dark .sinai-role-icon-estudiante {
-  color: #f1dc55 !important;
+  color: #00CEC8 !important;
 }
 
 #nd-sidebar [data-active="true"] .sinai-menu-icon,
@@ -152,7 +352,11 @@ html[data-sinai-role="estudiante"] :is(#nd-sidebar, #nd-sidebar-mobile) {
 }
 
 div:has(> .sinai-role-icon) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-inline-end: 0.5rem;
+  line-height: 0;
 }
 
 /* Las páginas iniciales mantienen las rutas de cada rol, pero no se repiten
@@ -170,7 +374,7 @@ div:has(> .sinai-role-icon) {
   display: none;
 }
 
-/* Acerca el árbol al selector de rol sin alterar la separación entre opciones. */
+/* Acerca el árbol al selector de rol; el aire del primer título lo da su margin. */
 #nd-sidebar [data-radix-scroll-area-viewport],
 #nd-sidebar-mobile [data-radix-scroll-area-viewport] {
   padding-top: 0 !important;
@@ -199,6 +403,7 @@ div:has(> .sinai-role-icon) {
 #nd-sidebar-mobile [data-active="true"] {
   color: var(--sinai-menu-accent);
   background-color: var(--sinai-menu-active);
+  font-weight: 600;
 }
 
 #nd-sidebar [data-active="true"]:hover,
@@ -226,23 +431,198 @@ div:has(> .sinai-role-icon) {
   color: var(--sinai-menu-accent);
 }
 
-/* Las categorías principales se distinguen sin competir con la opción activa. */
-/* Accesos compactos para reducir la necesidad de recorrer el árbol completo. */
-.sinai-sidebar-section-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0.1rem 0 0.15rem;
-  color: var(--color-fd-muted-foreground);
-  font-size: 0.6875rem;
+/* Títulos de agrupación Administrativo (estilo Introduction de Fumadocs).
+   Más peso y contraste que las opciones; aire amplio entre grupos. */
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"],
+#nd-sidebar a[href="/docs/administrativo/curriculo"],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"],
+#nd-sidebar a[href="/docs/administrativo/herramientas"],
+#nd-sidebar a[href="/docs/administrativo/ayuda"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"] {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+  padding-block: 0.25rem;
+  color: var(--color-fd-foreground);
+  background: transparent;
+  box-shadow: none;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
-.sinai-sidebar-section-title svg {
-  width: 0.8rem;
-  height: 0.8rem;
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"] {
+  /* Aire bajo el selector de rol, sin tocar el viewport. */
+  margin-top: 0.75rem;
+}
+
+/* Solo Primeros pasos muestra iconos en sus opciones. */
+html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar [data-state] > :is(a, button) .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile [data-state] > :is(a, button) .sinai-menu-icon {
+  display: none;
+}
+
+html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon {
+  display: inline-block;
+}
+
+/* El icono del selector de rol siempre visible. */
+html[data-sinai-role="administrativo"] #nd-sidebar button .sinai-role-icon,
+html[data-sinai-role="administrativo"] #nd-sidebar-mobile button .sinai-role-icon {
+  display: inline-block;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"]:hover,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"]:hover,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]:hover,
+#nd-sidebar a[href="/docs/administrativo/curriculo"]:hover,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"]:hover,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"]:hover,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"]:hover,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]:hover,
+#nd-sidebar a[href="/docs/administrativo/herramientas"]:hover,
+#nd-sidebar a[href="/docs/administrativo/ayuda"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"]:hover,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"]:hover,
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/curriculo"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/herramientas"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/ayuda"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"][data-active="true"],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"][data-active="true"],
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/curriculo"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/herramientas"][data-sinai-active-branch],
+#nd-sidebar a[href="/docs/administrativo/ayuda"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"][data-sinai-active-branch],
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"][data-sinai-active-branch] {
+  color: var(--sinai-menu-accent);
+  background: transparent;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"]::before,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"]::before,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]::before,
+#nd-sidebar a[href="/docs/administrativo/curriculo"]::before,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"]::before,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"]::before,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"]::before,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]::before,
+#nd-sidebar a[href="/docs/administrativo/herramientas"]::before,
+#nd-sidebar a[href="/docs/administrativo/ayuda"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"]::before,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"]::before {
+  display: none;
+}
+
+#nd-sidebar a[href="/docs/administrativo/primeros-pasos"] svg,
+#nd-sidebar a[href="/docs/administrativo/configuracion-institucional"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-personal"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-estudiantes"] svg,
+#nd-sidebar a[href="/docs/administrativo/registro-de-logros-y-calificaciones"] svg,
+#nd-sidebar a[href="/docs/administrativo/curriculo"] svg,
+#nd-sidebar a[href="/docs/administrativo/convivencia-escolar"] svg,
+#nd-sidebar a[href="/docs/administrativo/cierre-academico-periodo"] svg,
+#nd-sidebar a[href="/docs/administrativo/cierre-de-ano"] svg,
+#nd-sidebar a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"] svg,
+#nd-sidebar a[href="/docs/administrativo/herramientas"] svg,
+#nd-sidebar a[href="/docs/administrativo/ayuda"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/primeros-pasos"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/configuracion-institucional"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-personal"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-estudiantes"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/registro-de-logros-y-calificaciones"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/curriculo"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/convivencia-escolar"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-academico-periodo"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/cierre-de-ano"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/gestion-de-usuarios-y-permisos"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/herramientas"] svg,
+#nd-sidebar-mobile a[href="/docs/administrativo/ayuda"] svg {
+  display: none;
 }
 
 .sinai-help {
@@ -918,6 +1298,12 @@ div:has(> .sinai-role-icon) {
   background: color-mix(in srgb, var(--color-fd-primary) 5%, var(--color-fd-card));
 }
 
+.sinai-welcome-font-size-switch {
+  flex: none;
+  border-color: color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-primary) 5%, var(--color-fd-card));
+}
+
 .sinai-welcome-nav {
   justify-content: flex-end;
   gap: 0.35rem;
@@ -1089,9 +1475,9 @@ div:has(> .sinai-role-icon) {
 .sinai-welcome-role-card[data-role='general'] { --sinai-role-accent: #8658cb; }
 .sinai-welcome-role-card[data-role='administrativo'] { --sinai-role-accent: #4976ff; }
 .sinai-welcome-role-card[data-role='docente'] { --sinai-role-accent: #00aa01; }
-.sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #d98e00; }
+.sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #00CEC8; }
 
-.dark .sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #f1dc55; }
+.dark .sinai-welcome-role-card[data-role='estudiante'] { --sinai-role-accent: #00CEC8; }
 
 .sinai-welcome-role-icon {
   display: grid;
@@ -1167,22 +1553,26 @@ div:has(> .sinai-role-icon) {
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--color-fd-primary) 25%, var(--color-fd-border));
   border-radius: 1.35rem;
-  background: #071325;
-  box-shadow: 0 1.75rem 4rem color-mix(in srgb, var(--color-fd-foreground) 14%, transparent);
+  background: #edf3fb;
+  box-shadow: 0 1.5rem 3.25rem color-mix(in srgb, #123c72 12%, transparent);
 }
 
 .sinai-welcome-banner::after {
   position: absolute;
   z-index: 1;
   inset: 0;
-  background: linear-gradient(180deg, rgba(2, 11, 28, 0.05) 42%, rgba(2, 11, 28, 0.72));
+  background: linear-gradient(180deg, rgba(245, 250, 255, 0.04), rgba(231, 240, 252, 0.2));
   content: '';
   pointer-events: none;
 }
 
-.sinai-welcome-banner img {
+.sinai-welcome-banner-image {
   object-fit: cover;
   object-position: center;
+}
+
+.sinai-welcome-banner-image-dark {
+  display: none;
 }
 
 .sinai-welcome-banner figcaption {
@@ -1194,11 +1584,11 @@ div:has(> .sinai-role-icon) {
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.8rem 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid color-mix(in srgb, #4976ff 20%, white);
   border-radius: 0.8rem;
-  color: rgba(255, 255, 255, 0.68);
-  background: rgba(7, 18, 38, 0.68);
-  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.2);
+  color: color-mix(in srgb, #123c72 72%, var(--color-fd-muted-foreground));
+  background: rgba(248, 251, 255, 0.78);
+  box-shadow: 0 0.75rem 2rem rgba(18, 60, 114, 0.1);
   backdrop-filter: blur(10px);
   font-size: 0.67rem;
   font-weight: 600;
@@ -1206,7 +1596,7 @@ div:has(> .sinai-role-icon) {
 
 .sinai-welcome-banner figcaption strong {
   gap: 0.45rem;
-  color: #fff;
+  color: #123c72;
   font-size: 0.72rem;
   white-space: nowrap;
 }
@@ -1215,7 +1605,44 @@ div:has(> .sinai-role-icon) {
   width: 0.22rem;
   height: 0.22rem;
   border-radius: 99px;
-  background: #8ab2ff;
+  background: #00aa01;
+}
+
+.dark .sinai-welcome-banner {
+  background: #071325;
+  box-shadow: 0 1.75rem 4rem color-mix(in srgb, var(--color-fd-foreground) 14%, transparent);
+}
+
+.dark .sinai-welcome-banner::after {
+  background: linear-gradient(180deg, rgba(2, 11, 28, 0.05) 42%, rgba(2, 11, 28, 0.72));
+}
+
+.dark .sinai-welcome-banner img {
+  filter: none;
+  opacity: 1;
+}
+
+.dark .sinai-welcome-banner-image-light {
+  display: none;
+}
+
+.dark .sinai-welcome-banner-image-dark {
+  display: block;
+}
+
+.dark .sinai-welcome-banner figcaption {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.68);
+  background: rgba(7, 18, 38, 0.68);
+  box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.dark .sinai-welcome-banner figcaption strong {
+  color: #fff;
+}
+
+.dark .sinai-welcome-banner figcaption i {
+  background: #39ff14;
 }
 
 .sinai-welcome-steps {
@@ -1491,8 +1918,8 @@ div:has(> .sinai-role-icon) {
 
 .sinai-docs-home-card[data-role='administrativo'] { --sinai-docs-card-accent: #4976ff; }
 .sinai-docs-home-card[data-role='docente'] { --sinai-docs-card-accent: #00aa01; }
-.sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #d98e00; }
-.dark .sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #f1dc55; }
+.sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #00CEC8; }
+.dark .sinai-docs-home-card[data-role='estudiante'] { --sinai-docs-card-accent: #00CEC8; }
 
 .sinai-docs-home-card:hover {
   border-color: color-mix(in srgb, var(--sinai-docs-card-accent) 50%, var(--color-fd-border));
@@ -1850,8 +2277,952 @@ div:has(> .sinai-role-icon) {
   margin: 0 !important;
 }
 
-/* La tabla de contenidos de las guÃ­as usa el conector jerÃ¡rquico de Fumadocs.
-   Se vincula al mismo color de acento que el menÃº lateral: azul en modo claro
+/* Banner de aterrizaje por rol (ocupa el espacio del título + descripción). */
+.sinai-role-landing-banner {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+  padding: 1.35rem 1.35rem 1.45rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 1rem;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--sinai-role-accent) 16%, var(--color-fd-card)) 0%,
+      color-mix(in srgb, var(--sinai-role-accent) 5%, var(--color-fd-card)) 48%,
+      var(--color-fd-card) 100%
+    );
+}
+
+.sinai-role-landing-banner-glow {
+  position: absolute;
+  inset: auto -15% -55% auto;
+  width: min(22rem, 70%);
+  height: min(14rem, 90%);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--sinai-role-accent) 34%, transparent) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.sinai-role-landing-banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 44rem;
+}
+
+.sinai-role-landing-banner-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: var(--sinai-role-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sinai-role-landing-banner-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}
+
+.sinai-role-landing-banner-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.sinai-role-landing-banner-description {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+@media (min-width: 640px) {
+  .sinai-role-landing-banner {
+    padding: 1.6rem 1.7rem 1.75rem;
+  }
+}
+
+/* Banner sencillo de agrupación (Primeros pasos, Configuración, etc.). */
+.sinai-section-landing-banner {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  margin: 0 0 1.25rem;
+  padding: 0.95rem 0 1.05rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--sinai-role-accent) 18%, var(--color-fd-border));
+}
+
+.sinai-section-landing-banner-bar {
+  flex-shrink: 0;
+  width: 0.22rem;
+  align-self: stretch;
+  min-height: 2.75rem;
+  border-radius: 999px;
+  background: var(--sinai-role-accent);
+}
+
+.sinai-section-landing-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.sinai-section-landing-banner-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.55rem, 2.4vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.sinai-section-landing-banner-description {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Selector de planillas (Registro de calificaciones). */
+.sinai-planilla-switcher {
+  margin-block: 0.5rem 1.5rem;
+}
+
+.sinai-planilla-skeleton {
+  min-height: 8rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--color-fd-muted) 55%, transparent);
+}
+
+.sinai-planilla-picker-intro {
+  margin-bottom: 1rem;
+}
+
+.sinai-planilla-picker-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.sinai-planilla-picker-toolbar .sinai-planilla-picker-eyebrow {
+  margin: 0;
+}
+
+.sinai-planilla-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0;
+  margin-left: auto;
+  padding: 0.65rem 1.15rem;
+  border: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  border-radius: 999px;
+  background: var(--sinai-role-accent, var(--color-fd-primary));
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 32%, transparent);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 120ms ease;
+}
+
+.sinai-planilla-back:hover {
+  background: var(--sinai-role-accent-hover, var(--color-fd-primary));
+  border-color: var(--sinai-role-accent-hover, var(--color-fd-primary));
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 40%, transparent);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
+.sinai-planilla-back:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 3px;
+}
+
+.sinai-planilla-back svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 2.5;
+}
+
+.sinai-planilla-family-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .sinai-planilla-family-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.sinai-planilla-family-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  width: 100%;
+  min-height: 100%;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 0.75rem;
+  background: color-mix(in srgb, var(--color-fd-muted) 45%, var(--color-fd-card));
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.sinai-planilla-family-card:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 35%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 6%, var(--color-fd-card));
+  box-shadow: 0 0.5rem 1.25rem rgb(15 23 42 / 5%);
+}
+
+.sinai-planilla-family-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 2px;
+}
+
+.sinai-planilla-family-card:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.sinai-planilla-family-card-title {
+  color: var(--color-fd-foreground);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.sinai-planilla-family-card-desc {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.84rem;
+  font-weight: 450;
+  line-height: 1.45;
+}
+
+.sinai-planilla-family-card-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.sinai-planilla-family-card-soon svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.dark .sinai-planilla-family-card {
+  background: color-mix(in srgb, var(--color-fd-muted) 35%, var(--color-fd-card));
+}
+
+.dark .sinai-planilla-family-card:hover:not(:disabled) {
+  box-shadow: 0 0.65rem 1.4rem rgb(0 0 0 / 22%);
+}
+
+.sinai-planilla-picker-eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--sinai-role-accent, var(--color-fd-primary));
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sinai-planilla-picker-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.sinai-planilla-picker-copy {
+  margin: 0.45rem 0 0;
+  max-width: 44rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.sinai-planilla-picker-copy + .sinai-planilla-picker-copy {
+  margin-top: 0.65rem;
+}
+
+.sinai-planilla-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+@media (min-width: 560px) {
+  .sinai-planilla-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .sinai-planilla-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.sinai-planilla-grid[data-layout='detailed'] {
+  gap: 1.15rem;
+}
+
+@media (min-width: 640px) {
+  .sinai-planilla-grid[data-layout='detailed'][data-count='2'],
+  .sinai-planilla-grid[data-layout='detailed'][data-count='1'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .sinai-planilla-grid[data-layout='detailed'][data-count='2'],
+  .sinai-planilla-grid[data-layout='detailed'][data-count='1'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.sinai-planilla-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 16%, var(--color-fd-border));
+  border-radius: 0.85rem;
+  background: var(--color-fd-card);
+  color: inherit;
+  text-align: start;
+  cursor: zoom-in;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.sinai-planilla-card-detailed {
+  height: 100%;
+  border: 0;
+  border-radius: 1.15rem;
+  cursor: default;
+  background: transparent;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 4%),
+    0 12px 28px rgb(15 23 42 / 8%);
+}
+
+.sinai-planilla-card-detailed:hover {
+  transform: translateY(-2px);
+  border-color: transparent;
+  box-shadow:
+    0 2px 4px rgb(15 23 42 / 5%),
+    0 18px 36px rgb(15 23 42 / 12%);
+}
+
+.dark .sinai-planilla-card-detailed {
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 25%),
+    0 12px 28px rgb(0 0 0 / 35%);
+}
+
+.sinai-planilla-card:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 45%, var(--color-fd-border));
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 10%, transparent);
+  transform: translateY(-1px);
+}
+
+.sinai-planilla-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 2px;
+}
+
+.sinai-planilla-card[data-status='soon'] .sinai-planilla-card-media img {
+  filter: grayscale(0.25);
+  opacity: 0.88;
+}
+
+.sinai-planilla-card-media {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: color-mix(in srgb, var(--color-fd-muted) 70%, transparent);
+  cursor: zoom-in;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-media {
+  flex: 1 1 auto;
+  min-height: 11.5rem;
+  aspect-ratio: 16 / 10.5;
+  border-bottom: 0;
+  border-radius: 1.15rem 1.15rem 0 0;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-media:hover .sinai-planilla-card-zoom {
+  transform: scale(1.06);
+  background: color-mix(in srgb, #0b1220 82%, transparent);
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-media:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -3px;
+}
+
+.sinai-planilla-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.sinai-planilla-card-zoom {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  display: grid;
+  place-items: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 999px;
+  color: #fff;
+  background: color-mix(in srgb, #0b1220 72%, transparent);
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease;
+}
+
+.sinai-planilla-card-zoom svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.sinai-planilla-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sinai-planilla-badge svg {
+  width: 0.72rem;
+  height: 0.72rem;
+}
+
+.sinai-planilla-badge-soon {
+  color: var(--color-fd-muted-foreground);
+  background: color-mix(in srgb, var(--color-fd-background) 90%, transparent);
+  border: 1px solid var(--color-fd-border);
+  backdrop-filter: blur(8px);
+}
+
+.sinai-planilla-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.7rem 0.8rem 0.85rem;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-body {
+  flex: 0 0 auto;
+  gap: 0.95rem;
+  padding: 1.15rem 1.2rem 1.2rem;
+  background:
+    linear-gradient(
+      115deg,
+      color-mix(in srgb, var(--sinai-role-accent-hover, #012287) 92%, #041033) 0%,
+      var(--sinai-role-accent, #4976ff) 55%,
+      color-mix(in srgb, var(--sinai-role-accent, #4976ff) 72%, #7aa0ff) 100%
+    );
+  color: #fff;
+  border-radius: 0 0 1.15rem 1.15rem;
+}
+
+.sinai-planilla-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sinai-planilla-card-title {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.sinai-planilla-card-description {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-description {
+  color: rgb(255 255 255 / 88%);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.sinai-planilla-card-hint {
+  margin: 0.15rem 0 0;
+  color: color-mix(in srgb, var(--color-fd-muted-foreground) 88%, transparent);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-hint {
+  color: rgb(255 255 255 / 72%);
+  font-size: 0.75rem;
+}
+
+.sinai-planilla-card-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  margin-top: auto;
+  padding: 0.7rem 0.9rem;
+  border: 0;
+  border-radius: 0.7rem;
+  background: var(--sinai-role-accent, var(--color-fd-primary));
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    filter 0.15s ease,
+    transform 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-select {
+  background: #fff;
+  color: color-mix(in srgb, var(--sinai-role-accent-hover, #012287) 80%, #0b1220);
+  box-shadow: 0 1px 0 rgb(15 23 42 / 6%);
+}
+
+.sinai-planilla-card-select svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex-shrink: 0;
+}
+
+.sinai-planilla-card-select:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.sinai-planilla-card-detailed .sinai-planilla-card-select:hover:not(:disabled) {
+  filter: none;
+  background: rgb(255 255 255 / 94%);
+  transform: translateY(-1px);
+}
+
+.sinai-planilla-card-select:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.sinai-planilla-card-select:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.sinai-planilla-card-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: grayscale(0.2);
+}
+
+.sinai-planilla-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgb(2 8 20 / 78%);
+  backdrop-filter: blur(8px);
+}
+
+.sinai-planilla-preview-panel {
+  display: flex;
+  flex-direction: column;
+  width: min(58rem, 100%);
+  max-height: min(92dvh, 54rem);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 24%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: var(--color-fd-background);
+  box-shadow: 0 28px 70px rgb(0 0 0 / 42%);
+}
+
+.sinai-planilla-preview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.95rem 1.05rem;
+  border-bottom: 1px solid var(--color-fd-border);
+}
+
+.sinai-planilla-preview-kicker {
+  margin: 0 0 0.2rem;
+  color: var(--sinai-role-accent, var(--color-fd-primary));
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sinai-planilla-preview-heading h3 {
+  margin: 0;
+  color: var(--color-fd-foreground);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sinai-planilla-preview-heading p {
+  margin: 0.3rem 0 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.sinai-planilla-preview-close {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  background: var(--color-fd-card);
+  color: var(--color-fd-muted-foreground);
+  cursor: pointer;
+}
+
+.sinai-planilla-preview-close svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-planilla-preview-close:hover {
+  color: var(--color-fd-foreground);
+  border-color: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 35%, var(--color-fd-border));
+}
+
+.sinai-planilla-preview-close:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 2px;
+}
+
+.sinai-planilla-preview-media {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 0.9rem 1.05rem;
+  background: color-mix(in srgb, var(--color-fd-muted) 50%, transparent);
+}
+
+.sinai-planilla-preview-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  border-radius: 0.55rem;
+  border: 1px solid var(--color-fd-border);
+  background: var(--color-fd-card);
+}
+
+.sinai-planilla-preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  padding: 0.9rem 1.05rem;
+  border-top: 1px solid var(--color-fd-border);
+  background: var(--color-fd-background);
+}
+
+.sinai-planilla-preview-secondary,
+.sinai-planilla-preview-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.6rem 0.95rem;
+  border-radius: 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sinai-planilla-preview-secondary {
+  border: 1px solid var(--color-fd-border);
+  background: var(--color-fd-card);
+  color: var(--color-fd-foreground);
+}
+
+.sinai-planilla-preview-secondary:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 30%, var(--color-fd-border));
+}
+
+.sinai-planilla-preview-primary {
+  border: 1px solid transparent;
+  background: var(--sinai-role-accent, var(--color-fd-primary));
+  color: #fff;
+}
+
+.sinai-planilla-preview-primary svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.sinai-planilla-preview-primary:hover {
+  filter: brightness(1.05);
+}
+
+.sinai-planilla-preview-secondary:focus-visible,
+.sinai-planilla-preview-primary:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 2px;
+}
+
+.sinai-planilla-active-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 28%, var(--color-fd-border));
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 8%, var(--color-fd-card));
+}
+
+.sinai-planilla-active-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.sinai-planilla-active-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--sinai-role-accent, var(--color-fd-primary));
+}
+
+.sinai-planilla-active-check svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-planilla-active-label {
+  margin: 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sinai-planilla-active-name {
+  margin: 0.1rem 0 0;
+  color: var(--color-fd-foreground);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sinai-planilla-change {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 40%, var(--color-fd-border));
+  border-radius: 0.65rem;
+  background: var(--color-fd-background);
+  color: var(--sinai-role-accent, var(--color-fd-primary));
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.sinai-planilla-change svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.sinai-planilla-change:hover {
+  border-color: var(--sinai-role-accent, var(--color-fd-primary));
+  background: color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 10%, var(--color-fd-background));
+}
+
+.sinai-planilla-change:focus-visible {
+  outline: 2px solid var(--sinai-role-accent, var(--color-fd-primary));
+  outline-offset: 2px;
+}
+
+.sinai-planilla-guide-panel {
+  min-width: 0;
+}
+
+.sinai-planilla-guide-panel > :first-child {
+  margin-top: 0;
+}
+
+.sinai-planilla-guide-panel :is(h2, h3, h4) {
+  scroll-margin-top: 6rem;
+}
+
+.sinai-planilla-guide-panel h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sinai-planilla-guide-panel h3 {
+  margin-top: 1.35rem;
+  margin-bottom: 0.55rem;
+  font-size: 1.1rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.sinai-planilla-guide-panel p,
+.sinai-planilla-guide-panel ul,
+.sinai-planilla-guide-panel ol {
+  margin-top: 0.55rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.65;
+}
+
+.sinai-planilla-guide-panel ol,
+.sinai-planilla-guide-panel ul {
+  padding-left: 1.35rem;
+  margin-left: 0;
+  list-style-position: outside;
+}
+
+.sinai-planilla-guide-panel ul {
+  list-style-type: disc;
+}
+
+.sinai-planilla-guide-panel ol {
+  list-style-type: decimal;
+}
+
+.sinai-planilla-guide-panel li {
+  display: list-item;
+  margin-block: 0.35rem;
+  list-style: inherit;
+}
+
+.sinai-planilla-guide-panel blockquote {
+  margin-block: 0.85rem;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 3px solid color-mix(in srgb, var(--sinai-role-accent, var(--color-fd-primary)) 70%, transparent);
+  color: var(--color-fd-muted-foreground);
+}
+
+.sinai-planilla-guide-panel .sinai-guide-step,
+.sinai-planilla-guide-panel [class*='GuideStep'],
+.sinai-planilla-guide-panel section.not-prose {
+  margin-block: 1rem;
+}
+
+/* La tabla de contenidos de las guias usa el conector jerarquico de Fumadocs.
+   Se vincula al mismo color de acento que el menu lateral: azul en modo claro
    y verde en modo oscuro. */
 body:has(.sinai-role-administrativo) #sinai-guide-toc {
   --sinai-toc-accent: #4976ff;
@@ -1959,6 +3330,55 @@ body:has(.sinai-custom-toc) #nd-toc {
 #nd-page .prose a[data-image-modal-trigger]:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--sinai-role-accent) 72%, transparent);
   outline-offset: 4px;
+}
+
+.sinai-example-trigger {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 30%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 11%, var(--color-fd-card));
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.sinai-example-trigger svg {
+  color: var(--sinai-role-accent);
+}
+
+/* Variante de enlace para ejemplos que acompaña el texto sin interrumpir la lectura. */
+.sinai-example-trigger-compact {
+  min-height: 2rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  padding: 0.25rem 0.375rem;
+  color: var(--sinai-role-accent);
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sinai-role-accent) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.sinai-example-trigger-compact:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, transparent);
+  color: var(--sinai-role-accent-hover);
+  box-shadow: none;
+  text-decoration-color: currentColor;
+}
+
+.sinai-example-trigger:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 48%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 17%, var(--color-fd-card));
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--sinai-role-accent) 13%, transparent);
+}
+
+.sinai-example-trigger:active {
+  transform: scale(0.97);
+}
+
+.sinai-example-trigger:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
 }
 
 /* Todos los enlaces escritos en las guías se identifican con el color del rol.
@@ -3091,11 +4511,208 @@ body:has(.sinai-custom-toc) #nd-toc {
 }
 
 .sinai-home-section-card[data-role='estudiante'] {
-  --sinai-home-card-accent: #d98e00;
+  --sinai-home-card-accent: #00CEC8;
+}
+
+/* Página de recuperación para rutas inexistentes, dentro y fuera de las guías. */
+.sinai-not-found-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fd-background);
+}
+
+.sinai-not-found-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 5rem;
+  padding: 0.875rem clamp(1.25rem, 6vw, 8rem);
+  border-bottom: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--color-fd-background) 92%, var(--sinai-role-accent));
+}
+
+.sinai-not-found-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.sinai-not-found-header nav a {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.sinai-not-found-header nav a:hover {
+  color: var(--sinai-role-accent);
+}
+
+.sinai-not-found {
+  position: relative;
+  display: grid;
+  flex: 1;
+  place-items: center;
+  overflow: hidden;
+  min-height: calc(100dvh - 5rem);
+  padding: clamp(3.5rem, 10vh, 7rem) 1.5rem;
+  isolation: isolate;
+}
+
+.sinai-not-found::before,
+.sinai-not-found::after {
+  position: absolute;
+  z-index: -1;
+  width: 38rem;
+  height: 38rem;
+  border-radius: 999px;
+  content: '';
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.sinai-not-found::before {
+  top: -23rem;
+  right: -16rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 13%, transparent);
+}
+
+.sinai-not-found::after {
+  bottom: -29rem;
+  left: -22rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, transparent);
+}
+
+.sinai-not-found-content {
+  width: min(100%, 46rem);
+  text-align: center;
+}
+
+.sinai-not-found-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--sinai-role-accent);
+  font-size: 0.8125rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sinai-not-found-eyebrow svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-not-found-code {
+  margin: 0.25rem 0 0;
+  color: color-mix(in srgb, var(--sinai-role-accent) 68%, var(--color-fd-foreground));
+  font-size: clamp(6.5rem, 17vw, 10.5rem);
+  font-weight: 800;
+  letter-spacing: -0.095em;
+  line-height: 0.95;
+}
+
+.sinai-not-found h1 {
+  max-width: 43rem;
+  margin: 1.25rem auto 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  font-weight: 780;
+  letter-spacing: -0.055em;
+  line-height: 1.03;
+}
+
+.sinai-not-found-description {
+  max-width: 39rem;
+  margin: 1.5rem auto 0;
+  color: var(--color-fd-muted-foreground);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.55;
+}
+
+.sinai-not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.sinai-not-found-actions a {
+  min-height: 3.25rem;
+  padding: 0.75rem 1.125rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.sinai-not-found-primary {
+  gap: 0.625rem;
+  background: var(--sinai-role-accent);
+  color: white;
+}
+
+.sinai-not-found-primary:hover {
+  background: var(--sinai-role-accent-hover);
+}
+
+.sinai-not-found-secondary {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 35%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-background) 88%, transparent);
+}
+
+.sinai-not-found-secondary:hover {
+  border-color: var(--sinai-role-accent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 9%, var(--color-fd-background));
+}
+
+.sinai-not-found-embedded {
+  min-height: min(44rem, calc(100dvh - 7rem));
+}
+
+@media (max-width: 640px) {
+  .sinai-not-found-header {
+    min-height: 4.5rem;
+    padding-inline: 1rem;
+  }
+
+  .sinai-not-found-header nav {
+    gap: 0.875rem;
+  }
+
+  .sinai-not-found-header nav a {
+    font-size: 0.75rem;
+  }
+
+  .sinai-not-found-header .sinai-welcome-brand > span {
+    display: none;
+  }
+
+  .sinai-not-found {
+    min-height: calc(100dvh - 4.5rem);
+    padding: 3.5rem 1.25rem;
+  }
+
+  .sinai-not-found-code {
+    font-size: clamp(5.5rem, 32vw, 7.5rem);
+  }
+
+  .sinai-not-found h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+
+  .sinai-not-found-actions {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1.75rem;
+  }
 }
 
 .dark .sinai-home-section-card[data-role='estudiante'] {
-  --sinai-home-card-accent: #f1dc55;
+  --sinai-home-card-accent: #00CEC8;
 }
 
 .sinai-home-section-card:hover {
@@ -3293,5 +4910,443 @@ body:has(.sinai-custom-toc) #nd-toc {
     width: 100%;
     justify-content: center;
     margin-inline-start: 0;
+  }
+}
+
+/* Referencias visuales y superficies de las guías: el color del rol guía la
+   atención, manteniendo una base clara y sobria para el contenido. */
+.sinai-example-trigger {
+  position: relative;
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 30%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 11%, var(--color-fd-card));
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.sinai-example-trigger svg {
+  color: var(--sinai-role-accent);
+}
+
+.sinai-example-trigger:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 48%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 17%, var(--color-fd-card));
+  box-shadow: 0 5px 14px color-mix(in srgb, var(--sinai-role-accent) 13%, transparent);
+}
+
+.sinai-example-trigger:active {
+  transform: scale(0.97);
+}
+
+.sinai-example-trigger:focus-visible,
+.sinai-image-dialog-close:focus-visible,
+.sinai-image-dialog-nav:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-example-preview {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.625rem);
+  left: 0;
+  display: grid;
+  width: min(17rem, calc(100vw - 2.5rem));
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 0.875rem;
+  background: color-mix(in srgb, var(--color-fd-card) 96%, var(--sinai-role-accent) 4%);
+  box-shadow: 0 12px 28px color-mix(in srgb, black 16%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.375rem) scale(0.98);
+  transform-origin: top left;
+  transition: opacity 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sinai-example-preview-images {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 0.375rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  background: var(--color-fd-muted);
+}
+
+.sinai-example-preview-images img {
+  width: 100%;
+  height: 6.25rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.sinai-example-preview-caption {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.sinai-example-trigger:hover .sinai-example-preview,
+.sinai-example-trigger:focus-visible .sinai-example-preview {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Variantes compactas para validar cómo se muestran las referencias visuales
+   en línea con el contenido de una guía. */
+.sinai-example-trigger-contextual,
+.sinai-example-trigger-microchip,
+.sinai-example-trigger-reference {
+  min-height: 2rem;
+  color: var(--sinai-role-accent);
+}
+
+.sinai-example-trigger-contextual {
+  border: 0;
+  border-radius: 0.375rem;
+  background: transparent;
+  padding: 0.25rem 0.375rem;
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--sinai-role-accent) 35%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.sinai-example-trigger-contextual:hover {
+  border-color: transparent;
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, transparent);
+  color: var(--sinai-role-accent-hover);
+  box-shadow: none;
+  text-decoration-color: currentColor;
+}
+
+.sinai-example-trigger-microchip {
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 10%, var(--color-fd-card));
+  padding: 0.3rem 0.65rem;
+  box-shadow: none;
+}
+
+.sinai-example-trigger-microchip:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 44%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 16%, var(--color-fd-card));
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
+}
+
+.sinai-example-trigger-reference {
+  min-height: 2.35rem;
+  border: 1px solid transparent;
+  border-radius: 0.625rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 5%, transparent);
+  padding: 0.4rem 0.6rem;
+  box-shadow: none;
+  transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.sinai-example-trigger-reference:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 24%, transparent);
+  background: color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--sinai-role-accent) 10%, transparent);
+}
+
+.sinai-example-trigger-reference > svg {
+  box-sizing: content-box;
+  border-radius: 0.375rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  padding: 0.3rem;
+}
+
+.sinai-example-trigger-reference-label {
+  color: var(--sinai-role-accent);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.sinai-example-trigger-reference-kicker {
+  color: color-mix(in srgb, var(--color-fd-muted-foreground) 90%, var(--sinai-role-accent));
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.sinai-example-trigger-reference-divider {
+  color: color-mix(in srgb, var(--sinai-role-accent) 38%, var(--color-fd-muted-foreground));
+  font-weight: 400;
+}
+
+.sinai-example-trigger-reference-action {
+  color: var(--sinai-role-accent);
+  font-weight: 750;
+}
+
+.sinai-example-trigger-reference:hover .sinai-example-trigger-reference-action {
+  color: var(--sinai-role-accent-hover);
+}
+
+.sinai-image-dialog-backdrop {
+  background: rgb(2 6 23 / 84%);
+  backdrop-filter: blur(10px);
+}
+
+.sinai-image-dialog {
+  display: flex;
+  width: min(96vw, 96rem);
+  max-height: calc(100dvh - 1.5rem);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+  border-radius: 1.125rem;
+  background: var(--color-fd-card);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 42%);
+}
+
+.sinai-image-dialog-header,
+.sinai-image-dialog-footer {
+  flex: none;
+  padding: 1rem 1.25rem;
+}
+
+.sinai-image-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--sinai-role-accent) 7%, var(--color-fd-card));
+}
+
+.sinai-image-dialog-title,
+.sinai-image-dialog-actions {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sinai-image-dialog-title > svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  padding: 0.5625rem;
+  border-radius: 0.6875rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 14%, transparent);
+  color: var(--sinai-role-accent);
+}
+
+.sinai-image-dialog-title p,
+.sinai-image-dialog-title h2 {
+  margin: 0;
+}
+
+.sinai-image-dialog-title p {
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.sinai-image-dialog-title h2 {
+  overflow: hidden;
+  max-width: min(56rem, 62vw);
+  color: var(--color-fd-foreground);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sinai-image-dialog-close,
+.sinai-image-dialog-nav {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 26%, var(--color-fd-border));
+  border-radius: 0.625rem;
+  background: var(--color-fd-card);
+  color: var(--color-fd-foreground);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.sinai-image-dialog-nav {
+  min-width: 6.5rem;
+  padding-inline: 0.875rem;
+}
+
+.sinai-image-dialog-close {
+  width: 2.5rem;
+  padding: 0;
+}
+
+.sinai-image-dialog-close svg,
+.sinai-image-dialog-nav svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-image-dialog-close:hover,
+.sinai-image-dialog-nav:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 48%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 11%, var(--color-fd-card));
+}
+
+.sinai-image-dialog-close:active,
+.sinai-image-dialog-nav:active {
+  transform: scale(0.97);
+}
+
+.sinai-image-dialog-stage {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+  background: color-mix(in srgb, #020617 94%, var(--sinai-role-accent) 6%);
+}
+
+.sinai-image-dialog-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100dvh - 10rem);
+  height: auto;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 10%), 0 12px 32px rgb(0 0 0 / 36%);
+  object-fit: contain;
+}
+
+.sinai-image-dialog-footer {
+  border-top: 1px solid var(--color-fd-border);
+  background: color-mix(in srgb, var(--sinai-role-accent) 5%, var(--color-fd-card));
+}
+
+.sinai-image-dialog-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sinai-image-dialog-progress {
+  min-width: 7rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.sinai-image-dialog-progress strong {
+  color: var(--sinai-role-accent);
+  font-size: 0.875rem;
+  font-weight: 750;
+}
+
+.sinai-guide-feedback,
+.sinai-guide-faq {
+  border-color: var(--color-fd-border) !important;
+  background: var(--color-fd-card) !important;
+  box-shadow:
+    0 1px 2px rgb(15 23 42 / 4%),
+    0 6px 16px rgb(15 23 42 / 5%);
+}
+
+/* Las alertas sí conservan el matiz del rol para destacar información importante. */
+.sinai-guide-callout {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border)) !important;
+  background: color-mix(in srgb, var(--sinai-role-accent) 6%, var(--color-fd-card)) !important;
+  box-shadow:
+    inset 3px 0 0 var(--sinai-role-accent),
+    0 4px 12px color-mix(in srgb, var(--sinai-role-accent) 5%, transparent);
+}
+
+.sinai-guide-callout svg,
+.sinai-guide-feedback > div > svg {
+  color: var(--sinai-role-accent) !important;
+}
+
+.sinai-guide-faq-header {
+  border-color: var(--color-fd-border) !important;
+  background: var(--color-fd-card);
+}
+
+.sinai-guide-faq-icon {
+  background: var(--sinai-role-accent);
+  color: white;
+}
+
+.sinai-guide-feedback-primary {
+  background: var(--sinai-role-accent);
+}
+
+.sinai-guide-feedback-primary:hover {
+  background: var(--sinai-role-accent-hover);
+}
+
+.sinai-guide-faq-item {
+  background: var(--color-fd-card);
+}
+
+.sinai-guide-faq-item:hover,
+.sinai-guide-faq-item[open] {
+  background: color-mix(in srgb, var(--sinai-role-accent) 4%, var(--color-fd-card));
+}
+
+.sinai-guide-faq-index {
+  min-width: 2rem;
+  padding: 0.25rem 0.375rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
+  color: var(--sinai-role-accent);
+  text-align: center;
+}
+
+.sinai-guide-faq-chevron {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 26%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-role-accent) 8%, var(--color-fd-card));
+}
+
+.sinai-guide-faq-answer {
+  border-color: var(--sinai-role-accent);
+}
+
+@media (hover: none) {
+  .sinai-example-preview {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sinai-image-dialog-header,
+  .sinai-image-dialog-footer {
+    padding: 0.75rem;
+  }
+
+  .sinai-image-dialog-title h2 {
+    max-width: 48vw;
+  }
+
+  .sinai-image-dialog-image {
+    max-height: calc(100dvh - 8.5rem);
+  }
+
+  .sinai-image-dialog-navigation {
+    gap: 0.375rem;
+  }
+
+  .sinai-image-dialog-progress {
+    min-width: auto;
+    font-size: 0.6875rem;
   }
 }

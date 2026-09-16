@@ -1,0 +1,18 @@
+{
+  "title": "Herramientas",
+  "description": "Autoevaluación, Chamilo, reuniones, informes y más.",
+  "defaultOpen": false,
+  "pages": [
+    "autoevaluacion",
+    "autoevaluacion-responder",
+    "chamilo",
+    "gestion-de-reuniones",
+    "firmas-digitales",
+    "informes-digitales",
+    "copia-de-seguridad",
+    "piar-y-caracterizacion",
+    "generar-correos-institucionales",
+    "comunidad-educativa-morce"
+  ],
+  "icon": "Wrench"
+}

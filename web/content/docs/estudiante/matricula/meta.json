@@ -1,0 +1,8 @@
+{
+  "title": "Matrícula",
+  "description": "Complete los procesos de prematrícula disponibles.",
+  "defaultOpen": false,
+  "pages": [
+    "prematricula"
+  ]
+}

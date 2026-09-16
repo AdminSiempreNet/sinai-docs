@@ -1,0 +1,11 @@
+{
+  "title": "Aula virtual",
+  "description": "Gestione tareas, usuarios y calificaciones del aula virtual.",
+  "defaultOpen": false,
+  "pages": [
+    "tareas-en-linea",
+    "chamilo",
+    "gestion-de-usuarios",
+    "notas"
+  ]
+}

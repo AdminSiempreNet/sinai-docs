@@ -1,0 +1,10 @@
+{
+  "title": "Actividad académica",
+  "description": "Consulte sus tareas, aula virtual y autoevaluación.",
+  "defaultOpen": false,
+  "pages": [
+    "mis-tareas",
+    "aula-virtual",
+    "autoevaluacion"
+  ]
+}

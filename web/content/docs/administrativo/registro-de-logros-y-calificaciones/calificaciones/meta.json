@@ -1,0 +1,15 @@
+{
+  "title": "Calificaciones",
+  "description": "Registro, planillas, trasladados, ajustes y autorizaciones.",
+  "defaultOpen": false,
+  "pages": [
+    "registro-por-actividades",
+    "registro-nota-directa",
+    "planilla-excel",
+    "calificaciones-trasladados",
+    "modificar-calificaciones",
+    "ajuste-de-nota-final",
+    "autorizaciones"
+  ],
+  "icon": "ClipboardList"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Gestión Académica",
+  "description": "Escalas, áreas, componentes, sedes y grupos.",
+  "defaultOpen": false,
+  "pages": [
+    "escalas",
+    "areas-y-asignaturas",
+    "componentes",
+    "sedes-grupos-y-evaluacion"
+  ],
+  "icon": "School"
+}

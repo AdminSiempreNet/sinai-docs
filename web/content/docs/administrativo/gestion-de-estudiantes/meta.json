@@ -1,0 +1,13 @@
+{
+  "title": "Gestión de estudiantes",
+  "description": "Registro, información, novedades y seguimiento de estudiantes.",
+  "defaultOpen": false,
+  "pages": [
+    "registro-estudiantes",
+    "informacion-de-estudiantes",
+    "novedades-de-estudiantes",
+    "validacion-y-electivas",
+    "seguimiento-a-estudiantes"
+  ],
+  "icon": "UsersRound"
+}

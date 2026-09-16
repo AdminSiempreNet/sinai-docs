@@ -1,0 +1,11 @@
+{
+  "title": "Cierre académico (periodo)",
+  "description": "Consulte refuerzos, observaciones e informes al finalizar el periodo.",
+  "defaultOpen": false,
+  "pages": [
+    "refuerzos",
+    "observaciones",
+    "informes-de-evaluacion",
+    "cuadro-de-honor"
+  ]
+}

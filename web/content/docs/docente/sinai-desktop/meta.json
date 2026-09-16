@@ -1,0 +1,12 @@
+{
+  "title": "SINAI Desktop",
+  "description": "Instale la aplicación y consulte sus procesos y opciones de sincronización.",
+  "defaultOpen": false,
+  "pages": [
+    "inicio-y-configuracion",
+    "planeacion",
+    "evaluacion",
+    "asistencia",
+    "herramientas-y-sincronizacion"
+  ]
+}

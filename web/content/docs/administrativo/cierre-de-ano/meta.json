@@ -1,0 +1,16 @@
+{
+  "title": "Cierre de año",
+  "description": "Comisión, promoción, recuperaciones y traslado de matrícula.",
+  "defaultOpen": false,
+  "pages": [
+    "comision-de-evaluacion",
+    "comision-de-evaluacion-proceso",
+    "ajuste-de-nota-final",
+    "procesar-promocion",
+    "como-procesar-la-promocion",
+    "recuperaciones-finales",
+    "trasladar-matricula",
+    "informes"
+  ],
+  "icon": "Award"
+}

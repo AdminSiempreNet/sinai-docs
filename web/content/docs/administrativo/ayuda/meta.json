@@ -1,0 +1,10 @@
+{
+  "title": "Ayuda",
+  "description": "Políticas y preguntas frecuentes.",
+  "defaultOpen": false,
+  "pages": [
+    "politicas",
+    "preguntas-frecuentes"
+  ],
+  "icon": "CircleHelp"
+}

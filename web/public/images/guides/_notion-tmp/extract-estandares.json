@@ -1,0 +1,39 @@
+{
+  "name": "Estándares",
+  "lines": [
+    "Estándares",
+    "La funcionalidad Estándares de la plataforma SINAI permite a los docentes consultar los Estándares Básicos de Competencias y los Derechos Básicos de Aprendizaje (DBA) definidos por el Ministerio de Educación Nacional (MEN).",
+    "Esta herramienta sirve como apoyo para la planeación académica y permite consultar los referentes correspondientes a los diferentes grupos de grados y áreas.",
+    "Nota: Los Estándares Básicos de Competencias se encuentran organizados por grupos de grados, mientras que los Derechos Básicos de Aprendizaje se consultan por grado y área.",
+    "Ruta de Acceso: Planeación > Estándares",
+    "Paso a paso",
+    "Al ingresar, encontrará las opciones disponibles para consultar los Estándares Básicos de Competencias y los Derechos Básicos de Aprendizaje.",
+    "Para realizar la consulta:",
+    "En el menú ubicado en el lado izquierdo, seleccione Estándares Básicos de Competencias.",
+    "Seleccione el grupo de grados que desea consultar.",
+    "Seleccione el área correspondiente.",
+    "De manera opcional, seleccione el componente específico que desea consultar.",
+    "Importante: Los Estándares Básicos de Competencias están organizados por grupos de grados. Por ejemplo: primero a tercero, cuarto a quinto, sexto a séptimo, entre otros.",
+    "Consultar los Derechos Básicos de Aprendizaje",
+    "Para consultar los DBA:",
+    "En el menú ubicado en el lado izquierdo, seleccione Derechos Básicos de Aprendizaje.",
+    "Seleccione el grado que desea consultar.",
+    "Seleccione el área correspondiente.",
+    "Consultar las evidencias de un DBA",
+    "Cada Derecho Básico de Aprendizaje cuenta con sus respectivas evidencias, las cuales permiten ampliar la información relacionada con el aprendizaje esperado.",
+    "Para consultar las evidencias:",
+    "Ubique el DBA que desea revisar.",
+    "Haga clic en el botón Evidencias.",
+    "El sistema mostrará las evidencias asociadas al DBA seleccionado.",
+    "Esta información puede ser utilizada como referencia para fortalecer la planeación y el desarrollo de las actividades académicas."
+  ],
+  "images": [
+    { "file": "acceso-estandares.png", "altHint": "Ruta de acceso Planeación > Estándares" },
+    { "file": "step-01.png", "altHint": "Consultar Estándares Básicos de Competencias" },
+    { "file": "step-02.png", "altHint": "Consultar Derechos Básicos de Aprendizaje" },
+    { "file": "step-03.png", "altHint": "Listado DBA y botón Evidencias" },
+    { "file": "step-04.png", "altHint": "Evidencias asociadas al DBA" }
+  ],
+  "tutorialAtTop": false,
+  "hasFaq": false
+}

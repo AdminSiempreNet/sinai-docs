@@ -7,6 +7,7 @@ import {
   SidebarHelp,
   SidebarMenuDecoration,
 } from '@/components/sidebar-navigation';
+import { SinaiFontSizeCollapsedPanel } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -45,6 +46,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       >
         {children}
       </DocsLayout>
+      <SinaiFontSizeCollapsedPanel />
       <SinaiSiteFooter />
     </div>
   );

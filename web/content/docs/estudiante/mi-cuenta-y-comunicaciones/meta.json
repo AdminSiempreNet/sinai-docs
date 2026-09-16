@@ -1,0 +1,10 @@
+{
+  "title": "Mi cuenta y comunicaciones",
+  "description": "Actualice sus datos y manténgase en contacto con sus docentes.",
+  "defaultOpen": false,
+  "pages": [
+    "actualizar-perfil",
+    "mensajes",
+    "mis-docentes"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Primeros pasos",
+  "description": "Acceda a SINAI y mantenga actualizado su perfil.",
+  "defaultOpen": false,
+  "pages": [
+    "ingresar-a-sinai",
+    "recuperar-contrasena",
+    "actualizar-perfil"
+  ]
+}

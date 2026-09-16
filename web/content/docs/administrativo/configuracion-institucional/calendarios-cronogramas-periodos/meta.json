@@ -1,0 +1,12 @@
+{
+  "title": "Calendarios, cronogramas y periodos",
+  "description": "Configure calendarios, parámetros, escalas y cronogramas.",
+  "defaultOpen": false,
+  "pages": [
+    "calendarios",
+    "configuracion-de-parametros",
+    "configuracion-de-escalas",
+    "cronogramas-y-periodos"
+  ],
+  "icon": "CalendarDays"
+}

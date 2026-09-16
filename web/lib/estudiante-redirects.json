@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/boletin-del-periodo/boletin-del-periodo",
+    "destination": "/docs/estudiante/resultados-academicos/boletin-del-periodo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/boletin-final/boletin-final",
+    "destination": "/docs/estudiante/resultados-academicos/boletin-final",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/evaluacion-capacitacion-documentada/calificaciones-consolidadas/calificaciones-consolidadas",
+    "destination": "/docs/estudiante/resultados-academicos/calificaciones-consolidadas",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/como-actualizar-el-perfil",
+    "destination": "/docs/estudiante/mi-cuenta-y-comunicaciones/actualizar-perfil",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-aula-virtual-chamilo",
+    "destination": "/docs/estudiante/actividad-academica/aula-virtual",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-autoevaluacion",
+    "destination": "/docs/estudiante/actividad-academica/autoevaluacion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-como-cambiar-mi-contrasena",
+    "destination": "/docs/estudiante/primeros-pasos/cambiar-contrasena",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-como-ingresar-a-sinai",
+    "destination": "/docs/estudiante/primeros-pasos/ingresar-a-sinai",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-informes",
+    "destination": "/docs/estudiante/resultados-academicos/informes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-mensajes",
+    "destination": "/docs/estudiante/mi-cuenta-y-comunicaciones/mensajes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/e-prematricula",
+    "destination": "/docs/estudiante/matricula/prematricula",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/mis-docentes",
+    "destination": "/docs/estudiante/mi-cuenta-y-comunicaciones/mis-docentes",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/inicio/mis-tareas",
+    "destination": "/docs/estudiante/actividad-academica/mis-tareas",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/anotaciones-seguimiento-capacitacion-documentada/e-anotaciones",
+    "destination": "/docs/estudiante/asistencia-y-convivencia/anotaciones",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/excusas-seguimiento-capacitacion-documentada/e-excusas",
+    "destination": "/docs/estudiante/asistencia-y-convivencia/excusas",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/ficha-observador-seguimiento-capacitacion-documentada/e-ficha-observador",
+    "destination": "/docs/estudiante/asistencia-y-convivencia/ficha-observador",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/inasistencias-consolidadas-y-detalladas/inasistencias-consolidadas-y-detalladas",
+    "destination": "/docs/estudiante/asistencia-y-convivencia/inasistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/estudiante/capacitacion-documentada/seguimiento-capacitacion-documentada/seguimiento-seguimiento-capacitacion-documentada/seguimiento",
+    "destination": "/docs/estudiante/asistencia-y-convivencia/seguimiento",
+    "permanent": true
+  }
+]

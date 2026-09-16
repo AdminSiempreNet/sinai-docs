@@ -1,0 +1,13 @@
+{
+  "title": "Registro estudiantes",
+  "description": "Registro individual, importación, inscripciones y prematrícula.",
+  "defaultOpen": false,
+  "pages": [
+    "registro-individual",
+    "importar-matricula-masiva",
+    "inscripciones",
+    "prematricula",
+    "prematricula-proceso-de-temporada"
+  ],
+  "icon": "UserPlus"
+}

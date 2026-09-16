@@ -1,0 +1,8 @@
+{
+  "title": "Ficha observador del estudiante",
+  "description": "Identifique la versión de la ficha que usa su institución y consulte la guía correspondiente.",
+  "defaultOpen": false,
+  "collapsible": false,
+  "pages": [],
+  "icon": "Eye"
+}

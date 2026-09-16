@@ -1,0 +1,15 @@
+{
+  "title": "Planeación y currículo",
+  "description": "Organice clases, mallas curriculares, logros y actividades del periodo.",
+  "defaultOpen": false,
+  "pages": [
+    "planeacion-de-clases",
+    "mallas-curriculares",
+    "estandares",
+    "banco-de-logros",
+    "registro-de-desempenos",
+    "logros-del-periodo",
+    "actividades-del-periodo",
+    "copiar-planeacion"
+  ]
+}

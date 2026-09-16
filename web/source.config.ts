@@ -10,6 +10,7 @@ const guideTocItemSchema = z.object({
 
 const docsSchema = pageSchema.extend({
   guide: z.boolean().optional(),
+  section: z.boolean().optional(),
   guideToc: z.array(guideTocItemSchema).optional(),
   status: z.string().optional(),
   lastReviewed: z.string().optional(),

@@ -1,0 +1,11 @@
+{
+  "title": "Registro de calificaciones",
+  "description": "Registre y consulte las valoraciones académicas de sus estudiantes.",
+  "defaultOpen": false,
+  "pages": [
+    "registro-en-linea",
+    "calificacion-definitiva-directa",
+    "planilla-excel",
+    "detallado-individual"
+  ]
+}

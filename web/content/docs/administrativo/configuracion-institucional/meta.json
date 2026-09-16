@@ -1,0 +1,11 @@
+{
+  "title": "Configuración Institucional",
+  "description": "Datos de la institución, calendarios y configuración académica.",
+  "defaultOpen": false,
+  "pages": [
+    "datos-institucionales",
+    "calendarios-cronogramas-periodos",
+    "gestion-academica"
+  ],
+  "icon": "Landmark"
+}
