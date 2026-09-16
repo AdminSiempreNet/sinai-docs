@@ -102,11 +102,15 @@ PlanillaGuideGroup.displayName = 'PlanillaGuideGroup';
 // Helps MDX/runtime detection even if the component identity is wrapped.
 (PlanillaGuideGroup as unknown as { group: true }).group = true;
 
+function getComponentDisplayName(type: ReactElement['type']): string | undefined {
+  if (typeof type !== 'function') return undefined;
+  return (type as { displayName?: string }).displayName;
+}
+
 function isPlanillaGuideLoose(child: ReactNode): child is ReactElement<PlanillaGuideProps> {
   if (!isValidElement(child)) return false;
   if (child.type === PlanillaGuide) return true;
-  const type = child.type as { displayName?: string };
-  if (typeof type === 'function' && type.displayName === 'PlanillaGuide') return true;
+  if (getComponentDisplayName(child.type) === 'PlanillaGuide') return true;
   const props = child.props as Partial<PlanillaGuideProps>;
   return typeof props?.id === 'string' && typeof props?.title === 'string' && typeof props?.image === 'string';
 }
@@ -114,8 +118,7 @@ function isPlanillaGuideLoose(child: ReactNode): child is ReactElement<PlanillaG
 function isPlanillaGuideGroup(child: ReactNode): child is ReactElement<PlanillaGuideGroupProps> {
   if (!isValidElement(child)) return false;
   if (child.type === PlanillaGuideGroup) return true;
-  const type = child.type as { displayName?: string };
-  if (typeof type === 'function' && type.displayName === 'PlanillaGuideGroup') return true;
+  if (getComponentDisplayName(child.type) === 'PlanillaGuideGroup') return true;
   const props = child.props as Partial<PlanillaGuideGroupProps> & { group?: boolean };
   return props?.group === true;
 }
@@ -421,7 +424,7 @@ export function PlanillaGuideSwitcher({
   }, [closePreview, openGroup, previewSource, selectLeaf]);
 
   const pickItem = useCallback(
-    (item: PickerItem | PlanillaGuideProps, kind: 'leaf' | 'group') => {
+    (item: { id: string; status?: 'ready' | 'soon' }, kind: 'leaf' | 'group') => {
       if (item.status === 'soon') return;
       if (kind === 'group') {
         openGroup(item.id);
