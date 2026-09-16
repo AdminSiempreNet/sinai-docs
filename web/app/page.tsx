@@ -133,11 +133,20 @@ export default function Home() {
 
           <figure className="sinai-welcome-banner">
             <Image
-              src="/images/home/sinai-knowledge-base.png"
+              src="/images/home/sinai-knowledge-base-light.png"
               alt="Base de conocimiento SINAI: isologo oficial y rutas de consulta del centro de ayuda"
               fill
               priority
               sizes="(max-width: 900px) 100vw, 42vw"
+              className="sinai-welcome-banner-image sinai-welcome-banner-image-light"
+            />
+            <Image
+              src="/images/home/sinai-knowledge-base.png"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className="sinai-welcome-banner-image sinai-welcome-banner-image-dark"
             />
             <figcaption>
               <span>Base de conocimiento</span>
