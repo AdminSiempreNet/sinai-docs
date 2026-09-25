@@ -1,11 +1,13 @@
 ---
 title: "Configuración Académica"
-description: "Conozca las opciones de configuración Académica y siga el procedimiento correspondiente en SINAI."
+description: "Defina horas semanales, pesos porcentuales y créditos de cada asignatura por nivel educativo. Esta configuración es la base del botón Generar en la asignación académica por grupo."
 guide: true
 wordpressId: 29204
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/configuracion-academica/"
-lastModified: "2023-11-14 16:14:14"
+lastModified: "2026-09-17 15:41:00"
+lastReviewed: "2026-09-17"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,69 +16,152 @@ lastModified: "2023-11-14 16:14:14"
 />
 </GuideVideos>
 
-## Guía paso a paso
+## Qué es la Configuración Académica
 
-### 1\. Configuración Académica
+La **Configuración Académica** es la tabla donde la institución define, para cada asignatura y por cada nivel educativo:
 
-La **configuración académica** es el proceso mediante el cual se define la intensidad horaria y el peso porcentual de cada asignatura dentro de un área. Esta información sirve como base para la asignación académica y la organización curricular.
+- las **horas semanales (HS)** que corresponden a esa asignatura;
+- el **peso porcentual (%)** de la asignatura dentro de su área;
+- los **créditos (Cr)**, cuando aplique, en la sección del Programa de Formación Complementaria (PFC).
 
-En la plataforma SINAI, puede realizar este proceso siguiendo esta ruta: **Menú Establecimiento > Configuración Académica > Configuración Académica** <GuideImageTrigger src={"/images/wordpress/2025/01/1-Configuracion-academica.png"} alt={"Captura de Configuracion academica"}>Ver ejemplo</GuideImageTrigger>
+Esta información es el **plan de estudio operativo** que SINAI usa después para armar la asignación académica de los grupos. Si aquí una asignatura no tiene horas en el nivel del grupo, **no aparecerá** al usar el botón **Generar** en la asignación por grupo.
 
+<GuideCallout>
+  Antes de configurar horas y pesos, la institución debe tener creadas las **áreas** y las **asignaturas**. Si aún no las tiene, consulte la guía de [Áreas y asignaturas](/docs/administrativo/configuracion-institucional/gestion-academica/areas-y-asignaturas).
+</GuideCallout>
 
+## Para qué sirve (relación con la asignación académica)
 
-En la sección de configuración académica encontrará dos pestañas principales:
+Cuando en **Personal > Asignación académica** selecciona un grupo y pulsa **Generar**, SINAI:
 
-- **Áreas y Asignaturas**
-- **Componentes de la Evaluación**
+1. Identifica el **nivel** o el **modelo** del grupo (por ejemplo, Primaria, Media, Adultos o PFC).
+2. Busca en la Configuración Académica las asignaturas que tengan **intensidad horaria mayor que cero** para ese nivel o modelo.
+3. Crea automáticamente los registros de asignación del grupo con:
+   - las **horas semanales** definidas aquí;
+   - el **peso porcentual** definido aquí;
+   - los **créditos** definidos aquí (cuando existan).
 
-#### 2\. Áreas y Asignaturas
+Por eso, completar bien esta pantalla **antes** de generar la asignación evita grupos incompletos, horas en cero y tener que digitar asignatura por asignatura.
 
-Esta sección permite configurar las áreas y asignaturas, especificando su intensidad horaria (HS) y peso porcentual (%).
+<GuideCallout type="warning">
+  Generar solo crea asignaturas **nuevas** que aún no existan en el grupo. Si la asignación del grupo ya está creada, Generar no volverá a traer cambios que haya hecho después en la Configuración Académica; esos ajustes se hacen en la misma pantalla de asignación o regenerando de forma controlada según el procedimiento de su institución.
+</GuideCallout>
 
+## Cómo llegar a la pantalla
 
-El contenido se organiza en columnas: la primera columna muestra el nombre del área, seguida por otra columna con las asignaturas que pertenecen a esa área. Frente a cada área y asignatura, se encuentran los niveles educativos: Preescolar, Primaria, Secundaria, Media, Adultos y Normal.
+1. Inicie sesión en SINAI con un usuario administrativo que tenga permiso para modificar la configuración académica.
+2. Vaya al menú **Establecimiento**.
+3. Seleccione **Configuración Académica** y luego nuevamente **Configuración Académica**.
 
+Ruta resumida: **Establecimiento > Configuración Académica > Configuración Académica**.
 
-Para cada nivel, hay dos columnas adicionales que detallan:
+<GuideImageTrigger src={"/images/wordpress/2025/01/1-Configuracion-academica.png"} alt={"Menú de Configuración Académica en SINAI"}>Ver ejemplo de la ruta</GuideImageTrigger>
 
-- **El número de horas semanales** asignadas a cada asignatura.
-- **El peso porcentual** de esa asignatura dentro del área correspondiente. <GuideImageTrigger src={"/images/wordpress/2025/01/3-Configuracion-academica.png"} alt={"Captura de Configuracion academica"}>Ver ejemplo</GuideImageTrigger>
+## Cómo se organiza la tabla
 
+La pantalla muestra una sola tabla del plan de estudios del **calendario activo** de la institución.
 
+| Columna | Qué indica |
+| --- | --- |
+| **Área** | Nombre del área (se muestra una sola vez y agrupa sus asignaturas). |
+| **Asignatura** | Cada asignatura perteneciente al área. |
+| **Preescolar, Primaria, Secundaria, Media, Adultos** | Para cada nivel: horas semanales (**HS**) y peso porcentual (**%**). |
+| **PFC** | Programa de Formación Complementaria (formación complementaria / normal superior): **HS**, **%** y **Cr** (créditos). |
 
-#### 3\. Componentes de la Evaluación
+<GuideImageTrigger src={"/images/wordpress/2025/01/3-Configuracion-academica.png"} alt={"Tabla de áreas, asignaturas, horas semanales y pesos por nivel"}>Ver ejemplo de la tabla</GuideImageTrigger>
 
-Facilita la definición de los criterios y componentes que se aplicarán para la evaluación académica.
+### Qué significan HS, % y Cr
 
-Muestra el número de componentes definidos por la institución educativa, junto con su nombre y el peso porcentual asignado a cada uno. <GuideImageTrigger src={"/images/wordpress/2025/01/6-Configuracion-academica.png"} alt={"Captura de Configuracion academica"}>Ver ejemplo</GuideImageTrigger>
+- **HS (horas semanales):** cantidad de horas a la semana de la asignatura en ese nivel. Use **0** si la asignatura **no** se dicta en ese nivel. Solo las asignaturas con HS mayor que cero se tendrán en cuenta al **Generar** la asignación del grupo de ese nivel.
+- **% (peso porcentual):** participación de la asignatura dentro del área, para efectos de ponderación académica según la forma de promoción configurada en el calendario.
+- **Cr (créditos):** valor de créditos de la asignatura. Es opcional. Si lo diligencia, debe ser un número entero entre **0** y **10**. Ese valor se copia a la asignación cuando use **Generar**.
 
+## Cómo completar y guardar la configuración
 
+### 1. Revise que estén todas las áreas y asignaturas
 
-#### 4\. Actividades Predeterminadas
+Si falta un área o una asignatura en la tabla, créela primero en [Áreas y asignaturas](/docs/administrativo/configuracion-institucional/gestion-academica/areas-y-asignaturas) y vuelva a esta pantalla.
 
-Especifica el número máximo de casillas asignadas a ese componente. En las instituciones que utilizan actividades ponderadas, también indica el peso porcentual correspondiente a cada actividad. <GuideImageTrigger src={"/images/wordpress/2025/01/7-Configuracion-academica.png"} alt={"Captura de Configuracion academica"}>Ver ejemplo</GuideImageTrigger>
+### 2. Digite horas y pesos por nivel
 
+Para cada asignatura, complete las casillas **HS** y **%** de todos los niveles que muestre la tabla (Preescolar, Primaria, Secundaria, Media, Adultos y PFC).
 
+- Si la asignatura no aplica a un nivel, deje **0** en HS y el peso que corresponda según el criterio institucional (con frecuencia también 0).
+- No deje casillas de HS o % en blanco: al guardar, SINAI exige que todos esos campos tengan un valor numérico.
 
-#### 5\. Escala Especial para Preescolar
+### 3. Digite créditos en PFC cuando corresponda
 
-Define la equivalencia de cada nivel de desempeño, permitiendo realizar una valoración cualitativa basada en la escala de la institución. Esta opción es editable y, una vez realizados los cambios o modificaciones, es necesario hacer clic en el botón **Guardar** para aplicarlos. <GuideImageTrigger src={"/images/wordpress/2025/01/8-Configuracion-academica.png"} alt={"Captura de Configuracion academica"}>Ver ejemplo</GuideImageTrigger>
+En la columna **Cr** del bloque **PFC**, registre los créditos de la asignatura si su institución los utiliza. Puede dejarlo vacío si aún no aplica.
 
+### 4. Use las flechas del teclado para avanzar más rápido
 
+Puede moverse entre casillas con las **teclas direccionales** (arriba, abajo, izquierda y derecha). Es útil cuando debe diligenciar muchas asignaturas.
 
+### 5. Guarde los cambios
+
+Pulse **Guardar cambios**.
+
+- Si todo está correcto, verá el mensaje de confirmación de guardado.
+- Si hay casillas vacías, créditos fuera de rango (0–10) o, según la forma de promoción del calendario, pesos de un área que no sumen 0 o 100 en un nivel, SINAI mostrará un mensaje indicando qué debe corregir.
+
+<GuideCallout>
+  En calendarios cuya promoción exige que los pesos del área sumen 100, revise nivel por nivel: la suma de los **%** de las asignaturas de una misma área debe ser **0** (si no se usa ese nivel) o **100**.
+</GuideCallout>
+
+### 6. Descargue un Excel de respaldo (opcional)
+
+Pulse **Descargar Excel** para obtener un archivo con la configuración que ve en pantalla. Sirve para revisión institucional, archivo o comparación entre calendarios.
+
+## Orden recomendado en el inicio de calendario
+
+1. Crear o actualizar **áreas y asignaturas**.
+2. Completar la **Configuración Académica** (esta guía): horas, pesos y créditos.
+3. Crear o revisar los **grupos** del calendario.
+4. Ir a **Personal > Asignación académica**, elegir el grupo y pulsar **Generar**.
+5. Revisar docentes, horas y pesos en la asignación del grupo y guardar.
+
+Si omite el paso 2, el botón **Generar** puede indicar que no encontró asignaturas con intensidad horaria para el nivel o modelo del grupo, o generar una asignación incompleta.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Configuración Académica»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué debo tener listo antes de diligenciar la Configuración Académica?"}>
+    Debe tener creado el calendario de trabajo, las áreas y las asignaturas de la institución. También necesita un usuario con permiso para guardar cambios en esta pantalla. Sin áreas y asignaturas, la tabla no tendrá filas para configurar.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Configuración Académica» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué es importante esta pantalla para el botón Generar de la asignación académica?"}>
+    El botón Generar, en la asignación por grupo, toma de aquí las asignaturas que tengan horas semanales mayores que cero para el nivel o modelo del grupo, y copia automáticamente horas, peso y créditos. Si la Configuración Académica está incompleta o en cero, Generar no podrá armar correctamente la carga del grupo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Configuración Académica»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Qué pasa si dejo en cero las horas de una asignatura en Primaria?"}>
+    Esa asignatura no se incluirá al generar la asignación de un grupo de Primaria. Úselo cuando la asignatura realmente no se ofrece en ese nivel. Si sí se dicta, registre la intensidad horaria semanal correspondiente.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué significa PFC y la columna Cr?"}>
+    PFC es el Programa de Formación Complementaria. En esa sección, además de horas (HS) y peso (%), puede registrar créditos (Cr) de la asignatura. Los créditos son opcionales; si los digita, deben estar entre 0 y 10, y se trasladan a la asignación al usar Generar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Al guardar me dice que hay campos vacíos. ¿Qué debo hacer?"}>
+    Complete todas las casillas de horas semanales (HS) y peso (%) de la asignatura indicada en el mensaje. No las deje en blanco: si la asignatura no aplica a un nivel, escriba 0.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Al guardar me indica que la suma de los pesos del área no es 100. ¿Por qué?"}>
+    En calendarios configurados para exigir esa validación, la suma de los pesos (%) de las asignaturas de un mismo área, en cada nivel, debe ser 0 o 100. Revise el área y el nivel mencionados en el mensaje y ajuste los porcentajes hasta cumplir esa condición.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Ya generé la asignación de un grupo y después cambié las horas aquí. ¿Se actualizan solas?"}>
+    No de forma automática con un nuevo Generar sobre lo ya existente: Generar agrega asignaturas que aún no estén en el grupo. Los cambios posteriores de horas, pesos o créditos sobre registros ya creados se revisan y ajustan en la pantalla de asignación académica del grupo, o según el procedimiento que defina la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Esta pantalla sirve para configurar componentes de evaluación o escalas?"}>
+    No. Esta guía corresponde solo a horas, pesos y créditos del plan de estudios. Los componentes de evaluación y las escalas se configuran en otras opciones del menú Establecimiento / Configuración Académica. Use esta pantalla para la intensidad y la ponderación que alimentan la asignación por grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="09" question={"¿Cómo verifico que la configuración quedó bien?"}>
+    Guarde sin mensajes de error, descargue el Excel si desea contrastar, y pruebe Generar en un grupo de cada nivel que ofrezca la institución. Debe aparecer la lista esperada de asignaturas con las horas y pesos definidos aquí.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="10" question={"No tengo permiso para guardar. ¿Qué hago?"}>
+    Solicite al administrador de usuarios de la institución que le habilite el permiso de modificación de la Configuración Académica. Sin ese permiso, podrá consultar la pantalla, pero no podrá guardar cambios.
   </GuideFAQItem>
 </GuideFAQ>
