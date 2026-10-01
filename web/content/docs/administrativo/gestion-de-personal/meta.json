@@ -5,7 +5,6 @@
   "pages": [
     "planta-de-cargos",
     "funcionarios",
-    "configuracion-academica",
     "asignacion-academica",
     "seguimiento-docente"
   ],

@@ -1,0 +1,16 @@
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:300
+- Network:       http://192.168.80.19:300
+- Environments: .env.local
+✓ Ready in 1262ms
+Creating turbopack project {
+  dir: 'C:\\Users\\andyg\\Desktop\\SIEMPRE.NET\\sinai-docs\\web',
+  testMode: true
+}
+[MDX] generated files in 95.47810000000027ms
+[MDX] started dev server
+
+○ Compiling / ...
+ GET / 200 in 2.2s (next.js: 1501ms, application-code: 733ms)
+ GET / 200 in 196ms (next.js: 6ms, application-code: 189ms)
+[?25h

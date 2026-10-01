@@ -27,7 +27,8 @@ const DOCENTE_SECTION_BY_NAME: Record<string, string> = {
   "Cierre de año": "/docs/docente/cierre-de-ano",
   "Aula virtual": "/docs/docente/aula-virtual",
   "Herramientas": "/docs/docente/herramientas",
-  "SINAI Desktop": "/docs/docente/sinai-desktop"
+  "SINAI Desktop": "/docs/docente/sinai-desktop",
+  Ayuda: "/docs/docente/ayuda",
 };
 
 const ESTUDIANTE_SECTION_BY_NAME: Record<string, string> = {

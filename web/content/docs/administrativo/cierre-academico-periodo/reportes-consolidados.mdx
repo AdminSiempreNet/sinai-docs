@@ -1,20 +1,26 @@
 ---
-title: "Consolidar"
-description: "Conozca las opciones de consolidar y siga el procedimiento correspondiente en SINAI."
+title: "Consolidar y calcular puestos"
+description: "Consolide calificaciones y calcule los puestos del período en SINAI."
 guide: true
 wordpressId: 29701
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/consolidar/"
-lastModified: "2023-11-15 00:36:39"
+lastModified: "2026-10-01"
 ---
 ## Video tutorial
 
-<GuideVideos compact>
-<YouTube id="689KgLO0veE" title="Consolidar" odyseeUrl="https://odysee.com/@AndresGoDu:a/Consolidar%2C-calcular-puestos-e-informes:fb2d8868ace53b52f474252c3c0df26c7d66efec" />
-</GuideVideos>
+<GuideVideoPlaylist
+  title="Ruta de consolidación y cálculo de puestos"
+  description="Siga los videos en orden: primero consolide las calificaciones, después conozca los criterios y finalmente ejecute el cálculo de puestos."
+  videos={[
+    { id: '689KgLO0veE', title: '1. Consolidar calificaciones, calcular puestos e informes', description: 'Conozca el proceso completo de consolidación, cálculo de puestos e informes.' },
+    { id: '05_ha8Usop0', title: '2. Cálculo de puestos: conceptos', description: 'Comprenda los niveles, criterios y métodos que intervienen en el cálculo.' },
+    { id: 'yvgMl-r1lDk', title: '3. Cálculo de puestos: procedimiento', description: 'Siga el proceso para calcular los puestos en la plataforma.' },
+  ]}
+/>
 
 ## Guía paso a paso
 
-### Consolidar Calificaciones y Cálculo de Puestos
+### Consolidar calificaciones
 
 En la presente guía se va a encontrar el funcionamiento de la Plataforma SINAI con relación al proceso de consolidar y calcular el puesto de los estudiantes una vez los docentes hayan registrado calificaciones en un periodo determinado, este procedimiento es fundamental para que se puedan descargar los informes consolidados de calificaciones, boletines de periodo, certificados, entre otros.
 
@@ -45,11 +51,24 @@ Desde el módulo administrativo ubicamos el menú **Evaluación**, luego se debe
 
 
 
-#### Calcular Puestos del Periodo
+### Calcular puestos del período
 
-Para calcular el puesto del periodo es necesario que todos los grupos hayan sido consolidados, así mismo es importante que el periodo se encuentre en estado cerrado para garantizar que los docentes no realicen modificaciones en las calificaciones.
+El puesto muestra la posición de un estudiante frente a los demás estudiantes del mismo grupo, grado, nivel o institución. Por defecto, SINAI toma el promedio de las calificaciones de todas las asignaturas, pero la institución puede configurar hasta cinco criterios para definir el orden.
 
-Para el cálculo de puestos es necesario tener en cuenta los criterios definidos para calcular el puesto de los estudiantes, asimismo, el método de ordenación, por defecto todas las Instituciones tienen el criterio asignado **“Calificación promedio general del estudiante”**
+Para calcular el puesto del período es necesario que todos los grupos hayan sido consolidados. También es recomendable que el período se encuentre en estado cerrado para evitar modificaciones posteriores en las calificaciones.
+
+#### Alcance del cálculo
+
+SINAI genera puestos en los siguientes niveles:
+
+1. **En el grupo:** frente a los estudiantes del mismo grupo.
+2. **En el grado:** frente a los estudiantes del mismo grado.
+3. **En el nivel:** frente a los estudiantes del nivel educativo, como preescolar, primaria, secundaria o media.
+4. **En la institución:** frente a los estudiantes de toda la institución.
+
+El resultado corresponde al período seleccionado. Si se modifican las calificaciones de estudiantes del mismo grupo, grado, nivel o institución, el puesto puede cambiar cuando se ejecute nuevamente el cálculo.
+
+Para el cálculo de puestos se deben tener en cuenta los criterios definidos y el método de ordenación. Por defecto, todas las instituciones tienen asignado el criterio **“Calificación promedio general del estudiante”**. Los criterios se aplican en el orden establecido: por ejemplo, después del promedio general se puede usar el número de asignaturas con desempeño superior y las inasistencias para resolver empates.
 
 #### ¿Cómo verificar los criterios asignados para calcular el puesto de los estudiantes?
 
@@ -61,17 +80,18 @@ Aquí se encontrará los criterios asignados y los criterios generales que se en
 
 
 
-#### Métodos de Ordenación para Calcular el Puesto de los Estudiantes
+#### Métodos de ordenación para calcular el puesto
 
 **¿Para qué sirve el método de ordenación?** El método de ordenación sirve para ordenar los puestos de los estudiantes cuando hayan estudiantes empatados ya sea en su promedio de calificaciones o en otros criterios para el cálculo de puestos.
 
 Para verificar el método de ordenación para calcular el puestos debemos ir al menú **Establecimiento, Calendarios, Configuración** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-7-1024x589.png"} alt={"Captura de Consolidar 7"}>Ver ejemplo</GuideImageTrigger>
 
+La institución puede elegir **orden simple**, **rango simple** o **rango denso**. Consulte [Criterios y métodos para el cálculo de puestos](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/cronogramas-y-periodos) para conocer cómo trata cada método los empates.
 
 
-Una vez se hayan definido los criterios para calcular el puesto y el método de ordenación, es necesario realizar el procedimiento para definir el puesto de los estudiantes. A diferencia del proceso de consolidación, el cálculo de puestos se realiza una sola vez (Se puede volver a calcular en caso que sea necesario)
+Una vez definidos los criterios y el método de ordenación, ejecute el cálculo para toda la institución. A diferencia de la consolidación, normalmente se realiza una sola vez; sin embargo, puede repetirlo si se corrigen calificaciones o se ajusta la configuración.
 
-#### Pasos para Realizar el Cálculo de Puestos del Periodo
+#### Pasos para realizar el cálculo de puestos del período
 
 - Seleccionar el periodo
 - Seleccionar la opción **“Puestos del periodo”**
@@ -79,7 +99,7 @@ Una vez se hayan definido los criterios para calcular el puesto y el método de 
 
 
 
-#### Calcular Puestos Finales
+#### Calcular puestos finales
 
 Este procedimiento se realiza finalizando el calendario académico para determinar los puestos finales de los estudiantes durante el año
 
@@ -91,7 +111,7 @@ Este procedimiento se realiza finalizando el calendario académico para determin
 
 
 
-Una vez realizado el consolidado de calificaciones y calculado el puesto de los estudiantes, encontraremos en la parte inferior de la pantalla los resultados generados por el sistema con relación al procedimiento realizado: <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-10.png"} alt={"Captura de Consolidar 10"}>Ver ejemplo</GuideImageTrigger>
+Una vez realizado el consolidado de calificaciones y calculado el puesto de los estudiantes, encontrará en la parte inferior de la pantalla los resultados generados por el sistema con relación al procedimiento realizado: <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-10.png"} alt={"Captura de Consolidar 10"}>Ver ejemplo</GuideImageTrigger>
 
 
 
@@ -99,15 +119,15 @@ Una vez realizado el consolidado de calificaciones y calculado el puesto de los 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Consolidar»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar antes de consolidar y calcular puestos?"}>
+    Confirme que las calificaciones estén registradas, que todos los grupos del período estén consolidados y que los criterios y el método de ordenación estén definidos. Para emitir resultados definitivos, cierre el período antes de ejecutar el cálculo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Consolidar» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Cuándo debo volver a calcular los puestos?"}>
+    Vuelva a consolidar los grupos afectados y calcule nuevamente los puestos cuando se corrijan calificaciones o se modifiquen los criterios o el método de ordenación.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Consolidar»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿El cálculo de puestos se hace por cada grupo?"}>
+    No. Aunque la consolidación puede ejecutarse por sede o por grupo, el cálculo de puestos procesa toda la institución y genera los resultados para grupo, grado, nivel e institución.
   </GuideFAQItem>
 </GuideFAQ>

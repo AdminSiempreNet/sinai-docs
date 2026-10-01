@@ -3,6 +3,7 @@
   "description": "Políticas y preguntas frecuentes.",
   "defaultOpen": false,
   "pages": [
+    "condiciones-de-soporte-tecnico",
     "politicas",
     "preguntas-frecuentes"
   ],

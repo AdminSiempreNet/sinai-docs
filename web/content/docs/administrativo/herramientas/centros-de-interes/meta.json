@@ -1,0 +1,5 @@
+{
+  "title": "Centros de interés",
+  "description": "Cree, asigne, matricule estudiantes y gestione las valoraciones de centros de interés.",
+  "pages": ["asignacion", "matriculas", "valoracion"]
+}

@@ -38,6 +38,26 @@ export function SidebarMenuDecoration() {
 
     const sidebars = [document.getElementById('nd-sidebar'), document.getElementById('nd-sidebar-mobile')].filter(Boolean) as HTMLElement[];
     const siteFooter = document.querySelector<HTMLElement>('.sinai-site-footer');
+
+    // Durante desarrollo, una guía creada o movida puede estar disponible antes
+    // de que el árbol serializado del layout se actualice en la navegación del
+    // cliente. En ese estado Fumadocs muestra el árbol raíz y aparenta sacar a
+    // la persona de su rol. Recargamos una sola vez cuando la ruta no existe
+    // dentro del menú actual; después de la recarga se recibe el árbol vigente.
+    const isRoleRoute = ['administrativo', 'docente', 'estudiante'].includes(activeRole);
+    const isCurrentPageInSidebar = sidebars.some((sidebar) =>
+      Array.from(sidebar.querySelectorAll<HTMLAnchorElement>('a[href]')).some(
+        (link) => link.getAttribute('href') === pathname,
+      ),
+    );
+    const refreshKey = `sinai-sidebar-tree-refresh:${pathname}`;
+
+    if (isRoleRoute && sidebars.length > 0 && !isCurrentPageInSidebar && !window.sessionStorage.getItem(refreshKey)) {
+      window.sessionStorage.setItem(refreshKey, 'true');
+      window.location.reload();
+      return;
+    }
+
     const toSlug = (value: string) => value
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')

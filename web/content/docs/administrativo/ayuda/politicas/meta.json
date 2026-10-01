@@ -1,0 +1,10 @@
+{
+  "title": "Políticas",
+  "description": "Políticas institucionales aplicables a SINAI.",
+  "defaultOpen": false,
+  "pages": [
+    "proteccion-y-tratamiento-de-datos-personales",
+    "gestion-de-sugerencias"
+  ],
+  "icon": "Scale"
+}

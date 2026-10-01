@@ -1,0 +1,147 @@
+$ next dev --disable-source-maps --no-server-fast-refresh "--port" "3000"
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <TOCProvider single={undefined} toc={[...]}>
+      <TOCProvider single={undefined} toc={[...]}>
+        <AnchorProvider toc={[...]} single={undefined}>
+          <TOCPopover>
+          <Container className="sinai-guid...">
+            <article id="nd-page" data-full={false} className="flex flex-...">
+              <Breadcrumb>
+              <div>
+              <DocsBody className="sinai-guid...">
+                <div className="prose flex...">
+                  <Heading>
+                  <GuideVideos>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <p>
+                  <p>
+                  <p>
+                  <ul>
+                    <li>
+                      <h6>
+                        <Heading as="h6" id="asignar-us...">
+                          <h6 id="asignar-us..." className="group/head...">
+>                           <a data-card="" href="#asignar-usuario">
+                              <Link href="https://ay...">
+>                               <a
+>                                 ref={null}
+>                                 href="https://ayudasinai.siempre.net.co/como-asignar-usuario-desde-el-modulo-adminis..."
+>                                 rel="noreferrer noopener"
+>                                 target="_blank"
+>                               >
+                            ...
+                      ...
+                    ...
+                  ...
+              ...
+              ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `LinkComponent`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `a`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template). 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `button`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `LinkComponent`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] In HTML, <a> cannot be a descendant of <a>.
+This will cause a hydration error.
+
+  ...
+    <TOCProvider single={undefined} toc={[...]}>
+      <TOCProvider single={undefined} toc={[...]}>
+        <AnchorProvider toc={[...]} single={undefined}>
+          <TOCPopover>
+          <Container className="sinai-guid...">
+            <article id="nd-page" data-full={false} className="flex flex-...">
+              <Breadcrumb>
+              <div>
+              <DocsBody className="sinai-guid...">
+                <div className="prose flex...">
+                  <Heading>
+                  <GuideVideos>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <Heading>
+                  <p>
+                  <p>
+                  <p>
+                  <p>
+                  <ul>
+                    <li>
+                      <h6>
+                        <Heading as="h6" id="asignar-us...">
+                          <h6 id="asignar-us..." className="group/head...">
+>                           <a data-card="" href="#asignar-usuario">
+                              <Link href="https://ay...">
+>                               <a
+>                                 ref={null}
+>                                 href="https://ayudasinai.siempre.net.co/como-asignar-usuario-desde-el-modulo-adminis..."
+>                                 rel="noreferrer noopener"
+>                                 target="_blank"
+>                               >
+                            ...
+                      ...
+                    ...
+                  ...
+              ...
+              ...
+          ...
+ 
+[browser] <a> cannot contain a nested <a>.
+See this log for the ancestor stack trace. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `LinkComponent`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `a`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `LinkComponent`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `a`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `Sidebar`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `LinkComponent`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 
+[browser] Each child in a list should have a unique "key" prop.
+
+Check the render method of `a`. It was passed a child from Layout. See https://react.dev/link/warning-keys for more information. 

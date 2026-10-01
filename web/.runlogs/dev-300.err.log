@@ -1,0 +1,2 @@
+$ next dev --disable-source-maps --no-server-fast-refresh "--port" "300"
+[ELIFECYCLE] Command failed with exit code -1.

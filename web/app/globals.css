@@ -476,20 +476,8 @@ div:has(> .sinai-role-icon) {
   margin-top: 0.75rem;
 }
 
-/* Solo Primeros pasos muestra iconos en sus opciones. */
-html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/"] .sinai-menu-icon,
-html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/"] .sinai-menu-icon,
-html[data-sinai-role="administrativo"] #nd-sidebar [data-state] > :is(a, button) .sinai-menu-icon,
-html[data-sinai-role="administrativo"] #nd-sidebar-mobile [data-state] > :is(a, button) .sinai-menu-icon {
-  display: none;
-}
-
-html[data-sinai-role="administrativo"] #nd-sidebar a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon,
-html[data-sinai-role="administrativo"] #nd-sidebar-mobile a[href^="/docs/administrativo/primeros-pasos/"] .sinai-menu-icon {
-  display: inline-block;
-}
-
-/* El icono del selector de rol siempre visible. */
+/* El icono del selector de rol siempre visible.
+   Los iconos de menú los controla el pageTree (solo primer nivel por sección). */
 html[data-sinai-role="administrativo"] #nd-sidebar button .sinai-role-icon,
 html[data-sinai-role="administrativo"] #nd-sidebar-mobile button .sinai-role-icon {
   display: inline-block;
