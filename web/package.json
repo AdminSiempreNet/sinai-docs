@@ -25,7 +25,6 @@
     "@base-ui/react": "^1.6.0",
     "@fuma-translate/react": "^1.0.2",
     "@fumadocs/base-ui": "^16.11.4",
-    "@openrouter/ai-sdk-provider": "^3.0.0",
     "@types/hast": "^3.0.5",
     "@types/mdx": "^2.0.13",
     "ai": "^7.0.31",

@@ -1,7 +1,7 @@
-import { createOpenRouter } from '@openrouter/ai-sdk-provider';
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
+  gateway,
   stepCountIs,
   streamText,
   tool,
@@ -17,10 +17,13 @@ import type { ChatUIMessage, SearchTool } from '../../../components/ai/search';
 
 type ActiveRole = DocsRole;
 
-const openrouter = createOpenRouter({
-  apiKey: process.env.OPENROUTER_API_KEY,
-  appName: 'SINAI Base de conocimiento',
-});
+// Vercel AI Gateway: en Vercel autentica con OIDC automáticamente;
+// en local usa AI_GATEWAY_API_KEY.
+const modelId = process.env.AI_GATEWAY_MODEL ?? 'openai/gpt-4o-mini';
+const fallbackModels = (process.env.AI_GATEWAY_FALLBACK_MODELS ?? '')
+  .split(',')
+  .map((model) => model.trim())
+  .filter(Boolean);
 
 const systemPrompt = [
   'Eres el asistente de la base de conocimiento de SINAI.',
@@ -58,10 +61,14 @@ export async function POST(req: Request) {
   const messages = (reqJson.messages ?? []) as ChatUIMessage[];
   const activeRole = getActiveRole(messages);
 
-  const modelId = process.env.OPENROUTER_MODEL ?? 'openai/gpt-4o-mini';
-
   const result = streamText({
-    model: openrouter.chat(modelId),
+    model: gateway(modelId),
+    providerOptions: {
+      gateway: {
+        tags: ['sinai-docs', 'chat'],
+        ...(fallbackModels.length > 0 && { models: fallbackModels }),
+      },
+    },
     instructions: [
       systemPrompt,
       activeRole
