@@ -1,7 +1,8 @@
 'use client';
 
 import { Children, cloneElement, isValidElement, useState, type ReactElement, type ReactNode } from 'react';
-import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, Info } from 'lucide-react';
+import './guide-table.css';
+import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, ImageOff, Info, VideoOff } from 'lucide-react';
 import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger, type ImageTriggerVariant } from '@/components/content-image';
 
 export function GuideOverview({ children }: { children: ReactNode }) {
@@ -135,6 +136,37 @@ export function GuideImageSequence({
   variant?: ImageTriggerVariant;
 }) {
   return <ContentImageSequenceTrigger images={images} compact={compact} variant={variant}>{children}</ContentImageSequenceTrigger>;
+}
+
+/** Envuelve una tabla Markdown para darle encabezado y filas con el color del rol. */
+export function GuideDataTable({ children }: { children: ReactNode }) {
+  return <div className="sinai-guide-table">{children}</div>;
+}
+
+/** Reserva el bloque superior cuando la guía todavía no tiene tutorial. */
+export function GuideVideoPending({ children }: { children: ReactNode }) {
+  return (
+    <div className="not-prose my-4 flex items-start gap-3 rounded-xl border border-dashed border-fd-primary/40 bg-fd-primary/5 px-4 py-3 text-sm text-fd-muted-foreground">
+      <VideoOff className="mt-0.5 size-4 shrink-0 text-fd-primary" aria-hidden="true" />
+      <div>
+        <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-fd-primary">Tutorial pendiente</p>
+        <div className="mt-1 leading-6">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+/** Marca el lugar de una captura que todavía no existe. */
+export function GuideImagePending({ children }: { children: ReactNode }) {
+  return (
+    <div className="not-prose my-4 flex items-start gap-3 rounded-xl border border-dashed border-fd-primary/40 bg-fd-primary/5 px-4 py-3 text-sm text-fd-muted-foreground">
+      <ImageOff className="mt-0.5 size-4 shrink-0 text-fd-primary" aria-hidden="true" />
+      <div>
+        <p className="m-0 text-xs font-bold uppercase tracking-[0.08em] text-fd-primary">Captura pendiente</p>
+        <div className="mt-1 leading-6">{children}</div>
+      </div>
+    </div>
+  );
 }
 
 export function GuideCallout({

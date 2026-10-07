@@ -18,6 +18,7 @@
     "organize:guides": "node scripts/organize-guide-content.mjs --apply",
     "report:odysee": "node scripts/report-odysee-pending.mjs --write",
     "apply:odysee": "node scripts/apply-odysee-report.mjs",
+    "capture:guide": "node scripts/capture-guide-shots.mjs",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
