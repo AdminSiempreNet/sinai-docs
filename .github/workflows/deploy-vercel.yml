@@ -87,9 +87,12 @@ jobs:
       - name: Build
         run: vercel build --prod
 
+      # --archive=tgz sube la salida como unos pocos .tgz en lugar de miles de
+      # archivos sueltos; sin esto el plan Hobby agota su límite de 5000
+      # subidas diarias (error "api-upload-free").
       - name: Deploy
         id: deploy
         run: |
-          url="$(vercel deploy --prebuilt --prod)"
+          url="$(vercel deploy --prebuilt --prod --archive=tgz)"
           echo "url=$url" >> "$GITHUB_OUTPUT"
           echo "Desplegado en: $url" >> "$GITHUB_STEP_SUMMARY"
