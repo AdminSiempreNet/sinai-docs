@@ -15,6 +15,7 @@ import { GuideFeedback } from '@/components/guide-feedback';
 import { RoleLandingBanner } from '@/components/role-landing-banner';
 import { SectionLandingBanner } from '@/components/section-landing-banner';
 import { SectionHub } from '@/components/section-hub';
+import { StudentGuideReady, StudentGuideScene } from '@/components/student-guide-scene';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -40,19 +41,20 @@ export default async function Page(props: {
   const isInstitutionalConfigLanding =
     params.slug?.join('/') === 'administrativo/configuracion-institucional';
   const sectionKey = params.slug?.join('/') ?? '';
+  const isModuleHub = isRoleLanding && ['administrativo', 'docente', 'estudiante'].includes(role ?? '');
   const isSectionHub =
-    pageMeta.section === true &&
-    params.slug?.length === 2 &&
-    ['administrativo', 'docente'].includes(role ?? '') &&
-    sectionKey !== 'administrativo/gestion-de-estudiantes';
+    isModuleHub ||
+    (pageMeta.section === true &&
+      ['administrativo', 'docente', 'estudiante'].includes(role ?? ''));
+  const isStudentGuide = isGuide && role === 'estudiante';
   const roleClass = role && ['administrativo', 'docente', 'estudiante'].includes(role)
     ? `sinai-role-${role}`
     : undefined;
-  const hasToc = toc.length > 0;
+  const showGuideToc = toc.length > 0 && !isSectionHub;
   const guideUrl = `/docs/${params.slug?.join('/') ?? ''}`;
   const pageClassName = [
     isGuide && 'sinai-guide-page',
-    hasToc && 'sinai-custom-toc',
+    showGuideToc && 'sinai-custom-toc',
     isRoleLanding && 'sinai-role-landing-page',
     isSectionLanding && 'sinai-section-landing-page',
     isSectionHub && 'sinai-section-hub-page',
@@ -62,7 +64,9 @@ export default async function Page(props: {
 
   return (
     <DocsPage
-      toc={toc}
+      toc={isSectionHub ? [] : toc}
+      tableOfContent={isSectionHub ? { enabled: false } : undefined}
+      tableOfContentPopover={isSectionHub ? { enabled: false } : undefined}
       full={isSectionHub || page.data.full}
       className={pageClassName}
     >
@@ -93,7 +97,13 @@ export default async function Page(props: {
         {isSectionHub ? (
           <SectionHub section={sectionKey} />
         ) : (
-          <MDXContent components={getMDXComponents()} />
+          <>
+            {isStudentGuide && (
+              <StudentGuideScene slug={sectionKey} title={String(page.data.title)} />
+            )}
+            <MDXContent components={getMDXComponents()} />
+            {isStudentGuide && <StudentGuideReady slug={sectionKey} />}
+          </>
         )}
       </DocsBody>
       {isGuide && (
@@ -104,7 +114,7 @@ export default async function Page(props: {
           lastReviewed={pageMeta.lastReviewed}
         />
       )}
-      {hasToc && <GuideToc toc={toc} />}
+      {showGuideToc && <GuideToc toc={toc} />}
       <ContentImageModal />
     </DocsPage>
   );
