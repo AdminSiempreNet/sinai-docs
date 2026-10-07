@@ -14,6 +14,7 @@ import { getGuidePageData } from '@/lib/guide';
 import { GuideFeedback } from '@/components/guide-feedback';
 import { RoleLandingBanner } from '@/components/role-landing-banner';
 import { SectionLandingBanner } from '@/components/section-landing-banner';
+import { SectionHub } from '@/components/section-hub';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -29,12 +30,21 @@ export default async function Page(props: {
     status?: string;
     lastReviewed?: string;
     section?: boolean;
+    hub?: boolean;
   };
   const isRoleLanding =
     params.slug?.length === 1 &&
     !!role &&
     ['administrativo', 'docente', 'estudiante'].includes(role);
   const isSectionLanding = !isRoleLanding && !isGuide && pageMeta.section === true;
+  const isInstitutionalConfigLanding =
+    params.slug?.join('/') === 'administrativo/configuracion-institucional';
+  const sectionKey = params.slug?.join('/') ?? '';
+  const isSectionHub =
+    pageMeta.section === true &&
+    params.slug?.length === 2 &&
+    ['administrativo', 'docente'].includes(role ?? '') &&
+    sectionKey !== 'administrativo/gestion-de-estudiantes';
   const roleClass = role && ['administrativo', 'docente', 'estudiante'].includes(role)
     ? `sinai-role-${role}`
     : undefined;
@@ -45,16 +55,18 @@ export default async function Page(props: {
     hasToc && 'sinai-custom-toc',
     isRoleLanding && 'sinai-role-landing-page',
     isSectionLanding && 'sinai-section-landing-page',
+    isSectionHub && 'sinai-section-hub-page',
+    isInstitutionalConfigLanding && 'sinai-institutional-config-page',
     roleClass,
   ].filter(Boolean).join(' ') || undefined;
 
   return (
     <DocsPage
       toc={toc}
-      full={page.data.full}
+      full={isSectionHub || page.data.full}
       className={pageClassName}
     >
-      {isRoleLanding && role ? (
+      {isSectionHub ? null : isRoleLanding && role ? (
         <RoleLandingBanner
           role={role}
           title={String(page.data.title)}
@@ -78,7 +90,11 @@ export default async function Page(props: {
         </div>
       )}
       <DocsBody className={isGuide ? 'sinai-guide-body' : undefined}>
-        <MDXContent components={getMDXComponents()} />
+        {isSectionHub ? (
+          <SectionHub section={sectionKey} />
+        ) : (
+          <MDXContent components={getMDXComponents()} />
+        )}
       </DocsBody>
       {isGuide && (
         <GuideFeedback

@@ -8,6 +8,8 @@ import { GuideScreenshot } from '@/components/guide-screenshot';
 import { GuideChecklist } from '@/components/guide-checklist';
 import { PlanillaGuide, PlanillaGuideGroup, PlanillaGuideSwitcher } from '@/components/planilla-guide-switcher';
 import { SinaiDocsHome } from '@/components/sinai-docs-home';
+import { InstitutionalConfigHub } from '@/components/institutional-config-hub';
+import { SectionHub } from '@/components/section-hub';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -34,6 +36,8 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     PlanillaGuideGroup,
     PlanillaGuideSwitcher,
     SinaiDocsHome,
+    InstitutionalConfigHub,
+    SectionHub,
     img: ContentImage,
     ...components,
   };

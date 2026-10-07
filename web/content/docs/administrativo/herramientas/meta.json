@@ -1,6 +1,6 @@
 {
   "title": "Herramientas",
-  "description": "Autoevaluación, Chamilo, reuniones, informes y más.",
+  "description": "Autoevaluación, preinformes, Chamilo, reuniones, informes y más.",
   "defaultOpen": false,
   "pages": [
     "autoevaluacion",
@@ -8,6 +8,7 @@
     "chamilo",
     "gestion-de-reuniones",
     "firmas-digitales",
+    "preinformes",
     "informes-digitales",
     "copia-de-seguridad",
     "centros-de-interes",

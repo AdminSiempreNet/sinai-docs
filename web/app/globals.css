@@ -2389,6 +2389,531 @@ html[data-sinai-role="administrativo"] #nd-sidebar-mobile button .sinai-role-ico
   line-height: 1.5;
 }
 
+/* Vista piloto de la agrupación Configuración Institucional. */
+.sinai-section-hub-page,
+.sinai-institutional-config-page {
+  --sinai-institutional-accent-soft: color-mix(in srgb, var(--sinai-role-accent) 12%, transparent);
+}
+
+.sinai-section-hub-page > article,
+.sinai-section-hub-page .sinai-institutional-hub,
+.sinai-institutional-config-page > article,
+.sinai-institutional-config-page .sinai-institutional-hub {
+  width: 100%;
+  max-width: 76rem;
+}
+
+.sinai-section-hub-page .sinai-institutional-hub :is(h1, h2, h3, p),
+.sinai-institutional-config-page .sinai-institutional-hub :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+.sinai-institutional-hero {
+  position: relative;
+  display: grid;
+  min-height: 14.5rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  overflow: hidden;
+  padding-block: clamp(1.25rem, 2vw, 1.75rem);
+  padding-inline: clamp(1.5rem, 4vw, 3.5rem);
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 22%, var(--color-fd-border));
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-fd-card) 94%, var(--sinai-role-accent) 6%);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 4%), 0 12px 32px rgb(15 23 42 / 6%);
+}
+
+.sinai-institutional-hero::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0.3rem;
+  background: var(--sinai-role-accent);
+  content: '';
+}
+
+.sinai-institutional-hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 42rem;
+}
+
+.sinai-institutional-kicker,
+.sinai-institutional-card-eyebrow,
+.sinai-institutional-section-heading > span {
+  color: var(--sinai-role-accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.sinai-institutional-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sinai-institutional-kicker svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sinai-institutional-hero h1 {
+  margin-top: 0.75rem !important;
+  color: var(--color-fd-foreground);
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.sinai-institutional-hero-copy > p {
+  max-width: 38rem;
+  margin-top: 1rem !important;
+  color: var(--color-fd-muted-foreground);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
+.sinai-institutional-hero-scene {
+  position: relative;
+  display: flex;
+  min-height: 13rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sinai-institutional-hero-scene img {
+  width: min(100%, 33rem);
+  height: auto;
+  filter: drop-shadow(0 18px 24px rgb(0 0 0 / 18%));
+  object-fit: contain;
+}
+
+.sinai-institutional-introduction {
+  display: grid;
+  grid-template-columns: auto minmax(0, 48rem);
+  justify-content: start;
+  gap: 1rem;
+  margin: clamp(2rem, 4vw, 3rem) auto 0;
+}
+
+.sinai-institutional-introduction > span {
+  width: 0.22rem;
+  border-radius: 999px;
+  background: var(--sinai-role-accent);
+}
+
+.sinai-institutional-introduction p {
+  color: var(--color-fd-muted-foreground);
+  font-size: 1rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.sinai-institutional-options {
+  margin-top: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.sinai-institutional-section-heading h2 {
+  margin-top: 0.35rem !important;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  font-weight: 720;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.sinai-institutional-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.sinai-institutional-card {
+  display: flex;
+  min-width: 0;
+  min-height: 25rem;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 16%, var(--color-fd-border));
+  border-radius: 1rem;
+  background: var(--color-fd-card);
+  color: var(--color-fd-foreground);
+  text-decoration: none !important;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 4%), 0 8px 24px rgb(15 23 42 / 4%);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sinai-institutional-card:hover {
+  border-color: color-mix(in srgb, var(--sinai-role-accent) 46%, var(--color-fd-border));
+  color: var(--color-fd-foreground);
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--sinai-role-accent) 11%, transparent);
+  transform: translateY(-3px);
+}
+
+.sinai-institutional-card:active {
+  transform: scale(0.98);
+}
+
+.sinai-institutional-card:focus-visible {
+  outline: 2px solid var(--sinai-role-accent);
+  outline-offset: 3px;
+}
+
+.sinai-institutional-card-illustration {
+  position: relative;
+  display: grid;
+  min-height: 12.5rem;
+  place-items: center;
+  overflow: hidden;
+  padding: 0.5rem 1rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--sinai-role-accent) 14%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--color-fd-card) 91%, var(--sinai-role-accent) 9%);
+}
+
+.sinai-institutional-card-illustration img {
+  width: min(100%, 15rem);
+  height: 12rem;
+  filter: drop-shadow(0 14px 18px rgb(0 0 0 / 17%));
+  object-fit: contain;
+  transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sinai-institutional-card:hover .sinai-institutional-card-illustration img {
+  transform: translateY(-3px) scale(1.025);
+}
+
+.sinai-institutional-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.35rem;
+}
+
+.sinai-institutional-card-copy h3 {
+  margin-top: 0.45rem !important;
+  color: var(--color-fd-foreground);
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.sinai-institutional-card-copy p {
+  margin-top: 0.65rem !important;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.sinai-institutional-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  color: var(--sinai-role-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.sinai-institutional-card-action svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.sinai-institutional-card:hover .sinai-institutional-card-action svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 900px) {
+  .sinai-institutional-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-institutional-hero-scene {
+    display: none;
+  }
+
+  .sinai-institutional-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-institutional-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .sinai-institutional-hero {
+    min-height: auto;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .sinai-institutional-hero h1 {
+    font-size: clamp(2rem, 11vw, 2.7rem);
+  }
+
+  .sinai-institutional-card-illustration {
+    min-height: 10.5rem;
+  }
+
+  .sinai-institutional-card-illustration img {
+    height: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sinai-institutional-card,
+  .sinai-institutional-card-action svg,
+  .sinai-institutional-card-illustration img {
+    transition: none;
+  }
+}
+
+/* Composición de referencia: encabezado editorial y tarjetas visuales compactas. */
+.sinai-institutional-hero {
+  min-height: auto;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.sinai-institutional-hero::before {
+  display: none;
+}
+
+.sinai-institutional-hero-copy {
+  display: block;
+  min-height: auto;
+  min-width: 0;
+  max-width: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sinai-institutional-title-lockup {
+  display: grid;
+  grid-template-columns: 0.25rem minmax(0, 1fr);
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.sinai-institutional-title-lockup > span {
+  border-radius: 999px;
+  background: var(--sinai-role-accent);
+}
+
+.sinai-institutional-hero h1 {
+  margin: 0 !important;
+  font-size: clamp(1.7rem, 2.5vw, 2.15rem);
+  font-weight: 720;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.sinai-institutional-title-lockup p {
+  margin-top: 0.35rem !important;
+  color: var(--color-fd-muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.sinai-institutional-title-rule {
+  display: block;
+  height: 1px;
+  margin-top: 1.15rem;
+  background: color-mix(in srgb, var(--sinai-role-accent) 20%, var(--color-fd-border));
+}
+
+.sinai-institutional-hero-copy > .sinai-institutional-description {
+  max-width: 58rem;
+  margin-top: 1.5rem !important;
+  padding-top: 0;
+  color: var(--color-fd-foreground);
+  font-size: clamp(1.03rem, 1.2vw, 1.12rem);
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.sinai-institutional-introduction {
+  display: block;
+  max-width: 49rem;
+  margin: 1.35rem 0 0;
+}
+
+.sinai-institutional-introduction p {
+  color: var(--color-fd-foreground);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.sinai-institutional-options {
+  width: 100%;
+  margin-top: clamp(2.75rem, 4vw, 3.5rem);
+}
+
+.sinai-institutional-section-heading h2 {
+  margin: 0 !important;
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.sinai-institutional-card-grid {
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.sinai-institutional-card {
+  min-height: 17rem;
+  border-color: var(--color-fd-border);
+  border-radius: 0.85rem;
+  background: color-mix(in srgb, var(--color-fd-card) 96%, transparent);
+  box-shadow: none;
+}
+
+.sinai-institutional-card:hover {
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--sinai-role-accent) 9%, transparent);
+  transform: translateY(-2px);
+}
+
+.sinai-institutional-card-illustration {
+  min-height: 10.5rem;
+  height: 10.5rem;
+  padding: 0.45rem 0.75rem;
+  border-bottom: 0;
+  background: transparent;
+}
+
+.sinai-section-card-topic {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.7rem;
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 45%, var(--color-fd-border));
+  border-radius: 0.7rem;
+  background: color-mix(in srgb, var(--color-fd-card) 88%, var(--sinai-role-accent) 12%);
+  color: var(--sinai-role-accent);
+  box-shadow: 0 7px 18px rgb(0 0 0 / 14%);
+}
+
+.sinai-section-card-topic svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  stroke-width: 2;
+}
+
+.sinai-institutional-card-illustration img {
+  display: block;
+  width: 100%;
+  max-width: 19rem;
+  height: 100%;
+  max-height: 9.6rem;
+  margin: 0 !important;
+  filter: drop-shadow(0 13px 17px rgb(0 0 0 / 17%));
+  object-fit: contain;
+  transform: none;
+}
+
+.sinai-institutional-card:hover .sinai-institutional-card-illustration img {
+  transform: none;
+}
+
+.sinai-institutional-card-copy {
+  position: relative;
+  min-height: 6.25rem;
+  justify-content: center;
+  padding: 0.8rem 2.9rem 0.9rem 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-fd-border) 72%, transparent);
+}
+
+.sinai-institutional-card-copy h3 {
+  margin: 0 !important;
+  font-size: 0.92rem;
+  letter-spacing: -0.018em;
+}
+
+.sinai-institutional-card-copy p {
+  margin-top: 0.3rem !important;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.sinai-institutional-card-action {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-50%);
+}
+
+.sinai-institutional-card-action svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .sinai-institutional-hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .sinai-institutional-hero-copy {
+    min-height: auto;
+  }
+
+  .sinai-institutional-hero-copy > .sinai-institutional-description {
+    margin-top: 1.5rem !important;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .sinai-institutional-hero {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .sinai-institutional-title-lockup {
+    gap: 0.75rem;
+  }
+
+  .sinai-institutional-hero h1 {
+    font-size: clamp(1.65rem, 9vw, 2.1rem);
+  }
+
+  .sinai-institutional-options {
+    margin-top: 3rem;
+  }
+
+  .sinai-institutional-card-illustration,
+  .sinai-institutional-card-illustration img {
+    min-height: 11.5rem;
+    height: 11.5rem;
+  }
+}
+
 /* Selector de planillas (Registro de calificaciones). */
 .sinai-planilla-switcher {
   margin-block: 0.5rem 1.5rem;
