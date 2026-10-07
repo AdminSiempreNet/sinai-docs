@@ -1,1 +1,3 @@
 /.tools
+# Vercel CLI (contiene project.json y variables de entorno descargadas)
+.vercel
