@@ -3,7 +3,7 @@ import type { MDXComponents } from 'mdx/types';
 import { YouTube } from '@/components/youtube';
 import { GuideVideoPlaylist } from '@/components/guide-video-playlist';
 import { ContentImage } from '@/components/content-image';
-import { GuideCallout, GuideFAQ, GuideFAQItem, GuideFocusGrid, GuideGallery, GuideImage, GuideImageRow, GuideImageSequence, GuideImageTrigger, GuideOverview, GuideScreenshotGrid, GuideStep, GuideSummary, GuideVideos } from '@/components/guide';
+import { GuideCallout, GuideDataTable, GuideFAQ, GuideFAQItem, GuideFocusGrid, GuideGallery, GuideImage, GuideImagePending, GuideImageRow, GuideImageSequence, GuideImageTrigger, GuideOverview, GuideScreenshotGrid, GuideStep, GuideSummary, GuideVideoPending, GuideVideos } from '@/components/guide';
 import { GuideScreenshot } from '@/components/guide-screenshot';
 import { GuideChecklist } from '@/components/guide-checklist';
 import { PlanillaGuide, PlanillaGuideGroup, PlanillaGuideSwitcher } from '@/components/planilla-guide-switcher';
@@ -16,6 +16,9 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ...defaultMdxComponents,
     YouTube,
     GuideCallout,
+    GuideDataTable,
+    GuideImagePending,
+    GuideVideoPending,
     GuideFAQ,
     GuideFAQItem,
     GuideChecklist,

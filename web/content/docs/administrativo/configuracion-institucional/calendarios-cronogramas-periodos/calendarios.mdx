@@ -1,178 +1,392 @@
 ---
 title: "Calendarios"
-description: "Conozca las opciones de calendarios y siga el procedimiento correspondiente en SINAI."
+description: "Configure el calendario activo, las calificaciones, los periodos, la escala de desempeño y la creación de un calendario nuevo."
 guide: true
 wordpressId: 28347
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/calendarios/"
-lastModified: "2024-07-23 15:50:45"
+lastModified: "2026-10-07"
+lastReviewed: "2026-10-07"
 ---
+
 ## Video tutorial
 
 <GuideVideoPlaylist
   title="Ruta de aprendizaje de calendarios"
-  description="Seleccione el tema que necesita configurar. Los videos están organizados desde la configuración general hasta la creación de un calendario."
+  description="Seleccione el tema que necesita configurar. Los videos recorren la configuración general, el cronograma y la creación de un calendario."
   videos={[
     { id: 'VYh0b1tLOh4', title: '1. Configurar el calendario', description: 'Defina la configuración principal del calendario institucional.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-del-Calendario---SINAI---M%C3%B3dulo-administrativo:22d7397dd93300f6d7d3cb04a4cc471a7ad943e2' },
-    { id: 'DZC8areVwWU', title: '2. Configurar la planilla de convivencia', description: 'Ajuste la planilla de convivencia asociada al calendario.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-de-la-Planilla-de-Convivencia---SINAI---M%C3%B3dulo-administrativo:668d131d87f16ef54205c7edcae2356bd243f6a0' },
-    { id: 'hwvrd1_0eo8', title: '3. Configurar el cronograma general', description: 'Organice las fechas generales del calendario.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Cronograma-General----M%C3%B3dulo-Administrativo:63085eaf2adb370d0a4a5d55c69554c9df724039' },
-    { id: '3JhzC4St_0k', title: '4. Configurar períodos y especiales', description: 'Defina el cronograma de períodos y eventos especiales.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-Cronograma-de-Periodos-y-Especiales:efe479d0ef792259762006eaa599598ee8f4bdb6' },
-    { id: '47QKGmUQw3Q', title: '5. Crear un nuevo calendario', description: 'Cree un calendario institucional nuevo en SINAI.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Crear-Nuevo-Calendario:3d3432849f270f2073305806605d0bb87e5aeeaa' },
+    { id: 'hwvrd1_0eo8', title: '2. Configurar el cronograma general', description: 'Organice las fechas generales del calendario.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Cronograma-General----M%C3%B3dulo-Administrativo:63085eaf2adb370d0a4a5d55c69554c9df724039' },
+    { id: '3JhzC4St_0k', title: '3. Configurar períodos y especiales', description: 'Defina el cronograma de períodos y los cronogramas especiales.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-Cronograma-de-Periodos-y-Especiales:efe479d0ef792259762006eaa599598ee8f4bdb6' },
+    { id: '47QKGmUQw3Q', title: '4. Crear un nuevo calendario', description: 'Cree un calendario institucional nuevo en SINAI.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Crear-Nuevo-Calendario:3d3432849f270f2073305806605d0bb87e5aeeaa' },
   ]}
 />
 
 ## Guía paso a paso
 
-### Calendarios
+### 1. ¿Qué es Calendarios?
 
-SINAI tiene a disposición para los usuarios administrativos de los establecimientos educativos, un conjunto de opciones a través de las cuales se gestiona la configuración del calendario académico.
+**Calendarios** concentra la configuración del calendario que está seleccionado en la parte superior de SINAI. Lo que guarde aquí aplica a ese calendario y afecta a los usuarios de la institución.
 
-Se accede a estos formularios a través del menú principal _**Establecimiento**_, opción **_Calendarios_**
+La pantalla se organiza en cinco pestañas:
 
-### Configuración
+- **Configuración:** fechas, promoción, foliación, calificaciones de periodo y finales, actualización de perfiles y restricciones de datos.
+- **Predeterminar Calendario:** calendario que queda seleccionado por defecto y permiso temporal para que los docentes cambien de calendario.
+- **Periodos:** cronograma general, cronogramas especiales y grupos de cada cronograma especial.
+- **Escalas de Desempeño:** equivalencias con la escala nacional.
+- **Crear Nuevo Calendario:** creación del calendario siguiente a partir del actual.
 
-La ruta anteriormente descrita, llevará al usuario en primera instancia a la opción **_Configuración_**, la cual dispone de cinco formularios principales.
+El botón **Ayuda** de cada pestaña abre esta guía.
 
-_Pestaña “Configuración” de la ventana Calendarios – Módulo Administrativo (Clic sobre la imagen para ampliar)_
+Ingrese a **Establecimiento → Calendarios**. Si se muestra el submenú, seleccione **Configuración del Calendario**.
 
-1. Configuración general del calendario.
-2. Configuración de calificaciones de período.
-3. Configuración de calificaciones finales.
-4. Actualización del perfil de usuario.
-5. Restricción de la actualización de datos.
+<GuideImagePending>
+  Menú Establecimiento, opción Calendarios y la entrada Configuración del Calendario.
+</GuideImagePending>
 
-#### 1\. Configuración General del Calendario
+<GuideCallout type="warning">
+  Antes de guardar, lea el aviso de **Confirmación de Cambios**. Las variables del calendario cambian el funcionamiento para todos los usuarios. Algunos cambios no modifican los datos que ya existen en el calendario actual.
+</GuideCallout>
 
-Gestione las fechas de inicio y finalización del Calendario, el tipo de promoción según sea esta por áreas o asignaturas y el texto del plan de estudio como encabezado para los certificados de calificaciones con el número del acuerdo expedido por el consejo directivo, a través del cual se aprueba el SIE.
+#### 2. Configuración general del calendario
 
-1. Ingrese la fecha de inicio del calendario escolar.
-2. Ingrese la fecha de terminación del calendario escolar.
-3. Seleccione el tipo de promoción (por áreas o asignaturas)
-4. Escriba el texto del plan de estudio para certificados.
-5. Haga clic en el botón Guardar Cambios ubicado en el panel de Configuración de Cambios y aceptar el en cuadro de confirmación emergente.
+Abra la pestaña **Configuración**. El campo **Calendario** muestra el año seleccionado y no se edita.
 
-#### 2\. Configuración de Calificaciones de Periodo
+<GuideImagePending>
+  Pestaña Configuración, con los bloques de datos generales, calificaciones y el botón Guardar Cambios.
+</GuideImagePending>
 
-El ingreso a este formulario permite definir aspectos como el número de decimales admisibles en la calificación final del período, también establece el método con el cual se determina como va a funcionar el proceso de recuperación dentro de SINAI.
+<GuideDataTable>
 
-Para este método se disponen cuatro opciones:
+| Campo | Qué define |
+| --- | --- |
+| **Fecha de Inicio** | Fecha de inicio del calendario escolar. Es obligatoria. |
+| **Fecha de Finalización** | Fecha de terminación del calendario escolar. Es obligatoria. |
+| **Tipo de Promoción** | Forma de promoción de la institución. Por áreas, SINAI promedia las notas de las asignaturas para obtener la nota del área. Por asignatura, cada asignatura conserva notas independientes. |
+| **Método de foliación libro matrícula** | Cómo se asigna el libro y el folio. **Predeterminado** y **Solo estudiantes nuevos** asignan libro y folio solo a quienes se matriculan por primera vez en el calendario. **Todos los estudiantes** asigna libro y folio a todos, nuevos o provenientes de otro calendario. |
+| **Texto del plan de estudios para Certificados** | Texto del plan de estudios de este calendario que debe aparecer en los certificados. |
 
-- “No plica”, la cual estipula que el establecimiento educativo no realiza proceso de recuperación de los períodos académicos.
-- “Promedio”, cuando se seleccione esta opción, se está definiendo que en la institución se toma la nota final del estudiante y se promedia con la nota de recuperación para obtener la nota definitiva.
-- “Reemplazo” alude a que la nota de recuperación reemplaza la nota final del estudiante, sin estimar la afectación dentro de la escala de valoración.
-- “La más alta” aquí SINAI realiza una comparación de los valores entre la calificación resultante del período versus la recuperación y se toma como nota definitiva aquella que favorezca más al estudiante.
+</GuideDataTable>
 
-Algunos establecimientos educativos han definido en su SIE, la posibilidad de aproximar la nota de la asignatura, a la calificación mínima requerida para que el estudiante alcance el desempeño básico, razón por la cual SINAI, dentro de la Configuración de calificaciones de período, ofrece esta opción con la flexibilidad pertinente para las instituciones que utilizan esta estrategia y para aquellas que no.
+#### 3. Calificaciones de periodo
 
-Encontramos además en este formulario, la definición de la nota máxima de recuperación, esto a razón de que algunas instituciones argumentan dentro de su SIE, que un estudiante en proceso de recuperación, no puede alcanzar una nota Alta o Superior.
+<GuideDataTable>
 
-También se dispone de un método para el cálculo de los puestos de los estudiantes en los diferentes períodos ([Haga clic aquí para ampliar información](https://ayudasinai.siempre.net.co/metodos-para-el-calculo-de-puestos-en-sinai/)).
+| Campo | Qué define |
+| --- | --- |
+| **Número Decimales** | Máximo de decimales en las calificaciones del periodo: **Sin decimales**, **Un decimal** o **Dos decimales**. |
+| **Método de redondeo** | **Aproximación** o **Truncamiento**. En el periodo esta opción aparece marcada como beta. |
+| **Ajustes y recuperaciones** | Método con el que se calcula la definitiva cuando hay ajustes o recuperaciones del periodo. |
+| **Aproximación de Nota Definitiva** | Calificación a partir de la cual se aproxima la nota de la asignatura al mínimo del nivel Básico. |
+| **Calificación Máxima en Recuperaciones** | Nota máxima permitida en las recuperaciones del periodo. |
+| **Método para el cálculo del puesto** | **Orden simple**, **Rango simple** o **Rango Denso**. |
+| **Método para el registro de inasistencias** | **Detallado**, **Consolidado** o **Ambos**. |
 
-Finalmente, tenemos la definición del método para el registro de inasistencia, donde se configura si la institución permite un registro detallado, consolidado o ambos.
+</GuideDataTable>
 
-Cuando se configura como método “detallado”, se habilita el ingreso de datos como la fecha, la asignatura, entre otros aspectos, permitiendo que los docentes realicen un registro de inasistencia día por día, por otro lado, el registro “Consolidado” permite ingresar el total de inasistencia de los estudiantes durante todo el período, sin definir la fecha de inasistencia.
+En el método de puesto, **Ver explicación** abre esta guía. **Configuración de Criterios** abre [Criterios para el cálculo de puestos](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/cronogramas-y-periodos).
 
-Si desea conocer las instrucciones para la gestión paso a paso haga clic [aquí](https://ayudasinai.siempre.net.co/como-realizar-la-configuracion-de-calificaciones-de-periodo/).
+Los métodos de ajustes y recuperaciones funcionan así:
 
-#### 3\. Configuración de Calificaciones Finales
+- **No aplica:** la recuperación no cambia la definitiva.
+- **Promedio:** la definitiva se obtiene del promedio entre la calificación y la recuperación.
+- **Reemplazo:** si existe recuperación, esa nota reemplaza la definitiva.
+- **La más alta:** se conserva la nota más alta entre la calificación y la recuperación.
 
-La gestión dentro de este formulario es muy semejante a la anterior, con la diferencia de qué estas variables aplican únicamente para la nota definitiva del estudiante en el cierre del año escolar, adicionando entre sus opciones el habilitar o deshabilitar el registro de recuperaciones por parte del docente.
+#### 4. Calificaciones finales
 
-Vea las instrucciones paso a paso haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-realizar-la-configuracion-de-calificaciones-finales/).
+Estos valores aplican a la definitiva del cierre del calendario.
 
-#### 4\. Actualización del Perfil de Usuario
+<GuideDataTable>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+| Campo | Qué define |
+| --- | --- |
+| **Número de Decimales** | Máximo de decimales en las calificaciones definitivas del calendario. |
+| **Método de redondeo** | **Aproximación** o **Truncamiento** de las calificaciones finales. |
+| **Aproximación de Nota Definitiva** | Calificación a partir de la cual se aproxima la nota final al mínimo del nivel Básico. |
+| **Ajuste y recuperaciones** | Mismo tipo de cálculo que en el periodo, aplicado a los ajustes o recuperaciones finales. |
+| **Recup. Modulo del Docente** | **Habilitado** o **Deshabilitado**. Controla si el docente puede registrar recuperaciones de este calendario. |
+| **Calificación Máxima en Recuperaciones Finales** | Nota máxima que la institución permite en las recuperaciones finales. |
+| **Método para el cálculo de la calificación requerida** | **Promedio general** o **Siguiente periodo**. |
 
-#### 5\. Restricciones de Actualización de Datos
+</GuideDataTable>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+#### 5. Actualización del perfil de usuario
 
-### Predeterminar Calendario
+Cada casilla habilita que el usuario actualice sus datos desde el perfil y que SINAI lleve esa información de contacto al registro correspondiente:
 
-### Periodos
+- **Actualización de Funcionarios:** roles rector, coordinador, administrativo o docente.
+- **Actualización de Estudiantes:** rol estudiante.
+- **Actualización de Acudientes:** rol acudiente.
 
-#### Cronograma general
+Para guardar todo lo anterior:
 
-#### Cronogramas especiales
+1. Complete las fechas de inicio y de finalización.
+2. Revise promoción, foliación, calificaciones y las casillas de perfil.
+3. Haga clic en **Guardar Cambios**.
+4. Confirme el mensaje *¿Confirma que desea guardar las modificaciones realizadas en la configuración del calendario?*
 
-### Escalas de Desempeño
+Si el guardado es correcto, SINAI muestra **Cambios guardados correctamente**.
 
-### Crear Nuevo Calendario
+#### 6. Restricciones de actualización de datos
 
-La ruta anteriormente descrita, llevará al usuario en primera instancia a la opción **_Configuración_**, la cual dispone de cinco formularios principales.
+En la misma pestaña, abra **Restricciones de Actualización de Datos** con **Detalles**. El bloque inicia contraído.
 
-_Pestaña “Configuración” de la ventana Calendarios – Módulo Administrativo (Clic sobre la imagen para ampliar)_
+La tabla lista las restricciones disponibles para la institución. Cada fila tiene la restricción, la casilla **Activa**, las fechas **Desde** y **Hasta**, y la **Descripción**.
 
-1. Configuración general del calendario.
-2. Configuración de calificaciones de período.
-3. Configuración de calificaciones finales.
-4. Actualización del perfil de usuario.
-5. Restricción de la actualización de datos.
+Para activar una restricción:
 
-#### 1\. Configuración General del Calendario
+1. Marque **Activa**.
+2. Escriba **Desde** y **Hasta**. La fecha inicial no puede ser posterior a la final.
+3. Haga clic en **Guardar Cambios** de este bloque.
 
-Gestione las fechas de inicio y finalización del Calendario, el tipo de promoción según sea esta por áreas o asignaturas y el texto del plan de estudio como encabezado para los certificados de calificaciones con el número del acuerdo expedido por el consejo directivo, a través del cual se aprueba el SIE.
+Para quitar una restricción, desmarque **Activa** y guarde. SINAI elimina esa restricción del calendario.
 
-1. Ingrese la fecha de inicio del calendario escolar.
-2. Ingrese la fecha de terminación del calendario escolar.
-3. Seleccione el tipo de promoción (por áreas o asignaturas)
-4. Escriba el texto del plan de estudio para certificados.
-5. Haga clic en el botón Guardar Cambios ubicado en el panel de Configuración de Cambios y aceptar el en cuadro de confirmación emergente.
+Si una fila activa no tiene fechas válidas, esa fila no se guarda. El aviso general sigue siendo **Los cambios se Guardaron correctamente**.
 
-#### 2\. Configuración de Calificaciones de Periodo
+<GuideCallout>
+  Este **Guardar Cambios** es independiente del botón de la configuración general.
+</GuideCallout>
 
-El ingreso a este formulario permite definir aspectos como el número de decimales admisibles en la calificación final del período, también establece el método con el cual se determina como va a funcionar el proceso de recuperación dentro de SINAI.
+#### 7. Predeterminar el calendario
 
-Para este método se disponen cuatro opciones:
+Abra la pestaña **Predeterminar Calendario**.
 
-- “No plica”, la cual estipula que el establecimiento educativo no realiza proceso de recuperación de los períodos académicos.
-- “Promedio”, cuando se seleccione esta opción, se está definiendo que en la institución se toma la nota final del estudiante y se promedia con la nota de recuperación para obtener la nota definitiva.
-- “Reemplazo” alude a que la nota de recuperación reemplaza la nota final del estudiante, sin estimar la afectación dentro de la escala de valoración.
-- “La más alta” aquí SINAI realiza una comparación de los valores entre la calificación resultante del período versus la recuperación y se toma como nota definitiva aquella que favorezca más al estudiante.
+A la izquierda está la lista de calendarios de la institución. A la derecha, la tabla muestra **Año**, **Fecha de Inicio**, **Fecha de Fin** y **Predeterminado**. La fila del calendario predeterminado se resalta.
 
-Algunos establecimientos educativos han definido en su SIE, la posibilidad de aproximar la nota de la asignatura, a la calificación mínima requerida para que el estudiante alcance el desempeño básico, razón por la cual SINAI, dentro de la Configuración de calificaciones de período, ofrece esta opción con la flexibilidad pertinente para las instituciones que utilizan esta estrategia y para aquellas que no.
+El calendario predeterminado queda seleccionado para la institución. Los docentes trabajan en ese calendario. Los administrativos pueden cambiar de calendario con la lista de la parte superior.
 
-Encontramos además en este formulario, la definición de la nota máxima de recuperación, esto a razón de que algunas instituciones argumentan dentro de su SIE, que un estudiante en proceso de recuperación, no puede alcanzar una nota Alta o Superior.
+Para predeterminar:
 
-También se dispone de un método para el cálculo de los puestos de los estudiantes en los diferentes períodos ([Haga clic aquí para ampliar información](https://ayudasinai.siempre.net.co/metodos-para-el-calculo-de-puestos-en-sinai/)).
+1. Seleccione el año en la lista **Calendarios**.
+2. Haga clic en **Predeterminar Calendario**.
+3. Confirme el mensaje *¿Confirma que desea predeterminar el calendario seleccionado para todos los usuarios de la institución?*
 
-Finalmente, tenemos la definición del método para el registro de inasistencia, donde se configura si la institución permite un registro detallado, consolidado o ambos.
+Si no hay un año seleccionado, SINAI muestra **Debe seleccionar un calendario para predeterminar**.
 
-Cuando se configura como método “detallado”, se habilita el ingreso de datos como la fecha, la asignatura, entre otros aspectos, permitiendo que los docentes realicen un registro de inasistencia día por día, por otro lado, el registro “Consolidado” permite ingresar el total de inasistencia de los estudiantes durante todo el período, sin definir la fecha de inasistencia.
+**Habilitar cambio de calendario a Docentes** se guarda al marcar o desmarcar la casilla. El aviso **Guardado automaticamente** confirma el cambio. Use esta opción solo de forma temporal: dejarla activa por mucho tiempo puede afectar la información de calendarios anteriores.
 
-Si desea conocer las instrucciones para la gestión paso a paso haga clic [aquí](https://ayudasinai.siempre.net.co/como-realizar-la-configuracion-de-calificaciones-de-periodo/).
+#### 8. Cronograma general
 
-#### 3\. Configuración de Calificaciones Finales
+Abra la pestaña **Periodos**. En la lista de cronogramas, deje **General**.
 
-La gestión dentro de este formulario es muy semejante a la anterior, con la diferencia de qué estas variables aplican únicamente para la nota definitiva del estudiante en el cierre del año escolar, adicionando entre sus opciones el habilitar o deshabilitar el registro de recuperaciones por parte del docente.
+<GuideImagePending>
+  Cronograma general, con porcentajes, fechas de cada proceso y la leyenda Abierto / Cerrado.
+</GuideImagePending>
 
-Vea las instrucciones paso a paso haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-realizar-la-configuracion-de-calificaciones-finales/).
+La tabla muestra cada periodo con su porcentaje y las fechas de estos procesos:
 
-#### 4\. Actualización del Perfil de Usuario
+- **Periodo:** inicio y terminación, según la resolución del calendario.
+- **Planeación:** cierre de la planificación de actividades evaluativas.
+- **Calificaciones:** cierre del registro de calificaciones.
+- **Recuperaciones:** cierre del registro de recuperaciones del periodo.
+- **Inasistencias:** cierre del registro de inasistencias.
+- **Nota Directa:** **SI** permite registrar la calificación definitiva sin calificaciones parciales. **NO** no lo permite.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+En el cronograma general, el inicio de planeación, calificaciones, recuperaciones e inasistencias toma la fecha de inicio del periodo y no se edita. Sí se editan el inicio y el fin del periodo, y la fecha de cierre de cada proceso.
 
-#### 5\. Restricciones de Actualización de Datos
+El fondo verde indica que el proceso está **Abierto**. El fondo amarillo indica que está **Cerrado**.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+El nombre del periodo lo asigna SINAI: **PRIMERO**, **SEGUNDO**, **TERCERO**, **CUARTO** o **FINAL**. En la tabla no se cambia.
 
-#### Cronograma general
+Para crear un periodo del cronograma general:
 
-#### Cronogramas especiales
+1. En la lista de la derecha, elija **PRIMERO**, **SEGUNDO**, **TERCERO**, **CUARTO** o **PERIODO FINAL**.
+2. Haga clic en **Crear**.
 
+SINAI crea solo el periodo elegido. Los cuatro primeros quedan con porcentaje **30**, nota directa en **NO** y fechas del día de la creación. El periodo final se llama **FINAL**, queda con porcentaje **100** y nota directa en **NO**.
+
+Si el periodo ya existe, SINAI muestra **El periodo ya esta registrado** o, en el final, **El periodo final ya esta registrado**.
+
+El porcentaje es la participación del periodo en la calificación definitiva del año. Use números enteros. El porcentaje del periodo **FINAL** no se edita.
+
+Para guardar fechas, porcentajes y nota directa:
+
+1. Ajuste los datos de cada periodo.
+2. Haga clic en **Guardar Cambios**.
+3. Confirme *¿Confirma que desea modificar el cronograma de periodos?*
+
+Al guardar, el porcentaje del periodo **FINAL** queda igual a la suma de los porcentajes de los demás periodos. Si esa suma supera 100, SINAI no continúa y muestra **El promedio total es mayor a 100 por favor verifique.** Si el guardado termina bien, el aviso es **Los cambios se Guardaron correctamente**.
+
+Para eliminar un periodo del cronograma general:
+
+1. Haga clic en la equis roja del periodo.
+2. Lea el aviso: al eliminar un periodo deberá reasignar los pesos y volver a consolidar para recalcular el desempeño final.
+3. Escriba la palabra **CONFIRMAR**.
+4. Haga clic en **Aceptar**.
+
+El aviso de éxito es **Periodo eliminado correctamente**. Si el periodo tiene información relacionada, SINAI muestra **No se pudo eliminar el periodo porque tiene información relacionada. Por favor verifique**. **Cancelar** cierra la ventana sin eliminar.
+
+#### 9. Cronogramas especiales
+
+Siga en **Periodos**. Un cronograma especial sirve para fechas y pesos distintos de los del cronograma general, asociados después a grupos.
+
+Para crearlo:
+
+1. Escriba la descripción. Debe tener entre **10** y **50** caracteres.
+2. Haga clic en **Crear**, junto a la descripción.
+
+Si la descripción no cumple la longitud, SINAI muestra **La descripción del cronograma debe ser minimo de 10 y maximo de 50 caracteres**. Cuando se crea, el aviso indica que el cronograma se creó correctamente.
+
+Seleccione el cronograma en la lista. La tabla de periodos especiales reemplaza a la del cronograma general y aparece el bloque de grupos.
+
+En un cronograma especial, planeación, calificaciones, recuperaciones e inasistencias tienen fecha de inicio y de cierre propias. **Nota Directa** es una casilla. El porcentaje admite decimales. El periodo **FINAL** tampoco deja editar el porcentaje.
+
+Para agregar periodos:
+
+1. Elija **PRIMERO**, **SEGUNDO**, **TERCERO**, **CUARTO** o **PERIODO FINAL**.
+2. Haga clic en **Crear**.
+
+Al elegir **PRIMERO**, **SEGUNDO**, **TERCERO** o **CUARTO**, SINAI crea desde el primero hasta el periodo elegido. El peso de cada uno es 100 dividido entre esa cantidad. **PERIODO FINAL** crea solo el periodo **FINAL**, con peso **100**. Las fechas iniciales son las del momento de la creación.
+
+Si el periodo final ya existe, SINAI muestra **El periodo final ya esta registrado**.
+
+Para guardar, haga clic en **Guardar Cambios** y confirme la modificación del cronograma. El aviso de éxito es **Los cambios se guardaron correctamente**. Si una fecha no es válida, SINAI pide verificar el error.
+
+Para quitar un periodo especial, haga clic en la equis y confirme *¿Confirma que desea eliminar el periodo actual?* Si no es el último de la lista, SINAI muestra **Solo se puede eliminar el ultimo periodo de la lista.**
+
+El cronograma **General** no se elimina. Al intentarlo, SINAI muestra **No se puede eliminar el cronograma General**.
+
+Para eliminar un cronograma especial:
+
+1. Selecciónelo en la lista.
+2. Haga clic en **Eliminar**.
+3. Confirme *¿Estás seguro que deseas eliminar el crongrama seleccionado?*
+
+El aviso de éxito es **Cronograma eliminado correctamente**.
+
+#### 10. Grupos de un cronograma especial
+
+El bloque de grupos solo se muestra cuando hay un cronograma especial seleccionado.
+
+Para asociar grupos:
+
+1. Seleccione la **sede**.
+2. Marque uno o varios grupos. La lista permite selección múltiple.
+3. Haga clic en **Agregar Grupos**.
+
+La tabla **Grupos del Cronograma Seleccionado** muestra la sede y el grupo. Si el grupo ya pertenece a un cronograma, SINAI informa **El grupo ya esta asignado al cronograma:** seguido del nombre que encuentre.
+
+Para retirar grupos:
+
+1. Marque los grupos en la tabla.
+2. Haga clic en la equis del encabezado.
+3. Confirme *¿Confirma que desea eliminar los grupos seleccionados de este cronograma?*
+
+#### 11. Escala de desempeño
+
+Abra la pestaña **Escalas de Desempeño**. El título es **Equivalencias con la Escala Nacional de Desempeños**.
+
+Si el calendario aún no tiene escala, SINAI prepara una fila por cada nivel de desempeño nacional, con mínimo, máximo y valoración en cero.
+
+El **Nivel de Desempeño** no se cambia. En cada fila puede ajustar:
+
+<GuideDataTable>
+
+| Campo | Límite |
+| --- | --- |
+| **Mínimo** y **Máximo** | Hasta 5 caracteres. Aceptan números, coma y punto. |
+| **Valoración** | Hasta 6 caracteres. Acepta números, coma y punto. |
+| **Concepto** | Hasta 15 caracteres. |
+| **Abreviatura** | Un carácter. |
+| **Color** | Color del desempeño. Puede elegirlo en el selector o escribir el código hexadecimal. |
+| **Prefijo Descriptor** | Hasta 30 caracteres. |
+| **Descripción del desempeño** | Texto del nivel. |
+
+</GuideDataTable>
+
+Para guardar, haga clic en **Guardar Cambios** de la tabla. El aviso de éxito es **Los cambios en la escala de desempeño se guardaron correctamente**.
+
+**Escalas Personalizadas** abre la pantalla de escalas por grupo.
+
+#### 12. Crear un nuevo calendario
+
+Abra la pestaña **Crear Nuevo Calendario**.
+
+<GuideImagePending>
+  Formulario de creación, con el año propuesto y las fechas de inicio y finalización.
+</GuideImagePending>
+
+SINAI propone como **Nuevo calendario** el año siguiente al que está seleccionado en la parte superior. Ese valor no se edita.
+
+Cree el calendario cuando la información del calendario actual esté actualizada. La creación traslada al nuevo calendario la información requerida.
+
+Para crearlo:
+
+1. Escriba la **Fecha de Inicio** y la **Fecha de finalización**, de acuerdo con el acto administrativo de la entidad territorial.
+2. Haga clic en **Crear Calendario**.
+3. Confirme *¿Confirma que desea crear el nuevo Calendario en este momento? Se trasladará la información requerida del calendario actual al nuevo calendario*.
+
+La fecha de inicio y la de finalización son obligatorias. La fecha de inicio debe ser anterior a la de finalización. Si el calendario ya existe, SINAI indica que no puede crearlo porque ya existe para el establecimiento.
+
+SINAI también comprueba la licencia y la cantidad de matrículas activas del calendario actual. Si hay un inconveniente de licenciamiento, muestra el aviso y los canales de contacto configurados para la institución.
+
+Cuando la creación termina, SINAI abre la pantalla de recomendaciones y confirma que el calendario se creó. Esa pantalla indica que se trasladó:
+
+- la configuración del calendario;
+- las áreas y asignaturas;
+- la configuración académica, con pesos e intensidad horaria;
+- la asignación académica.
+
+El proceso de creación también traslada sistemas de evaluación, desempeños de preescolar, dimensiones, grupos, periodos, escala de desempeño, aspectos y criterios de la ficha observador.
+
+En esa misma pantalla puede iniciar la matrícula de estudiantes nuevos, modificar la configuración académica y registrar la asignación de los docentes. El traslado de la matrícula del calendario actual conviene hacerlo después de la promoción, con el calendario cerrado y los procesos de evaluación terminados.
+
+<GuideCallout type="warning">
+  Para trabajar en el calendario nuevo debe seleccionarlo en la parte superior. Los docentes podrán trabajar en él cuando el calendario actual haya sido cerrado.
+</GuideCallout>
+
+#### 13. Permisos
+
+Cada acción principal exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso y no aplica el cambio.
+
+- Crear un calendario nuevo.
+- Modificar la configuración del calendario.
+- Predeterminar el calendario y habilitar el cambio de calendario a los docentes.
+- Modificar periodos y cronogramas.
+- Modificar la escala de desempeño.
+
+Solicite el permiso faltante al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Calendarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Los cambios se guardan en el calendario que estoy viendo arriba?"}>
+    Sí. La pestaña Configuración, los periodos, la escala y las restricciones trabajan sobre el calendario seleccionado en la parte superior. El campo Calendario de la configuración muestra ese año y no se puede cambiar ahí.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Calendarios» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Qué diferencia hay entre No aplica, Promedio, Reemplazo y La más alta?"}>
+    Definen la definitiva cuando hay ajustes o recuperaciones. No aplica deja la calificación sin usar la recuperación. Promedio promedia la calificación y la recuperación. Reemplazo sustituye la definitiva por la recuperación cuando esta existe. La más alta conserva la mayor de las dos. Puede configurarlo por separado para el periodo y para el cierre del calendario.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Calendarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Qué hace Nota directa en un periodo?"}>
+    En SI, los usuarios pueden registrar la calificación definitiva directa, sin calificaciones parciales. En NO, ese registro directo no queda habilitado para el periodo. En el cronograma general se elige SI o NO. En un cronograma especial se marca la casilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no puedo cambiar el porcentaje del periodo FINAL?"}>
+    En el cronograma general ese porcentaje queda bloqueado. Al guardar, SINAI lo iguala a la suma de los porcentajes de los demás periodos. Si la suma supera 100, no guarda y pide verificar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo eliminar el cronograma General?"}>
+    No. SINAI muestra que no se puede eliminar el cronograma General. Solo se eliminan los cronogramas especiales, después de confirmarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Al crear periodos en un cronograma especial, ¿por qué aparecen varios?"}>
+    Si elige SEGUNDO, TERCERO o CUARTO, SINAI crea desde el primero hasta ese periodo y reparte el peso de 100 entre ellos. PERIODO FINAL crea únicamente el periodo final.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Qué información pasa al calendario nuevo?"}>
+    La pantalla de recomendaciones indica que se trasladan la configuración del calendario, las áreas y asignaturas, la configuración académica y la asignación académica. El proceso también lleva sistemas de evaluación, desempeños de preescolar, dimensiones, grupos, periodos, escala de desempeño y aspectos y criterios de la ficha observador. La matrícula se traslada después, en el proceso de promoción.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Los docentes pueden consultar otro calendario?"}>
+    Con el calendario predeterminado, los docentes permanecen en ese calendario. Los administrativos sí pueden cambiarlo en la lista superior. La casilla Habilitar cambio de calendario a Docentes les permite cambiar de calendario, y conviene usarla solo de forma temporal.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="09" question={"¿Qué significan el verde y el amarillo en el cronograma?"}>
+    Verde es Abierto y amarillo es Cerrado. El color depende de si la fecha del proceso está vigente en ese momento.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="10" question={"Guardé la configuración y no veo el cambio en datos ya registrados. ¿Quedó guardado?"}>
+    Si apareció Cambios guardados correctamente, la configuración del calendario sí quedó actualizada. El aviso de la pantalla indica que algunos cambios no modifican los datos que ya existían en el calendario.
   </GuideFAQItem>
 </GuideFAQ>

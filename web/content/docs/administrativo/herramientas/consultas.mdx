@@ -1,0 +1,144 @@
+---
+title: "Consultas"
+description: "Consulte la información del establecimiento por tipo y consulta, revise los resultados en pantalla y exporte el listado a Excel."
+guide: true
+lastModified: "2026-10-08"
+lastReviewed: "2026-10-08"
+---
+
+## Video tutorial
+
+<GuideCallout>
+  **Video pendiente:** cómo elegir un tipo y una consulta, revisar los resultados y exportarlos. Existe un video asociado a la guía anterior (YouTube `g_NPbEkGIlM`); verifique que siga correspondiendo a esta pantalla antes de publicarlo.
+</GuideCallout>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Consultas?
+
+**Consultas** le permite obtener listados e informes de la información del establecimiento a partir de consultas ya definidas en SINAI. Las consultas están agrupadas por **tipo**: **Matrícula**, **Personal** y **Evaluación y Promoción**.
+
+La pantalla tiene dos paneles:
+
+- **Parámetros de Consulta**, a la izquierda: los tipos de consulta, la lista **Consulta** y los botones **Consultar** y **Exportar**.
+- **Resultados de la Consulta**, a la derecha: la tabla con las filas que devuelve la consulta seleccionada.
+
+Esta vista no tiene botones para modificar datos. Sin embargo, una de las consultas de la lista sí elimina calificaciones; consulte la sección 4 antes de usar la lista.
+
+Los resultados se calculan con la institución y el calendario activos en su sesión. Algunas consultas muestran además todos los años de la institución, y en ese caso el resultado incluye una columna con el año.
+
+Ingrese a **Inicio → Consultas**.
+
+<GuideImageTrigger src={"/images/guides/consultas/consultas-parametros-y-resultados.png"} alt={"Captura de Consultas"}>Ver ejemplo</GuideImageTrigger>
+
+#### 2. Consultar información
+
+Antes de consultar, seleccione un tipo y una consulta. La página no muestra un mensaje si falta alguno de los dos.
+
+1. En **Parámetros de Consulta**, seleccione uno de los tipos de consulta. La lista **Consulta** se actualiza con las consultas de ese tipo.
+2. En la lista **Consulta**, seleccione una consulta. Cada opción muestra primero su número y luego su nombre, separados por un espacio.
+3. Haga clic en **Consultar**.
+
+El panel **Resultados de la Consulta** muestra las filas de la consulta. Si el resultado tiene varias páginas, use la paginación de la tabla para verlo por partes. Cada vez que cambia de página, SINAI vuelve a ejecutar la consulta seleccionada.
+
+<GuideCallout type="warning">
+  Si cambia la consulta seleccionada, la tabla sigue mostrando el resultado anterior hasta que haga clic en **Consultar**. Cambiar de página también usa la selección actual. Haga clic en **Consultar** antes de revisar resultados nuevos.
+</GuideCallout>
+
+#### 3. Exportar los resultados a Excel
+
+No necesita hacer clic en **Consultar** antes de exportar. **Exportar** usa la consulta seleccionada en ese momento.
+
+1. En **Parámetros de Consulta**, seleccione el tipo y la consulta que desea exportar.
+2. Haga clic en **Exportar**.
+3. Su navegador descargará un archivo con el número y el nombre de la consulta, con extensión `.xls`. Por ejemplo, `1 Matrícula total por año.xls`.
+4. Abra el archivo en Excel para revisarlo.
+
+El archivo incluye todas las filas de la consulta, no solo las que se ven en la página de la tabla.
+
+<GuideCallout type="warning">
+  **Exportar** vuelve a ejecutar la consulta seleccionada al momento de hacer clic. Revise que la selección sea la que necesita antes de exportar, sobre todo si cambió la selección después de hacer clic en **Consultar**.
+</GuideCallout>
+
+#### 4. Tipos de consulta y función de cada consulta
+
+Esta pantalla muestra solo tres tipos de consulta. Los demás tipos registrados en SINAI no aparecen aquí. Cada tabla siguiente describe una consulta, con el número que aparece en la lista **Consulta**.
+
+<GuideCallout type="warning">
+  La consulta **4 Eliminar Calificaciones que sus asignaturas no tengan asignación Académica** no es un listado: **elimina** calificaciones de la base de datos. No la seleccione en esta pantalla.
+</GuideCallout>
+
+**Tipo: Matrícula**
+
+| Consulta | Para qué sirve |
+| --- | --- |
+| 1 Matrícula total por año | Cuenta los estudiantes por año y por estado de matrícula, como MATRICULADO o RETIRADO. Muestra todos los años de la institución. |
+| 2 Listado de Estudiantes Matriculados | Lista los estudiantes matriculados en el calendario activo, con grupo, tipo y número de documento, teléfono, fecha de nacimiento y género. |
+| 3 Matrícula por grupo y estado | Cuenta los estudiantes de cada grupo según su estado de matrícula. Muestra todos los años. |
+| 4 Estudiantes NO matriculados | Lista los estudiantes del calendario activo cuyo estado de matrícula es distinto de MATRICULADO (por ejemplo, INSCRITO, TRASLADADO o RETIRADO), con sede, grupo, fecha de matrícula y fecha del estado. |
+| 5 Consolidado Nivel Sisben | Cuenta los estudiantes por nivel del Sisben. Muestra todos los años. |
+| 6 Consolidado Nivel Sisben por Grupo | Cuenta los estudiantes por nivel del Sisben y los desglosa por sede, jornada, nivel, grado y grupo, en el calendario activo. |
+| 7 Consolidado Estrato por Genero | Cuenta los estudiantes por estrato y género. Muestra todos los años. |
+| 10 Listado de Estudiantes Desplazados | Lista los estudiantes marcados como desplazados, con su sede, grupo, tipo y número de documento. Muestra todos los años. |
+| 12 Estudiantes con Discapacidad | Lista los estudiantes del calendario activo que tienen una discapacidad registrada, con código, grupo, documento, fecha de nacimiento y discapacidad. |
+
+<GuideCallout type="warning">
+  La consulta **7 Consolidado Estrato por Genero** muestra los datos de una institución que está fijada en la propia consulta, no necesariamente la de su sesión. No use este resultado para tomar decisiones sobre su establecimiento.
+</GuideCallout>
+
+**Tipo: Personal**
+
+| Consulta | Para qué sirve |
+| --- | --- |
+| 1 Lista de Funcionarios de la Institución | Lista los funcionarios de la institución con su plaza, documento, dirección, teléfono, correo, usuario y estado. |
+| 2 Asignación Académica | Muestra qué funcionario dicta cada asignatura en cada grupo del calendario activo, con horas semanales, horas totales y ponderación. |
+| 3 Asignación con Ponderación Incorrecta | Muestra las áreas de cada grupo del calendario activo cuya suma de ponderaciones no es 100. |
+| 4 Verificar Horas Semanales | Suma las horas semanales asignadas a cada grupo, por nivel, en el calendario activo. Sirve para revisar la carga horaria de los grupos. |
+
+**Tipo: Evaluación y Promoción**
+
+| Consulta | Para qué sirve |
+| --- | --- |
+| 1 Estudiantes con Desempeño Final Bajo | Lista, por asignatura, las notas de los estudiantes del calendario activo cuyo desempeño final es BAJO, con sus notas por periodo, nota final y requerido. |
+| 2 Estudiantes No promovidos | Cuenta los estudiantes por año, estrato y género. **No filtra por promoción**, aunque su nombre diga lo contrario. |
+| 3 Consolidado de desempeño por periodo | Cuenta los resultados por año y periodo, según el nivel de desempeño, con su porcentaje sobre la matrícula del año. Muestra todos los años. |
+| 4 Planeación diferente de 100% | Muestra, por periodo, grupo y asignatura, las planeaciones del calendario activo cuyo porcentaje total no es 100. |
+| 6 Calificaciones por Encima de la Escala - Tabla 2 | Lista las notas finales del calendario activo que superan el valor máximo del desempeño básico configurado en la escala de la institución. |
+| 10 Totales por Situación Académica | Cuenta los estudiantes por situación académica, como PROMOVIDO, NO PROMOVIDO o PENDIENTE, con su porcentaje y la fecha y hora de la consulta. Muestra todos los años y no incluye los estudiantes SIN PROCESAR. |
+| 11 Seguimiento de Digitación de Calificaciones | Por docente, grupo y asignatura del calendario activo, muestra cuántos estudiantes matriculados tienen desempeño registrado en cada periodo, del 1 al 4. Sirve para ver qué calificaciones faltan por digitar. |
+
+<GuideCallout type="warning">
+  La consulta **2 Estudiantes No promovidos** no filtra por situación de promoción. Su resultado es el total de estudiantes por año, estrato y género. Para ver la cantidad de estudiantes por situación académica, como NO PROMOVIDO, use **10 Totales por Situación Académica**.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"¿Por qué cambian las opciones de la lista Consulta al elegir otro tipo?"}>
+    La lista muestra solo las consultas del tipo seleccionado. Después de cambiar el tipo, seleccione de nuevo la consulta que necesita.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Qué pasa si hago clic en Consultar o en Exportar sin seleccionar una consulta?"}>
+    La página no tiene una validación para este caso. Antes de consultar o exportar, seleccione un tipo y una consulta.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"¿Por qué el archivo exportado tiene más filas que la tabla en pantalla?"}>
+    La tabla de **Resultados de la Consulta** se divide en páginas. El archivo de **Exportar** incluye todas las filas de la consulta.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué los resultados no coinciden con los de otro calendario?"}>
+    Las consultas usan la institución y el calendario activos en su sesión. Si cambia de calendario, haga clic de nuevo en **Consultar** para ver o exportar los datos de ese calendario.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo se llama el archivo que descargo con Exportar?"}>
+    El nombre está formado por el número y el nombre de la consulta seleccionada, con extensión `.xls`. Por ejemplo, `1 Matrícula total por año.xls`.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué pasa si cambio de página en la tabla después de cambiar la selección?"}>
+    SINAI vuelve a ejecutar la consulta que tiene seleccionada en ese momento, no la que se mostró al hacer clic en **Consultar**. Para evitar confusiones, haga clic en **Consultar** antes de revisar los resultados.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Por qué una consulta muestra datos de varios años y otra solo del año activo?"}>
+    Las consultas que indican «Muestra todos los años» no filtran por calendario y agregan una columna con el año. Las demás usan solo el calendario activo en su sesión.
+  </GuideFAQItem>
+</GuideFAQ>

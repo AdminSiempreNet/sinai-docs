@@ -1,3 +1,5 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -54,8 +56,8 @@ type HubCard = {
   title: string;
   description: string;
   href: string;
-  image: string;
-  imageAlt: string;
+  image?: string;
+  imageAlt?: string;
   icon: LucideIcon;
 };
 
@@ -90,6 +92,26 @@ const card = (
 ): HubCard => ({ title, description, href, image, imageAlt, icon });
 
 const HUBS: Record<string, HubConfig> = {
+  administrativo: {
+    title: 'Administrativo',
+    subtitle: 'Guías para configurar, operar y cerrar los procesos académicos e institucionales de su establecimiento en SINAI.',
+    description:
+      'Aquí encontrará el recorrido completo del rol Administrativo: desde el primer ingreso y la configuración de la institución, hasta la gestión de personal y estudiantes, el registro de calificaciones, la convivencia escolar, los cierres de periodo y de año, los permisos de usuarios y las herramientas de apoyo.',
+    cards: [
+      card('Primeros pasos', 'Acceso a la plataforma y configuración inicial de su cuenta.', '/docs/administrativo/primeros-pasos', '/images/section-hubs/dedicated/administrativo/primeros-pasos/ingresar-a-sinai.webp', 'Puerta de acceso a SINAI', LogIn),
+      card('Configuración Institucional', 'Datos de la institución, calendarios y configuración académica.', '/docs/administrativo/configuracion-institucional', '/images/section-hubs/institutional-config/institution.webp', 'Edificio de la institución', School),
+      card('Gestión de personal', 'Planta, funcionarios, asignación y seguimiento docente.', '/docs/administrativo/gestion-de-personal', '/images/section-hubs/gestion-de-personal/planta-de-cargos.webp', 'Estructura de la planta de cargos', Briefcase),
+      card('Gestión de estudiantes', 'Registro, información, novedades y seguimiento de estudiantes.', '/docs/administrativo/gestion-de-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/registro-estudiantes.webp', 'Registro de estudiantes', GraduationCap),
+      card('Registro de logros y calificaciones', 'Calificaciones, educación inclusiva, logros y actividades.', '/docs/administrativo/registro-de-logros-y-calificaciones', '/images/section-hubs/dedicated/administrativo/registro-de-logros-y-calificaciones/calificaciones.webp', 'Libro de calificaciones', FileSpreadsheet),
+      card('Currículo', 'Currículo estándar y por archivo adjunto.', '/docs/administrativo/curriculo', '/images/section-hubs/dedicated/administrativo/curriculo/curriculo-estandar.webp', 'Planeación curricular', BookOpen),
+      card('Convivencia escolar', 'Comportamiento, ficha observador y anotaciones disciplinarias.', '/docs/administrativo/convivencia-escolar', '/images/section-hubs/dedicated/administrativo/convivencia-escolar/calificacion-comportamiento.webp', 'Seguimiento de convivencia', Scale),
+      card('Cierre académico (periodo)', 'Consolidados, nivelaciones, puestos e informes de periodo.', '/docs/administrativo/cierre-academico-periodo', '/images/section-hubs/dedicated/administrativo/cierre-academico-periodo/reportes-consolidados.webp', 'Cierre del periodo académico', BarChart3),
+      card('Cierre de año', 'Comisión, promoción, recuperaciones y traslado de matrícula.', '/docs/administrativo/cierre-de-ano', '/images/section-hubs/dedicated/administrativo/cierre-de-ano/procesar-promocion.webp', 'Promoción de fin de año', Trophy),
+      card('Gestión de usuarios y permisos', 'Usuarios, permisos y verificación de datos.', '/docs/administrativo/gestion-de-usuarios-y-permisos', '/images/section-hubs/dedicated/administrativo/gestion-de-usuarios-y-permisos/usuarios.webp', 'Cuentas y permisos de usuario', Users),
+      card('Herramientas', 'Autoevaluación, Chamilo, reuniones, informes y más.', '/docs/administrativo/herramientas', '/images/section-hubs/dedicated/administrativo/herramientas/autoevaluacion.webp', 'Herramientas de apoyo institucional', Wrench),
+      card('Ayuda', 'Políticas y preguntas frecuentes.', '/docs/administrativo/ayuda', '/images/section-hubs/dedicated/administrativo/ayuda/preguntas-frecuentes.webp', 'Ayuda y preguntas frecuentes', CircleHelp),
+    ],
+  },
   'administrativo/configuracion-institucional': {
     title: 'Configuración Institucional',
     subtitle: 'Configure los datos de la institución, calendarios, periodos y la estructura académica.',
@@ -118,10 +140,23 @@ const HUBS: Record<string, HubConfig> = {
     description:
       'Aquí se concentran los procesos para organizar el equipo humano de la institución. Podrá estructurar la planta de cargos, registrar y actualizar funcionarios, distribuir la carga académica y realizar seguimiento a novedades, asistencia, horas, actividades y demás responsabilidades asociadas a la labor docente.',
     cards: [
-      card('Planta de cargos', 'Configure la planta de cargos de la institución.', '/docs/administrativo/gestion-de-personal/planta-de-cargos', images.adminPersonnel, 'Equipo institucional y estructura de cargos', Briefcase),
-      card('Registro de Funcionarios', 'Registre y actualice la información de funcionarios.', '/docs/administrativo/gestion-de-personal/funcionarios', images.adminPersonnel, 'Identificación y registro de funcionarios', Contact),
-      card('Asignación académica', 'Asigne carga académica por periodo o por estudiante.', '/docs/administrativo/gestion-de-personal/asignacion-academica', images.adminPersonnel, 'Organización del personal y su carga académica', BookOpen),
-      card('Seguimiento docente', 'Consulte novedades, asistencia, horas, diario y tareas del docente.', '/docs/administrativo/gestion-de-personal/seguimiento-docente', images.adminPersonnel, 'Seguimiento de actividades del equipo docente', ClipboardCheck),
+      card('Planta de cargos', 'Configure la planta de cargos de la institución.', '/docs/administrativo/gestion-de-personal/planta-de-cargos', '/images/section-hubs/gestion-de-personal/planta-de-cargos.webp', 'Silla institucional conectada a la estructura de cargos', Briefcase),
+      card('Registro de Funcionarios', 'Registre y actualice la información de funcionarios.', '/docs/administrativo/gestion-de-personal/funcionarios', '/images/section-hubs/gestion-de-personal/funcionarios.webp', 'Carpeta con ficha de funcionario y verificación', Contact),
+      card('Asignación académica', 'Asigne carga académica por periodo o por estudiante.', '/docs/administrativo/gestion-de-personal/asignacion-academica', '/images/section-hubs/gestion-de-personal/asignacion-academica.webp', 'Calendario, libros y ficha de asignación académica', BookOpen),
+      card('Seguimiento docente', 'Consulte novedades, asistencia, horas, diario y tareas del docente.', '/docs/administrativo/gestion-de-personal/seguimiento-docente', '/images/section-hubs/gestion-de-personal/seguimiento-docente.webp', 'Reloj, lista de verificación y lupa de seguimiento docente', ClipboardCheck),
+    ],
+  },
+  'administrativo/gestion-de-estudiantes': {
+    title: 'Gestión de estudiantes',
+    subtitle: 'Registre estudiantes, actualice su información, gestione novedades y haga seguimiento.',
+    description:
+      'Aquí encontrará el ciclo completo de atención a estudiantes en SINAI. Podrá registrar e importar matrículas, actualizar datos, fotografías y acudientes, gestionar novedades como cambios de grupo o reingresos, organizar validación y electivas, y consultar inasistencias, excusas, anotaciones y el observador.',
+    cards: [
+      card('Registro estudiantes', 'Registro individual, importación, inscripciones y prematrícula.', '/docs/administrativo/gestion-de-estudiantes/registro-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/registro-estudiantes.webp', 'Ficha de estudiante que se incorpora a la matrícula', Contact),
+      card('Información de estudiantes', 'Actualización de datos, fotografías y acudientes.', '/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/informacion-de-estudiantes.webp', 'Perfil del estudiante con fotografía y datos de contacto', UserCog),
+      card('Novedades de estudiantes', 'Ajustes de matrícula, cambio de grupo y reingresos.', '/docs/administrativo/gestion-de-estudiantes/novedades-de-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/novedades-de-estudiantes.webp', 'Traslado de un estudiante entre grupos', Send),
+      card('Validación y electivas', 'Validación, matrícula semestral y modalidades.', '/docs/administrativo/gestion-de-estudiantes/validacion-y-electivas', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/validacion-y-electivas.webp', 'Validación académica y opciones electivas', BadgeCheck),
+      card('Seguimiento a estudiantes', 'Inasistencias, excusas, anotaciones y observador.', '/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes.webp', 'Seguimiento de asistencia y observador del estudiante', ClipboardCheck),
     ],
   },
   'administrativo/registro-de-logros-y-calificaciones': {
@@ -224,6 +259,27 @@ const HUBS: Record<string, HubConfig> = {
       card('Condiciones de soporte técnico', 'Conozca canales de atención, prioridades y tiempos de respuesta.', '/docs/administrativo/ayuda/condiciones-de-soporte-tecnico', images.adminTools, 'Herramientas de soporte y atención', Wrench),
       card('Políticas', 'Revise las políticas relacionadas con el uso de SINAI.', '/docs/administrativo/ayuda/politicas', images.adminTools, 'Documento protegido de políticas institucionales', ShieldCheck),
       card('Preguntas frecuentes', 'Encuentre respuestas rápidas a dudas frecuentes.', '/docs/administrativo/ayuda/preguntas-frecuentes', images.adminTools, 'Centro de ayuda con preguntas frecuentes', CircleHelp),
+    ],
+  },
+  docente: {
+    title: 'Docente',
+    subtitle: 'Guías para planear, calificar y acompañar a sus estudiantes durante el año escolar.',
+    description:
+      'Encuentre las instrucciones de SINAI según la tarea que necesita realizar. Consulte su labor diaria, los procesos de cierre académico y las herramientas de apoyo.',
+    cards: [
+      card('Primeros pasos', 'Acceda a SINAI y mantenga actualizado su perfil.', '/docs/docente/primeros-pasos', '/images/section-hubs/dedicated/docente/primeros-pasos/ingresar-a-sinai.webp', 'Acceso al módulo docente', LogIn),
+      card('Mi labor docente', 'Consulte su asignación y horario, y documente su labor pedagógica.', '/docs/docente/mi-labor-docente', '/images/section-hubs/dedicated/docente/mi-labor-docente/mi-asignacion.webp', 'Asignación y labor docente', Presentation),
+      card('Estudiantes', 'Consulte sus grupos y la información de sus estudiantes.', '/docs/docente/estudiantes', '/images/section-hubs/dedicated/docente/estudiantes/buscar-estudiante.webp', 'Consulta de estudiantes', UserSearch),
+      card('Planeación y currículo', 'Organice clases, mallas curriculares, logros y actividades del periodo.', '/docs/docente/planeacion-y-curriculo', '/images/section-hubs/dedicated/docente/planeacion-y-curriculo/planeacion-de-clases.webp', 'Planeación de clases', NotebookPen),
+      card('Registro de calificaciones', 'Registre y consulte las valoraciones académicas de sus estudiantes.', '/docs/docente/registro-de-calificaciones', '/images/section-hubs/dedicated/docente/registro-de-calificaciones/registro-en-linea.webp', 'Registro de calificaciones', ClipboardCheck),
+      card('Asistencia y seguimiento', 'Registre inasistencias, consulte consolidados y gestione excusas.', '/docs/docente/asistencia-y-seguimiento', '/images/section-hubs/dedicated/docente/asistencia-y-seguimiento/inasistencias.webp', 'Control de asistencia', CalendarDays),
+      card('Convivencia y observador', 'Documente el comportamiento, las anotaciones y el seguimiento del estudiante.', '/docs/docente/convivencia-y-observador', '/images/section-hubs/dedicated/docente/convivencia-y-observador/ficha-observador.webp', 'Ficha del observador', HeartHandshake),
+      card('Cierre académico (periodo)', 'Consulte refuerzos, observaciones e informes al finalizar el periodo.', '/docs/docente/cierre-academico-periodo', '/images/section-hubs/dedicated/docente/cierre-academico-periodo/informes-de-evaluacion.webp', 'Informes de cierre del periodo', FileText),
+      card('Cierre de año', 'Revise notas finales, ajustes y recuperaciones de cierre anual.', '/docs/docente/cierre-de-ano', '/images/section-hubs/dedicated/docente/cierre-de-ano/notas-finales.webp', 'Notas finales del año', Trophy),
+      card('Aula virtual', 'Gestione tareas, usuarios y calificaciones del aula virtual.', '/docs/docente/aula-virtual', '/images/section-hubs/dedicated/docente/aula-virtual/tareas-en-linea.webp', 'Tareas del aula virtual', Monitor),
+      card('Herramientas', 'Consulte mensajes, reuniones, informes y utilidades de apoyo.', '/docs/docente/herramientas', '/images/section-hubs/dedicated/docente/herramientas/mensajes.webp', 'Mensajes y herramientas docentes', MessageSquare),
+      card('SINAI Desktop', 'Instale la aplicación y consulte sus procesos y opciones de sincronización.', '/docs/docente/sinai-desktop', '/images/section-hubs/dedicated/docente/sinai-desktop/inicio-y-configuracion.webp', 'Aplicación SINAI Desktop', Monitor),
+      card('Ayuda', 'Consulte políticas y recursos de apoyo de SIEMPRE.NET.', '/docs/docente/ayuda', '/images/section-hubs/dedicated/docente/ayuda/condiciones-de-soporte-tecnico.webp', 'Soporte y políticas', CircleHelp),
     ],
   },
   'docente/primeros-pasos': {
@@ -386,30 +442,236 @@ const HUBS: Record<string, HubConfig> = {
       card('Gestión de sugerencias', 'Registre y haga seguimiento a sus sugerencias.', '/docs/docente/ayuda/politicas/gestion-de-sugerencias', images.teacherDigital, 'Mensaje enviado al equipo de soporte', Send),
     ],
   },
+  estudiante: {
+    title: 'Estudiante',
+    subtitle: 'Entra a tu módulo, realiza tus actividades y consulta tus resultados.',
+    description:
+      'Desde aquí haces lo que te corresponde como estudiante en SINAI. Puedes entrar con tu usuario, cambiar tu contraseña, actualizar tu foto y tus datos, escribirles a tus docentes, entregar tareas, entrar a tus cursos, responder la autoevaluación, consultar notas, informes y boletines, completar la prematrícula y revisar tus faltas, excusas y seguimiento.',
+    cards: [
+      card('Primeros pasos', 'Entra con tu usuario y cambia tu contraseña desde el perfil.', '/docs/estudiante/primeros-pasos', '/images/section-hubs/dedicated/estudiante/primeros-pasos/ingresar-a-sinai.webp', 'Estudiante frente a la puerta del salón', LogIn),
+      card('Mi cuenta y comunicaciones', 'Actualiza tu perfil, envía mensajes y consulta tus docentes.', '/docs/estudiante/mi-cuenta-y-comunicaciones', '/images/section-hubs/dedicated/estudiante/mi-cuenta-y-comunicaciones/actualizar-perfil-frente.webp', 'Escritorio con el carné del estudiante', UserCog),
+      card('Actividad académica', 'Entrega tareas, entra a Chamilo y responde tu autoevaluación.', '/docs/estudiante/actividad-academica', '/images/section-hubs/dedicated/estudiante/actividad-academica/mis-tareas.webp', 'Estudiante con el cuaderno de tareas', NotebookPen),
+      card('Resultados académicos', 'Consulta notas, informes y los boletines del periodo y del año.', '/docs/estudiante/resultados-academicos', '/images/section-hubs/dedicated/estudiante/resultados-academicos/boletin-del-periodo.webp', 'Boletín sobre el escritorio', FileText),
+      card('Matrícula', 'Revisa tus datos y confirma la prematrícula cuando esté abierta.', '/docs/estudiante/matricula', '/images/section-hubs/dedicated/estudiante/matricula/prematricula.webp', 'Carpeta de matrícula', ClipboardList),
+      card('Asistencia y convivencia', 'Consulta faltas, envía excusas y lee tu ficha y tus anotaciones.', '/docs/estudiante/asistencia-y-convivencia', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/inasistencias.webp', 'Calendario de asistencia', CalendarDays),
+    ],
+  },
+  'estudiante/primeros-pasos': {
+    title: 'Primeros pasos',
+    subtitle: 'Entra a SINAI y cambia tu contraseña cuando la necesites.',
+    description:
+      'Aquí aprendes a entrar a tu módulo y a dejar segura tu cuenta. Para ingresar, abres el portal, buscas el nombre de tu colegio y eliges usuario y contraseña, SNET CORE o Google. Tu usuario normalmente es tu número de documento. Si ya entraste, cambias la contraseña desde tu perfil: escribes la actual, creas una nueva de al menos 14 caracteres con mayúscula, minúscula y número, y la confirmas.',
+    cards: [
+      card('¿Cómo ingresar a SINAI?', 'Busca tu colegio en el portal y entra con usuario, SNET CORE o Google.', '/docs/estudiante/primeros-pasos/ingresar-a-sinai', '/images/section-hubs/dedicated/estudiante/primeros-pasos/ingresar-a-sinai.webp', 'Estudiante entrando al salón', LogIn),
+      card('Cómo cambiar mi contraseña', 'Escribe la contraseña actual, crea una nueva y confírmala en tu perfil.', '/docs/estudiante/primeros-pasos/cambiar-contrasena', '/images/section-hubs/dedicated/estudiante/primeros-pasos/cambiar-contrasena.webp', 'Estudiante cambiando su contraseña', KeyRound),
+    ],
+  },
+  'estudiante/mi-cuenta-y-comunicaciones': {
+    title: 'Mi cuenta y comunicaciones',
+    subtitle: 'Actualiza tus datos, escribe mensajes y consulta quién te dicta clase.',
+    description:
+      'Aquí administras tu cuenta y te comunicas con el colegio. En tu perfil cambias la foto, los datos básicos, el contacto y la contraseña, y puedes vincular SNET CORE. En Mensajes lees, escribes y adjuntas archivos a usuarios de tu institución, como tus docentes. En Mis docentes ves el nombre de quien dicta cada asignatura de tu grupo.',
+    cards: [
+      card('Cómo actualizar el perfil', 'Cambia tu foto, tus datos básicos, tu contacto y tu contraseña.', '/docs/estudiante/mi-cuenta-y-comunicaciones/actualizar-perfil', '/images/section-hubs/dedicated/estudiante/mi-cuenta-y-comunicaciones/actualizar-perfil-frente.webp', 'Carné y foto sobre el escritorio', UserCog),
+      card('Mensajes', 'Lee tu bandeja y envía mensajes o archivos a tus docentes.', '/docs/estudiante/mi-cuenta-y-comunicaciones/mensajes', '/images/section-hubs/dedicated/estudiante/mi-cuenta-y-comunicaciones/mensajes-frente.webp', 'Sobre de mensaje en el escritorio', MessageSquare),
+      card('Mis docentes', 'Consulta el nombre de quien dicta cada asignatura de tu grupo.', '/docs/estudiante/mi-cuenta-y-comunicaciones/mis-docentes', '/images/section-hubs/dedicated/estudiante/mi-cuenta-y-comunicaciones/mis-docentes.webp', 'Tarjetas de docentes sobre el escritorio', Users),
+    ],
+  },
+  'estudiante/actividad-academica': {
+    title: 'Actividad académica',
+    subtitle: 'Entrega tus tareas, entra a tus cursos y responde tu autoevaluación.',
+    description:
+      'Aquí realizas el trabajo que te dejan en clase. En Mis tareas filtras por grupo, periodo, asignatura y estado, abres las indicaciones del docente, descargas los adjuntos y envías tu archivo antes de la fecha límite. En Aula virtual entras a tus cursos de Chamilo. En Autoevaluación respondes la que tu colegio dejó abierta y envías tus respuestas.',
+    cards: [
+      card('Mis tareas', 'Filtra tus actividades, abre las indicaciones y envía tu archivo.', '/docs/estudiante/actividad-academica/mis-tareas', '/images/section-hubs/dedicated/estudiante/actividad-academica/mis-tareas.webp', 'Estudiante escribiendo en su cuaderno', NotebookPen),
+      card('Aula virtual CHAMILO', 'Entra desde SINAI a los cursos que tienes en Chamilo.', '/docs/estudiante/actividad-academica/aula-virtual', '/images/section-hubs/dedicated/estudiante/actividad-academica/aula-virtual-frente.webp', 'Estudiante frente al computador del aula', Monitor),
+      card('Autoevaluación', 'Responde cada punto de la autoevaluación y envía tus respuestas.', '/docs/estudiante/actividad-academica/autoevaluacion', '/images/section-hubs/dedicated/estudiante/actividad-academica/autoevaluacion.webp', 'Lista de autoevaluación sobre el escritorio', CheckSquare),
+    ],
+  },
+  'estudiante/resultados-academicos': {
+    title: 'Resultados académicos',
+    subtitle: 'Consulta tus notas, abre tus informes y descarga tus boletines.',
+    description:
+      'Aquí miras cómo vas en el año, cuando tu colegio ya publicó la información. En Calificaciones consolidadas ves la nota de cada asignatura por periodo. En Informes abres o descargas los informes disponibles. En Boletín del periodo y en Boletín final abres el boletín del periodo que elijas o el del cierre del año.',
+    cards: [
+      card('Informes', 'Abre o descarga los informes que tu colegio ya publicó.', '/docs/estudiante/resultados-academicos/informes', '/images/section-hubs/dedicated/estudiante/resultados-academicos/informes.webp', 'Informes sobre el escritorio', FileText),
+      card('Calificaciones consolidadas', 'Elige el periodo y mira la nota de cada asignatura.', '/docs/estudiante/resultados-academicos/calificaciones-consolidadas', '/images/section-hubs/dedicated/estudiante/resultados-academicos/calificaciones-consolidadas.webp', 'Hoja de notas sobre el escritorio', BarChart3),
+      card('Boletín del periodo', 'Abre el boletín del periodo que quieras consultar.', '/docs/estudiante/resultados-academicos/boletin-del-periodo', '/images/section-hubs/dedicated/estudiante/resultados-academicos/boletin-del-periodo.webp', 'Boletín del periodo en una carpeta', ClipboardList),
+      card('Boletín final', 'Abre el boletín con el resultado de todo el año.', '/docs/estudiante/resultados-academicos/boletin-final', '/images/section-hubs/dedicated/estudiante/resultados-academicos/boletin-final.webp', 'Boletín final con un listón', Trophy),
+    ],
+  },
+  'estudiante/matricula': {
+    title: 'Matrícula',
+    subtitle: 'Completa tu prematrícula cuando el colegio la tenga abierta.',
+    description:
+      'Cuando tu colegio habilita la prematrícula, entras y completas el formulario: datos básicos, caracterización, carga de requisitos, información familiar y acudiente. Al guardar, revisas el estado del proceso para confirmar que quedó registrada.',
+    cards: [
+      card('Prematrícula', 'Completa el formulario, guarda los datos y revisa el estado del proceso.', '/docs/estudiante/matricula/prematricula', '/images/section-hubs/dedicated/estudiante/matricula/prematricula.webp', 'Carpeta de prematrícula sobre el escritorio', ClipboardList),
+    ],
+  },
+  'estudiante/asistencia-y-convivencia': {
+    title: 'Asistencia y convivencia',
+    subtitle: 'Consulta tus faltas, envía una excusa y lee tu seguimiento.',
+    description:
+      'Aquí revisas tu asistencia y lo que el colegio registró sobre tu convivencia. En Inasistencias ves las faltas del periodo, en consolidado o día por día. En Excusas envías el soporte de una falta. En Ficha observador, Anotaciones y Seguimiento lees tu ficha, cada anotación con su fecha y el resumen de tu proceso.',
+    cards: [
+      card('Inasistencias Consolidadas y Detalladas', 'Elige el periodo y consulta tus faltas en consolidado o en detalle.', '/docs/estudiante/asistencia-y-convivencia/inasistencias', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/inasistencias.webp', 'Calendario de asistencia en el escritorio', CalendarDays),
+      card('Excusas', 'Adjunta el soporte de una falta y envía la excusa.', '/docs/estudiante/asistencia-y-convivencia/excusas', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/excusas.webp', 'Sobre con una excusa', Mail),
+      card('Ficha Observador', 'Abre tu ficha y lee la información de seguimiento que registró el colegio.', '/docs/estudiante/asistencia-y-convivencia/ficha-observador', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/ficha-observador.webp', 'Ficha abierta sobre el escritorio', HeartHandshake),
+      card('Anotaciones', 'Lee cada anotación con su fecha y el motivo registrado.', '/docs/estudiante/asistencia-y-convivencia/anotaciones', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/anotaciones.webp', 'Cuaderno de anotaciones', MessageSquare),
+      card('Seguimiento', 'Consulta el resumen de tu proceso de acompañamiento.', '/docs/estudiante/asistencia-y-convivencia/seguimiento', '/images/section-hubs/dedicated/estudiante/asistencia-y-convivencia/seguimiento.webp', 'Lista de seguimiento con marcas', ClipboardCheck),
+    ],
+  },
 };
 
-function HubIllustration({ item }: { item: HubCard }) {
+const DETAIL_ICONS: LucideIcon[] = [
+  CalendarDays,
+  CheckSquare,
+  ClipboardCheck,
+  FileText,
+  GraduationCap,
+  ShieldCheck,
+  Users,
+  BarChart3,
+  BookOpen,
+  MessageSquare,
+  BadgeCheck,
+  Cloud,
+];
+
+function stableNumber(value: string) {
+  return Array.from(value).reduce((total, character) => ((total * 31) + character.charCodeAt(0)) >>> 0, 7);
+}
+
+function iconFor(title: string): LucideIcon {
+  const normalized = title.toLocaleLowerCase('es-CO');
+
+  if (/(contraseña|sesión|ingresar|acceso|autorizaci)/.test(normalized)) return KeyRound;
+  if (/(usuario|funcionario|personal|docente|estudiante|grupo|matrícula)/.test(normalized)) return Users;
+  if (/(calendario|periodo|cronograma|horario|asistencia|inasistencia)/.test(normalized)) return CalendarDays;
+  if (/(calific|nota|evaluación|escala|valoración|logro|desempeño)/.test(normalized)) return BarChart3;
+  if (/(planilla|excel|reporte|informe|acta|listado)/.test(normalized)) return FileSpreadsheet;
+  if (/(planeación|currículo|malla|actividad|clase|asignatura)/.test(normalized)) return NotebookPen;
+  if (/(piar|inclusiva|caracterización)/.test(normalized)) return Accessibility;
+  if (/(permiso|política|protección|seguridad|auditoría)/.test(normalized)) return ShieldCheck;
+  if (/(mensaje|anotación|observación|sugerencia|excusa)/.test(normalized)) return MessageSquare;
+  if (/(sincron|desktop|aula virtual|chamilo|descargar|instalar)/.test(normalized)) return Monitor;
+  if (/(copia de seguridad|backup)/.test(normalized)) return Database;
+  if (/(centro de interés|interés)/.test(normalized)) return MapPin;
+  if (/(promoción|cuadro de honor|recuperación|refuerzo)/.test(normalized)) return Trophy;
+  if (/(buscar|consultar|verificación)/.test(normalized)) return Search;
+  return ClipboardList;
+}
+
+function readDynamicHub(section: string): HubConfig | null {
+  const sourcePath = path.join(process.cwd(), 'content', 'docs', ...section.split('/'), 'index.mdx');
+  if (!fs.existsSync(sourcePath)) return null;
+
+  const source = fs.readFileSync(sourcePath, 'utf8');
+  const title = source.match(/^title:\s*["'](.+?)["']\s*$/m)?.[1];
+  const subtitle = source.match(/^description:\s*["'](.+?)["']\s*$/m)?.[1];
+  const withoutFrontmatter = source.replace(/^---[\s\S]*?---\s*/m, '');
+  const introduction = withoutFrontmatter
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .find((line) => line && !line.startsWith('#') && !line.startsWith('<'));
+
+  if (!title || !subtitle) return null;
+
+  const cards: HubCard[] = [];
+  const cardExpression = /<Card\s+title=(?:"([^"]+)"|\{\"([^\"]+)\"\})\s+href="([^"]+)"\s+description=(?:"([^"]+)"|\{\"([^\"]+)\"\})\s*\/>/g;
+  let match = cardExpression.exec(source);
+  while (match) {
+    const cardTitle = match[1] ?? match[2];
+    const cardDescription = match[4] ?? match[5];
+    cards.push({ title: cardTitle, description: cardDescription, href: match[3], icon: iconFor(cardTitle) });
+    match = cardExpression.exec(source);
+  }
+
+  if (!cards.length) return null;
+
+  const lead = introduction && introduction !== subtitle ? introduction : subtitle;
+  return {
+    title,
+    subtitle,
+    description: `${lead} Seleccione una opción para conocer el proceso paso a paso, los datos que debe preparar y las acciones disponibles para completarlo correctamente en SINAI.`,
+    cards,
+  };
+}
+
+function publicImageIfExists(publicPath: string) {
+  const diskPath = path.join(process.cwd(), 'public', publicPath);
+  return fs.existsSync(diskPath) ? publicPath : null;
+}
+
+function transparentImageFor(publicPath: string) {
+  const cut = publicImageIfExists(publicPath.replace(/\.webp$/, '-cut.webp'));
+  if (cut) return cut;
+  const refreshed = publicImageIfExists(publicPath.replace(/\.webp$/, '-v2.webp'));
+  if (refreshed) return refreshed;
+  return publicImageIfExists(publicPath);
+}
+
+function dedicatedImageFor(item: HubCard) {
+  const relativePath = item.href.replace(/^\/docs\//, '');
+  const studentIllustration = relativePath.startsWith('estudiante/')
+    ? publicImageIfExists(`/images/section-hubs/student-illustrations/${relativePath}.png`)
+    : null;
+
+  if (studentIllustration) return studentIllustration;
+
+  const studentRootImage = relativePath.match(/^estudiante\/([^/]+)$/)?.[1];
+
+  if (studentRootImage) {
+    const rootImage = transparentImageFor(`/images/section-hubs/dedicated/estudiante/root/${studentRootImage}.webp`);
+    if (rootImage) return rootImage;
+  }
+
+  const explicitPath = item.image?.endsWith('.webp') ? item.image : null;
+  if (explicitPath) {
+    const explicit = transparentImageFor(explicitPath);
+    if (explicit) return explicit;
+  }
+
+  return publicImageIfExists(`/images/section-hubs/dedicated/${relativePath}.webp`);
+}
+
+function generatedImageFor(item: HubCard) {
+  const relativePath = item.href.replace(/^\/docs\//, '');
+  return publicImageIfExists(`/images/section-hubs/generated/${relativePath}.png`);
+}
+
+function HubIllustration({ item, index }: { item: HubCard; index: number }) {
+  const image = dedicatedImageFor(item) ?? generatedImageFor(item);
+
+  if (image) {
+    return (
+      <div className="sinai-institutional-card-illustration">
+        <Image src={image} alt={item.imageAlt ?? item.title} width={720} height={720} sizes="(max-width: 900px) 100vw, 33vw" data-image-modal-managed />
+      </div>
+    );
+  }
+
   const Icon = item.icon;
+  const seed = stableNumber(`${item.title}-${item.href}`);
+  const DetailIcon = DETAIL_ICONS[seed % DETAIL_ICONS.length];
+  const variant = (seed + index) % 4;
 
   return (
     <div className="sinai-institutional-card-illustration">
-      <Image
-        src={item.image}
-        alt={item.imageAlt}
-        width={720}
-        height={720}
-        sizes="(max-width: 900px) 100vw, 33vw"
-        data-image-modal-managed
-      />
-      <span className="sinai-section-card-topic" aria-hidden="true">
-        <Icon />
-      </span>
+      <div className="sinai-section-card-illustration" data-variant={variant} aria-hidden="true">
+        <span className="sinai-section-card-orbit" />
+        <span className="sinai-section-card-panel sinai-section-card-panel-primary"><Icon /></span>
+        <span className="sinai-section-card-panel sinai-section-card-panel-detail"><DetailIcon /></span>
+        <span className="sinai-section-card-spark sinai-section-card-spark-one" />
+        <span className="sinai-section-card-spark sinai-section-card-spark-two" />
+      </div>
     </div>
   );
 }
 
 export function SectionHub({ section }: { section: string }) {
-  const hub = HUBS[section];
+  const hub = HUBS[section] ?? readDynamicHub(section);
 
   if (!hub) return null;
 
@@ -438,9 +700,9 @@ export function SectionHub({ section }: { section: string }) {
           <h2 id={headingId}>Contenido de esta sección</h2>
         </div>
         <div className="sinai-institutional-card-grid">
-          {hub.cards.map((item) => (
+          {hub.cards.map((item, index) => (
             <Link className="sinai-institutional-card" href={item.href} key={item.href}>
-              <HubIllustration item={item} />
+              <HubIllustration item={item} index={index} />
               <div className="sinai-institutional-card-copy">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
