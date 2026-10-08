@@ -4,6 +4,12 @@ import docenteRedirects from './lib/docente-redirects.json';
 import estudianteRedirects from './lib/estudiante-redirects.json';
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'i.ytimg.com' },
+      { protocol: 'https', hostname: 'thumbnails.odycdn.com' },
+    ],
+  },
   async redirects() {
     return [...docenteRedirects, ...estudianteRedirects];
   },

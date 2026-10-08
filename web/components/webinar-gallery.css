@@ -1,0 +1,61 @@
+.sinai-webinar-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.9rem;
+  background: #000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.sinai-webinar-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.sinai-webinar-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.sinai-webinar-more button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-fd-border);
+  border-radius: 999px;
+  color: var(--color-fd-foreground);
+  background: var(--color-fd-card);
+  font-size: 0.78rem;
+  font-weight: 680;
+  cursor: pointer;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+
+.sinai-webinar-more button:hover {
+  border-color: color-mix(in srgb, var(--sinai-webinar-blue) 45%, var(--color-fd-border));
+  background: color-mix(in srgb, var(--sinai-webinar-blue) 6%, var(--color-fd-card));
+}
+
+.sinai-webinar-more svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  transition: transform 200ms ease;
+}
+
+.sinai-webinar-more svg[data-open='true'] {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 640px) {
+  .sinai-webinar-video {
+    border-inline: 0;
+    border-radius: 0;
+  }
+}
