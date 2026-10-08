@@ -14,6 +14,8 @@ import { getGuidePageData } from '@/lib/guide';
 import { GuideFeedback } from '@/components/guide-feedback';
 import { RoleLandingBanner } from '@/components/role-landing-banner';
 import { SectionLandingBanner } from '@/components/section-landing-banner';
+import { SectionHub } from '@/components/section-hub';
+import { StudentGuideReady, StudentGuideScene } from '@/components/student-guide-scene';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -29,32 +31,46 @@ export default async function Page(props: {
     status?: string;
     lastReviewed?: string;
     section?: boolean;
+    hub?: boolean;
   };
   const isRoleLanding =
     params.slug?.length === 1 &&
     !!role &&
     ['administrativo', 'docente', 'estudiante'].includes(role);
   const isSectionLanding = !isRoleLanding && !isGuide && pageMeta.section === true;
+  const isInstitutionalConfigLanding =
+    params.slug?.join('/') === 'administrativo/configuracion-institucional';
+  const sectionKey = params.slug?.join('/') ?? '';
+  const isModuleHub = isRoleLanding && ['administrativo', 'docente', 'estudiante'].includes(role ?? '');
+  const isSectionHub =
+    isModuleHub ||
+    (pageMeta.section === true &&
+      ['administrativo', 'docente', 'estudiante'].includes(role ?? ''));
+  const isStudentGuide = isGuide && role === 'estudiante';
   const roleClass = role && ['administrativo', 'docente', 'estudiante'].includes(role)
     ? `sinai-role-${role}`
     : undefined;
-  const hasToc = toc.length > 0;
+  const showGuideToc = toc.length > 0 && !isSectionHub;
   const guideUrl = `/docs/${params.slug?.join('/') ?? ''}`;
   const pageClassName = [
     isGuide && 'sinai-guide-page',
-    hasToc && 'sinai-custom-toc',
+    showGuideToc && 'sinai-custom-toc',
     isRoleLanding && 'sinai-role-landing-page',
     isSectionLanding && 'sinai-section-landing-page',
+    isSectionHub && 'sinai-section-hub-page',
+    isInstitutionalConfigLanding && 'sinai-institutional-config-page',
     roleClass,
   ].filter(Boolean).join(' ') || undefined;
 
   return (
     <DocsPage
-      toc={toc}
-      full={page.data.full}
+      toc={isSectionHub ? [] : toc}
+      tableOfContent={isSectionHub ? { enabled: false } : undefined}
+      tableOfContentPopover={isSectionHub ? { enabled: false } : undefined}
+      full={isSectionHub || page.data.full}
       className={pageClassName}
     >
-      {isRoleLanding && role ? (
+      {isSectionHub ? null : isRoleLanding && role ? (
         <RoleLandingBanner
           role={role}
           title={String(page.data.title)}
@@ -78,7 +94,17 @@ export default async function Page(props: {
         </div>
       )}
       <DocsBody className={isGuide ? 'sinai-guide-body' : undefined}>
-        <MDXContent components={getMDXComponents()} />
+        {isSectionHub ? (
+          <SectionHub section={sectionKey} />
+        ) : (
+          <>
+            {isStudentGuide && (
+              <StudentGuideScene slug={sectionKey} title={String(page.data.title)} />
+            )}
+            <MDXContent components={getMDXComponents()} />
+            {isStudentGuide && <StudentGuideReady slug={sectionKey} />}
+          </>
+        )}
       </DocsBody>
       {isGuide && (
         <GuideFeedback
@@ -88,7 +114,7 @@ export default async function Page(props: {
           lastReviewed={pageMeta.lastReviewed}
         />
       )}
-      {hasToc && <GuideToc toc={toc} />}
+      {showGuideToc && <GuideToc toc={toc} />}
       <ContentImageModal />
     </DocsPage>
   );

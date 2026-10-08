@@ -1,0 +1,50 @@
+.sinai-guide-table {
+  margin: 1.15rem 0 1.45rem;
+  overflow: auto;
+  border: 1px solid color-mix(in srgb, var(--sinai-role-accent) 24%, var(--color-fd-border));
+  border-radius: 0.85rem;
+  background: var(--color-fd-card);
+  box-shadow:
+    inset 3px 0 0 var(--sinai-role-accent),
+    0 1px 2px rgb(15 23 42 / 4%);
+}
+
+.sinai-guide-table table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.sinai-guide-table :is(th, td) {
+  padding: 0.72rem 0.95rem;
+  text-align: left;
+  vertical-align: top;
+  border: 0;
+}
+
+.sinai-guide-table th {
+  background: color-mix(in srgb, var(--sinai-role-accent) 18%, var(--color-fd-card));
+  color: var(--color-fd-foreground);
+  font-weight: 700;
+  border-bottom: 1px solid color-mix(in srgb, var(--sinai-role-accent) 28%, var(--color-fd-border));
+}
+
+.sinai-guide-table td {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-fd-border) 85%, transparent);
+}
+
+.sinai-guide-table tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--sinai-role-accent) 7%, var(--color-fd-card));
+}
+
+.sinai-guide-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.sinai-guide-table td:first-child {
+  width: 34%;
+  font-weight: 650;
+  color: var(--color-fd-foreground);
+}
