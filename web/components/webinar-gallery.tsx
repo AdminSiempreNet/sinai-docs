@@ -2,131 +2,80 @@
 
 import Image from 'next/image';
 import {
-  CalendarDays,
+  ChevronDown,
   ChevronRight,
   Clock3,
   Layers3,
   Play,
-  Radio,
   Users,
   X,
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { YouTube } from '@/components/youtube';
+import './webinar-gallery.css';
 
 type Webinar = {
-  id: number;
+  id: string;
   title: string;
   summary: string;
   description: string;
-  date: string;
   duration: string;
   audience: string;
   topic: string;
   accent: 'blue' | 'cyan' | 'green' | 'violet' | 'amber' | 'indigo';
-  youtubeId: string;
-  odyseeUrl: string;
+  odyseePath: string;
   thumbnailUrl: string;
-  thumbnailSource: 'YouTube' | 'Alternativo';
 };
 
+const INITIAL_VISIBLE = 6;
+
+/** Ordenados del más reciente al más antiguo: el primero ocupa la primera tarjeta. */
 const webinars: Webinar[] = [
   {
-    id: 1,
-    title: 'Organice el calendario académico institucional',
-    summary: 'Fechas, periodos y cronogramas preparados para toda la comunidad educativa.',
-    description: 'Un recorrido práctico por la configuración del calendario y los momentos que orientan el trabajo institucional durante el año escolar.',
-    date: '24 septiembre 2026',
-    duration: '52 min',
-    audience: 'Administrativos',
-    topic: 'Configuración',
+    id: 'semana-institucional-actualizaciones',
+    title: 'Semana institucional: actualizaciones de SINAI',
+    summary: 'Base de conocimiento, preinformes o alertas académicas y boletines digitales.',
+    description: 'Socializar las nuevas herramientas de la Plataforma SINAI —Base de Conocimiento, Preinformes o Alertas Académicas y Boletines Digitales—, destacando su funcionamiento, beneficios y ventajas para facilitar el acceso a la información, fortalecer el seguimiento académico y optimizar la gestión de los procesos institucionales de manera ágil, organizada y eficiente.',
+    duration: '2 h 08 min',
+    audience: 'Directivos, administrativos y docentes',
+    topic: 'Actualizaciones',
     accent: 'blue',
-    youtubeId: 'VYh0b1tLOh4',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-del-Calendario---SINAI---M%C3%B3dulo-administrativo:22d7397dd93300f6d7d3cb04a4cc471a7ad943e2',
-    thumbnailUrl: 'https://i.ytimg.com/vi/VYh0b1tLOh4/hqdefault.jpg',
-    thumbnailSource: 'YouTube',
+    odyseePath: '@AndresGoDu:a/2893454436-1508357822-34cd6400-79e5-4a85-98fb-33daa6eccde0:2',
+    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/5bdaee59d5b776ee29e25b051d88bee2.webp',
   },
   {
-    id: 2,
-    title: 'Registro de calificaciones con mayor claridad',
-    summary: 'Buenas prácticas para registrar, revisar y hacer seguimiento a las notas.',
-    description: 'Revise el flujo de registro en línea y las recomendaciones que ayudan a mantener la información académica completa y consistente.',
-    date: '10 septiembre 2026',
-    duration: '46 min',
-    audience: 'Docentes',
-    topic: 'Evaluación',
+    id: 'inscripciones-y-prematricula',
+    title: 'Inscripciones y prematrícula',
+    summary: 'Preparación del ingreso de estudiantes nuevos y la continuidad de los antiguos.',
+    description: 'Recorrido por los procesos de inscripción de aspirantes y prematrícula en SINAI: cómo se preparan, cómo se registra y consulta la información de los estudiantes y cómo hacer seguimiento para llegar a la matrícula del nuevo año escolar con los datos completos y organizados.',
+    duration: '1 h 48 min',
+    audience: 'Directivos y administrativos',
+    topic: 'Matrícula',
     accent: 'green',
-    youtubeId: 'xWmmjTgvDFg',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Registro-de-Calificaciones-en-L%C3%ADnea---SINAI---M%C3%B3dulo-docente:d180796d4f3f3716d1c72ff2bbd20470a3750ed7',
-    thumbnailUrl: 'https://i.ytimg.com/vi/xWmmjTgvDFg/hqdefault.jpg',
-    thumbnailSource: 'YouTube',
+    odyseePath: '@AndresGoDu:a/2883012591-1508357822-09c6b8c8-49d0-49db-9354-aef3e1b07bf4:fcb687a570',
+    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/0ae854fc15ab67e7cee635f2d88b76b8.webp',
   },
   {
-    id: 3,
-    title: 'Gestión de usuarios y permisos en SINAI',
-    summary: 'Cuentas, perfiles y permisos alineados con las responsabilidades del equipo.',
-    description: 'Conozca los criterios para crear usuarios, asignar accesos y mantener organizada la administración de las cuentas institucionales.',
-    date: '27 agosto 2026',
-    duration: '58 min',
-    audience: 'Administrativos',
-    topic: 'Usuarios',
+    id: 'planeacion-curricular',
+    title: 'Planeación curricular',
+    summary: 'Mallas curriculares, planes de área y planeación de clases en un mismo hilo.',
+    description: 'Orientaciones para organizar la planeación curricular de la institución en SINAI: cómo se articulan las mallas curriculares y los planes de área con la planeación de clases, los estándares y los Derechos Básicos de Aprendizaje, para que el trabajo pedagógico de cada asignatura sea coherente, consultable y fácil de hacer seguimiento.',
+    duration: '1 h 57 min',
+    audience: 'Directivos y docentes',
+    topic: 'Planeación',
     accent: 'violet',
-    youtubeId: '9BfAgdPNybo',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Gestion-de-usuarios:862060a774c641d7559040c019820d5fb52035c9',
-    thumbnailUrl: 'https://i.ytimg.com/vi/9BfAgdPNybo/hqdefault.jpg',
-    thumbnailSource: 'YouTube',
-  },
-  {
-    id: 4,
-    title: 'Seguimiento integral desde el observador',
-    summary: 'Registros que ayudan a comprender y acompañar el proceso de cada estudiante.',
-    description: 'Explore las herramientas del observador para documentar situaciones, reconocer avances y consultar el historial de seguimiento.',
-    date: '13 agosto 2026',
-    duration: '49 min',
-    audience: 'Docentes',
-    topic: 'Seguimiento',
-    accent: 'cyan',
-    youtubeId: 'vNPpQUybIb4',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Registro-de-seguimiento:2cd2f282ef8eeb71a52605a86dbee0f9ada2e194',
-    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/67b316c48adf4b4d1ec23a0db35e8515.webp',
-    thumbnailSource: 'Alternativo',
-  },
-  {
-    id: 5,
-    title: 'Educación inclusiva y gestión del PIAR',
-    summary: 'Orientaciones para documentar los ajustes y acompañar los procesos de inclusión.',
-    description: 'Una sesión dedicada a la configuración y diligenciamiento del PIAR dentro de los procesos académicos de la institución.',
-    date: '30 julio 2026',
-    duration: '1 h 06 min',
-    audience: 'Docentes y orientadores',
-    topic: 'Inclusión',
-    accent: 'amber',
-    youtubeId: 'pE2YfBAR-uw',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Configuraci%C3%B3n-PIAR:2d73ca7ba1b836fa7b124c3d5ab852fe85f81c46',
-    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/ae3522cca6555a1f819973ba6cf40247.webp',
-    thumbnailSource: 'Alternativo',
-  },
-  {
-    id: 6,
-    title: 'Cierre de periodo sin inconsistencias',
-    summary: 'Validaciones clave antes de generar informes y consolidar resultados.',
-    description: 'Identifique los pendientes más frecuentes y aplique una ruta de revisión antes de completar el cierre académico del periodo.',
-    date: '16 julio 2026',
-    duration: '54 min',
-    audience: 'Administrativos',
-    topic: 'Cierre académico',
-    accent: 'indigo',
-    youtubeId: 'UbBLrtgcfWg',
-    odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Modulo-Inconsistencias---Estudiantes-sin-calificaciones---SINAI---M%C3%B3dulo-A:5888a81ed4ef4d99f64abb6391a7bffcacc803c7',
-    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/59272752422904263e50bcf6eacb95ba.webp',
-    thumbnailSource: 'Alternativo',
+    odyseePath: '@AndresGoDu:a/weibar:474097046f',
+    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/04070132e92d36878e407380c37abfc2.webp',
   },
 ];
 
 export function WebinarGallery() {
   const [activeWebinar, setActiveWebinar] = useState<Webinar>();
+  const [showAll, setShowAll] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const activeTriggerRef = useRef<HTMLButtonElement | null>(null);
+
+  const visibleWebinars = showAll ? webinars : webinars.slice(0, INITIAL_VISIBLE);
+  const hiddenCount = webinars.length - INITIAL_VISIBLE;
 
   const closeModal = () => {
     setActiveWebinar(undefined);
@@ -162,11 +111,13 @@ export function WebinarGallery() {
           <p>Biblioteca de encuentros</p>
           <h2 id="sinai-webinar-library-title">Webinars realizados</h2>
         </div>
-        <span><Layers3 aria-hidden="true" /> 6 grabaciones de ejemplo</span>
+        <span>
+          <Layers3 aria-hidden="true" /> {webinars.length} {webinars.length === 1 ? 'grabación' : 'grabaciones'}
+        </span>
       </div>
 
       <div className="sinai-webinar-grid">
-        {webinars.map((webinar) => (
+        {visibleWebinars.map((webinar) => (
           <article key={webinar.id} className="sinai-webinar-card" data-accent={webinar.accent}>
             <button type="button" onClick={(event) => openWebinar(webinar, event.currentTarget)} aria-label={`Ver webinar: ${webinar.title}`}>
               <span className="sinai-webinar-cover" aria-hidden="true">
@@ -177,9 +128,7 @@ export function WebinarGallery() {
                   sizes="(max-width: 720px) 100vw, (max-width: 1100px) 50vw, 33vw"
                   className="sinai-webinar-thumbnail"
                 />
-                <span className="sinai-webinar-recorded" data-source={webinar.thumbnailSource.toLowerCase()}>
-                  {webinar.thumbnailSource}
-                </span>
+                <span className="sinai-webinar-recorded">Grabación</span>
                 <span className="sinai-webinar-play"><Play /></span>
               </span>
 
@@ -191,7 +140,7 @@ export function WebinarGallery() {
                 <strong>{webinar.title}</strong>
                 <small>{webinar.summary}</small>
                 <span className="sinai-webinar-card-footer">
-                  <span><CalendarDays aria-hidden="true" /> {webinar.date}</span>
+                  <span><Users aria-hidden="true" /> {webinar.audience}</span>
                   <span className="sinai-webinar-card-action">Ver grabación <ChevronRight aria-hidden="true" /></span>
                 </span>
               </span>
@@ -199,6 +148,15 @@ export function WebinarGallery() {
           </article>
         ))}
       </div>
+
+      {hiddenCount > 0 ? (
+        <div className="sinai-webinar-more">
+          <button type="button" onClick={() => setShowAll((current) => !current)} aria-expanded={showAll}>
+            {showAll ? 'Mostrar menos' : `Mostrar ${hiddenCount} ${hiddenCount === 1 ? 'webinar más' : 'webinars más'}`}
+            <ChevronDown aria-hidden="true" data-open={showAll} />
+          </button>
+        </div>
+      ) : null}
 
       {activeWebinar ? (
         <div className="sinai-webinar-modal-backdrop" role="presentation" onMouseDown={closeModal}>
@@ -224,7 +182,7 @@ export function WebinarGallery() {
           >
             <header className="sinai-webinar-modal-header">
               <div>
-                <span>Webinar grabado · {activeWebinar.date}</span>
+                <span>Webinar grabado · {activeWebinar.topic}</span>
                 <h2 id="sinai-webinar-modal-title">{activeWebinar.title}</h2>
               </div>
               <button ref={closeButtonRef} type="button" onClick={closeModal} aria-label="Cerrar webinar">
@@ -234,7 +192,15 @@ export function WebinarGallery() {
 
             <div className="sinai-webinar-modal-content">
               <div className="sinai-webinar-modal-player">
-                <YouTube id={activeWebinar.youtubeId} title={activeWebinar.title} odyseeUrl={activeWebinar.odyseeUrl} />
+                <div className="sinai-webinar-video">
+                  <iframe
+                    src={`https://odysee.com/$/embed/${activeWebinar.odyseePath}`}
+                    title={activeWebinar.title}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
               </div>
 
               <aside className="sinai-webinar-modal-details">
@@ -245,10 +211,6 @@ export function WebinarGallery() {
                   <div><dt><Clock3 aria-hidden="true" /> Duración</dt><dd>{activeWebinar.duration}</dd></div>
                   <div><dt><Layers3 aria-hidden="true" /> Tema</dt><dd>{activeWebinar.topic}</dd></div>
                 </dl>
-                <div className="sinai-webinar-source-note">
-                  <Radio aria-hidden="true" />
-                  <p><strong>Dos opciones de reproducción</strong><span>Elija YouTube o la versión alternativa desde el selector del video.</span></p>
-                </div>
               </aside>
             </div>
           </section>

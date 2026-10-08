@@ -96,6 +96,7 @@ function pathFromDocsUrl(url: string) {
 function resolveMenuIcon(iconName: string | undefined) {
   if (!iconName) return undefined;
   return createElement(MenuIcon, {
+    key: iconName,
     name: iconName,
     className: 'sinai-menu-icon',
   });

@@ -14,7 +14,7 @@ export function baseOptions(): BaseLayoutProps {
       title: <SinaiBrandLogo />,
       // Entre el logo y el botón de contraer el menú (slot nativo de Fumadocs).
       children: (
-        <SinaiFontSizeSwitch className="sinai-font-size-switch--sidebar-header me-1" />
+        <SinaiFontSizeSwitch key="sinai-font-size" className="sinai-font-size-switch--sidebar-header me-1" />
       ),
     },
     slots: {
