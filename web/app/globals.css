@@ -1,8 +1,15 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "fumadocs-ui/css/neutral.css";
 @import "fumadocs-ui/css/preset.css";
 
-/* Permite que Tailwind escanee las clases usadas por los componentes de Fumadocs */
+/* Limita el escaneo a fuentes que realmente pueden contener clases. Dejar la
+   detección automática activa hace que Tailwind recorra artefactos de Next y
+   agrava la creación de workers de PostCSS en desarrollo. */
+@source "../app";
+@source "../components";
+@source "../content";
+@source "../lib";
+@source "../*.{js,ts,jsx,tsx,mdx}";
 @source "../node_modules/fumadocs-ui/dist/**/*.js";
 
 @theme inline {
