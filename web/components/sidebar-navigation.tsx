@@ -20,7 +20,7 @@ export function SidebarHelp() {
   );
 }
 
-/** Resaltado de rama activa y exclusividad de carpetas abiertas. */
+/** Resaltado de rama activa, exclusividad de carpetas y cierre sin cambiar de página. */
 export function SidebarMenuDecoration() {
   const pathname = usePathname();
 
@@ -150,8 +150,44 @@ export function SidebarMenuDecoration() {
       return () => sidebar.removeEventListener('click', handleFolderClick);
     };
 
+    // Una agrupación cerrada sigue abriendo su guía y el acordeón.
+    // Si ya está abierta, el clic solo la recoge: no cambia la página visible.
+    const collapseOpenFolderWithoutNavigation = (sidebar: HTMLElement) => {
+      const handleClick = (event: MouseEvent) => {
+        if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const origin = event.target instanceof Element
+          ? event.target
+          : event.target instanceof Node
+            ? event.target.parentElement
+            : null;
+        if (!origin || !sidebar.contains(origin)) return;
+
+        // El chevron ya alterna el acordeón sin navegar.
+        if (origin.closest('[data-icon]')) return;
+
+        const link = origin.closest<HTMLAnchorElement>('a[href]');
+        if (!link || !sidebar.contains(link)) return;
+
+        const folder = link.parentElement;
+        if (folder?.dataset.state !== 'open') return;
+        if (folder.querySelector(':scope > a[href]') !== link) return;
+
+        const chevron = link.querySelector<HTMLElement>('[data-icon]');
+        if (!chevron) return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        chevron.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      };
+
+      sidebar.addEventListener('click', handleClick, true);
+      return () => sidebar.removeEventListener('click', handleClick, true);
+    };
+
     sidebars.forEach(markPrimaryFolders);
     const removeExclusiveHandlers = sidebars.map(makeFoldersExclusive);
+    const removeCollapseHandlers = sidebars.map(collapseOpenFolderWithoutNavigation);
     const observers = sidebars.map((sidebar) => {
       const observer = new MutationObserver(() => markPrimaryFolders(sidebar));
       observer.observe(sidebar, { childList: true, subtree: true });
@@ -172,6 +208,7 @@ export function SidebarMenuDecoration() {
     return () => {
       observers.forEach((observer) => observer.disconnect());
       removeExclusiveHandlers.forEach((removeHandler) => removeHandler());
+      removeCollapseHandlers.forEach((removeHandler) => removeHandler());
       footerObserver?.disconnect();
       delete documentRoot.dataset.sinaiFooterVisible;
     };

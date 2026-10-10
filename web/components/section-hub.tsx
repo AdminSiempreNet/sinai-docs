@@ -633,7 +633,7 @@ function dedicatedImageFor(item: HubCard) {
     if (explicit) return explicit;
   }
 
-  return publicImageIfExists(`/images/section-hubs/dedicated/${relativePath}.webp`);
+  return transparentImageFor(`/images/section-hubs/dedicated/${relativePath}.webp`);
 }
 
 function generatedImageFor(item: HubCard) {

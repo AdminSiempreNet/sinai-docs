@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     template: "%s | SINAI",
   },
   description: "Guías y procesos de la plataforma SINAI de SIEMPRE.NET.",
+  icons: {
+    icon: [{ url: "/images/brand/sinai-iso.png", type: "image/png" }],
+    apple: [{ url: "/images/brand/sinai-iso.png", type: "image/png" }],
+    shortcut: ["/images/brand/sinai-iso.png"],
+  },
 };
 
 export default function RootLayout({
