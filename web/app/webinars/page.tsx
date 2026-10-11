@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDown, ArrowLeft, Radio } from 'lucide-react';
+import { ArrowDown, ArrowLeft, BookOpenCheck, Building2, GraduationCap, Radio } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
 import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
@@ -53,12 +54,6 @@ export default function WebinarsPage() {
         </div>
 
         <section className="sinai-live-hero" aria-labelledby="sinai-live-hero-title">
-          <div className="sinai-live-hero-signal" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-
           <div className="sinai-webinars-container sinai-live-hero-inner">
             <div className="sinai-live-hero-copy">
               <span className="sinai-live-badge">
@@ -84,6 +79,23 @@ export default function WebinarsPage() {
             </div>
 
             <aside className="sinai-live-panel" aria-labelledby="sinai-live-panel-title">
+              <div className="sinai-live-panel-brand" aria-hidden="true">
+                <span className="sinai-live-panel-brand-mark">
+                  <Image src="/images/brand/sinai-iso.png" alt="" width={2000} height={2000} />
+                </span>
+                <span className="sinai-live-panel-brand-copy">
+                  <small>Un espacio de SIEMPRE.NET</small>
+                  <strong>Academia SINAI</strong>
+                </span>
+                <span className="sinai-live-panel-route">
+                  <i><Building2 /></i>
+                  <b />
+                  <i><BookOpenCheck /></i>
+                  <b />
+                  <i><GraduationCap /></i>
+                </span>
+              </div>
+
               <div className="sinai-live-panel-heading">
                 <p>Agenda</p>
                 <h2 id="sinai-live-panel-title">Próxima transmisión</h2>

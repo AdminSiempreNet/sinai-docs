@@ -6320,6 +6320,7 @@ body:has(.sinai-custom-toc) #nd-toc {
 
 .sinai-webinar-card-meta {
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 0.75rem;
   color: var(--color-fd-muted-foreground);
   font-size: 0.65rem;
@@ -6328,6 +6329,10 @@ body:has(.sinai-custom-toc) #nd-toc {
 
 .sinai-webinar-card-meta > span {
   gap: 0.3rem;
+}
+
+.sinai-webinar-card-meta > span:last-child {
+  margin-inline-start: auto;
 }
 
 .sinai-webinar-card-meta > span:first-child {
@@ -6383,9 +6388,19 @@ body:has(.sinai-custom-toc) #nd-toc {
 }
 
 .sinai-webinar-card-action {
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  gap: 0.25rem;
+  margin-top: 0.65rem;
   color: var(--color-fd-foreground);
   font-weight: 690;
   white-space: nowrap;
+}
+
+.sinai-webinar-card-action svg {
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 .sinai-webinar-modal-backdrop {
