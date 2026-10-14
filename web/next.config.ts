@@ -10,7 +10,11 @@ const nextConfig: NextConfig = {
     // PostCSS. En este proyecto pueden acumularse cientos de procesos y
     // agotar la memoria del equipo. Los worker threads comparten el proceso
     // de Next y evitan esa multiplicación en desarrollo.
-    turbopackPluginRuntimeStrategy: 'workerThreads',
+    // En next build los worker threads cruzan transformaciones entre
+    // archivos (PostCSS recibe meta.json), por eso solo aplica en desarrollo.
+    ...(process.env.NODE_ENV !== 'production' && {
+      turbopackPluginRuntimeStrategy: 'workerThreads' as const,
+    }),
   },
   // La carpeta padre también tiene un lockfile. Sin esta raíz, Turbopack
   // toma sinai-docs/ en lugar de esta aplicación.
