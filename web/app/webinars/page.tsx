@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowDown, ArrowLeft, CalendarDays } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
@@ -78,41 +77,17 @@ export default function WebinarsPage() {
               </div>
             </div>
 
-            <aside className="sinai-standby-screen" aria-label="Sala de espera del webinar SINAI">
-              <div className="sinai-standby-screen-brands">
-                <Image
-                  src="/images/brand/sinai.png"
-                  alt="SINAI"
-                  width={836}
-                  height={350}
-                  className="sinai-standby-sinai-logo"
-                />
-                <span className="sinai-standby-screen-divider" aria-hidden="true" />
-                <Image
-                  src="/images/brand/snet.png"
-                  alt="SIEMPRE.NET"
-                  width={396}
-                  height={78}
-                  className="sinai-standby-snet-logo"
-                />
+            <section className="sinai-standby-agenda" id="sinai-webinar-agenda" aria-labelledby="sinai-live-panel-title">
+              <div className="sinai-live-panel-heading">
+                <p>Agenda</p>
+                <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
               </div>
-              <div className="sinai-standby-screen-copy">
-                <p>Webinar SINAI</p>
-                <strong>Todo listo</strong>
-                <span>El webinar comenzará pronto</span>
-              </div>
-            </aside>
+              <WebinarSchedule webinars={upcomingWebinars} />
+            </section>
           </div>
         </section>
 
         <div className="sinai-webinars-container sinai-webinars-content">
-          <section className="sinai-standby-agenda" id="sinai-webinar-agenda" aria-labelledby="sinai-live-panel-title">
-            <div className="sinai-live-panel-heading">
-              <p>Agenda</p>
-              <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
-            </div>
-            <WebinarSchedule webinars={upcomingWebinars} />
-          </section>
           <WebinarGallery />
         </div>
       </main>
