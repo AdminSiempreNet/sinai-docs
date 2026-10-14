@@ -44,6 +44,7 @@ export default async function Page(props: {
   const isModuleHub = isRoleLanding && ['administrativo', 'docente', 'estudiante'].includes(role ?? '');
   const isSectionHub =
     isModuleHub ||
+    sectionKey === 'generales' ||
     (pageMeta.section === true &&
       ['administrativo', 'docente', 'estudiante'].includes(role ?? ''));
   const isStudentGuide = isGuide && role === 'estudiante';
