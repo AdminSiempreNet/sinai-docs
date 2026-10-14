@@ -35,7 +35,11 @@ export function WebinarSchedule({ webinars }: { webinars: UpcomingWebinar[] }) {
   const [remainingDays, setRemainingDays] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    setRemainingDays(Object.fromEntries(webinars.map((webinar) => [webinar.isoDate, daysUntil(webinar.isoDate)])));
+    const frame = window.requestAnimationFrame(() => {
+      setRemainingDays(Object.fromEntries(webinars.map((webinar) => [webinar.isoDate, daysUntil(webinar.isoDate)])));
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, [webinars]);
 
   const copyAccessLink = async (webinar: UpcomingWebinar) => {

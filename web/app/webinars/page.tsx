@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowDown, ArrowLeft, Radio } from 'lucide-react';
+import { ArrowDown, ArrowLeft, CalendarDays } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
 import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
@@ -52,29 +52,23 @@ export default function WebinarsPage() {
           </header>
         </div>
 
-        <section className="sinai-live-hero" aria-labelledby="sinai-live-hero-title">
-          <div className="sinai-live-hero-signal" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-
+        <section className="sinai-live-hero sinai-standby-hero" aria-labelledby="sinai-live-hero-title">
           <div className="sinai-webinars-container sinai-live-hero-inner">
-            <div className="sinai-live-hero-copy">
-              <span className="sinai-live-badge">
-                <span className="sinai-live-dot" aria-hidden="true" />
-                Eventos en vivo
+            <div className="sinai-live-hero-copy sinai-standby-copy">
+              <span className="sinai-standby-badge">
+                <span aria-hidden="true" />
+                Sala de espera
               </span>
-              <h1 id="sinai-live-hero-title">Aprenda SINAI en vivo, con su equipo y en tiempo real.</h1>
+              <h1 id="sinai-live-hero-title">Todo listo para el próximo encuentro.</h1>
               <p>
-                Conéctese a nuestras transmisiones para conocer los procesos de cada temporada académica, resolver dudas
-                con los asesores y, si no alcanza a asistir, vuelva a ver las grabaciones cuando lo necesite.
+                Prepare a su equipo y consulte la agenda. Al comenzar, encontrará aquí el acceso para acompañar el
+                webinar de SINAI.
               </p>
 
               <div className="sinai-live-hero-actions">
-                <a href={LIVE_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="sinai-live-primary">
-                  <Radio aria-hidden="true" />
-                  Seguir el canal en Twitch
+                <a href="#sinai-webinar-agenda" className="sinai-live-primary">
+                  <CalendarDays aria-hidden="true" />
+                  Consultar agenda
                 </a>
                 <a href="#sinai-webinar-library-title" className="sinai-live-secondary">
                   Ver grabaciones
@@ -83,13 +77,13 @@ export default function WebinarsPage() {
               </div>
             </div>
 
-            <aside className="sinai-live-panel" aria-labelledby="sinai-live-panel-title">
+            <section className="sinai-standby-agenda" id="sinai-webinar-agenda" aria-labelledby="sinai-live-panel-title">
               <div className="sinai-live-panel-heading">
                 <p>Agenda</p>
                 <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
               </div>
               <WebinarSchedule webinars={upcomingWebinars} />
-            </aside>
+            </section>
           </div>
         </section>
 

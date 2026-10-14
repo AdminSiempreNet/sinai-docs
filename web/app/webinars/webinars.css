@@ -2,7 +2,7 @@
 .sinai-webinars-main {
   --sinai-webinar-blue: #4976ff;
   --sinai-webinar-green: #00aa01;
-  --sinai-live-red: #ff3b5c;
+  --sinai-live-red: #e5294f;
   --sinai-live-ink: #050d1d;
   overflow-x: clip;
 }
@@ -27,16 +27,22 @@
 
 /* Hero en vivo */
 .sinai-live-hero {
+  --sinai-live-surface: rgb(255 255 255 / 78%);
+  --sinai-live-surface-strong: #fff;
+  --sinai-live-border: rgb(4 43 91 / 13%);
+  --sinai-live-fg: #082b59;
+  --sinai-live-muted: #52677f;
+  --sinai-live-soft: #e8f0ff;
   position: relative;
   isolation: isolate;
   width: 100%;
   overflow: hidden;
-  color: #fff;
+  border-block: 1px solid var(--sinai-live-border);
+  color: var(--sinai-live-fg);
   background:
-    radial-gradient(ellipse 60% 90% at 0% 0%, rgb(73 118 255 / 38%), transparent 62%),
-    radial-gradient(ellipse 50% 80% at 100% 100%, rgb(0 170 1 / 22%), transparent 64%),
-    radial-gradient(ellipse 35% 60% at 78% 18%, rgb(255 59 92 / 16%), transparent 70%),
-    linear-gradient(160deg, #0a1a38 0%, var(--sinai-live-ink) 62%, #03070f 100%);
+    radial-gradient(ellipse 50% 75% at 5% 0%, rgb(73 118 255 / 17%), transparent 70%),
+    radial-gradient(ellipse 42% 80% at 100% 100%, rgb(0 170 1 / 12%), transparent 70%),
+    linear-gradient(135deg, #f8fbff 0%, #eef5ff 56%, #f4fbf5 100%);
 }
 
 .sinai-live-hero::before {
@@ -44,39 +50,173 @@
   z-index: -1;
   inset: 0;
   background-image:
-    linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgb(4 43 91 / 4.5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(4 43 91 / 4.5%) 1px, transparent 1px);
+  background-size: 44px 44px;
   content: '';
-  mask-image: radial-gradient(ellipse 80% 90% at 50% 40%, #000 30%, transparent 85%);
+  mask-image: linear-gradient(90deg, #000, transparent 52%);
   pointer-events: none;
 }
 
-.sinai-live-hero-signal {
+.sinai-live-hero::after {
   position: absolute;
   z-index: -1;
   top: 50%;
-  right: clamp(-12rem, -6vw, -4rem);
-  width: clamp(26rem, 48vw, 46rem);
+  right: clamp(-13rem, -8vw, -5rem);
+  width: clamp(28rem, 48vw, 48rem);
   aspect-ratio: 1;
+  border-radius: 50%;
+  background: url('/images/brand/sinai-iso.png') center / contain no-repeat;
+  content: '';
+  opacity: 0.045;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
-.sinai-live-hero-signal span {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgb(255 255 255 / 9%);
+/* Sala de espera: el set es una ambientación; las marcas sobre la pantalla son activos oficiales. */
+.sinai-standby-hero {
+  background-color: #eaf3ff;
+  background-image:
+    linear-gradient(90deg, rgb(248 252 255 / 74%) 0%, rgb(248 252 255 / 22%) 54%, transparent 78%),
+    url('/images/webinars/webinar-standby-light.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.sinai-standby-hero::before,
+.sinai-standby-hero::after {
+  display: none;
+}
+
+.sinai-standby-hero .sinai-live-hero-inner {
+  min-height: clamp(32rem, 47vw, 43rem);
+}
+
+.sinai-standby-copy {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.5rem;
+  background: linear-gradient(90deg, rgb(255 255 255 / 88%), rgb(255 255 255 / 62%));
+  box-shadow: 0 1.4rem 4rem rgb(10 50 100 / 8%);
+  backdrop-filter: blur(10px);
+}
+
+.sinai-standby-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgb(15 99 174 / 28%);
+  border-radius: 999px;
+  color: #15599d;
+  background: rgb(255 255 255 / 75%);
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sinai-standby-badge > span {
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
-  animation: sinai-live-ring 6s ease-out infinite;
+  background: #e2a93c;
+  box-shadow: 0 0 0 0.23rem rgb(226 169 60 / 18%);
 }
 
-.sinai-live-hero-signal span:nth-child(2) {
-  animation-delay: 2s;
+.sinai-standby-agenda {
+  --sinai-live-surface-strong: #fff;
+  --sinai-live-border: rgb(4 43 91 / 13%);
+  --sinai-live-fg: #082b59;
+  --sinai-live-muted: #52677f;
+  --sinai-live-soft: #e8f0ff;
+  position: relative;
+  z-index: 1;
+  justify-self: end;
+  width: min(100%, 34rem);
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--sinai-live-border);
+  border-radius: 1.25rem;
+  color: var(--sinai-live-fg);
+  background: var(--sinai-live-surface-strong);
+  box-shadow: 0 1.25rem 3rem rgb(4 43 91 / 8%);
 }
 
-.sinai-live-hero-signal span:nth-child(3) {
-  animation-delay: 4s;
+.sinai-standby-agenda .sinai-live-panel-heading {
+  margin-bottom: 0.25rem;
+}
+
+.dark .sinai-live-hero.sinai-standby-hero {
+  background-color: #06162e;
+  background-image:
+    linear-gradient(90deg, rgb(3 21 48 / 72%) 0%, rgb(3 21 48 / 18%) 55%, transparent 80%),
+    url('/images/webinars/webinar-standby-dark.png');
+}
+
+.dark .sinai-standby-copy {
+  background: linear-gradient(90deg, rgb(4 23 50 / 88%), rgb(4 23 50 / 64%));
+  box-shadow: 0 1.4rem 4rem rgb(0 0 0 / 23%);
+}
+
+.dark .sinai-standby-badge {
+  border-color: rgb(129 195 255 / 28%);
+  color: #a8d5ff;
+  background: rgb(9 38 77 / 68%);
+}
+
+.dark .sinai-standby-agenda {
+  --sinai-live-surface-strong: #0c2446;
+  --sinai-live-border: rgb(143 176 255 / 18%);
+  --sinai-live-fg: #f4f8ff;
+  --sinai-live-muted: #b7c6dc;
+  --sinai-live-soft: #142f57;
+  box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 18%);
+}
+
+.dark .sinai-live-hero {
+  --sinai-live-surface: rgb(10 29 58 / 78%);
+  --sinai-live-surface-strong: #0c2446;
+  --sinai-live-border: rgb(143 176 255 / 18%);
+  --sinai-live-fg: #f4f8ff;
+  --sinai-live-muted: #b7c6dc;
+  --sinai-live-soft: #142f57;
+  background:
+    radial-gradient(ellipse 60% 90% at 0% 0%, rgb(73 118 255 / 30%), transparent 65%),
+    radial-gradient(ellipse 50% 85% at 100% 100%, rgb(0 170 1 / 18%), transparent 68%),
+    linear-gradient(155deg, #0b2145 0%, #06152d 58%, #071b22 100%);
+}
+
+.dark .sinai-live-hero::before {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 5%) 1px, transparent 1px);
+}
+
+.dark .sinai-live-hero::after {
+  opacity: 0.07;
+}
+
+.dark .sinai-live-panel-heading p {
+  color: #8fb0ff;
+}
+
+.dark .sinai-live-event-platform {
+  color: #c9a8ff;
+}
+
+.dark .sinai-live-countdown,
+.dark .sinai-live-copy[data-copied] {
+  color: #9aee9a;
+}
+
+.dark .sinai-live-panel-route i {
+  color: #8fb0ff;
+}
+
+.dark .sinai-live-panel-route i:last-child {
+  color: #74df75;
 }
 
 .sinai-live-hero-inner {
@@ -99,8 +239,8 @@
   padding: 0.42rem 0.85rem 0.42rem 0.7rem;
   border: 1px solid rgb(255 59 92 / 45%);
   border-radius: 999px;
-  color: #fff;
-  background: rgb(255 59 92 / 14%);
+  color: var(--sinai-live-fg);
+  background: rgb(229 41 79 / 9%);
   font-size: 0.72rem;
   font-weight: 760;
   letter-spacing: 0.12em;
@@ -126,7 +266,7 @@
 
 .sinai-live-hero h1 {
   margin: 1.25rem 0 0;
-  color: #fff;
+  color: var(--sinai-live-fg);
   font-size: clamp(2.4rem, 5.2vw, 4.75rem);
   font-weight: 740;
   letter-spacing: -0.055em;
@@ -137,7 +277,7 @@
 .sinai-live-hero-copy > p {
   max-width: 40rem;
   margin: 1.4rem 0 0;
-  color: rgb(255 255 255 / 74%);
+  color: var(--sinai-live-muted);
   font-size: clamp(1rem, 1.3vw, 1.12rem);
   line-height: 1.65;
 }
@@ -165,24 +305,24 @@
 
 .sinai-live-primary {
   color: #fff;
-  background: #9146ff;
-  box-shadow: 0 0.8rem 2rem rgb(145 70 255 / 35%);
+  background: #073a82;
+  box-shadow: 0 0.8rem 2rem rgb(7 58 130 / 20%);
 }
 
 .sinai-live-primary:hover {
-  background: #7d2fff;
+  background: #052e68;
   transform: translateY(-1px);
 }
 
 .sinai-live-secondary {
-  border: 1px solid rgb(255 255 255 / 22%);
-  color: #fff;
-  background: rgb(255 255 255 / 6%);
+  border: 1px solid var(--sinai-live-border);
+  color: var(--sinai-live-fg);
+  background: var(--sinai-live-surface);
 }
 
 .sinai-live-secondary:hover {
-  border-color: rgb(255 255 255 / 42%);
-  background: rgb(255 255 255 / 12%);
+  border-color: color-mix(in srgb, var(--sinai-webinar-blue) 45%, var(--sinai-live-border));
+  background: var(--sinai-live-surface-strong);
 }
 
 .sinai-live-primary svg,
@@ -195,7 +335,7 @@
 .sinai-live-secondary:focus-visible,
 .sinai-live-join:focus-visible,
 .sinai-live-copy:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--sinai-webinar-blue);
   outline-offset: 3px;
 }
 
@@ -203,21 +343,102 @@
 .sinai-live-panel {
   min-width: 0;
   padding: clamp(1.25rem, 2.4vw, 1.75rem);
-  border: 1px solid rgb(255 255 255 / 14%);
+  border: 1px solid var(--sinai-live-border);
   border-radius: 1.4rem;
-  background: linear-gradient(160deg, rgb(255 255 255 / 10%), rgb(255 255 255 / 3%));
-  box-shadow: 0 2rem 4rem rgb(0 0 0 / 35%);
+  background: var(--sinai-live-surface);
+  box-shadow: 0 2rem 4rem rgb(4 43 91 / 14%);
   backdrop-filter: blur(14px);
+}
+
+.sinai-live-panel-brand {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin: calc(clamp(1.25rem, 2.4vw, 1.75rem) * -1);
+  margin-bottom: 1.25rem;
+  padding: 0.9rem clamp(1.25rem, 2.4vw, 1.75rem);
+  border-bottom: 1px solid var(--sinai-live-border);
+  border-radius: 1.4rem 1.4rem 0 0;
+  background: color-mix(in srgb, var(--sinai-live-surface-strong) 68%, transparent);
+}
+
+.sinai-live-panel-brand-mark {
+  display: grid;
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0.28rem;
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: 0 0.35rem 1rem rgb(4 43 91 / 12%);
+}
+
+.sinai-live-panel-brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sinai-live-panel-brand-copy {
+  display: grid;
+  min-width: 0;
+}
+
+.sinai-live-panel-brand-copy small {
+  color: var(--sinai-live-muted);
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.sinai-live-panel-brand-copy strong {
+  color: var(--sinai-live-fg);
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -0.025em;
+}
+
+.sinai-live-panel-route {
+  display: flex;
+  align-items: center;
+}
+
+.sinai-live-panel-route i {
+  display: grid;
+  place-items: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid color-mix(in srgb, var(--sinai-webinar-blue) 25%, var(--sinai-live-border));
+  border-radius: 50%;
+  color: #0b5bb5;
+  background: var(--sinai-live-surface-strong);
+}
+
+.sinai-live-panel-route i:last-child {
+  color: #008c01;
+}
+
+.sinai-live-panel-route svg {
+  width: 0.82rem;
+  height: 0.82rem;
+  stroke-width: 1.8;
+}
+
+.sinai-live-panel-route b {
+  width: 0.7rem;
+  height: 1px;
+  background: color-mix(in srgb, var(--sinai-webinar-blue) 32%, var(--sinai-live-border));
 }
 
 .sinai-live-panel-heading {
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  border-bottom: 1px solid var(--sinai-live-border);
 }
 
 .sinai-live-panel-heading p {
   margin: 0;
-  color: #8fb0ff;
+  color: #326fd0;
   font-size: 0.68rem;
   font-weight: 760;
   letter-spacing: 0.12em;
@@ -226,7 +447,7 @@
 
 .sinai-live-panel-heading h2 {
   margin: 0.25rem 0 0;
-  color: #fff;
+  color: var(--sinai-live-fg);
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 720;
   letter-spacing: -0.03em;
@@ -245,7 +466,7 @@
 }
 
 .sinai-live-event + .sinai-live-event {
-  border-top: 1px solid rgb(255 255 255 / 12%);
+  border-top: 1px solid var(--sinai-live-border);
 }
 
 .sinai-live-event-top {
@@ -262,7 +483,7 @@
   overflow: hidden;
   border-radius: 0.9rem;
   color: var(--sinai-live-ink);
-  background: #fff;
+  background: var(--sinai-live-surface-strong);
   text-align: center;
   box-shadow: 0 0.8rem 1.6rem rgb(0 0 0 / 25%);
 }
@@ -275,6 +496,7 @@
 }
 
 .sinai-live-date strong {
+  color: var(--sinai-live-fg);
   font-size: 2rem;
   font-weight: 780;
   letter-spacing: -0.04em;
@@ -282,7 +504,7 @@
 }
 
 .sinai-live-date small {
-  color: #52607a;
+  color: var(--sinai-live-muted);
   font-size: 0.66rem;
   font-weight: 650;
 }
@@ -303,7 +525,7 @@
 }
 
 .sinai-live-event-platform {
-  color: #c9a8ff;
+  color: #6940b8;
 }
 
 .sinai-live-event-platform svg,
@@ -314,7 +536,7 @@
 
 .sinai-live-event-copy h3 {
   margin: 0;
-  color: #fff;
+  color: var(--sinai-live-fg);
   font-size: clamp(1.2rem, 2vw, 1.45rem);
   font-weight: 720;
   letter-spacing: -0.03em;
@@ -325,21 +547,21 @@
   justify-self: start;
   padding: 0.25rem 0.6rem;
   border-radius: 999px;
-  color: #b8f5b8;
-  background: rgb(0 170 1 / 18%);
+  color: #087408;
+  background: rgb(0 170 1 / 10%);
 }
 
 .sinai-live-objective {
   display: grid;
   gap: 0.3rem;
   margin: 1.1rem 0 0;
-  color: rgb(255 255 255 / 76%);
+  color: var(--sinai-live-muted);
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .sinai-live-objective strong {
-  color: #fff;
+  color: var(--sinai-live-fg);
   font-size: 0.72rem;
   font-weight: 760;
   letter-spacing: 0.1em;
@@ -372,28 +594,28 @@
 
 .sinai-live-join {
   flex: 1 1 auto;
-  color: var(--sinai-live-ink);
-  background: #fff;
+  color: #fff;
+  background: #073a82;
 }
 
 .sinai-live-join:hover {
-  background: #e7edff;
+  background: #052e68;
 }
 
 .sinai-live-copy {
-  border: 1px solid rgb(255 255 255 / 22%);
-  color: #fff;
-  background: transparent;
+  border: 1px solid var(--sinai-live-border);
+  color: var(--sinai-live-fg);
+  background: var(--sinai-live-surface-strong);
 }
 
 .sinai-live-copy:hover {
-  border-color: rgb(255 255 255 / 45%);
-  background: rgb(255 255 255 / 8%);
+  border-color: color-mix(in srgb, var(--sinai-webinar-blue) 45%, var(--sinai-live-border));
+  background: var(--sinai-live-soft);
 }
 
 .sinai-live-copy[data-copied] {
   border-color: rgb(0 170 1 / 60%);
-  color: #b8f5b8;
+  color: #087408;
   background: rgb(0 170 1 / 14%);
 }
 
@@ -405,7 +627,7 @@
 
 .sinai-live-empty {
   margin: 1.25rem 0 0;
-  color: rgb(255 255 255 / 74%);
+  color: var(--sinai-live-muted);
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -415,14 +637,18 @@
   to { opacity: 0; transform: scale(2.8); }
 }
 
-@keyframes sinai-live-ring {
-  from { opacity: 0.9; transform: scale(0.35); }
-  to { opacity: 0; transform: scale(1); }
-}
-
 @media (max-width: 960px) {
   .sinai-live-hero-inner {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sinai-standby-hero .sinai-live-hero-inner {
+    min-height: 0;
+  }
+
+  .sinai-standby-agenda {
+    justify-self: start;
+    width: min(100%, 40rem);
   }
 
   .sinai-live-panel {
@@ -447,6 +673,11 @@
     font-size: clamp(2.1rem, 10vw, 2.9rem);
   }
 
+  .sinai-standby-copy {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
   .sinai-live-hero-actions > a {
     flex: 1 1 100%;
     justify-content: center;
@@ -460,14 +691,17 @@
     width: 4rem;
   }
 
+  .sinai-live-panel-route {
+    display: none;
+  }
+
   .sinai-live-event-actions > * {
     flex: 1 1 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sinai-live-dot::after,
-  .sinai-live-hero-signal span {
+  .sinai-live-dot::after {
     animation: none;
   }
 
