@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDown, ArrowLeft, BookOpenCheck, Building2, GraduationCap, Radio } from 'lucide-react';
+import { ArrowDown, ArrowLeft, CalendarDays } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
 import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
@@ -53,23 +53,23 @@ export default function WebinarsPage() {
           </header>
         </div>
 
-        <section className="sinai-live-hero" aria-labelledby="sinai-live-hero-title">
+        <section className="sinai-live-hero sinai-standby-hero" aria-labelledby="sinai-live-hero-title">
           <div className="sinai-webinars-container sinai-live-hero-inner">
-            <div className="sinai-live-hero-copy">
-              <span className="sinai-live-badge">
-                <span className="sinai-live-dot" aria-hidden="true" />
-                Eventos en vivo
+            <div className="sinai-live-hero-copy sinai-standby-copy">
+              <span className="sinai-standby-badge">
+                <span aria-hidden="true" />
+                Sala de espera
               </span>
-              <h1 id="sinai-live-hero-title">Aprenda SINAI en vivo, con su equipo y en tiempo real.</h1>
+              <h1 id="sinai-live-hero-title">Todo listo para el próximo encuentro.</h1>
               <p>
-                Conéctese a nuestras transmisiones para conocer los procesos de cada temporada académica, resolver dudas
-                con los asesores y, si no alcanza a asistir, vuelva a ver las grabaciones cuando lo necesite.
+                Prepare a su equipo y consulte la agenda. Al comenzar, encontrará aquí el acceso para acompañar el
+                webinar de SINAI.
               </p>
 
               <div className="sinai-live-hero-actions">
-                <a href={LIVE_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="sinai-live-primary">
-                  <Radio aria-hidden="true" />
-                  Seguir el canal en Twitch
+                <a href="#sinai-webinar-agenda" className="sinai-live-primary">
+                  <CalendarDays aria-hidden="true" />
+                  Consultar agenda
                 </a>
                 <a href="#sinai-webinar-library-title" className="sinai-live-secondary">
                   Ver grabaciones
@@ -78,34 +78,41 @@ export default function WebinarsPage() {
               </div>
             </div>
 
-            <aside className="sinai-live-panel" aria-labelledby="sinai-live-panel-title">
-              <div className="sinai-live-panel-brand" aria-hidden="true">
-                <span className="sinai-live-panel-brand-mark">
-                  <Image src="/images/brand/sinai-iso.png" alt="" width={2000} height={2000} />
-                </span>
-                <span className="sinai-live-panel-brand-copy">
-                  <small>Un espacio de SIEMPRE.NET</small>
-                  <strong>Academia SINAI</strong>
-                </span>
-                <span className="sinai-live-panel-route">
-                  <i><Building2 /></i>
-                  <b />
-                  <i><BookOpenCheck /></i>
-                  <b />
-                  <i><GraduationCap /></i>
-                </span>
+            <aside className="sinai-standby-screen" aria-label="Sala de espera del webinar SINAI">
+              <div className="sinai-standby-screen-brands">
+                <Image
+                  src="/images/brand/sinai.png"
+                  alt="SINAI"
+                  width={836}
+                  height={350}
+                  className="sinai-standby-sinai-logo"
+                />
+                <span className="sinai-standby-screen-divider" aria-hidden="true" />
+                <Image
+                  src="/images/brand/snet.png"
+                  alt="SIEMPRE.NET"
+                  width={396}
+                  height={78}
+                  className="sinai-standby-snet-logo"
+                />
               </div>
-
-              <div className="sinai-live-panel-heading">
-                <p>Agenda</p>
-                <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
+              <div className="sinai-standby-screen-copy">
+                <p>Webinar SINAI</p>
+                <strong>Todo listo</strong>
+                <span>El webinar comenzará pronto</span>
               </div>
-              <WebinarSchedule webinars={upcomingWebinars} />
             </aside>
           </div>
         </section>
 
         <div className="sinai-webinars-container sinai-webinars-content">
+          <section className="sinai-standby-agenda" id="sinai-webinar-agenda" aria-labelledby="sinai-live-panel-title">
+            <div className="sinai-live-panel-heading">
+              <p>Agenda</p>
+              <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
+            </div>
+            <WebinarSchedule webinars={upcomingWebinars} />
+          </section>
           <WebinarGallery />
         </div>
       </main>

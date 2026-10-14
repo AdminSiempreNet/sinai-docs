@@ -34,6 +34,20 @@ const INITIAL_VISIBLE = 6;
 /** Ordenados del más reciente al más antiguo: el primero ocupa la primera tarjeta. */
 const webinars: Webinar[] = [
   {
+    id: 'preparacion-para-la-promocion',
+    title: 'Preparación para la promoción de estudiantes',
+    summary: 'Ajustes de matrícula, asignación académica y criterios de promoción antes de procesarla.',
+    description: 'Principales procesos y configuraciones que se deben tener en cuenta para preparar correctamente la promoción de estudiantes en SINAI desde el módulo administrativo: ajustes de matrícula, verificación de la asignación académica, configuración de los criterios de promoción y las verificaciones y recomendaciones previas para evitar inconvenientes al procesar la promoción.',
+    date: '14 de octubre de 2026',
+    isoDate: '2026-10-14',
+    duration: '2 h 13 min',
+    audience: 'Rectores, coordinadores y administrativos',
+    topic: 'Promoción',
+    accent: 'amber',
+    odyseePath: '@AndresGoDu:a/2895181808-1508357822-c5f1f9d6-f559-47b1-bbe1-77a072f9f71e:8',
+    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/51c96cf2758f7efd02e37765d23e24e6.webp',
+  },
+  {
     id: 'semana-institucional-actualizaciones',
     title: 'Semana institucional: actualizaciones de SINAI',
     summary: 'Base de conocimiento, preinformes o alertas académicas y boletines digitales.',
