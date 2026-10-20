@@ -6026,6 +6026,11 @@ body:has(.sinai-custom-toc) #nd-toc {
   color: var(--sinai-role-accent) !important;
 }
 
+.sinai-guide-faq-embedded {
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
 .sinai-guide-faq-header {
   border-color: var(--color-fd-border) !important;
   background: var(--color-fd-card);

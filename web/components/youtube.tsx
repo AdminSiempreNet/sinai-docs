@@ -1,12 +1,17 @@
 'use client';
 
 import { CircleAlert, CirclePlay, Play } from 'lucide-react';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 
 type YouTubeProps = {
-  id: string;
+  /** Sin identificador, YouTube queda pendiente y el video se reproduce en la plataforma alternativa. */
+  id?: string;
   title: string;
   odyseeUrl?: string;
+  /** Quita el margen exterior cuando el reproductor va dentro de otra pieza, como la lista de videos. */
+  embedded?: boolean;
+  /** Franja superior del reproductor. La usa la lista para indicar que hay más videos. */
+  leading?: ReactNode;
 };
 
 type YouTubeStatus = 'checking' | 'available' | 'unavailable' | 'embedding-blocked' | 'unknown';
@@ -36,13 +41,16 @@ declare global {
   }
 }
 
-export function YouTube({ id, title, odyseeUrl }: YouTubeProps) {
-  const [platform, setPlatform] = useState<'youtube' | 'odysee'>('youtube');
-  const [isLoading, setIsLoading] = useState(true);
-  const [youtubeStatus, setYouTubeStatus] = useState<YouTubeStatus>('checking');
-  const [odyseeStatus, setOdyseeStatus] = useState<SourceAvailability>('unknown');
-  const [youtubeIssue, setYouTubeIssue] = useState<string | undefined>();
+export function YouTube({ id, title, odyseeUrl, embedded = false, leading }: YouTubeProps) {
+  const youtubePending = !id;
   const odyseeEmbedUrl = odyseeUrl ? toOdyseeEmbedUrl(odyseeUrl) : undefined;
+  const [platform, setPlatform] = useState<'youtube' | 'odysee'>(youtubePending && odyseeEmbedUrl ? 'odysee' : 'youtube');
+  const [isLoading, setIsLoading] = useState(!youtubePending || Boolean(odyseeEmbedUrl));
+  const [youtubeStatus, setYouTubeStatus] = useState<YouTubeStatus>(youtubePending ? 'unavailable' : 'checking');
+  const [odyseeStatus, setOdyseeStatus] = useState<SourceAvailability>('unknown');
+  const [youtubeIssue, setYouTubeIssue] = useState<string | undefined>(
+    youtubePending ? 'el video de YouTube está pendiente de publicación.' : undefined,
+  );
   const isOdysee = platform === 'odysee' && Boolean(odyseeEmbedUrl);
   const activePlatform = isOdysee ? 'Alternativo' : 'YouTube';
   const youtubeUnavailable = youtubeStatus === 'unavailable' || youtubeStatus === 'embedding-blocked';
@@ -88,6 +96,7 @@ export function YouTube({ id, title, odyseeUrl }: YouTubeProps) {
   const markVideoReady = useCallback(() => setIsLoading(false), []);
 
   useEffect(() => {
+    if (!id) return;
     let active = true;
 
     const query = new URLSearchParams({ id });
@@ -137,54 +146,64 @@ export function YouTube({ id, title, odyseeUrl }: YouTubeProps) {
   }
 
   return (
-    <section className="not-prose my-8 overflow-hidden rounded-2xl border bg-fd-card shadow-sm">
-      <div className="flex flex-col gap-4 border-b bg-fd-muted/40 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="text-sm font-semibold text-fd-foreground">{title}</p>
-          <p className="mt-1 text-xs text-fd-muted-foreground">Elige la plataforma que prefieras; el video se mostrar&aacute; aqu&iacute; mismo.</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => selectPlatform('youtube')}
-            aria-pressed={!isOdysee}
-            disabled={youtubeUnavailable}
-            className={[
-              'inline-flex min-h-9 items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition',
-              youtubeUnavailable
-                ? 'cursor-not-allowed border border-dashed bg-fd-muted text-fd-muted-foreground opacity-75'
-                : !isOdysee
-                  ? 'bg-red-600 text-white hover:bg-red-700 active:scale-[0.97]'
-                  : 'border bg-fd-background text-fd-foreground hover:border-red-600/60 hover:text-red-600 active:scale-[0.97]',
-            ].join(' ')}
-          >
-            <Play className="size-3.5 fill-current" />
-            {youtubeUnavailable ? 'YouTube no disponible' : 'YouTube'}
-          </button>
-          {odyseeEmbedUrl ? (
+    <section className={['not-prose overflow-hidden rounded-2xl border bg-fd-card shadow-sm', embedded ? '' : 'my-8'].join(' ')}>
+      <div className="border-b bg-fd-muted/40 px-5 py-4 sm:px-6">
+        {leading ? <div className="mb-3">{leading}</div> : null}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-fd-foreground">{title}</p>
+            <p className="mt-1 text-xs text-fd-muted-foreground">Elige la plataforma que prefieras; el video se mostrar&aacute; aqu&iacute; mismo.</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {youtubePending ? (
+              <span className="inline-flex min-h-9 cursor-not-allowed items-center gap-2 rounded-lg border border-dashed px-3 py-2 text-xs font-medium text-fd-muted-foreground">
+                <Play className="size-3.5" />
+                YouTube pendiente
+              </span>
+            ) : (
             <button
               type="button"
-              onClick={() => selectPlatform('odysee')}
-              aria-pressed={isOdysee}
-              disabled={odyseeStatus === 'unavailable'}
+              onClick={() => selectPlatform('youtube')}
+              aria-pressed={!isOdysee}
+              disabled={youtubeUnavailable}
               className={[
-                'inline-flex min-h-9 items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition active:scale-[0.97]',
-                odyseeStatus === 'unavailable'
+                'inline-flex min-h-9 items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition',
+                youtubeUnavailable
                   ? 'cursor-not-allowed border border-dashed bg-fd-muted text-fd-muted-foreground opacity-75'
-                  : isOdysee
-                  ? 'bg-fd-primary text-fd-primary-foreground shadow-sm hover:brightness-95'
-                  : 'border bg-fd-background text-fd-foreground hover:border-fd-primary/60 hover:text-fd-primary',
+                  : !isOdysee
+                    ? 'bg-red-600 text-white hover:bg-red-700 active:scale-[0.97]'
+                    : 'border bg-fd-background text-fd-foreground hover:border-red-600/60 hover:text-red-600 active:scale-[0.97]',
               ].join(' ')}
             >
-              <AlternativeIcon />
-              {odyseeStatus === 'unavailable' ? 'Alternativo no disponible' : 'Alternativo'}
+              <Play className="size-3.5 fill-current" />
+              {youtubeUnavailable ? 'YouTube no disponible' : 'YouTube'}
             </button>
-          ) : (
-            <span className="inline-flex min-h-9 cursor-not-allowed items-center gap-2 rounded-lg border border-dashed px-3 py-2 text-xs font-medium text-fd-muted-foreground">
-              <AlternativeIcon muted />
-              Alternativo pendiente
-            </span>
-          )}
+            )}
+            {odyseeEmbedUrl ? (
+              <button
+                type="button"
+                onClick={() => selectPlatform('odysee')}
+                aria-pressed={isOdysee}
+                disabled={odyseeStatus === 'unavailable'}
+                className={[
+                  'inline-flex min-h-9 items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold transition active:scale-[0.97]',
+                  odyseeStatus === 'unavailable'
+                    ? 'cursor-not-allowed border border-dashed bg-fd-muted text-fd-muted-foreground opacity-75'
+                    : isOdysee
+                    ? 'bg-fd-primary text-fd-primary-foreground shadow-sm hover:brightness-95'
+                    : 'border bg-fd-background text-fd-foreground hover:border-fd-primary/60 hover:text-fd-primary',
+                ].join(' ')}
+              >
+                <AlternativeIcon />
+                {odyseeStatus === 'unavailable' ? 'Alternativo no disponible' : 'Alternativo'}
+              </button>
+            ) : (
+              <span className="inline-flex min-h-9 cursor-not-allowed items-center gap-2 rounded-lg border border-dashed px-3 py-2 text-xs font-medium text-fd-muted-foreground">
+                <AlternativeIcon muted />
+                Alternativo pendiente
+              </span>
+            )}
+          </div>
         </div>
       </div>
 
@@ -206,7 +225,7 @@ export function YouTube({ id, title, odyseeUrl }: YouTubeProps) {
         ) : youtubeUnavailable ? (
           <VideoUnavailable title={title} message={youtubeIssue} />
         ) : (
-          <YouTubePlayer id={id} onReady={markVideoReady} onError={handleYouTubePlayerError} />
+          <YouTubePlayer id={id ?? ''} onReady={markVideoReady} onError={handleYouTubePlayerError} />
         )}
         {isLoading && !tutorialPending && !youtubeUnavailable ? <VideoLoadingOverlay platform={activePlatform} /> : null}
       </div>

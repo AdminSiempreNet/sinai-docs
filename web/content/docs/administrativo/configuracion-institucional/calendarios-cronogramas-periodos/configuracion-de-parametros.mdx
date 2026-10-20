@@ -11,9 +11,7 @@ lastReviewed: "2026-09-17"
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="jl0b4Q1P4wo" title="Configuración Académica"
-  odyseeUrl="https://odysee.com/configuraci%C3%B3n-acad%C3%A9mica%3Ab793cee01d15859ff1977eaa4be4ceb8dcc6ec3e"
-/>
+<YouTube id="q2JGgIX4AZA" title="Configuración Académica" odyseeUrl="https://odysee.com/@AndresGoDu:a/Configuracion-academica:3" />
 </GuideVideos>
 
 ## Qué es la Configuración Académica
@@ -125,43 +123,43 @@ Si omite el paso 2, el botón **Generar** puede indicar que no encontró asignat
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué debo tener listo antes de diligenciar la Configuración Académica?"}>
-    Debe tener creado el calendario de trabajo, las áreas y las asignaturas de la institución. También necesita un usuario con permiso para guardar cambios en esta pantalla. Sin áreas y asignaturas, la tabla no tendrá filas para configurar.
+  <GuideFAQItem index="01" question={"Falta un área o una asignatura en la tabla. ¿Cómo la agrego?"}>
+    Esta pantalla no crea áreas ni asignaturas: solo muestra las del calendario activo. Créela en [Áreas y asignaturas](/docs/administrativo/configuracion-institucional/gestion-academica/areas-y-asignaturas) y vuelva a **Establecimiento → Configuración Académica → Configuración Académica** para registrar sus horas y pesos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Por qué es importante esta pantalla para el botón Generar de la asignación académica?"}>
-    El botón Generar, en la asignación por grupo, toma de aquí las asignaturas que tengan horas semanales mayores que cero para el nivel o modelo del grupo, y copia automáticamente horas, peso y créditos. Si la Configuración Académica está incompleta o en cero, Generar no podrá armar correctamente la carga del grupo.
+  <GuideFAQItem index="02" question={"Al pulsar Generar en la asignación académica aparece «No se encontraron asignaturas con intensidad horaria para el nivel/modelo del grupo.». ¿Qué hago?"}>
+    Ninguna asignatura tiene horas semanales (**HS**) mayores que cero en el nivel o modelo del grupo. Registre las horas de ese nivel en esta pantalla, pulse **Guardar cambios** y vuelva a **Generar** en **Personal → Asignación académica**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué pasa si dejo en cero las horas de una asignatura en Primaria?"}>
-    Esa asignatura no se incluirá al generar la asignación de un grupo de Primaria. Úselo cuando la asignatura realmente no se ofrece en ese nivel. Si sí se dicta, registre la intensidad horaria semanal correspondiente.
+  <GuideFAQItem index="03" question={"Generé la asignación de un grupo y falta una asignatura. ¿Por qué?"}>
+    Esa asignatura tiene **0** horas semanales en el nivel del grupo, por eso Generar no la incluye. Si se dicta en ese nivel, registre su intensidad horaria aquí, guarde y vuelva a generar: SINAI agrega las asignaturas que aún no existan en el grupo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question={"¿Qué significa PFC y la columna Cr?"}>
-    PFC es el Programa de Formación Complementaria. En esa sección, además de horas (HS) y peso (%), puede registrar créditos (Cr) de la asignatura. Los créditos son opcionales; si los digita, deben estar entre 0 y 10, y se trasladan a la asignación al usar Generar.
+  <GuideFAQItem index="04" question={"Cambié las horas o los pesos después de generar la asignación. ¿Por qué el grupo sigue con los valores anteriores?"}>
+    Generar solo crea asignaturas nuevas que aún no existan en el grupo; si todas ya están, SINAI indica «La asignación del grupo ya existe. No se generaron registros nuevos.». Ajuste las horas, pesos o créditos de los registros ya creados en la pantalla de asignación académica del grupo.
   </GuideFAQItem>
 
   <GuideFAQItem index="05" question={"Al guardar me dice que hay campos vacíos. ¿Qué debo hacer?"}>
-    Complete todas las casillas de horas semanales (HS) y peso (%) de la asignatura indicada en el mensaje. No las deje en blanco: si la asignatura no aplica a un nivel, escriba 0.
+    Complete todas las casillas de horas semanales (**HS**) y peso (**%**) de la asignatura indicada en el mensaje. No las deje en blanco: si la asignatura no aplica a un nivel, escriba **0**.
   </GuideFAQItem>
 
   <GuideFAQItem index="06" question={"Al guardar me indica que la suma de los pesos del área no es 100. ¿Por qué?"}>
-    En calendarios configurados para exigir esa validación, la suma de los pesos (%) de las asignaturas de un mismo área, en cada nivel, debe ser 0 o 100. Revise el área y el nivel mencionados en el mensaje y ajuste los porcentajes hasta cumplir esa condición.
+    Según la forma de promoción del calendario, la suma de los pesos (**%**) de las asignaturas de una misma área debe ser **0** (si no se usa ese nivel) o **100** en cada nivel. Revise el área y el nivel mencionados en el mensaje y ajuste los porcentajes.
   </GuideFAQItem>
 
-  <GuideFAQItem index="07" question={"Ya generé la asignación de un grupo y después cambié las horas aquí. ¿Se actualizan solas?"}>
-    No de forma automática con un nuevo Generar sobre lo ya existente: Generar agrega asignaturas que aún no estén en el grupo. Los cambios posteriores de horas, pesos o créditos sobre registros ya creados se revisan y ajustan en la pantalla de asignación académica del grupo, o según el procedimiento que defina la institución.
+  <GuideFAQItem index="07" question={"¿Qué significa PFC y la columna Cr?"}>
+    PFC es el Programa de Formación Complementaria. Además de horas (**HS**) y peso (**%**), allí puede registrar créditos (**Cr**). Los créditos son opcionales; si los digita, deben ser un número entero entre 0 y 10, y se copian a la asignación al usar **Generar**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="08" question={"¿Esta pantalla sirve para configurar componentes de evaluación o escalas?"}>
-    No. Esta guía corresponde solo a horas, pesos y créditos del plan de estudios. Los componentes de evaluación y las escalas se configuran en otras opciones del menú Establecimiento / Configuración Académica. Use esta pantalla para la intensidad y la ponderación que alimentan la asignación por grupo.
+  <GuideFAQItem index="08" question={"¿Es lo mismo que el botón de reloj de Áreas y asignaturas?"}>
+    Sí, es la misma información de horas y porcentajes. El botón de reloj la edita asignatura por asignatura; esta pantalla muestra y guarda el plan de estudios completo en una sola tabla. En ambos casos son valores de referencia: los definitivos se establecen en la asignación de cada grupo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="09" question={"¿Cómo verifico que la configuración quedó bien?"}>
-    Guarde sin mensajes de error, descargue el Excel si desea contrastar, y pruebe Generar en un grupo de cada nivel que ofrezca la institución. Debe aparecer la lista esperada de asignaturas con las horas y pesos definidos aquí.
+  <GuideFAQItem index="09" question={"¿Cómo compruebo que la configuración quedó bien?"}>
+    Guarde sin mensajes de error y, si desea contrastar, pulse **Descargar Excel**. Luego pruebe **Generar** en un grupo de cada nivel que ofrezca la institución: debe aparecer la lista esperada de asignaturas con las horas y pesos definidos aquí.
   </GuideFAQItem>
 
-  <GuideFAQItem index="10" question={"No tengo permiso para guardar. ¿Qué hago?"}>
-    Solicite al administrador de usuarios de la institución que le habilite el permiso de modificación de la Configuración Académica. Sin ese permiso, podrá consultar la pantalla, pero no podrá guardar cambios.
+  <GuideFAQItem index="10" question={"No puedo guardar los cambios. ¿Qué hago?"}>
+    Su usuario necesita permiso para modificar la Configuración Académica. Solicítelo al administrador de usuarios de la institución; sin ese permiso puede consultar la pantalla, pero no guardar.
   </GuideFAQItem>
 </GuideFAQ>

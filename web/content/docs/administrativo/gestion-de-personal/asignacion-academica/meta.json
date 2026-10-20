@@ -4,6 +4,7 @@
   "defaultOpen": false,
   "pages": [
     "asignacion-por-periodo",
+    "asignacion-por-periodos",
     "asignacion-por-estudiante"
   ],
   "icon": "UserRoundCheck"

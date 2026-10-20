@@ -1,6 +1,6 @@
 'use client';
 
-import { Children, cloneElement, isValidElement, useState, type ReactElement, type ReactNode } from 'react';
+import { Children, cloneElement, isValidElement, useId, useState, type ReactElement, type ReactNode } from 'react';
 import './guide-table.css';
 import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, ImageOff, Info, VideoOff } from 'lucide-react';
 import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger, type ImageTriggerVariant } from '@/components/content-image';
@@ -194,27 +194,43 @@ export function GuideCallout({
   );
 }
 
-export function GuideFAQ({ children }: { children: ReactNode }) {
+export function GuideFAQ({
+  children,
+  embedded = false,
+}: {
+  children: ReactNode;
+  embedded?: boolean;
+}) {
   const [openItem, setOpenItem] = useState<string | null>(null);
+  const titleId = useId();
+  const Tag = embedded ? 'div' : 'section';
 
   return (
-    <section className="sinai-guide-faq not-prose my-8 overflow-hidden rounded-2xl border bg-fd-card shadow-sm" aria-labelledby="guide-faq-title">
-      <header className="sinai-guide-faq-header border-b px-5 py-5 sm:px-6 sm:py-6">
-        <div className="flex items-start gap-3">
-          <span className="sinai-guide-faq-icon grid size-10 shrink-0 place-items-center rounded-xl text-white shadow-sm">
-            <CircleHelp className="size-5" aria-hidden="true" />
-          </span>
-          <div>
-            <p className="m-0 text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-fd-primary">Centro de ayuda</p>
-            <h2 id="guide-faq-title" className="mt-1 text-xl font-semibold tracking-tight text-fd-foreground">
-              Preguntas frecuentes
-            </h2>
-            <p className="mt-1.5 max-w-2xl text-sm leading-6 text-fd-muted-foreground">
-              Consulte las situaciones más comunes relacionadas con este proceso.
-            </p>
+    <Tag
+      className={[
+        'sinai-guide-faq not-prose overflow-hidden rounded-2xl border bg-fd-card shadow-sm',
+        embedded ? 'sinai-guide-faq-embedded my-4' : 'my-8',
+      ].join(' ')}
+      aria-labelledby={embedded ? undefined : titleId}
+    >
+      {embedded ? null : (
+        <header className="sinai-guide-faq-header border-b px-5 py-5 sm:px-6 sm:py-6">
+          <div className="flex items-start gap-3">
+            <span className="sinai-guide-faq-icon grid size-10 shrink-0 place-items-center rounded-xl text-white shadow-sm">
+              <CircleHelp className="size-5" aria-hidden="true" />
+            </span>
+            <div>
+              <p className="m-0 text-[0.6875rem] font-bold uppercase tracking-[0.12em] text-fd-primary">Centro de ayuda</p>
+              <h2 id={titleId} className="mt-1 text-xl font-semibold tracking-tight text-fd-foreground">
+                Preguntas frecuentes
+              </h2>
+              <p className="mt-1.5 max-w-2xl text-sm leading-6 text-fd-muted-foreground">
+                Consulte las situaciones más comunes relacionadas con este proceso.
+              </p>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
+      )}
       <div className="divide-y">
         {Children.map(children, (child) => {
           if (!isValidElement<GuideFAQItemProps>(child)) return child;
@@ -232,7 +248,7 @@ export function GuideFAQ({ children }: { children: ReactNode }) {
           });
         })}
       </div>
-    </section>
+    </Tag>
   );
 }
 
@@ -267,7 +283,7 @@ export function GuideFAQItem({
         </span>
       </summary>
       <div className="px-5 pb-5 sm:px-6 sm:pb-6">
-        <div className="sinai-guide-faq-answer border-s-2 border-fd-primary/35 ps-4 text-[0.95rem] font-normal leading-7 text-fd-muted-foreground [&_p]:m-0 [&_strong]:font-normal [&_strong]:text-fd-muted-foreground">
+        <div className="sinai-guide-faq-answer border-s-2 border-fd-primary/35 ps-4 text-[0.95rem] font-normal leading-7 text-fd-muted-foreground [&_a]:font-medium [&_a]:text-fd-primary [&_a]:underline [&_a]:decoration-fd-primary/40 [&_a]:underline-offset-2 hover:[&_a]:decoration-fd-primary [&_p]:m-0 [&_strong]:font-semibold [&_strong]:text-fd-foreground">
           {children}
         </div>
       </div>

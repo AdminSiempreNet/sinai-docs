@@ -26,7 +26,18 @@ Referencia de estructura: `web/content/docs/administrativo/configuracion-institu
 
 ## Video tutorial
 
-Si hay identificadores de YouTube confirmados, use `GuideVideoPlaylist`. Incluya la URL de Odysee solo cuando ya exista. Puede haber uno o varios videos.
+Incluya la URL de Odysee solo cuando ya exista. El componente depende de cuántos videos tenga la guía:
+
+- **Un solo video:** use `YouTube` dentro de `GuideVideos compact`. No use `GuideVideoPlaylist`, porque la lista sobra con un solo video.
+- **Dos o más videos:** use `GuideVideoPlaylist`.
+
+```mdx
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="7CMKHjTx7AQ" title="Administración de firmas digitales" />
+</GuideVideos>
+```
 
 Si no hay tutorial, deje `GuideVideoPending` en ese mismo lugar, con un ítem por cada tutorial previsto:
 
@@ -38,7 +49,15 @@ Si no hay tutorial, deje `GuideVideoPending` en ese mismo lugar, con un ítem po
 </GuideVideoPending>
 ```
 
-No invente identificadores. Si solo algunos videos existen, publique esos en `GuideVideoPlaylist` y liste los que faltan en un `GuideVideoPending` dentro de la misma sección.
+Si el video solo existe en Odysee, porque no se publicó en YouTube o lo retiraron, use `YouTube` sin `id` y con `odyseeUrl`. El botón de YouTube queda como **YouTube pendiente** y el video se reproduce en la plataforma alternativa:
+
+```mdx
+<GuideVideos compact>
+<YouTube title="Informes Digitales" odyseeUrl="https://odysee.com/@AndresGoDu:a/INFORMES-DIGITALES:6" />
+</GuideVideos>
+```
+
+No invente identificadores. Si solo algunos videos existen, publique esos con la misma regla de uno o varios y liste los que faltan en un `GuideVideoPending` dentro de la misma sección.
 
 ## Pasos
 
@@ -66,7 +85,7 @@ La ruta de menú va en un párrafo, con flecha: **Establecimiento → Calendario
 
 No invente imágenes ni las genere con un modelo de imagen. Cada captura sale de SINAI abierto.
 
-Mientras el archivo no exista, deje `GuideImagePending` con la ruta, la pestaña, lo que debe verse y el nombre `.jpg` previsto.
+Mientras escribe, puede dejar `GuideImagePending` con la ruta, la pestaña, lo que debe verse y el nombre `.jpg` previsto. Reemplácelo cuando tome la captura.
 
 Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la tarjeta pequeña y abre el visor al hacer clic. No cambie ese tamaño en la guía.
 
@@ -78,10 +97,11 @@ Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la t
 
 Si hay varias capturas seguidas, sin texto entre ellas, envuélvalas en un solo `GuideImageRow`. Se acomodan a la derecha hasta llenar la fila y la siguiente baja. Si hay texto entre dos capturas, cada una queda sola.
 
-Antes de abrir SINAI, pregunte en el chat si puede tomar las capturas en esta ejecución y espere la respuesta.
+Tome siempre las capturas con Playwright en la misma ejecución, sin preguntar. Siga [capturas.md](capturas.md). La dirección de SINAI y las credenciales salen de `sinai-docs/.env`; nunca las muestre en el chat ni en archivos versionados.
 
-- Si la respuesta es no, deje las marcas **Captura pendiente** y termine la guía.
-- Si la respuesta es sí, pida la dirección de SINAI si no se la dieron. Siga [capturas.md](capturas.md).
+En SINAI solo navegue, filtre y abra ventanas. No guarde, asigne, elimine ni cree registros para conseguir una captura.
+
+Deje `GuideImagePending` solo para la captura que falle, y diga cuál y por qué.
 
 ## Preguntas frecuentes
 

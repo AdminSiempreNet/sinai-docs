@@ -1,0 +1,178 @@
+---
+title: "Asignación por Periodos"
+description: "Registre las asignaturas cuya asignación académica cambia de un periodo a otro: horas, semanas, peso, créditos y docente por periodo."
+guide: true
+lastModified: "2026-10-15"
+lastReviewed: "2026-10-15"
+---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Asignación por periodos. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Asignación por Periodos?
+
+**Asignación por Periodos** registra las asignaturas cuya asignación académica varía en cada periodo del grupo: horas semanales, número de semanas, peso, créditos o docente distintos según el periodo.
+
+Úsela solo para esos casos. La asignación normal, que se mantiene igual todo el año, se registra en [Asignación Académica](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-por-periodo).
+
+<GuideCallout type="warning">
+  Algunos sistemas de evaluación todavía no son compatibles con la asignación académica variable por periodos. Antes de usarla, consulte con el soporte técnico si está disponible para el sistema de evaluación de su institución.
+</GuideCallout>
+
+Para ingresar:
+
+1. Vaya a **Personal → Asignación Académica**.
+2. Haga clic en **Asignación por Periodos**, a la derecha de las pestañas. El módulo se abre en otra pestaña del navegador.
+3. En el menú **Opciones** de la izquierda, seleccione **Asignación por periodo**.
+
+<GuideImageTrigger src="/images/guides/asignacion-por-periodos/ingreso-asignacion-periodos.jpg" alt="Botón Asignación por Periodos a la derecha de las pestañas de Asignación Académica">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El botón **i** de la esquina superior derecha muestra el aviso **Inportante** con estas mismas recomendaciones.
+
+#### 2. Seleccionar el grupo y el periodo
+
+1. Seleccione la **Sede**.
+2. Seleccione el **Grupo**.
+3. Seleccione el **Periodo**. La lista muestra los periodos del cronograma del grupo.
+
+La tabla muestra las asignaturas registradas para ese grupo y ese periodo.
+
+<GuideImageTrigger src="/images/guides/asignacion-por-periodos/asignacion-por-periodo.jpg" alt="Menú Opciones y pantalla Asignación por Periodo con Sede, Grupo, Periodo, los botones junto al periodo y la tabla de asignaturas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Junto al periodo hay tres botones:
+
+- **Varita mágica:** genera la asignación del periodo.
+- **Copiar:** copia la asignación del grupo y el periodo seleccionados.
+- **Pegar:** pega la asignación copiada en otro grupo o periodo.
+
+#### 3. Generar la asignación del periodo
+
+Haga clic en el botón de la varita mágica, junto al periodo.
+
+SINAI toma la asignación académica principal del grupo y crea en el periodo cada asignatura que todavía no tenga. Cada asignatura nueva queda con:
+
+- el nombre de la asignatura;
+- las horas semanales, como número entero;
+- el número de semanas, que resulta de dividir las horas totales entre las horas semanales;
+- el peso y el docente de la asignación principal;
+- los créditos en 0.
+
+Las asignaturas que ya existen en el periodo no cambian. El aviso de éxito es **Asignación generada correctamente**.
+
+<GuideCallout>
+  Si el grupo no tiene asignación académica principal, no hay nada que generar. Regístrela primero en Asignación Académica.
+</GuideCallout>
+
+#### 4. Agregar una asignatura al periodo
+
+La primera fila de la tabla sirve para agregar asignaturas una por una.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Asignatura** | Asignatura que se agrega. La lista muestra las asignaturas con peso o intensidad horaria en el nivel del grupo. |
+| **Nombre** | Nombre personalizado de la asignatura en el periodo. Es opcional; si lo deja vacío, SINAI usa el nombre de la asignatura. |
+| **H.Sem** | Horas semanales. Es obligatorio. |
+| **#. Sem** | Número de semanas. Es obligatorio. |
+| **Peso** | Peso de la asignatura en el área. Es obligatorio. |
+| **Creditos** | Créditos de la asignatura. |
+| **Docente** | Docente que orienta la asignatura en el periodo. Puede dejar **Seleccione** para asignarlo después. |
+
+</GuideDataTable>
+
+1. Complete los campos.
+2. Haga clic en **Agregar**, el botón con el signo más.
+
+Las horas, las semanas, el peso y los créditos se registran como números enteros. Si falta un campo obligatorio, aparece un asterisco junto al encabezado de la columna.
+
+El aviso de éxito es **Asignación agregada correctamente**. Si algo falla, SINAI muestra **Error al agregar la asignacion**.
+
+#### 5. Modificar la asignación del periodo
+
+En las filas de la tabla puede cambiar el **Nombre**, **H.Sem**, **#. Sem**, **Peso**, **Creditos** y **Docente**.
+
+1. Haga los cambios.
+2. Haga clic en **Guardar cambios**, el botón verde del disco.
+
+Al guardar, todos los campos de cada fila son obligatorios, incluidos el nombre y los créditos. Si un campo está vacío, aparece un asterisco junto a él.
+
+El aviso de éxito es **Cambios guardados correctamente**. Si algo falla, SINAI muestra **Error al guardar los cambios en la asignación**.
+
+#### 6. Copiar la asignación a otro grupo o periodo
+
+1. Seleccione el grupo y el periodo de origen.
+2. Haga clic en **Copiar**. SINAI muestra *Asignación copiada correctamente. Por favor seleccione el grupo y periodo destino y haga clic en el botón Pegar*.
+3. Seleccione el grupo y el periodo de destino.
+4. Haga clic en **Pegar**.
+
+El botón **Pegar** se habilita solo después de copiar. En el destino, SINAI crea las asignaturas que no existen y reemplaza el nombre, las horas, las semanas, el peso, los créditos y el docente de las que ya existen.
+
+El aviso de éxito es **Asignación pegadas correctamente**. Si el destino es el mismo grupo y periodo de origen, SINAI muestra **No se puede pegar en el mismo grupo y periodo**.
+
+<GuideCallout type="warning">
+  Pegar reemplaza los datos de las asignaturas que ya existen en el periodo de destino. Revise el destino antes de hacer clic en Pegar.
+</GuideCallout>
+
+#### 7. Eliminar asignaturas del periodo
+
+1. Marque las asignaturas. La casilla del encabezado **Asignatura** marca todas.
+2. Haga clic en **Eliminar asignaturas seleccionadas**, el botón rojo.
+3. Confirme *¿Confirma que desea eliminar los registros seleccionados?*
+
+El aviso indica cuántos registros se eliminaron: **Eliminación realizada correctamente.** seguido de la cantidad.
+
+#### 8. Permisos
+
+Las acciones usan los mismos permisos de la asignación académica. Si el usuario no tiene el permiso, SINAI muestra el aviso y no aplica el cambio.
+
+- **Agregar**, **Copiar** y **Pegar** exigen el permiso para registrar asignación académica.
+- **Guardar cambios** exige el permiso para modificarla.
+- **Eliminar** exige el permiso para eliminarla.
+
+Solicite el permiso faltante al administrador de usuarios de la institución.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"¿Cuándo debo usar la asignación por periodos?"}>
+    Solo cuando una asignatura cambia de horas, semanas, peso, créditos o docente entre un periodo y otro. Si la asignación es la misma todo el año, regístrela en Asignación Académica.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Funciona con cualquier sistema de evaluación?"}>
+    No. Algunos sistemas de evaluación todavía no son compatibles con la asignación variable por periodos. Consulte con el soporte técnico antes de usarla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"¿De dónde salen los datos al generar la asignación del periodo?"}>
+    De la asignación académica principal del grupo. SINAI copia las asignaturas que faltan en el periodo con sus horas, semanas, peso y docente. Los créditos quedan en 0.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Generar cambia las asignaturas que ya registré en el periodo?"}>
+    No. Generar solo agrega las asignaturas que todavía no existen en el periodo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué no aparecen periodos en la lista?"}>
+    La lista muestra los periodos del cronograma del grupo. Si está vacía, revise los periodos del calendario en la pestaña Periodos de Calendarios.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"El botón Pegar está deshabilitado. ¿Qué hago?"}>
+    Primero seleccione el grupo y el periodo de origen y haga clic en Copiar. Después elija el destino; el botón Pegar quedará disponible.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Puedo dejar una asignatura sin docente?"}>
+    Sí. Al agregarla, deje Seleccione en la lista Docente. Después puede elegir el docente en la fila y guardar los cambios.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"Al guardar aparece un asterisco y no se guarda. ¿Por qué?"}>
+    Todos los campos de cada fila son obligatorios al guardar: nombre, horas semanales, semanas, peso y créditos. Complete el campo marcado y vuelva a guardar.
+  </GuideFAQItem>
+</GuideFAQ>
