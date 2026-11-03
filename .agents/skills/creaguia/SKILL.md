@@ -1,6 +1,6 @@
 ---
 name: creaguia
-description: Crea o actualiza guías MDX de ayuda SINAI desde el código de la pantalla, con video tutorial arriba, pasos anidados, tablas de campos, capturas en tarjeta y preguntas frecuentes. Úsela cuando pidan creaguia, crear una guía, actualizar una guía o documentar una pantalla de SINAI en sinai-docs.
+description: Crea o actualiza guías MDX de ayuda SINAI desde el código de la pantalla, con video tutorial arriba, pasos anidados, tablas de campos, marcadores de captura y preguntas frecuentes. Úsela cuando pidan creaguia, crear una guía, actualizar una guía o documentar una pantalla de SINAI en sinai-docs.
 ---
 
 # creaguia
@@ -83,11 +83,13 @@ La ruta de menú va en un párrafo, con flecha: **Establecimiento → Calendario
 
 ## Capturas
 
-No invente imágenes ni las genere con un modelo de imagen. Cada captura sale de SINAI abierto.
+Tome las capturas usted mismo en la IE de pruebas **SISTEMAS INFORMATICOS EMPRESARIALES**, con `scripts/shoot.py`, siguiendo [capturas.md](capturas.md). No invente imágenes ni las genere con un modelo de imagen.
 
-Mientras escribe, puede dejar `GuideImagePending` con la ruta, la pestaña, lo que debe verse y el nombre `.jpg` previsto. Reemplácelo cuando tome la captura.
+Primero deje en cada lugar un `GuideImagePending` con la ruta, la pestaña o ventana, lo que debe verse y el nombre `.jpg` previsto. Luego tome la captura y reemplace el marcador. Si la IE de pruebas no tiene los datos o la configuración que la captura necesita, deje el marcador y explique el motivo en el chat.
 
-Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la tarjeta pequeña y abre el visor al hacer clic. No cambie ese tamaño en la guía.
+Si la guía ya tiene un `GuideImageTrigger` y el código confirma que la pantalla no cambió, consérvelo. Si la pantalla cambió, reemplácelo por un `GuideImagePending`.
+
+Cuando la persona entregue el archivo, use `GuideImageTrigger`. El componente ya muestra la tarjeta pequeña y abre el visor al hacer clic. No cambie ese tamaño en la guía.
 
 ```mdx
 <GuideImageTrigger src="/images/guides/calendarios/pestana-configuracion.jpg" alt="Pestaña Configuración del calendario">
@@ -97,11 +99,7 @@ Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la t
 
 Si hay varias capturas seguidas, sin texto entre ellas, envuélvalas en un solo `GuideImageRow`. Se acomodan a la derecha hasta llenar la fila y la siguiente baja. Si hay texto entre dos capturas, cada una queda sola.
 
-Tome siempre las capturas con Playwright en la misma ejecución, sin preguntar. Siga [capturas.md](capturas.md). La dirección de SINAI y las credenciales salen de `sinai-docs/.env`; nunca las muestre en el chat ni en archivos versionados.
-
-En SINAI solo navegue, filtre y abra ventanas. No guarde, asigne, elimine ni cree registros para conseguir una captura.
-
-Deje `GuideImagePending` solo para la captura que falle, y diga cuál y por qué.
+Al terminar, liste en el chat las capturas que tomó y las que quedaron pendientes, con su nombre de archivo, la carpeta `public/images/guides/<guia>/` y el motivo de cada pendiente.
 
 ## Preguntas frecuentes
 
