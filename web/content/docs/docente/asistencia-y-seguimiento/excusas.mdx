@@ -1,48 +1,204 @@
 ---
 title: "Excusas"
-description: "Consulte y gestione las excusas enviadas por estudiantes en SINAI."
+description: "Consulte las excusas de los estudiantes de sus grupos, registre excusas nuevas y autorice, deniegue o anule las pendientes."
 guide: true
 wordpressId: 30140
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-excusas/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="09RsOfXZzJs" title="Excusas"
-  odyseeUrl="https://odysee.com/actualizaci%C3%B3n-de-excusas-m%C3%B3dulo%3A940eb489619f3428035ebfa534fe2f5947c09fca"
-/>
+<YouTube id="09RsOfXZzJs" title="Excusas" odyseeUrl="https://odysee.com/actualizaci%C3%B3n-de-excusas-m%C3%B3dulo%3A940eb489619f3428035ebfa534fe2f5947c09fca" />
 </GuideVideos>
 
-## Consultar excusas
+## Guía paso a paso
 
-1. Abra **Seguimiento > Excusas**.
-2. Filtre por **Grupo**, **Periodo**, **Estudiante** y **Estado** según lo que necesite consultar.
-3. En el listado, revise **Fecha inicial**, **Duración**, **Motivo** y **Estado** de cada excusa.
-4. Use la acción disponible en la fila para abrir la excusa y revisar sus detalles o soportes.
+### 1. ¿Qué es Excusas?
 
-## Gestionar el estado
+**Excusas** reúne las excusas de los estudiantes de los grupos en los que usted tiene asignación académica. Desde aquí puede consultarlas, abrir el detalle de cada una y, si la institución lo permite, registrar excusas nuevas y autorizarlas, denegarlas o anularlas.
 
-Las excusas pueden aparecer como **Pendiente**, **Autorizada**, **Denegada** o **Rechazada**. Registre una decisión solo después de verificar que pertenece al estudiante, grupo y periodo correctos; luego vuelva al listado para comprobar el estado resultante.
+Ingrese a **Seguimiento → Excusas**.
 
-## Navegar en el listado
+<GuideImageTrigger src="/images/guides/docente-excusas/lista-excusas.jpg" alt="Pantalla Excusas con los filtros Grupo, Periodo, Estudiante y Estado, el botón Nueva y una excusa pendiente">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Use el control de página y el selector **Ver** para recorrer los resultados cuando existan varias excusas.
+Lo que puede hacer depende de la configuración de excusas de la institución:
 
+- Si están habilitados **¿Pueden autorizar excusas los Docentes?**, usted crea y autoriza excusas de los estudiantes de su asignación académica.
+- Si está habilitado **¿Pueden autorizar excusas los Directores de grupo?**, usted crea y autoriza excusas de los estudiantes del grupo que dirige.
+- Si ninguna opción le aplica, solo consulta las excusas.
+
+#### 2. Consultar las excusas
+
+Use los filtros de la parte superior:
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Grupo** | **Todos** o uno de los grupos de su asignación académica. |
+| **Periodo** | Periodo de las excusas. La lista siempre se filtra por un periodo. |
+| **Estudiante** | **Todos** o un estudiante del grupo seleccionado. |
+| **Estado** | **Todos**, **Pendiente**, **Autorizada**, **Denegada** o **Rechazada**. |
+
+</GuideDataTable>
+
+La tabla muestra **Grupo**, **Estudiante**, **Fecha Inicial**, **Duración**, **Motivo** y **Estado**. La fecha inicial es la de la primera ausencia registrada y la duración suma los días y las horas de las ausencias.
+
+En la columna **Estado**, una excusa anulada aparece como **Anulada**; en el filtro **Estado** esa opción se llama **Rechazada**. Las excusas que un estudiante o acudiente dejó en borrador sin enviar no aparecen en su lista.
+
+Para recorrer resultados, use **Página actual** y **Ver**, que muestra 10, 20, 30, 40 o 50 excusas por página. Si no hay excusas, SINAI muestra «No hay datos para mostrar».
+
+Para abrir una excusa, haga clic en el botón azul **Detalles** al final de la fila.
+
+#### 3. Ver la configuración de excusas
+
+Haga clic en el botón del engranaje, a la derecha del título. Se abre el panel **Configuraciones**.
+
+<GuideImageTrigger src="/images/guides/docente-excusas/configuraciones.jpg" alt="Panel Configuraciones con las opciones Generales y Estudiantes o Acudientes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El panel muestra si los directores de grupo y los docentes pueden autorizar excusas, si los usuarios pueden eliminar sus propios comentarios y en cuánto tiempo, si los estudiantes y acudientes pueden registrar excusas y si se exige un adjunto.
+
+Desde el módulo docente las casillas no se modifican y el panel no tiene botón **Guardar**. Los cambios los hace el área administrativa.
+
+#### 4. Crear una excusa
+
+El botón **Nueva**, junto al filtro **Estado**, solo aparece si la configuración le permite crear excusas para el grupo seleccionado.
+
+1. Seleccione el **Grupo**, el **Periodo** y el **Estudiante**.
+2. Haga clic en **Nueva**. Se abre la ventana **Crear Excusa**.
+3. Escriba la **Descripción o Justificación**. Es obligatoria y debe tener al menos 5 caracteres.
+4. Seleccione el **Motivo** y la **Fecha** de la ausencia.
+5. Deje marcada **Toda la jornada** si el estudiante faltó toda la jornada. Si la desmarca, elija **Desde** y **Hasta**, entre **1a Hora** y **10a Hora**.
+6. Haga clic en **Crear**.
+
+<GuideImageTrigger src="/images/guides/docente-excusas/crear-excusa.jpg" alt="Ventana Crear Excusa con la justificación, el motivo, la fecha y Toda la jornada marcada">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- Si no hay periodo, SINAI muestra «Debe seleccionar un periodo».
+- Si no hay estudiante, SINAI muestra «Debe seleccionar un estudiante».
+
+La excusa que registra un docente queda en estado **Pendiente**. SINAI muestra **Excusa creada correctamente** y le recuerda revisar la solicitud: agregar más ausencias, documentos o comentarios. Al hacer clic en **Continuar**, abre el detalle de la excusa.
+
+#### 5. Revisar el detalle de una excusa
+
+El detalle muestra:
+
+- **A la izquierda:** el estudiante, el grupo y el **Periodo**; el **Motivo**, quién creó o actualizó la excusa y el **Estado**; la **Descripción o Justificación**, y la tabla de ausencias con **Fecha**, **Toda la jornada**, **Desde** y **Hasta**.
+- **A la derecha:** **Documentos** y los comentarios.
+- **Arriba:** **Autorización** o **Anular**, según el estado; **Eliminar**, si aplica, y los botones para descargar la excusa en PDF o en Excel.
+
+<GuideImageTrigger src="/images/guides/docente-excusas/detalle-excusa.jpg" alt="Detalle de una excusa pendiente con el estudiante, el motivo, la justificación, las ausencias, los documentos y los comentarios">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La flecha **Excusas** vuelve a la lista en la misma página en la que estaba.
+
+Si usted creó la excusa y está **Pendiente** o **Denegada**, puede cambiar el **Motivo** y la **Descripción o Justificación**. El motivo se guarda al elegirlo y la descripción al salir del cuadro de texto. El **Periodo** se puede cambiar mientras la excusa no esté **Autorizada** ni **Denegada**.
+
+#### 6. Agregar o quitar ausencias
+
+Con la excusa **Pendiente**, si la configuración le permite autorizar excusas de ese grupo, aparece el formulario de ausencias:
+
+1. Escriba la **Fecha**.
+2. Deje marcada **¿Toda la jornada?** o desmárquela y elija **Desde** y **Hasta**.
+3. Haga clic en **Agregar Ausencia**.
+
+Cada fecha se registra una sola vez. Si la repite, SINAI indica que la fecha que intenta agregar ya existe.
+
+Para quitar una ausencia, haga clic en el botón rojo de la fila y confirme *¿Seguro que deseas eliminar la ausencia?* Solo puede quitar las ausencias que usted registró; si no, SINAI muestra «El usuario que intenta eliminar la excusa no fue el creador de la misma, por lo tanto no puede eliminarla».
+
+#### 7. Cargar documentos
+
+En **Documentos**, haga clic en **Nuevo Documento**. Este botón aparece en las mismas condiciones que el formulario de ausencias.
+
+1. Seleccione el archivo.
+2. Escriba la descripción del archivo.
+3. Haga clic en **Cargar documento**.
+
+<GuideImageTrigger src="/images/guides/docente-excusas/cargar-documento.jpg" alt="Ventana Cargar documentos con el selector de archivo y la descripción">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- Se aceptan archivos .jpg, .png, .txt, .webp, .bmp, .jpeg, .mpeg, .zip, .rar, .pdf, .doc y .docx.
+- El tamaño máximo es 10 MB. Si lo supera, SINAI muestra «El tamaño del archivo es demasiado grande. Excede los 10MB».
+- Si no eligió archivo, SINAI muestra «No hay un archivo seleccionado».
+
+Para descargar un documento, haga clic en su nombre. Solo puede eliminar los documentos que usted cargó; SINAI pide confirmar *¿Seguro que deseas eliminar el documento?*
+
+#### 8. Comentar la excusa
+
+Escriba en **Escribe un comentario** y haga clic en **Agregar Comentario**. El comentario queda en el historial de la excusa, junto con los cambios de estado que SINAI registra solo.
+
+Si la configuración lo permite, puede eliminar sus propios comentarios dentro del tiempo máximo configurado. SINAI pide confirmar *¿Seguro que deseas eliminar el comentario?*
+
+#### 9. Autorizar, denegar o anular
+
+El botón **Autorización** aparece cuando la excusa está **Pendiente** y la configuración le permite autorizar excusas de ese grupo.
+
+1. Verifique que la excusa tenga al menos una ausencia. Si no tiene, SINAI muestra «Debes registrar al menos una ausencia».
+2. Haga clic en **Autorización**. Se abre **Autorización de excusa** con el estudiante, el motivo y el estado.
+3. Si lo necesita, escriba **Comentarios u observaciones**. Si escribe algo, debe tener al menos 5 caracteres.
+4. Haga clic en **Autorizar**, **Denegar** o **Anular**.
+
+<GuideImageTrigger src="/images/guides/docente-excusas/autorizacion-excusa.jpg" alt="Ventana Autorización de excusa con el comentario y los botones Autorizar, Denegar y Anular">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra «Excusa actualizada correctamente» y agrega a los comentarios el cambio de estado.
+
+- Cuando la excusa está **Autorizada**, el botón de arriba cambia a **Anular** y la ventana solo ofrece **Anular**.
+- Si usted creó una excusa que quedó **Denegada**, la ventana ofrece **Marcar como Pendiente**.
+- Una excusa **Anulada** ya no cambia de estado.
+
+<GuideCallout type="warning">
+  Una excusa autorizada solo se puede anular y una anulada no vuelve a cambiar de estado. Revise el estudiante, el periodo y las ausencias antes de decidir.
+</GuideCallout>
+
+#### 10. Eliminar una excusa
+
+El botón **Eliminar** aparece solo si usted creó la excusa y está **Pendiente**.
+
+1. Haga clic en **Eliminar**.
+2. Confirme *¿Seguro que deseas eliminar la Excusa?*
+
+SINAI elimina la excusa con sus ausencias, comentarios y documentos, y vuelve a la lista. Si pasó el tiempo establecido por la institución, muestra «Ha transcurrido mas del tiempo establecido para realizar la eliminación».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Excusas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"No veo el botón Nueva. ¿Por qué?"}>
+    El botón aparece solo si la institución habilitó **¿Pueden autorizar excusas los Docentes?**, o si habilitó **¿Pueden autorizar excusas los Directores de grupo?** y el grupo seleccionado es el que usted dirige. Puede revisar la configuración con el botón del engranaje; los cambios los hace el área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Excusas» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Al hacer clic en Nueva aparece «Debe seleccionar un estudiante». ¿Qué hago?"}>
+    Seleccione primero el **Grupo** y luego un estudiante en **Estudiante**. Con el grupo en **Todos** no hay estudiante para la excusa. Si el aviso es «Debe seleccionar un periodo», elija el periodo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Excusas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Un estudiante dice que envió una excusa, pero no la veo. ¿Dónde está?"}>
+    Revise que el filtro **Periodo** sea el de la excusa y que **Estado** esté en **Todos**. La lista solo muestra excusas de los grupos de su asignación académica y no incluye las que el estudiante dejó en borrador sin enviar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué diferencia hay entre Denegada y Anulada?"}>
+    Una excusa **Denegada** puede volver a **Pendiente**: quien la creó la marca de nuevo con **Marcar como Pendiente**. Una excusa **Anulada** no cambia más de estado. En el filtro **Estado**, las anuladas se buscan con la opción **Rechazada**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué no puedo autorizar la excusa?"}>
+    El botón **Autorización** aparece solo con la excusa **Pendiente** y si la configuración le permite autorizar excusas de ese grupo. Antes de abrir la ventana, la excusa debe tener al menos una ausencia; si no, SINAI muestra «Debes registrar al menos una ausencia».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo modificar una excusa que ya autoricé?"}>
+    No. En una excusa **Autorizada** no se cambian el motivo, la descripción, el periodo ni las ausencias, y el único cambio de estado posible es **Anular**. Si se intenta otro cambio de estado, SINAI muestra «No se puede modificar el estado de una excusa Autorizada».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"No puedo eliminar una ausencia, un documento o la excusa. ¿Por qué?"}>
+    Solo se elimina lo que usted mismo registró. La excusa se elimina únicamente en estado **Pendiente** y dentro del tiempo que fije la institución; si ese tiempo pasó, SINAI muestra «Ha transcurrido mas del tiempo establecido para realizar la eliminación».
   </GuideFAQItem>
 </GuideFAQ>

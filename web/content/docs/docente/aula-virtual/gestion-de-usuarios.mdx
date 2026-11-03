@@ -1,11 +1,13 @@
 ---
 title: "Gestión de usuarios"
-description: "Gestione los usuarios que acceden al Aula Virtual Chamilo desde SINAI."
+description: "Genere, active y asocie en el Aula Virtual Chamilo los usuarios de los estudiantes de sus grupos."
 guide: true
 wordpressId: 30208
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/gestion-de-usuarios-chamilo/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,26 +18,114 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-1. Abra **Herramientas > Gestión de usuarios**.
-2. Consulte el usuario, grupo o rol que necesita gestionar en Aula Virtual Chamilo.
-3. Use las opciones habilitadas para crear, actualizar o sincronizar el acceso.
-4. Verifique que el usuario y su rol quedaron asociados correctamente.
+### 1. ¿Qué es Gestión de usuarios?
 
-La disponibilidad de acciones depende de los permisos docentes y la configuración institucional del Aula Virtual.
+**Gestión de usuarios** relaciona a los estudiantes de sus grupos con el Aula Virtual Chamilo de la institución. Desde esta pantalla usted crea en el aula virtual el usuario de cada estudiante, lo matricula en el grupo correspondiente y lo activa o inactiva.
 
+La pantalla solo funciona si su institución tiene contratado el servicio de Aula Virtual. Si no lo tiene, SINAI muestra «La institución no cuenta con un servicio de Aula virtual. Por favor solicitelo.».
+
+Ingrese a **Herramientas → Gestión de Usuarios**. También puede abrirla con el botón **Gestion de Usuarios** de la pantalla [Notas aula virtual](/docs/docente/aula-virtual/notas).
+
+<GuideImageTrigger src="/images/guides/docente-gestion-usuarios-aula-virtual/gestion-usuarios.jpg" alt="Pantalla Gestión de usuarios con los filtros a la izquierda y la lista de usuarios del aula virtual">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene dos partes:
+
+- **Generar usuarios en el Aula virtual**, a la izquierda: los filtros y los enlaces al aula virtual.
+- **Lista de usuarios del Aula Virtual**, a la derecha: los estudiantes del grupo seleccionado y las acciones sobre cada uno.
+
+#### 2. Consultar los estudiantes de un grupo
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Grupos** | Los grupos de su asignación académica. La lista muestra los estudiantes matriculados en el grupo elegido. |
+| **Estado Usuario** | **Todos**, **Activo** o **Inactivo**. Filtra por el estado del usuario del estudiante en SINAI. |
+
+</GuideDataTable>
+
+Cada fila de la lista muestra:
+
+<GuideDataTable>
+
+| Columna | Qué indica |
+| --- | --- |
+| **Nombre** | Apellidos y nombres del estudiante y, debajo, el rol de su usuario. |
+| **Usuario Sinai** | Usuario del estudiante en SINAI. El círculo es verde si está activo y rojo si está inactivo. |
+| **Usuario Chamilo** | Usuario del estudiante en el aula virtual. **Sin usuario** indica que todavía no se ha generado. |
+| **Matriculado** | Marcado si el estudiante está matriculado en el grupo correspondiente del aula virtual. |
+| **Opciones** | Botones para crear el usuario, activarlo o inactivarlo y asociarlo al grupo. |
+
+</GuideDataTable>
+
+#### 3. Generar los usuarios del grupo
+
+1. En **Grupos**, seleccione el grupo.
+2. Haga clic en **Generar usuarios**, en la parte superior derecha de la lista.
+
+SINAI crea en el aula virtual el grupo, si aún no existe, y el usuario de cada estudiante del grupo que no lo tenga. Al terminar muestra «Se ha generado los usuarios correctamente». Si no encuentra estudiantes para crear, muestra «No se encontraron usuarios para la creación. Por favor generarlos».
+
+<GuideCallout>
+  Solo se generan usuarios en el aula virtual para estudiantes que ya tienen usuario en SINAI. Si en **Usuario Sinai** no aparece un usuario, los botones de esa fila quedan deshabilitados.
+</GuideCallout>
+
+#### 4. Acciones sobre un estudiante
+
+En la columna **Opciones** de cada fila:
+
+- **Botón azul (guardar):** crea el usuario del estudiante en el aula virtual. Se deshabilita cuando el estudiante ya tiene usuario en Chamilo.
+- **Botón rojo (Inactivar):** inactiva el usuario del aula virtual. Si el usuario está inactivo, el botón cambia a verde con el texto **Activar**. Se deshabilita cuando el estudiante no tiene usuario en Chamilo.
+- **Botón verde (Asociar):** matricula al estudiante en el grupo del aula virtual. Si el estudiante aún no tiene usuario en Chamilo, SINAI lo crea.
+
+#### 5. Acciones sobre varios estudiantes
+
+1. Marque la casilla de cada estudiante. La casilla del encabezado marca o desmarca a todos.
+2. Haga clic en **Más opciones** y elija la acción.
+
+<GuideImageTrigger src="/images/guides/docente-gestion-usuarios-aula-virtual/mas-opciones.jpg" alt="Menú Más opciones desplegado con Activar, Actualizar y Asociar seleccionados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Opción | Qué hace |
+| --- | --- |
+| **Activar Seleccionados** | Activa los usuarios inactivos e inactiva los activos en el aula virtual. |
+| **Actualizar Seleccionados** | Actualiza en el aula virtual los datos de los usuarios con los datos que tienen en SINAI. |
+| **Asociar Seleccionados** | Matricula a los estudiantes en el grupo del aula virtual. |
+
+</GuideDataTable>
+
+Al terminar, SINAI muestra «Acción realizada correctamente sobre N usuarios, se modificaron X y no se modificaron Y». Si no marcó ninguna fila, muestra «No has seleccionado ninguna fila».
+
+#### 6. Ir al aula virtual
+
+- **Ir al Aula Virtual** abre el aula virtual en otra pestaña con su sesión iniciada. Si SINAI no logra conectarse, el botón muestra un aviso en lugar de ese texto, por ejemplo **Token inválido** o **url no encontrada**.
+- **Calificaciones PV** abre en otra pestaña la pantalla [Notas aula virtual](/docs/docente/aula-virtual/notas).
+- La nota de la parte inferior trae el enlace **Ir a Chamilo** para ingresar directamente a la plataforma con su usuario y contraseña de SINAI, siempre que no haya cambiado la contraseña en Chamilo.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Gestión de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué el botón Ir al Aula Virtual dice «Token inválido»?"}>
+    SINAI no pudo conectarse con el aula virtual de la institución. Mientras no haya conexión no se pueden generar, activar ni asociar usuarios; al intentarlo, SINAI muestra «No se ha podido establecer conexión con la plataforma Chamilo», seguido de la dirección del aula. Verifique que el aula virtual esté en línea y, si el problema continúa, comuníquese con soporte técnico.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Gestión de usuarios» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un grupo en la lista Grupos?"}>
+    La lista muestra solo los grupos de su asignación académica del calendario actual. Si falta un grupo, solicite la asignación al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Gestión de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué están deshabilitados los botones de un estudiante?"}>
+    Si el estudiante no tiene usuario en SINAI, no se puede crear su usuario en el aula virtual. Si ya tiene usuario en Chamilo, el botón de crear se deshabilita, y si no lo tiene, se deshabilitan los botones de activar y asociar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué significa la casilla Matriculado?"}>
+    Indica si el estudiante está matriculado en el grupo del aula virtual que corresponde a su grupo de SINAI. Para matricularlo, use el botón verde de la fila o **Más opciones → Asociar Seleccionados**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Inactivar un usuario lo elimina del aula virtual?"}>
+    No. **Inactivar** cambia el estado del usuario en el aula virtual y la misma acción lo vuelve a activar. La pantalla no tiene una opción para eliminar usuarios.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,11 +1,13 @@
 ---
 title: "Caracterización"
-description: "Conozca las opciones de caracterización y siga el procedimiento correspondiente en SINAI."
+description: "Registre las características adicionales de los estudiantes de su grupo: genere la lista, elija la opción de cada estudiante y guarde."
 guide: true
 wordpressId: 30158
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/caracterizacion/"
-lastModified: "2023-11-15 15:40:39"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,28 +18,93 @@ lastModified: "2023-11-15 15:40:39"
 
 ## Guía paso a paso
 
-Este procedimiento permite definir o especificar las características adicionales de cada uno de los estudiantes, que no son registradas al momento de la matricula.
+### 1. ¿Qué es Caracterización?
 
-Para caracterizar estudiantes en la plataforma SINAI debe ser director de grupo.
+**Caracterización** es la pantalla **Caracterización Adicional de Estudiantes**, donde el director de grupo registra características de sus estudiantes que no se toman al momento de la matrícula. Cada característica tiene sus propias opciones, por ejemplo niveles o respuestas, y para cada estudiante se elige una opción y, si se necesita, se escribe una observación.
 
-1. Ingrese al menú principal Ficha Observador
-2. Clic en el submenú Caracterización o en la iconografía
-3. Seleccione el grupo si tiene varios asignados y seleccione una a una las características que registrará a cada uno de los estudiantes.
-4. Clic en el botón azul “Generar” diligencie la información solicitada en cada formulario y finalmente haga clic en el botón verde “Guardar"
+Ingrese a **Ficha Observador → Caracterización**, desde el submenú o desde el ícono **Caracterización**.
 
+<GuideImagePending>
+  EvalProm/Seguimiento/Observador/Caracterizacion.aspx, pantalla Caracterización Adicional de Estudiantes con un grupo y una característica con estudiantes generados. Archivo: caracterizacion-adicional.jpg
+</GuideImagePending>
+
+La columna izquierda tiene los filtros, los botones y un resumen:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Docente** | Su nombre. En el módulo docente no se puede cambiar. |
+| **Grupo** | Grupos de los que usted es director de grupo en el calendario en el que ingresó. |
+| **Características** | Primero la categoría, en la lista, y debajo la característica de esa categoría que va a registrar. |
+
+</GuideDataTable>
+
+Debajo de los botones, el resumen muestra cuántos estudiantes del grupo tienen cada **Opción** de la característica, con su **Porcentaje%**.
+
+A la derecha aparece el nombre de la característica elegida y la lista de estudiantes con estas columnas: casilla de selección, **Foto**, **Apellidos y Nombres**, **Opciones** y **Observación**.
+
+<GuideCallout>
+  Las categorías, las características y sus opciones las define el área administrativa de la institución. Desde el módulo docente no se pueden crear.
+</GuideCallout>
+
+#### 2. Generar la lista de estudiantes
+
+La primera vez que trabaje una característica con un grupo, la lista aparece vacía. Debe generarla:
+
+1. Seleccione el **Grupo**.
+2. Seleccione la categoría y la característica en **Características**.
+3. Haga clic en **Generar**.
+
+SINAI agrega a la lista a los estudiantes con matrícula activa en el grupo que aún no tienen esa característica. Si la característica tiene una opción predeterminada, la asigna a cada estudiante agregado.
+
+- Si agregó estudiantes, SINAI muestra «Se ha generado la caracterizacion correctamente.».
+- Si todos los estudiantes ya estaban en la lista, muestra «No hay registros por generar.».
+- Si la categoría no tiene características, muestra «No existen caracteristicas, primero debe agregarlas.».
+
+#### 3. Registrar la caracterización
+
+1. Con el **Grupo** y la característica seleccionados, revise la lista de estudiantes.
+2. En la columna **Opciones**, elija la opción de cada estudiante.
+3. Si lo necesita, escriba en **Observación**. El campo indica «Escriba aquí la observación si es necesario».
+4. Haga clic en **Guardar**.
+
+SINAI guarda la opción y la observación de todos los estudiantes de la lista y muestra cuántos se actualizaron, por ejemplo «30 estudiantes actualizados correctamente, 0 errores.».
+
+<GuideCallout>
+  Lo que elija en la lista no queda registrado hasta que haga clic en **Guardar**. Si cambia de grupo o de característica antes de guardar, se pierden los cambios.
+</GuideCallout>
+
+#### 4. Quitar estudiantes de la caracterización
+
+1. Marque la casilla de los estudiantes que desea quitar de la característica.
+2. Haga clic en **Eliminar**.
+
+SINAI elimina la opción y la observación de esos estudiantes en la característica y muestra, por ejemplo, «2 estudiantes eliminados correctamente, 0 errores.». Si no marcó ningún estudiante, el aviso es «Se ha presentado un problema al eliminar, por favor intente nuevamente.».
+
+<GuideCallout type="warning">
+  **Eliminar** no pide confirmación y no se puede deshacer. Para volver a registrar a esos estudiantes, haga clic en **Generar** y elija de nuevo su opción.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Caracterización»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué no aparece mi grupo en la lista?">
+    La lista **Grupo** solo muestra los grupos de los que usted es director de grupo en el calendario en el que ingresó a SINAI. Si debe caracterizar un grupo que no dirige, solicite la asignación de la dirección de grupo al área administrativa.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Caracterización» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="Seleccioné la característica y no aparecen estudiantes. ¿Qué hago?">
+    Haga clic en **Generar**. La lista solo muestra a los estudiantes que ya tienen un registro de esa característica, y **Generar** crea el registro de los estudiantes con matrícula activa en el grupo.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Caracterización»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="Llegó un estudiante nuevo al grupo y no está en la lista. ¿Cómo lo agrego?">
+    Haga clic en **Generar** con el grupo y la característica seleccionados. SINAI solo agrega a los estudiantes que faltan; los que ya estaban conservan su opción y su observación.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Puedo crear una característica o una opción nueva?">
+    No desde el módulo docente. Las categorías, las características y sus opciones las configura el área administrativa de la institución.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué muestra la tabla Opción, Cantidad y Porcentaje%?">
+    Es el resumen de la característica en el grupo: cuántos estudiantes tienen cada opción y qué porcentaje del grupo representan.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Dónde consulto la caracterización de un estudiante?">
+    En **Ficha Observador → Registro Seguimiento**, pestaña **Caracterización**, con el estudiante seleccionado. Consulte [Registro de seguimiento](/docs/docente/convivencia-y-observador/ficha-observador/registro-de-seguimiento).
   </GuideFAQItem>
 </GuideFAQ>

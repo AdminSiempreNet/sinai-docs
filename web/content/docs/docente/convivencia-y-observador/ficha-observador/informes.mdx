@@ -1,11 +1,13 @@
 ---
 title: "Informes del observador"
-description: "Consulte y descargue informes de la ficha observador en SINAI."
+description: "Consulte los informes de valoración periódica, de seguimiento y la ficha observador individual de los estudiantes de su grupo."
 guide: true
 wordpressId: 30490
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/informes-ficha-observado/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,26 +18,78 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-1. Ingrese a **Ficha observador > Informes**.
-2. Seleccione los filtros disponibles, como grupo, estudiante o período.
-3. Elija el tipo de informe requerido.
-4. Genere la vista previa y descargue el archivo cuando corresponda.
+### 1. ¿Qué es Informes?
 
-Revise la información antes de compartirla, pues contiene datos de seguimiento del estudiante.
+**Informes** es la pantalla del módulo docente donde se consultan los informes de la ficha observador de los estudiantes de su grupo: la valoración periódica, los seguimientos y la ficha observador individual.
 
+Ingrese a **Ficha Observador → Informes**, desde el submenú o desde el ícono **Informes**.
+
+<GuideImageTrigger src="/images/guides/docente-informes-del-observador/informes-observador.jpg" alt="Pantalla Informes con los parámetros a la izquierda y la Ficha Observador Individual de un estudiante en Visualización del informe">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene dos paneles:
+
+- **Parámetros del Informe:** a la izquierda, con las listas para elegir el informe y el botón **Ver Informe**. El botón azul de la esquina abre esta guía.
+- **Visualización del informe:** a la derecha, donde aparece el informe generado.
+
+#### 2. Elegir el informe
+
+La lista **Informe** ofrece seis informes. Cada uno habilita las listas que necesita:
+
+<GuideDataTable>
+
+| Informe | Listas que usa |
+| --- | --- |
+| **Informe de Valoración Periódica por Grupo** | **Periodo** y **Grupo**. |
+| **Informe de Valoración Periódica por Estudiante** | **Periodo**, **Grupo** y **Estudiante**. |
+| **Informe de Seguimiento Periódico por Grupo** | **Periodo** y **Grupo**. |
+| **Informe de Seguimiento Periódico por Estudiante** | **Periodo**, **Grupo** y **Estudiante**. |
+| **Ficha Observador Individual** | **Grupo** y **Estudiante**. La lista **Periodo** queda desactivada. |
+| **Formato Vacio de Valoración Periódica por Grupo** | **Periodo** y **Grupo**. |
+
+</GuideDataTable>
+
+Las listas muestran:
+
+- **Periodo:** los periodos del calendario en el que ingresó a SINAI.
+- **Grupo:** los grupos de los que usted es director de grupo en ese calendario.
+- **Estudiante:** los estudiantes con matrícula en el grupo elegido.
+
+#### 3. Generar el informe
+
+1. En **Informe**, seleccione el informe.
+2. Seleccione el **Periodo**, si el informe lo usa.
+3. Seleccione el **Grupo**.
+4. Seleccione el **Estudiante**, si el informe es individual.
+5. Haga clic en **Ver Informe**.
+
+SINAI genera el informe y lo muestra en **Visualización del informe**. Use la barra del visor para recorrer las páginas, exportar el informe o imprimirlo.
+
+<GuideCallout>
+  SINAI solo envía el periodo elegido a los informes de seguimiento periódico, por grupo y por estudiante. Los informes de valoración periódica y el formato vacío no se filtran por la lista **Periodo**.
+</GuideCallout>
+
+<GuideCallout type="warning">
+  Los informes contienen datos personales y de seguimiento de los estudiantes. Revíselos antes de compartirlos y entréguelos solo a quien corresponda.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Informes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué la lista Grupo está vacía o no aparece mi grupo?">
+    La lista solo muestra los grupos de los que usted es director de grupo en el calendario en el que ingresó. Si no tiene dirección de grupo, solicite al área administrativa que la asigne o consulte los informes desde el módulo administrativo.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Informes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué la lista Estudiante está desactivada?">
+    Se activa con los informes individuales: **Informe de Valoración Periódica por Estudiante**, **Informe de Seguimiento Periódico por Estudiante** y **Ficha Observador Individual**. Seleccione uno de ellos en **Informe**.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Informes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Para qué sirve el Formato Vacio de Valoración Periódica por Grupo?">
+    Genera el formato de valoración periódica del grupo sin valoraciones registradas.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="Cambié el periodo y el informe de valoración no cambió. ¿Por qué?">
+    SINAI solo envía el periodo a los informes de seguimiento periódico. Los informes de valoración periódica y el formato vacío no se filtran por la lista **Periodo**.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Cómo descargo el informe?">
+    Después de hacer clic en **Ver Informe**, use la opción de exportar de la barra del visor, en **Visualización del informe**, y elija el formato.
   </GuideFAQItem>
 </GuideFAQ>

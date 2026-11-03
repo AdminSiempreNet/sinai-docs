@@ -1,11 +1,13 @@
 ---
 title: "Registro de anotaciones"
-description: "Aprenda a registrar anotaciones en SINAI."
+description: "Registre anotaciones de los estudiantes, complételas con faltas, estudiantes vinculados, comentarios y archivos, y compártalas con otros usuarios."
 guide: true
 wordpressId: 30145
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/registro-de-anotaciones/"
-lastModified: "2023-11-15 15:34:39"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,34 +18,164 @@ lastModified: "2023-11-15 15:34:39"
 
 ## Guía paso a paso
 
-El registro de anotaciones permite que cualquier docente o directivo de la institución pueda hacer una anotaciones de cualquier tipo a los estudiantes Cabe aclarar que:
+### 1. ¿Qué es Registro de anotaciones?
 
-- El registro de anotaciones NO es la ficha observador. Tiene similitudes pero no lo es, porque la ficha observador es un documento que hace parte de la hoja de vida del estudiante y esta acompaña el expediente que se le entrega al estudiante al momento de ser trasladado a otro establecimiento educativo.
-- El registro de anotaciones se asimila al libro disciplinario o anecdotario. Generalmente a cargo del coordinador. Es un registro interno de la institución.
+**Registro de anotaciones** guarda los hechos que usted quiere dejar registrados sobre un estudiante: una felicitación, una llegada tarde, una riña o cualquier otro tipo que defina su institución. Cada anotación tiene un estudiante responsable, una fecha, un periodo, un tipo, un asunto y una descripción. Después de crearla puede agregar faltas, vincular a otros estudiantes, comentar y adjuntar archivos.
 
-Para hacer el registro de anotaciones desde el modulo Docente o administrativo debe:
+Es un registro distinto de la **Ficha Observador**, que tiene su propio menú.
 
-1. Ingrese al menú principal Seguimiento
-2. Clic en el submenú Registro de anotaciones o en la iconografia
-3. Seleccione los parámetros de búsqueda sede, grado y estudiante.
-4. Clic en la pestaña “Registro de anotaciones”.
-5. Registre la anotación y finalice haciendo clic en el botón “Agregar Anotación”. <GuideImageTrigger src={"/images/wordpress/2023/11/REGISTRO-DE-ANOTACIONES.gif"} alt={"Captura de REGISTRO DE ANOTACIONES"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Seguimiento → Registro Anotaciones**.
 
+<GuideImageTrigger src="/images/guides/docente-registro-anotaciones/lista-anotaciones.jpg" alt="Pantalla Registro de anotaciones con el panel General, los filtros y la lista de anotaciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideCallout>
+  Su institución puede usar otro nombre en lugar de «Anotación». SINAI lo muestra en los títulos y botones de estas pantallas.
+</GuideCallout>
 
+#### 2. Elegir qué anotaciones ver
+
+El panel **General**, a la izquierda, tiene el botón **Nueva Anotación** y las listas:
+
+<GuideDataTable>
+
+| Opción | Qué muestra |
+| --- | --- |
+| **Mis Anotación** | Las anotaciones que usted registró. |
+| **Dirección de grupo** | Las anotaciones de los grupos que usted dirige. |
+| **Compartidas conmigo** | Las anotaciones que otros usuarios compartieron con usted. |
+| **Todas** | Todas las anotaciones que usted puede ver. |
+| **Estudiantes Vinculados** | Los estudiantes con anotaciones y la cantidad de anotaciones de cada uno. |
+
+</GuideDataTable>
+
+#### 3. Filtrar la lista
+
+<GuideDataTable>
+
+| Filtro | Qué hace |
+| --- | --- |
+| **Sede** | Carga los grupos de la sede. |
+| **Grupo** | **TODOS LOS GRUPOS** o un grupo. |
+| **Periodo** | **TODOS** o un periodo. |
+| **Desde** y **Hasta** | Rango de fechas de registro. Al entrar va del 1 de enero del calendario hasta hoy. |
+| **Estudiantes** | Escriba parte del nombre para buscar un estudiante. Vacío muestra todos. |
+
+</GuideDataTable>
+
+Haga clic en **Buscar** para aplicar los filtros.
+
+Si su institución limita el registro de anotaciones, la lista solo incluye las anotaciones de los grupos que usted dirige o en los que tiene asignación académica, según la configuración.
+
+Cada fila de **Lista de Anotaciones** muestra el estudiante, la cantidad de estudiantes vinculados, la fecha de registro, el asunto, la descripción y el grupo, junto con **Periodo**, **Registrado por**, **Fecha Creación** y **Actualización**. A la derecha están los botones:
+
+- **Editar** (verde): abre la anotación.
+- **Descargar Informe** (azul claro): descarga en PDF el registro de la anotación.
+- **Lista de anotaciones de un estudiante** (azul): abre en otra pestaña todas las anotaciones del estudiante.
+- **Eliminar Anotación** (rojo): elimina la anotación, previa confirmación. Solo puede eliminarla quien la creó; si no, SINAI muestra «Solo el usuario de creación puede eliminar la anotación».
+
+#### 4. Crear una anotación
+
+1. Haga clic en **Nueva Anotación**.
+2. Seleccione el **Grupo** y el **Estudiante Responsable**. En los dos campos puede escribir para buscar.
+3. Revise la **Fecha** del hecho. SINAI propone la fecha de hoy.
+4. Seleccione el **Periodo** y el **Tipo de Anotación**.
+5. Escriba el **Asunto** y la **Descripción**.
+6. Haga clic en **Crear**.
+
+<GuideImageTrigger src="/images/guides/docente-registro-anotaciones/nueva-anotacion.jpg" alt="Formulario Nueva Anotación con grupo, estudiante, fecha, periodo, tipo, asunto y descripción">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Todos los campos son obligatorios. Si falta uno, SINAI muestra el mensaje correspondiente, por ejemplo «Debe seleccionar un estudiante», «Debe seleccionar un tipo» o «Debe diligenciar un asunto».
+
+Al crearla, SINAI la comparte con los roles que su institución haya configurado y abre **Editar Anotación** con el mensaje «La anotación se ha guardado Correctamente».
+
+#### 5. Completar la anotación
+
+En **Editar Anotación** puede corregir los datos básicos y además:
+
+- **Norma:** escriba la norma del manual de convivencia relacionada.
+- **Campos adicionales:** si su institución los configuró, aparecen debajo de **Descripción**.
+- **Privacidad:** el interruptor muestra si la anotación es pública (activado) o privada.
+
+<GuideImagePending>
+  Docente/Seguimiento/Anotaciones/EditarAnotaciones.aspx?Id=…, pantalla Editar Anotación con los datos, las pestañas Faltas, Vincular Estudiantes y Comentarios, el panel Archivo y Estudiantes Vinculados. Archivo: editar-anotacion.jpg
+</GuideImagePending>
+
+Haga clic en **Guardar Cambios** para guardar. Las pestañas de la parte inferior:
+
+<GuideDataTable>
+
+| Pestaña | Qué permite |
+| --- | --- |
+| **Faltas** | Con **Seleccionar**, elegir el **Tipo de Falta** y la **Falta** del manual. La institución define cuántas faltas admite cada anotación. **Eliminar** quita las faltas marcadas. |
+| **Vincular Estudiantes** | Elegir un **Grupo**, la opción **Solo estudiantes** o **Todo el grupo**, el **Tipo de vinculación** y los estudiantes, y hacer clic en **Agregar**. |
+| **Comentarios** | Escribir un **Comentario**, elegir en **Enviar a** los usuarios que lo reciben y hacer clic en **Comentar**. |
+
+</GuideDataTable>
+
+A la derecha, el panel **Archivo** sube documentos a la anotación con el botón de subir, y el panel **Estudiantes Vinculados** muestra los estudiantes agregados.
+
+En la parte superior, el aviso indica cuántos días faltan para que se inhabilite la edición. Si la institución no limita los días, dice «sin restricciones».
+
+#### 6. Compartir una anotación
+
+Solo quien creó la anotación puede compartirla.
+
+1. En la lista, haga clic en el ícono de compartir de la fila, o en **Compartir** dentro de **Editar Anotación**.
+2. Seleccione los usuarios.
+3. Marque **Permiso Editar** o **Permiso Comentar**, según lo que les quiera permitir.
+4. Haga clic en **Compartir**.
+
+Los usuarios ven la anotación en **Compartidas conmigo**. Sin **Permiso Editar** no ven las pestañas **Faltas** ni **Vincular Estudiantes** y no pueden guardar cambios ni subir archivos.
+
+#### 7. Descargar informes
+
+1. Ajuste los filtros **Sede**, **Grupo** y **Periodo**.
+2. Haga clic en **Informes** y elija el informe.
+
+<GuideImageTrigger src="/images/guides/docente-registro-anotaciones/informes-anotaciones.jpg" alt="Ventana de informes con Anotaciones por grupo, Lista de Anotaciones y Consolidado de Anotaciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Informe | Qué requiere |
+| --- | --- |
+| **Anotaciones por grupo** | Un periodo seleccionado. |
+| **Lista de Anotaciones** | Una sede, un grupo y un periodo seleccionados. |
+| **Consolidado de Anotaciones** | Un periodo seleccionado. |
+
+</GuideDataTable>
+
+Si falta un dato, SINAI muestra, por ejemplo, «Debe seleccionar  un periodo para descargar este informe».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Registro de anotaciones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué no puedo editar una anotación?"}>
+    Puede editarla quien la creó o un usuario con quien se compartió con **Permiso Editar**. Además, la institución puede fijar un límite de días después del registro; cuando se cumple, SINAI muestra «El limite de días para editar la anotación son N por tanto no se puede editar la anotación».
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Registro de anotaciones» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un grupo en Nueva Anotación?"}>
+    Si su institución limita el registro de anotaciones, solo aparecen los grupos que usted dirige o en los que tiene asignación académica, según la configuración. Para registrar en otro grupo, consulte al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Registro de anotaciones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"La lista aparece vacía aunque registré anotaciones. ¿Qué reviso?"}>
+    Revise la opción del panel **General** y los filtros. **Desde** y **Hasta** limitan por fecha de registro y **Periodo**, **Grupo** y **Estudiantes** reducen la lista. Después de cambiar un filtro, haga clic en **Buscar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Puedo eliminar una anotación que registró otro docente?"}>
+    No. SINAI muestra «Solo el usuario de creación puede eliminar la anotación».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo registro una anotación para varios estudiantes?"}>
+    Cree la anotación con el estudiante responsable y, en **Editar Anotación**, use la pestaña **Vincular Estudiantes** para agregar a los demás o a todo el grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Dónde veo todas las anotaciones de un estudiante?"}>
+    En la fila de cualquiera de sus anotaciones, haga clic en el botón azul **Lista de anotaciones de un estudiante**, o use **Estudiantes Vinculados** en el panel **General**.
   </GuideFAQItem>
 </GuideFAQ>

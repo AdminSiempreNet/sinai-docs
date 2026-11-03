@@ -1,118 +1,138 @@
 ---
 title: "Mi asignación"
-description: "Consulte y gestione su asignación académica desde el módulo docente de SINAI."
+description: "Consulte su asignación académica por calendario y, si la institución lo habilita, agregue, ajuste o elimine asignaturas."
 guide: true
 wordpressId: 29932
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/mi-asignacion/"
-lastModified: "2026-09-07"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-## Mi asignación
-
-La opción **Mi asignación** permite al docente consultar la asignación académica que tiene configurada para un calendario determinado.
-
-Desde esta funcionalidad, el docente puede visualizar las asignaturas, grupos, intensidad horaria y demás información relacionada con su carga académica.
-
-<GuideCallout>
-  <strong>Importante:</strong> Dependiendo de la configuración y los permisos establecidos desde el Módulo Administrativo, el docente también podrá agregar, modificar o eliminar asignaciones académicas.
-</GuideCallout>
-
-Ruta de acceso: **Menú General → Mi asignación**. También es posible acceder directamente desde el menú **Inicio**.
-
-## Tutorial
+## Video tutorial
 
 <GuideVideos compact>
-  <YouTube
-    id="DXx4g5awstU"
-    title="Mi asignación"
-    odyseeUrl="https://odysee.com/asignaci%C3%B3n-acad%C3%A9mica-del-docente%3A4ff1512d87e3d8f315efc27a85360efb3e022561"
-  />
+<YouTube id="DXx4g5awstU" title="Mi asignación" odyseeUrl="https://odysee.com/asignaci%C3%B3n-acad%C3%A9mica-del-docente%3A4ff1512d87e3d8f315efc27a85360efb3e022561" />
 </GuideVideos>
 
-## Consultar la asignación académica
+## Guía paso a paso
 
-Por defecto, SINAI mostrará el calendario actual. Para consultar la asignación académica de otro calendario:
+### 1. ¿Qué es Mi asignación?
 
-1. Ubique la opción de selección de **Calendario**.
-2. Seleccione el calendario que desea consultar.
-3. Espere a que el sistema actualice la información.
+**Mi asignación** muestra la pantalla **Asignación académica por docente**: las asignaturas y los grupos que usted tiene asignados en un calendario, con su peso y sus horas. Desde aquí también puede agregar, ajustar o eliminar asignaciones, siempre que la institución tenga habilitada esa opción para los docentes.
 
-<GuideCallout>
-  La información mostrada corresponderá al calendario seleccionado.
-</GuideCallout>
+Ingrese a **General → Mi asignación**. La opción también aparece en el menú **Inicio**.
 
-### Consultar las asignaturas asignadas
+<GuideImageTrigger src="/images/guides/docente-mi-asignacion/pantalla-mi-asignacion.jpg" alt="Menú General con Mi asignación activo y la pantalla Asignación académica por docente con la lista de asignaturas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Debajo del nombre del docente se mostrarán las asignaturas que tiene asignadas. Para cada asignatura podrá visualizar:
+El botón azul de la parte superior derecha abre esta guía.
 
-- Código interno de la asignatura.
-- Sistema de evaluación asignado.
-- Grupo en el que está configurada.
-- Peso porcentual de la asignatura.
-- Horas semanales o intensidad horaria semanal.
-- Horas anuales o totales correspondientes a la asignatura.
+#### 2. Consultar la asignación
 
-### Peso porcentual
+En la parte superior seleccione:
 
-El peso porcentual depende de la configuración de promoción de la institución:
+<GuideDataTable>
 
-- **Promoción por asignatura:** la asignatura tendrá un peso del 100 %.
-- **Promoción por área:** el porcentaje se distribuirá entre las asignaturas que conforman el área.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Calendario** | Calendarios de la institución, del más reciente al más antiguo. Al abrir la pantalla queda seleccionado el calendario del año en curso; si no existe, el más reciente. |
+| **Docente** | Su nombre. Si tiene más de un registro como funcionario en la institución, aparece uno por cada registro. |
 
-<GuideCallout>
-  <strong>Importante:</strong> El peso porcentual influye en el cálculo de las valoraciones académicas. Verifíquelo cuidadosamente antes de realizar cualquier modificación.
-</GuideCallout>
+</GuideDataTable>
 
-## Agregar una asignación académica
+La tabla muestra una fila por cada asignatura y grupo:
 
-El botón **Agregar asignación** permite registrar una nueva asignación académica. Esta opción solo estará disponible si se habilitó desde el Módulo Administrativo.
+<GuideDataTable>
 
-1. Ingrese a **Mi asignación**.
-2. Haga clic en **Agregar asignación**.
-3. El sistema mostrará un cuadro de diálogo.
-4. Seleccione y diligencie la información solicitada.
-5. Verifique los datos registrados.
-6. Haga clic en **Asignar** para confirmar.
+| Columna | Qué muestra |
+| --- | --- |
+| **Asignatura** | Nombre de la asignatura seguido de su código. Al pasar el puntero sobre el nombre se ve el área. La casilla de la izquierda sirve para elegir filas que va a eliminar. |
+| **Sistema de Evaluación** | Sistema de evaluación del grupo. |
+| **Grupo** | Código del grupo. |
+| **Peso %** | Peso de la asignatura. Acepta valores de 0 a 100. |
+| **Horas semanales** | Intensidad horaria semanal. |
+| **Horas totales** | Horas del año para esa asignatura y grupo. |
 
-Una vez realizada, la asignación quedará disponible en el listado correspondiente al docente.
+</GuideDataTable>
 
 <GuideCallout>
-  Si el botón <strong>Agregar asignación</strong> no aparece o no está disponible, verifique la configuración y los permisos establecidos desde el Módulo Administrativo.
+  La pantalla siempre muestra los botones **Agregar asignación**, **Guardar cambios** y **Eliminar**. El permiso se revisa al registrar el cambio: si la institución no lo habilitó, o si está fuera de las fechas permitidas, SINAI muestra un mensaje y no guarda nada.
 </GuideCallout>
 
-## Modificar una asignación académica
+#### 3. Agregar una asignación
 
-El docente podrá modificar algunos valores de una asignación cuando tenga habilitados los permisos correspondientes, como el peso porcentual y las horas semanales o intensidad horaria.
+1. Haga clic en **Agregar asignación**. Debajo de los botones se abre el panel **Agregar asignación**. El mismo botón lo oculta.
+2. Seleccione la **Sede** y la **Jornada**. La lista **Grupo** muestra los grupos de esa sede y jornada en el calendario elegido.
+3. Seleccione el **Grupo** y la **Asignatura**.
+4. Revise **Horas semanales**, **# de semanas** y **Peso**. SINAI los propone según la configuración de la asignatura para el nivel del grupo, y usted puede cambiarlos.
+5. Haga clic en **Asignar**.
 
-1. Seleccione la asignatura que desea modificar.
-2. Realice los cambios necesarios en los campos habilitados.
-3. Verifique que la información sea correcta.
-4. Haga clic en **Guardar**.
+<GuideImageTrigger src="/images/guides/docente-mi-asignacion/agregar-asignacion.jpg" alt="Panel Agregar asignación con sede, jornada, grupo, asignatura, horas semanales, número de semanas y peso">
+  Ver ejemplo
+</GuideImageTrigger>
 
-El sistema almacenará los cambios realizados.
+<GuideDataTable>
 
-## Eliminar una asignación académica
+| Campo | Qué define |
+| --- | --- |
+| **Horas semanales** | Intensidad horaria semanal. Es obligatorio. |
+| **# de semanas** | Semanas del año. Es obligatorio. SINAI calcula las **Horas totales** multiplicando las horas semanales por este número. |
+| **Peso** | Peso porcentual de la asignatura. Es obligatorio. |
 
-Si necesita retirar una asignatura de su asignación académica:
+</GuideDataTable>
 
-1. Seleccione la asignatura que desea retirar.
-2. Haga clic en **Eliminar**.
-3. Confirme la acción si el sistema solicita confirmación.
+Si todo está bien, SINAI muestra «Asignación realizada correctamente» y la nueva fila aparece en la tabla.
 
-La asignatura seleccionada será retirada de la asignación académica del docente.
+- Si el grupo ya tiene esa asignatura asignada a cualquier docente, SINAI muestra «El grupo y asignatura seleccionados ya se encuentran asignados al docente» seguido del nombre del docente, y no agrega nada.
+- Si falta el grupo o la asignatura, SINAI muestra «Debe seleccionar el grupo» o «Debe seleccionar la asignatura».
+
+#### 4. Ajustar el peso y las horas
+
+1. En la tabla, cambie **Peso %** u **Horas semanales** en las filas que necesite.
+2. Haga clic en **Guardar cambios**.
+
+SINAI guarda todas las filas y muestra «Asignación guardada correctamente». Las **Horas totales** se recalculan con 40 semanas.
+
+- **Peso %** solo acepta valores entre 0 y 100. Si escribe otro valor, aparece «0 - 100» junto al campo.
+- Ningún campo puede quedar vacío.
+
+#### 5. Eliminar asignaciones
+
+1. Marque la casilla de cada fila que desea eliminar.
+2. Haga clic en **Eliminar**. Se abre el panel **Confirmar eliminación** con el mensaje *¿Confirma que desea eliminar los registros seleccionados?*
+3. Haga clic en **Confirmar**.
+
+<GuideImageTrigger src="/images/guides/docente-mi-asignacion/eliminar-asignacion.jpg" alt="Panel Confirmar eliminación con una asignación marcada en la tabla">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI elimina las filas marcadas y muestra «Asignación guardada correctamente». La **X** del panel lo cierra sin eliminar.
+
+<GuideCallout type="warning">
+  Esta acción no se puede revertir. Sin la asignación, usted deja de ver la planilla de calificaciones de ese grupo y asignatura, y algunos informes no podrán mostrarse correctamente.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Por qué no puedo agregar una asignación académica?"}>
-    La opción depende de la configuración y los permisos habilitados desde el Módulo Administrativo.
+  <GuideFAQItem index="01" question={"¿Por qué aparece «La modificación de la asignación académica por parte del docente está deshabilitada en esta institución educativa»?"}>
+    La institución no habilitó que los docentes modifiquen su asignación en el calendario seleccionado. Puede consultar la asignación, pero para agregar, ajustar o eliminar debe solicitarlo al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo consulto la asignación de otro calendario?"}>
-    Seleccione el calendario deseado en la opción de Calendario y espere a que SINAI actualice la información.
+  <GuideFAQItem index="02" question={"Aparece «El periodo para realizar el registor de y ajustes en la asignación académica es entre el…». ¿Qué significa?"}>
+    La institución habilitó los cambios solo entre dos fechas, que el mensaje indica, y la fecha actual está fuera de ese rango. Haga los ajustes dentro de esas fechas o solicítelos al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué información puedo consultar de cada asignatura?"}>
-    Puede consultar el código interno, sistema de evaluación, grupo, peso porcentual, intensidad horaria semanal y horas anuales o totales.
+  <GuideFAQItem index="03" question={"¿Cómo consulto la asignación de otro año?"}>
+    Seleccione el año en la lista **Calendario**. La tabla se actualiza con la asignación de ese calendario.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No puedo asignarme un grupo y una asignatura. ¿Por qué?"}>
+    Si aparece «El grupo y asignatura seleccionados ya se encuentran asignados al docente…», ese grupo ya tiene la asignatura asignada a otro docente o a usted. Esta pantalla no agrega una asignación que ya tiene docente; si debe cambiar de docente, solicítelo al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo se calculan las horas totales?"}>
+    Al agregar, SINAI multiplica las **Horas semanales** por el **# de semanas**. Al hacer clic en **Guardar cambios**, las recalcula multiplicando las horas semanales por 40.
   </GuideFAQItem>
 </GuideFAQ>

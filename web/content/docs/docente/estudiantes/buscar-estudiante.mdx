@@ -1,76 +1,99 @@
 ---
 title: "Buscar Estudiantes"
-description: "Localice estudiantes por nombre, apellido o documento y consulte su hoja de matrícula."
+description: "Localice un estudiante de la institución por nombre, documento o código y abra su ficha."
 guide: true
 wordpressId: 34876
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/buscar-estudiante/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
 <YouTube id="XHOmBV4js_E" title="Buscar Estudiantes" />
 </GuideVideos>
 
-## Buscar Estudiantes
+## Guía paso a paso
 
-**Buscar Estudiantes** permite localizar rápidamente a un estudiante matriculado por **nombre**, **apellido** o **documento de identidad**, y consultar su información académica y de matrícula.
+### 1. ¿Qué es Buscar Estudiantes?
 
-Antes de buscar, verifique que los datos ingresados estén correctos para obtener resultados precisos.
+**Buscar Estudiantes** localiza a cualquier estudiante matriculado en la institución en el calendario seleccionado, no solo a los de sus grupos. Busca por nombre, apellido, número de documento o código del estudiante (IdEstudiante), y desde el resultado abre la ficha del estudiante.
 
-## Paso a paso
+Puede ingresar de dos formas:
 
-### Ingresar a Buscar Estudiantes
+- Escriba en el cuadro **Buscar estudiante...** de la barra superior y pulse Enter o haga clic en la lupa. SINAI abre la pantalla de resultados con lo que escribió.
+- Ingrese a **Inicio → Buscar Estudiantes**.
 
-Desde el módulo del docente puede acceder de dos formas:
+<GuideImageTrigger src="/images/guides/docente-buscar-estudiante/acceso-buscar.jpg" alt="Barra superior con el cuadro Buscar estudiante y el submenú Inicio con la opción Buscar Estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- Con la opción **Buscar Estudiantes** en la parte superior de la plataforma.
-- Por la ruta **Inicio → Buscar Estudiantes**.
+#### 2. Buscar al estudiante
 
-<GuideImageTrigger src="/images/guides/buscar-estudiante/acceso-buscar-estudiantes.png" alt="Acceso a Buscar Estudiantes desde el módulo docente">Referencia visual</GuideImageTrigger>
+1. En **Resultado de la Búsqueda**, escriba en el cuadro **Nombre o documento del estudiante** una parte del nombre, del apellido, del documento o del código.
+2. Haga clic en **Buscar** o pulse Enter.
 
-### Realizar la búsqueda
+<GuideImageTrigger src="/images/guides/docente-buscar-estudiante/resultados-busqueda.jpg" alt="Pantalla Resultado de la Búsqueda con tres estudiantes encontrados">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Ingrese el nombre, apellido o número de documento del estudiante.
-2. Haga clic en el icono de la lupa.
-3. Revise los estudiantes que coincidan con la búsqueda.
+SINAI busca el texto en cualquier parte del nombre completo, del documento y del código. Por ejemplo, **ALVAREZ** encuentra a todos los estudiantes que tienen ese apellido.
 
-Si busca solo por un nombre común (por ejemplo, “Carlos”), pueden aparecer varios resultados: confirme apellidos y documento.
+- La lista muestra los estudiantes del calendario que está seleccionado en la parte superior, en cualquier estado de matrícula.
+- Muestra 25 estudiantes por página. Use los números de la parte inferior para pasar de página.
+- Haga clic en el título de una columna para ordenar la lista por esa columna.
+- Si no hay coincidencias, SINAI muestra «No se encontró ningún resultado. Intente nuevamente con otros datos».
 
-<GuideImageRow>
-<GuideImageTrigger src="/images/guides/buscar-estudiante/step-01.png" alt="Campo de búsqueda de estudiantes">Referencia visual</GuideImageTrigger>
-<GuideImageTrigger src="/images/guides/buscar-estudiante/step-02.png" alt="Resultados de la búsqueda de estudiantes">Referencia visual</GuideImageTrigger>
-</GuideImageRow>
+<GuideDataTable>
 
-### Consultar la información del estudiante
+| Columna | Qué muestra |
+| --- | --- |
+| **Estudiante** | Foto, apellidos y nombres. El nombre abre la ficha del estudiante. |
+| **Identificacion** | Tipo y número de documento. |
+| **Sede**, **Jornada**, **Nivel**, **Modelo** | Ubicación del grupo en el que está matriculado. |
+| **Grado** y **Grupo** | Grado y grupo de la matrícula en el calendario seleccionado. |
+| **Estado** | Estado de la matrícula, por ejemplo **MATRICULADO**. |
 
-En los resultados podrá ver, entre otros datos:
+</GuideDataTable>
 
-- Nombre completo
-- Tipo y número de documento
-- Sede, jornada, nivel y modelo
-- Grado y grupo
-- Estado
+#### 3. Abrir la ficha del estudiante
 
-<GuideImageTrigger src="/images/guides/buscar-estudiante/step-03.png" alt="Datos del estudiante en los resultados de búsqueda">Referencia visual</GuideImageTrigger>
+Haga clic en el **nombre** del estudiante. SINAI abre su ficha con los datos de matrícula en la parte superior y las pestañas **Información Básica**, **Caracterización**, **Información Familiar**, **Matrícula**, **Historial de Novedades**, **Imprimir Folio** y **Anotaciones**.
 
-### Consultar la hoja de matrícula
+<GuideImageTrigger src="/images/guides/docente-buscar-estudiante/ficha-estudiante.jpg" alt="Ficha del estudiante con el número de matrícula, el libro, el folio y las pestañas de información">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Haga clic sobre el **nombre** del estudiante.
-2. Revise la hoja de matrícula: datos básicos, caracterización, información familiar, matrícula, novedades, folio imprimible y anotaciones.
+- **Imprimir Folio** muestra el folio de matrícula del estudiante en la pestaña del mismo nombre.
+- **Volver a la lista** lleva a **Lista por Grupos**, no a los resultados de la búsqueda. Para volver a ellos, use **Inicio → Buscar Estudiantes**: el cuadro conserva el último texto buscado.
 
-<GuideImageTrigger src="/images/guides/buscar-estudiante/step-04.png" alt="Hoja de matrícula del estudiante seleccionado">Referencia visual</GuideImageTrigger>
+Es la misma ficha que se abre desde [Listas por grupo](/docs/docente/estudiantes/listas-por-grupo).
+
+<GuideCallout>
+  Los botones para guardar cambios en la ficha solo se habilitan si la institución autorizó a los docentes. Sin esa autorización, puede consultar la ficha, pero no modificarla.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo encuentro a un estudiante por cédula o nombre?">
-    Use **Buscar Estudiantes** (barra superior o **Inicio → Buscar Estudiantes**), digite documento, nombre o apellido y pulse la lupa.
+  <GuideFAQItem index="01" question={"¿Puedo buscar estudiantes que no están en mis grupos?"}>
+    Sí. La búsqueda incluye a todos los estudiantes matriculados en la institución en el calendario seleccionado, sin importar si usted les dicta clase.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Qué hago si aparecen varios estudiantes con el mismo nombre?">
-    Compare apellidos, documento, sede, grado y grupo en la lista de resultados antes de abrir el registro.
+
+  <GuideFAQItem index="02" question={"Aparece «No se encontró ningún resultado. Intente nuevamente con otros datos». ¿Qué reviso?"}>
+    Escriba solo una parte del nombre, un apellido o el número de documento tal como está registrado. Verifique también el calendario de la parte superior: la búsqueda solo muestra las matrículas de ese calendario.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Dónde veo la matrícula completa del estudiante?">
-    Haga clic en el nombre del estudiante en los resultados para abrir su hoja de matrícula.
+
+  <GuideFAQItem index="03" question={"Aparecen varios estudiantes con el mismo nombre. ¿Cómo sé cuál es?"}>
+    Compare el documento, la sede, el grado y el grupo en la lista antes de abrir la ficha.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No veo el cuadro Buscar estudiante en la barra superior."}>
+    El cuadro no se muestra en pantallas pequeñas, como celulares y tabletas. Use **Inicio → Buscar Estudiantes**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué no puedo guardar cambios en la ficha del estudiante?"}>
+    Los botones para guardar solo se habilitan cuando la institución autoriza a los docentes. Solicite la autorización o el cambio al área administrativa.
   </GuideFAQItem>
 </GuideFAQ>

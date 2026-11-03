@@ -1,70 +1,143 @@
 ---
 title: "Detallado Individual"
-description: "Consulte el detalle académico de cada estudiante hasta el periodo seleccionado en SINAI."
+description: "Consulte las valoraciones de un estudiante por asignaturas o por áreas, periodo a periodo, con la final, la definitiva y la requerida."
 guide: true
 wordpressId: 30087
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-detallado-individual/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
 <YouTube id="ECZXW77yIyM" title="Detallado individual" />
 </GuideVideos>
 
-## Detallado Individual
+## Guía paso a paso
 
-La opción **Detallado Individual** permite a los docentes consultar de manera detallada las calificaciones de cada estudiante y realizar un seguimiento de su desempeño académico hasta el periodo seleccionado.
+### 1. ¿Qué es Detallado Individual?
 
-Sirve cuando necesita **revisar el consolidado de un estudiante**, **conocer su nota final al corte** o **identificar el desempeño y la nota requerida** sin salir del módulo docente.
+**Detallado Individual** abre la pantalla **Valoración Individual**. Allí consulta las valoraciones de un estudiante en cada asignatura o área, periodo por periodo, hasta el periodo que seleccione, junto con la valoración final, la definitiva y la valoración requerida.
 
-> **Nota:** la información presentada corresponde a las calificaciones registradas y consolidadas en la plataforma hasta el periodo seleccionado.
+Es una pantalla de consulta: desde el módulo docente no se modifica ninguna valoración.
 
-**Ruta de acceso:** Evaluación → Calificaciones → Detallado Individual.
+Ingrese a **Evaluación → Detallados de notas → Detallado Individual**.
 
-## Paso a paso
+<GuideImageTrigger src="/images/guides/docente-detallado-individual/acceso-detallado.jpg" alt="Menú Evaluación con Detallados de notas desplegado y la opción Detallado Individual">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### Ingresar al Detallado Individual
+#### 2. Seleccionar el estudiante
 
-1. Ingrese al **Módulo del Docente**.
-2. Diríjase a **Evaluación → Calificaciones → Detallado Individual**.
-3. Seleccione el **periodo** que desea consultar.
-4. Seleccione el **estudiante** que desea consultar.
+Use las listas de la parte superior. Cada vez que cambia una, la tabla se actualiza.
 
-<GuideImageTrigger src="/images/guides/detallado-individual/acceso-detallado-individual.png" alt="Acceso a Detallado Individual desde Evaluación y Calificaciones">Referencia visual</GuideImageTrigger>
+<GuideDataTable>
 
-### Consultar el detalle académico
+| Lista | Qué muestra |
+| --- | --- |
+| **Calendario** | Calendarios en los que usted tiene asignación académica, del más reciente al más antiguo. Al abrir la pantalla queda seleccionado el calendario en el que está trabajando. |
+| **Grupo** | Grupos en los que usted tiene asignación académica en ese calendario. |
+| **Periodo** | Periodos del grupo. La tabla muestra las valoraciones hasta el periodo seleccionado. |
+| **Estudiante** | Todos los estudiantes matriculados en el grupo, con la inicial de su estado de matrícula al final, por ejemplo **- M**. |
 
-Una vez seleccionado el estudiante y el periodo, el sistema mostrará el detalle de su información académica.
+</GuideDataTable>
 
-<GuideImageTrigger src="/images/guides/detallado-individual/step-01.png" alt="Seleccionar periodo y estudiante en Detallado Individual">Referencia visual</GuideImageTrigger>
+La pantalla recuerda el grupo, el periodo y el estudiante que consultó por última vez.
 
-En esta consulta podrá visualizar:
+#### 3. Consultar por asignaturas
 
-- **Notas definitivas:** calificaciones obtenidas por el estudiante hasta el periodo seleccionado.
-- **Nota final:** resultado académico acumulado con corte al periodo consultado.
-- **Desempeño:** desempeño académico obtenido por el estudiante.
-- **Nota requerida:** calificación que el estudiante requiere, cuando esta información aplique.
+En **Valoración por Asignaturas o Áreas**, deje marcada la opción **Asignaturas**. La tabla muestra una fila por asignatura.
 
-La información se puede consultar **por áreas** o **por asignaturas**, según la forma en que necesite visualizar el detalle académico.
+<GuideImageTrigger src="/images/guides/docente-detallado-individual/pantalla-asignaturas.jpg" alt="Valoración Individual por asignaturas con las valoraciones de los cuatro periodos, Final, Ajuste, Definitiva, Requerida e Inasistencias">
+  Ver ejemplo
+</GuideImageTrigger>
 
-<GuideImageTrigger src="/images/guides/detallado-individual/step-02.png" alt="Detalle académico del estudiante con notas, desempeño y nota requerida">Referencia visual</GuideImageTrigger>
+<GuideDataTable>
 
-Esta funcionalidad permite al docente realizar un seguimiento individual del desempeño académico y conocer el estado de las calificaciones del estudiante durante el periodo seleccionado.
+| Columna | Qué muestra |
+| --- | --- |
+| **1°**, **2°**, **3°**, **4°** | Valoración de cada periodo, con su desempeño. Solo aparecen los periodos hasta el seleccionado. |
+| **Final** | Valoración final calculada por el sistema a partir de las valoraciones de los periodos. Tiene en cuenta la aproximación cuando aplica. |
+| **Ajuste** | Valoración asignada por ajuste a la valoración final. Modifica la valoración definitiva. |
+| **Definitiva** | Valoración definitiva del estudiante, con la que se determina la promoción. |
+| **Requerida** | Valoración mínima necesaria para que el desempeño definitivo sea por lo menos BASICO. Solo aparece cuando la valoración es cuantitativa. |
+| **Inasistencias** | Inasistencias del estudiante en la asignatura. |
+| **Recuperación** | Valoración obtenida en la recuperación final, cuando la institución la aplica. |
+| **Situación Académica** | Si la asignatura fue aprobada o reprobada. Si no aparece, es posible que no se haya procesado la promoción. |
+
+</GuideDataTable>
+
+Las valoraciones toman el color del desempeño según la escala de la institución.
+
+<GuideCallout>
+  Algunas columnas pueden no aparecer: la institución define cuáles ve el docente, entre ellas **Área**, **Final**, **Ajuste**, **Definitiva**, **Requerida**, **Inasistencias**, **Recuperación** y **Situación Académica**. Esa configuración la hace el área administrativa.
+</GuideCallout>
+
+#### 4. Consultar por áreas
+
+Marque la opción **Áreas**. La tabla muestra una fila por área, con estas columnas:
+
+- **1° Periodo** a **4° Periodo**, hasta el periodo seleccionado.
+- **Final**.
+- **Requerida**, solo con valoración cuantitativa.
+- **Inasistencias**: inasistencias totales del estudiante sumadas hasta el periodo seleccionado.
+
+<GuideImageTrigger src="/images/guides/docente-detallado-individual/vista-areas.jpg" alt="Valoración Individual por áreas con las valoraciones de cada periodo, Final, Requerida e Inasistencias">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La vista por áreas no tiene las columnas **Ajuste** ni **Definitiva**.
+
+#### 5. Resumen de desempeño relativo
+
+Debajo de la tabla puede aparecer **Resumen de Desempeño Relativo del Estudiante**, si la institución lo habilitó. Muestra una fila por periodo con:
+
+- **%**: peso del periodo.
+- **Promedio**, cuando la valoración es cuantitativa, y **Desempeño Promedio**.
+- El puesto del estudiante en el **Grupo** y, según la configuración, en el **Grado**, el **Nivel** y la **Institución**.
+- **Cierre del Periodo** y **Fecha de Cálculo** de los puestos, según la configuración.
+
+<GuideImageTrigger src="/images/guides/docente-detallado-individual/resumen-desempeno.jpg" alt="Tabla Resumen de Desempeño Relativo del Estudiante con peso, promedio, desempeño y puesto por periodo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 6. Consultar las convenciones
+
+Haga clic en el botón **i**, en la parte superior derecha. Se abre la ventana **Convenciones** con el significado de las columnas **Final**, **Ajuste**, **Definitiva**, **Recuperación** y **Requerida**.
+
+<GuideImageTrigger src="/images/guides/docente-detallado-individual/convenciones.jpg" alt="Ventana Convenciones con la descripción de las columnas de la valoración individual">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout>
+  Las valoraciones **Final** y **Definitiva** cambian según el periodo seleccionado. Solo al finalizar el calendario se pueden considerar definitivas.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo veo el detallado de notas de un estudiante?">
-    En el módulo docente vaya a **Evaluación → Calificaciones → Detallado Individual**, elija el periodo y el estudiante.
+  <GuideFAQItem index="01" question={"¿Cómo veo el detallado de notas de un estudiante?"}>
+    Vaya a **Evaluación → Detallados de notas → Detallado Individual**. Seleccione el **Calendario**, el **Grupo**, el **Periodo** y el **Estudiante**. Para ver todos los periodos, seleccione el último.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Qué información muestra el Detallado Individual?">
-    Muestra las notas definitivas hasta el periodo, la nota final al corte, el desempeño y la nota requerida cuando aplique.
+
+  <GuideFAQItem index="02" question={"¿Puedo modificar las valoraciones desde esta pantalla?"}>
+    No. **Detallado Individual** es solo de consulta. Las valoraciones se registran en las planillas de calificaciones del periodo.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Puedo ver el detalle por áreas o por asignaturas?">
-    Sí. Puede consultar la información por áreas o por asignaturas, según cómo necesite revisar el detalle académico.
+
+  <GuideFAQItem index="03" question={"¿Por qué no veo la columna Definitiva, Ajuste o Situación Académica?"}>
+    La institución define qué columnas ve el docente en esta pantalla. Además, **Requerida** solo aparece con valoración cuantitativa, y la vista por **Áreas** no tiene **Ajuste** ni **Definitiva**. Si necesita ver una columna oculta, consúltelo con el área administrativa.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Hasta qué momento llegan las calificaciones que veo?">
-    La consulta refleja las calificaciones registradas y consolidadas en SINAI hasta el periodo que seleccionó.
+
+  <GuideFAQItem index="04" question={"¿Por qué solo aparecen algunos periodos en la tabla?"}>
+    La tabla muestra los periodos hasta el que tiene seleccionado en **Periodo**. Por ejemplo, con el segundo periodo verá las columnas **1°** y **2°**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo consultar estudiantes de años anteriores?"}>
+    Sí. En **Calendario** aparecen los calendarios en los que usted tuvo asignación académica. Al cambiarlo, la lista **Grupo** muestra los grupos de su asignación en ese calendario.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué significa la valoración Requerida?"}>
+    Es la valoración mínima necesaria para que el desempeño definitivo del estudiante sea por lo menos BASICO. Consulte las demás definiciones con el botón **i**.
   </GuideFAQItem>
 </GuideFAQ>

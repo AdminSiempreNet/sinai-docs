@@ -1,77 +1,150 @@
 ---
 title: "Refuerzos"
-description: "Registre notas de refuerzo o recuperación y genere las actas correspondientes en SINAI."
+description: "Registre las notas de refuerzo o recuperación del periodo, consulte el método que aplica la institución y abra el acta de recuperación."
 guide: true
 wordpressId: 30277
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-refuerzos/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
 <YouTube id="KfAgqU_ahCw" title="Refuerzos" />
 </GuideVideos>
 
-## Registro de Refuerzos o Recuperaciones
+## Guía paso a paso
 
-La opción **Refuerzos** permite registrar las calificaciones obtenidas por los estudiantes que requieren recuperación o refuerzo académico.
+### 1. ¿Qué es Refuerzos?
 
-Está disponible en el **Módulo del Docente** y en el **Módulo Administrativo**. Permite consultar los estudiantes con desempeño bajo, registrar la nota de recuperación y obtener la calificación definitiva según la configuración de la institución.
+**Refuerzos** abre la pantalla **Registro de Recuperaciones o Refuerzos**. Allí registra la nota que obtuvo cada estudiante en el refuerzo o la recuperación de un periodo, en una asignatura. Al guardar, SINAI recalcula la nota definitiva del periodo según el método de recuperación de la institución.
 
-**Ruta de acceso:** Evaluación → Refuerzos.
+Ingrese a **Evaluación → Refuerzos**.
 
-## Paso a paso
+<GuideImageTrigger src="/images/guides/docente-refuerzos/acceso-refuerzos.jpg" alt="Menú Evaluación con la opción Refuerzos activa y la pantalla Registro de Recuperaciones o Refuerzos">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### Ingresar a Refuerzos
+<GuideCallout>
+  El nombre y la ubicación de la opción dependen de la configuración de su institución. Puede aparecer como **Recuperaciones**, **Nivelaciones** o **Plan de Mejora**. Si su institución registra las recuperaciones por actas, al ingresar SINAI lo lleva a la lista de actas.
+</GuideCallout>
 
-1. Ingrese al **Módulo del Docente**, según los permisos asignados.
-2. Diríjase al menú **Evaluación**.
-3. Seleccione la opción **Refuerzos**.
-4. Seleccione el **Grupo**.
-5. Seleccione el **Periodo**.
-6. Seleccione la **Asignatura**.
+El botón **Ayuda**, en la parte superior derecha, abre la guía de ayuda en otra pestaña.
 
-<GuideImageTrigger src="/images/guides/refuerzos/acceso-refuerzos.png" alt="Acceso a Refuerzos desde el menú Evaluación">Referencia visual</GuideImageTrigger>
+#### 2. Seleccionar el grupo, el periodo y la asignatura
 
-### Registrar la nota de refuerzo
+<GuideDataTable>
 
-1. Ubique al estudiante en la lista.
-2. Registre en la casilla correspondiente la nota obtenida en el refuerzo o recuperación.
-3. Verifique que la calificación ingresada sea correcta.
-4. Haga clic en **Guardar**.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | Su nombre. Desde el módulo docente no se puede cambiar. |
+| **Grupo** | Grupos en los que usted tiene asignación académica en el calendario actual. |
+| **Periodo** | Periodos del grupo. Al abrir la pantalla, SINAI selecciona el periodo habilitado para recuperaciones. |
+| **Asignatura** | Asignaturas que usted dicta en el grupo. No incluye la de comportamiento. |
 
-<GuideImageTrigger src="/images/guides/refuerzos/step-01.png" alt="Lista de estudiantes para refuerzo o recuperación">Referencia visual</GuideImageTrigger>
+</GuideDataTable>
 
-Una vez registrada la nota, SINAI calculará automáticamente la **nota definitiva**, de acuerdo con el método de recuperación establecido por la institución.
+Las recuperaciones se registran cuando el periodo ya está cerrado y dentro de la fecha límite que fija la institución. Fuera de ese plazo, SINAI muestra «No se pueden registrar recuperaciones porque el periodo está abierto o la fecha límite para el registro de recuperaciones ya caducó.» y no permite generar la planilla ni guardar.
 
-<GuideImageTrigger src="/images/guides/refuerzos/step-02.png" alt="Registrar nota de refuerzo y guardar en SINAI">Referencia visual</GuideImageTrigger>
+#### 3. Revisar la planilla
 
-### Generar las actas de recuperación
+La tabla tiene tres bloques:
 
-Después de registrar las notas de recuperación, puede generar las actas de recuperación o refuerzo correspondientes.
+- **Estudiante:** casilla de selección (**#**), **Foto** y **Nombre Completo**, con el número de identificación debajo del nombre.
+- **Recuperación del Periodo:** **Final Periodo**, con la nota y el desempeño del periodo; **Recuperación**, donde registra la nota; y **Defintiva**, con la nota y el desempeño definitivos.
+- **Desempeño Acumulado del Año:** una columna por periodo hasta el seleccionado, con su peso en porcentaje; **Final Acumulada** y **Minima Requerida**.
 
-1. Ingrese a la opción de **Actas** dentro del proceso de recuperación.
-2. Seleccione los criterios solicitados, como grupo, periodo y asignatura, según corresponda.
-3. Genere el acta de recuperación.
-4. Revise la información presentada en el documento.
-5. Verifique que los estudiantes, calificaciones y resultados sean correctos.
-6. Descargue o genere el acta para su respectivo trámite institucional.
+Según la configuración de la institución, la planilla muestra solo a los estudiantes que deben recuperar, porque su nota final del periodo está por debajo de la nota de recuperación o no tienen nota, o a todos los estudiantes de la asignatura.
 
-<GuideImageTrigger src="/images/guides/refuerzos/step-03.png" alt="Generar actas de recuperación o refuerzo">Referencia visual</GuideImageTrigger>
+Si la planilla aparece vacía, haga clic en **Generar planilla**. SINAI muestra «planilla generada correctamente». Si la generación no se completa, el aviso empieza por «La generacion falló».
+
+#### 4. Registrar las notas de recuperación
+
+1. En la columna **Recuperación**, escriba la nota de cada estudiante. Solo se admiten números, punto y coma.
+2. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/docente-refuerzos/planilla-refuerzos.jpg" alt="Planilla de refuerzos con los estudiantes que recuperan y una nota de ejemplo en la columna Recuperación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI guarda las notas, recalcula la definitiva de cada estudiante según el método de recuperación y muestra «Recuperaciones guardadas correctamente.». Si algo falla, muestra «Se han presentado algunos errores.».
+
+Si escribe una nota mayor que la nota máxima de recuperación que fijó la institución, SINAI guarda la nota máxima.
+
+Si su institución registra la recuperación con desempeños en vez de notas, la casilla **Recuperación** no se edita. En ese caso:
+
+1. Marque la casilla **#** de los estudiantes.
+2. En la lista junto al botón **Valorar**, elija el desempeño.
+3. Haga clic en **Valorar**.
+
+#### 5. Consultar el método de recuperación
+
+Haga clic en **Método**. Se abre la ventana **Metodo para la recuperación del periodo** con el método que la institución configuró. El botón **Cerrar** la cierra.
+
+<GuideImageTrigger src="/images/guides/docente-refuerzos/metodo-recuperacion.jpg" alt="Ventana Metodo para la recuperación del periodo con el método La mas alta">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Método | Qué hace con la nota definitiva |
+| --- | --- |
+| **No aplica** | La recuperación no afecta la definitiva. |
+| **Promedio** | La definitiva es el promedio entre la nota final y la recuperación. |
+| **Reemplazo** | La recuperación reemplaza la definitiva, aunque sea menor, igual o mayor. |
+| **La mas alta** | La recuperación reemplaza la definitiva solo si es mayor. |
+
+</GuideDataTable>
+
+#### 6. Abrir el acta de recuperación
+
+1. Seleccione el grupo, el periodo y la asignatura.
+2. Haga clic en **Acta**.
+
+Si el periodo está dentro del plazo de recuperaciones, SINAI primero guarda las notas de la planilla, como lo hace **Guardar**. Luego crea el acta, si aún no existe, agrega a los estudiantes que recuperan y abre la pantalla **Acta de Recuperación**.
+
+<GuideImagePending>
+  Docente/Evaluacion/ActaRecuperacionPeriodo.aspx, pantalla Acta de Recuperación con los datos del acta y la lista de estudiantes. Archivo: acta-recuperacion.jpg
+</GuideImagePending>
+
+En el acta:
+
+- La parte superior muestra **Acta No.**, **Grupo**, **Periodo**, **Asignatura**, **Funcionario** y los campos **Fecha** y **Observación General**, que puede modificar.
+- La tabla muestra a cada estudiante con **Final Periodo**, **Recuperacion** y un cuadro **Observacion**.
+- **Guardar Cambios** guarda la fecha, la observación general y las observaciones de los estudiantes. SINAI muestra cuántos registros guardó, por ejemplo «3/3 registros guardados correctamente.».
+- **Eliminar Seleccionados** quita del acta a los estudiantes marcados, después de confirmar el mensaje *¿Confirma que desea eliminar de este acta los estudiantes seleccionados? No se eliminarán estudiantes con nota de recuperación registrada*.
+- **Descargar Informe** abre la vista previa del acta en PDF.
+- La **X** de la parte superior cierra el acta y vuelve a **Refuerzos**.
+
+<GuideCallout type="warning">
+  **Acta** guarda las notas de la planilla antes de abrir el acta. Revise las notas antes de hacer clic.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo registro una nota de refuerzo o recuperación?">
-    Vaya a **Evaluación → Refuerzos**, elija grupo, periodo y asignatura, ubique al estudiante, registre la nota y haga clic en **Guardar**.
+  <GuideFAQItem index="01" question={"Aparece «No se pueden registrar recuperaciones porque el periodo está abierto o la fecha límite para el registro de recuperaciones ya caducó.». ¿Qué hago?"}>
+    Las recuperaciones solo se registran con el periodo cerrado y antes de la fecha límite que fija la institución. Si el periodo sigue abierto, espere a que se cierre. Si el plazo ya venció, solicite al área administrativa que lo habilite.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Quién calcula la nota definitiva después del refuerzo?">
-    SINAI la calcula automáticamente según el método de recuperación configurado por la institución.
+
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un estudiante en la planilla?"}>
+    Según la configuración de la institución, la planilla puede mostrar solo a los estudiantes que deben recuperar. Un estudiante con la nota final del periodo aprobada no aparece. Si la planilla está vacía, haga clic en **Generar planilla**.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Puedo usar Refuerzos desde el módulo administrativo?">
-    Sí. La funcionalidad está disponible tanto en el módulo docente como en el administrativo, según los permisos asignados.
+
+  <GuideFAQItem index="03" question={"Registré una nota y quedó otra. ¿Por qué?"}>
+    Si la nota supera la nota máxima de recuperación que fijó la institución, SINAI guarda la nota máxima. La definitiva depende además del método de recuperación; haga clic en **Método** para consultarlo.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Cómo genero el acta de recuperación?">
-    Después de guardar las notas, ingrese a **Actas**, seleccione los filtros correspondientes, genere el documento, revíselo y descárguelo para el trámite institucional.
+
+  <GuideFAQItem index="04" question={"¿Cómo se calcula la nota definitiva?"}>
+    Con el método que configuró la institución: **No aplica**, **Promedio**, **Reemplazo** o **La mas alta**. Haga clic en **Método** para ver cuál aplica.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Al hacer clic en Acta aparece «Existe mas de un acta, no se puede modificar». ¿Qué pasa?"}>
+    Hay más de un acta para el mismo grupo, periodo y asignatura. Solicite al área administrativa que revise las actas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"No puedo guardar el acta. ¿Por qué?"}>
+    Si aparece «No se pueden modificar el acta recuperaciones porque el periodo está abierto o la fecha límite para el registro de recuperaciones ya caducó.», el periodo está fuera del plazo de recuperaciones. Solicite al área administrativa que lo habilite.
   </GuideFAQItem>
 </GuideFAQ>
