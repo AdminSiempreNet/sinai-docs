@@ -1,11 +1,13 @@
 ---
 title: "Detallado individual de estudiantes"
-description: "Consulte el detalle individual de valoraciones y desempeño de un estudiante en SINAI."
+description: "Consulte las inasistencias de un estudiante registradas por fecha, con la asignatura, las faltas, la justificación y la observación."
 guide: true
 wordpressId: 29530
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/detallado-individual-estudiantes/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,25 +16,63 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Abra **Evaluación > Detallado individual** y seleccione la sede, calendario, grupo, período y estudiante. Elija la vista por **Asignaturas** o **Áreas** para consultar la valoración correspondiente.
+### 1. ¿Qué es el Detallado individual de estudiantes?
 
-La pantalla muestra el resumen de desempeño relativo, el porcentaje del período, promedio, desempeño promedio, promedio del grupo, cierre y fecha de cálculo. Use esta consulta para validar la información antes de consolidar o cerrar el período. <GuideImageTrigger src={"/images/guides/detallado-individual-estudiantes/valoracion-individual.png"} alt={"Consulta detallada individual de valoraciones en SINAI"}>Ver ejemplo</GuideImageTrigger>
+El **Detallado individual de estudiantes** muestra, una por una, las inasistencias de un estudiante registradas por fecha en el grupo: el periodo, la fecha, la asignatura, el número de faltas, si está justificada y la observación. Es una consulta: en esta pantalla no se registran ni se modifican faltas.
 
+Ingrese a **Seguimiento → Inasistencias → Detallado Individual Estudiantes**.
 
+<GuideImageTrigger src="/images/guides/inasistencias-detallado-individual/acceso-detallado-individual.jpg" alt="Menú Seguimiento con el submenú Inasistencias desplegado y la opción Detallado Individual Estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
 
+#### 2. Consultar las inasistencias de un estudiante
+
+En el panel **Consulta de Inasistencias**:
+
+1. En **Sede**, seleccione la sede.
+2. En **Grupo**, seleccione el grupo.
+3. En **Estudiante**, haga clic en el nombre del estudiante.
+
+Junto a cada nombre, entre paréntesis, aparece el total de faltas registradas por fecha para ese estudiante en el grupo. Así puede ubicar rápido a quienes tienen inasistencias: **(0)** indica que no tiene ninguna.
+
+<GuideImagePending>
+  EvalProm/Seguimiento/Inasistencias/InasistenciasDetalladas.aspx, un estudiante con faltas seleccionado y la tabla Inasistencias Acumuladas del Estudiante. Archivo: detallado-individual.jpg
+</GuideImagePending>
+
+A la derecha, **Inasistencias Acumuladas del Estudiante** muestra una fila por cada registro, del periodo y la fecha más recientes a los más antiguos:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Periodo** | Periodo en que se registró la inasistencia. |
+| **Fecha** | Día de la inasistencia. |
+| **Asignatura** | Asignatura en la que faltó. |
+| **Faltas** | Número de faltas registradas ese día en la asignatura. |
+| **Justificada** | Casilla marcada si la inasistencia quedó justificada. |
+| **Observación** | Observación escrita al registrar la inasistencia. |
+
+</GuideDataTable>
+
+Puede ordenar la tabla haciendo clic en el título de una columna.
+
+#### 3. Informe para imprimir
+
+Para una versión en PDF, ingrese a **Seguimiento → Informes** y busque **70 - Detallado de Inasistencias por Estudiantes**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Detallado individual de estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"El estudiante aparece con (0) aunque sé que tiene faltas. ¿Por qué?"}>
+    El número entre paréntesis y la tabla cuentan solo las inasistencias registradas por fecha en el grupo seleccionado, como las del registro detallado o por día de los docentes. El [Registro consolidado de inasistencias](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/inasistencias) guarda un total por periodo, sin fecha; consulte esos totales en el [Consolidado individual de inasistencias](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/inasistencias-individual).
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Detallado individual de estudiantes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Puedo justificar o eliminar una inasistencia desde aquí?"}>
+    No. Esta pantalla solo consulta. Las inasistencias por fecha se registran y corrigen desde el módulo docente.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Detallado individual de estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"No encuentro al estudiante. ¿Qué reviso?"}>
+    La lista muestra los estudiantes matriculados en el grupo seleccionado del calendario que está arriba. Revise la sede, el grupo y el año del calendario.
   </GuideFAQItem>
 </GuideFAQ>

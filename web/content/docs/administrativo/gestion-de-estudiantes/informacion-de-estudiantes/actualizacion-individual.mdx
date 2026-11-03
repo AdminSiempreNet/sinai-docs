@@ -1,40 +1,118 @@
 ---
 title: "Ajuste individual de matrícula"
-description: "Conozca las opciones de ajuste individual de matrícula y siga el procedimiento correspondiente en SINAI."
+description: "Cambie el estado de matrícula de un estudiante en el calendario actual: retiro, traslado, deserción, graduación o eliminación de la matrícula."
 guide: true
 wordpressId: 29400
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/ajuste-individual-de-matricula/"
-lastModified: "2023-11-14 19:19:24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="_UZvfSmAKSM" title="Ajuste individual de matrícula"
-  odyseeUrl="https://odysee.com/ajuste-individual-de-matr%C3%ADcula%3Aa5f99f2aaec30cdbe79451001899070bb8e07d5d"
-/>
+<YouTube id="_UZvfSmAKSM" title="Ajuste individual de matrícula" odyseeUrl="https://odysee.com/ajuste-individual-de-matr%C3%ADcula%3Aa5f99f2aaec30cdbe79451001899070bb8e07d5d" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Es importante verificar que solo estén en estado matriculado los estudiantes activos, algunas instituciones educativas al finalizar el calendario escolar terminan matriculados más estudiantes de los que realmente están en la institución, quizás porque en el transcurso del año se han retirado de la institución o han sido desertores del sistema educativo y no se registró el ajuste del estado de los estudiantes en la plataforma. SINAI tiene entre sus opciones, un formulario para el registro de novedades en el calendario actual, a este se puede ingresar a través del menú principal “Matrícula”, en el submenú “Ajustes de Matrícula”, opción “Ajuste individual de Matrícula”. <GuideImageTrigger src={"/images/wordpress/2023/11/Ajuste-individual-de-matricula-1024x554.gif"} alt={"Captura de Ajuste individual de matricula"}>Ver ejemplo</GuideImageTrigger>
+### 1. ¿Qué es el Ajuste individual de matrícula?
 
+**Ajuste individual de matrícula** abre la pantalla **Registro de Novedades en el Calendario Actual**. Allí cambia el estado de matrícula de un estudiante, por ejemplo de **MATRICULADO** a **RETIRADO**, **TRASLADADO** o **DESERTOR**, y SINAI deja registrada la novedad con la fecha y la observación.
 
+Úsela para que, al cierre del año, solo queden en estado **MATRICULADO** los estudiantes que siguen activos en la institución.
 
-Por lo anterior, es de entender que si no se realiza el respectivo ajuste a la matrícula, se verá un aumento en los estudiantes no promovidos al finalizar el año escolar, de aquí la importancia de realizar un ajuste final a la matrícula.
+Ingrese a **Matrícula → Ajustes de Matrícula → Ajuste Individual de Matrícula**.
 
+<GuideImageTrigger src="/images/guides/ajuste-individual-matricula/acceso-ajuste-individual.jpg" alt="Menú Matrícula con Ajustes de Matrícula desplegado y la opción Ajuste Individual de Matrícula">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El botón azul de la esquina superior derecha abre esta guía.
+
+<GuideCallout>
+  La pantalla trabaja sobre el calendario seleccionado en la parte superior de SINAI. Para ajustar la matrícula de otro año, cambie primero el calendario.
+</GuideCallout>
+
+#### 2. Seleccionar el estudiante
+
+1. En **Sede**, seleccione la sede del estudiante.
+2. En **Grupo**, seleccione su grupo.
+3. En **Estudiante**, seleccione el nombre.
+
+La lista **Estudiante** muestra todos los estudiantes del grupo, con la inicial de su estado delante del nombre, por ejemplo «M -» para MATRICULADO. **Estado Actual** muestra el estado completo y no se edita.
+
+#### 3. Registrar la novedad
+
+En el bloque **Destino**:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Fecha** | Fecha del nuevo estado. Trae la fecha del día y es obligatoria; si la borra, SINAI muestra «La fecha es obligatoria». |
+| **Nuevo Estado** | Estado al que pasa el estudiante. Las opciones dependen del estado actual. |
+| **Motivo** | Causa del cambio: **EXPULSIÓN**, **DESCONOCIDO** o **CAMBIO DE DOMICILIO**. Solo se habilita con **TRASLADADO**, **RETIRADO**, **DESERTOR** o **CANCELADO**. |
+| **Observación** | Texto libre sobre la novedad. |
+
+</GuideDataTable>
+
+<GuideImageTrigger src="/images/guides/ajuste-individual-matricula/registro-novedades.jpg" alt="Registro de Novedades con un estudiante seleccionado, nuevo estado RETIRADO, motivo y observación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para un estudiante en estado **MATRICULADO**, **Nuevo Estado** ofrece **INSCRITO**, **TRASLADADO**, **RETIRADO**, **DESERTOR**, **CANCELADO**, **PROM. ANTICIPADA**, **PROM. SEMESTRAL**, **GRADUADO** y **ELIMINADO**.
+
+1. Revise la **Fecha**.
+2. Seleccione el **Nuevo Estado**.
+3. Si se habilita, seleccione el **Motivo**.
+4. Escriba la **Observación**.
+5. Haga clic en **Registrar Novedad**.
+
+SINAI muestra «Novedad registrada correctamente, el estado del estudiante ha sido modificado». El estudiante sigue en la lista con la inicial del nuevo estado y la pantalla queda lista para el siguiente.
+
+Al registrar la novedad, SINAI:
+
+- Cambia el estado, la fecha y la observación de la matrícula del estudiante en el calendario actual.
+- Registra la novedad con la fecha, el estado y la observación. Si eligió un motivo, la observación de la novedad empieza por «Motivo del nuevo estado:» seguido del motivo.
+- Actualiza el estado del usuario del estudiante en la institución según el nuevo estado.
+
+Si vuelve a pasar a un estudiante a **MATRICULADO**, la pantalla muestra este aviso: el estudiante queda en el mismo grupo. Para moverlo a otro grupo, use después **Cambio de Grupo**.
+
+#### 4. Eliminar la matrícula
+
+Con **ELIMINADO** en **Nuevo Estado**, el botón cambia a **Eliminar**, en rojo.
+
+1. Seleccione el estudiante y **ELIMINADO**.
+2. Haga clic en **Eliminar**.
+3. Confirme el mensaje *¿Cofirrma que desea eliminar esta matricula?*
+
+SINAI borra la matrícula del estudiante en ese grupo y calendario, y muestra «La matricula se ha eliminado correctamente».
+
+<GuideCallout type="warning">
+  Eliminar no registra una novedad: quita la matrícula del calendario. El estudiante deja de aparecer en la lista del grupo. Si solo salió de la institución, use **RETIRADO**, **TRASLADADO** o **DESERTOR**.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Ajuste individual de matrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué permisos necesito?"}>
+    El rector no necesita permisos adicionales. Los demás funcionarios necesitan el permiso 505 para registrar novedades y, además, el permiso 511 para eliminar matrículas. Sin ellos, SINAI muestra un mensaje como «No tiene asignado el permiso Nº505».
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Ajuste individual de matrícula» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no aparece el estado que necesito en Nuevo Estado?"}>
+    La lista depende del estado actual del estudiante: SINAI solo ofrece los cambios permitidos desde ese estado. Revise **Estado Actual** antes de elegir.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Ajuste individual de matrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no puedo elegir un motivo?"}>
+    **Motivo** solo se habilita con los estados **TRASLADADO**, **RETIRADO**, **DESERTOR** y **CANCELADO**. Con los demás queda en **NO APLICA**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo verifico que el cambio quedó registrado?"}>
+    En **Estudiante**, la inicial delante del nombre cambia al nuevo estado y **Estado Actual** lo muestra al seleccionarlo. El nuevo estado también se ve en **Matrícula → Ajustes de Matrícula → Historial de Matrícula**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo cambiar de grupo a un estudiante desde aquí?"}>
+    No. El ajuste conserva el grupo del estudiante. Para moverlo, use **Matrícula → Cambio de Grupo**.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,12 +1,199 @@
 ---
-title: "Ficha renovada (redirige)"
-description: "La guía de la ficha renovada está en Ficha observador del estudiante."
+title: "Seguimientos del observador"
+description: "Registre, consulte, edite y descargue los seguimientos de los estudiantes en la ficha observador renovada, y consulte sus anotaciones disciplinarias."
 guide: true
 wordpressId: 35849
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/nueva-version-ficha-observador/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-Esta guía se consolidó en **Ficha observador del estudiante**. Abra el hub y seleccione la **Ficha renovada**.
+## Video tutorial
 
-[Ir a Ficha observador (ficha renovada)](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante?version=renovada)
+<GuideVideoPending>
+  - Registrar y consultar seguimientos en la ficha observador renovada. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Seguimiento?
+
+**Seguimiento** es la sección de la ficha observador renovada donde se registran las observaciones sobre cada estudiante: la descripción, el periodo, la fecha, el tipo de seguimiento, los campos personalizados de la institución y las firmas del docente, el estudiante y el acudiente.
+
+Ingrese a **Seguimiento → Observador**. En el panel **Opciones** de la izquierda, seleccione **Seguimiento**.
+
+<GuideImageTrigger src="/images/guides/observador-seguimientos/pantalla-seguimientos.jpg" alt="Sección Seguimiento con el panel Opciones, la pestaña Seguimientos y los filtros Docente, Grupo, Estudiante, Periodo y Tipo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout>
+  Si al abrir **Seguimiento → Observador** ve las opciones **Ficha Observador del Estudiante**, **Valoración Individual**, **Valoración por Grupo** y **Reportes de Caracterización**, su institución usa la ficha clásica. Consulte [Ficha observador del estudiante](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante).
+</GuideCallout>
+
+La pantalla tiene hasta tres pestañas:
+
+- **Seguimientos:** lista de los seguimientos del grupo, con filtro por estudiante, periodo y tipo.
+- **Seguimientos individuales:** historial de seguimientos con filtro por docente, grupo, estudiante y periodo.
+- **Anotaciones disciplinarias:** consulta de las anotaciones registradas para los estudiantes. Solo aparece si el módulo **Anotaciones disciplinarias** está habilitado en **Configuración → Módulos**.
+
+El botón con las tres líneas, junto al título, muestra u oculta el panel **Opciones**. Los filtros de docente, grupo, estudiante y periodo se conservan al pasar entre las secciones del observador.
+
+#### 2. Consultar los seguimientos
+
+Abra la pestaña **Seguimientos** y use los filtros:
+
+<GuideDataTable>
+
+| Filtro | Qué define |
+| --- | --- |
+| **Docente** | Docente con el que se registra un seguimiento nuevo. También define los grupos de la lista **Grupo**. En esta pestaña no filtra la lista de seguimientos. |
+| **Grupo** | Grupo cuyos seguimientos se muestran. **Todos** muestra los de toda la institución. |
+| **Estudiante** | Estudiante cuyos seguimientos se muestran. Al lado del nombre aparece la inicial del estado de la matrícula, por ejemplo **M**. |
+| **Periodo** | Periodo de los seguimientos. **Todos** no filtra por periodo. |
+| **Tipo** | Tipo de seguimiento, según los tipos configurados por la institución. |
+
+</GuideDataTable>
+
+Cada tarjeta muestra la foto y el nombre del estudiante, la fecha, el periodo, el **Grupo**, el **Tipo** y el **Docente** que lo registró. El recuadro **Firmas** indica si cada firma está **Firmado** o **Pendiente**: **Docente**, **Estudiante** y **Acudiente**.
+
+Si no hay seguimientos con esos filtros, SINAI muestra **No hay datos disponibles**. Use los botones de la parte inferior para cambiar de página y la lista **Registros por página** para mostrar 1, 5, 10, 20 o 50 tarjetas.
+
+<GuideCallout>
+  Los grupos que aparecen para un docente dependen de la opción **Mostrar grupos** de **Configuración → Opciones**: grupos de dirección, grupos de la asignación académica o todos. Si **Mostrar sólo estudiantes matriculados** está activa, la lista **Estudiante** solo trae estudiantes en estado matriculado.
+</GuideCallout>
+
+#### 3. Registrar un seguimiento
+
+1. Seleccione un **Docente**, un **Grupo** y un **Estudiante**. **Agregar anotación** solo se habilita cuando ninguno de los tres está en **Todos**.
+2. Haga clic en **Agregar anotación**.
+3. En la ventana **Crear seguimiento**, escriba el texto en **Seguimiento**.
+4. Revise el **Periodo**, la **Fecha** y el **Tipos seguimientos**. La fecha propuesta es la del día.
+5. Complete los campos personalizados de la institución. Los que tienen asterisco son obligatorios; el ícono de información muestra su descripción.
+6. Si lo necesita, agregue las firmas.
+7. Haga clic en **Agregar**.
+
+<GuideImageTrigger src="/images/guides/observador-seguimientos/crear-seguimiento.jpg" alt="Ventana Crear seguimiento con el texto, el periodo, la fecha, el tipo, un campo personalizado y las secciones de firmas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si el registro es correcto, SINAI muestra **Se creo correctamente**. Antes de guardar, la ventana valida:
+
+- **La descripcion debe tener al menos 3 caracteres**
+- **Debes seleccionar una fecha**
+- **La fecha no puede ser mayor a la fecha actual**
+- El nombre del campo personalizado seguido de **es obligatorio**
+
+Cada sección de firma tiene estos botones:
+
+- **Capturar:** abre **Registrar nueva firma digital**. Dibuje la firma en el recuadro y haga clic en **Aceptar**. El botón de la flecha deshace el último trazo.
+- **Usar guardada:** solo en **Firma del docente**. Abre **Lista de firmas** con las firmas digitales del usuario. Marque una y haga clic en **Guardar** para ponerla en el seguimiento. **Agregar nueva firma digital** registra otra firma.
+- **Quitar:** retira la firma del seguimiento.
+
+Mientras la firma no esté en la ventana, la sección indica **Pendiente de firma**. Cuando hay una firma lista, indica **Firma lista para guardar**. La firma se guarda con el seguimiento al hacer clic en **Agregar** o **Guardar**.
+
+#### 4. Traer anotaciones al seguimiento
+
+En la ventana **Crear seguimiento** o **Editar seguimiento**, **Ver anotaciones** abre el panel **Anotaciones** con las anotaciones disciplinarias del estudiante, con su fecha y descripción.
+
+1. Haga clic en **Ver anotaciones**.
+2. Marque una o varias anotaciones.
+3. Haga clic en **Agregar al seguimiento**.
+
+SINAI agrega la descripción de cada anotación al final del texto de **Seguimiento** y muestra **Se agregaron con exíto**. Si no marcó ninguna, el aviso es **Debe seleccionar almenos una opcion**.
+
+<GuideImagePending>
+  Main.aspx/Seguimiento/Observador/Seguimientos, panel Anotaciones abierto desde Ver anotaciones con anotaciones del estudiante. Archivo: ver-anotaciones.jpg
+</GuideImagePending>
+
+#### 5. Editar o eliminar un seguimiento
+
+Para editar:
+
+1. Haga clic en **Editar** en la tarjeta del seguimiento.
+2. En la ventana **Editar seguimiento**, cambie el texto, el periodo, la fecha, el tipo, los campos personalizados o las firmas.
+3. Haga clic en **Guardar**.
+
+El aviso de éxito es **Se actualizo correctamente**.
+
+Para eliminar:
+
+1. Haga clic en **Eliminar** en la tarjeta.
+2. En **Confirmar eliminación**, que pregunta *¿Está seguro que desea eliminar los registros seleccionados? Esta operación no se puede revertir*, haga clic en **Si, eliminar**.
+
+El aviso de éxito es **Seguimiento eliminada con éxito**.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. Junto con el seguimiento se eliminan las firmas que se capturaron para él.
+</GuideCallout>
+
+#### 6. Descargar los seguimientos en PDF
+
+**Descargar PDF** se habilita cuando **Docente** y **Grupo** no están en **Todos**. El informe respeta los filtros **Periodo** y **Tipo**.
+
+- Con un estudiante seleccionado, SINAI descarga el informe individual de seguimientos en PDF.
+- Con **Estudiante** en **Todos**, se abre la ventana **Descargar informes del grupo en PDF**.
+
+En esa ventana, elija una opción y haga clic en **Descargar informes**:
+
+- **Un PDF por estudiante:** descarga un ZIP con un informe PDF independiente por cada estudiante.
+- **PDF consolidado:** reúne los informes de todo el grupo en un solo documento PDF.
+
+<GuideImageTrigger src="/images/guides/observador-seguimientos/descargar-pdf-grupo.jpg" alt="Ventana Descargar informes del grupo en PDF con las opciones Un PDF por estudiante y PDF consolidado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Mientras genera el archivo, SINAI muestra **Descargando... Esto puede tardar varios segundos o minutos**. Si la descarga falla, por ejemplo porque no hay seguimientos con esos filtros, el aviso es **Se ha presentado un error al intentar descargar**.
+
+#### 7. Seguimientos individuales
+
+Abra la pestaña **Seguimientos individuales**. Los filtros son **Docente**, **Grupo**, **Estudiante** y **Periodo**. Aquí **Docente** sí filtra: con un docente seleccionado, la lista muestra solo los seguimientos que él registró.
+
+<GuideImageTrigger src="/images/guides/observador-seguimientos/seguimientos-individuales.jpg" alt="Pestaña Seguimientos individuales con docente y grupo seleccionados y el botón Descargar Word">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Cada tarjeta muestra el tipo de seguimiento, la fecha, el periodo, la descripción, **Registrado por** y el estado de las firmas, con los botones **Editar** y **Eliminar**. Si no hay seguimientos, SINAI muestra **No hay registros**.
+
+**Agregar anotación** funciona igual que en la pestaña **Seguimientos**. **Descargar Word** se habilita con un **Docente** y un **Grupo** seleccionados:
+
+- Con un estudiante seleccionado, descarga el informe individual de seguimientos en Word.
+- Con **Estudiante** en **Todos**, descarga un ZIP con un informe en Word por cada estudiante.
+
+#### 8. Anotaciones disciplinarias
+
+Abra la pestaña **Anotaciones disciplinarias**. Seleccione el **Docente**, el **Grupo** y el **Estudiante**. La lista **Grupo** no tiene la opción **Todos**.
+
+Esta pestaña solo consulta: muestra las anotaciones registradas en **Seguimiento → Anotaciones**. Cada tarjeta trae la fecha, la norma, la descripción y **Registrado por**. El botón del ojo abre **Visualizar anotación** con la **Fecha**, el **Estudiante**, la **Descripción**, los **Descargos**, las **Acciones** y **Registrado por**.
+
+<GuideImagePending>
+  Main.aspx/Seguimiento/Observador/Seguimientos?tab=anotaciones, pestaña Anotaciones disciplinarias con un grupo que tenga anotaciones. Archivo: anotaciones-disciplinarias.jpg
+</GuideImagePending>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué está desactivado Agregar anotación?">
+    El botón se habilita cuando **Docente**, **Grupo** y **Estudiante** tienen un valor distinto de **Todos**. El seguimiento queda registrado a nombre del docente seleccionado.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="Cambié el docente en la pestaña Seguimientos y la lista no cambió. ¿Por qué?">
+    En la pestaña **Seguimientos**, la lista se filtra por grupo, estudiante, periodo y tipo; el docente no la filtra. Para ver solo los seguimientos que registró un docente, use la pestaña **Seguimientos individuales**.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="No veo la pestaña Anotaciones disciplinarias. ¿Cómo la habilito?">
+    La pestaña aparece cuando el módulo **Anotaciones disciplinarias** está habilitado en **Configuración → Módulos** del observador.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Qué significa «La fecha no puede ser mayor a la fecha actual»?">
+    La fecha del seguimiento es posterior al día de hoy. Escriba la fecha en que ocurrió el hecho, que puede ser hoy o un día anterior.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué significa la letra al final del nombre del estudiante?">
+    Es la inicial del estado de la matrícula, por ejemplo **M**. Si la institución activó **Mostrar sólo estudiantes matriculados** en **Configuración → Opciones**, la lista solo trae estudiantes matriculados.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Cómo descargo los seguimientos de todo el grupo?">
+    Deje **Estudiante** en **Todos** y haga clic en **Descargar PDF**. En la ventana elija **Un PDF por estudiante**, que entrega un ZIP, o **PDF consolidado**, que entrega un solo PDF. En **Seguimientos individuales**, **Descargar Word** con **Todos** entrega un ZIP con un Word por estudiante.
+  </GuideFAQItem>
+  <GuideFAQItem index="07" question="La descarga muestra «Se ha presentado un error al intentar descargar». ¿Qué reviso?">
+    Revise que existan seguimientos con el grupo, el estudiante, el periodo y el tipo seleccionados. Si no hay datos para el informe, SINAI no genera el archivo y muestra ese aviso.
+  </GuideFAQItem>
+  <GuideFAQItem index="08" question="¿Puedo recuperar un seguimiento eliminado?">
+    No. La eliminación no se puede revertir y también borra las firmas que se capturaron para ese seguimiento.
+  </GuideFAQItem>
+</GuideFAQ>

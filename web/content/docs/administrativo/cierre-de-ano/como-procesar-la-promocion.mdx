@@ -1,62 +1,180 @@
 ---
 title: "¿Cómo procesar la promoción de los estudiantes?"
-description: "Procese la situación académica final de los estudiantes por grupo o sede en SINAI."
+description: "Procese la situación académica final por grupo, por sede o por estudiante, configure las opciones de promoción y cambie la situación académica manualmente."
 guide: true
 wordpressId: 28790
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/como-procesar-la-promocion-de-los-estudiantes/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="EcoHVvnL9Fo" title="¿Cómo procesar la promoción de los estudiantes?"
-  odyseeUrl="https://odysee.com/%C2%BFc%C3%B3mo-procesar-la-promoci%C3%B3n-de-los%3A2dc4b025ce4c79328cbeb417044eb5b7e4461aaf"
-/>
+<YouTube id="EcoHVvnL9Fo" title="¿Cómo procesar la promoción de los estudiantes?" odyseeUrl="https://odysee.com/%C2%BFc%C3%B3mo-procesar-la-promoci%C3%B3n-de-los%3A2dc4b025ce4c79328cbeb417044eb5b7e4461aaf" />
 </GuideVideos>
-
-<GuideCallout>
-  **Antes de procesar la promoción:** en la guía [¿Qué hacer antes de procesar la promoción?](/docs/administrativo/cierre-de-ano/procesar-promocion) podrá ver todos los pasos que debe realizar previamente. Completarlos asegura que el proceso de promoción quede correctamente.
-</GuideCallout>
 
 ## Guía paso a paso
 
-El procesamiento de promoción define la situación académica final de los estudiantes. Revise la información antes de ejecutarlo porque afecta el cierre del calendario.
+### 1. ¿Qué es Procesar Promoción?
 
-### 1. Ingrese a Procesar promoción
+**Procesar Promoción** calcula la situación académica final de cada estudiante (**PROMOVIDO**, **NO PROMOVIDO** o **PENDIENTE**) con los criterios de promoción de la institución o del grupo. También permite cambiar esa situación de forma manual y consultar su historial.
 
-Abra **Promoción > Promoción > Procesar promoción**.
+La pantalla trabaja sobre el calendario seleccionado en la parte superior de SINAI.
 
-### 2. Seleccione los parámetros
+Ingrese a **Promoción → Promoción → Procesar Promoción**.
 
-Elija la **Sede**, el **Grupo** y el **Periodo** final. En **¿Qué desea hacer?**, seleccione si procesará el grupo, la sede o únicamente estudiantes seleccionados.
+<GuideImageTrigger src="/images/guides/como-procesar-la-promocion/acceso-procesar-promocion.jpg" alt="Menú Promoción con el submenú Promoción abierto y la opción Procesar Promoción">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### 3. Revise la situación académica
+<GuideCallout>
+  **Antes de procesar la promoción:** en [¿Qué hacer antes de procesar la promoción?](/docs/administrativo/cierre-de-ano/procesar-promocion) están los pasos previos: matrícula, asignación, estudiantes sin calificaciones, consolidación, ajustes de nota final y criterios de promoción.
+</GuideCallout>
 
-Antes de procesar, compruebe en la tabla las asignaturas y áreas reprobadas, inasistencias, porcentaje de inasistencia y situación académica de cada estudiante. Las opciones de cada fila permiten consultar el historial y el detalle final.
+En la parte superior derecha están:
 
-### 4. Procese
+- **Informes:** abre los informes de promoción en otra pestaña.
+- **Opciones:** **Configuración** de la promoción, **Criterios de Promoción de la Institución** y **Criterios de Promoción por Grupos**. Los criterios se abren en otra pestaña.
+- **Ayuda** (salvavidas): abre la guía de pasos previos.
 
-Seleccione **Procesar** y confirme el resultado. Posteriormente revise la situación académica generada y los informes disponibles. <GuideImageTrigger src={"/images/guides/procesar-promocion/procesar-promocion.png"} alt={"Pantalla para procesar la promoción de estudiantes en SINAI"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Revisar el grupo
 
-### Ajustes a la situación académica
+Seleccione la **Sede**, el **Grupo** y el **Periodo**.
 
-Si un estudiante no alcanzó los criterios de promoción, pero el consejo académico decide promoverlo a partir de una mirada integral de su contexto, puede cambiar su situación académica a promovido desde **Promoción > Recuperaciones > Cambio de situación académica** o desde **Promoción > Promoción > Procesar promoción**. <GuideImageTrigger src={"/images/wordpress/2023/11/cambio-de-situacion-academica.gif"} alt={"Captura de cambio de situación académica"}>Ver ejemplo</GuideImageTrigger>
+- **Grupo:** grupos de la sede en el calendario, con su código y su jornada.
+- **Periodo:** periodos del grupo, del más reciente al primero. SINAI procesa la promoción con las calificaciones hasta el periodo elegido. Normalmente se usa el último.
 
+<GuideImageTrigger src="/images/guides/como-procesar-la-promocion/procesar-promocion.jpg" alt="Procesar Promoción con sede, grupo y periodo seleccionados y la tabla de estudiantes con su situación académica">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La tabla tiene una fila por estudiante del grupo:
 
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Asignaturas Reprobadas** y **Áreas Reprobadas** | Cantidad de asignaturas y de áreas reprobadas. |
+| **Inasistencias** y **% Inasist.** | Inasistencias del estudiante y su porcentaje. |
+| **Sitiuación Académica** | Situación actual. El candado cerrado indica que está bloqueada: el proceso de promoción no la cambia. El candado abierto indica que sí la puede cambiar. |
+| **Descripción** | Criterio que definió la situación y fecha del proceso. El botón de líneas abre el historial. |
+| **Opciones** | **Procesar promoción para este estudiante** (verde), **Ver detalle de calificaciones finales del estudiante** y **Ir al registro de recuperaciones**. Los dos últimos se abren en otra pestaña. |
+
+</GuideDataTable>
+
+**Colores** activa o quita el color de las filas: verde para **PROMOVIDO**, amarillo para **PENDIENTE** y rojo para **NO PROMOVIDO**.
+
+#### 3. Configurar las opciones de promoción
+
+Haga clic en **Opciones → Configuración**. La ventana **Opciones de Promoción** aplica al calendario seleccionado.
+
+<GuideImageTrigger src="/images/guides/como-procesar-la-promocion/ventana-opciones-promocion.jpg" alt="Ventana Opciones de Promoción con tipo de promoción, casillas y situación académica por defecto">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Opción | Qué define |
+| --- | --- |
+| **Tipo de promoción** | **Por Asignaturas** toma cada asignatura por separado. **Por Áreas** usa el promedio ponderado de las asignaturas de cada área, según su peso en la asignación académica. Es obligatorio. |
+| **Permitir estudiantes pendientes** | El estudiante con al menos un área o asignatura no aprobada queda **PENDIENTE**, salvo que supere el número de áreas o asignaturas para ser **NO PROMOVIDO**. |
+| **Ajustar promoción por recuperaciones** | El estudiante que reprobó al menos una recuperación final, o no la presentó, queda **NO PROMOVIDO**. |
+| **Aplicar criterios de promoció predeterminados** | Si el grupo no tiene criterios propios, se aplican los criterios predeterminados de la institución. |
+| **Situación académica por defecto** | Situación que recibe el estudiante cuando no se encuentra ningún criterio del grupo ni de la institución: **Sin procesar**, **Promovido**, **No promovido** o **Pendiente**. |
+
+</GuideDataTable>
+
+Haga clic en **Aceptar**. Si el guardado es correcto, SINAI muestra **Configuración guardada correctamente**. Si no eligió el tipo, muestra **Debe seleccionar el tipo de promoción**.
+
+<GuideCallout type="warning">
+  El tipo de promoción es el mismo que se configura en el calendario. Cambiarlo aquí cambia el cálculo de la promoción de todo el calendario.
+</GuideCallout>
+
+#### 4. Procesar la promoción
+
+En **¿Qué desea hacer?** elija el alcance:
+
+- **Promocionar estudiantes del grupo seleccionado:** procesa todos los estudiantes de la tabla.
+- **Promocionar estudiantes de la sede seleccionada:** procesa todos los grupos de la sede en segundo plano.
+- **Promocionar solo estudiantres seleccionados:** procesa solo los estudiantes marcados en la tabla. Márquelos con la casilla o haciendo clic en la fila.
+
+Luego haga clic en **Procesar**.
+
+Al terminar un grupo, SINAI muestra **Procesamiento de la promoción terminado.** con la cantidad de estudiantes procesados correctamente y con errores. Al procesar estudiantes seleccionados, la tabla se actualiza sin aviso.
+
+Al elegir la sede aparece el aviso **Promoción por Sede Seleccionada**: cada grupo puede tardar hasta 60 segundos, no es necesario mantener la ventana abierta y no debe volver a enviar la promoción hasta que terminen todos los grupos. Al iniciar, SINAI muestra **El proceso de promoción por sede se ha iniciado correctamente. Puede verificar progresivamente para ver el avance**.
+
+Para procesar un solo estudiante, haga clic en el botón verde de su fila.
+
+<GuideCallout type="warning">
+  **Procesar** no pide confirmación y reemplaza la situación académica de los estudiantes, salvo las que están bloqueadas con el candado. Revise el periodo y las opciones antes de procesar.
+</GuideCallout>
+
+#### 5. Consultar el historial de un estudiante
+
+En la columna **Descripción**, haga clic en el botón de líneas. El panel **Historial de Situacion Académica** muestra la situación actual, si está bloqueada y cada cambio con su causa y su fecha. **Cerrar** oculta el panel.
+
+<GuideImageTrigger src="/images/guides/como-procesar-la-promocion/historial-situacion.jpg" alt="Panel Historial de Situacion Académica de un estudiante con los cambios registrados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 6. Cambiar la situación académica manualmente
+
+Si el consejo académico decide una situación distinta a la calculada, puede asignarla a mano:
+
+1. Marque los estudiantes en la tabla.
+2. Haga clic en **Situación académica → Cambio invididual de situación académica**.
+3. Escriba la **Fecha** en que se autorizó el cambio.
+4. Elija la **Situación académica que desea asignar**: **Sin procesar**, **Promovido**, **No promovido**, **Pendiente**, **Reforzó y aprobó**, **Reforzó y reprobó** o **Graduado**.
+5. Si no quiere que el proceso de promoción la cambie después, marque **Impedir que se modifique la situación académica al procesar la promoción**.
+6. Escriba la **Descripción u observaciones**, por ejemplo el acto administrativo que autorizó el cambio.
+7. Escriba **CONFIRMAR** y haga clic en **Aceptar**.
+
+<GuideImageTrigger src="/images/guides/como-procesar-la-promocion/ventana-cambio-situacion.jpg" alt="Ventana Cambio de situación académica por estudiante con fecha, situación, casilla de bloqueo, descripción y confirmación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La fecha, la descripción y la palabra de confirmación son obligatorias. Si no escribe exactamente **CONFIRMAR**, SINAI muestra **Debe escribir la palabra CONFIRMAR para validar que está seguro que desea hacer el cambio de situación académica**. Si no marcó estudiantes, muestra **Debe seleccionar al menos un estudiante para realizar el cambio de situación académica**.
+
+Sin la casilla de bloqueo, si vuelve a procesar la promoción del grupo SINAI calcula de nuevo la situación con los criterios. Con la casilla, la fila muestra el candado cerrado.
+
+**Situación académica → Cambio masivo de situación académica** abre la pantalla de cambios masivos.
+
+#### 7. Permisos
+
+Cada acción exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso y no aplica el cambio.
+
+- Procesar la promoción: el aviso es **El usuario no tiene permiso para procesar la promoción! Por favor solicite la autorización a la dirección de la Institución**.
+- Guardar las opciones de promoción.
+- Cambiar la situación académica manualmente.
+
+Solicite el permiso faltante al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Cómo procesar la promoción de los estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Procesé la promoción y un estudiante no cambió de situación. ¿Por qué?"}>
+    Revise el candado de la columna **Sitiuación Académica**. Si está cerrado, la situación fue asignada manualmente con la opción de impedir cambios y el proceso no la modifica. Para recalcularla, asígnele de nuevo la situación sin marcar esa casilla.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Cómo procesar la promoción de los estudiantes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Qué periodo debo seleccionar?"}>
+    SINAI calcula la promoción con las calificaciones hasta el periodo elegido. Para la promoción del año use el último periodo del grupo, que aparece primero en la lista.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Cómo procesar la promoción de los estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué hay estudiantes en PENDIENTE?"}>
+    Con **Permitir estudiantes pendientes** activo, el estudiante con al menos un área o asignatura no aprobada queda **PENDIENTE**, salvo que supere el límite para ser **NO PROMOVIDO**. Luego puede registrar sus recuperaciones y volver a procesar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Procesé la sede y algunos grupos siguen sin procesar. ¿Qué hago?"}>
+    La promoción por sede corre en segundo plano y cada grupo puede tardar hasta 60 segundos. Espere y vuelva a consultar los grupos. No envíe otra vez la promoción de la sede hasta que terminen todos; si un grupo quedó sin procesar, procéselo con **Promocionar estudiantes del grupo seleccionado**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué pasa si no hay criterios de promoción para el grupo?"}>
+    Si está activa **Aplicar criterios de promoció predeterminados**, SINAI usa los criterios predeterminados de la institución. Si tampoco los hay, el estudiante recibe la **Situación académica por defecto** de las opciones de promoción.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Dónde veo por qué un estudiante quedó NO PROMOVIDO?"}>
+    La columna **Descripción** muestra el criterio que definió la situación y la fecha del proceso. El botón de líneas abre el historial, y el botón **Ver detalle de calificaciones finales del estudiante** muestra sus notas finales.
   </GuideFAQItem>
 </GuideFAQ>

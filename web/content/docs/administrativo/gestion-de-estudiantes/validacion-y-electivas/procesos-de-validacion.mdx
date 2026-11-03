@@ -1,11 +1,13 @@
 ---
 title: "Registro de validación"
-description: "Registre la validación académica de un estudiante autorizado en SINAI."
+description: "Registre los grados que valida un estudiante y sus calificaciones por asignatura en un grupo de validación."
 guide: true
 wordpressId: 29427
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/registro-de-validacion/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,39 +16,94 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Esta opción está destinada a las instituciones autorizadas para adelantar procesos de validación. Permite registrar la información académica del estudiante que realiza el proceso.
+### 1. ¿Qué es Registro de validación?
 
-### 1. Ingrese al registro
+**Registro de validación** es para las instituciones autorizadas para hacer procesos de validación. Por cada estudiante de un grupo de validación, registra los grados que valida y la calificación de cada asignatura.
 
-En SINAI, abra **Matrícula > Ajustes de Matrícula > Registro de validación**.
+Antes de usarla, la institución debe tener:
 
-### 2. Seleccione el grupo y el estudiante
+- un grupo creado con un modelo de validación en el calendario actual;
+- los estudiantes matriculados en ese grupo.
 
-Elija el grupo de validación y seleccione al estudiante que se va a registrar. Verifique que corresponda al calendario y al proceso autorizado antes de continuar.
+Ingrese a **Matrícula → Ajustes de Matrícula → Registro de Validación**.
 
-### 3. Registre la validación
+<GuideImageTrigger src="/images/guides/registro-de-validacion/acceso-validacion.jpg" alt="Menú Matrícula con Ajustes de Matrícula desplegado y la opción Registro de Validación">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Complete la información solicitada por la pantalla para el proceso y guarde el registro. Utilice únicamente los datos y resultados aprobados por la institución.
+La pantalla se titula **Registro de Validaciones**. El botón **Ayuda** abre esta guía.
 
-### 4. Compruebe el resultado
+<GuideImageTrigger src="/images/guides/registro-de-validacion/pantalla-registro-validaciones.jpg" alt="Pantalla Registro de Validaciones con las listas Grupo, Estudiante y Grados y los botones Agregar grados y Guardar calificaciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Vuelva a consultar el estudiante para confirmar que el registro quedó asociado al grupo de validación correcto.
+#### 2. Seleccionar el grupo y el estudiante
 
-> El entorno de pruebas presentó un error de conexión al abrir esta opción durante la actualización de la guía. Si la pantalla no carga, intente de nuevo más tarde o contacte a soporte con el mensaje mostrado por SINAI.
+1. En **Grupo**, seleccione el grupo de validación. La lista solo muestra los grupos de los modelos de validación del calendario actual.
+2. En **Estudiante**, seleccione al estudiante. La lista muestra los estudiantes matriculados en el grupo.
 
+Al cambiar el estudiante, la tabla **Lista de Grados** muestra los grados que ya tiene registrados.
+
+#### 3. Registrar los grados validados
+
+1. En **Grados**, seleccione los grados que valida el estudiante. Para elegir varios, mantenga presionada la tecla Ctrl mientras hace clic.
+2. Haga clic en **Agregar grados**.
+
+La tabla **Lista de Grados** muestra cada grado registrado con estas columnas:
+
+- **Grado**.
+- **Registrado:** fecha del registro y usuario que lo hizo.
+- **Opciones:** botón **Eliminar**.
+
+**Eliminar** quita el grado de la lista en cuanto hace clic. No pide confirmación.
+
+#### 4. Registrar las calificaciones
+
+Debajo de los botones aparece la planilla del estudiante, con una fila por asignatura:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Asignatura** | Nombre de la asignatura. |
+| **Nota** | Calificación de la validación. Admite hasta 6 caracteres; puede usar punto o coma como separador decimal. |
+| **Desempeño** | Nivel de desempeño que corresponde a la nota. No se edita. |
+
+</GuideDataTable>
+
+1. Escriba la **Nota** de cada asignatura.
+2. Haga clic en **Guardar calificaciones**.
+
+SINAI guarda las notas como calificación directa del periodo 1 en el grupo de validación y vuelve a cargar la planilla con el **Desempeño** de cada nota.
+
+<GuideImagePending>
+  Admin/Matricula/Estudiante/MatriculaValidacion.aspx, planilla de un estudiante con grados en Lista de Grados y notas por asignatura. Archivo: planilla-validacion.jpg
+</GuideImagePending>
+
+#### 5. Permisos
+
+Los usuarios que no son rector necesitan el permiso de registro de validaciones. Si no lo tienen, SINAI muestra el aviso del permiso al abrir la pantalla. Solicítelo al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Registro de validación»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La lista Grupo está vacía o no aparece mi grupo. ¿Por qué?"}>
+    **Grupo** solo lista los grupos creados con un modelo de validación en el calendario seleccionado en la parte superior. Cree el grupo con ese modelo en el calendario actual, o seleccione el calendario correcto.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Registro de validación» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"El estudiante no aparece en la lista Estudiante. ¿Qué hago?"}>
+    La lista muestra los estudiantes matriculados en el grupo de validación elegido. Matricule primero al estudiante en ese grupo y vuelva a abrir **Registro de Validación**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Registro de validación»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo registrar varios grados a la vez?"}>
+    Sí. En **Grados**, mantenga presionada la tecla Ctrl y haga clic en cada grado; luego haga clic en **Agregar grados**. Todos aparecen en **Lista de Grados** con la fecha y el usuario del registro.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Registré un grado por error. ¿Cómo lo quito?"}>
+    En **Lista de Grados**, haga clic en **Eliminar** en la fila del grado. Se quita de inmediato, sin pedir confirmación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que las calificaciones quedaron guardadas?"}>
+    Después de **Guardar calificaciones**, la planilla se vuelve a cargar. Cada asignatura guardada muestra su **Nota** y el **Desempeño** correspondiente. Si cambia de estudiante y regresa, las notas deben seguir ahí.
   </GuideFAQItem>
 </GuideFAQ>

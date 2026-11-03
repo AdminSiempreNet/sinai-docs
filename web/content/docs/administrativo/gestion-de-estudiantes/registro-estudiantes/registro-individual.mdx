@@ -1,13 +1,13 @@
 ---
 title: "Estudiantes nuevos"
-description: "Conozca las opciones de estudiantes nuevos y siga el procedimiento correspondiente en SINAI."
+description: "Matricule un estudiante nuevo con el formulario de datos básicos y complete su ficha: caracterización, familiares, requisitos y folio de matrícula."
 guide: true
-status: "Migrada · pendiente de validación operativa"
-lastReviewed: "16 de julio de 2026"
 wordpressId: 29358
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/estudiantes-nuevos/"
-lastModified: "2023-11-14 19:01:07"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,211 +16,203 @@ lastModified: "2023-11-14 19:01:07"
 
 ## Guía paso a paso
 
-### Estudiantes Nuevos
+### 1. ¿Qué es Estudiantes nuevos?
 
-Para realizar el registro de estudiantes en el sistema, siga los pasos descritos a continuación:
+**Estudiantes nuevos** es el formulario para matricular, uno a uno, a un estudiante que no está registrado en la institución. Al guardar, SINAI crea el estudiante, registra su matrícula en el grupo elegido del calendario seleccionado en la parte superior, crea su usuario y abre la ficha del estudiante para completar el resto de la información.
 
-1. Desde el **Módulo Administrativo**, acceda al **menú principal** y haga clic en la opción **“Matrícula”**.
+Ingrese a **Matrícula → Estudiantes Nuevos** y, en el submenú, seleccione **Estudiantes Nuevos**.
 
-2. En el **submenú** o a través de la **iconografía del sistema**, seleccione la opción **“Estudiantes Nuevos”**.
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/acceso-estudiantes-nuevos.jpg" alt="Menú Matrícula con Estudiantes Nuevos desplegado y sus opciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
+En la parte superior aparece el **código** que SINAI asignará al estudiante y el botón **Ayuda**, que abre esta guía. Los campos con asterisco rojo son obligatorios.
 
-#### **Registro de estudiantes nuevos**
+<GuideCallout>
+  Si el calendario seleccionado no es el del año en curso, al guardar SINAI pregunta *El calendario actual no corresponde al año en curso. ¿Confirma que desea registrar el estudiante en el calendario seleccionado?*
+</GuideCallout>
 
-Una vez seleccionada la opción **“Estudiantes Nuevos”**, se mostrará la **ruta de acceso** al formulario de inscripción correspondiente.
+#### 2. Datos básicos del estudiante
 
-A continuación, aparecerá una ventana similar a la que se muestra en la siguiente imagen, donde podrá diligenciar los datos requeridos para el registro del estudiante. <GuideImageTrigger src={"/images/wordpress/2023/11/Formulario-1024x461.png"} alt={"Captura de Formulario"}>Ver ejemplo</GuideImageTrigger>
+Escriba los datos tal como aparecen en el documento de identidad.
 
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/datos-basicos.jpg" alt="Formulario Datos Básicos del Estudiante e Información de Contacto y Localización con datos de ejemplo">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideDataTable>
 
-El procedimiento para el registro de estudiantes nuevos en SINAI, está compuesto por varios formularios de información que se describen a continuación.
+| Campo | Qué debe saber |
+| --- | --- |
+| **Apellidos** y **Nombres** | Obligatorios. Hasta 30 caracteres, solo letras y espacios. Se guardan en mayúsculas. |
+| **Tipo de documento** | Obligatorio. |
+| **Número de documento** | Obligatorio. Entre 6 y 15 letras o números, sin caracteres especiales. |
+| **Departamento** y **Municipio de expedición** | Lugar de expedición del documento. Con **NO APLICA** se muestra **País de Expedición DI**. |
+| **Género** | Obligatorio. |
+| **Departamento** y **Municipio de Nacimiento** | Con **NO APLICA** se muestra **País de Nacimiento**. |
+| **Fecha de Nacimiento** | Obligatoria, en formato dd/mm/aaaa. El año debe ser posterior a 1930 y anterior al año actual. |
+| **Tipo de Sangre** y **Religión** | Opcionales. |
+| **Pertenece algun resguardo indigena?** | Al marcarla aparece la lista **Resguardo indigena**. |
 
-### Diligenciar información de un estudiante nuevo
+</GuideDataTable>
 
-El formulario de registro de estudiantes se encuentra dividido en cuatro bloques de información, los cuales deben diligenciarse cuidadosamente siguiendo las indicaciones descritas a continuación:
+Al escribir el número de documento, SINAI revisa si ya existe en la institución. Si existe, muestra *El tipo y número de documento del estudiante ya se encuentra registrado. Por favor verifique*.
 
-#### Información Básica
+#### 3. Información de contacto y localización
 
-En este bloque se registran los datos de identificación del estudiante, tales como:
+<GuideDataTable>
 
-- Apellidos y nombres.
-- Tipo y número de documento.
-- Departamento, municipio y país de expedición del documento.
-- Género.
-- Departamento, municipio y país de nacimiento.
-- Fecha de nacimiento.
-- Religión.
-- Tipo de sangre.
+| Campo | Qué debe saber |
+| --- | --- |
+| **Departamento** y **Municipio de Residencia** | Lugar donde vive el estudiante. |
+| **Dirección** | Obligatoria. |
+| **Email** | Opcional. Si lo escribe, debe ser un correo válido. |
+| **Zona** | Obligatoria: **URBANA** o **RURAL**. |
+| **Teléfono** | Obligatorio. Solo números, hasta 10 dígitos. |
 
-Nota: Es de vital importancia que los datos básicos (nombres, número de documento y demás) se registren exactamente como aparecen en el documento de identidad del estudiante.
+</GuideDataTable>
 
-#### Información de Contacto y Localización
+#### 4. Registro de matrícula
 
-En este segundo bloque se registran los datos de ubicación y contacto del estudiante:
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/registro-matricula.jpg" alt="Bloques Registro de Matrícula e Información del establecimiento de origen con el botón Guardar y Continuar">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- Departamento y municipio de residencia.
-- Dirección de residencia.
-- Zona (urbana o rural).
-- Correo electrónico.
-- Teléfono de contacto.
+<GuideDataTable>
 
-#### Registro de Matrícula
+| Campo | Qué debe saber |
+| --- | --- |
+| **Sede** | Sede de la matrícula. Cambia los grupos disponibles. |
+| **Número de Matrícula** | Obligatorio. SINAI lo propone con el año del calendario y el consecutivo de estudiantes nuevos. |
+| **Fecha de matrícula** | Obligatoria. SINAI propone la fecha del día. |
+| **Libro de Matrícula** | Libro del 1 al 60. Cambia el folio propuesto. |
+| **Estudió año anterior?** | **SI** o **NO**. |
+| **Grupo** | Obligatorio. Lista los grupos activos de la sede en el calendario seleccionado. |
+| **Código Anterior** | Código del estudiante en el sistema anterior, si lo tenía. Solo números. |
+| **Estudiante Nuevo** | **SI** deja el folio automático. **NO** permite escribir el folio. |
+| **Folio de Matrícula** | Folio del libro. SINAI lo calcula según el **Método de foliación**. |
+| **Método de foliación** | Se toma de la configuración del calendario y no se edita. |
+| **Grado al que aspira** | Opcional. |
 
-En este bloque se consigna la información académica de la matrícula del estudiante:
+</GuideDataTable>
 
-- Sede educativa.
-- Grupo.
-- Número de matrícula (asignado automáticamente por el sistema en orden consecutivo o de forma manual si se prefiere).
-- Código anterior (en caso de que el estudiante provenga de otra plataforma o registro previo).
-- Fecha de matrícula.
-- Condición del estudiante (nuevo o antiguo).
-- Número del libro de matrícula.
-- Folio de matrícula (asignado automáticamente por el sistema).
+Debajo del formulario, SINAI aclara que *Los campos Número de Matrícula, Folio de Matrícula y Código del Estudiante están sujetos a validación y asignación final al completar el proceso de registro.*
 
-#### Información del Establecimiento de Origen
+#### 5. Información del establecimiento de origen
 
-En este último bloque se debe registrar la información de procedencia del estudiante:
+- **Establecimiento origen**, con la casilla **Proviene del sector privado?**
+- **Grado** y **Año** cursados en el establecimiento de origen.
+- **Situación Académica** con la que llega.
+- **Observaciones.**
+- **Estado** de la matrícula. Por defecto es **MATRICULADO**. **INSCRITO** aparece solo si la institución lo tiene habilitado.
+- **Fotografía** del estudiante.
+- **Fecha del Estado**, que SINAI llena con la fecha del día.
 
-- Establecimiento educativo de origen.
-- Año y grado cursado.
-- Situación académica.
-- Observaciones (si aplica alguna anotación específica sobre el estudiante).
-- Estado en el que quedará el estudiante registrado.
-- Carga de la fotografía del estudiante.
+#### 6. Guardar y continuar
 
-Para finalizar el proceso, haga clic en el botón verde “Guardar y Continuar”.
+1. Revise los campos obligatorios.
+2. Haga clic en **Guardar y Continuar**.
 
-Una vez guardada la información, podrá visualizar el formulario con los datos registrados del estudiante, en estado “Inscrito” o “Matriculado”, tal como se muestra en la siguiente imagen. <GuideImageTrigger src={"/images/wordpress/2023/11/Ficha-de-Matricula.jpg"} alt={"Captura de Ficha de Matricula"}>Ver ejemplo</GuideImageTrigger>
+Antes de guardar, SINAI busca duplicados en la institución:
 
+- Mismo tipo y número de documento: *El tipo y número de documento del estudiante ya se encuentra registrado. Por favor verifique*
+- Mismos apellidos, nombres y número de documento, o mismos apellidos, nombres y fecha de nacimiento: *El estudiante que intenta registrar ya existe. Por favor verifique.*
 
+SINAI resalta en amarillo los campos que coinciden.
 
-### Caracterizar un estudiante
+Si todo está bien, SINAI:
 
-El formulario de caracterización se encuentra dividido en tres bloques de información, los cuales deben diligenciarse con precisión, ya que los datos registrados son fundamentales para el SIMAT y para futuras solicitudes de informes del MEN o de las Secretarías de Educación.
+1. Registra al estudiante y su matrícula en el grupo elegido.
+2. Crea el usuario del estudiante con el número de documento.
+3. Registra la novedad de matrícula inicial y los requisitos de matrícula que debe cumplir.
+4. Abre la ficha del estudiante.
 
-#### Situación Socioeconómica
+<GuideCallout type="warning">
+  Si aparece *No se pudo registrar la matricula. El proceso de registro fue anulado, por favor revise los datos e intente nuevamente.*, el estudiante no quedó registrado. Corrija los datos y vuelva a guardar.
+</GuideCallout>
 
-En este bloque se registra la información socioeconómica del entorno familiar del estudiante, incluyendo los siguientes datos:
+#### 7. Completar la ficha del estudiante
 
-- Estrato.
-- Nivel del Sisbén y Sisbén III.
-- Número del carné Sisbén III.
-- Código del programa Familias en Acción (si es beneficiario).
-- Condición de hijo o madre cabeza de familia.
-- EPS a la que se encuentra afiliado.
-- IPS donde recibe la atención médica.
-- Talla y peso del estudiante.
-- Número de hermanos en la institución.
-- Pertenencia a algún grupo étnico específico.
+La ficha muestra arriba el nombre, el código, el número de matrícula, el libro, el folio y el documento, con los botones **Imprimir Folio** y **Volver a la lista**. Debajo están las pestañas **Información Básica**, **Caracterización**, **Información Familiar**, **Matrícula**, **Historial de Novedades**, **Imprimir Folio**, **Anotaciones** y **Requisitos de Matrícula**.
 
-#### Información de Víctimas del Conflicto
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/ficha-estudiante.jpg" alt="Ficha del estudiante con sus datos de matrícula, las pestañas y la pestaña Información Básica">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En este bloque se registra información relacionada con la condición de víctima del conflicto armado. Diligencie los siguientes campos:
+**Caracterización**
 
-- Seleccione si el estudiante es desplazado o no.
-- Indique si posee certificado de desplazamiento, en caso afirmativo.
-- Registre la fecha de desplazamiento y el municipio expulsor.
-- Seleccione si el estudiante es desmovilizado o no.
-- Indique si es hijo de persona desmovilizada.
-- Finalice este bloque seleccionando si el estudiante es víctima de minas antipersonal o no.
+Diligencie los tres bloques y haga clic en **Guardar**:
 
-#### Discapacidades, Talentos y Capacidades Excepcionales
+- **Situación Socioeconómica:** Sisbén, estrato, Familias en Acción, madre cabeza de familia, EPS, IPS, talla, peso, hermanos en la institución, grupo étnico y campesino.
+- **Información Víctimas del Conflicto:** resguardo, desplazamiento con certificado, fecha y municipio expulsor, desmovilización y víctima de minas.
+- **Discapacidades, Talentos y Capacidades Excepcionales.**
 
-En este bloque debe registrar la información relacionada con las condiciones especiales o talentos del estudiante:
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/ficha-caracterizacion.jpg" alt="Pestaña Caracterización con Situación Socioeconómica e Información Víctimas del Conflicto">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- Seleccione en la lista desplegable si el estudiante presenta alguna discapacidad (recuerde solicitar el certificado médico correspondiente).
-- Indique si el estudiante posee alguna capacidad o talento excepcional.
-- Una vez completados los campos, haga clic en el botón verde “Guardar” para finalizar el registro.
+Esta información se usa en los reportes al SIMAT y en los informes que solicitan el MEN y las secretarías de educación.
 
-Importante: Los datos diligenciados en los tres bloques de este formulario son de vital importancia para el registro en SIMAT y para futuras solicitudes de información por parte del MEN o las Secretarías de Educación.
+**Información Familiar**
 
-Al finalizar y guardar el formulario, podrá visualizar una ventana similar a la que se muestra en la siguiente imagen. <GuideImageTrigger src={"/images/wordpress/2023/11/Caracterizacion.png"} alt={"Captura de Caracterizacion"}>Ver ejemplo</GuideImageTrigger>
+1. Escriba el número de documento del familiar en **Buscar documento del Acudiente...** y haga clic en la lupa.
+2. Si SINAI muestra *Se encontró un acudiente con el número de documento relacionado.*, revise los datos y haga clic en **Asignar** para relacionarlo con el estudiante.
+3. Si muestra *No se encontró un acudiente con el número de documento relacionado.*, diligencie apellidos, nombres, tipo y número de documento, fecha de nacimiento, dirección, teléfono, correo, **Parentesco**, profesión y ocupación, marque **Acudiente** si corresponde y haga clic en **Crear**.
 
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/ficha-informacion-familiar.jpg" alt="Pestaña Información Familiar con el buscador por documento y el formulario del familiar">
+  Ver ejemplo
+</GuideImageTrigger>
 
+Los familiares relacionados aparecen en la tabla de la misma pestaña. Para la gestión completa de acudientes, consulte [Acudientes](/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/informacion-de-acudientes).
 
-### Registrar información de familiares y/o acudiente
+**Requisitos de Matrícula**
 
-El formulario de información familiar permite registrar los datos básicos de los familiares y/o acudientes del estudiante.
+1. En **Seleccione el requisito**, elija el documento.
+2. En **Archivo**, seleccione el archivo y haga clic en **Cargar Archivo**. Si se carga, SINAI muestra *Archivo cargado correctamente*.
+3. En la tabla **Requisitos del Estudiante**, marque **Cumple**, escriba la observación o el plazo si aplica y haga clic en **Guardar Cambios**.
 
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/ficha-requisitos.jpg" alt="Pestaña Requisitos de Matrícula con la lista de requisitos y los botones Cargar Archivo y Guardar Cambios">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Antes de realizar un nuevo registro, es importante verificar si la persona ya se encuentra registrada en la plataforma para evitar duplicados.
+Los archivos no pueden superar 2 MB. Si lo superan, SINAI muestra *No puede adjuntar archivos de tamaño superior a 2MB. Comprima los archvios o realice varios envios.*
 
-#### Verificar si el acudiente o familiar ya está registrado
+**Imprimir Folio**
 
-Siga los pasos que se indican a continuación:
+Haga clic en **Imprimir Folio**, arriba a la derecha. SINAI abre la pestaña **Imprimir Folio** con el registro de matrícula del estudiante. Use el icono de guardar del visor para descargarlo en el formato que necesite o el de la impresora para imprimirlo.
 
-1. Digite el número de documento del acudiente y/o familiar en el campo ubicado en la parte superior derecha del formulario, sin puntos ni comas.
-2. Haga clic en el ícono de la lupa para realizar la búsqueda.
-3. Si el documento ya está registrado en la base de datos, el sistema cargará automáticamente los datos básicos del acudiente y/o familiar.
-4. Actualice la información que considere pertinente e indique si es el acudiente actual del estudiante seleccionado.
-5. Finalmente, haga clic en el botón verde “Guardar cambios” para registrar la actualización.
+<GuideImageTrigger src="/images/guides/estudiantes-nuevos/ficha-imprimir-folio.jpg" alt="Pestaña Imprimir Folio con el registro de matrícula del estudiante en el visor">
+  Ver ejemplo
+</GuideImageTrigger>
 
-También puede registrar o actualizar acudientes después de realizar la inscripción del estudiante.
+#### 8. Permisos
 
-
-#### Inscribir un acudiente nuevo
-
-Si al realizar la búsqueda por número de documento el sistema muestra un mensaje indicando que no existe un registro previo, deberá realizar el registro manual del nuevo acudiente.
-
-Complete la información solicitada en el formulario:
-
-- Apellidos y nombres.
-- Tipo y número de documento.
-- Fecha de nacimiento (tal como aparece en el documento de identidad).
-- Dirección de residencia.
-- Teléfono de contacto.
-- Correo electrónico.
-- Parentesco con el estudiante.
-- Seleccione si es el acudiente actual del estudiante.
-
-Para finalizar, haga clic en el botón verde “Crear Acudiente”.
-Una vez guardada la información, el sistema mostrará una ventana de confirmación similar a la siguiente imagen.
-
-Importante:
-Es fundamental que el formulario contenga toda la información completa y actualizada del acudiente, ya que estos datos conforman la base de datos institucional utilizada para identificar o localizar familiares y acudientes cuando sea necesario.
-
-### Imprimir folio de matricula
-
-Para descargar e imprimir el folio individual de matriculade debe seguir los siguientes pasos.
-
-1. Clic en el botón azul ubicado en la parte superior derecha de su pantalla.
-2. Clic en el icono guardar ubicado en la parte superior del folio de matrícula que evidencia en la pantalla, debe seleccionar el formato en el desea descargar el folio y finaliza realizando el proceso de impresión. <GuideImageTrigger src={"/images/wordpress/2023/11/Folio-de-Matricula.png"} alt={"Captura de Folio de Matricula"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-### Cargar documentos de requisitos para la matrícula
-
-Para cargar los requisitos de matrícula del estudiante debe seguir los siguientes pasos.
-
-1. Estar ubicado el submenú Requisitos de matricula
-2. Seleccione con un clic el requisito que desea cargar
-3. Clic en seleccionar archivo
-4. Clic en Cargar archivo
-5. Clic en Guardar cambios
-
-<GuideChecklist
-  title="Antes de finalizar el registro"
-  items={[
-    'Verifiqué los datos de identificación del estudiante.',
-    'Completé la información de contacto y del acudiente.',
-    'Guardé la información requerida en los formularios.',
-    'Cargué los documentos solicitados para la matrícula.',
-  ]}
-/>
-
+Registrar un estudiante nuevo y actualizar su ficha exigen un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso y no guarda. Solicite el permiso faltante al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Estudiantes nuevos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Aparece «El tipo y número de documento del estudiante ya se encuentra registrado». ¿Qué hago?"}>
+    El estudiante ya tiene una matrícula en la institución con ese documento, en este u otro calendario. No lo registre de nuevo: búsquelo con el buscador de estudiantes de la parte superior. Si viene de un calendario anterior, use las opciones de renovación o reingreso de **Matrícula**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Estudiantes nuevos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no aparece el grupo en la lista Grupo?"}>
+    La lista muestra los grupos activos de la **Sede** elegida en el calendario seleccionado en la parte superior de SINAI. Cambie la sede o verifique que el calendario sea el correcto.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Estudiantes nuevos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo cambiar el número de matrícula o el folio?"}>
+    SINAI los propone y los vuelve a calcular al guardar. El folio se puede escribir cuando **Estudiante Nuevo** está en **NO**. El método de foliación lo define la configuración del calendario en **Establecimiento → Calendarios**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Con qué usuario ingresa el estudiante a SINAI?"}>
+    Al guardar, SINAI crea el usuario del estudiante con su número de documento. La ficha muestra ese usuario en **Información Básica**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué pasa si el calendario seleccionado no es el del año en curso?"}>
+    SINAI pide confirmar el registro en ese calendario. Si se equivocó de año, cancele, cambie el calendario en la parte superior y vuelva a abrir el formulario.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"La fotografía no se carga. ¿Qué reviso?"}>
+    Use una imagen liviana. Si el archivo es demasiado grande, SINAI muestra «La fotografía no puede tener un tamaño  superior a 512KB». También puede cargarla después desde la opción de fotografías de **Matrícula**.
   </GuideFAQItem>
 </GuideFAQ>

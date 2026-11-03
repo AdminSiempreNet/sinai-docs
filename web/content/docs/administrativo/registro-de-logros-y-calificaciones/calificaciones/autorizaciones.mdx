@@ -1,11 +1,13 @@
 ---
 title: "Autorizaciones"
-description: "Conozca las opciones de autorizaciones y siga el procedimiento correspondiente en SINAI."
+description: "Autorice a un docente a registrar en una planilla de un periodo cerrado, por grupo, asignatura o docente, con fecha límite."
 guide: true
 wordpressId: 29333
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/autorizaciones/"
-lastModified: "2023-11-14 18:19:27"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,82 +16,151 @@ lastModified: "2023-11-14 18:19:27"
 
 ## Guía paso a paso
 
-### Autorizaciones
+### 1. ¿Qué es Autorizaciones?
 
-### Pasos para realizar el registro de autorizaciones
+**Autorizaciones** le permite habilitar a un docente para que registre información de un periodo cuyo registro ya cerró, por ejemplo calificaciones, planeación o inasistencias. Cada autorización tiene una fecha límite, el **Plazo**.
 
-1. Ingrese al menú principal **“Personal”** y seleccione la opción **“Autorizaciones”**.
+La pantalla tiene dos partes:
 
-2. En la ventana del formulario **“Registro de Autorizaciones”**, ubicada en la parte izquierda de la pantalla, seleccione el **“Tipo de Autorización”** en la pestaña desplegable.
+- **Registro de Autorizaciones**, a la izquierda: el formulario para crear autorizaciones.
+- **Autorizaciones Registradas**, a la derecha: las autorizaciones del docente, el tipo y el periodo seleccionados.
 
-3. Elija el **“Método”** para la autorización. Este puede ser:
+Ingrese a **Personal → Autorizaciones**.
 
-    - **Por Grupo**
+<GuideImageTrigger src="/images/guides/autorizaciones/pantalla-autorizaciones.jpg" alt="Pantalla Autorizaciones con el formulario Registro de Autorizaciones y la tabla Autorizaciones Registradas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-    - **Por Asignatura**
+Los dos botones **Ayuda** abren esta guía. Las autorizaciones se registran en el calendario seleccionado en la parte superior de SINAI.
 
-    - **Por Docente**
+#### 2. Tipo de autorización
 
-4. Complete los campos según el método seleccionado:
+En **Tipo de Autorización**, elija qué podrá registrar el docente:
 
-    - **Si eligió “Por Grupo”**: seleccione el **Docente**, **Grupo** y **Período**.
+- **Calificaciones por Asignatura**
+- **Calificación Definitiva Directa**
+- **Calificaciones Especial Preescolar**
+- **Planeación**
+- **Recuperaciones del Periodo**
+- **Inasistencias Detalladas**
+- **Inasistencias Consolidadas**
+- **Valoración Educación Inclusiva**
+- **Comportamiento**
 
-    - **Si eligió “Por Asignatura”**: seleccione el **Docente**, **Grupo**, **Período** y **Asignatura**.
+Al cambiar el tipo, la tabla de la derecha muestra las autorizaciones de ese tipo.
 
-    - **Si eligió “Por Docente”**: seleccione el **Docente** y el **Período**.
+#### 3. Elegir el método
 
-5. Establezca la **fecha límite** para la autorización.
+El **Método** define a qué planillas del docente se aplica la autorización:
 
-6. Escriba una **observación** con el motivo de la autorización.
+<GuideDataTable>
 
-7. Haga clic en el botón **“Agregar Autorización”** para guardar los cambios.
+| Método | Qué autoriza | Campos |
+| --- | --- | --- |
+| **Por Grupo** | Todas las asignaturas que el docente tiene asignadas en el grupo. | **Docente**, **Grupo** y **Período**. |
+| **Por Asignatura** | Solo las asignaturas que seleccione del grupo. | **Docente**, **Grupo**, **Período** y **Asignatura**. |
+| **Por Docente** | Todas las asignaturas y grupos de la asignación académica del docente en el calendario. | **Docente** y **Período**. |
 
+</GuideDataTable>
 
-### Como Editar y Eliminar Autorizaciones
+Con el tipo **Comportamiento**, el único método es **Por Docente**. La autorización se crea para la asignatura de comportamiento de los grupos en los que el docente es director de grupo.
 
-Editar y eliminar autorizaciones son procesos sencillos. En la misma ventana del módulo, encontrará un panel destinado para la visualización de todas las autorizaciones registradas, identificado con el nombre **“Autorizaciones Registradas”**.
-Siga los pasos descritos a continuación:
+La lista **Docente** muestra los funcionarios activos con cargo docente. **Grupo** muestra los grupos en los que el docente tiene asignación académica.
 
+<GuideImageTrigger src="/images/guides/autorizaciones/metodo-por-asignatura.jpg" alt="Formulario Registro de Autorizaciones con el método Por Asignatura y la lista de asignaturas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-#### **Modificar Autorizaciones**
+#### 4. Agregar la autorización
 
-1. En la lista de **Autorizaciones Registradas**, ubique la autorización que desea modificar.
+1. Seleccione el **Tipo de Autorización** y el **Método**.
+2. Seleccione el **Docente** y, según el método, el **Grupo**.
+3. Seleccione el **Período**.
+4. Si el método es **Por Asignatura**, seleccione una o varias asignaturas en la lista. Para elegir varias, mantenga oprimida la tecla Ctrl mientras hace clic.
+5. En el calendario **Autorizar Hasta**, haga clic en la fecha límite. Por defecto queda la fecha de hoy.
+6. En **Observaciones y/o motivos**, escriba el motivo de la autorización.
+7. Haga clic en **Agregar Autorización**.
 
-2. Al lado derecho de cada autorización encontrará el botón **“Modificar”**. haga clic en él.
+SINAI confirma con uno de estos mensajes, según el método:
 
-3. Una vez habilitados los campos, podrá ajustar la **fecha de cierre** (columna _Plazo_) y el texto de las **observaciones**.
+- **Por Grupo:** *Se agregarón todas las autorizaciones el grupo seleccionado*.
+- **Por Asignatura:** *Se agregó la autorización para la asignatura seleccionada*.
+- **Por Docente:** *Se agregaron las autorizaciones para las planillas del docente seleccionado*.
 
-4. Después de realizar los cambios, haga clic en **“Actualizar”** (ubicado en el mismo lugar donde antes aparecía el botón _Modificar_).
+El docente recibe una notificación en SINAI con la autorización del periodo.
 
-5. Si desea cancelar el proceso de modificación, haga clic en la palabra **“Cancelar”**. <GuideImageTrigger src={"/images/wordpress/2023/11/Modificar-autorizaciones.gif"} alt={"Captura de Modificar autorizaciones"}>Ver ejemplo</GuideImageTrigger>
+Si ya existe una autorización para esas planillas, SINAI no crea otra y muestra un aviso. Por ejemplo, **Por Asignatura** muestra *La autorización ya existe, solamente debe de actualizar la fecha del plazo y la observación, permiso 307*. En ese caso, cambie el **Plazo** de la autorización existente en la tabla.
 
+Si el método es **Por Asignatura** y no seleccionó ninguna, SINAI muestra *Debe selecciona una asignatura de la lista para este proceso*.
 
+#### 5. Consultar las autorizaciones
 
-#### **Eliminar Autorizaciones**
+La tabla **Autorizaciones Registradas** muestra las autorizaciones del **Tipo de Autorización**, el **Docente** y el **Período** seleccionados en el formulario.
 
-Existen dos formas de eliminar autorizaciones, una es eliminar una autorización de la lista, la otra es eliminar todas las autorizaciones visibles.
+<GuideDataTable>
 
-**Eliminar una autorización de la lista:** Identifique en la lista la autorización que desea eliminar, al lado derecho de la misma verá el ícono de eliminación (botecito de basura de color rojo), haga clic en este y luego clic en el botón “Aceptar” del cuadro emergente de confirmación. <GuideImageTrigger src={"/images/wordpress/2023/11/Eliminar-una-autorizacion-de-la-lista-1024x555.gif"} alt={"Captura de Eliminar una autorizacion de la lista"}>Ver ejemplo</GuideImageTrigger>
+| Columna | Qué muestra |
+| --- | --- |
+| **Grupo** y **Asignatura** | Planilla autorizada. |
+| **Autorizado por** | Usuario que registró la autorización. |
+| **Fecha y Hora** | Fecha del registro. |
+| **Plazo** | Fecha límite de la autorización. Se puede cambiar. |
+| **Observaciones** | Motivo escrito al crear la autorización. |
 
+</GuideDataTable>
 
+La tabla muestra 30 autorizaciones por página.
 
-**Eliminar todas las autorizaciones visibles**: En la parte superior derecha de la lista de Autorizaciones Registradas, podrá ver el botón “Eliminar Todas”, haga clic en este, aparecerá el cuadro emergente de confirmación, en el cual deberá hacer clic en “Aceptar”. <GuideImageTrigger src={"/images/wordpress/2023/11/Eliminar-todas-las-autorizaciones-visibles-1024x555.gif"} alt={"Captura de Eliminar todas las autorizaciones visibles"}>Ver ejemplo</GuideImageTrigger>
+#### 6. Cambiar el plazo
 
+1. En la columna **Plazo**, haga clic en la fecha y elija una nueva en el calendario, o escríbala con el formato año/mes/día, por ejemplo 2026/11/15.
+2. Haga clic en el botón verde de guardar de esa fila.
 
+SINAI muestra **Cambios guardados correctamente**. Si la fecha no es válida, muestra *Fallo la modificacion de la fecha, recuerde que debe ingresar una fecha válida*.
 
+Para guardar el plazo de todas las filas de la página a la vez, cambie las fechas y haga clic en el botón verde del encabezado de la tabla. Las filas con fecha no válida no se guardan.
+
+<GuideCallout>
+  Desde la tabla solo se cambia el **Plazo**. La observación no se modifica después de crear la autorización.
+</GuideCallout>
+
+#### 7. Eliminar autorizaciones
+
+- **Una autorización:** haga clic en el botón rojo de la fila y confirme *¿Confirma que desea eliminar esta autorización?* SINAI muestra **Autorización eliminada correctamente**.
+- **Todas las de la página:** haga clic en el botón rojo del encabezado y confirme *¿Confirma que desea eliminar todas las autorizaciones del docente seleccionado?* SINAI elimina las autorizaciones que se ven en la página de la tabla y muestra **Se eliminaron correctamente todas las autorizaciones**.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. El docente deja de tener acceso a esas planillas si el periodo está cerrado.
+</GuideCallout>
+
+#### 8. Permisos
+
+El rector registra, modifica y elimina autorizaciones sin un permiso adicional. Los demás usuarios administrativos necesitan el permiso Nº 307; si no lo tienen, SINAI muestra **No tiene asignado el permiso Nº307** y no aplica el cambio.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Autorizaciones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Cuándo necesita un docente una autorización?"}>
+    Cuando ya cerró la fecha de registro del periodo en el cronograma y el docente aún debe registrar información. Con la autorización, el docente puede registrar en esas planillas hasta la fecha del **Plazo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Autorizaciones» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Qué método debo usar?"}>
+    **Por Grupo** autoriza todas las asignaturas del docente en un grupo. **Por Asignatura** autoriza solo las asignaturas que seleccione. **Por Docente** autoriza todas las planillas del docente en el calendario. Para **Comportamiento** solo está disponible **Por Docente**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Autorizaciones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Aparece un aviso de que ya hay autorizaciones. ¿Qué hago?"}>
+    Ya existe una autorización para esas planillas en el periodo. No necesita crearla de nuevo: cambie la fecha en la columna **Plazo** de la tabla y guarde. También puede eliminar las autorizaciones existentes y crearlas otra vez, o usar el método **Por Asignatura**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No veo la autorización que acabo de crear. ¿Dónde está?"}>
+    La tabla muestra las autorizaciones del **Tipo de Autorización**, el **Docente** y el **Período** seleccionados en el formulario. Verifique que los tres coincidan con la autorización y que el calendario de la parte superior sea el correcto.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo cambiar la observación de una autorización?"}>
+    No. Desde la tabla solo se cambia el **Plazo**. Si necesita otra observación, elimine la autorización y créela de nuevo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"El docente no aparece en la lista. ¿Por qué?"}>
+    La lista **Docente** muestra solo funcionarios activos con cargo docente en la planta de la institución. Revise el estado y el cargo del funcionario en **Personal**.
   </GuideFAQItem>
 </GuideFAQ>

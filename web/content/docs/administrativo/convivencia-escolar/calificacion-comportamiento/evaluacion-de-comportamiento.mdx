@@ -1,231 +1,51 @@
 ---
 title: "Comportamiento"
-description: "Registre y configure la evaluación de la convivencia escolar en la versión tradicional o en la nueva versión de la planilla."
+description: "Configure la planilla de Evaluación de la Convivencia Escolar y registre la valoración, los descriptores y las observaciones de cada estudiante."
 guide: true
 wordpressId: 29690
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/a-comportamiento/"
-lastModified: "2026-10-15"
-lastReviewed: "2026-10-15"
+lastModified: "2026-10-29"
+lastReviewed: "2026-10-29"
 ---
 
-En SINAI **coexisten dos versiones** de la planilla de Evaluación de la Convivencia Escolar. Las dos guardan la misma información: valoración, descriptores y observaciones de cada estudiante por periodo. Desde cualquiera de ellas puede pasar a la otra con el botón **Nueva Versión** o **Versión anterior**.
-
-<PlanillaGuideSwitcher
-  storageKey="sinai-comportamiento-version"
-  queryKey="version"
-  cardLayout="detailed"
-  eyebrow="Versiones disponibles"
-  title="Elija la versión de la planilla que usa"
-  introPrimary="La planilla de comportamiento puede abrirse en la versión tradicional o en la nueva versión, según la configuración de su institución. Ambas están activas."
-  introSecondary="Revise las capturas, abra la vista de ejemplo y confirme cuál coincide con lo que ve en SINAI. Así verá únicamente la documentación de la versión que usted usa."
-  previewKicker="Vista de la planilla"
-  confirmLabel="Esta es mi versión"
-  selectLabel="Seleccionar esta versión"
-  changeLabel="Cambiar versión"
-  selectedLabel="Versión seleccionada"
->
-
-<PlanillaGuide
-  id="tradicional"
-  title="Versión tradicional"
-  description="Planilla de Evaluación de la Convivencia Escolar con listas de descriptores en el encabezado, botones de autollenado y ventana de configuraciones."
-  image="/images/guides/evaluacion-de-comportamiento/version-tradicional.png"
-  status="ready"
->
-
 ## Video tutorial
 
-<GuideVideos compact>
-<YouTube id="o0izzKyow78" title="Comportamiento" odyseeUrl="https://odysee.com/@AndresGoDu:a/CONFIGURACION-COMPORTAMIENTO---M%C3%B3dulo-Administrativo---Nueva-Versi%C3%B3n:f07d3f444f1385b1b01e1e331a5197495e16fbee" />
-</GuideVideos>
+<GuideVideoPlaylist
+  title="Ruta de aprendizaje: Comportamiento"
+  description="Primero configure la planilla y después registre la evaluación de los estudiantes."
+  videos={[
+    { id: 'Rh3kgT3Zm-Q', title: '1. Configurar la planilla de comportamiento', description: 'Defina el formato de valoración, los descriptores, las observaciones, el cálculo y las escalas.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/CONFIGURACION-COMPORTAMIENTO---M%C3%B3dulo-Administrativo---Nueva-Versi%C3%B3n:f07d3f444f1385b1b01e1e331a5197495e16fbee' },
+    { id: 'nlixMbuKav0', title: '2. Evaluar el comportamiento', description: 'Registre la valoración, los descriptores y las observaciones de los estudiantes.', odyseeUrl: 'https://odysee.com/@AndresGoDu:a/Comportamiento-Admin:3' },
+  ]}
+/>
 
 ## Guía paso a paso
 
 ### 1. Ingresar a la planilla
 
-La planilla de comportamiento registra la valoración, los descriptores y las observaciones de convivencia de cada estudiante en el periodo. **La definición de su estructura es responsabilidad de los directivos**, porque la evaluación del comportamiento es un proceso de gran importancia para los estudiantes.
+La planilla de **Evaluación de la Convivencia Escolar** registra la valoración, los descriptores y las observaciones de comportamiento de cada estudiante en el periodo. **La definición de su estructura es responsabilidad de los directivos**, porque la evaluación del comportamiento es un proceso de gran importancia para los estudiantes.
 
 Ingrese por:
 
 **Evaluación → Comportamiento**
 
-SINAI abre la **Planilla de Evaluación de la Convivencia Escolar**. Si su institución no tiene configurado un modelo de comportamiento, SINAI se lo indica en lugar de abrir la planilla.
+- Si la institución tiene varios modelos de comportamiento, SINAI muestra primero **Seleccionar Modelo de Evaluación del Comportamiento**. Elija el **Modelo** y pulse **Seleccionar**.
+- Si la institución no tiene un modelo configurado, SINAI muestra «No se ha configurado un modelo de Evaluación del Comportamiento para esta Institución Educativa».
 
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/tradicional-planilla.jpg" alt="Planilla de Evaluación de la Convivencia Escolar en la versión tradicional, con filtros, botones y estudiantes del grupo">
-  Ver ejemplo
-</GuideImageTrigger>
-
-En el encabezado de la planilla encontrará:
-
-- **Nueva Versión:** abre la misma planilla en la nueva versión.
-- **Botón de ayuda:** abre la guía en línea.
-- **Engranaje:** abre las configuraciones de la planilla. Solo lo ven los usuarios administrativos.
-- **Agregar descriptores:** solo aparece cuando los descriptores se manejan **por director de grupo**.
-
-#### 2. Seleccionar el docente, el grupo y el periodo
-
-<GuideDataTable>
-
-| Filtro | Qué hace |
-| --- | --- |
-| **Docente** | Como administrativo puede elegir **Todos** o un director de grupo. El docente ve su propio nombre y no puede cambiarlo. |
-| **Grupo** | Grupos que dirige el docente seleccionado. Con **Todos** aparecen todos los grupos. |
-| **Periodo** | Periodo que se va a evaluar. Por defecto aparece el periodo activo de la planilla. |
-
-</GuideDataTable>
-
-Al cambiar cualquiera de los filtros, SINAI carga los estudiantes del grupo.
-
-<GuideCallout>
-  Si el periodo está cerrado, SINAI muestra «El periodo actual está cerrado, no se puede modificar la planilla de calificaciones». Solicite la apertura del periodo antes de registrar cambios.
-</GuideCallout>
-
-#### 3. Registrar la valoración
-
-La columna **Valoración** depende de la configuración de la planilla:
-
-- **Nota numérica y valoración:** escriba la nota en **Nota** y SINAI calcula el desempeño. Si la nota está fuera del rango de la escala, se guarda en 0.
-- **Solo valoración:** elija el desempeño en la lista **Desempeño**.
-- **Ninguna:** la planilla no muestra valoración.
-
-El botón **▼** de **Nota** o de **Desempeño** llena toda la columna con el valor del primer estudiante de la lista.
-
-<GuideCallout type="warning">
-  Los botones ▼ guardan de inmediato en todos los estudiantes del grupo. Antes de usarlos, confirme que el primer estudiante tiene el valor que quiere copiar.
-</GuideCallout>
-
-#### 4. Asignar descriptores
-
-Cada estudiante tiene hasta 10 columnas de descriptores. Puede llenarlas de tres formas:
-
-- **Celda por celda:** escriba el código del descriptor en la celda. El código debe existir en la lista de descriptores.
-- **Por columna:** elija el descriptor en la lista del encabezado de la columna, marque los estudiantes y pulse **+**. Para quitar el descriptor de esa columna, elija **Borrar**.
-- **Varias columnas a la vez:** elija descriptores en las listas de los encabezados, marque los estudiantes y pulse **Asignar Descriptores**. SINAI pregunta «¿Confirma que desea asignar los descriptores seleccionado a los estudiantes seleccioandos?».
-
-Para marcar estudiantes, use la casilla junto a cada nombre o las casillas del encabezado: **TODOS** marca a todo el grupo y cada desempeño marca a los estudiantes que lo tienen.
-
-Al asignar, SINAI muestra «Se asignaron los logros a» seguido del número de estudiantes.
-
-#### 5. Escribir observaciones
-
-Si las observaciones están habilitadas, cada estudiante tiene una casilla para la observación individual. Para escribir la misma observación a varios estudiantes:
-
-1. Escriba el texto en el encabezado, en **Observación para los estudiantes seleccionados**.
-2. Pulse **▼** junto a **Observaciones**.
-3. Confirme el autollenado.
-
-#### 6. Guardar
-
-Pulse **Guardar**. SINAI muestra «Calificaciones guardadas correctamente».
-
-Si la institución tiene habilitado el cálculo por promedio, **Guardar** calcula la valoración de comportamiento a partir de las notas configuradas.
-
-#### 7. Borrar datos de estudiantes
-
-1. Marque los estudiantes.
-2. Pulse **Borrar**.
-3. Confirme «¿Confirma que desea eliminar los estudiantes seleccionados?».
-
-<GuideCallout type="warning">
-  Borrar elimina la valoración, los descriptores y las observaciones de los estudiantes marcados en el periodo. Esta acción no se puede deshacer.
-</GuideCallout>
-
-#### 8. Configurar la planilla
-
-Como administrativo, pulse el **engranaje** del encabezado. Se abre **Configuraciones de la planilla de Evaluación de la convivencia escolar**.
-
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/tradicional-configuracion.jpg" alt="Ventana de configuraciones de la planilla de convivencia escolar en la versión tradicional">
-  Ver ejemplo
-</GuideImageTrigger>
-
-<GuideDataTable>
-
-| Configuración | Opciones |
-| --- | --- |
-| **Columnas de descriptores** | 10 Columnas de Descriptores, 5 Columnas de Descriptores o Ninguna columna de Descriptores. |
-| **Modelo de valoración** | Nota numérica y valoración, Solo valoración o Ninguna. |
-| **Modelo de descriptores** | Descriptores por director de grupo o Descriptores por Institución. |
-| **Observaciones** | Habilita la columna de observaciones para los docentes. |
-
-</GuideDataTable>
-
-<GuideCallout type="warning">
-  El modelo de descriptores es de uso anual. Si necesita cambiarlo, comuníquese con servicio al cliente: el cambio puede borrar los descriptores que los docentes ya asignaron.
-</GuideCallout>
-
-Pulse **Guardar y cerrar**. SINAI muestra «Cambios guardados correctamente».
-
-En la misma ventana encontrará:
-
-- **Opciones de Promedio:** habilita el cálculo de la valoración **Por componentes** o **Por Columna**, con **Promedio Simple** o **Promedio Ponderado**.
-- **Escala:** define el desempeño y la valoración de comportamiento por nivel de desempeño. Elija **Nivel Desempeño**, escriba **Desempeño** y **Valoración**, y pulse **Agregar**. Para quitar escalas, márquelas y pulse **Eliminar**.
-
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/tradicional-escala.jpg" alt="Panel Escala con Nivel Desempeño, Desempeño, Valoración y la tabla de escalas de comportamiento">
-  Ver ejemplo
-</GuideImageTrigger>
-
-## Preguntas frecuentes
-
-<GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Por qué no puedo modificar la planilla?"}>
-    El periodo está cerrado. SINAI muestra «El periodo actual está cerrado, no se puede modificar la planilla de calificaciones». Solicite la apertura del periodo al área administrativa.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Qué significa «El docente no posee una dirección de grupo»?"}>
-    El docente seleccionado no es director de ningún grupo. Asigne la dirección de grupo antes de usar la planilla.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Por qué aparece «No has seleccionado ningun estudiante de la lista»?"}>
-    Intentó asignar descriptores o borrar sin marcar estudiantes. Marque la casilla de cada estudiante, o use **TODOS**, y repita la acción.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="04" question={"¿Por qué no veo el botón Agregar descriptores?"}>
-    Ese botón solo aparece cuando la planilla usa **Descriptores por director de grupo**. Si usa **Descriptores por Institución**, la lista de descriptores es la misma para todos los grupos.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="05" question={"¿Qué significa «No se encontró una asignatura de comportamiento»?"}>
-    El plan de estudios del grupo no tiene la asignatura de comportamiento. Comuníquese con soporte para revisar la configuración académica.
-  </GuideFAQItem>
-</GuideFAQ>
-
-</PlanillaGuide>
-
-<PlanillaGuide
-  id="nueva"
-  title="Nueva versión"
-  description="Evaluación de la Convivencia Escolar con selección por desempeño, ventanas para asignar valoración, descriptores y observaciones, y paneles de Escalas y Configuraciones."
-  image="/images/guides/evaluacion-de-comportamiento/version-nueva.png"
-  status="ready"
->
-
-## Video tutorial
-
-<GuideVideoPending>
-  - Comportamiento, nueva versión. Falta el identificador de YouTube y, si existe, la URL de Odysee.
-</GuideVideoPending>
-
-## Guía paso a paso
-
-### 1. Ingresar a la planilla
-
-La nueva versión registra la misma información que la versión tradicional, pero los cambios se acumulan en la planilla y se guardan juntos con **Guardar**.
-
-Ingrese por:
-
-**Evaluación → Comportamiento**
-
-Si SINAI abre la versión tradicional, pulse **Nueva Versión** en el encabezado. Se abre **Evaluación de la Convivencia Escolar**.
-
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/nueva-planilla.jpg" alt="Evaluación de la Convivencia Escolar en la nueva versión, con filtros, botones y estudiantes del grupo">
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/planilla.jpg" alt="Planilla Evaluación de la Convivencia Escolar con grupo y periodo seleccionados">
   Ver ejemplo
 </GuideImageTrigger>
 
 En el encabezado encontrará:
 
-- **Descriptores:** solo aparece cuando los descriptores se manejan por director de grupo.
+- **Descriptores:** solo aparece cuando los descriptores se manejan **por director de grupo**.
 - **Escalas:** abre el panel de escalas de comportamiento.
 - **Engranaje:** abre el panel **Configuraciones**.
-- **Versión anterior:** abre la planilla en la versión tradicional.
+- **Versión anterior:** abre la planilla anterior.
+
+<GuideCallout>
+  SINAI conserva la versión anterior de la planilla. Para abrirla, pulse **Versión anterior** en el encabezado. [Ver video](https://youtu.be/o0izzKyow78) · [Ver la guía de la versión anterior](/docs/administrativo/convivencia-escolar/calificacion-comportamiento/evaluacion-de-comportamiento-version-anterior)
+</GuideCallout>
 
 #### 2. Seleccionar el docente, el grupo y el periodo
 
@@ -233,72 +53,124 @@ En el encabezado encontrará:
 
 | Filtro | Qué hace |
 | --- | --- |
-| **Docente** | Con **Seleccione** aparecen todos los grupos. Si elige un docente, aparecen los grupos que dirige. |
+| **Docente** | Con **Seleccione** aparecen todos los grupos. Si elige un docente, aparecen solo los grupos que dirige. |
 | **Grupo** | Grupo que se va a evaluar. |
-| **Periodo** | Periodo que se va a evaluar. La etiqueta junto al título indica si el periodo está **Abierto**. |
+| **Periodo** | Periodo que se va a evaluar. La etiqueta junto a **Periodo** indica si está **Abierto** o cerrado para el grupo. |
 
 </GuideDataTable>
 
+Al cambiar el grupo o el periodo, SINAI carga los estudiantes del grupo.
+
+<GuideCallout>
+  Si el periodo está cerrado, **Guardar** y el botón de eliminar no están disponibles, y las celdas no se pueden editar. Solicite la apertura del periodo antes de registrar cambios.
+</GuideCallout>
+
 #### 3. Seleccionar estudiantes
 
-Las acciones de asignar y eliminar se aplican a los estudiantes seleccionados. Marque la casilla de cada estudiante o pulse **⋮** en el encabezado y elija **TODOS** o un desempeño para seleccionar a los estudiantes que lo tienen.
+Las asignaciones por grupo y la eliminación se aplican a los estudiantes seleccionados. Puede seleccionarlos de dos formas:
 
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/nueva-seleccion.jpg" alt="Menú de selección con las opciones TODOS y SUPERIOR en la nueva versión">
+- Marque la casilla junto al nombre de cada estudiante.
+- Pulse **⋮** en el encabezado de la planilla y elija **TODOS** o un desempeño. Con un desempeño quedan seleccionados los estudiantes que lo tienen.
+
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/seleccion.jpg" alt="Menú de selección con la opción TODOS y los desempeños de la escala">
   Ver ejemplo
 </GuideImageTrigger>
 
 #### 4. Registrar la valoración
 
-Escriba la valoración en la celda de cada estudiante. Según la configuración, es una nota numérica o la valoración de la escala. Si el valor no corresponde a la escala, la celda queda vacía.
+La columna **Valoración** depende de la configuración de la planilla:
+
+- **Nota numérica y valoración:** escriba la nota y SINAI muestra debajo el desempeño que le corresponde.
+- **Solo valoración:** escriba la valoración de la escala de comportamiento.
+- **Ninguna:** la planilla no muestra la columna.
+
+Si el valor no corresponde a la escala, la celda queda vacía.
 
 Para asignar la misma valoración a varios estudiantes:
 
 1. Seleccione los estudiantes.
 2. Pulse la **varita mágica** de **Valoración**.
-3. En **Asignar Valoración**, escriba la valoración y pulse **Asignar**.
+3. En **Asignar Valoración**, escriba la valoración.
+4. Pulse **Asignar**.
+
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/asignar-valoracion.jpg" alt="Ventana Asignar Valoración con la valoración y los estudiantes seleccionados">
+  Ver ejemplo
+</GuideImageTrigger>
 
 <GuideCallout>
-  Si la celda de valoración está deshabilitada, la planilla está cerrada o la configuración no permite editar la valoración del periodo o la valoración final.
+  Si la celda de valoración está deshabilitada, el periodo está cerrado o la configuración no permite editar la valoración del periodo o la valoración final.
 </GuideCallout>
 
 #### 5. Asignar descriptores
 
-Escriba el código del descriptor en cada celda. El código debe existir en la lista de descriptores; si no existe, la celda queda vacía.
+La planilla tiene 10, 5 o ninguna columna de descriptores, según la configuración. Escriba el código del descriptor en cada celda. El código debe existir en la lista de descriptores; si no existe, la celda queda vacía. Al pasar el cursor por la celda, SINAI muestra el texto del descriptor.
 
-Para llenar una columna completa:
+Para llenar una columna a varios estudiantes:
 
 1. Seleccione los estudiantes.
 2. Pulse **+** sobre la columna.
-3. En **Asignar descriptores**, elija el descriptor.
+3. En **Asignar descriptores**, elija el descriptor. SINAI muestra el **Criterio seleccionado**.
 4. Pulse **Asignar a la columna** con el número de la columna.
 
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/nueva-asignar-descriptores.jpg" alt="Ventana Asignar descriptores con la lista de descriptores, el número de estudiantes seleccionados y el botón Asignar a la columna 1">
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/asignar-descriptores.jpg" alt="Ventana Asignar descriptores con un descriptor elegido y los estudiantes seleccionados">
   Ver ejemplo
 </GuideImageTrigger>
 
 La ventana indica cuántos estudiantes están seleccionados. Si no hay ninguno, muestra «No hay estudiantes seleccionados» y el botón no está disponible.
 
 <GuideCallout type="warning">
-  La opción [Eliminar Descriptor], al asignar eliminará los criterios existentes en la columna seleccionada, para los estudiantes seleccionados.
+  La opción [Eliminar Descriptor], al asignar eliminará los criterios existentes en la columna seleccionada, para los estudiantes seleccionados
 </GuideCallout>
 
-#### 6. Escribir observaciones
+#### 6. Gestionar los descriptores del grupo
 
-Escriba la observación en la casilla de cada estudiante. Para escribir la misma observación a varios estudiantes, selecciónelos, pulse la **varita mágica** de **Observaciones**, escriba el texto en **Asignar observaciones** y pulse **Asignar**.
+Cuando los descriptores se manejan **por director de grupo**, el botón **Descriptores** abre **Gestionar descriptores**. La lista corresponde al grupo y al periodo seleccionados.
 
-#### 7. Guardar
+- **Agregar:** escriba el texto en **Escribir texto del Descriptor** y pulse **Agregar**.
+- **Editar:** pulse el ícono de edición junto al descriptor, corrija el texto y pulse el botón de guardar.
+- **Eliminar:** marque los descriptores y pulse el botón rojo de la **papelera**.
+
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/gestionar-descriptores.jpg" alt="Ventana Gestionar descriptores para registrar los descriptores del grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Estos cambios se registran de inmediato, sin pulsar **Guardar** en la planilla. Si pulsa **Agregar** sin escribir texto, SINAI muestra «No se ha escrito un descriptor».
+
+Cuando los descriptores son **por Institución**, la lista es la misma para todos los grupos y se administra en [Logros comportamiento](/docs/administrativo/convivencia-escolar/calificacion-comportamiento/logros-comportamiento).
+
+#### 7. Escribir observaciones
+
+Si las observaciones están habilitadas, cada estudiante tiene una casilla para la observación. Para escribir la misma observación a varios estudiantes:
+
+1. Seleccione los estudiantes.
+2. Pulse la **varita mágica** de **Observaciones**.
+3. En **Asignar observaciones**, escriba el texto.
+4. Pulse **Asignar**.
+
+#### 8. Guardar
 
 Pulse **Guardar**. Las valoraciones, descriptores y observaciones quedan registrados.
 
-Si no modificó nada, SINAI muestra «No hay cambios realizados». Si el periodo está cerrado, muestra «El registro de calificaciones para el periodo seleccionado está cerrado».
+Si no modificó nada, SINAI muestra «No hay cambios realizados».
 
 <GuideCallout>
-  Las asignaciones con la varita mágica y con **+** solo cambian la planilla en pantalla. No olvide pulsar **Guardar** antes de cambiar de grupo o de periodo.
+  Las asignaciones con la varita mágica y con **+** solo cambian la planilla en pantalla. Pulse **Guardar** antes de cambiar de grupo o de periodo.
 </GuideCallout>
 
-Si la institución tiene habilitado el cálculo, aparece **Calcular Valoración**. Calcula la valoración del periodo, o la valoración final, a partir de las notas configuradas. SINAI pregunta «¿Seguro que quieres calcular la valoración, si ya hay notas en la planilla de calificaciones este procedimiento las reemplazará?».
+#### 9. Calcular la valoración
 
-#### 8. Eliminar datos de estudiantes
+El botón **Calcular Valoración** aparece cuando el cálculo está habilitado en **Configuraciones** y el periodo está abierto:
+
+- En un periodo, si está habilitado **Calcular valoración**.
+- En la valoración final, si está activo **Habilitar cálculo de valoración final**.
+
+Al pulsarlo, SINAI pregunta «¿Seguro que quieres calcular la valoración, si ya hay notas en la planilla de calificaciones este procedimiento las reemplazará?». Pulse **Confirmar**.
+
+<GuideCallout type="warning">
+  El cálculo reemplaza las valoraciones que ya tenga la planilla en el periodo seleccionado.
+</GuideCallout>
+
+#### 10. Eliminar datos de estudiantes
 
 1. Seleccione los estudiantes.
 2. Pulse el botón rojo de la **papelera**.
@@ -308,25 +180,27 @@ Si la institución tiene habilitado el cálculo, aparece **Calcular Valoración*
   Se elimina la valoración, los descriptores y las observaciones de los estudiantes seleccionados en el periodo. Esta acción no se puede deshacer.
 </GuideCallout>
 
-#### 9. Configurar las escalas
+#### 11. Configurar las escalas
 
-Pulse **Escalas**. En **Escala de Comportamiento** puede personalizar el concepto y la valoración por desempeño:
+Pulse **Escalas**. En **Escala de Comportamiento** puede personalizar el concepto y la valoración del comportamiento por desempeño:
 
 1. Elija el **Desempeño**.
 2. Escriba el **Concepto**, la **Valoración** y la abreviatura en **Abre.**
 3. Pulse **Agregar**.
 
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/nueva-escalas.jpg" alt="Panel Escalas con la Escala de Comportamiento personalizada y la Escala General de la institución">
+Para quitar un concepto, pulse la **papelera** en su fila.
+
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/escalas.jpg" alt="Panel Escalas con la escala de comportamiento y la escala general">
   Ver ejemplo
 </GuideImageTrigger>
 
-La sección **General** muestra la escala de la institución. Si no define conceptos personalizados, la planilla usa esa escala como referencia. Solo los administrativos pueden agregar o eliminar conceptos.
+La sección **General** muestra la **Escala General** de la institución, con desempeño, abreviatura, mínimo, máximo y valoración. Solo los administrativos pueden agregar o eliminar conceptos.
 
-#### 10. Configurar la planilla
+#### 12. Configurar la planilla
 
 Pulse el **engranaje**. Se abre el panel **Configuraciones**.
 
-<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/nueva-configuracion.jpg" alt="Panel Configuraciones con Formato Valoración, Descriptores y Origen Descriptores">
+<GuideImageTrigger src="/images/guides/evaluacion-de-comportamiento/configuracion.jpg" alt="Panel Configuraciones de la planilla de convivencia escolar">
   Ver ejemplo
 </GuideImageTrigger>
 
@@ -334,11 +208,16 @@ Pulse el **engranaje**. Se abre el panel **Configuraciones**.
 
 | Sección | Opciones |
 | --- | --- |
-| **General** | **Formato Valoración** (Nota numérica y valoración, Solo valoración o Ninguna), **Descriptores** (10, 5 o ninguna columna), **Origen Descriptores** (director de grupo o Institución) y **Observaciones**. |
-| **Calcular valoración** | Si está habilitado: tipo de cálculo (Por Componentes o Por Actividades), componente o actividades, método (Promedio Simple o Promedio Ponderado) y si se permite editar la valoración del periodo. |
+| **General** | **Formato Valoración** (Nota numérica y valoración, Solo valoración o Ninguna), **Descriptores** (10 Columnas de Descriptores, 5 Columnas de Descriptores o Ninguna columna de Descriptores), **Origen Descriptores** (Descriptores por director de grupo o Descriptores por Institución) y **Observaciones**. |
+| **Calcular valoración** | Tipo de cálculo (**Por Componentes** o **Por Actividades**), componente o actividad de la que se toma la nota, **Método de calculo** (**Promedio Simple** o **Promedio Ponderado**) y **Habilitar edición de valoración periodo**. Si la sección muestra **Inhabilitado**, la institución no tiene habilitado el cálculo. |
 | **Valoración Final** | **Habilitar edición de valoración final** y **Habilitar cálculo de valoración final**. |
 
 </GuideDataTable>
+
+Sobre el método de cálculo:
+
+- **Promedio Simple:** promedia las notas de todas las asignaturas distintas al comportamiento, en el componente o actividad especificada.
+- **Promedio Ponderado:** promedia las mismas notas, ponderadas dentro de cada una de las áreas.
 
 Pulse **Guardar** al final del panel. Solo los administrativos pueden modificar las configuraciones.
 
@@ -349,27 +228,35 @@ Pulse **Guardar** al final del panel. Solo los administrativos pueden modificar 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Por qué el botón Asignar no está disponible?"}>
+  <GuideFAQItem index="01" question={"¿Por qué no puedo guardar ni editar la planilla?"}>
+    El periodo está cerrado para el grupo. La etiqueta junto a **Periodo** lo indica. Solicite la apertura del periodo antes de registrar cambios.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Por qué el botón Asignar no está disponible?"}>
     No hay estudiantes seleccionados. Marque las casillas o use el menú **⋮** para seleccionarlos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Por qué no se guardan las asignaciones que hice con la varita mágica?"}>
+  <GuideFAQItem index="03" question={"¿Por qué no se guardan las asignaciones que hice con la varita mágica?"}>
     Las asignaciones solo cambian la planilla en pantalla. Pulse **Guardar** para registrarlas.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Por qué no veo el botón Descriptores?"}>
-    Solo aparece cuando **Origen Descriptores** es director de grupo. Con descriptores por Institución, la lista es la misma para todos los grupos.
+  <GuideFAQItem index="04" question={"¿Por qué no veo el botón Descriptores?"}>
+    Solo aparece cuando **Origen Descriptores** es **Descriptores por director de grupo**. Con descriptores por Institución, la lista es la misma para todos los grupos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question={"¿Por qué no aparece Calcular Valoración?"}>
-    El cálculo está inhabilitado en **Configuraciones**. Para los periodos se habilita en **Calcular valoración**; para la valoración final, con **Habilitar cálculo de valoración final**.
+  <GuideFAQItem index="05" question={"¿Por qué no aparece Calcular Valoración?"}>
+    El cálculo no está habilitado en **Configuraciones** o el periodo está cerrado. Para los periodos se habilita en **Calcular valoración**; para la valoración final, con **Habilitar cálculo de valoración final**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="05" question={"¿Puedo volver a la versión tradicional?"}>
-    Sí. Pulse **Versión anterior** en el encabezado. Las dos versiones muestran la misma información.
+  <GuideFAQItem index="06" question={"¿Por qué no aparece ningún grupo al elegir un docente?"}>
+    Al elegir un docente, la lista muestra solo los grupos que dirige. Si no dirige ninguno, la lista queda vacía. Elija **Seleccione** en **Docente** para ver todos los grupos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Qué hago si aparece «No se ha configurado un modelo de Evaluación del Comportamiento para esta Institución Educativa»?"}>
+    La institución no tiene un modelo de comportamiento. El rector debe solicitarlo a la línea de servicio al cliente.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Puedo usar la versión anterior de la planilla?"}>
+    Sí. Pulse **Versión anterior** en el encabezado. Consulte la [guía de la versión anterior](/docs/administrativo/convivencia-escolar/calificacion-comportamiento/evaluacion-de-comportamiento-version-anterior) o [vea el video](https://youtu.be/o0izzKyow78).
   </GuideFAQItem>
 </GuideFAQ>
-
-</PlanillaGuide>
-
-</PlanillaGuideSwitcher>

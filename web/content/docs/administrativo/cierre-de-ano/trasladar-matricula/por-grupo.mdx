@@ -1,11 +1,13 @@
 ---
 title: "Trasladar matrícula por grupo"
-description: "Aprenda a trasladar matrícula por grupo en SINAI."
+description: "Traslade al calendario siguiente la matrícula de grupos completos, con un grupo destino para promovidos, no promovidos y pendientes."
 guide: true
 wordpressId: 29784
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/por-grupo/"
-lastModified: "2023-11-15 01:23:23"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,65 +16,114 @@ lastModified: "2023-11-15 01:23:23"
 
 ## Guía paso a paso
 
-### Trasladar Matrícula
+### 1. ¿Qué es Trasladar matrícula por grupo?
 
-Esta opción permite el traslado de la matrícula de los estudiantes de un grupo seleccionado al calendario siguiente (Calendario destino). Aquí te explicamos cómo realizar este proceso en la plataforma SINAI. Menú **Promoción > Opción Trasladar matrícula.**
+**Traslado de Matrícula por Grupo** matricula en el calendario siguiente a los estudiantes de uno o varios grupos de una sede y jornada. Para cada grupo de origen usted elige un grupo destino según la situación académica del estudiante: **Promovidos**, **No Promovidos** y **Pendientes**.
 
-_Nota:_ debe tener activo el calendario **origen**, es decir, en el que se encuentra el estudiante que desea trasladar. <GuideImageTrigger src={"/images/wordpress/2025/02/Trasladar-Matricula-por-Grupo-1.png"} alt={"Captura de Trasladar Matricula por Grupo 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Promoción → Trasladar Matrícula**. La pantalla abre en la pestaña **Traslado de Matrícula por Grupo**. La otra pestaña, **Traslado de Matrícula por Estudiante**, se explica en [Trasladar matrícula por estudiante](/docs/administrativo/cierre-de-ano/trasladar-matricula/por-estudiante).
 
+<GuideImageTrigger src="/images/guides/trasladar-matricula-por-grupo/pantalla-traslado-por-grupo.jpg" alt="Pestaña Traslado de Matrícula por Grupo con la sede y la jornada elegidas y los grupos con sus cantidades por situación académica">
+  Ver ejemplo
+</GuideImageTrigger>
 
+El botón azul junto al título del recuadro abre esta guía.
 
-#### Pasos para Traslado de Matrícula por Grupo
+<GuideCallout>
+  El **Calendario Origen** es el calendario seleccionado en la parte superior de SINAI. El **Calendario Destino** es siempre el año siguiente. Ninguno de los dos se edita en esta pantalla: si necesita trasladar desde otro año, seleccione ese calendario en la parte superior.
+</GuideCallout>
 
-##### **1\. Acceder a la opción de Traslado de Matrícula por Grupo**
+#### 2. Antes de trasladar
 
-1. En el **Menú Promoción**, seleccione la opción **Trasladar Matrícula**.
-    (Recuerda que puede acceder tanto desde el submenú como desde el ícono disponible).
+- El calendario destino debe existir y tener sus grupos creados. Las listas **Grupo Destino** muestran los grupos del calendario destino, con el nombre de la sede. Si están vacías, ese calendario todavía no tiene grupos.
+- La situación académica de los estudiantes debe estar definida. Solo se trasladan los estudiantes con matrícula activa y situación **Promovido**, **No Promovido** o **Pendiente**; los demás no aparecen en las cantidades.
 
-2. Una vez en la pantalla de traslado, seleccione la **pestaña** llamada **“Traslado de Matrícula por Grupo”**.
+#### 3. Elegir la sede y la jornada
 
+1. En **Sede Origen**, seleccione la sede.
+2. En **Jornada**, seleccione la jornada. La lista muestra solo las jornadas que tienen grupos en esa sede y calendario.
 
-##### **2\. Selección de Sede y Jornada**
+La tabla muestra los grupos de esa sede y jornada:
 
-3. En el recuadro **Traslado de matrícula por Grupo**, deberá **seleccionar la sede y jornada** correspondientes al grupo que desea trasladar.
+<GuideDataTable>
 
+| Columna | Qué muestra |
+| --- | --- |
+| **Grupo Origen** | Casilla para seleccionar el grupo, con su código. |
+| **Cant** | Estudiantes con matrícula activa en esa situación académica. Hay una por cada bloque: **Promovidos**, **No Promovidos** y **Pendientes**. |
+| **Grupo Destino** | Grupo del calendario destino al que pasan los estudiantes de esa situación. |
+| **Tras** | Resultado del traslado: cuántos estudiantes se matricularon en el grupo destino. Se llena después de trasladar. |
 
-##### **3\. Selección del Grupo Origen**
+</GuideDataTable>
 
-4. En la opción **Grupo Origen**, seleccione el grupo específico de estudiantes que desea trasladar.
-    - Si necesitas trasladar a todos los grupos de una sede y jornada, puede utilizar el botón **Seleccionar Todos**.
+#### 4. Seleccionar los grupos y sus destinos
 
-##### **4\. Definir el Destino de los Estudiantes**
+1. Marque la casilla de cada grupo que va a trasladar. **Seleccionar Todos** invierte la selección de todas las filas: marca las que estaban sin marcar y desmarca las marcadas.
+2. En cada grupo marcado, elija el **Grupo Destino** de **Promovidos**, normalmente un grupo del grado siguiente.
+3. Elija el **Grupo Destino** de **No Promovidos**, normalmente un grupo del mismo grado.
+4. Elija el **Grupo Destino** de **Pendientes**, según la orientación de la institución.
 
-5. Ahora, deberá asignar a cada grupo el destino correspondiente:
-    - **Promovidos:**
-        En esta columna, seleccione el grupo al que se trasladan los estudiantes promovidos. Normalmente, este será un grupo del **grado superior**.
-    - **Reprobados:**
-        En esta columna, seleccione el grupo al que se trasladan los estudiantes reprobados. Generalmente, este será un grupo **del mismo grado**.
-    - **Pendientes:**
-        Para los estudiantes pendientes, de acuerdo con las orientaciones internas, seleccione si estos se **promueven a un grado superior** o se quedan en el mismo grado hasta que resuelvan su situación académica.
+<GuideCallout>
+  Elija un destino en cada bloque que tenga estudiantes. SINAI no valida que el destino esté elegido antes de trasladar.
+</GuideCallout>
 
-##### **5\. Realizar el Traslado de Matrícula**
+#### 5. Trasladar la matrícula
 
-6. Una vez hayas seleccionado correctamente el destino de todos los estudiantes de los grupos, haga clic en el botón **“Trasladar Matrícula”**.
+1. Revise los grupos marcados y sus destinos.
+2. Haga clic en **Trasladar Matrícula**.
 
-7. Al confirmar, los estudiantes seleccionados quedarán matriculados en el **calendario siguiente**. <GuideImageTrigger src={"/images/wordpress/2025/02/Trasladar-Matricula-por-Grupo-2.png"} alt={"Captura de Trasladar Matricula por Grupo 2"}>Ver ejemplo</GuideImageTrigger>
+SINAI procesa cada grupo marcado por situación académica y muestra el resumen:
 
+*Se procesaron los grupos seleccionados de acuerdo con su situación acádemica: PROMOVIDOS = N Est., NO PROMOVIDOS = N Est., PENDIENTES = N Est.*
 
+La columna **Tras** de cada bloque muestra cuántos estudiantes quedaron matriculados. Si un bloque falla, **Tras** muestra **Error** en rojo; al pasar el cursor sobre él aparece el mensaje del error.
 
+Cada estudiante trasladado queda en el calendario destino con matrícula activa, marcado como estudiante antiguo y sin situación académica, que se definirá en ese calendario.
+
+<GuideCallout type="warning">
+  El traslado no pide confirmación. Los estudiantes que ya tienen matrícula en el calendario destino no se vuelven a matricular, así que trasladar dos veces el mismo grupo no duplica la matrícula. Para deshacer una matrícula hecha por error, use **Revertir Matrícula** en la pestaña **Traslado de Matrícula por Estudiante**.
+</GuideCallout>
+
+#### 6. Verificar el traslado
+
+1. Seleccione el calendario destino en la parte superior de SINAI.
+2. Revise la matrícula de los grupos destino, por ejemplo en **Inicio → Resumen de matrícula**.
+
+#### 7. Permisos
+
+El rector puede trasladar siempre. Los demás usuarios administrativos necesitan el permiso **804**; si no lo tienen, SINAI muestra *No tiene asignado el permiso Nº804* y no traslada.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Trasladar matrícula por grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Desde qué calendario y hacia cuál se traslada la matrícula?"}>
+    Desde el calendario seleccionado en la parte superior de SINAI hacia el año siguiente. Por ejemplo, con 2025 seleccionado, el destino es 2026. Para trasladar desde otro año, cambie primero el calendario en la parte superior.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Trasladar matrícula por grupo» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Las listas Grupo Destino aparecen vacías. ¿Por qué?"}>
+    Muestran los grupos del calendario destino. Si están vacías, ese calendario no existe o no tiene grupos creados. Cree el calendario nuevo y sus grupos antes de trasladar.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Trasladar matrícula por grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Un grupo tiene estudiantes, pero las cantidades están en cero. ¿Qué pasa?"}>
+    Las cantidades cuentan solo a los estudiantes con matrícula activa y situación académica **Promovido**, **No Promovido** o **Pendiente**. Si la promoción del grupo no se ha procesado, los estudiantes no tienen esa situación y no se trasladan por grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué pasa si trasladé un grupo dos veces?"}>
+    No se duplica la matrícula. SINAI solo matricula a los estudiantes que todavía no tienen matrícula en el calendario destino; en el segundo traslado la columna **Tras** queda en 0 para los que ya estaban.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que el traslado se realizó?"}>
+    Revise el mensaje con el total de promovidos, no promovidos y pendientes procesados y la columna **Tras** de cada grupo. Luego seleccione el calendario destino en la parte superior y revise la matrícula de los grupos destino.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"La columna Tras muestra Error. ¿Qué hago?"}>
+    Pase el cursor sobre **Error** para ver el mensaje: *Se presentaron errores al realizar el traslado de la matricula. Consulte al soporte técnico.* seguido del detalle. Verifique que eligió un grupo destino en ese bloque y, si el error continúa, comuníquese con el soporte técnico con ese mensaje.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Me equivoqué de grupo destino. ¿Cómo lo corrijo?"}>
+    En la pestaña **Traslado de Matrícula por Estudiante**, seleccione el grupo destino, marque los estudiantes y use **Revertir Matrícula**. Esa opción elimina la matrícula en el calendario destino; luego puede trasladarlos de nuevo al grupo correcto.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"Al trasladar aparece «No tiene asignado el permiso Nº804»."}>
+    Su usuario no tiene el permiso para trasladar matrícula. Solicítelo al administrador de usuarios de la institución en **Establecimiento → Usuarios → Asignación de Permisos**.
   </GuideFAQItem>
 </GuideFAQ>

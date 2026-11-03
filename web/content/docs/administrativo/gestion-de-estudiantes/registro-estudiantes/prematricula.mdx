@@ -1,54 +1,194 @@
 ---
 title: "Prematrícula"
-description: "Configure y gestione los registros de prematrícula en SINAI."
+description: "Habilite el periodo de prematrícula, revise las solicitudes de los estudiantes y matricúlelos en el grupo del nuevo calendario."
 guide: true
 wordpressId: 29453
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/a-prematricula/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="BbyyRvgWhKo" title="Prematrícula"
-  odyseeUrl="https://odysee.com/pre-matricula-en-sinai%3A6ed830067cf4831600aa894bea7903e13ac7d70f"
-/>
+<YouTube id="BbyyRvgWhKo" title="Prematrícula" odyseeUrl="https://odysee.com/pre-matricula-en-sinai%3A6ed830067cf4831600aa894bea7903e13ac7d70f" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-La prematrícula permite revisar y formalizar los registros de estudiantes para el calendario configurado.
+### 1. ¿Qué es Prematrícula?
 
-### 1. Abra Prematrícula
+**Prematrícula** reúne las solicitudes que los estudiantes registran desde su propio módulo para el calendario siguiente. Desde esta pantalla la institución habilita el periodo de prematrícula, revisa cada solicitud y matricula a los estudiantes en el grupo que les asigna.
 
-Vaya a **Matrícula > Prematrícula**.
+Cada solicitud pasa por tres estados:
 
-### 2. Configure la consulta
+- **PENDIENTE:** el estudiante inició la prematrícula y aún no la confirma, o la institución la devolvió a pendiente.
+- **PREMATRICULADO:** el estudiante confirmó la prematrícula desde su módulo.
+- **MATRICULADO:** la institución ya registró la matrícula del estudiante.
 
-Seleccione el calendario, sede, grado y estado; luego actualice la consulta para cargar los registros disponibles.
+Ingrese a **Matrícula → Prematrícula**.
 
-### 3. Revise y matricule
+<GuideImageTrigger src="/images/guides/prematricula/acceso-prematricula.jpg" alt="Menú Matrícula con Prematrícula activa y la pantalla con los filtros y opciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Seleccione los estudiantes que cumplen los requisitos y use **Matricular** para formalizar el proceso. Revise previamente la información del registro y el grupo de destino.
+En la parte superior derecha están **Requisitos**, que abre la configuración de requisitos de matrícula en otra pestaña, **Configuración**, que define el periodo de prematrícula, y **Ayuda**.
 
-### 4. Consulte el resultado
+#### 2. Habilitar el periodo de prematrícula
 
-Verifique el resumen y los estados de los registros. Utilice las opciones de eliminación solo cuando corresponda corregir un registro de prueba. <GuideImageTrigger src={"/images/guides/prematricula/gestion-de-prematricula.png"} alt={"Gestión de prematrícula en SINAI"}>Ver ejemplo</GuideImageTrigger>
+Los estudiantes solo pueden registrar la prematrícula mientras el proceso esté activo y dentro de las fechas definidas.
 
+1. Seleccione el **Calendario** en el que se registrarán las prematrículas.
+2. Haga clic en **Configuración**.
+3. Marque **Activado**. SINAI propone como **Desde** la fecha del día y como **Hasta** treinta días después.
+4. Ajuste **Desde** y **Hasta**.
+5. Marque las **Opciones adicionales** que necesite.
+6. Haga clic en **Guardar**.
 
+<GuideImageTrigger src="/images/guides/prematricula/configuracion-prematricula.jpg" alt="Ventana Configuración de la prematrícula con Activado, fechas Desde y Hasta y opciones adicionales">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideDataTable>
+
+| Opción | Qué hace en la prematrícula del estudiante |
+| --- | --- |
+| **Exigir información del núcleo familiar** | Muestra el bloque de información familiar para que el estudiante la registre. |
+| **Exigir el registro de los requisitos** | Muestra el bloque de requisitos. El estudiante no puede confirmar la prematrícula hasta cargar un archivo por cada requisito activo. |
+| **Exigir el registro de datos de caracterización** | Muestra el bloque de caracterización para que el estudiante lo diligencie. |
+
+</GuideDataTable>
+
+Si el guardado es correcto, SINAI muestra **Configuración guardada correctamente**.
+
+Para cerrar el proceso, desmarque **Activado** y guarde. SINAI elimina el periodo de prematrícula del calendario y los estudiantes ya no pueden registrar solicitudes.
+
+<GuideCallout>
+  El periodo de prematrícula es la misma restricción de actualización de datos que se ve en **Establecimiento → Calendarios**, pestaña **Configuración**, bloque **Restricciones de Actualización de Datos**. Puede activarlo en cualquiera de las dos pantallas. Consulte [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
+</GuideCallout>
+
+#### 3. Consultar las solicitudes
+
+Use los filtros de la parte superior:
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Calendario** | Calendario de las solicitudes. Inicia en el calendario seleccionado en la parte superior de SINAI. |
+| **Sede** | Sede del grupo que eligió el estudiante. |
+| **Grado** | Grados que tienen grupos en la sede y el calendario seleccionados. |
+| **Estado** | **PENDIENTES**, **PREMATRICULADOS** o **MATRICULADOS**. |
+
+</GuideDataTable>
+
+El botón de flechas junto a **Estado** actualiza la lista.
+
+<GuideImageTrigger src="/images/guides/prematricula/lista-prematriculas.jpg" alt="Lista de prematrículas filtrada por calendario, sede, grado y estado PREMATRICULADOS">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla muestra, por estudiante:
+
+- **Estudiante** y **Observación del estudiante**, escrita al registrar la solicitud.
+- **Grupos:** código interno del grupo que eligió el estudiante.
+- **Registrada:** fecha y hora de la solicitud.
+- **Estado** de la solicitud.
+- **Grupo:** grupo en el que quedó matriculado, cuando ya tiene matrícula en ese calendario.
+- **Observaciones:** observación que escribió la institución al cambiar el estado.
+- **Actualizada:** fecha y hora del último cambio.
+- **Opciones:** **Datos** abre la ficha del estudiante y **Documentos** abre sus requisitos de matrícula. Las dos se abren en otra pestaña.
+
+La lista muestra 30 estudiantes por página.
+
+#### 4. Matricular estudiantes
+
+1. Marque en la columna **Chk** los estudiantes que va a matricular. La casilla del encabezado marca los de la página.
+2. Haga clic en **Matricular**.
+3. En la ventana **Matricular Estudiantes**, seleccione la **Sede** y el **Grupo** de destino.
+4. Si lo necesita, escriba **Observaciones**. Se guardan en la matrícula y en la solicitud.
+5. Haga clic en **Matricular**.
+
+<GuideImageTrigger src="/images/guides/prematricula/matricular-estudiantes.jpg" alt="Ventana Matricular Estudiantes con sede, grupo, observaciones y los botones Pendiente y Matricular">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La lista **Grupo** muestra los grupos de la sede elegida que corresponden al grado del filtro, al grado anterior, al siguiente y al CLEI equivalente.
+
+SINAI registra la matrícula de cada estudiante marcado en el calendario seleccionado, con estado matriculado y como estudiante antiguo, y cambia la solicitud a **MATRICULADO**. Al terminar muestra **Proceso de matrícula ejecutado correctamente. Por favor verifique los detalles en cada estudiante.**
+
+Revise la columna **Estado** de cada fila:
+
+- **OK:** la matrícula quedó registrada. El estado de la fila cambia a **PROCESADO**.
+- **ERR:** no se registró. Pase el puntero sobre la etiqueta para ver el motivo, por ejemplo *El estudiante ya tiene una matricula registrada en el calendario seleccionado. Grupo* seguido del grupo.
+
+Si el grupo tiene cupos definidos y ya están ocupados, SINAI se detiene y muestra **El limite de cupos del grupo** con el grupo y la cantidad de cupos.
+
+Cuando el estudiante pidió aviso al registrar la prematrícula, SINAI le envía un correo con el nuevo estado, la sede, la jornada, el grupo y las observaciones.
+
+#### 5. Devolver una solicitud a pendiente
+
+1. Marque los estudiantes.
+2. Haga clic en **Matricular**.
+3. Escriba en **Observaciones** el motivo, por ejemplo el documento que falta.
+4. Haga clic en **Pendiente**.
+
+SINAI cambia las solicitudes a **PENDIENTE**, guarda la observación y muestra **Cambio de estado realizado correctamente para** seguido de la cantidad de registros. Si no marcó ningún estudiante, muestra **Debe seleccionar al menos un estudiante para cambiar al estado pendiente**.
+
+Con la solicitud en pendiente, el estudiante puede completar lo que falta y volver a confirmarla desde su módulo.
+
+#### 6. Eliminar una solicitud
+
+1. Marque los estudiantes.
+2. Haga clic en el botón rojo de la papelera.
+3. Confirme *¿Confirma que desea eliminar el registro de prematricula de este estudiante? No se eliminará si se encuentra en estado MATRICULADO*
+
+La fila eliminada muestra **ELIMINADO** con una etiqueta **X**. Las solicitudes en estado **MATRICULADO** no se eliminan: la fila muestra **ERR** con el mensaje *No se puede eliminar una prematrícula si su estado es MATRICULADO*.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. El estudiante tendría que registrar de nuevo la prematrícula.
+</GuideCallout>
+
+#### 7. Resumen de prematrícula
+
+Haga clic en **Resumen**. La pantalla **Resumen de Prematrícula** muestra, para el calendario elegido, la cantidad de solicitudes por **Sede**, **Jornada**, **Grado**, **Grupo** y **Estado**. **Volver** regresa a la lista.
+
+<GuideImageTrigger src="/images/guides/prematricula/resumen-prematricula.jpg" alt="Resumen de Prematrícula con cantidades por sede, jornada, grado, grupo y estado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 8. Permisos
+
+**Matricular** y la eliminación exigen un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso y no aplica el cambio. Solicite el permiso faltante al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Prematrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Los estudiantes no pueden registrar la prematrícula. ¿Qué reviso?"}>
+    Abra **Configuración** con el calendario correcto y verifique que **Activado** esté marcado y que la fecha de hoy esté entre **Desde** y **Hasta**. Fuera de esas fechas, el estudiante ve el aviso de que el periodo de prematrícula está habilitado solo entre esas fechas.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Prematrícula» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Debo esperar a que el estudiante confirme para matricularlo?"}>
+    No es obligatorio: **Matricular** procesa los estudiantes marcados en cualquier estado, salvo los que ya tienen matrícula en el calendario. Si exige requisitos, filtre por **PREMATRICULADOS**: el estudiante solo pudo confirmar después de cargar los documentos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Prematrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Un estudiante quedó con ERR al matricular. ¿Por qué?"}>
+    Pase el puntero sobre la etiqueta **ERR** para ver el motivo. El caso más común es que el estudiante ya tiene matrícula en el calendario seleccionado; el mensaje indica el grupo. Si el aviso general habla del límite de cupos, elija otro grupo o ajuste los cupos del grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no aparece el grupo que necesito en la ventana Matricular Estudiantes?"}>
+    La lista **Grupo** muestra los grupos de la sede elegida en la ventana para el grado del filtro, el grado anterior, el siguiente y el CLEI equivalente. Cambie el **Grado** del filtro o la **Sede** de la ventana.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo le indico al estudiante qué le falta?"}>
+    Marque la solicitud, abra **Matricular**, escriba el motivo en **Observaciones** y haga clic en **Pendiente**. La observación se ve en la columna **Observaciones** y en la prematrícula del estudiante como observación de la institución. Si el estudiante pidió aviso, recibe además un correo con el nuevo estado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo eliminar una solicitud ya matriculada?"}>
+    No. SINAI no elimina solicitudes en estado **MATRICULADO**. Para cambiar la matrícula use las opciones de **Ajustes de Matrícula**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Dónde reviso los documentos que cargó el estudiante?"}>
+    En la columna **Opciones**, haga clic en **Documentos**. Se abre en otra pestaña la lista de requisitos del estudiante. Los requisitos que se piden se configuran con el botón **Requisitos**.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,70 +1,179 @@
 ---
 title: "Configuración de grupos"
-description: "Aprenda a configurar grupos en SINAI."
+description: "Cree, edite y elimine grupos, y asigne directores de grupo y sistemas de evaluación a varios grupos a la vez."
 guide: true
 wordpressId: 28688
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/configuracion-de-grupos/"
-lastModified: "2023-11-07 20:04:49"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="lB-5jhifXuo" title="Configuración de grupos"
-  odyseeUrl="https://odysee.com/segundo-nivel-grupos-configuraci%C3%B3n-de%3A6f248c65c5f08ecf123e70d225dc26ec2eac5c20"
-/>
+<YouTube id="lB-5jhifXuo" title="Configuración de grupos" odyseeUrl="https://odysee.com/segundo-nivel-grupos-configuraci%C3%B3n-de%3A6f248c65c5f08ecf123e70d225dc26ec2eac5c20" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-En SINAI, existen dos rutas para la creación de grupos, en primera instancia, si el usuario Administrativo se encuentra en la ventana de Edición y configuración de sedes, en la lista de “Grupos de Sede” visualizará el botón “Crear Grupo” en la parte superior derecha, al hacer clic en este, emerge un formulario para el ingreso de los datos básicos de creación de grupos para asociarlos a la sede. <GuideImageTrigger src={"/images/wordpress/2023/11/Crear-Grupo-1024x557.gif"} alt={"Captura de Crear Grupo"}>Ver ejemplo</GuideImageTrigger>
+### 1. ¿Qué es Configuración de grupos?
 
+**Configuración de Grupos** lista los grupos del calendario seleccionado con su jornada, sistema de evaluación, director, nivel, modelo, grado y matrículas. Desde aquí crea grupos, abre la edición de cada uno, los elimina y asigna director o sistema de evaluación a varios grupos a la vez.
 
+Ingrese a **Establecimiento → Grupos → Configuración de Grupos**.
 
-Cada “Grupo” de la lista de una sede, dispone de un botó en la columna de opciones para su edición, éste permite la navegación a la ventana para la edición de los datos del “Grupo”, tales como el Nombre, Sistema de evaluación, Nivel, Modelo, Grado, Jornada, Director de Grupo, Sede, Cupos y Estado, de forma adicional, se visualizará una barra de avance porcentual para el seguimiento de cupos.
+<GuideImageTrigger src="/images/guides/configuracion-grupos/acceso-grupos.jpg" alt="Menú Establecimiento con Grupos desplegado y la opción Configuración de grupos">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Al lado derecho de la ventana de “Edición del Grupo” se encuentran varias pestañas con información relacionada al “Grupo” (Lista de estudiantes, Asignación académica, Períodos, Componentes, Escalas y Criterios de promoción). <GuideImageTrigger src={"/images/wordpress/2023/11/Edicion-de-Grupos-de-sede.gif"} alt={"Captura de Edicion de Grupos de sede"}>Ver ejemplo</GuideImageTrigger>
+El botón **Ayuda** de la pantalla abre esta guía.
 
+#### 2. Consultar los grupos
 
+Use los filtros de la parte superior:
 
-En la lista de estudiantes de la ventana “Edición de Grupo” de la sede, se dispone de un botón en la columna de “Opciones”, este permite la navegación hacia la información de los estudiantes. <GuideImageTrigger src={"/images/wordpress/2023/11/Informacion-de-los-estudiantes-del-grupo-1024x557.gif"} alt={"Captura de Informacion de los estudiantes del grupo"}>Ver ejemplo</GuideImageTrigger>
+- **Sedes:** una sede o **Todas**.
+- **Estados:** estado del grupo, por ejemplo **Abierto**.
 
+<GuideImageTrigger src="/images/guides/configuracion-grupos/lista-grupos.jpg" alt="Lista de grupos con los filtros Sedes y Estados, los botones Asignar director y Asignar Sistem. Eval.">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La tabla muestra 20 grupos por página. Debajo de cada encabezado hay un cuadro de búsqueda, y el embudo del encabezado filtra por los valores de la columna.
 
-La segunda ruta a través de la cual se puede crear o configurar la información de los grupos, es a través del menú principal “Establecimiento” en el submenú “Grupos”, opción “Configuración de Grupos”, de esta forma se ingrese a la lista general de los grupos. <GuideImageTrigger src={"/images/wordpress/2023/11/Ingresar-a-la-Configuracion-de-Grupos-1024x557.gif"} alt={"Captura de Ingresar a la Configuracion de Grupos"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Columna | Qué muestra |
+| --- | --- |
+| **Grupo** | Nombre del grupo. |
+| **Jornada** | Jornada del grupo. |
+| **Sistema de Evaluación** | Sistema de evaluación asignado. |
+| **Director de Grupo** | Docente director. Queda vacío si no tiene. |
+| **Nivel**, **Modelo** y **Grado** | Ubicación académica del grupo. |
+| **Matrículas** | Cantidad de estudiantes **Matriculados** y **No Matriculados**. |
+| **Opciones** | Lápiz verde para editar y papelera roja para eliminar. |
 
+</GuideDataTable>
 
-SINAI permite que el administrativo haga búsqueda de los grupos en la lista filtrando por sede y estado, además, dentro de la lista también se dispone de controles que permiten simplificar la búsqueda de los grupos.
+**Informe** descarga en PDF el listado de grupos por sede del calendario.
 
-La lista se compone de nueve columnas: Grupo, Jornada, Sistema de Evaluación, Director de Grupo, Nivel, Modelo, Grado, Matrículas y Opciones, en esta última columna se dispone de dos botones para cada grupo, el primero es la “Navegación a la edición de datos de Grupo” y el otro es para la Eliminación de Grupos.
+#### 3. Crear un grupo
 
-En la parte superior derecha se encuentra situado el botón “Crear Grupo”, el cual abre el formulario de creación y al lado izquierdo de este, encontramos el botón informe, el cual descarga en formato PDF la lista de Grupos por Sede. <GuideImageTrigger src={"/images/wordpress/2023/11/Generalidades-de-la-ventana-Configuracion-de-Grupos.gif"} alt={"Captura de Generalidades de la ventana Configuracion de Grupos"}>Ver ejemplo</GuideImageTrigger>
+1. En **Sedes**, seleccione la sede del grupo.
+2. Haga clic en **Crear Grupo**.
+3. Complete el formulario **Crear grupo**.
+4. Haga clic en **Aceptar**.
 
+<GuideImageTrigger src="/images/guides/configuracion-grupos/crear-grupo.jpg" alt="Ventana Crear grupo con Nombre, Jornada, Nivel, Modelo, Grado, Sistema de Evaluación, Director de Grupo y Cupos">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideDataTable>
 
-### Cambiar el sistema de evaluación y la dirección de grupo
+| Campo | Qué define |
+| --- | --- |
+| **Nombre** | Nombre del grupo. Obligatorio, de 2 a 30 caracteres. SINAI lo guarda en mayúsculas. |
+| **Jornada** | Jornada del grupo. Obligatoria. |
+| **Nivel** y **Modelo** | Al cambiarlos, SINAI actualiza los modelos y grados disponibles. |
+| **Grado** | Grado del nivel y modelo elegidos. Obligatorio. |
+| **Sistema de Evaluación** | Sistemas de evaluación de la institución en el calendario. Obligatorio. |
+| **Director de Grupo** | Funcionario activo. Por defecto queda **[Sin Docente Encargado]**. |
+| **Cupos** | Cantidad de cupos, hasta dos dígitos. Por defecto 40. |
 
-Para cambiar la dirección de grupo y el sistema de evaluación de un grupo determinado “Asignar directores” y “Asignar sistema de evaluación”, ambos botones abren una pestaña desplegable para la respectiva asignación.
+</GuideDataTable>
 
-- Seleccione el grupo en la casilla que se ubica al lado izquierdo de la lista.
-- Haga clic en el botón “asignar directores” o en “Asignar Sistema de Evaluación” según el requerimiento.
-- Realice su elección de la lista desplegable y haga clic en el botón “Aceptar”. <GuideImageTrigger src={"/images/wordpress/2023/11/Cambiar-sistema-de-evaluacion-y-Direccion-de-grupo-1024x557.gif"} alt={"Captura de Cambiar sistema de evaluacion y Direccion de grupo"}>Ver ejemplo</GuideImageTrigger>
+Si la creación es correcta, SINAI abre la edición del nuevo grupo con el aviso **Creación realizada correctamente**.
 
+- Si en **Sedes** está **Todas**, SINAI muestra «Debe seleccionar una sede de la lista para poder crear el grupo asociado a la sede.»
+- Si el nombre ya existe en la sede, SINAI muestra «Ya existe un grupo con el nombre:» seguido del nombre y la sede.
 
+#### 4. Editar un grupo
 
+Haga clic en el lápiz verde de la fila. Se abre la pantalla del grupo.
+
+<GuideImageTrigger src="/images/guides/configuracion-grupos/editar-grupo.jpg" alt="Edición del grupo con sus datos a la izquierda y la pestaña Estudiantes a la derecha">
+  Ver ejemplo
+</GuideImageTrigger>
+
+A la izquierda, en **Grupo**, puede cambiar **Nombre**, **Sistema de evaluación**, **Nivel**, **Modelo**, **Grado**, **Jornada**, **Director de grupo**, **Sede**, **Cupos** y **Estado**. Los campos con asterisco son obligatorios. Debajo, la barra **Matrícula/Cupos** muestra la ocupación y las cantidades de matriculados y no matriculados.
+
+1. Ajuste los datos.
+2. Haga clic en **Guardar**.
+
+SINAI muestra **Grupo guardado correctamente**. **Informe** descarga en PDF la información del grupo. **Volver** regresa a la lista.
+
+#### 5. Información relacionada del grupo
+
+A la derecha, **Información relacionada** tiene estas pestañas de consulta:
+
+- **Estudiantes:** foto, nombre, código, identificación, fecha de nacimiento, teléfono y estado de la matrícula. La flecha verde abre la actualización de datos del estudiante.
+- **Asignación Académica:** asignaturas del grupo con su docente, horas semanales y horas totales.
+- **Periodos:** porcentaje y fechas de inicio y cierre de planeación, calificaciones, recuperaciones e inasistencias de cada periodo. El botón de navegación lleva a **Calendarios**, pestaña **Periodos**.
+- **Componentes:** dimensiones del grupo con su peso y peso NEE.
+- **Escalas:** escala de desempeño del calendario o, si el grupo tiene escalas personalizadas, sus equivalencias.
+- **Criterios de Promoción:** criterios asignados al grupo y sus parámetros. El botón de navegación abre los criterios de promoción del grupo.
+
+<GuideImageTrigger src="/images/guides/configuracion-grupos/pestana-periodos.jpg" alt="Pestaña Periodos del grupo con los porcentajes y las fechas de cada proceso">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 6. Asignar director o sistema de evaluación a varios grupos
+
+1. En la lista, marque la casilla de los grupos.
+2. Haga clic en **Asignar director** o en **Asignar Sistem. Eval.**
+3. En la ventana, seleccione el director o el sistema de evaluación.
+4. Haga clic en **Aceptar**.
+
+<GuideImageTrigger src="/images/guides/configuracion-grupos/asignar-director.jpg" alt="Ventana Asignar directores de grupo con un grupo marcado en la lista">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si no marcó grupos, SINAI muestra «Seleccione los grupos de la lista que desea asignar un director de grupo» o «Seleccione los grupos de la lista que desea asignar un sistema de evaluación». Al terminar, el aviso indica cuántos grupos se actualizaron.
+
+#### 7. Eliminar un grupo
+
+1. Haga clic en la papelera roja de la fila, o en **Eliminar** dentro de la edición del grupo.
+2. En **Eliminar Grupo**, escriba la palabra **CONFIRMAR**.
+3. Haga clic en **Aceptar**.
+
+SINAI muestra **Grupo eliminado correctamente**. No elimina el grupo si tiene información relacionada:
+
+- «El grupo que intenta eliminar tiene matrículas relacionadas. Por favor verifique»
+- «El grupo que intenta eliminar tiene asignación académica relacionada. Por favor verifique»
+- «El grupo que intenta eliminar tiene planeación relacionada. Por favor verifique»
+
+<GuideCallout type="warning">
+  Eliminar un grupo no se puede deshacer. **Cancelar** cierra la ventana sin eliminar.
+</GuideCallout>
+
+#### 8. Permisos
+
+Crear un grupo exige el permiso de crear grupos. Guardar cambios, asignar director o sistema de evaluación y eliminar exigen el permiso de modificar grupos. Si no lo tiene, SINAI muestra el aviso del permiso y no aplica el cambio.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Configuración de grupos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Al crear el grupo aparece «Debe seleccionar una sede de la lista para poder crear el grupo asociado a la sede.» ¿Qué hago?"}>
+    El filtro **Sedes** está en **Todas**. Seleccione la sede a la que pertenece el grupo y vuelva a hacer clic en **Crear Grupo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Configuración de grupos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no puedo eliminar un grupo?"}>
+    SINAI no elimina grupos que tengan matrículas, asignación académica o planeación relacionadas; el aviso indica cuál de ellas tiene. También debe escribir exactamente **CONFIRMAR**, en mayúsculas, antes de hacer clic en **Aceptar**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Configuración de grupos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Cómo cambio el director de varios grupos a la vez?"}>
+    Marque las casillas de los grupos en la lista, haga clic en **Asignar director**, elija el docente y haga clic en **Aceptar**. Para un solo grupo también puede cambiarlo en la edición del grupo y hacer clic en **Guardar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No encuentro un grupo en la lista. ¿Dónde está?"}>
+    Revise los filtros **Sedes** y **Estados**: la lista muestra solo los grupos de la sede y del estado elegidos. Recuerde que la lista corresponde al calendario seleccionado en la parte superior.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué docentes aparecen en Director de Grupo?"}>
+    Los funcionarios activos de la institución, más la opción **[Sin Docente Encargado]**, que deja el grupo sin director.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo cambiar las fechas de los periodos desde la pestaña Periodos del grupo?"}>
+    No. La pestaña solo muestra las fechas. El botón de navegación abre **Establecimiento → Calendarios**, pestaña **Periodos**, donde se modifican.
   </GuideFAQItem>
 </GuideFAQ>

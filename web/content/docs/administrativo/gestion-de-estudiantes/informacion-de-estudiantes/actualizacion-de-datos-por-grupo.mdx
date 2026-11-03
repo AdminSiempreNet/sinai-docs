@@ -1,11 +1,13 @@
 ---
 title: "Actualización de datos por grupo"
-description: "Actualice de forma masiva los datos de estudiantes de un grupo en SINAI."
+description: "Corrija en una sola tabla los datos básicos, de matrícula, socioeconómicos y de salud de los estudiantes de un grupo."
 guide: true
 wordpressId: 29406
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/actualizacion-de-datos-por-grupo/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,49 +16,145 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Esta opción permite actualizar de forma masiva información de los estudiantes que pertenecen a un mismo grupo. Revise los cambios antes de guardarlos, porque la información se aplicará a los registros editados.
+### 1. ¿Qué es Actualización de Datos por Grupo?
 
-### 1. Abra la actualización por grupo
+**Ajustes de Estudiantes y Matriculas por Grupo** muestra a los estudiantes de un grupo en una tabla editable, para corregir sus datos sin abrirlos uno por uno. Los datos se organizan en cuatro pestañas: **Datos Basicos**, **Registro y localización**, **Caracterización Socio-económica** y **Discapacidades, Talentos Y capacidades Exepcionales**.
 
-Diríjase a **Matrícula > Ajustes de Matrícula > Actualización de datos por grupo**.
+Ingrese a **Matrícula → Ajustes de Matrícula → Actualización de Datos por Grupo**.
 
-### 2. Elija el grupo
+<GuideImageTrigger src="/images/guides/actualizacion-de-datos-por-grupo/acceso-actualizacion.jpg" alt="Menú Matrícula con Ajustes de Matrícula desplegado y la pantalla de datos básicos por grupo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Seleccione la **Sede**.
-2. Seleccione el **Grupo** que desea actualizar.
+#### 2. Elegir el grupo
 
-SINAI mostrará la tabla con los estudiantes del grupo elegido.
+1. En **Sedes**, seleccione la sede.
+2. En **Grupo**, seleccione el grupo. La lista muestra los grupos de la sede en el calendario en el que inició sesión.
 
-### 3. Actualice la información
+La tabla muestra a los estudiantes matriculados en el grupo. SINAI recuerda la última sede y el último grupo que eligió.
 
-La pantalla se organiza en pestañas. Use la correspondiente al tipo de dato que necesita modificar:
+#### 3. Editar los datos
 
-- **Datos básicos**: apellidos, nombres, documento, fecha de nacimiento, género y datos relacionados.
-- **Registro y localización**: información de registro y ubicación.
-- **Caracterización socio-económica**.
-- **Discapacidades, talentos y capacidades excepcionales**.
+1. Haga clic en una celda de la fila del estudiante. Toda la fila pasa a modo de edición.
+2. Cambie los valores. Puede editar varias filas antes de guardar.
+3. Haga clic en **Guardar Cambios**, arriba de la tabla, o en **Guardar cambios**, abajo.
 
-Edite las celdas necesarias de cada estudiante. Puede usar los filtros de las columnas para ubicar un registro con rapidez.
+<GuideImageTrigger src="/images/guides/actualizacion-de-datos-por-grupo/edicion-celda.jpg" alt="Tabla de datos básicos con la fila de un estudiante en modo de edición">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### 4. Guarde los cambios
+SINAI muestra «Datos Guardados correctamente».
 
-Cuando termine, seleccione **Guardar cambios**. Si decide no conservar las modificaciones, use **Cancelar** antes de guardar. <GuideImageTrigger src={"/images/guides/actualizacion-de-datos-por-grupo/actualizacion-de-datos-por-grupo.png"} alt={"Actualización de datos básicos de estudiantes por grupo en SINAI"}>Ver ejemplo</GuideImageTrigger>
+- **Preview changes** muestra los cambios pendientes antes de guardarlos.
+- **Cancelar** o **Cancelar los cambios** descarta los cambios que no ha guardado.
+- La fila de casillas bajo los títulos filtra la tabla. En las columnas con lista, elija el valor.
+- Si un valor no cumple las reglas de la columna, SINAI marca la celda con el error, por ejemplo «El campo solo puede contener las letras M y F».
 
+<GuideCallout type="warning">
+  Guarde antes de cambiar de pestaña. Cada pestaña abre otra pantalla y los cambios que no guardó se pierden.
+</GuideCallout>
 
+#### 4. Datos Basicos
 
+<GuideDataTable>
+
+| Columna | Qué registra |
+| --- | --- |
+| **Apellidos** y **Nombres** | Hasta 30 caracteres cada uno. Son obligatorios. |
+| **Tipo Doc.** | Tipo de documento de identidad. |
+| **Número Documento** | Hasta 15 caracteres. Es obligatorio. |
+| **Fecha de nacimiento** | Es obligatoria. |
+| **Género Estudiante** | **M** o **F**. |
+| **T. Sangre** | Tipo de sangre. |
+| **Mun. ExpDocumento** y **Mun. Nacimiento** | Municipio de expedición del documento y de nacimiento. |
+
+</GuideDataTable>
+
+#### 5. Registro y localización
+
+<GuideImageTrigger src="/images/guides/actualizacion-de-datos-por-grupo/registro-localizacion.jpg" alt="Pestaña Registro y localización con libro, número y folio de matrícula, municipio, dirección y zona">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué registra |
+| --- | --- |
+| **Libro** | Libro de matrícula, de 1 carácter. Es obligatorio. |
+| **N° Matricula** y **Folio Matricula** | Hasta 10 caracteres cada uno. Son obligatorios. |
+| **Fecha de Matrícula** | Es obligatoria. |
+| **Municipio de Expedicion** | Aunque el título dice expedición, esta columna guarda el municipio de residencia. |
+| **Dirección de Residencia** | Hasta 100 caracteres. Es obligatoria. |
+| **Zona** | Zona de residencia. |
+| **Teléfonos** y **Email** | Teléfono, hasta 30 caracteres, y correo, hasta 100. |
+
+</GuideDataTable>
+
+#### 6. Caracterización Socio-económica
+
+<GuideImageTrigger src="/images/guides/actualizacion-de-datos-por-grupo/caracterizacion.jpg" alt="Pestaña Caracterización Socio-económica con estrato, Sisbén y situación de desplazamiento">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué registra |
+| --- | --- |
+| **Estrato** | Estrato, de 1 carácter. |
+| **¿Sisbén IV?** | **S** o **N**. |
+| **Grupo Sisbén**, **Subgrupo Sisbén** y **Ficha Sisbén** | Grupo de la lista, subgrupo de hasta 3 caracteres y número de ficha de hasta 20. |
+| **Código Fami...** | Código de Familias en Acción, hasta 10 caracteres. |
+| **Desplazado**, **F.Despla..**, **Municipio Explusor** y **Certifi...** | Situación de desplazamiento, fecha, municipio y si tiene certificado. |
+| **Desmovilizado**, **Hij desm...** y **Vict..** | Desmovilizado, hijo de desmovilizado y víctima de minas. |
+| **Hijo...** y **Madre...** | Hijo de madre cabeza de familia y madre cabeza de familia. |
+| **Campesino** | Si el estudiante es campesino. |
+
+</GuideDataTable>
+
+Las columnas de sí o no aceptan solo **S** o **N**. Con otra letra aparece «El campo solo puede contener las letras N y S».
+
+<GuideCallout type="warning">
+  En esta pestaña, **Desmovilizado** muestra el valor de **Certifi...** y **Vict..** muestra el de **Hij desm...**. Antes de guardar una fila, revise esas dos columnas: SINAI guarda lo que aparezca en ellas.
+</GuideCallout>
+
+#### 7. Discapacidades, Talentos Y capacidades Exepcionales
+
+<GuideImageTrigger src="/images/guides/actualizacion-de-datos-por-grupo/discapacidad.jpg" alt="Pestaña de discapacidades con discapacidad, grupo étnico, EPS, IPS, talla, peso y número de hermanos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué registra |
+| --- | --- |
+| **Discapacidad** y **GrupoEtnico** | Valores de las listas de SINAI. |
+| **Eps** e **Ips** | Hasta 50 caracteres cada una. |
+| **Talla** | Talla en centímetros, hasta 3 dígitos. |
+| **Peso** | Peso en kilogramos. |
+| **Nro. Hermanos** | Hermanos en la institución. Si lo deja vacío, se guarda 0. |
+
+</GuideDataTable>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Actualización de datos por grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Un estudiante del grupo no aparece en la tabla. ¿Por qué?"}>
+    La tabla solo muestra a los estudiantes que tienen registrados el municipio de nacimiento y el de expedición del documento. En **Datos Basicos**, **Registro y localización** y **Discapacidades, Talentos Y capacidades Exepcionales** también debe tener municipio de residencia, y en **Caracterización Socio-económica**, municipio expulsor. Complete esos datos en el ajuste individual de matrícula.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Actualización de datos por grupo» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Cambié de pestaña y se perdieron los cambios. ¿Qué pasó?"}>
+    Cada pestaña abre otra pantalla. Los cambios que no guardó con **Guardar Cambios** se descartan.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Actualización de datos por grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo actualizar a varios estudiantes a la vez?"}>
+    Sí. Edite las filas que necesite y haga clic una sola vez en **Guardar Cambios**. SINAI guarda todas las filas modificadas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no aparece el grupo que busco?"}>
+    **Grupo** muestra los grupos de la sede elegida en el calendario en el que inició sesión. Revise la sede o cambie el calendario de la sesión.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué valores acepta Género Estudiante?"}>
+    Solo **M** o **F**. Con otro valor, SINAI muestra «El campo solo puede contener las letras M y F».
   </GuideFAQItem>
 </GuideFAQ>

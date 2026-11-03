@@ -1,91 +1,138 @@
 ---
 title: "Configuración de componentes"
-description: "Aprenda a configurar componentes en SINAI."
+description: "Consulte los componentes y las actividades predeterminadas de la planilla de calificaciones, y ajuste los pesos por periodo, grupo o asignatura."
 guide: true
 wordpressId: 29210
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/configuracion-componentes/"
-lastModified: "2023-11-14 16:16:14"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="bj2I3ciEOhQ" title="Configuración Componentes"
-  odyseeUrl="https://odysee.com/configuraci%C3%B3n-de-componentes%3A90e54728782485c8ca99cdbcf86f8ce4a744588d"
-/>
+<YouTube id="bj2I3ciEOhQ" title="Configuración Componentes" odyseeUrl="https://odysee.com/configuraci%C3%B3n-de-componentes%3A90e54728782485c8ca99cdbcf86f8ce4a744588d" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Los **componentes evaluativos** son esenciales para evaluar y medir el rendimiento de los estudiantes en diversas áreas de aprendizaje. Estos elementos están alineados con los **objetivos pedagógicos**, **estándares curriculares** y las **competencias** definidas en el Proyecto Educativo Institucional (PEI). En esta guía, encontrará instrucciones detalladas sobre cómo se configuran estos componentes dentro de la plataforma **SINAI**, basándose en los parámetros establecidos por la institución educativa.
+### 1. ¿Qué es Configuración de componentes?
 
-**Importante:**
-La configuración de los componentes no puede ser modificada directamente por el usuario. Si necesita realizar algún cambio, debe enviar una solicitud por escrito a **servicioalcliente@siempre.net.co**, especificando las modificaciones que desea.
+**Config. Componentes** muestra los componentes de evaluación (dimensiones) de la institución, su peso porcentual y las actividades predeterminadas que aparecen en la planilla de calificaciones de los docentes. Cada actividad indica si es obligatoria y si el docente puede cambiarle el nombre.
 
-### 1\. Acceso a la Configuración de Componentes
+Ingrese a **Establecimiento → Config. Académica → Config. Componentes**.
 
-Para acceder a la configuración de los componentes evaluativos, siga los siguientes pasos en la plataforma SINAI:
+<GuideImageTrigger src="/images/guides/configuracion-componentes/acceso-config-componentes.jpg" alt="Menú Establecimiento con Config. Académica desplegado y la opción Config. Componentes">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Ingrese al **Menú Establecimiento**.
-2. Seleccione la opción **Configuración Académica**.
-3. Luego, haga clic en **Configuración de Componentes**.
+La pantalla tiene dos partes:
 
-**Menú Establecimiento > Configuración Académica > Configuración de Componentes** <GuideImageTrigger src={"/images/wordpress/2025/01/1-Configuracion-componentes.png"} alt={"Captura de Configuracion componentes"}>Ver ejemplo</GuideImageTrigger>
+- **A la izquierda, Parametros:** la lista **Tipo de configuración** y el botón del engranaje, que abre **Configuraciones**.
+- **A la derecha, Lista de actividades predeterminadas:** los componentes con su peso y, debajo de cada uno, sus actividades.
 
+<GuideCallout>
+  Desde el módulo administrativo puede consultar la configuración y ajustar los pesos de los componentes por periodo, grupo o asignatura. Crear componentes, agregar actividades y cambiar el tipo de origen solo lo hace el soporte de SINAI. Si necesita uno de esos cambios, solicítelo a **servicioalcliente@siempre.net.co**.
+</GuideCallout>
 
+#### 2. Elegir el tipo de configuración
 
-#### 2\. Tipo de Configuración
+En **Tipo de configuración**, seleccione cómo quiere ver los componentes. La lista solo muestra los tipos que el soporte habilitó para su institución:
 
-En la pantalla de configuración, en el **panel izquierdo**, podrá visualizar el tipo de configuración asignada por la institución. Las opciones disponibles incluyen:
+- **General:** componentes que aplican a toda la institución.
+- **Periodo:** pesos diferentes según el periodo.
+- **Grupo:** pesos diferentes para cada grupo.
+- **Asignatura:** pesos diferentes para cada asignatura.
 
-- **General**
-- **Grupo**
-- **Asignatura**
-- **Periodo** <GuideImageTrigger src={"/images/wordpress/2025/01/2-Configuracion-componente.png"} alt={"Captura de Configuracion componente"}>Ver ejemplo</GuideImageTrigger>
+Al cambiar el tipo, la tabla de la derecha se actualiza. Si el tipo elegido no tiene componentes registrados, la tabla muestra **Sin datos para mostrar**.
 
+#### 3. Consultar las actividades predeterminadas
 
+Con el tipo **General**, la tabla muestra cada dimensión con **Peso %** y **PesoNEE %**. El peso NEE es el que se aplica a estudiantes con Necesidades Educativas Especiales.
 
-#### 3\. Botón de Configuración
+<GuideImageTrigger src="/images/guides/configuracion-componentes/lista-actividades-general.jpg" alt="Lista de actividades predeterminadas con el tipo General, la dimensión Cognitivo y sus actividades">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Además, en el mismo panel encontrará un botón de **Configuración**, que incluye las siguientes opciones:
+Debajo de cada dimensión aparece la tabla de actividades:
 
-- **Tipo de origen**.
-- **Componente de configuración asignado**.
-- **Activación/Desactivación de la opción para eliminar actividades predeterminadas**:
-    Podrá decidir si los docentes pueden eliminar las casillas marcadas como **obligatorias** y **planeadas**.
+<GuideDataTable>
 
-Finalmente, cuenta con el botón **Cancelar**, que permite cerrar la ventana, o puede utilizar la opción de cerrar con la **(X)** ubicada en la esquina superior derecha de la misma. <GuideImageTrigger src={"/images/wordpress/2025/01/4-Configuracion-componente.png"} alt={"Captura de Configuracion componente"}>Ver ejemplo</GuideImageTrigger>
+| Columna | Qué indica |
+| --- | --- |
+| **Orden** | Posición de la actividad dentro del componente. |
+| **Actividad** | Nombre predeterminado de la actividad. |
+| **Peso %** | Peso de la actividad dentro del componente, si la planilla usa actividades ponderadas. |
+| **Obligatoria** | La actividad debe aparecer en la planilla del docente. |
+| **Editable** | El docente puede cambiar el nombre de la actividad en su planeación. |
+| **Opciones** | Editar y eliminar la actividad. En el módulo administrativo estos botones aparecen inactivos. |
 
+</GuideDataTable>
 
+#### 4. Pesos por periodo, grupo o asignatura
 
-#### 5\. Lista de Actividades Predeterminadas
+Con los tipos **Periodo**, **Grupo** o **Asignatura**, la tabla agrupa los componentes por periodo, grupo o asignatura. La fila de cada grupo muestra la suma de **Peso** y **PesoNEE** de sus componentes.
 
-En el panel derecho encontrará el listado de actividades predeterminadas configuradas para la institución.
+1. Haga clic en la flecha de la fila para desplegarla.
+2. Revise cada componente con su peso, su peso NEE y sus actividades.
 
-Este listado incluye la siguiente información:
+<GuideImageTrigger src="/images/guides/configuracion-componentes/tipo-grupo.jpg" alt="Tipo de configuración Grupo con un grupo desplegado, el componente Actitudinal y sus botones de opciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- El **nombre del componente** y su respectivo **peso porcentual**.
-- El **número máximo de actividades** permitidas en cada componente.
-- Las casillas marcadas como **obligatorias**
-- y si cuentan con **actividades ponderadas** el **peso porcentual** asignado a cada actividad.
-- Una columna que indica cuáles casillas son **editables**, lo que permite al docente asignarles un nombre personalizado de acuerdo con su planeación.
+En estos tipos, la columna **Opciones** de cada componente tiene dos botones:
 
-Finalmente, encontrará los **botones de opciones**, que se encuentran inactivos, ya que forman parte de la configuración interna del sistema. <GuideImageTrigger src={"/images/wordpress/2025/01/5-Configuracion-componente.png"} alt={"Captura de Configuracion componente"}>Ver ejemplo</GuideImageTrigger>
+- **Actualizar componente** (verde): abre **Editar componente**, donde puede cambiar **Orden**, **Peso** y **Peso NEE**. El nombre del componente no se cambia. Haga clic en **Guardar cambios**.
+- **Eliminar componente** (rojo): abre la confirmación **¿Está seguro?** con el aviso *Esta acción no se podrá deshacer*. **Eliminar** quita el componente de ese periodo, grupo o asignatura; **Cancel** cierra sin cambios.
 
+Los pesos admiten números y coma decimal. Si al guardar o eliminar usted no tiene el permiso de configurar componentes, SINAI muestra el aviso del permiso y no aplica el cambio.
 
+<GuideCallout type="warning">
+  Eliminar un componente no se puede deshacer y cambia la planilla de calificaciones de ese periodo, grupo o asignatura.
+</GuideCallout>
 
+#### 5. Ventana Configuraciones
+
+Haga clic en el botón del engranaje, junto a **Parametros**. Se abre **Configuraciones**:
+
+<GuideImageTrigger src="/images/guides/configuracion-componentes/ventana-configuraciones.jpg" alt="Ventana Configuraciones con Tipo de origen, Componentes de evaluación y Actividades obligatorias">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Tipo de origen:** origen de los componentes y las actividades, **Multiple** o **Dinamica**. En el módulo administrativo solo se consulta.
+- **Componentes de evaluación:** etiquetas con los tipos habilitados para la institución, por ejemplo **0: General** o **2: Grupo**. Son los que aparecen en **Tipo de configuración**.
+- **Actividades obligatorias:** la casilla **Permitir eliminación de actividades obligatorias** permite a los usuarios eliminar actividades obligatorias que ya planearon.
+
+<GuideCallout type="warning">
+  La casilla **Permitir eliminación de actividades obligatorias** se guarda en cuanto la marca o la desmarca, sin botón de guardar, y aplica al calendario seleccionado para todos los docentes.
+</GuideCallout>
+
+**Cancelar** o la **X** cierran la ventana.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Configuración de componentes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué los botones de editar y eliminar de las actividades aparecen inactivos?"}>
+    Las actividades predeterminadas solo las crea, edita o elimina el soporte de SINAI. En el módulo administrativo los botones de la tabla de actividades se muestran, pero quedan inactivos. Solicite el cambio a **servicioalcliente@siempre.net.co**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Configuración de componentes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué en Tipo de configuración no aparece Grupo o Asignatura?"}>
+    La lista solo muestra los tipos habilitados para la institución, los mismos que aparecen como etiquetas en **Componentes de evaluación**, dentro de la ventana **Configuraciones**. Habilitar otro tipo lo hace el soporte de SINAI.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Configuración de componentes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Seleccioné Periodo y la tabla dice «Sin datos para mostrar». ¿Es un error?"}>
+    No. Significa que la institución no tiene componentes con pesos diferentes por periodo en el calendario seleccionado. La planilla usa la configuración de los demás tipos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué es el peso NEE?"}>
+    Es el peso porcentual del componente para la población con Necesidades Educativas Especiales. Se muestra en la columna **PesoNEE %** y se modifica junto con el peso en **Editar componente**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué hace «Permitir eliminación de actividades obligatorias»?"}>
+    Con la casilla marcada, los usuarios pueden eliminar actividades obligatorias que ya están planeadas. El cambio se guarda al marcar o desmarcar la casilla y aplica al calendario seleccionado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Cambié los pesos de un grupo y la planilla no cambió. ¿Por qué?"}>
+    Registrar pesos diferentes por grupo o por asignatura no garantiza que la planilla de calificaciones los aplique: la planilla de la institución también debe estar configurada para usarlos. Solicite esa revisión al soporte de SINAI.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,11 +1,13 @@
 ---
 title: "Nivelaciones finales"
-description: "Genere y gestione las actas de recuperación o nivelación final en SINAI."
+description: "Genere las actas de recuperación final, reasígnelas a otro docente y registre las notas de recuperación de cada estudiante."
 guide: true
 wordpressId: 28864
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/nivelaciones-finales/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,39 +16,159 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Las nivelaciones finales se gestionan desde las actas de recuperación, una vez se ha procesado la promoción de los grupos.
+### 1. ¿Qué son las actas de recuperación final?
 
-### 1. Abra las actas de recuperación
+Las nivelaciones o recuperaciones finales se registran en **actas de recuperación final**. Cada acta corresponde a un grupo y una asignatura, tiene un docente responsable y lista a los estudiantes que deben recuperar al cierre del calendario.
 
-Vaya a **Promoción > Recuperaciones > Actas de recuperación**.
+Desde **Actas de recuperación final** usted genera las actas, las consulta, las reasigna a otro docente y abre cada una para registrar las notas.
 
-### 2. Configure los filtros
+Ingrese a **Promoción → Recuperaciones → Actas de recuperación**.
 
-Seleccione el calendario, docente, grupo y asignatura. Defina si las actas se generan para todas las asignaturas reprobadas o según la regla configurada por la institución.
+<GuideImageTrigger src="/images/guides/nivelaciones-finales/pantalla-actas.jpg" alt="Pantalla Actas de recuperación final con los filtros, las opciones de generación y la lista de actas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### 3. Genere las actas
+La pantalla tiene dos partes:
 
-Seleccione **Generar actas**. Se recomienda hacerlo después de procesar la promoción de todos los grupos.
+- **A la izquierda:** **Filtros**, el botón **Opciones**, las opciones de generación y **Generar Actas**.
+- **A la derecha:** la lista **Actas de recuperación final**, con **Actualizar**, el botón de ayuda y **Reasignar**.
 
-### 4. Revise y reasigne
+<GuideCallout>
+  Genere las actas después de procesar la **Promoción** de todos los grupos. Así lo indica el aviso **Importante!** de la pantalla.
+</GuideCallout>
 
-Use **Actualizar** para consultar las actas generadas. Cuando corresponda, seleccione un docente y use **Reasignar** antes de continuar con el registro de la recuperación. <GuideImageTrigger src={"/images/guides/nivelaciones-finales/actas-recuperacion-final.png"} alt={"Generación de actas de recuperación final en SINAI"}>Ver ejemplo</GuideImageTrigger>
+Si su institución usa otra versión de las actas de recuperación, SINAI abre en su lugar la lista de actas de esa versión.
 
+#### 2. Filtrar las actas
 
+<GuideDataTable>
 
+| Filtro | Qué muestra |
+| --- | --- |
+| **Calendario** | Calendarios de la institución. Por defecto, el seleccionado en la parte superior. |
+| **Docente** | **Todos** o un docente activo. |
+| **Grupo** | **Todos** o un grupo. Si eligió un docente, solo sus grupos. |
+| **Asignatura** | **Todos** o una asignatura del grupo o del docente. |
+
+</GuideDataTable>
+
+La lista se actualiza al cambiar cada filtro.
+
+#### 3. Revisar las opciones de recuperación
+
+Haga clic en **Opciones**. Se abre **Configuración**.
+
+<GuideImageTrigger src="/images/guides/nivelaciones-finales/opciones-actas.jpg" alt="Ventana Configuración de las actas de recuperación final con sus casillas y listas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Opción | Qué define |
+| --- | --- |
+| **Incluir estudiantes con situación acádemica NO PROMOVIDO** | Si se marca, los estudiantes NO PROMOVIDO se incluyen en las actas. |
+| **Ajustar promoción por recuperaciones** | Si se marca, quienes reprueben al menos una recuperación final o no la presenten quedan como NO PROMOVIDOS. |
+| **Ajuste y recuperaciones** | Método para calcular la definitiva cuando hay ajustes o recuperaciones finales. |
+| **Recup. Modulo del Docente** | **Habilitado** o **Deshabilitado**. Permite que el docente registre las recuperaciones de este calendario. |
+| **Calificación Máxima en Recuperaciones Finales** | Nota máxima permitida en las recuperaciones finales. |
+
+</GuideDataTable>
+
+Haga clic en **Aceptar** para guardar. El aviso es «Guardado correctamente». Si algo falla, SINAI muestra «Se presentaron errores al guardar».
+
+<GuideCallout type="warning">
+  Estas opciones cambian la configuración del calendario y afectan a los docentes y a la promoción de los estudiantes. **Ajuste y recuperaciones**, **Recup. Modulo del Docente** y la calificación máxima son las mismas de **Calificaciones finales** en [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
+</GuideCallout>
+
+#### 4. Generar las actas
+
+1. Elija cómo se generan las actas:
+   - **1. Nunca:** no genera actas de recuperación final.
+   - **2. Para todas las asignaturas:** genera actas para las asignaturas reprobadas aunque el área esté aprobada.
+   - **3. Solo para áreas reprobadas:** genera actas para las asignaturas reprobadas solo si el área está reprobada. Según el tipo de promoción del calendario, esta opción puede no aparecer.
+2. Para generar las actas de un solo grupo, selecciónelo en **Grupo**. Para toda la institución, deje **Todos**.
+3. Haga clic en **Generar Actas**.
+
+SINAI guarda la opción elegida para el calendario.
+
+- **Con un grupo:** genera las actas de todas las asignaturas del grupo que aparecen en la lista **Asignatura**. El aviso es «Actas del grupo generadas correctamente».
+- **Con Todos:** genera las actas de toda la institución en segundo plano. El aviso indica que el proceso puede tardar varios minutos y que puede revisar el progreso con **Actualizar**.
+- **Con la opción Nunca:** SINAI muestra «No se generaron las actas de acuerdo con la configuración seleccionada».
+
+Generar actas exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso.
+
+#### 5. Consultar la lista de actas
+
+Cada fila muestra **Docente**, **Grupo**, **Asignatura**, **N° Acta** y **Progreso**. El progreso indica cuántos estudiantes presentaron la recuperación del total del acta, por ejemplo **2/5**. Si el acta no tiene docente, la columna dice **No asignado**.
+
+Haga clic en **Actualizar** para volver a cargar la lista. **Abrir** abre el acta en otra pestaña.
+
+#### 6. Reasignar actas a otro docente
+
+1. Marque las actas en la lista.
+2. En **Seleccione un docente**, elija el nuevo docente.
+3. Haga clic en **Reasignar**.
+4. Confirme *¿Seguro que deseas realizar el proceso de reasignación del docente a las actas seleccionadas?* con **Aceptar**.
+
+El aviso es «La asignación al docente (nombre) fue realizada.» **Cancelar** cierra la confirmación sin cambios.
+
+- Sin docente elegido, SINAI muestra «Debe seleccionar el docente al que le desea hacer la reasignación.»
+- Sin actas marcadas, muestra «Debe seleccionar el acta que desea reasignar.»
+
+#### 7. Registrar las notas de recuperación en el acta
+
+Haga clic en **Abrir** en la fila del acta. La pantalla **Acta recuperación** muestra el número del acta, la fecha, el grupo, la asignatura, el docente, las observaciones y las fechas de registro y modificación.
+
+<GuideImagePending>
+  EvalProm/Promocion/Recuperaciones/ActaRecuperacion.aspx, pantalla Acta recuperación con el registro de recuperaciones de los estudiantes. Archivo: acta-recuperacion.jpg
+</GuideImagePending>
+
+La tabla **Registro de recuperaciones** muestra por estudiante la situación académica, **Fecha**, **Definitiva**, la situación académica de la asignatura, **Nota** o **Valoración**, **Presentó** y **Observaciones**.
+
+1. Escriba la **Nota** de cada estudiante. Si la institución valora con desempeños, elija la **Valoración**.
+2. Si lo necesita, ajuste la **Fecha** y las **Observaciones**.
+3. Haga clic en **Guardar**.
+
+Al guardar, SINAI:
+
+- Marca **Presentó** en los estudiantes con una nota válida.
+- Deja sin nota a quien tenga una nota por debajo del mínimo de la escala o por encima de la calificación máxima. Para la nota mayor a la máxima muestra «La nota de recuperación para el estudiante (identificación) está por fuera de los límites permitidos por la institución. Por favor verifique.»
+- Pone la fecha del día si la fecha está vacía.
+- Vuelve a procesar la promoción de cada estudiante.
+
+Si todo queda bien, el aviso es «Cambios guardados correctamente». Si el docente tiene deshabilitado el registro, SINAI muestra «El registro de recuperaciones no está habiliado. Para obtener permiso solicite autorización al rector del establecimiento».
+
+En la misma pantalla:
+
+- **Acta** muestra el informe del acta para imprimir.
+- **Método** muestra la nota máxima de recuperación, el método de cálculo y si los docentes pueden registrar recuperaciones.
+- **Generar**, junto a las opciones de generación, vuelve a generar el acta. El aviso es «Acta actualizada correctamente».
+- **Eliminar** quita al estudiante del acta, después de confirmar *¿Desea eliminar este registro de forma permanente?* Los docentes no ven este botón.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Nivelaciones finales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué debo hacer antes de generar las actas?"}>
+    Procese la promoción de todos los grupos. Luego revise en **Opciones** el método de ajuste y recuperaciones, la calificación máxima y si los docentes pueden registrar recuperaciones, y elija la opción de generación: **Para todas las asignaturas** o **Solo para áreas reprobadas**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Nivelaciones finales» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Generé las actas para toda la institución y la lista sigue vacía. ¿Qué hago?"}>
+    Con **Todos** en **Grupo**, SINAI genera las actas en segundo plano y puede tardar varios minutos. Haga clic en **Actualizar** para revisar el progreso. Verifique también que los filtros de docente, grupo y asignatura estén en **Todos** y que el calendario sea el correcto.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Nivelaciones finales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Seleccioné una asignatura y se generaron actas de otras asignaturas del grupo. ¿Por qué?"}>
+    Con un grupo seleccionado, **Generar Actas** procesa todas las asignaturas que aparecen en la lista **Asignatura** para ese grupo, no solo la seleccionada.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo sé cuántos estudiantes ya presentaron la recuperación?"}>
+    La columna **Progreso** muestra los estudiantes que presentaron sobre el total del acta. Al pasar el cursor, indica cuántas habilitaciones van de cuántas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"El docente no puede registrar las notas del acta. ¿Por qué?"}>
+    Si aparece «El registro de recuperaciones no está habiliado. Para obtener permiso solicite autorización al rector del establecimiento», **Recup. Modulo del Docente** está en **Deshabilitado**. Cámbielo a **Habilitado** en **Opciones**. El docente solo puede abrir las actas que tiene asignadas; para darle otra, use **Reasignar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Escribí una nota y el estudiante quedó sin recuperación. ¿Qué pasó?"}>
+    La nota estaba por debajo del mínimo de la escala o por encima de la **Calificación Máxima en Recuperaciones Finales**. SINAI deja al estudiante sin nota y sin marcar **Presentó**. Corrija la nota y vuelva a guardar.
   </GuideFAQItem>
 </GuideFAQ>

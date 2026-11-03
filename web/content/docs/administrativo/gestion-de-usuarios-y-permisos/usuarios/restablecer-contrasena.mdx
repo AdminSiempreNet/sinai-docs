@@ -1,23 +1,124 @@
 ---
 title: "Restablecer contraseña"
-description: "Contenido pendiente de documentación para «Restablecer contraseña»."
+description: "Restablezca la contraseña de un usuario, restablezca o fuerce el cambio de contraseña de todos los estudiantes y configure las contraseñas por defecto."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Restablecer la contraseña de un usuario y los accesos de los estudiantes. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es Restablecer contraseña?
+
+Cuando un usuario olvida su contraseña o no puede ingresar, la institución puede devolverle una contraseña conocida: la **contraseña por defecto**. Con ella el usuario ingresa y SINAI le pide cambiarla de inmediato.
+
+Todas estas opciones están en **Establecimiento → Usuarios → Gestión de Usuarios**:
+
+- **Restablecer Clave**, en el menú **Opciones** de cada usuario: restablece la contraseña de una sola persona.
+- **Restablecer Accesos**, debajo de los filtros: restablece o fuerza el cambio de contraseña de todos los estudiantes de la institución.
+- El botón del engranaje, junto al título **Gestión de usuarios - Filtros**: muestra las contraseñas por defecto. Solo el rector puede cambiarlas.
+
+<GuideCallout>
+  El rector puede usar estas opciones sin permisos adicionales. Los demás usuarios administrativos necesitan el permiso Nº003; sin él, SINAI muestra «No tiene asignado el permiso Nº003».
+</GuideCallout>
+
+#### 2. Restablecer la contraseña de un usuario
+
+1. En **Gestión de Usuarios**, filtre por el rol de la persona y búsquela.
+2. Haga clic en **Opciones** al final de su fila.
+3. Haga clic en **Restablecer Clave**.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/opcion-restablecer-clave.jpg" alt="Menú Opciones de un usuario con la opción Restablecer Clave">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI no pide confirmación. Al hacer clic:
+
+- La contraseña del usuario pasa a ser la contraseña por defecto: la de funcionarios, o la de estudiantes y acudientes si el usuario es estudiante o acudiente.
+- El usuario debe cambiarla la próxima vez que ingrese.
+- Si el usuario tiene correo registrado, SINAI le envía la contraseña y muestra «La contraseña fue restablecida y se enviara al correo electronico del usuario:» seguido del correo.
+- Si no tiene correo, muestra «La contraseña fue restablecida, pero no fue enviada al correo electronico». Comparta usted la contraseña por defecto con el usuario.
+
+<GuideCallout type="warning">
+  El usuario debe estar **ACTIVO** en la institución. Si no lo está, SINAI muestra «No se encontró institución activa para el usuario.» y no cambia la contraseña.
+</GuideCallout>
+
+#### 3. Restablecer los accesos de todos los estudiantes
+
+1. En **Gestión de Usuarios**, haga clic en **Restablecer Accesos**.
+2. Se abre la ventana **Restablecer Accesos de Estudiantes** con dos opciones.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/ventana-restablecer-accesos.jpg" alt="Ventana Restablecer Accesos de Estudiantes con las opciones Restablecer Contraseña y Forzar Cambio de Contraseña">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Restablecer Contraseña:** asigna a todos los estudiantes de la institución la contraseña por defecto de estudiantes, que aparece como **Contraseña genérica**, y los obliga a cambiarla al ingresar. También marca su correo y su teléfono como no verificados. SINAI no envía correos en este proceso: copie la contraseña con el botón verde y compártala con los estudiantes. Al terminar muestra «Contraseñas restablecidas».
+- **Forzar Cambio de Contraseña:** no cambia la contraseña actual; solo obliga a todos los estudiantes a cambiarla en su próximo ingreso. Al terminar muestra «Forzar cambio de contraseña ejecutado correctamente».
+
+<GuideCallout type="warning">
+  Ambas opciones se aplican de inmediato a todos los estudiantes con usuario en la institución, sin importar los filtros de la lista, y no se pueden deshacer. SINAI no pide una segunda confirmación. Antes de restablecer, verifique que los estudiantes tengan usuario generado.
+</GuideCallout>
+
+Las dos acciones quedan registradas en la auditoría con el usuario que las ejecutó.
+
+#### 4. Consultar o cambiar las contraseñas por defecto
+
+1. Haga clic en el botón del engranaje, junto al título **Gestión de usuarios - Filtros**.
+2. Se abre la ventana **Configuraciones** con las **Contraseñas por defecto**.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/ventana-contrasenas-defecto.jpg" alt="Ventana Configuraciones con las contraseñas por defecto de funcionarios y de estudiantes o acudientes, ocultas en el ejemplo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Para funcionarios** | Contraseña que reciben los funcionarios y los otros usuarios al generar su usuario o al restablecer su clave. |
+| **Para estudiantes o acudientes** | Contraseña que reciben los estudiantes y los acudientes al generar su usuario, al restablecer su clave o con **Restablecer Accesos**. |
+
+</GuideDataTable>
+
+El botón junto a cada campo copia la contraseña. Si la institución no ha configurado una contraseña, SINAI usa la contraseña genérica del sistema.
+
+Solo el rector ve **Generar** y **Actualizar**. Para cambiar las contraseñas:
+
+1. Escriba cada contraseña o haga clic en **Generar** para que SINAI proponga una que cumpla las políticas.
+2. Verifique que ambas cumplan las políticas que muestra la ventana: mínimo 14 caracteres, al menos una mayúscula, una minúscula y un número, y sin espacios.
+3. Haga clic en **Actualizar**.
+
+Si todo es correcto, SINAI muestra «Las contraseñas se actualizaron correctamente.».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Restablecer contraseña»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿El usuario recibe un enlace para crear su nueva contraseña?"}>
+    No. **Restablecer Clave** asigna la contraseña por defecto y, si el usuario tiene correo registrado, se la envía. El usuario ingresa con esa contraseña y SINAI le pide cambiarla.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Restablecer contraseña» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="02" question={"SINAI muestra «No se encontró institución activa para el usuario.». ¿Qué hago?"}>
+    El usuario no está en estado **ACTIVO** en su institución. Cambie su estado con **Actualizar estado** en **Gestión de Usuarios** y vuelva a restablecer la clave. Vea [Cambiar estado de usuarios](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/cambiar-estado-de-usuarios).
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Restablecer contraseña»?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="03" question={"Hice clic en Restablecer Clave y aparece «No se puede realizar el proceso porque no tiene usuario». ¿Por qué?"}>
+    La persona aparece como **Sin Usuario**. Primero genere su usuario; vea [Gestión de usuarios](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/generar-usuarios).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Restablecer Accesos también cambia la contraseña de los acudientes?"}>
+    No. **Restablecer Accesos** solo afecta a los usuarios con rol estudiante de la institución. Para un acudiente use **Restablecer Clave** en su fila, con el rol **Acudientes** seleccionado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Al restablecer accesos aparece «No se encontró la configuración de contraseña para estudiantes». ¿Qué falta?"}>
+    La institución no tiene configurada la contraseña por defecto de estudiantes. El rector debe registrarla en la ventana del engranaje, en **Para estudiantes o acudientes**, y hacer clic en **Actualizar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"No puedo cambiar las contraseñas por defecto. ¿Por qué?"}>
+    Solo el rector puede editarlas. Para los demás usuarios los campos son de solo lectura y no aparecen **Generar** ni **Actualizar**. Si al actualizar aparece «Las contraseñas deben cumplir con las politicas requeridas.» o «Debe ingresar ambas contraseñas.», revise que las dos contraseñas estén escritas y cumplan las políticas.
   </GuideFAQItem>
 </GuideFAQ>

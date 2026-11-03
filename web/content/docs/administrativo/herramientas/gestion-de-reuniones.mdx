@@ -1,11 +1,13 @@
 ---
 title: "Gestión de Reuniones"
-description: "Aprenda a gestionar reuniones en SINAI."
+description: "Programe reuniones con padres de familia, invite a los estudiantes por grupo o de forma individual, registre la asistencia y descargue el informe."
 guide: true
 wordpressId: 35704
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/a-gestion-de-reuniones/"
-lastModified: "2026-01-20 17:12:56"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,21 +18,179 @@ lastModified: "2026-01-20 17:12:56"
 
 ## Guía paso a paso
 
-### Gestión de Reuniones
+### 1. ¿Qué es Gestión de reuniones?
 
+**Gestión de reuniones** le permite programar reuniones con padres de familia, invitar a los estudiantes y registrar quién asistió. Al invitar, SINAI envía un correo al acudiente y una notificación en SINAI.
+
+Cada reunión tiene un objetivo, un lugar, una fecha, una hora y un funcionario responsable. Las reuniones pertenecen al calendario seleccionado en la parte superior.
+
+Ingrese a **Herramientas → Gestión de reuniones**.
+
+<GuideImageTrigger src="/images/guides/gestion-de-reuniones/lista-reuniones.jpg" alt="Menú Herramientas con Gestión de reuniones y la lista de reuniones con sus filtros">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Consultar las reuniones
+
+La lista **Reuniones** muestra **Objetivo**, **Fecha**, **Hora**, **Lugar**, **Responsable** y **Opciones**. Las reuniones creadas más recientemente aparecen primero.
+
+Use los filtros de la parte superior para acotar la lista:
+
+- **Responsable:** funcionario responsable de la reunión. Puede escribir parte del nombre para buscarlo.
+- **Desde** y **Hasta:** rango de fechas de la reunión. El filtro de fechas se aplica cuando ambas fechas tienen valor.
+
+Si el responsable ya no es un funcionario de la institución, la columna muestra **Funcionario no encontrado.**
+
+#### 3. Crear una reunión
+
+1. Haga clic en **Nueva reunion**.
+2. En la ventana **Crear nueva reunion**, escriba el **Objetivo** y el **Lugar**.
+3. Elija la **Fecha** y la **Hora**. La fecha propuesta es la del día.
+4. En **Responsable**, elija el funcionario a cargo. La lista muestra los funcionarios activos.
+5. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/gestion-de-reuniones/nueva-reunion.jpg" alt="Ventana Crear nueva reunion con objetivo, lugar, fecha, hora y responsable">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra «Se ha creado la reunion correctamente.» y la reunión aparece en la lista.
+
+- Si falta el objetivo, la ventana muestra «El objetivo es obligatorio».
+- Si falta el lugar, muestra «El lugar es obligatorio».
+- Si falta la hora, muestra «Debe seleccionar una hora.»
+
+#### 4. Abrir y modificar una reunión
+
+Haga clic en **Editar** en la fila de la reunión. Se abre la pantalla de la reunión con dos partes:
+
+- **Detalles**, a la izquierda: objetivo, lugar, fecha, hora y responsable, con los botones **Descargar informe**, **Guardar cambios** y **Eliminar**.
+- **Invitados**, a la derecha: los estudiantes invitados, su acudiente y la asistencia.
+
+<GuideImageTrigger src="/images/guides/gestion-de-reuniones/detalle-reunion.jpg" alt="Pantalla de la reunión con el panel Detalles y el panel Invitados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para modificar los datos:
+
+1. Ajuste el objetivo, el lugar, la fecha, la hora o el responsable.
+2. Haga clic en **Guardar cambios**.
+
+SINAI muestra «Reunion modificada correctamente.»
+
+La flecha junto a **Detalles** vuelve a la lista de reuniones.
+
+<GuideCallout>
+  Antes de guardar, revise el **Responsable**. Si el responsable guardado ya no está en la lista de funcionarios activos, la lista muestra el primer funcionario, y al guardar ese queda como responsable.
+</GuideCallout>
+
+#### 5. Invitar estudiantes
+
+Haga clic en **Agregar invitado**. Se abre la ventana **Agregar invitados** con dos pestañas.
+
+**Invitación individual:**
+
+1. Elija el grupo. La lista muestra los estudiantes con matrícula activa del grupo que aún no están invitados.
+2. Marque los estudiantes. **Seleccionar Todo** los marca todos y la lupa permite buscar por nombre.
+3. Haga clic en **Invitar**.
+
+<GuideImageTrigger src="/images/guides/gestion-de-reuniones/agregar-invitado.jpg" alt="Ventana Agregar invitados en la pestaña Invitación individual con los estudiantes de un grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra «Invitación creada correctamente.»
+
+**Invitación grupal:**
+
+1. Abra la pestaña **Invitación grupal**.
+2. Marque uno o varios grupos.
+3. Haga clic en **Invitar grupo**.
+
+<GuideImageTrigger src="/images/guides/gestion-de-reuniones/invitacion-grupal.jpg" alt="Pestaña Invitación grupal con la lista de grupos para marcar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI invita a los estudiantes con matrícula activa de esos grupos que aún no estaban invitados y muestra «Se ha realizado la invitación a los estudiantes de los grupos seleccionados.»
+
+- Si no marca ningún grupo, muestra «Debe seleccionar al menos un grupo.»
+- Si todos los estudiantes de los grupos ya estaban invitados, muestra «No hay nuevos estudiantes para invitar en los grupos seleccionados.»
+
+**Cancelar** cierra la ventana sin invitar.
+
+Con cada invitación, SINAI envía:
+
+- un correo con el asunto **Invitación a Reunión de Padres de Familia** al acudiente del estudiante que tenga un correo válido;
+- una notificación en SINAI con la fecha, la hora, el lugar y el objetivo de la reunión.
+
+<GuideCallout type="warning">
+  Las invitaciones se envían en el momento de invitar. Revise la fecha, la hora y el lugar de la reunión antes de invitar a los estudiantes.
+</GuideCallout>
+
+#### 6. Registrar la asistencia
+
+En el panel **Invitados**, la lista de grupos de la parte superior muestra los grupos que tienen invitados. Elija un grupo para ver sus invitados.
+
+<GuideImagePending>
+  Admin/Herramientas/Reuniones/Reunion.aspx?idReunion=N, panel Invitados con estudiantes invitados, su acudiente y la casilla Asistió. Archivo: lista-invitados.jpg
+</GuideImagePending>
+
+Cada invitado muestra el estudiante y, debajo, su acudiente con el parentesco y el correo. Si el estudiante no tiene acudiente registrado, aparece **No se ha encontrado acudiente**.
+
+Para registrar la asistencia tiene tres formas:
+
+- **Uno por uno:** marque **Asistió** en el invitado. Se guarda al marcar y SINAI muestra «Se ha confirmado la asistencia correctamente.» Al desmarcarla, se quita la asistencia.
+- **Varios:** marque la casilla a la izquierda de cada estudiante, o use el botón de selección para marcarlos todos. Luego abra la flecha junto a ese botón y elija **Marcar asistencia**.
+- **Todo el grupo:** con el grupo elegido, haga clic en **Marcar asistencia a todos**. SINAI muestra «Asistencia marcada a todos los invitados del grupo.»
+
+#### 7. Quitar invitados
+
+- **Uno:** haga clic en la **X** roja del invitado y confirme *¿Estás seguro de que deseas eliminar este registro?*
+- **Varios:** marque los estudiantes, abra la flecha junto al botón de selección y elija **Eliminar seleccionados**.
+
+SINAI muestra «Invitados eliminados correctamente.»
+
+#### 8. Descargar el informe
+
+En **Detalles**, haga clic en **Descargar informe**. SINAI genera el informe de la reunión en PDF.
+
+#### 9. Eliminar una reunión
+
+1. Haga clic en el botón rojo de la papelera en la lista, o en **Eliminar** dentro de la reunión.
+2. Confirme *¿Estás seguro de que deseas eliminar este registro?*
+
+Desde la lista, SINAI muestra «Se ha eliminado correctamente.» Desde la reunión, vuelve a la lista de reuniones.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Gestión de Reuniones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿A quién le llega la invitación?"}>
+    Al acudiente de cada estudiante invitado, por correo, si tiene un correo válido registrado. Si el acudiente no tiene correo propio, SINAI usa el correo de su usuario. Además, SINAI envía una notificación en la plataforma con la fecha, la hora, el lugar y el objetivo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Gestión de Reuniones» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Un estudiante no aparece para invitarlo. ¿Por qué?"}>
+    La pestaña **Invitación individual** solo muestra los estudiantes con matrícula activa del grupo que aún no están invitados a esa reunión. Si ya lo invitó, aparece en el panel **Invitados**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Gestión de Reuniones»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Aparece «No hay nuevos estudiantes para invitar en los grupos seleccionados.». ¿Qué significa?"}>
+    Todos los estudiantes con matrícula activa de los grupos que marcó ya estaban invitados a la reunión. No se envían invitaciones repetidas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No veo todos los invitados en el panel Invitados. ¿Dónde están?"}>
+    El panel muestra los invitados del grupo elegido en la lista de grupos de la parte superior del panel. Cambie el grupo para ver los demás.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"El filtro Desde no cambia la lista. ¿Por qué?"}>
+    El filtro de fechas solo se aplica cuando **Desde** y **Hasta** tienen fecha. Elija las dos fechas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Creé la reunión, pero no aparece en la lista. ¿Qué reviso?"}>
+    La lista muestra las reuniones del calendario seleccionado en la parte superior. Verifique el calendario, y borre los filtros de responsable y fechas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Puedo corregir la asistencia de un invitado?"}>
+    Sí. Desmarque **Asistió** en el invitado. El cambio se guarda al desmarcar.
   </GuideFAQItem>
 </GuideFAQ>

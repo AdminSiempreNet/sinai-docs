@@ -1,88 +1,184 @@
 ---
 title: "Denegar funciones a estudiantes"
-description: "Conozca las opciones de denegar funciones a estudiantes y siga el procedimiento correspondiente en SINAI."
+description: "Niegue o devuelva a los estudiantes el acceso a funciones como tareas en línea, calificaciones, boletines o anotaciones, por estudiante, grupo, sede o para toda la institución."
 guide: true
 wordpressId: 29250
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/denegar-funciones-a-estudiantes/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="_Bb73O-NR0o" title="Denegar funciones a estudiantes"
-  odyseeUrl="https://odysee.com/@AndresGoDu:a/Denegar-funciones-a-estudiantes---SINAI---M%C3%B3dulo-administrativo:2?r=5PX7BPiVRGo3V4jB9Hf9roBk5RG83gUX"
-/>
+<YouTube id="_Bb73O-NR0o" title="Denegar funciones a estudiantes" odyseeUrl="https://odysee.com/@AndresGoDu:a/Denegar-funciones-a-estudiantes---SINAI---M%C3%B3dulo-administrativo:2?r=5PX7BPiVRGo3V4jB9Hf9roBk5RG83gUX" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-En esta guía aprenderás a controlar las funciones disponibles para los estudiantes desde el módulo administrativo de **SINAI**. Puedes aplicar los permisos de forma individual, por grupo, por sede o para todos los estudiantes.
+### 1. ¿Qué es Denegar funciones a estudiantes?
 
-## 1. Accede a la opción
+Esta pantalla controla a qué funciones del módulo del estudiante tienen acceso los estudiantes. Por defecto, los estudiantes tienen todas las funciones habilitadas. Cuando niega una función, el estudiante deja de tener acceso a ella hasta que se la vuelva a asignar.
 
-En el módulo **Administrativo**, ingresa a **Establecimiento > Usuarios > Denegar funciones a estudiantes**. <GuideImageTrigger src={"/images/guides/denegar-funciones-a-estudiantes/acceso-denegar-funciones-a-estudiantes.png"} alt={"Acceso a Denegar funciones a estudiantes desde el menú Usuarios"}>Ver ejemplo</GuideImageTrigger>
+Las funciones que puede controlar son, entre otras, **Tareas en línea**, **Calificaciones Detalladas**, **Calificaciones Parciales**, **Calificaciones Consolidadas**, **Boletín Periodo**, **Boletín Final**, **Anotaciones**, **Ficha Observador** y **Visualizador de Informes**.
 
+Ingrese a **Establecimiento → Usuarios → Denegar funciones a estudiantes**.
 
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/acceso-denegar-funciones.jpg" alt="Menú Establecimiento con Usuarios desplegado y la opción Denegar funciones a estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
 
-## 2. Define el alcance y el permiso
+La pantalla tiene dos paneles:
 
-En el panel **Gestión de permisos** configura los filtros antes de realizar una acción:
+- **Gestión de permisos**, a la izquierda: el alcance, los filtros, el permiso y los botones **Asignar** y **Denegar**.
+- **Usuarios y permisos**, a la derecha: la lista de estudiantes, grupos o sedes, según el alcance.
 
-- **Tipo:** elige si trabajarás **Por Estudiante**, **Por Grupo**, **Por Sede** o para **Todos**.
-- **Sede:** selecciona la sede a la que se aplicará el cambio.
-- **Grupo:** cuando aplique, selecciona el grupo que deseas consultar.
-- **Permiso:** elige la función que quieres controlar, por ejemplo, *Calificaciones Detalladas*, *Boletín Periodo*, *Anotaciones* o *Ficha Observador*.
+Los cambios aplican a los estudiantes con matrícula activa en el calendario seleccionado en la parte superior y que tienen usuario en SINAI.
 
-La tarjeta inferior confirma el número, el nombre y la descripción del permiso seleccionado. <GuideImageTrigger src={"/images/guides/denegar-funciones-a-estudiantes/gestion-permisos-por-estudiante.png"} alt={"Gestión de permisos por estudiante en SINAI"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Elegir el alcance y el permiso
 
+En **Gestión de permisos**:
 
+1. En **Tipo**, elija el alcance: **Por Estudiante**, **Por Grupo**, **Por Sede** o **Todos**.
+2. Si el tipo es **Por Estudiante** o **Por Grupo**, seleccione la **Sede**.
+3. Si el tipo es **Por Estudiante**, seleccione también el **Grupo**.
+4. En **Permiso**, elija la función que quiere controlar.
 
-## 3. Deniega o asigna un permiso por grupo
+El recuadro **Permiso seleccionado** muestra el código, el nombre y la descripción del permiso, por ejemplo **010- Tareas en línea**. Verifíquelo antes de hacer clic en **Asignar** o **Denegar**.
 
-Para gestionar varios estudiantes a la vez, selecciona **Por Grupo**. La tabla de la derecha muestra los grupos de la sede, el número de estudiantes, los usuarios creados y cuántos ya tienen el permiso seleccionado.
+<GuideDataTable>
 
-1. Selecciona uno o más grupos en la primera columna de la tabla.
-2. Haz clic en **Denegar** para restringir el permiso, o en **Asignar** para habilitarlo.
-3. Confirma la acción en la ventana de confirmación.
+| Botón | Qué hace |
+| --- | --- |
+| **Asignar** | Devuelve el acceso a la función a los estudiantes, grupos o sedes seleccionados. |
+| **Denegar** | Quita el acceso a la función a los estudiantes, grupos o sedes seleccionados. |
 
-El proceso se ejecuta en segundo plano, por lo que puedes continuar trabajando en SINAI. Para consultar el resultado, regresa a esta opción y usa el botón de **Actualizar** ubicado en la esquina superior derecha de la tabla. <GuideImageTrigger src={"/images/guides/denegar-funciones-a-estudiantes/gestion-permisos-por-grupo.png"} alt={"Gestión de permisos por grupo en SINAI"}>Ver ejemplo</GuideImageTrigger>
+</GuideDataTable>
 
+Si no selecciona ninguna fila, SINAI muestra «Debe seleccionar por lo menos» seguido de un estudiante, un grupo o una sede, según el tipo.
 
+#### 3. Gestionar permisos por estudiante
 
-En este ejemplo, el permiso **011 - Calificaciones Detalladas** está seleccionado. La descripción permite verificar que el cambio afectará el acceso a las calificaciones detalladas. <GuideImageTrigger src={"/images/guides/denegar-funciones-a-estudiantes/permiso-calificaciones-detalladas-por-grupo.png"} alt={"Permiso de calificaciones detalladas seleccionado por grupo"}>Ver ejemplo</GuideImageTrigger>
+Con **Tipo** en **Por Estudiante**, la tabla muestra los estudiantes del grupo con matrícula activa y usuario:
 
+- **Usuario:** apellidos y nombres.
+- **IdUsuario:** usuario del estudiante.
+- **Permiso:** con el código del permiso seleccionado. El chulo verde indica que el permiso está habilitado; el candado, que está denegado.
 
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/gestion-permisos-por-estudiante.png" alt="Gestión de permisos por estudiante con la tabla de estudiantes y la columna del permiso">
+  Ver ejemplo
+</GuideImageTrigger>
 
-## 4. Gestiona permisos de un estudiante en particular
+Para cambiar el permiso a varios estudiantes:
 
-Selecciona **Por Estudiante**, elige la sede y el grupo, y ubica al estudiante en la tabla. Puedes seleccionar uno o varios registros para usar los botones **Asignar** o **Denegar**.
+1. Marque la casilla de cada estudiante.
+2. Haga clic en **Asignar** o en **Denegar**.
 
-Para revisar todas las funciones de un estudiante, haz clic en el botón de edición ubicado al final de su fila. Se abrirá el panel **Permisos**, donde cada opción muestra su estado:
+En este tipo, el cambio se aplica de inmediato, sin ventana de confirmación, y la tabla se actualiza con el nuevo estado.
 
-- Un indicador verde significa que el permiso está habilitado.
-- Al cambiar una opción, el sistema guarda el ajuste automáticamente; no hay un botón adicional de guardar. <GuideImageTrigger src={"/images/guides/denegar-funciones-a-estudiantes/permisos-individuales-estudiante.png"} alt={"Panel de permisos individuales de un estudiante"}>Ver ejemplo</GuideImageTrigger>
+#### 4. Ver y cambiar todos los permisos de un estudiante
 
+En la fila del estudiante, haga clic en el botón verde de edición. A la derecha se abre **Permisos -** seguido del nombre del estudiante, con las funciones agrupadas por tipo de permiso. La casilla marcada indica que la función está habilitada.
 
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/permisos-individuales-estudiante.png" alt="Panel Permisos de un estudiante con las funciones y sus casillas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-## Recomendaciones
+- Marque una casilla para asignar la función. SINAI muestra «Permiso asignado correctamente».
+- Desmarque una casilla para denegarla. SINAI muestra «Permiso denegado correctamente».
 
-- Usa **Por Sede** o **Todos** únicamente cuando necesites aplicar el mismo permiso a un alcance amplio.
-- Verifica siempre el permiso seleccionado antes de confirmar una negación.
-- Si necesitas devolver el acceso, repite el proceso y selecciona **Asignar**.
+Cada cambio se guarda al marcar o desmarcar la casilla, sin depender del botón **Guardar** del panel.
 
+#### 5. Gestionar permisos por grupo
+
+Con **Tipo** en **Por Grupo** y la **Sede** seleccionada, la tabla muestra los grupos de esa sede:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Grupo** | Nombre del grupo. |
+| **Estudiantes** | Estudiantes con matrícula activa y usuario. |
+| **Usuarios** | Usuarios de esos estudiantes. |
+| **Usuarios con Permisos** | Estudiantes que tienen habilitado el permiso seleccionado. |
+
+</GuideDataTable>
+
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/por-grupo.jpg" alt="Gestión de permisos por grupo con dos grupos marcados y el permiso Boletín Periodo seleccionado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+1. Marque los grupos. Para marcarlos todos, abra el menú de los tres puntos del encabezado y marque **TODOS**.
+2. Haga clic en **Asignar** o en **Denegar**.
+3. Lea la ventana de confirmación, por ejemplo *¿Seguro que deseas denegar el permiso Boletín Periodo a estudiantes de los grupos seleccionados?*
+4. Haga clic en **Confirmar**. **Cancelar** cierra la ventana sin cambios.
+
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/confirmar-denegar-grupos.jpg" alt="Ventana Denegar permisos por grupos con los botones Confirmar y Cancelar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra «Proceso de denegación de permisos iniciado en segundo plano, puedes realizar otras tareas en SINAI, mientras el proceso termina». Ese mismo aviso aparece al asignar. Para ver el resultado, haga clic en el botón de actualizar, en la esquina superior derecha de **Usuarios y permisos**.
+
+#### 6. Gestionar permisos por sede
+
+Con **Tipo** en **Por Sede**, la tabla muestra todas las sedes con las mismas columnas de la tabla por grupo: **Estudiantes**, **Usuarios** y **Usuarios con Permisos**.
+
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/por-sede.jpg" alt="Gestión de permisos por sede con la tabla de sedes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Marque las sedes y siga los mismos pasos que por grupo. La confirmación indica que el cambio aplica a los estudiantes de las sedes seleccionadas. El proceso también se ejecuta en segundo plano.
+
+#### 7. Aplicar un permiso a toda la institución
+
+Con **Tipo** en **Todos**, el aviso indica: **Toda la Institución:** las acciones ejecutadas se realizaran para todos los usuarios de estudiantes.
+
+<GuideImageTrigger src="/images/guides/denegar-funciones-a-estudiantes/todos.jpg" alt="Gestión de permisos con el tipo Todos y las tarjetas Estudiantes, Usuarios y Usuarios con permisos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Las tarjetas muestran:
+
+- **Estudiantes:** estudiantes con matrícula activa en el calendario.
+- **Usuarios:** usuarios activos con rol de estudiante en la institución.
+- **Usuarios con permisos:** usuarios que tienen registrado el permiso seleccionado como denegado.
+
+1. Haga clic en **Asignar** o en **Denegar**.
+2. Lea la confirmación, que indica que el cambio aplica a todos los estudiantes de la institución.
+3. Haga clic en **Confirmar**.
+
+<GuideCallout type="warning">
+  **Por Sede** y **Todos** cambian el acceso de muchos estudiantes a la vez. Úselos solo cuando necesite aplicar el mismo permiso a un alcance amplio y revise el **Permiso seleccionado** antes de confirmar.
+</GuideCallout>
+
+#### 8. Permisos
+
+Asignar y denegar funciones a estudiantes exige que su usuario tenga el permiso para dar y quitar permisos. Si no lo tiene, SINAI muestra el aviso del permiso y no aplica el cambio. Solicítelo al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Denegar funciones a estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Cómo sé si un estudiante tiene una función denegada?"}>
+    Con **Tipo** en **Por Estudiante**, seleccione la sede, el grupo y el permiso. En la columna **Permiso**, el chulo verde indica que está habilitado y el candado que está denegado. Para ver todas sus funciones, haga clic en el botón de edición de su fila.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Denegar funciones a estudiantes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Denegué un permiso por grupo y los números no cambian. ¿Se aplicó?"}>
+    Por grupo, por sede y para toda la institución, el cambio se ejecuta en segundo plano. Espere unos momentos y haga clic en el botón de actualizar de **Usuarios y permisos**. La columna **Usuarios con Permisos** debe bajar cuando niega y subir cuando asigna.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Denegar funciones a estudiantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Cómo devuelvo el acceso a una función?"}>
+    Repita el proceso con el mismo alcance y el mismo permiso, y haga clic en **Asignar**. Para un solo estudiante, también puede abrir su panel de permisos y marcar la casilla de la función.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Un estudiante no aparece en la lista. ¿Por qué?"}>
+    La lista incluye solo a los estudiantes con matrícula activa en el grupo y el calendario seleccionados que tienen usuario en SINAI. Verifique su matrícula y genere su usuario si no lo tiene.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Aparece «Debe seleccionar por lo menos un grupo». ¿Qué hago?"}>
+    Marque al menos una fila de la tabla antes de hacer clic en **Asignar** o **Denegar**. El mensaje cambia a estudiante o sede según el **Tipo**. Con **Todos** no hace falta seleccionar filas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Debo pulsar Guardar en el panel de permisos del estudiante?"}>
+    No. Cada casilla se guarda al marcarla o desmarcarla, y SINAI confirma con «Permiso asignado correctamente» o «Permiso denegado correctamente».
   </GuideFAQItem>
 </GuideFAQ>

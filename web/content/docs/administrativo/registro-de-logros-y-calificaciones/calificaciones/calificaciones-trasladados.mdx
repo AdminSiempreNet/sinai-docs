@@ -1,70 +1,203 @@
 ---
 title: "Calificaciones de estudiantes trasladados"
-description: "Conozca las opciones de calificaciones de estudiantes trasladados y siga el procedimiento correspondiente en SINAI."
+description: "Genere la planilla de un estudiante que llega trasladado y registre sus calificaciones e inasistencias de cada periodo."
 guide: true
 wordpressId: 29685
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/calificaciones-de-estudiantes-trasladados/"
-lastModified: "2023-11-15 00:21:33"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
 <YouTube id="8DKVb8rIwLw" title="Calificaciones de estudiantes trasladados" odyseeUrl="https://odysee.com/@AndresGoDu:a/Calificaciones-trasladados---SNIAI:f5d5a09a62073f46d49fb039ccc8fe5edcc1d3a3" />
 </GuideVideos>
 
-
 ## Guía paso a paso
 
-### Calificaciones de Estudiantes Trasladados
+### 1. ¿Qué es Calificaciones de Estudiantes Trasladados?
 
-En cualquier momento del calendario escolar, puede ingresar un estudiante nuevo a la institución. Este deberá presentar sus calificaciones certificadas de periodos anteriores, así como las calificaciones parciales del periodo en curso. Ambas deben ser registradas en la plataforma a través de este módulo.
+Cuando un estudiante llega trasladado de otra institución, trae calificaciones de periodos que no se registraron en SINAI. **Calificaciones de Estudiantes Trasladados** le permite crear la planilla de ese estudiante en un periodo y registrar la calificación definitiva y las inasistencias de cada asignatura.
 
-Importante Se recomienda tener configurada la equivalencia de escala para aquellos casos en que el registro que el estudiante presenta tenga diferencia con la escala institucional. (https://www.youtube.com/watch?v=ZULZ39HqqrQ)
+Las calificaciones registradas aquí quedan con el origen **TR** y bloqueadas para los docentes, salvo que active **Editable por el docente**.
 
-Desde el módulo administrativo se debe dirigir al menú **Evaluación > Calificaciones > Calificaciones de estudiantes trasladados** <GuideImageTrigger src={"/images/wordpress/2025/02/Calificaciones-de-estudiantes-trasladados-1.png"} alt={"Captura de Calificaciones de estudiantes trasladados 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Evaluación → Calificaciones → Calificaciones de Estudiantes Trasladados**.
 
+<GuideImageTrigger src="/images/guides/calificaciones-trasladados/acceso-trasladados.jpg" alt="Menú Evaluación con Calificaciones desplegado y la opción Calificaciones de Estudiantes Trasladados">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pantalla tiene dos partes:
 
-Al ingresar a la ruta indicada, haga clic en el botón **“Opciones”** para abrir una ventana emergente en la cual se debe definir 3 opciones básicas.
+- **Seleccionar estudiante**, a la izquierda: sede, grupo, periodo y estudiante, con los botones **Opciones** y **Escalas**.
+- **Registro de valoración trasladados**, a la derecha: las asignaturas del estudiante en el periodo, con los botones para generar, guardar, cambiar el origen y eliminar.
 
-- **Definir el tipo de calificación:** Seleccione si las calificaciones serán registradas como “Por Desempeño” o “Numérica”.
-- **Incluir asignatura de comportamiento:** Active esta casilla si desea registrar calificaciones relacionadas con el comportamiento del estudiante.
-- **Habilitar modificaciones:** Si desea que los docentes puedan modificar las calificaciones registradas, active esta opción.
+El botón azul junto a **Escalas** abre la guía [Modificar calificaciones individuales](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/modificar-calificaciones), que usa esta misma pantalla.
 
-Una vez definidos los parámetros, haga clic en el botón “Aceptar” para aplicar los cambios. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificaciones-de-estudiantes-trasladados-2.png"} alt={"Captura de Calificaciones de estudiantes trasladados 2"}>Ver ejemplo</GuideImageTrigger>
+<GuideCallout>
+  Si la escala del colegio de origen es diferente, convierta las calificaciones a la escala de la institución antes de registrarlas. Puede consultar la escala con el botón **Escalas**.
+</GuideCallout>
 
+#### 2. Configurar la planilla
 
+Haga clic en **Opciones**. Se abre la ventana **Configuraciones**.
 
-#### Cómo Registrar las Calificaciones
+<GuideImageTrigger src="/images/guides/calificaciones-trasladados/ventana-configuraciones.jpg" alt="Ventana Configuraciones con Tipo de calificación, Incluir evaluación del comportamiento y Editable por el docente">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- **Seleccionar la sede:** Elija la sede principal o la correspondiente desde el menú desplegable.
+<GuideDataTable>
 
-- **Elegir el grupo:** Seleccione el grupo al que pertenece el estudiante en el campo "Grupo".
+| Opción | Qué define |
+| --- | --- |
+| **Tipo de calificación** | **Numérica**: se escribe la calificación en número. **Por desempeño**: se elige el desempeño en una lista. |
+| **Incluir evaluación del comportamiento al generar.** | Al hacer clic en **Generar Planilla**, incluye la asignatura de comportamiento. |
+| **Editable por el docente.** | Las calificaciones que genere o guarde quedan sin bloqueo y con origen **PG**, de modo que el docente las puede modificar. |
 
-- **Definir el periodo:** Seleccione el periodo escolar en el que desea registrar las calificaciones.
+</GuideDataTable>
 
-- **Seleccionar al estudiante:** Haga clic en el nombre del estudiante dentro del listado correspondiente.
+Para guardar las casillas, haga clic en **Aceptar**. La equis roja cierra la ventana sin guardar.
 
-- **Generar planilla:** Haga clic en el botón "Generar Planilla" para habilitar el listado de asignaturas configuradas para el grupo seleccionado.
-    **Nota:** Al generar la planilla, esta se bloqueará con el tipo "TR" (Trasladados).
+<GuideCallout type="warning">
+  Al cambiar **Tipo de calificación**, SINAI guarda el cambio de inmediato y recarga la pantalla, sin esperar **Aceptar**. Estas opciones aplican a toda la institución y a la pantalla [Modificar calificaciones individuales](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/modificar-calificaciones).
+</GuideCallout>
 
-- **Guardar cambios:** Finalmente, haga clic en el botón verde ubicado en la parte superior derecha para guardar los cambios. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificaciones-de-estudiantes-trasladados-3.png"} alt={"Captura de Calificaciones de estudiantes trasladados 3"}>Ver ejemplo</GuideImageTrigger>
+#### 3. Seleccionar el estudiante
 
-Instrucciones para Eliminar la Planilla de Estudiantes Trasladados Para eliminar la planilla de estudiantes trasladados de un estudiante, realice los filtros mencionados anteriormente, como sede, grupo, periodo y estudiante. Luego, seleccione todas las asignaturas y, por último, haga clic en el botón rojo (Eliminar) ubicado en la parte superior derecha.
+1. Seleccione la **Sede** o deje **[Todas las sedes]**.
+2. Seleccione el **Grupo** al que ingresó el estudiante.
+3. Seleccione el **Periodo** que va a registrar.
+4. En **Estudiante**, haga clic en el nombre. La lista muestra el nombre y el estado de la matrícula.
 
+Si el estudiante aún no tiene planilla en ese periodo, la tabla muestra **Sin datos para mostrar**.
+
+<GuideImageTrigger src="/images/guides/calificaciones-trasladados/pantalla-trasladados.jpg" alt="Pantalla Registro de valoración trasladados con un estudiante seleccionado y la tabla sin asignaturas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 4. Generar la planilla
+
+Haga clic en **Generar Planilla**. SINAI crea las asignaturas que el estudiante tiene en el grupo para el periodo, según la asignación académica, y muestra *Planilla generadas exitosamente. Se generaron N asignaturas*.
+
+- SINAI agrega solo las asignaturas que el estudiante aún no tiene en el periodo. Si ya las tiene todas, muestra *El estudiante ya tiene asginaturas generadas*.
+- Si no seleccionó un estudiante, muestra **Debe seleccionar un estudiante**.
+- La asignatura de comportamiento solo se agrega si está marcada **Incluir evaluación del comportamiento al generar.**
+
+Las asignaturas generadas quedan con origen **TR** y con **Bloq. Docentes** marcado. Si **Editable por el docente.** está activa, quedan con origen **PG** y sin bloqueo.
+
+#### 5. Registrar las calificaciones
+
+La tabla tiene estas columnas:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| Casilla | Selecciona la asignatura para cambiar el origen o eliminarla. |
+| **Asignatura** | Código y nombre, con la etiqueta del origen de la calificación. |
+| **Calificación** | Calificación numérica del periodo. Aparece con el tipo **Numérica**. |
+| **Valoración** | Lista de desempeños de la escala. Aparece con el tipo **Por desempeño**. |
+| **Desempeño** | Desempeño que SINAI calculó para la calificación guardada. No se edita. |
+| **Inasistencias** | Total de inasistencias del periodo en la asignatura. |
+| **Bloq. Docentes** | Marcada si el docente no puede modificar la calificación. |
+
+</GuideDataTable>
+
+1. Escriba la **Calificación** o elija la **Valoración** de cada asignatura.
+2. Escriba las **Inasistencias**, si las tiene.
+3. Haga clic en **Guardar Cambios**.
+
+Las filas que modifica cambian a color verde. SINAI guarda solo esas filas y muestra **Cambios guardados correctamente**. Después recalcula el consolidado del estudiante en ese periodo.
+
+- Si una calificación numérica queda por fuera de la escala, se guarda vacía.
+- Si el grupo tiene una escala personalizada, SINAI usa esa escala. Si no, usa la escala de la institución.
+
+Repita el proceso para cada periodo que el estudiante trae del colegio de origen.
+
+#### 6. Origen de la calificación
+
+La etiqueta junto a cada asignatura indica de dónde viene la calificación:
+
+<GuideDataTable>
+
+| Etiqueta | Origen |
+| --- | --- |
+| **TR** | Generado por calificación de trasladados. |
+| **PG** | Generado por planilla general. |
+| **ND** | Generado por planilla de nota directa. |
+| **EX** | Generado por planillas Excel. |
+| **BD** | Cargado directamente a la base de datos. |
+| **NULL** | Cargado en versiones anteriores. |
+
+</GuideDataTable>
+
+Para cambiar el origen:
+
+1. Marque las asignaturas en la tabla.
+2. En la lista de la parte superior, elija **Planilla General**, **Planilla Directa** o **Planilla Trasladados**.
+3. Haga clic en **Cambiar**.
+
+SINAI muestra *Se ha guardado correctamente.*
+
+#### 7. Consultar la escala
+
+Haga clic en **Escalas**. La ventana muestra el **Concepto**, el **Minimo**, el **Maximo** y la **Valoracion** de cada desempeño. Si el grupo tiene una escala personalizada, muestra esa escala.
+
+<GuideImageTrigger src="/images/guides/calificaciones-trasladados/ventana-escalas.jpg" alt="Ventana Escalas con los desempeños, mínimos, máximos y valoraciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 8. Eliminar asignaturas de la planilla
+
+1. Marque las asignaturas que quiere quitar. La casilla del encabezado marca todas.
+2. Haga clic en el botón rojo de la parte superior.
+3. En **Confirmación de Eliminación**, lea *¿Está seguro que desea eliminar las asignaturas seleccionadas?*
+4. Si quiere quitar esas asignaturas a todos los estudiantes del grupo en el periodo, marque **Eliminar para todos los estudiantes del grupo**.
+5. Haga clic en **Aceptar**.
+
+SINAI muestra **Registro de calificaciones eliminadas exitosamente**. Con la casilla del grupo marcada, el aviso indica cuántas eliminaciones hizo. **Cancelar** cierra la ventana sin eliminar.
+
+Para volver a tener una asignatura eliminada, haga clic otra vez en **Generar Planilla**.
+
+<GuideCallout type="warning">
+  La eliminación borra la calificación y las inasistencias de esas asignaturas en el periodo. Con **Eliminar para todos los estudiantes del grupo**, las borra a todo el grupo.
+</GuideCallout>
+
+#### 9. Permisos
+
+El rector usa todos los botones sin un permiso adicional. Los demás usuarios administrativos necesitan estos permisos:
+
+- Generar la planilla: permiso Nº 605.
+- Guardar calificaciones: permiso Nº 606.
+- Eliminar asignaturas: permiso Nº 604.
+
+Si falta el permiso, SINAI muestra **No tiene asignado el permiso** con el número y no aplica la acción.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Calificaciones de estudiantes trasladados»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Seleccioné el estudiante y la tabla dice «Sin datos para mostrar». ¿Qué hago?"}>
+    El estudiante aún no tiene asignaturas en ese periodo. Haga clic en **Generar Planilla** para crearlas según la asignación académica del grupo y luego registre las calificaciones.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Calificaciones de estudiantes trasladados» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué el docente no puede modificar las calificaciones que registré?"}>
+    Las calificaciones de esta pantalla quedan con origen **TR** y **Bloq. Docentes** marcado. Si quiere que el docente las modifique, active **Editable por el docente.** en **Opciones** antes de generar o guardar, o cambie el origen a **Planilla General** con el botón **Cambiar**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Calificaciones de estudiantes trasladados»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Guardé y algunas calificaciones quedaron vacías. ¿Por qué?"}>
+    La calificación numérica estaba por fuera de la escala y SINAI la guarda vacía. Consulte los mínimos y máximos con el botón **Escalas** y vuelva a escribir la calificación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «El estudiante ya tiene asginaturas generadas». ¿Es un error?"}>
+    No. El estudiante ya tiene en el periodo todas las asignaturas de su asignación. Registre las calificaciones en la tabla. Si eliminó una asignatura, al generar otra vez SINAI solo agrega la que falta.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"No aparece la asignatura de comportamiento. ¿Cómo la agrego?"}>
+    En **Opciones**, marque **Incluir evaluación del comportamiento al generar.**, haga clic en **Aceptar** y luego en **Generar Planilla**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué diferencia hay con Modificar calificaciones individuales?"}>
+    Ambas usan la misma pantalla. En esta, lo que genera o guarda queda con origen **TR**. En [Modificar calificaciones individuales](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/modificar-calificaciones) queda con origen **ND**. En las dos, si activa **Editable por el docente.**, queda con origen **PG** y sin bloqueo.
   </GuideFAQItem>
 </GuideFAQ>

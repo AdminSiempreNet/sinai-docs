@@ -1,50 +1,195 @@
 ---
 title: "Anotaciones disciplinarias"
-description: "Registre, consulte e imprima anotaciones disciplinarias de estudiantes en SINAI."
+description: "Registre, consulte, edite, elimine e imprima las anotaciones disciplinarias de los estudiantes desde el módulo administrativo."
 guide: true
 wordpressId: 28839
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/anotaciones-disciplinarias/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="YdqlG76_Chc" title="Anotaciones disciplinarias"
-  odyseeUrl="https://odysee.com/anotaciones%3Aaaf04fb3b2c88affcca2319b1c3f396fe20919be"
-/>
+<YouTube id="YdqlG76_Chc" title="Anotaciones disciplinarias" odyseeUrl="https://odysee.com/anotaciones%3Aaaf04fb3b2c88affcca2319b1c3f396fe20919be" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Las anotaciones disciplinarias registran situaciones de convivencia y las acciones institucionales relacionadas con un estudiante.
+### 1. ¿Qué es Anotaciones?
 
-### 1. Ubique al estudiante
+**Registro de Anotaciones del Estudiante** le permite registrar las situaciones de convivencia de un estudiante: la norma o falta relacionada, la descripción de lo sucedido, los descargos del estudiante y las acciones que toma la institución. Desde la misma pantalla consulta, edita, elimina e imprime esas anotaciones.
 
-Abra **Seguimiento > Anotaciones** y seleccione el calendario, sede, grupo y estudiante.
+Ingrese a **Seguimiento → Anotaciones**.
 
-### 2. Complete el registro
+<GuideImageTrigger src="/images/guides/registro-de-anotaciones-disciplinarias/anotaciones-lista.jpg" alt="Pantalla Registro de Anotaciones del Estudiante con los parámetros de consulta y la lista de anotaciones de un estudiante">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En **Registro de anotaciones**, indique la fecha y la norma o falta relacionada. Describa la anotación, los descargos del estudiante y las acciones tomadas por la institución. Revise el contenido antes de registrarlo.
+La pantalla tiene dos partes:
 
-### 3. Consulte el historial e informe
+- **A la izquierda:** **Parametros de Consulta**, con el calendario, la sede, el grupo, los estudiantes y la fotografía del estudiante elegido. El botón **Faltas** abre la pantalla de faltas de la institución.
+- **A la derecha:** las pestañas **Lista de Anotaciones del Estudiante**, **Registro de Anotaciones** e **Informe de Anotación**. Arriba están el botón azul de ayuda y el botón del engranaje, que abre la configuración.
 
-Use **Lista de anotaciones del estudiante** para seleccionar un registro. La pestaña **Informe de anotación** permite visualizarlo y usar las opciones de descarga disponibles. <GuideImageTrigger src={"/images/guides/anotaciones-disciplinarias/registro-anotacion-disciplinaria.png"} alt={"Formulario de registro de anotaciones disciplinarias en SINAI"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Seleccionar al estudiante
 
+<GuideDataTable>
 
+| Filtro | Qué muestra |
+| --- | --- |
+| **Calendario** | Años de la institución. Al entrar aparece el calendario en el que inició sesión. |
+| **Sede** | Sedes de la institución. |
+| **Estudiante** | Primero la lista de grupos de la sede en el calendario elegido y, debajo, los estudiantes del grupo. |
 
+</GuideDataTable>
+
+Junto al nombre de cada estudiante aparece el número de anotaciones que tiene en el calendario elegido, por ejemplo *GUTIERREZ RINCON MELISA EDNA - 1*. Haga clic en el estudiante para ver sus anotaciones.
+
+#### 3. Consultar las anotaciones del estudiante
+
+La pestaña **Lista de Anotaciones del Estudiante** muestra todas las anotaciones del estudiante en el calendario elegido, de la más reciente a la más antigua, sin importar qué usuario las registró.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Fecha** | Año y grupo, fecha de la anotación y su número. |
+| **Anotacion** | Norma o falta, descripción, descargos y acciones, cada uno en un color. |
+| **Registrado por** | Usuario que registró o modificó la anotación, fecha y hora, y los botones **Informe**, **Editar** y el botón rojo de eliminar. |
+
+</GuideDataTable>
+
+Si el estudiante no tiene anotaciones, la pestaña muestra *Este estudiante no tiene anotaciones registradas por el usuario actual. El usuario solo puede ver las anotaciones registradas por si mismo.*
+
+#### 4. Registrar una anotación
+
+1. Seleccione el grupo y el estudiante.
+2. Abra la pestaña **Registro de Anotaciones**. En el título aparece **Anotación Número** con el número que tendrá la anotación.
+3. Complete los campos.
+4. Haga clic en **Agregar Anotación**.
+5. Acepte el aviso *Por favor verifique solo de podrá modificar la anotación durante los próximos 7 días*.
+
+<GuideImageTrigger src="/images/guides/registro-de-anotaciones-disciplinarias/registro-anotacion.jpg" alt="Pestaña Registro de Anotaciones con fecha, norma, anotación y descargos de ejemplo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué registra |
+| --- | --- |
+| **Fecha** | Día de la anotación, en formato dd/mm/aaaa. SINAI propone la fecha de hoy. Es obligatoria. |
+| **Norma o falta relacionada** | Norma del manual de convivencia relacionada, hasta 500 caracteres. Puede escribirla o elegirla con **Seleccionar**. |
+| **Anotación** | Descripción de lo sucedido. Es obligatoria. |
+| **Descargos** | Descargos o comentarios del estudiante. |
+| **Acciones** | Acciones que toma la institución frente a lo sucedido. |
+
+</GuideDataTable>
+
+SINAI muestra «Se ha realizado la Anotación N° … para el estudiante se ha realizado correctamente.», con el número de la anotación, y la agrega a la lista.
+
+- Sin fecha, aparece «Debe asignar una fecha para la anotación».
+- Sin descripción, aparece «Por Favor Agreggue una Descripción» o «Debe escribir la anotación».
+
+Para registrar la misma anotación a varios estudiantes del grupo, en la pestaña **Registro de Anotaciones** mantenga presionada la tecla Ctrl y haga clic en cada estudiante de la lista. SINAI registra una anotación por estudiante y muestra «Anotaciones registradas correctamente».
+
+<GuideCallout type="warning">
+  SINAI guarda la anotación en el calendario en el que usted inició sesión, aunque en **Calendario** haya elegido otro año. Para registrar anotaciones, deje **Calendario** en el año de la sesión.
+</GuideCallout>
+
+Al registrar la anotación, SINAI avisa al director del grupo con una notificación, si no fue él quien la registró. Si la institución tiene activado el aviso de anotaciones al acudiente, también envía un correo al acudiente principal que tenga correo registrado.
+
+#### 5. Elegir la norma o falta
+
+1. En **Registro de Anotaciones**, haga clic en **Seleccionar**, junto a **Norma o falta relacionada**.
+2. En la ventana **Seleccionar Falta**, elija el **Tipo de falta**.
+3. En **Falta**, haga clic en la falta.
+4. Haga clic en **Aceptar**. El texto de la falta pasa al campo **Norma o falta relacionada**.
+
+<GuideImageTrigger src="/images/guides/registro-de-anotaciones-disciplinarias/seleccionar-falta.jpg" alt="Ventana Seleccionar Falta con el tipo de falta y la lista de faltas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si la institución no tiene faltas configuradas, SINAI muestra «La Institución no ha configurado las faltas por favor digite la falta o la norma manualmente en el cuadro de texto». Escriba la norma en el campo.
+
+#### 6. Editar una anotación
+
+1. En la lista, haga clic en **Editar** o en el número de la anotación.
+2. En la ventana **Editando Anotación**, cambie la **Fecha**, la **Norma**, la **Anotación**, los **Descargos** o las **Acciones**.
+3. Haga clic en **Aceptar**. **Cancelar** cierra la ventana sin cambios.
+
+<GuideImageTrigger src="/images/guides/registro-de-anotaciones-disciplinarias/editar-anotacion.jpg" alt="Ventana Editando Anotación con los datos de una anotación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra «Se ha creado la anotacion correctamente.» al guardar los cambios.
+
+- Solo se modifican las anotaciones con fecha de hasta 15 días atrás, aunque el aviso al registrar mencione 7 días. Después, SINAI muestra «No puede modificar anotaciones que no estén dentro de los primeros 15 días a partir de su registro.»
+- Si su usuario no tiene el permiso para editar anotaciones, SINAI muestra el aviso de permiso y no abre la ventana.
+
+#### 7. Eliminar una anotación
+
+1. En la fila de la anotación, haga clic en el botón rojo de eliminar.
+2. Acepte el aviso *La accion no se podrá revertir, ¿Está seguro de continuar?.*
+
+SINAI muestra «La anotación se elimino correctamente».
+
+- Si la anotación tiene comentarios asociados, SINAI muestra «No se puede eliminar  esta anotacion ya que tiene comentarios asociados».
+- Su usuario necesita el permiso para eliminar anotaciones.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer.
+</GuideCallout>
+
+#### 8. Ver el informe de una anotación
+
+Haga clic en **Informe** en la fila de la anotación. SINAI abre la pestaña **Informe de Anotación** con el informe en PDF y una barra para cambiar de página, ajustar el tamaño, guardar e imprimir.
+
+<GuideImagePending>
+  Docente/Seguimiento/Anotaciones.aspx, pestaña Informe de Anotación con el informe de una anotación del calendario actual. Archivo: informe-anotacion.jpg
+</GuideImagePending>
+
+#### 9. Permitir que los docentes eliminen anotaciones
+
+1. Haga clic en el botón del engranaje, en la parte superior derecha.
+2. En la ventana **Configuraciones**, marque o desmarque **Habilitar la eliminación de anotaciones para Docentes.**
+3. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/registro-de-anotaciones-disciplinarias/configuracion.jpg" alt="Ventana Configuraciones con la casilla para habilitar la eliminación de anotaciones para docentes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout type="warning">
+  Esta opción aplica a todos los docentes de la institución. Con la casilla marcada, cada docente puede eliminar solo las anotaciones que él mismo registró.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Anotaciones disciplinarias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La lista dice que solo veo las anotaciones que yo registré. ¿Es así?"}>
+    No en el módulo administrativo. La pestaña **Lista de Anotaciones del Estudiante** muestra todas las anotaciones del estudiante en el calendario elegido, registradas por cualquier usuario. El mensaje aparece cuando el estudiante no tiene anotaciones en ese calendario.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Anotaciones disciplinarias» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Cómo sé qué estudiantes tienen anotaciones?"}>
+    En la lista de estudiantes, el número que aparece después del nombre es la cantidad de anotaciones que tiene en el calendario elegido.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Anotaciones disciplinarias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo registrar la misma anotación a varios estudiantes?"}>
+    Sí. En la pestaña **Registro de Anotaciones**, mantenga presionada la tecla Ctrl y haga clic en cada estudiante. SINAI registra una anotación por estudiante y muestra «Anotaciones registradas correctamente».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no puedo modificar una anotación?"}>
+    SINAI solo permite modificar anotaciones con fecha de hasta 15 días atrás. Después muestra «No puede modificar anotaciones que no estén dentro de los primeros 15 días a partir de su registro.» También necesita el permiso para editar anotaciones.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué no puedo eliminar una anotación?"}>
+    Si la anotación tiene comentarios asociados, SINAI no la elimina y muestra «No se puede eliminar  esta anotacion ya que tiene comentarios asociados». También necesita el permiso para eliminar anotaciones.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Quién se entera de una anotación nueva?"}>
+    El director del grupo recibe una notificación en SINAI, si no fue él quien la registró. Si la institución tiene activado el aviso al acudiente, el acudiente principal recibe un correo con la norma, la descripción, los descargos y las acciones.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"La ventana Seleccionar Falta no muestra faltas. ¿Qué hago?"}>
+    La institución no tiene faltas configuradas. Escriba la norma o la falta directamente en **Norma o falta relacionada**, o configure las faltas con el botón **Faltas** de la parte superior izquierda.
   </GuideFAQItem>
 </GuideFAQ>

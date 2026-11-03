@@ -1,42 +1,150 @@
 ---
 title: "Valoración"
-description: "Registre, envíe y elimine las valoraciones de los centros de interés."
+description: "Registre las valoraciones de un centro de interés por periodo, envíelas a las planillas de las asignaturas o elimínelas."
 guide: true
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/valoracion-de-centros-de-interes-2/"
-lastModified: "2024-06-14"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
 ## Video tutorial
 
 <GuideVideos compact>
-  <YouTube id="zsr8w-ORb0A" title="Valoración de centros de interés" />
+<YouTube id="zsr8w-ORb0A" title="Valoración de centros de interés" />
 </GuideVideos>
 
-## Registrar valoraciones
+## Guía paso a paso
 
-1. Abra **Evaluación → Calificaciones → Centros de interés**.
-2. Seleccione el período y el centro de interés donde realizará el registro.
-3. Ingrese la valoración en la columna correspondiente, según la escala institucional.
-4. Si es necesario, agregue una observación para cada estudiante.
-5. Haga clic en **Guardar**.
+### 1. ¿Qué es Valoración?
 
-> **Nota:** puede usar las flechas arriba, abajo y Enter para cambiar de estudiante; use las flechas izquierda y derecha para alternar entre valoración y observación.
+**Valoración** es la planilla donde se registra, por periodo, la valoración y la observación de los estudiantes matriculados en un centro de interés. Desde la misma pantalla las valoraciones se envían a las planillas de las asignaturas asociadas al centro.
 
-## Enviar valoraciones a las planillas de asignatura
+Ingrese a **Evaluación → Centros de Interés** y, en el panel **Opciones**, seleccione **Valoración**.
 
-Cada centro de interés puede incluir estudiantes de distintos grupos y corresponder a varias asignaturas. Cuando finalice el registro, envíe las valoraciones para que se reflejen en las asignaturas configuradas.
+<GuideImageTrigger src="/images/guides/centros-de-interes-valoracion/acceso-valoracion.jpg" alt="Menú Evaluación, submenú Centros de Interés y panel Opciones con Valoración">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Haga clic en **Enviar**, a la derecha de la lista de centros de interés.
-2. En la ventana emergente, haga clic en **Enviar valoraciones**.
+La parte superior de la pantalla tiene tres listas:
 
-> **Nota:** la ventana indica las asignaturas y grupos a los que se enviará la valoración de cada estudiante.
+<GuideDataTable>
 
-> **Importante:** no se envían valoraciones a grupos cuyo período esté cerrado.
+| Campo | Qué define |
+| --- | --- |
+| **Docente** | Docente cuyos centros de interés se cargan en **Centro de interés**. |
+| **Periodo** | Periodo al que pertenecen las valoraciones que se muestran, se guardan y se envían. |
+| **Centro de interés** | Centro cuyos estudiantes matriculados aparecen en la planilla. Solo lista los centros asignados al docente elegido. |
 
-## Eliminar valoraciones
+</GuideDataTable>
 
-1. En **Evaluación → Calificaciones → Centros de interés**, seleccione uno o varios estudiantes con las casillas junto a sus nombres.
-2. Para seleccionar toda la planilla, use la casilla de la esquina superior izquierda.
-3. Haga clic en **Eliminar** y confirme la operación.
+La planilla muestra, por cada estudiante matriculado, estas columnas:
 
-> **Precaución:** los datos eliminados no se pueden recuperar.
+- **Casilla de selección:** marca el estudiante para eliminar su valoración.
+- **Foto**, **Apellidos y Nombres** con el código del estudiante, y **Grupo**.
+- **Valoración:** nota del estudiante en el centro de interés.
+- **Desempeño:** nivel de la escala de desempeño que corresponde a la valoración, con su color.
+- **Observación:** texto libre para el estudiante.
+
+<GuideCallout>
+  Los centros de interés y sus docentes se asignan en la opción **Asignación**, y los estudiantes se agregan en **Matrículas**, del mismo panel. La planilla solo incluye estudiantes con matrícula activa.
+</GuideCallout>
+
+#### 2. Registrar valoraciones
+
+1. Seleccione el **Docente**.
+2. Seleccione el **Periodo**.
+3. Seleccione el **Centro de interés**.
+4. En la columna **Valoración**, escriba la nota de cada estudiante. Puede usar coma o punto para los decimales.
+5. Si lo necesita, escriba una **Observación**.
+6. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/centros-de-interes-valoracion/planilla-valoracion.jpg" alt="Planilla de valoración con docente, periodo y centro de interés seleccionados, valoraciones, desempeño y observación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Al salir de la casilla **Valoración**, SINAI ajusta la nota a los decimales del calendario y muestra el **Desempeño** según la escala de desempeño. Si el valor no es un número o no está dentro de la escala, SINAI deja la casilla vacía.
+
+Si el guardado es correcto, SINAI muestra **Datos guardados correctamente**.
+
+Para desplazarse por la planilla con el teclado:
+
+- **Flecha abajo** o **Enter:** pasa al estudiante siguiente.
+- **Flecha arriba:** vuelve al estudiante anterior.
+- **Flecha derecha** y **flecha izquierda:** pasan de **Valoración** a **Observación** y de vuelta.
+
+<GuideCallout>
+  Lo que escriba en la planilla no queda registrado hasta que haga clic en **Guardar**. Si cambia de periodo o de centro de interés antes de guardar, la planilla se vuelve a cargar con los datos guardados.
+</GuideCallout>
+
+#### 3. Enviar valoraciones a las asignaturas
+
+Un centro de interés puede tener estudiantes de varios grupos y estar asociado a varias asignaturas. Al enviar, SINAI lleva la valoración de cada estudiante a la planilla de calificaciones de esas asignaturas, en el periodo seleccionado.
+
+1. Guarde las valoraciones del periodo.
+2. Con el **Periodo** y el **Centro de interés** seleccionados, haga clic en **Enviar**, junto a la lista **Centro de interés**.
+3. En la ventana **Enviar valoración a las asignaturas**, revise la lista de **Grupo** y **Asignatura** que recibirán la valoración.
+4. Haga clic en **Enviar valoraciones**.
+5. Confirme *¿Confirma que desea enviar la valoración actual a las asignaturas del centro de interés?* con **Si, enviar**.
+
+<GuideImageTrigger src="/images/guides/centros-de-interes-valoracion/enviar-valoraciones.jpg" alt="Ventana Enviar valoración a las asignaturas con el aviso, la lista de grupos y asignaturas y el botón Enviar valoraciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El aviso de la ventana indica dónde queda la valoración, según la configuración de los centros de interés:
+
+- Como calificación de la asignatura en el periodo.
+- En la columna del componente y la actividad definidos en la configuración.
+
+Si el envío es correcto, SINAI muestra **Valoraciones asignadas correctamente**.
+
+<GuideCallout type="warning">
+  SINAI envía las valoraciones guardadas, no las que están escritas en la pantalla sin guardar. El envío reemplaza la calificación que el estudiante tenga en ese lugar de la asignatura. Si un estudiante no tiene valoración guardada en el centro de interés, su calificación en ese lugar queda vacía.
+</GuideCallout>
+
+#### 4. Eliminar valoraciones
+
+1. Marque la casilla de cada estudiante cuya valoración desea eliminar. La casilla del encabezado marca o desmarca toda la planilla.
+2. Haga clic en **Eliminar**.
+3. En la ventana **Confirmar eliminación**, que pregunta *¿Está seguro de eliminar los datos seleccionados?*, haga clic en **Sí, eliminar**.
+
+<GuideImageTrigger src="/images/guides/centros-de-interes-valoracion/confirmar-eliminacion.jpg" alt="Ventana Confirmar eliminación con los botones Sí, eliminar y Cancelar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si ninguno de los estudiantes marcados tiene valoración, SINAI muestra **Debe seleccionar al menos un estudiante con valoración**. Si la eliminación es correcta, el aviso es **Datos eliminados correctamente**.
+
+<GuideCallout type="warning">
+  Se eliminan la valoración y la observación de los estudiantes marcados en el periodo y el centro de interés seleccionados, y no se pueden recuperar. Las calificaciones que ya se enviaron a las planillas de las asignaturas no se modifican.
+</GuideCallout>
+
+#### 5. Permisos
+
+**Guardar**, **Eliminar** y **Enviar valoraciones** exigen un permiso del usuario. Si no lo tiene, SINAI muestra **El usuario no tiene permiso para realizar esta operación. Se requiere el permiso** seguido del número y la descripción del permiso, y no aplica el cambio. El rector tiene todos los permisos.
+
+Solicite el permiso faltante al administrador de usuarios de la institución.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué no aparece el centro de interés en la lista?">
+    La lista **Centro de interés** solo muestra los centros asignados al docente elegido en **Docente**. Seleccione el docente correcto o asigne el centro en la opción **Asignación** del panel **Opciones**.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="¿Por qué la planilla no muestra estudiantes?">
+    Porque el centro de interés no tiene estudiantes matriculados con matrícula activa. Agréguelos en la opción **Matrículas** del panel **Opciones**.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="Escribí una valoración y la casilla quedó vacía. ¿Por qué?">
+    Al salir de la casilla, SINAI compara la nota con la escala de desempeño. Si no es un número o no está dentro de ningún rango de la escala, borra el valor. Escriba una nota dentro de la escala; puede usar coma o punto para los decimales.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="Envié las valoraciones y la asignatura no muestra lo que escribí. ¿Qué pasó?">
+    El envío toma las valoraciones guardadas del periodo seleccionado. Haga clic en **Guardar**, verifique el periodo y vuelva a enviar.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué pasa en la asignatura con un estudiante que no tiene valoración en el centro de interés?">
+    Al enviar, su calificación en el lugar donde se lleva la valoración queda vacía, porque el envío reemplaza ese valor con lo que tenga guardado el centro de interés.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="Si elimino valoraciones, ¿se borran de las asignaturas?">
+    No. **Eliminar** solo borra la valoración y la observación en la planilla del centro de interés. Las calificaciones ya enviadas a las asignaturas se conservan hasta que vuelva a enviar.
+  </GuideFAQItem>
+  <GuideFAQItem index="07" question="¿Qué significa «No se ha definido correctamente la configuración de actividades predeterminadas»?">
+    La configuración de los centros de interés indica llevar la valoración a una columna de componente y actividad, pero esa actividad predeterminada no está definida para la institución. Revise la configuración del componente y la actividad antes de volver a enviar.
+  </GuideFAQItem>
+</GuideFAQ>

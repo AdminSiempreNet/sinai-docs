@@ -1,56 +1,212 @@
 ---
-title: "Registro de  Funcionarios"
-description: "Aprenda a registrar funcionarios en SINAI."
+title: "Registro de Funcionarios"
+description: "Consulte la lista de funcionarios, registre funcionarios nuevos con su plaza y su usuario, y actualice sus datos, estado y fotografía."
 guide: true
 wordpressId: 28473
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/registro-de-funcionarios/"
-lastModified: "2023-11-01 14:41:10"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="m5pewndUqL0" title="Registro de  Funcionarios"
-  odyseeUrl="https://odysee.com/registro-de-nuevos-funcionarios%3A37839f869ca9dcaa170f5f857e5568887feb2139"
-/>
+<YouTube id="m5pewndUqL0" title="Registro de Funcionarios" odyseeUrl="https://odysee.com/registro-de-nuevos-funcionarios%3A37839f869ca9dcaa170f5f857e5568887feb2139" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-### Registro y Actualización de Funcionarios del Establecimiento
+### 1. ¿Qué es Funcionarios?
 
-Ingresando a través del menú principal “Personal”, opción “Funcionarios” del módulo administrativo de SINAI, se ingrese a la ventana con la lista de funcionarios del establecimiento y sus respectivos controles de búsquedas y filtros para agilizar la visualización específica de estos por sede, cargo y estado. <GuideImageTrigger src={"/images/wordpress/2023/11/Lista-de-funcionarios-1024x557.gif"} alt={"Captura de Lista de funcionarios"}>Ver ejemplo</GuideImageTrigger>
+**Funcionarios** reúne al personal de la institución: directivos, docentes y administrativos. Desde aquí consulta la lista, registra funcionarios nuevos y actualiza su ficha: plaza, datos personales, datos académicos y de vinculación, estado, usuario y fotografía.
 
+Cada funcionario ocupa una **plaza** de la planta de cargos. El cargo de esa plaza define el rol del usuario con el que el funcionario entra a SINAI. Las plazas se crean en [Planta de cargos](/docs/administrativo/gestion-de-personal/planta-de-cargos).
 
+Ingrese a **Personal → Funcionarios → Funcionarios**.
 
-Ver la guía instructiva para la actualización de datos del funcionario haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-se-actualizan-los-datos-de-funcionarios-en-sinai/).
+<GuideImageTrigger src="/images/guides/funcionarios/acceso-funcionarios.jpg" alt="Menú Personal con el submenú Funcionarios desplegado y la opción Funcionarios">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Algo importante a tener en cuenta respecto a la lista de “Funcionarios”, son los correos electrónicos de la columna Email, puesto que estos funcionan como link directo para el envío de mensajes por parte del administrativo a los diferentes funcionarios.
+#### 2. Consultar la lista de funcionarios
 
-Desde la lista de funcionarios, también se puede navegar a la ficha de datos de cada uno de los funcionarios, esta opción se encuentra situada en la columna de “Opciones”, en el botón “Editar” y al lado de este, se encuentra una pestaña para acceder a las opciones información adicional de los funcionarios y descargar las constancias laborales de estos.
+A la izquierda están los filtros. La lista se actualiza al cambiar cualquiera de ellos.
 
-### Creación de Nuevo Funcionario
+<GuideDataTable>
 
-Al lado derecho de la lista de funcionarios se visualiza el botón “Nuevo Funcionario”, este navega hacia la ventana con los formularios para la asignación de plaza, el registro de la información básica, académica y datos de vinculación del nuevo funcionario.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Búsqueda** | Funcionarios cuyo nombre contiene el texto escrito o cuyo número de identificación es exactamente el escrito. Escriba y haga clic en el botón de la lupa. |
+| **Sede** | **Todas** o los funcionarios cuya plaza pertenece a la sede elegida. |
+| **Cargo** | **Todos** o los funcionarios cuya plaza tiene el cargo elegido. |
+| **Estado** | **ACTIVO**, **INACTIVO**, **RETIRADO** o **TRASLADADO**. La lista siempre muestra un solo estado. |
 
-Al momento de la creación de Funcionarios, SINAI verifica si el documento de identidad de este, pertenece a un usuario existente dentro del sistema, con el fin de vincularlo como funcionario de la institución que gestiona el proceso de creación, pero si SINAI no encuentra un usuario correspondiente al documento de identidad suministrado en la información básica, automáticamente creará uno nuevo. <GuideImageTrigger src={"/images/wordpress/2023/11/Funcionario-1024x554.png"} alt={"Captura de Funcionario"}>Ver ejemplo</GuideImageTrigger>
+</GuideDataTable>
 
+<GuideImageTrigger src="/images/guides/funcionarios/lista-funcionarios.jpg" alt="Lista de funcionarios con los filtros Búsqueda, Sede, Cargo y Estado">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La **Lista de Funcionarios** muestra 10 funcionarios por página, ordenados por apellidos, con **Apellidos y Nombres**, **Identificación**, **F. Nacimiento**, **Teléfono**, **Email** y **Cargo**. El correo de la columna **Email** es un enlace: abre en otra pestaña un mensaje nuevo de Gmail dirigido al funcionario.
 
-_Formulario para la creación de “Nuevo Formulario” – Módulo Administrativo de SINAI (Clic sobre la imagen para ampliar)_
+En la parte superior derecha:
 
+- **Importar:** abre la importación masiva de funcionarios.
+- **Exportar:** descarga el archivo **ListadoFuncionarios.xlsx** con los funcionarios del **Estado** seleccionado. El archivo no tiene en cuenta los filtros **Sede**, **Cargo** ni **Búsqueda**.
+- **?:** abre esta guía.
+
+#### 3. Opciones de cada funcionario
+
+En la columna **Opciones**, **Editar** abre la ficha del funcionario. La flecha junto a **Editar** despliega dos opciones más:
+
+- **Información Adicional:** abre una pantalla con la fotografía del funcionario y tres pestañas: **Asignación Académica** del calendario actual, con horas semanales, anuales y dictadas; **Registro de Actividad**, con las operaciones que SINAI registra del usuario del funcionario, y **Registro de Ausencias**, con sus ausencias y si fueron autorizadas. El botón **Información Básica** de esa pantalla vuelve a la ficha.
+- **Descargar Constancia:** genera una constancia laboral en PDF. Si la lista está en **ACTIVO**, la constancia es del cargo actual e incluye firmas. En los demás estados, la constancia certifica que el funcionario laboró en la institución.
+
+<GuideImageRow>
+<GuideImageTrigger src="/images/guides/funcionarios/opciones-funcionario.jpg" alt="Opciones Información Adicional y Descargar Constancia desplegadas en la fila de un funcionario">
+  Ver ejemplo
+</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/funcionarios/informacion-adicional.jpg" alt="Pantalla Información Adicional con la fotografía del funcionario y las pestañas Asignación Académica, Registro de Actividad y Registro de Ausencias">
+  Ver ejemplo
+</GuideImageTrigger>
+</GuideImageRow>
+
+#### 4. Registrar un funcionario nuevo
+
+1. Haga clic en **Nuevo Funcionario**. SINAI muestra «Creación de nuevo funcionario».
+2. En el panel **Plaza**, seleccione el **Código** de la plaza. Debajo aparecen su **Acto Administrativo**, **Cargo**, **Sede**, **Nivel** y **Área**.
+3. Complete **Información Básica** e **Información Académica y Datos de Vinculación**.
+4. En **Datos de usuarios**, seleccione el **Estado** y el **Sistema Evaluación** del usuario.
+5. Escriba la **Contraseña** y repítala en **Confirmar Contraseña**, o haga clic en **Generar** para que SINAI cree una y la escriba en los dos campos. **Copiar** la copia al portapapeles.
+6. Haga clic en **Guardar Funcionario**.
+
+<GuideImageTrigger src="/images/guides/funcionarios/nuevo-funcionario.jpg" alt="Formulario de funcionario nuevo con la plaza elegida, la información básica, los datos de vinculación y la contraseña">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué exige SINAI |
+| --- | --- |
+| **Apellidos** y **Nombres** | Mínimo 3 caracteres cada uno. Se guardan en mayúsculas. |
+| **Género** y **F. Nacimiento** | El funcionario debe tener 18 años o más. La fecha va en formato DD/MM/AAAA. |
+| **T. Documento** y **# Documento** | Mínimo 6 dígitos, sin puntos, comas ni espacios. El número de documento no puede estar registrado en otro funcionario de la institución. |
+| **Municipio de Nacimiento**, **de Expedición** y **de Residencia** | Obligatorios. |
+| **Dirección** | Mínimo 10 caracteres. |
+| **Teléfono** | Mínimo 7 dígitos. Se recomienda el celular. |
+| **Email** | Obligatorio y con formato de correo válido. |
+| **Nivel Académico**, **Título**, **Grado Escalafón** y **Tipo de Vinculación** | Obligatorios. El título lleva mínimo 5 caracteres. |
+| **F. Vinculación** | Obligatoria. No puede ser posterior a la fecha actual. |
+| **Decreto Vinculación** y **Observaciones** | Opcionales. |
+| **Contraseña** | Mínimo 14 caracteres, con al menos una mayúscula, una minúscula y un número, sin espacios. |
+
+</GuideDataTable>
+
+Al guardar, SINAI usa el número de documento como **IdUsuario**:
+
+- Si ya existe un usuario con ese número, por ejemplo porque el funcionario trabajó en otra institución, SINAI lo vincula a su institución con el rol del cargo de la plaza.
+- Si no existe, SINAI crea el usuario con la contraseña que escribió y le pide cambiarla al entrar por primera vez.
+- Si el cargo de la plaza no tiene un rol definido, SINAI registra el funcionario sin crear usuario.
+
+Después SINAI le envía al funcionario un correo de bienvenida a la plataforma y abre su ficha para que la siga completando.
+
+<GuideCallout>
+  La fotografía no se puede cargar mientras crea el funcionario. Guarde primero y cárguela desde la ficha.
+</GuideCallout>
+
+#### 5. Actualizar la ficha del funcionario
+
+Haga clic en **Editar** en la fila del funcionario. SINAI muestra «Ha sido redirigido a la actualización de datos del funcionario».
+
+<GuideImageTrigger src="/images/guides/funcionarios/editar-funcionario.jpg" alt="Ficha del funcionario con la plaza, la información básica, los datos de vinculación, los datos de usuario y la fotografía">
+  Ver ejemplo
+</GuideImageTrigger>
+
+1. Corrija los datos que necesite. Las validaciones son las mismas del registro, salvo la contraseña, que no aparece en la ficha.
+2. Haga clic en **Guardar Funcionario**.
+
+Al guardar:
+
+- Si cambió la plaza, SINAI traslada al funcionario a la nueva plaza, actualiza el rol de su usuario según el cargo y le asigna los permisos predeterminados.
+- Si cambió el **Sistema Evaluación**, SINAI lo asigna al usuario como sistema predeterminado.
+- Si cambió el **Estado**, SINAI también lo actualiza.
+
+En el panel derecho de la ficha:
+
+- **Fotografía:** seleccione el archivo y haga clic en **Cargar Foto**. Se aceptan archivos JPG, JPEG y PNG. Si la imagen pesa más de 200 KB, SINAI la reduce a 300 × 300 píxeles. Al terminar muestra «Fotografía cargada correctamente».
+- **Direcciones de Grupo:** grupos que el funcionario dirige.
+- **Información Adicional:** abre la misma pantalla de la opción de la lista.
+
+Abajo, **Nuevo Funcionario** abre un formulario vacío. SINAI pregunta antes *¿Confirma que desea abandonar al edición del funcionario actual?* **Volver a la lista** regresa a la lista sin guardar.
+
+#### 6. Cambiar el estado
+
+1. En **Datos de usuarios**, seleccione el nuevo **Estado**.
+2. Haga clic en el botón naranja con flechas, junto a la lista.
+
+SINAI cambia el estado de inmediato, sin guardar el resto de la ficha. Si el estado es el mismo que tenía, muestra «No se ha cambiado el estado». Al pasar el puntero sobre la lista se ve la fecha de la última actualización del estado.
+
+<GuideCallout type="warning">
+  El estado define si el funcionario aparece como activo en la institución. Un funcionario que no está en **ACTIVO** deja de aparecer en las listas de funcionarios activos, por ejemplo en la asignación de plazas.
+</GuideCallout>
+
+#### 7. Editar o agregar una plaza desde la ficha
+
+En el panel **Plaza**:
+
+- **Editar** abre **Editando Plazas** con la plaza seleccionada. El código no se cambia; puede modificar **Acto Administrativo**, **Cargo**, **Sede**, **Nivel** y **Area**. Abajo aparecen los **Funcionarios Asignados a la Plaza**.
+- **Agregar** abre **Creación de Plaza** con los mismos campos y el código vacío.
+
+Haga clic en **Aceptar** para guardar. Al crear una plaza, SINAI muestra «Plaza adicionada correctamente» y la deja seleccionada. La **X** cierra la ventana sin guardar.
+
+<GuideImageTrigger src="/images/guides/funcionarios/edicion-plaza.jpg" alt="Ventana Editando Plazas con los datos de la plaza y los funcionarios asignados a ella">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout type="warning">
+  Los cambios de una plaza aplican a todos los funcionarios asignados a ella.
+</GuideCallout>
+
+#### 8. Cambiar el IdUsuario
+
+1. Haga clic en el botón naranja junto a **IdUsuario**. Se abre **Cambiar IdUsuario** con el IdUsuario actual.
+2. Escriba el **Nuevo IdUsuario**.
+3. Haga clic en **Confirmar cambios**.
+
+SINAI crea el nuevo usuario, o lo vincula si ya existe, con el rol del cargo de la plaza; luego lo asocia al funcionario e inactiva el usuario anterior en la institución. Al terminar muestra «Usuarios actualizado correctamente. Se actualizó el usuario.». Si escribe el mismo IdUsuario, muestra «No se realizarón cambios».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Registro de  Funcionarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué debo tener listo antes de registrar un funcionario?"}>
+    La plaza que va a ocupar. Si no existe, créela en **Planta de cargos** o con **Agregar** en el panel **Plaza** del formulario. Tenga también los datos obligatorios: documento, fecha de nacimiento, municipios, dirección, teléfono, correo, nivel académico, título, escalafón, tipo y fecha de vinculación.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Registro de  Funcionarios» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Aparece «El número de documento que intenta registrar corresponde a…». ¿Qué hago?"}>
+    Ese documento ya pertenece a un funcionario de su institución. Búsquelo en la lista con el número de documento; si no aparece, cambie el filtro **Estado**, porque puede estar inactivo, retirado o trasladado. Actualice su ficha en lugar de crearlo de nuevo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Registro de  Funcionarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"El funcionario ya tiene usuario en SINAI por otra institución. ¿Se crea uno nuevo?"}>
+    No. SINAI busca un usuario con el número de documento. Si lo encuentra, lo vincula a su institución con el rol del cargo de la plaza y el sistema de evaluación elegido. Solo crea un usuario nuevo cuando no existe.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no me deja guardar sin contraseña?"}>
+    Al crear un funcionario la contraseña es obligatoria. Si la confirmación está vacía, SINAI muestra «La confirmación de la contraseña no puede estar vacía.»; si no coinciden, «Las contraseñas no coinciden.»; y si no cumple la política, «Las contraseñas deben cumplir con las políticas requeridas.». Use **Generar** para obtener una contraseña válida.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo confirmo que el funcionario quedó registrado?"}>
+    Al guardar, SINAI abre la ficha del funcionario. En la lista de **Funcionarios** aparece con el estado que le asignó; si no lo ve, revise el filtro **Estado**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Cambié la plaza de un funcionario. ¿Cambia también su rol?"}>
+    Sí, cuando la cambia desde la ficha y hace clic en **Guardar Funcionario**. SINAI actualiza el rol del usuario según el cargo de la nueva plaza y le asigna los permisos predeterminados.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Aparece «No tiene asignado el permiso Nº404» o «Nº405». ¿Qué significa?"}>
+    Su usuario no tiene el permiso para crear funcionarios (404) o para actualizarlos (405). Solicite el permiso al rector o al administrador de SINAI de su institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Por qué no puedo cargar la fotografía?"}>
+    En un funcionario nuevo la carga está deshabilitada hasta que lo guarde. Además, el archivo debe ser JPG, JPEG o PNG; con otro tipo SINAI muestra «Archivo no válido…».
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,12 +1,144 @@
 ---
-title: "Caracterización adicional"
-description: "Esta guía se consolidó en Ficha observador del estudiante (ficha clásica)."
+title: "Caracterización"
+description: "Registre la caracterización adicional de los estudiantes por grupo o por estudiante, impórtela de años anteriores y consulte su reporte por grupo."
 guide: true
 wordpressId: 29564
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/caracterizacion-adicional/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-Esta guía forma parte de la **Ficha clásica** en **Ficha observador del estudiante**.
+## Video tutorial
 
-[Ir a Ficha observador (ficha clásica)](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante?version=clasica)
+<GuideVideoPending>
+  - Caracterización adicional, caracterización individual y reportes del observador. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la caracterización?
+
+**Caracterización** es la sección del Observador donde se registra información complementaria de los estudiantes: para cada aspecto de una característica, el estudiante recibe una valoración de la escala del aspecto y, si se necesita, una observación. Las características, sus aspectos y su escala se definen en **Establecimiento > Institución > Configuración de Caracterización de Estudiantes**.
+
+En el Observador, abra el menú de opciones con el botón de tres líneas, junto al título, y haga clic en **Caracterización**. La opción solo aparece si el módulo **Caracterización** está habilitado en **Configuración → Módulos**.
+
+<GuideImageTrigger src="/images/guides/observador-caracterizacion/caracterizacion-adicional.jpg" alt="Pestaña Caracterización adicional con docente, grupo, característica y aspecto elegidos y la lista de estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La sección tiene tres pestañas:
+
+- **Caracterización adicional:** registro de un aspecto para todos los estudiantes de un grupo.
+- **Caracterización individual:** registro de todos los aspectos para un solo estudiante.
+- **Reportes:** resumen de un aspecto por grupo, con gráfico.
+
+<GuideCallout>
+  SINAI guarda cada valoración y cada observación en cuanto se cambia; no hay botón **Guardar**. La caracterización se registra para el calendario con el que ingresó a SINAI.
+</GuideCallout>
+
+#### 2. Registrar la caracterización de un grupo
+
+En la pestaña **Caracterización adicional**, elija los filtros:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Docente** | Docente cuyos grupos se cargan en **Grupo**, según la opción **Mostrar grupos** de la configuración. |
+| **Grupo** | Grupo cuyos estudiantes aparecen en la lista. |
+| **Características** | Característica que se va a registrar. Solo lista las características de categoría Observador. |
+| **Aspecto** | Aspecto de la característica que se valora. Sus opciones de valoración vienen de la escala del aspecto. |
+
+</GuideDataTable>
+
+La lista muestra, por cada estudiante, su foto, nombre y código, la lista de valoración y el campo **Observación**.
+
+1. Seleccione el **Docente**, el **Grupo**, la **Características** y el **Aspecto**.
+2. En la fila de cada estudiante, elija la valoración en la lista **Seleccione una valoración**. SINAI guarda el cambio de inmediato y muestra un indicador de carga en la fila mientras guarda.
+3. Si lo necesita, escriba la **Observación**, de hasta 250 caracteres. Se guarda al salir del campo.
+
+El botón **Agregar**, junto a **Características**, abre en una pestaña nueva la configuración de caracterización de la institución.
+
+#### 3. Autollenar varios estudiantes
+
+**Autollenar** aplica la misma valoración, o la misma observación, a varios estudiantes a la vez.
+
+1. Marque los estudiantes: haga clic en su fila o en su casilla. **Seleccionar todos** marca la lista completa y el contador muestra cuántos van seleccionados.
+2. Haga clic en **Autollenar**. Si no marcó ninguno, SINAI muestra **Debe seleccionar al menos un estudiante para autollenar**.
+3. En la ventana **Autollenar caracterizacion**, elija una opción:
+   - Para asignar una valoración, elíjala en **Seleccionar valor** y haga clic en **Aceptar**.
+   - Para asignar una observación, marque **Agregar observación**, escriba el texto y haga clic en **Aceptar**. En este caso no se cambia la valoración.
+   - Para borrar la valoración de los estudiantes marcados, haga clic en **Limpiar**.
+
+<GuideImageTrigger src="/images/guides/observador-caracterizacion/ventana-autollenar.jpg" alt="Ventana Autollenar caracterizacion con un valor elegido y tres estudiantes marcados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout type="warning">
+  **Aceptar** y **Limpiar** guardan de inmediato para todos los estudiantes marcados y reemplazan lo que tenían en ese aspecto. **Limpiar** borra la valoración y conserva la observación.
+</GuideCallout>
+
+#### 4. Importar la caracterización de años anteriores
+
+**Importar** copia al calendario actual la caracterización que los estudiantes del grupo tenían en otro calendario.
+
+1. Seleccione el **Grupo** al que va a importar.
+2. Haga clic en **Importar**.
+3. En la ventana **Importar de años anteriores**, elija el **Calendario origen**.
+4. Haga clic en **Iniciar importacion**. Al terminar, SINAI muestra **Migraciones realizadas con exito**.
+
+<GuideImagePending>
+  Main.aspx/Seguimiento/Observador/Caracterizacion?tab=adicional, ventana Importar de años anteriores con un calendario origen elegido. Archivo: ventana-importar.jpg
+</GuideImagePending>
+
+Solo se copian los registros que en el calendario origen tienen valoración y observación, de características de categoría Observador, y solo para los estudiantes matriculados en el grupo elegido del calendario actual.
+
+<GuideCallout type="warning">
+  La importación agrega registros sin revisar si el estudiante ya tiene esa caracterización en el calendario actual. No repita la importación del mismo calendario para el mismo grupo.
+</GuideCallout>
+
+#### 5. Registrar la caracterización de un estudiante
+
+En la pestaña **Caracterización individual** se registran todos los aspectos de un estudiante en una sola vista.
+
+1. Seleccione el **Docente**, el **Grupo** y el **Estudiante**. La lista de estudiantes muestra después del nombre la inicial del estado de la matrícula.
+2. La pantalla agrupa los aspectos por característica. En cada aspecto, elija la valoración en **Seleccione una valoración** y, si lo necesita, escriba la **Observación**.
+
+<GuideImageTrigger src="/images/guides/observador-caracterizacion/caracterizacion-individual.jpg" alt="Pestaña Caracterización individual con un estudiante elegido y sus aspectos agrupados por característica">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Como en la pestaña anterior, cada cambio se guarda de inmediato y la observación se guarda al salir del campo.
+
+#### 6. Consultar el reporte
+
+La pestaña **Reportes** resume cuántos estudiantes de un grupo tienen cada valoración en un aspecto.
+
+1. Seleccione la **Sede**, el **Grupo**, la **Características** y el **Aspecto**.
+2. Revise la lista: por cada valoración asignada en el aspecto muestra la cantidad de estudiantes y el porcentaje sobre el total de estudiantes del grupo. Las valoraciones que nadie tiene no aparecen. A la derecha, el gráfico de barras muestra los mismos datos.
+
+<GuideImagePending>
+  Main.aspx/Seguimiento/Observador/Caracterizacion?tab=reporte, pestaña Reportes con sede, grupo, característica y aspecto que tengan datos, lista y gráfico. Archivo: caracterizacion-reportes.jpg
+</GuideImagePending>
+
+Esta pestaña es solo de consulta.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="No veo Caracterización en el menú del Observador. ¿Por qué?">
+    El módulo no está habilitado. Un usuario administrativo debe marcar **Caracterización** en **Configuración → Módulos** y hacer clic en **Guardar**.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="La lista Aspecto dice «No hay informacion disponibles». ¿Qué hago?">
+    La característica elegida no tiene aspectos. Elija otra característica o agregue aspectos en **Establecimiento > Institución > Configuración de Caracterización de Estudiantes**, que también se abre con el botón **Agregar**.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="¿Por qué la lista Grupo está vacía?">
+    La lista depende del docente elegido y de la opción **Mostrar grupos** de **Configuración → Opciones**. Con **Direccion**, solo aparecen los grupos de los que el docente es director. Elija otro docente o revise esa opción.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Tengo que guardar los cambios?">
+    No. Cada valoración se guarda al elegirla y cada observación al salir del campo. Si ocurre un error, SINAI muestra **Error al actualizar la caracterizacion**.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="Importé de un año anterior y algunos estudiantes no tienen datos. ¿Por qué?">
+    Solo se copian los registros que tenían valoración y observación en el calendario origen, y solo para los estudiantes matriculados en el grupo elegido. Los registros con solo valoración o solo observación no se copian.
+  </GuideFAQItem>
+</GuideFAQ>

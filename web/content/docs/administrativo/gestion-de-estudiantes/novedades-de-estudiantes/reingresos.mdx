@@ -1,11 +1,13 @@
 ---
 title: "Reingreso"
-description: "Conozca las opciones de reingreso y siga el procedimiento correspondiente en SINAI."
+description: "Matricule en el calendario actual a un estudiante que estuvo matriculado en la institución en un calendario anterior."
 guide: true
 wordpressId: 29437
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/reingreso/"
-lastModified: "2023-11-14 19:41:51"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,31 +18,85 @@ lastModified: "2023-11-14 19:41:51"
 
 ## Guía paso a paso
 
-Este procedimiento permite reingresar o matricular estudiantes desde otros calendarios al calendario actual. para realizar el procedimiento debe seguir las siguientes indicaciones.
+### 1. ¿Qué es Reingreso?
 
-1. Ingrese desde el módulo administrativo al menú principal Matricula
-2. En el submenú Reingreso o en la iconografía haga clic en Reingreso
-3. En Datos Origen, seleccione el calendario y sede en el que actualmente está registrado el estudiante
-4. Seleccione el grupo y el estudiante que desea reingresar
-5. En Grupo Destino, seleccione el grupo en el que reingresará al estudiante seleccionado.
-6. Haga una breve descripción u observación si lo considera necesario
-7. Finalice haciendo clic el botón azul Matricular. A continuación, imagen descriptiva del procedimiento. <GuideImageTrigger src={"/images/wordpress/2023/11/REINGRESO-1024x517.gif"} alt={"Captura de REINGRESO"}>Ver ejemplo</GuideImageTrigger>
+**Reingreso** matricula en el calendario actual a un estudiante que ya estuvo matriculado en la institución. Usted busca al estudiante en el calendario, la sede y el grupo donde estuvo, y elige el grupo en el que queda matriculado ahora. No tiene que registrar de nuevo sus datos.
 
+La pantalla tiene dos bloques:
 
+- **Datos Origen:** calendario, sede, grupo y estudiante.
+- **Grupo Destino:** grupo del calendario actual y observaciones. El título muestra el calendario en el que queda la matrícula.
 
+Ingrese a **Matrícula → Reingreso → Reingreso**. También puede entrar desde el ícono **Reingreso** de la página de Matrícula.
+
+<GuideImageTrigger src="/images/guides/reingreso/acceso-reingreso.jpg" alt="Menú Matrícula con Reingreso desplegado y las opciones Reingreso y Reingreso de Validantes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El botón azul de **Datos Origen** abre esta guía.
+
+#### 2. Buscar al estudiante en los datos de origen
+
+1. En **Calendario**, seleccione el año en el que estuvo matriculado el estudiante.
+2. Seleccione la **Sede**.
+3. Seleccione el **Grupo**. La lista muestra los grupos de esa sede en el calendario elegido.
+4. En **Estudiante**, seleccione el nombre.
+
+La lista **Estudiante** muestra todos los estudiantes que tuvieron matrícula en ese grupo, sin importar su estado.
+
+#### 3. Elegir el grupo de destino y matricular
+
+1. En **Grupo Destino**, seleccione el **Grupo**. La lista muestra todos los grupos del calendario actual, de todas las sedes.
+2. Si lo necesita, escriba las **Observaciones** del reingreso.
+3. Haga clic en **Matricular**.
+4. Confirme el mensaje *¿Confirma que desea matricular el estudiante seleccionado en el grupo destino?*
+
+<GuideImageTrigger src="/images/guides/reingreso/pantalla-reingreso.jpg" alt="Pantalla Reingreso con un estudiante del calendario 2024 y el grupo de destino del calendario actual">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si todo es correcto, SINAI muestra «El Estudiante *nombre* ha sido matriculado en el grupo *grupo*». La nueva matrícula queda activa, con el estudiante como antiguo, y SINAI activa su usuario en la institución.
+
+<GuideCallout type="warning">
+  La matrícula se crea en cuanto confirma el mensaje. Revise el estudiante y el grupo de destino antes de confirmar.
+</GuideCallout>
+
+#### 4. Reglas según el calendario de origen
+
+- **Calendario anterior al actual:** es el caso normal. Si el estudiante ya tiene matrícula en el calendario actual, SINAI muestra «El estudiante ya está matriculado en el calendario actual (*año*) de la institución.» y no crea otra.
+- **Mismo calendario actual:** SINAI solo lo permite cuando el grupo de origen o el de destino es de un modelo de validación o CLEI. En otro caso muestra «El calendario seleccionado en el Origen es igual al de Destino, por lo que no se puede realizar un reingreso para este Grupo».
+- **Calendario posterior al actual:** SINAI no hace el reingreso y muestra «Verifique el calendario seleccionado en el Destino, debe ser menor al actual o en algunos casos igual (Validaciones o CLEI)».
+
+Para matricular, su usuario necesita el permiso de reingreso. Si no lo tiene, SINAI muestra el aviso de permiso y no crea la matrícula.
+
+<GuideCallout>
+  Si el estudiante validó un grado y debe quedar en otro grupo del mismo calendario, use [Reingreso de validantes](/docs/administrativo/gestion-de-estudiantes/novedades-de-estudiantes/reingreso-de-validantes).
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Reingreso»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué diferencia hay entre Reingreso y Estudiantes nuevos?"}>
+    **Reingreso** usa los datos que el estudiante ya tiene en SINAI porque estuvo matriculado en la institución. Usted solo elige dónde estuvo y el grupo del calendario actual. **Estudiantes nuevos** es para registrar a quien nunca ha estado en la institución.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Reingreso» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Aparece «El estudiante ya está matriculado en el calendario actual». ¿Qué hago?"}>
+    El estudiante ya tiene una matrícula en el calendario actual, así que no necesita reingreso. Si debe quedar en otro grupo, use **Matrícula → Cambio de Grupo**. Si estaba retirado, revise su estado en **Ajustes de Matrícula**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Reingreso»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no puedo hacer el reingreso desde el mismo calendario?"}>
+    Desde el mismo calendario solo se permite cuando el grupo de origen o el de destino es de validación o CLEI. En los demás casos SINAI muestra «El calendario seleccionado en el Origen es igual al de Destino, por lo que no se puede realizar un reingreso para este Grupo».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «El estudiante seleccionado no se pudo matricular porque ya está matriculado en el grupo seleccionado». ¿Por qué?"}>
+    El estudiante ya tiene matrícula en el grupo de destino del calendario actual. Revise el grupo que eligió en **Grupo Destino**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿El estudiante puede volver a ingresar a SINAI después del reingreso?"}>
+    Sí. Al matricularlo desde un calendario anterior, SINAI deja activo su usuario en la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Cómo verifico que el reingreso se realizó?"}>
+    SINAI muestra «El Estudiante *nombre* ha sido matriculado en el grupo *grupo*». Después puede buscar al estudiante en la lista de estudiantes del grupo de destino.
   </GuideFAQItem>
 </GuideFAQ>

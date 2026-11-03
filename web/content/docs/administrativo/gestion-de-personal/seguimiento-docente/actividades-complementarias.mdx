@@ -1,36 +1,91 @@
 ---
 title: "Actividades Complementarias"
-description: "Conozca las opciones de actividades Complementarias y siga el procedimiento correspondiente en SINAI."
+description: "Consulte las horas de actividades complementarias que registró cada funcionario por periodo y tipo, vea el detalle y descargue el informe en PDF o Excel."
 guide: true
 wordpressId: 35548
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/actividades-complementarias/"
-lastModified: "2025-11-06 16:57:44"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="RTXAFq78KH0" title="Actividades Complementarias"
-  odyseeUrl="https://odysee.com/actividades-complementarias-2%3A9cac4cb4d5e0d0ee4e050ec9338a9972d55faad3"
-/>
+<YouTube id="RTXAFq78KH0" title="Actividades Complementarias" odyseeUrl="https://odysee.com/actividades-complementarias-2%3A9cac4cb4d5e0d0ee4e050ec9338a9972d55faad3" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-### Actividades Complementarias
+### 1. ¿Qué es Actividades Complementarias?
 
+**Actividades Complementarias** le permite al área administrativa consultar las actividades complementarias que registraron los docentes y demás funcionarios: cuántas horas suman por tipo de actividad en cada periodo, el detalle de cada registro y sus archivos adjuntos. Esta pantalla es de consulta; no registra ni elimina actividades.
+
+Las actividades se registran en [Registro de Act. complementarias](/docs/administrativo/gestion-de-personal/seguimiento-docente/registro-de-actividades-complementarias), y sus tipos se definen en [Tipos de Act. Complementarias](/docs/administrativo/gestion-de-personal/seguimiento-docente/tipos-de-actividades-complementarias).
+
+Ingrese a **Personal → Actividades Complementarias → Actividades Complementarias**.
+
+<GuideImageTrigger src="/images/guides/actividades-complementarias/acceso-actividades.jpg" alt="Menú Personal con el submenú Actividades Complementarias desplegado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene dos paneles: **Registro de Actividades Extracurriculares**, a la izquierda, con los filtros, los totales y el informe, y **Resultados de la consulta**, a la derecha, con el detalle. El botón **Ayuda** abre esta guía.
+
+#### 2. Consultar los totales de un funcionario
+
+1. En **Periodo**, seleccione el periodo del calendario.
+2. En **Funcionarios**, seleccione el funcionario. La lista muestra solo los funcionarios activos que tienen actividades registradas en ese periodo.
+
+<GuideImageTrigger src="/images/guides/actividades-complementarias/pantalla-actividades.jpg" alt="Pantalla Actividades Complementarias con el periodo y el funcionario seleccionados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Debajo aparece una fila por cada tipo de actividad, con el total de **horas** que suma el funcionario en el periodo. Si no hay registros, SINAI muestra «No hay actividades registradas para el periodo y docente seleccionados.».
+
+#### 3. Ver el detalle de un tipo de actividad
+
+Haga clic en **Ver detalles**, o en el nombre del tipo de actividad. En **Resultados de la consulta** aparecen las actividades de ese tipo, de la más reciente a la más antigua:
+
+- **Fecha** de la actividad.
+- **Actividad:** la descripción que escribió el funcionario. Si tiene observaciones, aparecen a continuación en rojo.
+- **Horas** registradas.
+- **Opciones:** el botón verde **Descargar archivo adjunto** descarga el archivo que el funcionario adjuntó como evidencia. Si la actividad no tiene archivo, SINAI muestra «No hay archivo para descargar.».
+
+<GuideImagePending>
+  Admin/Personal/Seguimiento/ActComple.aspx, panel Resultados de la consulta después de Ver detalles, con actividades de un funcionario y el botón de descarga. Archivo: detalle-actividades.jpg
+</GuideImagePending>
+
+Mientras no haga clic en **Ver detalles**, el panel muestra «No hay actividades registradas para el docente seleccionado. Seleccione el periodo, el docente y finalmente haga clic en Ver detalles en la lista de actividades para ver las actividades registradas por el docente».
+
+#### 4. Descargar el informe
+
+El informe reúne las actividades del funcionario seleccionado en un rango de fechas.
+
+1. Seleccione el funcionario en **Funcionarios**.
+2. En **Desde** y **Hasta**, ajuste el rango de fechas. Al abrir la pantalla, el rango va de dos meses atrás hasta hoy.
+3. Haga clic en **PDF** o en **EXCEL**.
+
+SINAI descarga el archivo **ActividadesComplementarias** en el formato elegido. El informe usa el rango de fechas, no el periodo seleccionado.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Actividades Complementarias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué la lista de Funcionarios está vacía?"}>
+    La lista solo muestra funcionarios activos que tienen actividades registradas en el periodo seleccionado. Si está vacía, nadie ha registrado actividades en ese periodo. Seleccione otro periodo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Actividades Complementarias» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Seleccioné un funcionario y aparece «No hay actividades registradas para el periodo y docente seleccionados.». ¿Por qué?"}>
+    Los totales se calculan con las actividades del calendario actual. Revise que el calendario seleccionado en la parte superior de SINAI sea el de las actividades que busca.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Actividades Complementarias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo eliminar o corregir una actividad desde esta pantalla?"}>
+    No. Esta pantalla solo consulta. Las actividades se registran y eliminan en **Registro de Act. complementarias**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"El informe trae actividades de otro periodo. ¿Es un error?"}>
+    No. El informe PDF o Excel filtra por las fechas **Desde** y **Hasta**, no por el periodo. Ajuste el rango de fechas a las del periodo que necesita.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Al descargar el informe aparece «No se ha Seleccionado un docente.». ¿Qué hago?"}>
+    Seleccione un funcionario en la lista **Funcionarios** antes de hacer clic en **PDF** o **EXCEL**. Si aparece «No se ha Seleccionado un periodo.», seleccione también el periodo.
   </GuideFAQItem>
 </GuideFAQ>

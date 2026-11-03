@@ -1,11 +1,13 @@
 ---
 title: "Generar correos institucionales"
-description: "Aprenda a generar correos institucionales en SINAI."
+description: "Defina la nomenclatura y descargue el archivo CSV con los correos institucionales de funcionarios y estudiantes para cargarlo en la consola de Google."
 guide: true
 wordpressId: 29240
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/generar-correos-institucionales/"
-lastModified: "2023-11-14 16:57:10"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideoPlaylist
@@ -19,81 +21,136 @@ lastModified: "2023-11-14 16:57:10"
 
 ## Guía paso a paso
 
-En esta guía aprenderás a generar correos institucionales utilizando la plataforma **SINAI**.
-Es importante que, antes de realizar este proceso, cuentes con el dominio configurado y con los ajustes necesarios en la consola de Google.
+### 1. ¿Qué es Generar Correos Institucionales?
 
-Información: Esta función está diseñada para las instituciones educativas que después de adquirir su dominio (.edu.co) desean hacer uso de los servicios del producto G Suite brindado gratuitamente por la compañía Google a los centros de enseñanza primaria, secundaria o superior, sin ánimo de lucro y autorizado por un organismo de acreditación reconocido.
+**Generar Correos Institucionales** arma las direcciones de correo con el dominio de la institución para funcionarios y estudiantes. El resultado es un archivo CSV, **CorreosInstitucionales.csv**, con el formato que pide la consola de administración de Google para crear usuarios de forma masiva.
 
-### 1\. Cómo Acceder desde la Plataforma SINAI
+Esta opción es para las instituciones que tienen su dominio, por ejemplo uno **.edu.co**, y usan los servicios educativos de Google.
 
-Para generar los correos institucionales, sigue estos pasos dentro de la plataforma **SINAI**:
+Ingrese a **Establecimiento → Usuarios → Generar Correos Institucionales**.
 
-1. ingrese al módulo **Administrativos**.
-2. Accede al menú **Establecimiento > Usuarios > Generar correos institucionales**.
+<GuideImageTrigger src="/images/guides/generar-correos-institucionales/acceso-correos.jpg" alt="Menú Establecimiento con Usuarios desplegado y la opción Generar Correos Institucionales">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En esta ruta encontrarás un mensaje que te indica cómo acceder al paso a paso para generar correos institucionales en la plataforma. Esta ventana incluye un botón en la parte inferior izquierda llamado OK, el cual tiene la misma función que el ícono X ubicado en la esquina superior derecha: cerrar la ventana. <GuideImageTrigger src={"/images/wordpress/2025/02/2-generar-correos-institucionales_-1.png"} alt={"Captura de generar correos institucionales 1"}>Ver ejemplo</GuideImageTrigger>
+Al abrir la pantalla aparece la ventana **Generar correos Institucionales** con el aviso *En la parte izquierda del formulario encontrara las indicaciones de cómo generar un correo institucional.* Haga clic en **OK** o en la **X** para cerrarla.
 
+<GuideImageTrigger src="/images/guides/generar-correos-institucionales/aviso-inicial.jpg" alt="Ventana de aviso Generar correos Institucionales con el botón OK">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pantalla tiene tres partes:
 
-En el panel izquierdo encontrarás los **4 pasos** del proceso:
+- **¿Cómo crear un correo?**, a la izquierda: los pasos del proceso y el botón **Ayuda**, que abre esta guía.
+- **Generar Correos Institucionales**, al centro: el botón **Establecer Configuración** y los filtros.
+- **Información**, a la derecha: una descripción y la casilla para actualizar los correos en SINAI.
 
-- **Configuración:** Seleccione la nomenclatura en el botón establecer Configuración ej: **cimosquerac@dominio.edu.co**.
-- **Generación:** Seleccione los filtros en la opción de Seleccionar Rol.
-- **Actualización:** Si desea modificar o actualizar los correos en plataforma SINAI seleccione el chequeo.
-- **Por último:** Clic en el botón Generar y Descargar Archivo
+<GuideCallout>
+  SINAI arma cada correo con el dominio que está en **Url del sitio web**, en **Establecimiento → Institución → Configuración de la institución**. El valor se agrega tal como está escrito después de la arroba. Revíselo antes de generar el archivo.
+</GuideCallout>
 
-#### 2\. Configuración
+#### 2. Establecer la nomenclatura
 
-En este paso se define la nomenclatura que se utilizará para crear los correos institucionales.
+La nomenclatura define cómo se forma la parte del correo que va antes de la arroba. Es una sola para toda la institución.
 
-- haga clic en el botón **Establecer configuración**, ubicado en la esquina superior derecha de la pantalla.
-- Este botón cuenta con un filtro que ofrece **4 opciones de nomenclatura**, cada una acompañada de una descripción y un ejemplo en la parte inferior para facilitar su selección.
-- Una vez que elijas la opción deseada, haga clic en **Guardar** para aplicar los cambios o en **Cancelar** si prefieres salir sin guardar modificaciones. <GuideImageTrigger src={"/images/wordpress/2025/02/4-Generar-correos-institucionales.png"} alt={"Captura de Generar correos institucionales"}>Ver ejemplo</GuideImageTrigger>
+1. Haga clic en **Establecer Configuración**, arriba a la derecha.
+2. En la ventana **Establecer Configuración**, elija la nomenclatura. Debajo de la lista aparece su descripción.
+3. Haga clic en **Guardar**. **Cancelar** cierra la ventana sin cambios.
 
+<GuideImageTrigger src="/images/guides/generar-correos-institucionales/establecer-configuracion.jpg" alt="Ventana Establecer Configuración con la Nomenclatura 3 elegida y su descripción">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideDataTable>
 
-#### 3\. Verificación de la Nomenclatura
+| Nomenclatura | Cómo se forma el correo |
+| --- | --- |
+| **Nomenclatura 1** | Primer y segundo nombre, y los últimos 4 números del documento de identidad. |
+| **Nomenclatura 2** | Primera letra del primer nombre, primera letra del segundo nombre, primer apellido completo y primera letra del segundo apellido. |
+| **Nomenclatura 3** | Primer nombre, primer apellido y las dos primeras letras del segundo apellido. |
+| **Nomenclatura 4** | Rol, primer nombre y los 2 últimos dígitos de la cédula. Solo funciona para funcionarios. |
 
-Para verificar la nomenclatura configurada por la institución para los estudiantes, puede validarlo de la siguiente manera:
+</GuideDataTable>
 
-1. Accede al menú **Matrícula > Listados > Lista de estudiantes por grupo**.
-2. seleccione un grupo.
+Si guarda, SINAI muestra «Nomenclatura guardada correctamente». Si la institución aún no tiene nomenclatura, SINAI usa la **Nomenclatura 1**.
 
-En la columna **Contactos**, podrá visualizar la nomenclatura utilizada para los correos. <GuideImageTrigger src={"/images/wordpress/2025/02/5-Generar-correos-institucionales-1024x550.png"} alt={"Captura de Generar correos institucionales"}>Ver ejemplo</GuideImageTrigger>
+SINAI escribe los correos en minúsculas, sin tildes y cambia la ñ por n.
 
+#### 3. Generar los correos de los funcionarios
 
+1. En **Seleccionar Rol**, elija **Funcionarios**.
+2. En **Funcionarios**, elija una opción:
+   - **Todos:** genera los correos de todos los funcionarios activos.
+   - **Seleccionar un funcionario:** muestra la lista de funcionarios activos. Marque uno o varios. Puede buscar por nombre en la fila de filtro.
+3. Si quiere que el correo generado reemplace el que tiene el funcionario en SINAI, marque **Marque esta casilla si desea actualizar los correos de SINAI.**
+4. Haga clic en **Generar y Descargar Archivo**.
 
-Para verificar la nomenclatura configurada por la institución para los funcionarios, sigue estos pasos:
+<GuideImageTrigger src="/images/guides/generar-correos-institucionales/generar-funcionarios.jpg" alt="Rol Funcionarios con la opción Seleccionar un funcionario y la lista de funcionarios para marcar">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Accede al menú **Personal > Funcionarios** > **Funcionarios**
-2. En esta sección, encontrarás una columna llamada **Email**, donde podrá visualizar cómo está organizada la nomenclatura de los correos  de la institución. <GuideImageTrigger src={"/images/wordpress/2025/02/6-Generar-correos-institucionales.png"} alt={"Captura de Generar correos institucionales"}>Ver ejemplo</GuideImageTrigger>
+Si eligió **Seleccionar un funcionario** y no marcó ninguno, SINAI muestra «Debe seleccionar un funcionario para continuar.»
 
+#### 4. Generar los correos de los estudiantes
 
+1. En **Seleccionar Rol**, elija **Estudiantes**.
+2. En **Sede**, deje **Todos** o elija una sede.
+3. Si eligió una sede, en **Grupo** deje **Todos** o elija un grupo. Con un grupo aparece la lista **Estudiante**.
+4. Si necesita solo algunos estudiantes, márquelos en la lista. Si no marca ninguno, se generan los correos de todos los estudiantes del filtro.
+5. Si quiere que el correo generado reemplace el que tiene el estudiante en SINAI, marque la casilla de actualización.
+6. Haga clic en **Generar y Descargar Archivo**.
 
-#### 4\. Generación de los Correos
+<GuideImageTrigger src="/images/guides/generar-correos-institucionales/generar-estudiantes.jpg" alt="Rol Estudiantes con la sede, el grupo y la lista de estudiantes del grupo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Una vez definida la configuración de la nomenclatura, procedemos al siguiente paso: **Generación**.
+Solo se tienen en cuenta los estudiantes con matrícula activa en el calendario seleccionado. Si dos correos generados coinciden, SINAI agrega un número al final del siguiente.
 
-1. Para generar los correos, seleccione el filtro ubicado en el panel central, donde podrá especificar el rol del usuario al que desea asignar los correos. Las opciones disponibles son **Funcionarios** o **Estudiantes**.
-2. Al seleccionar la opción **Funcionario**, se habilitará un nuevo filtro que te permitirá elegir entre generar los correos para un único funcionario o para todos los funcionarios. Esta opción la puede realizar para los estudiantes, en el cual le solicita si para una sede o para toda la Institución.
-3. **Actualizar:** La opción de **Actualizar** permite modificar o actualizar los correos existentes en la plataforma. Generalmente, estos corresponden a los correos personales registrados cuando el funcionario fue ingresado al sistema. Solo activando el chulito en la casilla del panel derecho.
-4. **Generar y Descargar archivo:** Este último paso nos permite  hacer clic en el botón **Generar y Descargar archivo**,  para obtener el listado. Es un archivo con formato **CSV** el cual va a subir a Google desde la consola administrativa. <GuideImageTrigger src={"/images/wordpress/2025/02/Correos-institucionales.png"} alt={"Captura de Correos institucionales"}>Ver ejemplo</GuideImageTrigger>
+Si la nomenclatura es la 4, SINAI muestra «La configuración establecida no permite la generación de correos para estudiantes.» Cambie la nomenclatura antes de generar.
 
-Nota En el siguiente enlace puede visualizar el paso a paso de cómo subir el archivo generado por la plataforma SINAI a Google https://youtu.be/04\_U9ls64lY
+<GuideCallout type="warning">
+  Si marca la casilla de actualización, SINAI reemplaza el correo registrado de cada persona del archivo por el correo institucional generado, también en su usuario. El correo anterior, por ejemplo el personal, deja de estar en SINAI.
+</GuideCallout>
 
+#### 5. Cargar el archivo en Google
+
+El archivo **CorreosInstitucionales.csv** tiene las columnas de la carga masiva de usuarios de la consola de Google. SINAI llena estas:
+
+- **First Name** y **Last Name:** nombres y apellidos.
+- **Email Address:** el correo institucional generado.
+- **Password:** la contraseña inicial, *institucional*.
+- **Org Unit Path:** **/Funcionarios** o **/Estudiantes**, según el rol.
+
+Las demás columnas quedan vacías. Cargue el archivo en la consola de administración de Google, en la opción para actualizar usuarios de forma masiva. El segundo video muestra ese proceso.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Generar correos institucionales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué necesito antes de generar los correos?"}>
+    Que la institución tenga su dominio y la cuenta de Google para educación configurada. En SINAI, revise que **Url del sitio web**, en **Establecimiento → Institución → Configuración de la institución**, tenga el dominio que irá después de la arroba, y elija la nomenclatura con **Establecer Configuración**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Generar correos institucionales» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿La nomenclatura que elijo aplica solo a mí?"}>
+    No. La nomenclatura es una configuración de la institución. Al guardarla con **Establecer Configuración**, aplica a todos los usuarios que generen correos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Generar correos institucionales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué aparece «La configuración establecida no permite la generación de correos para estudiantes.»?"}>
+    La institución tiene la **Nomenclatura 4**, que usa el rol del funcionario y solo sirve para funcionarios. Elija otra nomenclatura en **Establecer Configuración** para generar los correos de los estudiantes.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Generar el archivo cambia los correos que hay en SINAI?"}>
+    Solo si marca **Marque esta casilla si desea actualizar los correos de SINAI.** Sin la casilla, SINAI solo descarga el archivo. Con la casilla, reemplaza el correo de cada funcionario o estudiante del archivo, y el de su usuario, por el correo institucional.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cuál es la contraseña inicial de las cuentas?"}>
+    El archivo pone *institucional* en la columna **Password** de todas las filas. La columna **Change Password at Next Sign-In** queda vacía; puede llenarla en el archivo antes de cargarlo en Google.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Cómo verifico los correos que quedaron registrados en SINAI?"}>
+    Si marcó la casilla de actualización, revise la columna **Contacto** en **Matrícula → Listados → Lista de Estudiantes por Grupo** para los estudiantes, y la columna **Email** en **Personal → Funcionarios → Funcionarios** para los funcionarios.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Un funcionario o estudiante no aparece en la lista. ¿Por qué?"}>
+    La lista de funcionarios solo trae los funcionarios activos. La de estudiantes muestra las matrículas del grupo en el calendario seleccionado en la parte superior, pero el archivo solo incluye a los estudiantes con matrícula activa.
   </GuideFAQItem>
 </GuideFAQ>

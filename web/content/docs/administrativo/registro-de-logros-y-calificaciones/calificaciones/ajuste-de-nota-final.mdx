@@ -1,11 +1,13 @@
 ---
 title: "Ajuste de nota final"
-description: "Conozca las opciones de ajuste de nota final y siga el procedimiento correspondiente en SINAI."
+description: "Ajuste la valoración final de los estudiantes por grupo y asignatura, y habilite el ajuste para los docentes en un rango de fechas."
 guide: true
 wordpressId: 29722
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/ajuste-de-nota-final/"
-lastModified: "2023-11-15 00:46:24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,43 +18,153 @@ lastModified: "2023-11-15 00:46:24"
 
 ## Guía paso a paso
 
-El Ajuste a la nota Final se puede realizar desde el módulo Administrativo o desde el módulo Docente.
+### 1. ¿Qué es Ajuste a la Valoración Final?
 
-**Pasos para realizar ajuste a las calificaciones finales de los estudiantes desde el módulo Administrativo.**
+**Ajuste a la Valoración Final** le permite registrar una valoración de ajuste sobre la valoración final que SINAI calcula a partir de los periodos. El ajuste modifica la valoración **Definitiva**, que es la que se usa para determinar la promoción del estudiante.
 
-1. acceder desde el menú principal “Evaluación” opción “Ajuste de Nota Final”
-2. Seleccione los filtros docente, grupo y asignatura, aquí se puede ver la nota final de los estudiantes, es decir, el acumulado de los períodos.
-3. Registre la nueva calificación en la columna “Ajustes”
-4. Registre las observaciones si lo considera necesario, por ejemplo; puede registrar los criterios que tiene la institución en cuenta al momento de hacer el ajuste.
-5. Para finalizar haga clic en el botón “Guardar “
+El ajuste se registra por grupo y asignatura, estudiante por estudiante, y puede llevar una observación. Desde **Opciones** también define si los docentes pueden hacer el ajuste y en qué fechas.
 
-[<img alt="Captura no disponible" src="/images/wordpress/captura-no-disponible.svg" />](/images/wordpress/captura-no-disponible.svg)
+Ingrese a **Evaluación → Ajuste de Nota Final**.
 
-Pasos para registrar el Ajuste a la Nota Final desde el Módulo Administrativo
+<GuideImageTrigger src="/images/guides/ajuste-de-nota-final/acceso-ajuste.jpg" alt="Menú Evaluación con la opción Ajuste de Nota Final">
+  Ver ejemplo
+</GuideImageTrigger>
 
-**Pasos para habilitar el acceso desde el modulo Docente**
+El botón azul de la esquina superior derecha abre esta guía.
 
-Para que un docente pueda realizar Ajuste a la nota final, un usuario Administrativo debe habilitar el acceso.
+#### 2. Seleccionar el grupo y la asignatura
 
-1. Ingrese al menú principal Establecimiento
-2. Calendarios
-3. Configuración
-4. Restricciones de Actualización de Datos
-5. Asigne fecha de inicio y fiscalización (Desde – Hasta) y por ultimo asegúrese de GUARDAR los cambios.
+Use los filtros de la parte superior:
 
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Sede** | **[Todas]** o una sede. Filtra la lista de grupos. |
+| **Calendario** | Calendarios de la institución. Por defecto, el calendario seleccionado en la parte superior de SINAI. |
+| **Grupo** | Grupos del calendario y de la sede elegidos. |
+| **Asignatura** | Asignaturas con asignación académica en el grupo. |
+
+</GuideDataTable>
+
+SINAI recuerda la última sede, calendario, grupo y asignatura que seleccionó.
+
+<GuideImageTrigger src="/images/guides/ajuste-de-nota-final/pantalla-ajuste.jpg" alt="Pantalla Ajuste a la Valoración Final con los filtros y la lista de estudiantes del grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La planilla lista los estudiantes del grupo en la asignatura, en orden alfabético:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Apellidos y Nombres** | Nombre, código y estado de la matrícula. El nombre abre la caracterización PIAR del estudiante en otra pestaña. |
+| **Foto** | Fotografía del estudiante. Al pasar el puntero se amplía. |
+| **1°**, **2°**, **3°**, **4°** | Valoración de cada periodo. Solo aparecen los periodos hasta el último periodo del grupo. |
+| **Final** | Valoración final calculada por SINAI a partir de los periodos. Tiene en cuenta la aproximación configurada. |
+| **Ajuste** | Campo para escribir la valoración de ajuste. |
+| **Valoración** | Valoración y desempeño que corresponden al ajuste escrito. |
+| **Observación** | Observación del ajuste. Máximo 500 caracteres. |
+| **Definitiva** | Valoración definitiva con la que se determina la promoción. |
+
+</GuideDataTable>
+
+Si el sistema de evaluación del grupo es numérico, las columnas muestran la nota y el desempeño. Si es valorativo, muestran solo el desempeño.
+
+#### 3. Registrar el ajuste
+
+1. En la fila del estudiante, escriba la valoración en **Ajuste**.
+   - Si la valoración es numérica, escriba un número dentro de la escala de la institución.
+   - Si es valorativa, escriba la abreviatura del desempeño de la escala.
+2. Revise en **Valoración** el desempeño que corresponde al ajuste.
+3. Si lo necesita, escriba la **Observación**.
+4. Haga clic en **Guardar**, junto a la asignatura.
+
+Si el guardado es correcto, SINAI muestra **Cambios guardados correctamente** y actualiza la planilla.
+
+- Si el valor no corresponde a la escala, SINAI borra el campo, lo marca en rojo y muestra al pasar el puntero *Valor no válido. Por favor verifique la escala*.
+- Si está activa la opción **Solo permitir valoración superior a la obtenida por el estudiante**, SINAI borra el ajuste cuando no supera la valoración **Final**.
+- La observación se guarda junto con el ajuste. Si una fila no tiene ajuste, su observación no se guarda.
+- Si la observación supera 500 caracteres, SINAI guarda solo los primeros 500.
+
+Para quitar un ajuste, borre el valor de **Ajuste** y haga clic en **Guardar**. SINAI elimina el ajuste de ese estudiante.
+
+<GuideCallout type="warning">
+  El ajuste cambia la valoración definitiva del estudiante en la asignatura y, con ella, el cálculo de la promoción.
+</GuideCallout>
+
+#### 4. Opciones del ajuste
+
+Haga clic en **Opciones**, en la esquina superior derecha. Se abre la ventana **Opciones**.
+
+<GuideImageTrigger src="/images/guides/ajuste-de-nota-final/ventana-opciones.jpg" alt="Ventana Opciones con Activar para docentes, las fechas Desde y Hasta, la valoración superior y el filtro por desempeño">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Opción | Qué define |
+| --- | --- |
+| **Activar para docentes** | Con **Activo** marcado, los docentes pueden registrar el ajuste entre las fechas **Desde** y **Hasta**. Las fechas solo se editan con la casilla marcada. |
+| **Desde** y **Hasta** | Rango de fechas en que el proceso queda abierto para los docentes. Incluye el día de **Hasta** completo. |
+| **Solo permitir valoración superior a la obtenida por el estudiante** | Impide escribir un ajuste igual o inferior a la valoración **Final**. |
+| **Filtrar estudiantes según Desempeño** | **Todos los estudiantes** o **Solo estudiantes con desempeño BAJO**. Define qué estudiantes muestra la planilla. |
+
+</GuideDataTable>
+
+Para guardar las opciones:
+
+1. Marque o desmarque **Activo** y escriba las fechas.
+2. Ajuste las demás opciones.
+3. Haga clic en **Guardar**, dentro de la ventana.
+
+SINAI muestra **Configuración guardada correctamente**.
+
+- Si **Activo** está marcado sin **Desde**, SINAI muestra **Debe especificar la fecha de inicio**.
+- Si falta **Hasta**, muestra **Debe especificar la fecha de finalización**.
+- Si **Desde** es posterior a **Hasta**, muestra **La fecha de inicio no puede ser posterior a la fecha de terminación**.
+
+El rango de fechas se guarda para el calendario seleccionado en la pantalla. Si desmarca **Activo** y guarda, SINAI elimina el rango y los docentes ya no pueden registrar ajustes.
+
+<GuideCallout type="warning">
+  **Solo permitir valoración superior a la obtenida por el estudiante** aplica a toda la institución, para el área administrativa y para los docentes.
+</GuideCallout>
+
+#### 5. Ajuste desde el módulo docente
+
+Los docentes abren esta misma pantalla desde su módulo. Ven solo los calendarios, grupos y asignaturas de su asignación académica. No ven la **Sede** ni el botón **Opciones**.
+
+El docente solo puede guardar mientras el proceso esté abierto. Si no lo está, SINAI muestra *No se puede realizar cambios porque el proceso de ajuste a la valoración final se encuentra deshabilitado por el personal administrativo de la institución.*
+
+#### 6. Permisos
+
+El rector guarda ajustes sin un permiso adicional. Los demás usuarios administrativos necesitan el permiso Nº 807; si no lo tienen, SINAI muestra **No tiene asignado el permiso Nº807** y no guarda.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Ajuste de nota final»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué diferencia hay entre Final y Definitiva?"}>
+    **Final** es la valoración que SINAI calcula a partir de los periodos, con la aproximación configurada. **Definitiva** es la valoración con la que se determina la promoción. Cuando registra un ajuste, la definitiva cambia según el valor del ajuste.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Ajuste de nota final» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Escribí el ajuste y el campo se borró. ¿Por qué?"}>
+    El valor no corresponde a la escala de la institución, y el campo queda marcado en rojo con el mensaje «Valor no válido. Por favor verifique la escala». También se borra si está activa **Solo permitir valoración superior a la obtenida por el estudiante** y el ajuste no supera la valoración **Final**. Revise la opción en **Opciones**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Ajuste de nota final»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Cómo habilito el ajuste para los docentes?"}>
+    Haga clic en **Opciones**, marque **Activo** en **Activar para docentes**, escriba las fechas **Desde** y **Hasta** y haga clic en **Guardar**. El rango aplica al calendario seleccionado en la pantalla. Fuera de esas fechas, el docente recibe el aviso de proceso deshabilitado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No veo a todos los estudiantes del grupo. ¿Qué pasa?"}>
+    Revise **Filtrar estudiantes según Desempeño** en **Opciones**. Con **Solo estudiantes con desempeño BAJO**, la planilla muestra solo a los estudiantes con valoración final en BAJO. Cambie a **Todos los estudiantes** y guarde las opciones.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo elimino un ajuste?"}>
+    Borre el valor de la columna **Ajuste** del estudiante y haga clic en **Guardar**. SINAI elimina el ajuste y la observación de esa fila.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «No tiene asignado el permiso Nº807». ¿Qué hago?"}>
+    Su usuario no tiene el permiso para guardar ajustes a la valoración final. Solicítelo al administrador de usuarios de la institución.
   </GuideFAQItem>
 </GuideFAQ>

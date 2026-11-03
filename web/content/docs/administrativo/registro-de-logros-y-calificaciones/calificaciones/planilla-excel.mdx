@@ -1,25 +1,190 @@
 ---
 title: "Planilla de calificaciones excel"
-description: "Conozca las opciones de planilla de calificaciones excel y siga el procedimiento correspondiente en SINAI."
+description: "Genere, descargue, cargue e importe las planillas de calificaciones en Excel de cualquier docente desde el módulo administrativo."
 wordpressId: 33018
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/planilla-de-calificaciones-excel/"
-lastModified: "2024-09-11 10:58:14"
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
+## Video tutorial
+
+<GuideVideoPending>
+  - Planilla de calificaciones Excel desde el módulo administrativo. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la Planilla de Calificaciones en Excel?
+
+La **Planilla de Calificaciones en Excel** permite registrar las calificaciones del periodo fuera de SINAI. Por cada asignatura y grupo de la asignación académica de un docente, SINAI genera un archivo de Excel con sus estudiantes. El archivo se descarga, se diligencia, se carga de nuevo y luego se importan las calificaciones a la plataforma.
+
+Desde el módulo administrativo puede hacer este proceso por cualquier docente de la institución.
+
+Ingrese a **Evaluación → Calificaciones → Planilla de Calificaciones Excel**.
+
+<GuideImageTrigger src="/images/guides/planilla-excel-administrativo/acceso-planilla-excel.jpg" alt="Menú Evaluación, opción Calificaciones con la tarjeta Planilla de Calificaciones Excel">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El proceso tiene cuatro momentos, en este orden: **Generar**, **Descargar**, **Cargar** e **Importar**.
+
+#### 2. Conocer la pantalla
+
+En la parte superior están los filtros:
+
+- **Docente:** lista los docentes activos del calendario. Seleccione el docente cuyas planillas quiere trabajar.
+- **Periodo:** al abrir la pantalla queda seleccionado el periodo activo para calificaciones. Cámbielo para trabajar las planillas de otro periodo.
+
+<GuideImageTrigger src="/images/guides/planilla-excel-administrativo/pantalla-planilla-excel.jpg" alt="Pantalla Planilla de Calificaciones en Excel con los filtros Docente y Periodo, los botones de Opciones y la tabla de asignaturas y grupos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+En el encabezado, el botón **Configuración** abre en otra pestaña la configuración de los tipos de plantilla que usa la institución. Este botón no aparece en el módulo docente.
+
+La tabla tiene una fila por cada asignatura y grupo del docente. Debajo de los títulos hay una fila de filtros para buscar por asignatura, grupo o estado.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Casilla** | Selecciona la fila para **Cargar**, **Inasistencias** o **Eliminar**. La casilla del título marca todas las filas de la página. |
+| **Asignatura** y **Grupo** | La asignatura y el grupo de la planilla. Al pasar el cursor sobre la asignatura aparece la fecha de creación. |
+| **Cargar Archivo** | El selector de archivo para subir la planilla diligenciada. Se habilita cuando la planilla ya fue generada. |
+| **Estado** | El estado de la planilla y la fecha de su última actualización. |
+| **Importar inasistencias** | Casilla para incluir las inasistencias del archivo al importar. |
+| **Opciones** | Los botones **Generar**, **Descargar**, **Importar** y el ícono rojo para eliminar la planilla de esa fila. |
+
+</GuideDataTable>
+
+Los estados de la planilla son:
+
+- **Sin Generar:** todavía no existe el archivo de Excel.
+- **Generada:** el archivo está listo para descargar.
+- **Cargada:** se subió el archivo diligenciado y SINAI lo validó.
+- **Importada:** las calificaciones del archivo ya pasaron a SINAI.
+- **Error:** al pasar el cursor sobre el estado aparece el motivo.
+
+Junto a **Opciones**, SINAI muestra el avance del docente, por ejemplo «Importadas: 3/10: 30,0 %». Cuando todas sus planillas del periodo están importadas, aparece un ícono verde de verificación.
+
+#### 3. Generar las planillas
+
+Para generar todas las planillas del docente en el periodo:
+
+1. Seleccione el **Docente** y el **Periodo**.
+2. Haga clic en **Generar**, en la parte superior.
+3. Confirme el mensaje *¿Confirma que desea iniciar generación de planillas Excel?. Este proceso puede tardar un poco*.
+
+SINAI muestra «Planillas excel generadas correctamente». Este botón no vuelve a generar las planillas que ya están cargadas o importadas.
+
+Para generar una sola planilla, haga clic en **Generar** en la fila de la asignatura y el grupo. SINAI muestra «Planilla generada correctamente».
+
+#### 4. Descargar las planillas
+
+- **Una planilla:** haga clic en **Descargar** en la fila. Se descarga el archivo de Excel de esa asignatura y ese grupo.
+- **Todas las planillas del docente en el periodo:** haga clic en **Descargar**, en la parte superior. Se descarga un archivo `.zip`, con el nombre del docente, que contiene sus planillas generadas.
+
+El botón **Descargar** de la parte superior se habilita cuando el docente tiene al menos una planilla generada en el periodo.
+
+Entregue el archivo al docente o diligéncielo: registre las calificaciones en las celdas de cada estudiante y guarde el archivo en formato `.xlsx`, sin cambiarle el formato.
+
+<GuideCallout type="warning">
+  No modifique la hoja **BDatos** del archivo. Allí están la institución, el calendario, el periodo, el grupo y la asignatura de la planilla. Al cargarla, SINAI compara esos datos con la fila elegida; si no coinciden, rechaza el archivo.
+</GuideCallout>
+
+#### 5. Cargar el archivo diligenciado
+
+1. Con el **Docente** y el **Periodo** seleccionados, en la fila de la asignatura y el grupo, haga clic en el selector de **Cargar Archivo** y elija el archivo.
+2. Marque la casilla de esa fila, a la izquierda. **Cargar** solo procesa las filas marcadas.
+3. Repita los pasos anteriores con las demás planillas que quiera subir.
+4. Haga clic en **Cargar**, en la parte superior, y confirme el mensaje *¿Confirmar carga de las Planillas excel.?*
+
+SINAI muestra «los archivos han sido cargados correctamente». En cada fila aparece **OK** si el archivo quedó cargado o **Error** si fue rechazado; al pasar el cursor sobre **Error** se ve el motivo. Las planillas aceptadas quedan en estado **Cargada**.
+
+Si no marcó ninguna fila con archivo, SINAI muestra «No se han seleccionado archivos para cargar».
+
+El archivo se rechaza en estos casos:
+
+<GuideDataTable>
+
+| Motivo | Mensaje |
+| --- | --- |
+| El archivo no es `.xlsx` ni `.xlsm`. | «Archivo no válido. Debe ser un archivo del tipo: xlsx, xlsm, xls» |
+| El archivo pesa menos de 3 KB o más de 1 MB. | «Tamaño de archivo no válido. Maximo 500kB y Minimo 3 KB» |
+| El archivo no corresponde a la planilla de esa fila o no tiene la estructura de SINAI. | «Planilla excel no válida, por favor verifiqué» |
+| El periodo está cerrado. | «El periodo actual está cerrado, no se puede modificar la planilla Excel» |
+
+</GuideDataTable>
+
+<GuideCallout>
+  Aunque el mensaje menciona `xls`, SINAI solo acepta archivos `.xlsx` y `.xlsm`. Si el archivo se guardó como `.xls`, ábralo de nuevo en Excel y guárdelo como `.xlsx`.
+</GuideCallout>
+
+#### 6. Importar las calificaciones a SINAI
+
+Cargar el archivo no registra las calificaciones. Para pasarlas a SINAI debe importarlas.
+
+- **Todas las planillas cargadas del docente:** haga clic en **Importar**, en la parte superior, y confirme. SINAI importa las planillas en estado **Cargada** y muestra «Planillas excel importadas correctamente». Si no hay ninguna en ese estado, muestra «Para realizar la importación debe haber al menos una planilla en estado 'Cargada'».
+- **Una planilla:** haga clic en **Importar** en la fila y confirme. SINAI muestra «La importación de datos se ha realizado correctamente.»
+
+<GuideCallout type="warning">
+  La importación reemplaza las calificaciones registradas en SINAI para esa asignatura, ese grupo y ese periodo. El mensaje de confirmación lo advierte: *¿Confirma que desea importar los datos de la planilla excel hacia SINAI? Este proceso puede tardar un momento y reemplazará los datos registrados actualmente en SINAI*. Desde el módulo docente, SINAI no importa si el periodo está cerrado; desde el módulo administrativo esa validación no se aplica a **Importar**.
+</GuideCallout>
+
+#### 7. Importar las inasistencias
+
+Por defecto, la importación no incluye las inasistencias del archivo. Para incluirlas:
+
+1. En las filas que quiera, marque la casilla **Importar inasistencias**. Solo se habilita en planillas generadas.
+2. Marque también la casilla de selección de esas filas, a la izquierda.
+3. Haga clic en **Inasistencias**, a la derecha.
+
+SINAI muestra «Se han habilitado las inasistencias en 2 registros», con el número de filas actualizadas. Después importe la planilla como se indica en el paso anterior.
+
+En las filas seleccionadas que tengan **Importar inasistencias** sin marcar, el botón **Inasistencias** deja esa opción desactivada.
+
+#### 8. Eliminar planillas
+
+Elimine una planilla cuando necesite generarla de nuevo, por ejemplo si la configuración de la planilla cambió después de generarla.
+
+- **Una planilla:** haga clic en el ícono rojo de la fila y confirme. SINAI muestra «La planilla excel se ha eliminado correctamente».
+- **Varias planillas:** marque las filas, haga clic en **Eliminar**, en la parte superior, y confirme. SINAI muestra cuántas planillas eliminó y cuántos errores hubo, por ejemplo «Proceso ejecutado correctamente. 2 planillas eliminadas, 0 errores.»
+
+Aunque el mensaje de confirmación del botón superior dice «todas las planillas», SINAI elimina solo las filas marcadas. Si el periodo está cerrado, el botón superior muestra «El periodo actual está cerrado no se puede eliminar planillas».
+
+<GuideCallout type="warning">
+  Eliminar una planilla borra también su archivo de Excel en SINAI y no se puede deshacer. Si el docente ya la diligenció, descargue primero una copia.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Planilla de calificaciones excel»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué un docente no aparece en la lista Docente?"}>
+    La lista muestra los docentes con estado activo en el calendario seleccionado. Revise el estado del docente en el calendario.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Planilla de calificaciones excel» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Se cargó el archivo pero las notas no aparecen en SINAI. ¿Qué falta?"}>
+    Falta importar. **Cargar** solo sube y valida el archivo; la planilla queda en estado **Cargada**. Haga clic en **Importar** en la fila o en la parte superior para pasar las calificaciones a SINAI.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Planilla de calificaciones excel»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Hice clic en Cargar y aparece «No se han seleccionado archivos para cargar». ¿Por qué?"}>
+    **Cargar** solo procesa las filas marcadas con la casilla de la izquierda. Elija el archivo en **Cargar Archivo**, marque la casilla de esa fila y vuelva a hacer clic en **Cargar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué aparece «Planilla excel no válida, por favor verifiqué»?"}>
+    El archivo no corresponde a la fila donde lo cargó, por ejemplo es de otro docente, grupo, asignatura o periodo, o se modificó la hoja **BDatos**. Verifique el docente y el periodo seleccionados, cargue el archivo en la fila correcta o descargue de nuevo la planilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Importar reemplaza las notas que el docente ya registró en línea?"}>
+    Sí. La importación reemplaza las calificaciones registradas en SINAI para esa asignatura, ese grupo y ese periodo con las del archivo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Por qué no se importaron las inasistencias?"}>
+    La opción **Importar inasistencias** viene desactivada. Marque esa casilla y la casilla de selección de la fila, haga clic en **Inasistencias** y vuelva a importar la planilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Aparece «La planilla excel que intenta actualizar es de un tipo diferente al cual se generó por primera vez». ¿Qué hago?"}>
+    La configuración de la planilla cambió después de generarla. Descargue una copia si la necesita, elimine la planilla con el ícono rojo de la fila, genérela de nuevo y vuelva a diligenciarla.
   </GuideFAQItem>
 </GuideFAQ>
