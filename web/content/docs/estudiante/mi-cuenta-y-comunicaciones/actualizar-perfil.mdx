@@ -1,9 +1,10 @@
 ---
 title: "Cómo actualizar el perfil"
-description: "Cambia tu foto, tus datos básicos, tu contacto y tu contraseña."
+description: "Cambie su fotografía, su teléfono y su correo, acceda al cambio de contraseña y consulte sus últimos accesos desde la pantalla Perfil."
 wordpressId: 33600
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/como-actualizar-el-perfil/"
-lastModified: "2026-10-01"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 guide: true
 ---
 
@@ -15,51 +16,109 @@ guide: true
 
 ## Guía paso a paso
 
-Desde el perfil puede actualizar su fotografía y sus datos de contacto. Mantener esta información al día le permitirá recuperar su contraseña y recibir comunicaciones de SINAI.
+### 1. ¿Qué es el Perfil?
 
-1. Ingrese a SINAI con sus credenciales.
-2. Haga clic en su nombre de usuario, ubicado en la parte superior derecha de la pantalla.
-3. Seleccione la opción **Perfil**.
+El **Perfil** muestra sus datos de usuario y le permite actualizar su fotografía, su teléfono y su correo electrónico. El teléfono y el correo quedan también en su registro de estudiante. La pantalla tiene tres partes:
 
-### Actualizar la fotografía
+- **Panel izquierdo:** su nombre, su usuario (**IdUsuario**), su rol, su fotografía, los **Accesos Totales** y la fecha del **Ultimo Acceso**.
+- **Datos del usuario:** apellidos, nombres, documento, teléfono y correo, con los botones **Cambiar contraseña** y **Guardar Cambios**.
+- **Actividad del usuario:** sus últimos accesos y el registro de actividad.
 
-1. En la sección de perfil, ubique la opción para seleccionar un archivo.
-2. Elija desde su equipo la imagen que desea usar como fotografía de perfil.
-3. Haga clic en **Cargar** para subir la imagen.
-4. Guarde los cambios para que la nueva fotografía quede aplicada.
+Haga clic en su nombre, en la esquina superior derecha, y seleccione **Perfil**. En ese mismo menú también están **Contraseña** y **Preferencias**.
 
-### Actualizar la información básica
+<GuideImagePending>
+  General/Perfil.aspx?IdUsuario=..., pantalla completa del Perfil de un estudiante con el panel izquierdo, Datos del usuario y Actividad del usuario. Archivo: pantalla-perfil.jpg. Pendiente: en el servidor andino, entrar como estudiante desde el super da Server Error en todas las páginas.
+</GuideImagePending>
 
-Revise y complete sus datos personales, como nombres, apellidos, tipo y número de identificación, correo electrónico, dirección y teléfono.
+<GuideCallout type="warning">
+  La institución decide cada año si los estudiantes pueden actualizar sus datos. Si no lo permite, los campos del perfil aparecen bloqueados y no se muestran ni la carga de fotografía ni el botón **Guardar Cambios**. En ese caso comuníquese con la institución.
+</GuideCallout>
 
-Verifique especialmente que el correo electrónico y el número telefónico estén escritos correctamente. SINAI usa estos datos para el proceso de recuperación de contraseña y para las comunicaciones relacionadas con su cuenta.
+#### 2. Actualizar los datos básicos
 
-Cuando termine de actualizar la información, haga clic en **Guardar cambios**.
+<GuideDataTable>
 
-### Cambiar la contraseña
+| Campo | Qué define |
+| --- | --- |
+| **Apellidos** y **Nombres** | Su nombre. SINAI lo guarda en mayúsculas. |
+| **Número de Documento** | Su número de identificación. |
+| **Tipo de Documento** | Tipo de su documento, elegido de la lista. |
+| **Teléfono** | Su celular. Solo acepta números y comas, hasta 30 caracteres. |
+| **Email** | Su correo electrónico, hasta 100 caracteres. SINAI lo guarda en minúsculas. |
 
-Desde el perfil puede cambiar la contraseña de su cuenta. Utilice una contraseña segura y que pueda recordar; no la comparta con otras personas.
+</GuideDataTable>
 
-Si no puede ingresar a la plataforma, consulte la guía [Recuperar contraseña](/docs/estudiante/primeros-pasos/cambiar-contrasena) para restablecerla.
+Todos los campos son obligatorios. Para guardar:
 
-### Registrarse con SNET CORE
+1. Corrija los datos que lo necesiten.
+2. Haga clic en **Guardar Cambios**.
 
-SNET CORE permite acceder a las plataformas vinculadas con una sola cuenta. Para crear o gestionar su cuenta, seleccione **Gestionar cuenta SNET CORE**, junto al botón **Guardar cambios**.
+Si todo es correcto, SINAI muestra **Usuario actualizado correctamente**. También puede mostrar estos avisos:
 
-También puede abrir el siguiente enlace en el navegador:
+- **Debe llenar el campo de los apellidos del usuario.**, **Debe llenar el campo del nombre del usuario.**, **Debe llenar el campo del Número de Documento.**, **Debe llenar el campo del teléfono.** o **Debe llenar el campo del correo electrónico.**: falta un dato.
+- **Debe seleccionar un Tipo de documento válido de la lista.**
+- **Teléfono no válido. Debe comenzar con '3' y tener entre 9 y 12 dígitos.**
+- **Email no válido. Por favor verifique.**
+- **La dirección de correo electrónico ... ya existe**: otro usuario ya tiene ese correo.
+- **El Usuario no posee permiso para realizar esta acción.**: la institución no tiene habilitada la actualización de estudiantes.
 
-<div className="sinai-link-code">
+Si cambia el correo, SINAI envía un aviso de la actualización al correo anterior.
 
-```text title="Registro en SNET CORE"
-https://www.sinai.net.co/MigracionCore/InicioMigracion.aspx
-```
+#### 3. Cambiar la fotografía
 
-</div>
+1. En el panel izquierdo, haga clic en el campo de archivo y elija la imagen en su equipo.
+2. Haga clic en **Cargar**.
 
-Complete el registro con información verídica y valide sus datos mediante el código de seguridad enviado al correo electrónico o número celular registrado.
+La imagen debe ser JPG, JPEG o PNG; si no, SINAI muestra **Archivo no válido. Debe ser un archivo del tipo: jpg, png, jpeg**. SINAI la redimensiona a 300 × 300 píxeles y reemplaza la fotografía anterior. Este paso es independiente de **Guardar Cambios**.
 
-La primera vez que ingrese a SINAI con SNET CORE, el sistema le pedirá vincular esa cuenta con su usuario habitual de SINAI. Ingrese su usuario y contraseña habituales para completar la vinculación. Este procedimiento se realiza una sola vez.
+Si la carga de fotografía no aparece, el período de actualización de datos de estudiantes no está habilitado para usted.
 
-### Consultar el registro de actividad
+#### 4. Cambiar la contraseña
 
-En el perfil, seleccione la pestaña **Registro de actividad** para consultar las acciones registradas durante el uso de la plataforma. Tenga en cuenta que no todas las acciones realizadas en SINAI aparecen en este registro.
+Haga clic en **Cambiar contraseña**. SINAI abre la pantalla de cambio de contraseña en otra pestaña del navegador. Si su cuenta ya está vinculada con SNET CORE, el botón lo lleva al perfil de SNET CORE.
+
+Si no puede ingresar a la plataforma, consulte la guía [Recuperar contraseña](/docs/estudiante/primeros-pasos/cambiar-contrasena).
+
+#### 5. Proveedores de autenticación
+
+Esta sección aparece solo cuando la institución tiene habilitada la opción correspondiente.
+
+- **Cuenta de SNET Core:** si todavía no está vinculada, muestra **Registrarme en SNET CORE**. Si ya lo está, muestra **Gestionar mi cuenta SNET CORE** y **Validar Código**.
+- **Cuenta de Google:** muestra si tiene una cuenta vinculada. Si no la tiene, aparece **Vincular cuenta Google**, con la opción **Usar otra cuenta de Google**. Si la tiene, aparece **Desvincular cuenta Google**.
+
+#### 6. Actividad del usuario
+
+Al final de la pantalla hay dos pestañas, ambas con los últimos 30 días:
+
+- **Últimos 20 accesos:** **Fecha** y **Dirección IP** de sus últimos inicios de sesión.
+- **Registro de Actividad:** **Fecha**, **Descripción** y **Dirección IP** de las últimas 20 acciones que SINAI registró. No todas las acciones aparecen aquí.
+
+Si no hay datos, SINAI muestra **No hay accesos recientes.** o **No hay registros de actividad.**
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"No me deja cambiar mis datos ni mi fotografía. ¿Por qué?"}>
+    Para los estudiantes, la institución habilita la actualización en la configuración del calendario. Si no está habilitada, los campos aparecen bloqueados y no se muestran **Guardar Cambios** ni la carga de fotografía. Si intenta guardar sin permiso, SINAI muestra «El Usuario no posee permiso para realizar esta acción.». Comuníquese con la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"SINAI dice «Teléfono no válido». ¿Qué número debo escribir?"}>
+    El teléfono debe comenzar con 3 y tener entre 9 y 12 dígitos, sin espacios ni guiones. El campo solo acepta números y comas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"SINAI dice que mi correo «ya existe». ¿Qué hago?"}>
+    Otro usuario de SINAI ya está registrado con ese correo, por lo que no se puede guardar. Escriba un correo distinto o comuníquese con la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Puedo cambiar mi nombre, mi documento o mi tipo de documento?"}>
+    Los campos están disponibles mientras la institución tenga habilitada la actualización de datos de estudiantes. Se actualizan los datos de su usuario, y solo su teléfono y su correo pasan también a su registro de estudiante. Para corregir otros datos de la matrícula, comuníquese con la secretaría de su institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué tipo de imagen puedo usar como fotografía?"}>
+    Un archivo JPG, JPEG o PNG. SINAI la redimensiona a 300 × 300 píxeles. Con otro tipo de archivo muestra «Archivo no válido. Debe ser un archivo del tipo: jpg, png, jpeg».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué es SNET CORE?"}>
+    Es una cuenta centralizada para ingresar a las plataformas vinculadas. En el perfil, la sección **Cuenta de SNET Core** le permite registrarse, gestionar su cuenta o validar el código, según su estado. Solo se muestra cuando está habilitada.
+  </GuideFAQItem>
+</GuideFAQ>

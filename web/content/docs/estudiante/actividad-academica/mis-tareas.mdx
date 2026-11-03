@@ -1,11 +1,13 @@
 ---
 title: "Mis tareas"
-description: "Filtra tus actividades, abre las indicaciones del docente y envía tu archivo."
+description: "Filtre sus tareas, abra las indicaciones del docente, envíe mensajes o archivos y marque la tarea como enviada."
 guide: true
 wordpressId: 30563
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/mis-tareas/"
-lastModified: "2023-11-17 08:25:08"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,63 +16,135 @@ lastModified: "2023-11-17 08:25:08"
 
 ## Guía paso a paso
 
-El estudiante, en su módulo, cuenta con un apartado para recibir y entregar las tareas asignadas por sus docentes. A continuación, se explica el procedimiento de forma detallada.
+### 1. ¿Qué es Mis Tareas?
 
-**En el módulo del estudiante o acudiente haga clic en el menú** **Inicio >** **Mis tareas** (disponible en el panel izquierdo o a través del ícono correspondiente). <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-TAREAS-1.png"} alt={"Captura de MIS TAREAS 1"}>Ver ejemplo</GuideImageTrigger>
+**Mis Tareas** muestra las tareas que sus docentes publicaron para su grupo o le asignaron a usted. Desde aquí abre cada tarea, descarga los archivos del docente, le escribe mensajes, envía su archivo y marca la tarea como enviada.
 
+Ingrese a **Inicio → Mis Tareas**. La opción está en el panel **Opciones** de la izquierda y en los íconos de la página de inicio. En algunas instituciones la opción se llama **Tareas** y está en el menú **Evaluación**.
 
+<GuideImagePending>
+  Tareas/MisTareas.aspx en el módulo estudiante, con los filtros, tarjetas en Tareas Pendientes o Activas y el bloque Tareas Terminadas. Archivo: mis-tareas.jpg
+</GuideImagePending>
 
-### Exploración del Módulo
+El botón **Ayuda** de la pantalla abre esta guía. Si la institución le quitó el acceso a esta opción, SINAI lo lleva a la página de acceso denegado.
 
-Al ingresar a **Mis Tareas**, se encuentra una interfaz con diversos filtros y opciones para gestionar las actividades. <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-TAREAS-2.png"} alt={"Captura de MIS TAREAS 2"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Filtrar las tareas
 
+Use los filtros de la parte superior:
 
+<GuideDataTable>
 
-1. Seleccione el **Grupo, Período, Asignatura y Estado** para filtrar el listado de tareas.
-2. Use el botón **"Limpiar filtros"** para restablecer los campos de búsqueda.
-3. Visualice las tareas disponibles según los criterios seleccionados.
-4. Consulte el **número de tareas terminadas**, permitiendo identificar posibles atrasos en la entrega.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Año** | Calendario de la institución. Inicia en el calendario actual. |
+| **Grupos** | Grupos en los que usted estuvo matriculado ese año. |
+| **Periodo** | Periodos del grupo. La primera vez se selecciona el periodo abierto para calificaciones. |
+| **Asignatura** | **Todas** o una asignatura del grupo. |
+| **Estado** | **Todos**, **VIGENTE** (el plazo de entrega no ha vencido) o **VENCIDA** (el plazo ya pasó). |
 
-#### Realizando una Tarea
+</GuideDataTable>
 
-Al seleccionar una tarea, se despliega la información detallada proporcionada por el docente. <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-TAREAS-3.png"} alt={"Captura de MIS TAREAS 3"}>Ver ejemplo</GuideImageTrigger>
+SINAI recuerda en el navegador los últimos filtros que usó. El botón rojo del borrador (**Borrar filtro**) deja **Asignatura** en **Todas**, **Estado** en **Todos** y vuelve al periodo abierto.
 
+#### 3. Consultar la lista de tareas
 
+**Tareas Pendientes o Activas** muestra las tareas que el docente aún no ha marcado como terminadas, ordenadas por plazo, ocho por página. Cada tarjeta muestra:
 
-1. Se visualizan las orientaciones del docente para realizar la tarea o el contenido mismo de la tarea según lo establezca.
-2. Se visualizan los documentos adjuntos disponibles para su **descarga**.
-3. Detalles de la tarea: **período**, **docente responsable**, **plazo de entrega**, **fecha de cierre**, **estado de envío** y **calificación (si ya ha sido evaluada)**.
+- El título de la tarea y, si se publicó hace menos de 24 horas, la marca **Nuevo**.
+- **Asignatura** y **Docente**.
+- **Plazo:** fecha y hora límite de entrega.
+- **Abierta:** fecha en que abrió la tarea por primera vez.
+- **Enviada:** fecha en que la marcó como enviada.
+- **Calificación:** nota del docente, cuando ya la calificó.
+- **Seguimientos:** cantidad de mensajes de la tarea.
 
-#### Seguimiento y entrega de la tarea
+**Tareas Terminadas** reúne las tareas que el docente marcó como terminadas al revisarlas. El número verde indica cuántas son. Haga clic en el título del bloque para desplegarlo.
 
-El sistema permite hacer un seguimiento detallado de cada tarea antes y después de su envío. <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-TAREAS-4.png"} alt={"Captura de MIS TAREAS 4"}>Ver ejemplo</GuideImageTrigger>
+Si no hay tareas, la pantalla muestra «No tienes tareas asignadas en este estado para los filtros seleccionados.».
 
+#### 4. Abrir una tarea
 
+Haga clic en **Abrir** en la tarjeta. SINAI registra la fecha de apertura y abre la pantalla **Realizando Tareas**.
 
-1. Revise el seguimiento automático que genera el sistema durante el proceso de la tarea.
-2. Escriba **observaciones o mensajes adicionales** con relación a la tarea si se considera necesario.
-3. Cargue el archivo con la tarea desarrollada y asignarle un nombre.
-4. Seleccione **"Enviar tarea"** para completar la entrega. Esto generará un seguimiento automático en el sistema.
-5. Volver a la página de inicio para consultar el listado de tareas pendientes o enviadas.
+<GuideImagePending>
+  Tareas/MiTarea.aspx, pantalla Realizando Tareas con la descripción y los archivos de la tarea a la izquierda y el Seguimiento de la Tarea a la derecha. Archivo: realizando-tarea.jpg
+</GuideImagePending>
 
-📌 Notas importantes: ✔ Revisar siempre la fecha límite de entrega de cada tarea para evitar retrasos.
-✔ Confirmar que el archivo enviado sea el correcto antes de realizar la entrega.
-✔ Utilizar el espacio de observaciones para aclarar dudas o enviar comentarios al docente.
-✔ Si se requiere modificar una tarea enviada, consultar con el docente si es posible reenvío.
+A la izquierda está la tarea:
 
+- El título y las indicaciones del docente.
+- Los archivos adjuntos del docente. Haga clic en **Descargar** para guardarlos.
+- **Periodo**, **Asignatura**, **Docente**, **Plazo**, **Abierta**, **Enviada** y **Calificación**.
+
+A la derecha está el **Seguimiento de la Tarea**, con los mensajes y archivos que usted y el docente han enviado. Sus mensajes aparecen en verde, a la derecha; los del docente, en azul. Cada uno muestra quién lo escribió y la fecha.
+
+#### 5. Enviar un mensaje o la tarea
+
+1. Escriba el mensaje en **Escriba aquí un mensaje**.
+2. Si va a entregar un archivo, selecciónelo en el cargador. El archivo se sube de inmediato.
+3. En **Nombre del archivo adjunto**, escriba un nombre para el archivo. Si lo deja vacío, SINAI usa el nombre original.
+4. Deje marcada **Marcar como Enviada** si con este envío entrega la tarea. Desmárquela si solo quiere escribirle al docente.
+5. Haga clic en **Enviar Mensaje o Tarea**.
+
+El mensaje y el archivo aparecen en el seguimiento. Si marcó la tarea como enviada, SINAI registra la fecha en **Enviada**, agrega al seguimiento el aviso de que usted marcó la tarea como ENVIADA y le envía una notificación al docente. Desde ese momento la casilla **Marcar como Enviada** ya no aparece.
+
+La tarea sigue en **Tareas Pendientes o Activas** hasta que el docente la marque como terminada. Si el docente la marca como no terminada, el seguimiento le pide verificar que la tarea esté completa.
+
+**Ir a la lista de tareas** lo devuelve a **Mis Tareas**.
+
+<GuideDataTable>
+
+| Archivo | Condición |
+| --- | --- |
+| **Tipos permitidos** | .txt, .doc, .docx, .pdf, .xls, .xlsx, .ppt, .pptx, .jpg, .jpeg, .png, .tif, .gif, .zip, .rar, .mp3, .mp4 y .wmv. |
+| **Tamaño máximo** | El que configuró la institución. |
+| **Cantidad** | Un archivo por envío. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  Envíe el archivo poco después de subirlo. Si pasan más de 5 minutos, SINAI lo descarta y muestra «El envío falló porque los archivos se eliminaron del servidor debido al tiempo de espera de 5 minutos.».
+</GuideCallout>
+
+Mensajes al enviar:
+
+- Sin mensaje ni archivo: «Se debe ingresar un seguimiento o seleccionar un archivo».
+- Tarea cerrada: «La tarea ya fue enviada o el plazo para el envío ya exipiró. No se puede enviar comentarios».
+
+#### 6. Cuándo se cierra una tarea
+
+Puede escribir mensajes y enviar archivos mientras la tarea esté abierta. La tarea se cierra cuando:
+
+- El plazo vence y el docente no permitió envíos posteriores.
+- El docente ya la calificó.
+- El docente la archivó.
+
+Con la tarea cerrada, la caja de mensajes no aparece y el botón **Enviar Mensaje o Tarea** queda inactivo. Aún puede consultar la tarea, descargar los archivos y leer el seguimiento.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Mis tareas»?"}>
-    Entra a Mis tareas, elige la actividad y ten listo el archivo que vas a enviar.
+  <GuideFAQItem index="01" question={"No veo una tarea que el docente dice que publicó. ¿Qué reviso?"}>
+    Revise los filtros **Año**, **Grupos** y **Periodo**: la tarea solo aparece en el periodo en que la publicó el docente. Deje **Asignatura** en **Todas** y **Estado** en **Todos**, o use el botón del borrador. Revise también **Tareas Terminadas**, por si el docente ya la marcó como terminada. Si sigue sin aparecer, pregúntele al docente si la dejó visible para los estudiantes.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Mis tareas» quedó listo?"}>
-    La tarea queda enviada cuando cambia el estado y aparece el seguimiento.
+  <GuideFAQItem index="02" question={"¿Cómo sé que mi tarea quedó entregada?"}>
+    En la tarea, el campo **Enviada** muestra la fecha de envío y el seguimiento muestra su mensaje o archivo con el aviso de que la marcó como ENVIADA. La tarea pasa a **Tareas Terminadas** cuando el docente la revisa y la marca como terminada.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Mis tareas»?"}>
-    Revisa la fecha límite. Si el archivo no carga, escríbele a tu docente en las observaciones.
+  <GuideFAQItem index="03" question={"Envié un mensaje sin marcar la tarea como enviada. ¿Qué hago?"}>
+    Vuelva a abrir la tarea, deje marcada **Marcar como Enviada** y haga clic en **Enviar Mensaje o Tarea** con un mensaje o un archivo. Debe hacerlo antes de que la tarea se cierre.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Puedo enviar otro archivo después de marcar la tarea como enviada?"}>
+    Sí, mientras la tarea siga abierta: no venció el plazo o el docente permite envíos posteriores, y el docente no la ha calificado. El nuevo archivo queda en el seguimiento.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"No puedo escribir en la tarea. ¿Por qué?"}>
+    La tarea está cerrada: venció el plazo sin permiso de envío posterior, el docente ya la calificó o la archivó. Si necesita entregar, comuníquese con su docente.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Mi archivo no se carga. ¿Qué reviso?"}>
+    Revise que su tipo esté en la lista permitida y que no supere el tamaño máximo de la institución. Envíelo antes de 5 minutos después de subirlo; si tardó más, vuelva a seleccionarlo.
   </GuideFAQItem>
 </GuideFAQ>

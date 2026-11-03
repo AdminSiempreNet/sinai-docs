@@ -1,11 +1,13 @@
 ---
 title: "Excusas"
-description: "Adjunta el soporte de una falta y envía la excusa."
+description: "Envíe una excusa de inasistencia con su motivo, sus fechas y un soporte, y consulte las excusas enviadas en cada periodo."
 guide: true
 wordpressId: 30583
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/e-excusas/"
-lastModified: "2023-11-17 08:30:36"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,21 +16,112 @@ lastModified: "2023-11-17 08:30:36"
 
 ## Guía paso a paso
 
-En este tutorial podrán visualizar la forma cómo se cargan las excusas directamente desde su modulo estudiante. ¡Muchas gracias por preferirnos!https://youtu.be/ILv3VG3iVqE?si=tqrLTd0IlknAo0TT
+### 1. ¿Qué es Excusas?
 
+**Excusas** le permite enviar una excusa por una ausencia a clase desde su módulo de estudiante. Cada excusa lleva un motivo, las fechas de la ausencia, la razón escrita y, si lo desea, un archivo de soporte.
+
+Cuando envía la excusa, SINAI avisa a los docentes que tienen asignación académica en su grupo y a los rectores y coordinadores de la institución. En la parte inferior de la pantalla consulta las excusas que ya envió.
+
+Haga clic en el ícono **SEGUIMIENTO** de la barra superior y luego en **Excusas**. Según el menú de su institución, la opción también puede llamarse **Enviar Excusas**.
+
+<GuideImagePending>
+  Estudiante/Seguimiento/RegistroExcusas.aspx, pantalla completa con el bloque Registro de Excusas y la Lista de Excusas del Periodo con al menos una excusa. Archivo: registro-excusas.jpg
+</GuideImagePending>
+
+El botón **Ayuda**, junto a **Enviar**, abre esta guía.
+
+#### 2. Escribir la excusa
+
+En el bloque **Registro de Excusas** complete estos campos:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Periodo** | Periodo al que pertenece la excusa. Al abrir la pantalla aparece el periodo activo. |
+| **Motivo** | Causa de la ausencia. La lista la define su institución. Es obligatorio. |
+| **Desde** | Primer día de la ausencia, con el formato día/mes/año. Al abrir la pantalla trae la fecha de hoy. |
+| **hasta** | Último día de la ausencia. No puede ser anterior a **Desde**. |
+| **Escriba aquí la razón de la ausencia** | Explicación de la ausencia. Debe tener por lo menos 50 caracteres. |
+| **Adjuntar Archivo** | Soporte de la excusa, por ejemplo una incapacidad. Es opcional. |
+
+</GuideDataTable>
+
+El archivo adjunto debe ser PDF, JPG, JPEG, PNG, DOC o DOCX, y pesar como máximo 1 MB.
+
+<GuideCallout>
+  Las fechas **Desde** y **hasta** no pueden ser anteriores al día de hoy. Si la ausencia ya pasó, SINAI no recibe la excusa desde esta pantalla; entréguela directamente en la institución.
+</GuideCallout>
+
+#### 3. Enviar la excusa
+
+1. Seleccione el **Periodo** y el **Motivo**.
+2. Revise las fechas **Desde** y **hasta**.
+3. Escriba la razón de la ausencia.
+4. Si tiene un soporte, haga clic en el campo de **Adjuntar Archivo** y elija el archivo en su equipo.
+5. Haga clic en **Enviar**.
+
+Si todo está bien, SINAI muestra **Se ha enviado la excusa correctamente**, limpia el motivo y la razón, y la excusa aparece en la lista del periodo.
+
+Si falta un dato o no es válido, SINAI muestra uno de estos avisos y no envía la excusa:
+
+- **Seleccione un motivo** o **Por favor selecciones un motivo válido**: no eligió el motivo.
+- **Debe seleccionar el día de inicio de la excusa.** o **Debe seleccionar el día de finalización de la excusa**: falta una fecha.
+- **La fecha no puede ser anterior a la fecha de solicitud**: **hasta** es anterior a **Desde**.
+- **La fecha inicio no puede inferior a la fecha del calendario actual.** o **La fecha de finalizacion no puede inferior a la fecha del calendario actual.**: la fecha es anterior a hoy.
+- **Error al ingresar un formato de fecha no valido. Por favor verifique**: la fecha no tiene el formato día/mes/año.
+- **Debe escribir el texto de la Excusa.** o **Debe escribir mas de 50 caracteres en la justificación de la ausencia.**: la razón está vacía o es muy corta.
+- **Extensión archivo no válida. Las extensiones válidas son: docx, doc, pdf, jpg, jpeg, png**: el archivo no tiene un formato permitido.
+- **El tamaño maximo permitido para archivos adjuntos es de 1MB. Por favor verifique**: el archivo pesa más de 1 MB.
+- **Solo se puede enviar una excusa por estudiante cada día**: ya envió excusas hoy en ese periodo.
+
+#### 4. Consultar las excusas enviadas
+
+La tabla **Lista de Excusas del Periodo** muestra las excusas que usted envió en el periodo seleccionado arriba. Para ver otro periodo, cámbielo en la lista **Periodo**.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Registro** | Fecha en que envió la excusa. |
+| **Motivo** | Motivo elegido. |
+| **Justificación** | Razón que escribió. |
+| **Periodo** | Fechas **Desde** y **Hasta** de la ausencia. |
+| **Adjunto** | Enlace **Descargar** del archivo de soporte. Solo aparece si adjuntó uno. |
+| **Informe** | Botón de impresora que descarga el formato de la excusa en PDF. |
+
+</GuideDataTable>
+
+Desde esta pantalla no se modifica ni se elimina una excusa enviada.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Excusas»?"}>
-    Ten la excusa o el soporte de la falta y entra a Excusas.
+  <GuideFAQItem index="01" question={"¿Quién recibe mi excusa?"}>
+    Al enviarla, SINAI notifica a los docentes que tienen asignación académica en su grupo y a los rectores y coordinadores de la institución. La notificación los lleva a la lista de excusas de su módulo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Excusas» quedó listo?"}>
-    Queda enviada cuando la ves en la lista de excusas.
+  <GuideFAQItem index="02" question={"Quiero enviar la excusa de una falta de ayer y SINAI no me deja. ¿Por qué?"}>
+    Las fechas **Desde** y **hasta** no pueden ser anteriores al día de hoy. Si las cambia a un día pasado, SINAI muestra «La fecha inicio no puede inferior a la fecha del calendario actual.». En ese caso entregue la excusa directamente en la institución.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Excusas»?"}>
-    Si no puedes adjuntar el archivo, intenta de nuevo o entrégala en la coordinación.
+  <GuideFAQItem index="03" question={"¿Es obligatorio adjuntar un archivo?"}>
+    No. El adjunto es opcional. Si adjunta uno, debe ser PDF, JPG, JPEG, PNG, DOC o DOCX y pesar como máximo 1 MB.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo sé que la excusa quedó enviada?"}>
+    SINAI muestra «Se ha enviado la excusa correctamente» y la excusa aparece en la **Lista de Excusas del Periodo**. Si no la ve, revise que la lista **Periodo** tenga el mismo periodo que eligió al enviarla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Me equivoqué en una excusa. ¿Puedo corregirla o borrarla?"}>
+    No. Esta pantalla no tiene opciones para modificar ni eliminar una excusa enviada. Comuníquese con su director de grupo o con la coordinación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Enviar la excusa justifica mis inasistencias?"}>
+    Esta pantalla solo registra la excusa y avisa a docentes y directivos; no modifica sus inasistencias. Puede revisar si una falta quedó justificada en [Inasistencias Consolidadas y Detalladas](/docs/estudiante/asistencia-y-convivencia/inasistencias).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Cómo descargo el formato de una excusa?"}>
+    En la fila de la excusa, haga clic en el botón de impresora de la columna **Informe**. SINAI descarga el formato de la excusa en PDF.
   </GuideFAQItem>
 </GuideFAQ>

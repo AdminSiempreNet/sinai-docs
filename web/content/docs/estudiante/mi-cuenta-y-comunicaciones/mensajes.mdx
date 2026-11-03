@@ -4,7 +4,8 @@ description: "Lee tu bandeja y envía mensajes o archivos a tus docentes."
 guide: true
 wordpressId: 33577
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/e-mensajes/"
-lastModified: "2024-10-16 16:28:52"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 ## Video tutorial
 
@@ -14,109 +15,145 @@ lastModified: "2024-10-16 16:28:52"
 
 ## Guía paso a paso
 
-### Mensajes
+### 1. ¿Qué es Mensajes?
 
-La mensajería interna es una herramienta de comunicación dentro de la plataforma SINAI que permite compartir mensajes y archivos entre los miembros de la institución. Ten en cuenta que los mensajes solo pueden ser enviados y recibidos por usuarios registrados en la plataforma, y no se incluyen roles de acudientes ya que tienen acceso limitado al módulo del estudiante.  **Menú Inicio > Opción Mensajes**
-(Se puede acceder tanto desde la opción en el panel izquierdo como desde el ícono correspondiente). <GuideImageTrigger src={"/images/wordpress/2025/02/Mensajes-1.png"} alt={"Captura de Mensajes 1"}>Ver ejemplo</GuideImageTrigger>
+**Mensajes** es la mensajería interna de SINAI. Sirve para recibir y enviar mensajes, con archivo adjunto opcional, a otros usuarios de su institución.
 
+Ingrese a **Inicio → Mensajes**. La opción aparece en el panel izquierdo y como ícono en la página de **Inicio**.
 
+La pantalla tiene dos zonas:
 
-Este módulo permite enviar mensajes internos a otros miembros de la institución, como el Rector, Coordinador, Administrativo, Docente, Auxiliar o Estudiante. Aquí te mostramos los pasos para redactar y enviar un nuevo mensaje.
+- **Carpetas**, a la izquierda: el botón **Nuevo mensaje** y las carpetas **Recibidos**, **Leidos**, **Enviados**, **Archivados** y **Eliminados**.
+- **Lista de mensajes**, a la derecha: los mensajes de la carpeta seleccionada. Al abrir la pantalla se muestra **Recibidos**.
 
-#### Pasos para Enviar un Nuevo Mensaje en la Plataforma SINAI
+<GuideImagePending>
+  Estudiante: Inicio → Mensajes (General/Mensajes/Mensajeria.aspx), panel Carpetas y lista de mensajes recibidos con datos. Archivo: lista-mensajes.jpg. Pendiente: el servidor andino da Server Error al entrar como estudiante desde el super.
+</GuideImagePending>
 
-##### **1\. Redactar un Nuevo Mensaje**
+<GuideCallout>
+  Los mensajes solo circulan entre usuarios de su institución. En el módulo del estudiante solo está disponible el tipo de mensaje **Individual**; el envío **Masivo** no se ofrece.
+</GuideCallout>
 
-- **seleccione el botón “Nuevo mensaje”** para comenzar a redactar un mensaje nuevo.
+#### 2. Carpetas y lista de mensajes
 
-##### **2\. Seleccionar el Tipo de Mensaje**
+<GuideDataTable>
 
-- elija el **tipo de mensaje** (por ejemplo, **Individual**).
+| Carpeta | Qué muestra |
+| --- | --- |
+| **Recibidos** | Los mensajes que le enviaron y no ha abierto. Si está vacía, SINAI indica que quizá lo que busca esté en Leídos. |
+| **Leidos** | Los mensajes que ya abrió. Un mensaje de Recibidos pasa aquí automáticamente cuando lo abre. |
+| **Enviados** | Los mensajes que usted envió. |
+| **Archivados** | Los mensajes que guardó fuera de su bandeja principal. |
+| **Eliminados** | Los mensajes que eliminó. |
 
-##### **3\. Selección de Rol**
+</GuideDataTable>
 
-- En el campo **Rol**, seleccione el **grupo de destinatarios** al que enviarás el mensaje. Los roles disponibles son:
-    - **Rector**
-    - **Coordinador**
-    - **Administrativo**
-    - **Docente**
-    - **Auxiliar**
-    - **Estudiante**
+El título de la lista muestra la cantidad de mensajes de la carpeta, por ejemplo *3 Mensajes Recibidos*. Si no hay mensajes, la lista dice *No hay mensajes para mostrar* o el aviso propio de cada carpeta.
 
-##### **4\. Seleccionar el Destinatario**
+En la lista:
 
-- Una vez seleccionado el **Rol**, el sistema te mostrará una lista de los posibles **destinatarios** dentro de ese grupo. Escoge al o los destinatarios correspondientes a quienes desea enviar el mensaje.
+- Cada fila muestra **De**, **Asunto** y **Fecha**.
+- El cuadro de búsqueda filtra por remitente, asunto y fecha.
+- La lista muestra 20 mensajes por página.
+- El botón **Abrir** de cada fila abre el mensaje. Si el mensaje tiene archivo, aparece además un ícono de clip que lo abre.
+- El botón **1000 +** carga 1000 mensajes más de la carpeta, comenzando por los más recientes.
 
-##### **5\. Escribir el Asunto del Mensaje**
+#### 3. Leer, responder y reenviar un mensaje
 
-- En el campo **Asunto**, ingrese un título claro y conciso que resuma el contenido del mensaje. Esto ayudará a que los destinatarios comprendan rápidamente de qué trata el mensaje.
+1. Haga clic en **Abrir** en la fila del mensaje.
+2. SINAI muestra el asunto, el remitente con su rol, la fecha, el correo del remitente y el texto. Si tiene archivo, aparece **Descargar Adjunto**.
+3. Use el botón que necesite:
+   - **Responder:** abre la ventana de redacción con el remitente como destinatario, el asunto *Respuesta//:* seguido del asunto original y el mensaje original citado.
+   - **Reenviar:** abre la ventana de redacción con el asunto *Reenviado//:* y el mensaje original citado. Usted elige los destinatarios.
+   - **Eliminar:** pide confirmación y mueve el mensaje a **Eliminados**.
 
-##### **6\. Escribir el Cuerpo del Mensaje**
+<GuideImagePending>
+  Estudiante: Inicio → Mensajes, mensaje abierto (título Leer mensaje) con los botones Responder, Reenviar y Eliminar. Archivo: leer-mensaje.jpg. Pendiente: Server Error al entrar como estudiante.
+</GuideImagePending>
 
-- En el área **Cuerpo del Mensaje**, escribe el texto completo del mensaje. Asegúrate de incluir todos los detalles necesarios para comunicarte eficazmente con el destinatario.
+#### 4. Escribir y enviar un mensaje nuevo
 
-##### **7\. Adjuntar Archivos (Opcional)**
+1. Haga clic en **Nuevo mensaje**.
+2. En **Tipo**, deje **Individual**.
+3. En **Rol**, elija el grupo de usuarios al que pertenece el destinatario. La lista trae los roles de funcionarios y el rol estudiante.
+4. Si eligió el rol de estudiantes, aparece **Grupo**: seleccione el grupo y SINAI carga los estudiantes de ese grupo.
+5. En el cuadro de destinatarios, seleccione de la lista o escriba el nombre para buscarlo. Solo acepta nombres de la lista y puede elegir varios.
+6. Escriba el **Asunto**.
+7. Escriba el texto del mensaje en el editor.
+8. Si lo necesita, haga clic en **Seleccionar archivo** y elija el adjunto.
+9. Marque **Notificar por Email** si quiere que SINAI avise por correo. La casilla viene desmarcada.
+10. Haga clic en **Enviar mensaje**.
 
-- Si desea agregar archivos al mensaje, haga clic en el botón **Seleccionar Archivo**. El sistema te permitirá adjuntar un archivo de hasta **5 MB**. Una vez cargado, el **nombre del archivo** se mostrará junto al campo de archivo.
+<GuideImagePending>
+  Estudiante: Inicio → Mensajes → Nuevo mensaje, formulario con Tipo, Rol, destinatarios, Asunto, editor, archivo y Notificar por Email. Archivo: nuevo-mensaje.jpg. Pendiente: Server Error al entrar como estudiante.
+</GuideImagePending>
 
-##### **8\. Enviar el Mensaje**
+Si el envío es correcto, SINAI muestra **Mensaje enviado correctamente** y el mensaje queda en **Enviados**. Estos avisos impiden el envío:
 
-- Finalmente, cuando hayas completado el mensaje y adjuntado los archivos (si es necesario), haga clic en el botón **Enviar Mensaje** para compartirlo con los destinatarios seleccionados.
+- *Debe escribir un asunto*
+- *Debe escribir la descripción del mensaje*
+- *No hay destinatarios*
 
-**Notificar por Email:** Si marca esta casilla el sistema envía una notificación del mensaje al correo que el funcionario tiene configurado en la plataforma. <GuideImageTrigger src={"/images/wordpress/2025/02/Mensajes-2.png"} alt={"Captura de Mensajes 2"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Adjunto | Condición |
+| --- | --- |
+| **Tamaño** | Máximo 10 MB. |
+| **Tipos de archivo** | txt, doc, docx, pdf, xls, xlsx, ppt, pptx, jpg, jpeg, png, tif, gif, zip, rar, mp3, mp4 y wmv. |
 
+</GuideDataTable>
 
-#### Exploración General del Módulo de Mensajes
+<GuideCallout type="warning">
+  Si el archivo supera el tamaño o es de un tipo no permitido, SINAI no muestra ningún aviso: el mensaje se envía igual, pero sin el adjunto. Antes de enviar, confirme que el nombre del archivo quedó junto al campo, y después de enviar revise en **Enviados** que el clip aparezca.
+</GuideCallout>
 
-En el módulo de **Mensajes**, puede encontrar las siguientes opciones para gestionar sus mensajes:
+<GuideCallout>
+  Con **Notificar por Email**, SINAI envía un aviso con el asunto "Ha recibido un nuevo mensaje en la plataforma SINAI" a los usuarios que tienen un correo válido registrado. El aviso trae solo el asunto; el mensaje completo se lee en SINAI.
+</GuideCallout>
 
-##### **1\. Recibidos**
+#### 5. Mover, archivar y eliminar mensajes
 
-- La carpeta **Recibidos** muestra todos los mensajes que has recibido de otros usuarios de la plataforma.
-- Para acceder a estos mensajes, simplemente seleccione la opción **Recibidos** en el panel de navegación.
-- Al hacer clic en esta carpeta, podrá ver todos los mensajes que han sido enviados a su cuenta.
-- puede **leer** los mensajes, **archivarlos**, **eliminarlos** o **responder** según sea necesario.
+En cualquier carpeta puede marcar uno o varios mensajes con la casilla de cada fila, o todos los de la página con la casilla del encabezado. Luego use un botón de la parte superior:
 
-##### **2\. Leídos**
+- **Recibidos:** marca los mensajes seleccionados como recibidos.
+- **Leidos:** los marca como leídos.
+- **Archivar:** los mueve a **Archivados**.
+- **Eliminar:** pide confirmación (*¿Confirma que desea eliminar los mensajes seleccionados?*) y los mueve a **Eliminados**.
 
-- En la carpeta **Leídos**, encontrarás todos los mensajes que ya has abierto y leído.
-- Una vez que hayas abierto y leído un mensaje desde cualquier otra carpeta (como Recibidos o Enviados), el mensaje se moverá automáticamente a la carpeta **Leídos**.
-- Esta opción te permite tener una vista separada de los mensajes ya revisados, lo que facilita la gestión de su bandeja de entrada.
+Al terminar, SINAI muestra un aviso, por ejemplo *Proceso de mover mensajes ejecutado correctamente. 2 mensaje(s) archivado(s)*.
 
-##### **3\. Enviados**
-
-- La carpeta **Enviados** contiene todos los mensajes que has enviado a otros usuarios dentro de la plataforma.
-- puede acceder a esta carpeta para revisar los mensajes que ya has enviado, verificar su contenido o confirmar que fueron entregados correctamente.
-- Los mensajes enviados permanecen en esta carpeta, lo que te permite hacer un seguimiento de sus comunicaciones.
-
-##### **4\. Archivados**
-
-- La carpeta **Archivados** se utiliza para almacenar mensajes que ya no necesitas tener visibles en su bandeja principal, pero que desea guardar para futura referencia.
-- Para archivar un mensaje, seleccione el mensaje en cualquier carpeta y utiliza la opción de **Archivar**.
-- Los mensajes archivados se eliminan de su bandeja principal, pero siguen accesibles para su consulta en la carpeta **Archivados**.
-
-##### **5\. Eliminados**
-
-- En la carpeta **Eliminados** se encuentran los mensajes que has eliminado de su bandeja de entrada o de cualquier otra carpeta.
-- Para eliminar un mensaje, seleccione el mensaje y haga clic en la opción **Eliminar**.
-- Los mensajes eliminados permanecerán en esta carpeta hasta que decidas vaciarla o recuperarlos si lo desea. Es importante tener en cuenta que los mensajes eliminados permanentemente no pueden ser recuperados. <GuideImageTrigger src={"/images/wordpress/2024/10/Mensajes-3-1024x449.png"} alt={"Captura de Mensajes 3"}>Ver ejemplo</GuideImageTrigger>
-
-
-
+<GuideCallout type="warning">
+  Eliminar desde la carpeta **Eliminados** es definitivo: el mensaje sale de su cuenta y no se puede recuperar. Mientras esté en **Eliminados**, puede devolverlo seleccionándolo y usando **Recibidos** o **Leidos**.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Mensajes»?"}>
-    Entra a Mensajes con tu usuario. Para escribir, elige el destinatario y el texto.
+  <GuideFAQItem index="01" question="No encuentro a mi docente en la lista de destinatarios. ¿Qué hago?">
+    La lista depende del **Rol** elegido y solo trae usuarios de su institución. Seleccione el rol del funcionario y busque su nombre. Para escribirle a otro estudiante, elija el rol de estudiantes y luego el **Grupo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Mensajes» quedó listo?"}>
-    El mensaje queda en enviados cuando lo confirmas.
+  <GuideFAQItem index="02" question="Al enviar aparece «No hay destinatarios». ¿Por qué?">
+    No eligió a nadie en el cuadro de destinatarios. Seleccione al menos un nombre de la lista antes de hacer clic en **Enviar mensaje**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Mensajes»?"}>
-    Si no sale, revisa que tengas destinatario y vuelve a enviarlo. Si sigue igual, avísale a tu docente.
+  <GuideFAQItem index="03" question="Un mensaje ya no está en Recibidos. ¿Dónde quedó?">
+    Al abrir un mensaje de Recibidos, SINAI lo pasa a **Leidos**. Si no lo encuentra, revise también **Archivados** y **Eliminados**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Qué archivos puedo adjuntar y de qué tamaño?">
+    Hasta 10 MB y solo los tipos de archivo de la tabla del paso 4: documentos de Office, PDF, texto, imágenes, comprimidos, audio y video.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="¿Puedo recuperar un mensaje que eliminé?">
+    Sí, mientras esté en la carpeta **Eliminados**: selecciónelo y haga clic en **Recibidos** o **Leidos**. Si lo elimina desde **Eliminados**, se borra definitivamente.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question="¿Se avisa al destinatario cuando le envío un mensaje?">
+    El mensaje le llega a su carpeta **Recibidos**. Solo recibe además un aviso por correo si usted marcó **Notificar por Email** y él tiene un correo válido registrado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question="Eliminé un mensaje y mi docente todavía lo tiene. ¿Por qué?">
+    **Eliminar** quita el mensaje de sus carpetas. Cada usuario administra las suyas, así que el mensaje sigue en las del destinatario.
   </GuideFAQItem>
 </GuideFAQ>
