@@ -2,6 +2,7 @@ import path from 'node:path';
 import { createMDX } from 'fumadocs-mdx/next';
 import type { NextConfig } from 'next';
 import docenteRedirects from './lib/docente-redirects.json';
+import administrativoRedirects from './lib/administrativo-redirects.json';
 import estudianteRedirects from './lib/estudiante-redirects.json';
 
 const nextConfig: NextConfig = {
@@ -28,7 +29,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [...docenteRedirects, ...estudianteRedirects];
+    return [...administrativoRedirects, ...docenteRedirects, ...estudianteRedirects];
   },
   async rewrites() {
     return [

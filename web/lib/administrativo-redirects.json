@@ -1,0 +1,17 @@
+[
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--matricula--listados--lista-de-estudiantes-por-grupo",
+    "destination": "/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/lista-de-estudiantes-por-grupo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--foliar-libro--foliar-libro",
+    "destination": "/docs/administrativo/cierre-de-ano/foliar-libro",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--promocion--promocion-anticipada",
+    "destination": "/docs/administrativo/cierre-de-ano/promocion-anticipada",
+    "permanent": true
+  }
+]

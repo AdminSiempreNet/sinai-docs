@@ -1,0 +1,117 @@
+---
+title: "Foliar libro"
+description: "Asigne los grupos a un libro de calificaciones, defina su orden y numere los folios de los estudiantes."
+guide: true
+wordpressId: 29772
+legacyUrl: "https://ayudasinai.siempre.net.co/docs/foliar-libro/"
+lastModified: "2026-11-03"
+lastReviewed: "2026-11-03"
+---
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="QBbEm7WKRHo" title="Foliar libro" />
+</GuideVideos>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Foliar Libro?
+
+**Foliar Libro de Calificaciones** organiza a los estudiantes en libros y les asigna un folio, es decir, un número consecutivo dentro del libro. El proceso tiene tres partes: asignar los grupos al libro, definir el orden de los grupos y foliar. Todo aplica al calendario seleccionado en la parte superior de SINAI.
+
+Ingrese a **Promoción → Foliar Libro**.
+
+<GuideImageTrigger src="/images/guides/foliar-libro/foliar-libro-calificaciones.png" alt="Pantalla Foliar Libro de Calificaciones con Sede, Libro No., Grupo, los botones Asignar Libro y Foliar Libro, y la tabla de grupos del libro">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Elegir el libro
+
+1. En **Libro No.**, seleccione el libro, del 1 al 50.
+2. Revise la tabla de la parte inferior: muestra los grupos que ya pertenecen a ese libro, de todas las sedes.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Orden** | Posición del grupo dentro del libro. Se puede editar. |
+| **Sede**, **Nivel**, **IdGrado**, **Grado** y **Grupo** | Datos del grupo. |
+| **Folios** | Cantidad de estudiantes del grupo en el libro. Aparece aunque el libro aún no esté foliado. |
+| **Total** | Suma de la columna **Folios**. |
+
+</GuideDataTable>
+
+#### 3. Asignar los grupos al libro
+
+1. En **Sede**, seleccione la sede. La lista **Grupo** muestra los grupos de esa sede.
+2. En **Grupo**, seleccione los grupos. Para elegir varios, mantenga presionada la tecla **Ctrl** mientras hace clic.
+3. Haga clic en **Asignar Libro**.
+
+Los grupos aparecen en la tabla. **Asignar Libro** no muestra un mensaje de confirmación. Pasa al libro a todos los estudiantes del grupo, sin importar su estado. Si tiene grupos de otra sede, cambie la **Sede** y repita los pasos.
+
+Un grupo solo puede estar en un libro: si lo asigna a otro, sale del anterior. Cuando mueva un grupo, folie de nuevo los dos libros.
+
+#### 4. Elegir qué estudiantes se folian
+
+La casilla **Solo estudiantes activos** cambia cómo se cuentan y se numeran los estudiantes:
+
+- **Marcada:** la tabla y el foliado incluyen solo a los estudiantes en estado matriculado, promovidos anticipadamente y promoción semestral. Al foliar, los estudiantes retirados, desertores o cancelados del libro pierden su folio. Los de otros estados, como trasladados o graduados, no reciben folio nuevo y conservan el que tenían.
+- **Sin marcar:** la tabla y el foliado incluyen a todos los estudiantes del libro.
+
+<GuideCallout>
+  La casilla se guarda al hacer clic, sin ningún botón adicional. Queda definida para toda la institución en el calendario actual.
+</GuideCallout>
+
+#### 5. Ordenar los grupos
+
+1. En la columna **Orden**, escriba un número entero en cada grupo: 1 para el primero, 2 para el segundo y así sucesivamente.
+2. Haga clic en **Guardar Orden**. SINAI muestra «Registros modificados» seguido de la cantidad y reorganiza la tabla.
+
+Los grupos sin un orden guardado quedan antes de los numerados. Si no define ningún orden, SINAI ordena por sede, nivel, grado y grupo.
+
+**Guardar Orden** no cambia los folios. Para aplicar el orden nuevo, folie el libro después de guardar.
+
+#### 6. Foliar el libro
+
+1. Verifique el **Libro No.**, la casilla **Solo estudiantes activos** y el orden de los grupos.
+2. Haga clic en **Foliar Libro**.
+
+SINAI muestra «El libro 1 ha sido foliado correctamente. Total Folios:» seguido de la cantidad, con el número del libro elegido.
+
+Los folios empiezan en 1 y continúan por todos los grupos del libro, en el orden de la tabla. Dentro de cada grupo, los estudiantes se numeran por apellidos y nombres. No hace falta seleccionar grupos en la lista: **Foliar Libro** siempre incluye el libro completo.
+
+<GuideCallout type="warning">
+  **Foliar Libro** vuelve a numerar a todos los estudiantes del libro y reemplaza los folios anteriores. No pide confirmación. Si ya imprimió el libro, un nuevo foliado puede cambiar el folio de los estudiantes.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"Hice clic en Asignar Libro y no apareció ningún mensaje. ¿Quedó asignado?"}>
+    Revise la tabla con ese **Libro No.** seleccionado: si el grupo aparece, quedó asignado. Si no aparece, confirme que seleccionó el grupo en la lista antes de hacer clic. Sin grupos seleccionados, el botón no asigna nada y tampoco muestra aviso.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"Seleccioné un grupo y Foliar Libro numeró todos los grupos. ¿Por qué?"}>
+    **Foliar Libro** trabaja sobre el libro completo. La selección de la lista **Grupo** solo se usa en **Asignar Libro**. Para numerar un grupo aparte, asígnelo a un libro distinto.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"Cambié el orden de los grupos y los folios siguen igual. ¿Qué falta?"}>
+    Después de **Guardar Orden** debe hacer clic en **Foliar Libro**. El orden guardado se aplica a los folios solo cuando vuelve a foliar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Llegaron estudiantes nuevos después de foliar. ¿Cómo los incluyo?"}>
+    Seleccione el grupo, haga clic en **Asignar Libro** para incluir a todos sus estudiantes y luego en **Foliar Libro**. El libro completo se numera de nuevo, por lo que otros estudiantes pueden cambiar de folio.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"El mensaje dice «Total Folios:» sin ningún número. ¿Qué significa?"}>
+    El libro no tiene estudiantes para foliar. Revise que la tabla muestre grupos con ese **Libro No.** Si **Solo estudiantes activos** está marcada, confirme también que haya estudiantes activos en esos grupos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «No tiene asignado el permiso Nº805». ¿Qué hago?"}>
+    **Asignar Libro** y **Foliar Libro** requieren ese permiso. Pídalo a quien administra los permisos de la institución. Los roles Rector y Docente no lo necesitan.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Aparece «Error al foliar el libro. Consulte al soporte técnico». ¿Qué hago?"}>
+    SINAI no pudo actualizar el folio de uno o más estudiantes. Comuníquese con soporte técnico e indique el número del libro. No asuma que el libro quedó foliado por completo.
+  </GuideFAQItem>
+</GuideFAQ>
