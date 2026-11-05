@@ -1,0 +1,252 @@
+---
+title: "Asignación personalizada"
+description: "Registre la asignación académica que varía por periodo y defina qué asignaturas cursa cada estudiante en los grupos con asignación personalizada."
+guide: true
+lastModified: "2026-11-04"
+lastReviewed: "2026-11-04"
+---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Generar y ajustar la asignación por periodo de un grupo personalizado. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+  - Asignar estudiantes por asignatura y editar la asignación de un estudiante. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la asignación personalizada?
+
+La **asignación personalizada** es el segundo tipo de asignación académica de SINAI. A diferencia de la **asignación estándar**, que aplica igual a todos los estudiantes del grupo durante todo el año, la personalizada permite:
+
+- tener asignaturas, horas, pesos o docentes distintos **en cada periodo**, y
+- que **no todos los estudiantes** del grupo cursen las mismas asignaturas (por ejemplo, electivas, énfasis o profundización).
+
+<GuideDataTable>
+
+| | Asignación estándar | Asignación personalizada |
+| --- | --- | --- |
+| **Periodos** | Una sola asignación para todo el año. | Una asignación por cada periodo. |
+| **Estudiantes** | Todos los estudiantes del grupo tienen todas las asignaturas. | Cada estudiante tiene las asignaturas que se le asignen en cada periodo. |
+| **Docente por asignatura** | Puede registrarse más de un docente por asignatura. | Un solo docente por asignatura en cada periodo. |
+| **Dónde se registra** | **Por grupo**, **Por docente** y **Créditos**. | **Por periodo**, **Por asignatura** y **Por estudiante**. |
+
+</GuideDataTable>
+
+Para trabajar con este tipo se necesitan dos condiciones:
+
+1. La asignación personalizada debe estar **activa en el calendario**.
+2. El grupo debe tener el tipo **Personalizada**.
+
+Las dos se configuran en **Configuración de grupos**. Consulte [Tipo de asignación y director de grupo](/docs/administrativo/gestion-de-personal/asignacion-academica/tipo-de-asignacion). Mientras no haya grupos personalizados, el menú muestra *Para empezar, cambie a Personalizada los grupos que lo requieran en Configuración de grupos.*
+
+El trabajo se hace en este orden:
+
+1. **Por periodo:** se definen las asignaturas de cada periodo con sus horas, semanas, peso, créditos y docente.
+2. **Por asignatura:** se indica qué estudiantes cursan cada asignatura en cada periodo.
+3. **Por estudiante:** se revisa o ajusta la asignación de un estudiante en particular.
+
+Las pantallas de esta sección solo muestran grupos activos con asignación personalizada. Los grupos estándar no aparecen en sus listas.
+
+Ingrese a **Personal → Asignación Académica** y, en el menú lateral, use la sección **Asignación personalizada**.
+
+<GuideCallout>
+  **Permisos.** El rector puede hacer todas las operaciones. Los demás usuarios necesitan el permiso **406** para generar o agregar, el **407** para guardar cambios y asignar docentes, y el **408** para eliminar o quitar asignaturas. Si falta un permiso, SINAI muestra *No tiene asignado el permiso Nº* seguido del número. Descargar informes no exige permiso.
+</GuideCallout>
+
+#### 2. Generar la asignación por periodo
+
+Si el grupo se pasó a personalizada trasladando su asignación estándar, ya tiene asignación en los periodos elegidos. Use **Generar** para crearla desde cero o para completar periodos o asignaturas que falten.
+
+Filtros de **Por periodo**:
+
+- **Sede**, **Nivel** y **Grupo:** solo muestran grupos activos con asignación personalizada.
+- **Periodos:** elige qué periodos se ven en la tabla.
+- **Asignatura:** muestra una sola asignatura o todas.
+
+1. Ingrese a **Asignación personalizada → Por periodo** y seleccione el **Grupo**.
+2. Haga clic en **Generar**.
+3. En la ventana **Generar asignación por periodos**, complete:
+   - **Periodos:** marque los periodos que desea generar. Vienen todos marcados.
+   - **Semanas por periodo:** número de semanas de cada periodo, entre 1 y 60. SINAI propone las semanas del año lectivo del grupo divididas entre sus periodos.
+   - **Estudiantes:** deje marcada **Asignar todos los estudiantes** para asignar los estudiantes activos del grupo a las asignaturas generadas. No quita estudiantes ya asignados.
+   - **Asignaturas:** desmarque las que no desea generar y defina los **Créditos** y el **Docente** de cada una. Solo aparecen las asignaturas con intensidad horaria para el nivel o modelo del grupo; **H.Sem** y **Peso** salen de esa intensidad.
+4. Haga clic en **Generar asignación**.
+
+SINAI informa cuántas asignaturas creó y cuántos estudiantes asignó por periodo, por ejemplo *Se generaron N asignatura(s) en los periodos …* Si un periodo ya tenía todas las asignaturas, lo indica con *El periodo … ya tenía todas las asignaturas seleccionadas*.
+
+<GuideCallout>
+  Las asignaturas que ya existen en un periodo no se modifican al generar. Si está marcada **Asignar todos los estudiantes**, SINAI sí les agrega los estudiantes activos que falten.
+</GuideCallout>
+
+Mientras el grupo no tenga asignación por periodo, la pantalla muestra *El grupo seleccionado no tiene asignación por periodo. Utilice «Generar» para crearla.*
+
+#### 3. Ajustar horas, semanas, pesos, créditos y docentes
+
+La tabla de **Por periodo** muestra cada asignatura con una fila por periodo. Use la flecha de la asignatura para mostrar u ocultar sus periodos.
+
+<GuideDataTable>
+
+| Columna | Qué indica |
+| --- | --- |
+| **Asignatura / Periodo** | Asignatura y nombre del periodo. |
+| **Estudiantes** | Número de estudiantes asignados a la asignatura en el periodo. Solo lectura. |
+| **H.Sem** | Horas semanales. Obligatorio. |
+| **#.Sem** | Número de semanas del periodo. Obligatorio. |
+| **H.Tot** | Horas semanales por número de semanas. Se calcula mientras escribe. |
+| **Peso** | Peso de la asignatura. Obligatorio. |
+| **Créditos** | Créditos de la asignatura. Obligatorio. |
+| **Docente** | Docente de la asignatura en ese periodo. Incluye docentes activos e inactivos. |
+| **Casilla** | Marca el periodo de la asignatura para eliminarlo. |
+
+</GuideDataTable>
+
+1. Corrija los valores que necesite. Puede moverse entre casillas con las flechas del teclado.
+2. Haga clic en **Guardar**.
+
+SINAI muestra *Cambios guardados correctamente (N registro(s) modificado(s))* o *No hubo cambios para guardar*. Si un campo obligatorio queda vacío, SINAI lo señala con un asterisco y no guarda.
+
+<GuideImagePending>
+  **Vista requerida:** Asignación personalizada → Por periodo con un grupo personalizado seleccionado. Deben verse los filtros (Sede, Nivel, Grupo, Periodos, Asignatura), los botones Generar, Asignar docentes, Guardar, Descargar PDF y Eliminar, y una asignatura desplegada con sus filas por periodo y las columnas Estudiantes, H.Sem, #.Sem, H.Tot, Peso, Créditos y Docente. Archivo sugerido: `asignacion-personalizada-por-periodo.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
+
+#### 4. Asignar docentes en varios periodos
+
+**Asignar docentes** cambia el docente de varias asignaturas y periodos en una sola operación.
+
+1. En **Por periodo**, haga clic en **Asignar docentes**.
+2. En la ventana **Asignar docentes por periodo**, elija el **Docente** de cada asignatura. *Sin cambios* conserva el docente actual y *Sin docente* lo quita.
+3. Marque los periodos donde se aplicará cada docente. La casilla del encabezado de un periodo marca esa columna en todas las asignaturas. Las casillas inactivas corresponden a periodos donde la asignatura no está registrada.
+4. Haga clic en **Aceptar**.
+
+SINAI muestra *Docente asignado correctamente en N registro(s) de la asignación por periodo* y recarga la tabla.
+
+<GuideCallout type="warning">
+  Los cambios sin guardar de la tabla se pierden al usar **Asignar docentes**. Guarde primero.
+</GuideCallout>
+
+#### 5. Eliminar asignaturas de un periodo
+
+1. En **Por periodo**, marque la casilla de cada periodo de asignatura que desea eliminar. La casilla de la asignatura marca todos sus periodos. Solo se tienen en cuenta las filas visibles con los filtros.
+2. Haga clic en **Eliminar**.
+3. Confirme el mensaje *Se eliminarán N registro(s) de la asignación por periodo del grupo …, junto con los estudiantes asignados a ellos. ¿Desea continuar?*
+
+SINAI muestra *Eliminación realizada correctamente. N registros eliminados*.
+
+<GuideCallout type="warning">
+  Al eliminar un periodo de una asignatura también se eliminan los estudiantes asignados a ella en ese periodo. La acción no se puede deshacer.
+</GuideCallout>
+
+#### 6. Asignar estudiantes por asignatura
+
+**Por asignatura** muestra una tabla con una fila por estudiante y periodo, y una columna por asignatura. Solo hay casilla cuando la asignatura está registrada en la asignación por periodo de ese periodo; si no lo está, la celda queda vacía. Junto a cada casilla se ven las horas semanales.
+
+Requisito: el grupo debe tener asignación por periodo. Si no la tiene, la pantalla indica *El grupo seleccionado no tiene asignación por periodo. Utilice «Asignación por Periodo» para crearla.*
+
+Filtros: **Sede**, **Nivel**, **Grupo**, **Periodos** y **Estudiante**. Los dos últimos solo cambian lo que se ve en la tabla.
+
+Columnas de resumen:
+
+- **Asignaturas:** número de asignaturas marcadas del estudiante en el periodo.
+- **Total:** horas semanales de las asignaturas marcadas del estudiante en el periodo.
+
+Hay dos maneras de marcar:
+
+<GuideDataTable>
+
+| Forma | Cuándo se guarda |
+| --- | --- |
+| **Casilla por casilla:** clic en una casilla o en su celda. | Se guarda **al instante**. La celda se resalta en verde si se guardó, o en rojo y vuelve a su valor anterior si falló. |
+| **En bloque:** clic en el encabezado de una asignatura (marca la columna), casilla del periodo (marca la fila) o casilla **Periodo** del encabezado (marca toda la tabla). | Queda **pendiente** hasta hacer clic en **Guardar**. El botón muestra cuántos cambios hay pendientes. Solo afecta las filas visibles con los filtros. |
+
+</GuideDataTable>
+
+Para agregar varios estudiantes de una vez sin quitar asignaciones:
+
+1. Haga clic en **Asignar estudiantes**.
+2. En la rejilla de periodos y asignaturas, deje marcadas las asignaturas de cada periodo que se asignarán. Al abrir, vienen todas marcadas.
+3. Marque los estudiantes. La columna **Ya asignadas** indica cuántas de las asignaturas marcadas ya tiene cada uno.
+4. Haga clic en **Aceptar**.
+
+SINAI muestra *Se agregaron N asignación(es) a M estudiante(s).* o *Los estudiantes seleccionados ya tenían todas las asignaturas marcadas.* Las asignaciones que ya tenían se conservan.
+
+<GuideCallout type="warning">
+  Si cambia de sede, nivel o grupo, o descarga el PDF, con cambios pendientes, SINAI pregunta *Hay N cambio(s) sin guardar. ¿Desea descartarlos?* Si acepta, los cambios pendientes se pierden. Desmarcar una casilla le quita al estudiante esa asignatura en ese periodo.
+</GuideCallout>
+
+<GuideImagePending>
+  **Vista requerida:** Asignación personalizada → Por asignatura con un grupo seleccionado. Deben verse los botones Asignar estudiantes, Guardar (con su contador) y Descargar PDF, la columna Periodo, varias columnas de asignatura con casillas y horas, una celda vacía (asignatura no registrada en ese periodo) y las columnas Asignaturas y Total. Archivo sugerido: `asignacion-personalizada-por-asignatura.jpg`. Oculte o use fotos y nombres ficticios de estudiantes.
+</GuideImagePending>
+
+#### 7. Revisar y editar la asignación de un estudiante
+
+**Por estudiante** muestra las asignaturas que tiene un estudiante, con una fila por asignatura y periodo.
+
+1. Ingrese a **Asignación personalizada → Por estudiante**.
+2. Seleccione **Sede**, **Nivel**, **Grupo** y **Estudiante**. La lista de estudiantes no incluye a los retirados.
+
+La tabla muestra **Asignatura**, **Periodo**, **H.Sem**, **#.Sem**, **H.Tot**, **Peso**, **Créditos** y **Docente**. Es de solo lectura. En la segunda fila del encabezado puede filtrar por asignaturas, periodos y docentes.
+
+Para agregar o quitar asignaturas:
+
+1. Haga clic en **Editar**.
+2. En la ventana **Editar asignaturas**, marque las asignaturas que el estudiante debe tener en cada periodo y desmarque las que no. Las casillas con cambios sin guardar quedan resaltadas.
+3. Haga clic en **Guardar**.
+
+SINAI muestra *Cambios guardados correctamente: N asignación(es) agregada(s) y M eliminada(s)* y recarga la tabla. Si no hubo cambios, indica *No hay cambios para guardar*.
+
+Para quitar asignaturas desde la tabla:
+
+1. Marque la casilla de las filas que desea quitar. Solo se tienen en cuenta las filas visibles con los filtros.
+2. Haga clic en **Eliminar**.
+3. Confirme *Se quitarán N asignatura(s) por periodo al estudiante … ¿Desea continuar?*
+
+Si el estudiante aún no tiene asignaturas, la pantalla indica *El estudiante seleccionado no tiene asignaturas. Utilice «Editar» para agregárselas.*
+
+<GuideCallout>
+  **Por asignatura** y **Por estudiante** modifican la misma información. Lo que cambie en una pantalla se ve en la otra.
+</GuideCallout>
+
+#### 8. Descargar los informes de la asignación personalizada
+
+Cada pantalla tiene **Descargar PDF**, que abre una ventana para elegir el alcance del informe:
+
+<GuideDataTable>
+
+| Pantalla | Informe | Alcances disponibles |
+| --- | --- | --- |
+| **Por periodo** | *Asignación por Periodo*, con asignaturas, docente, estudiantes, horas, peso y créditos por periodo, y un resumen por periodo. | **Por grupo** o **Por sede / nivel**. |
+| **Por asignatura** | Asignación por asignatura de los estudiantes. Permite elegir **Orientación**: **Vertical** (cada estudiante con sus asignaturas y los periodos en que las tiene) u **Horizontal** (la tabla de la vista). | **Por grupo** o **Por sede / nivel**. |
+| **Por estudiante** | *Asignación por Estudiante*, con las asignaturas, horas, peso, créditos y docente de cada periodo. | **Por estudiante** o **Por grupo**. |
+
+</GuideDataTable>
+
+**Por sede / nivel** genera un informe por cada grupo personalizado de la sede o del nivel elegidos. Seleccione al menos uno de los dos; si no, SINAI indica *Seleccione una sede, un nivel o ambos para generar el informe por sede / nivel.*
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué no veo la sección Asignación personalizada en el menú?">
+    La sección solo aparece cuando la asignación personalizada está activa en el calendario. Actívela en **Configuración de grupos** con el botón **Activar asignación personalizada**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question="¿Por qué un grupo no aparece en Por periodo?">
+    Estas pantallas solo muestran grupos activos con tipo **Personalizada**. Cambie el tipo del grupo en **Configuración de grupos** con el botón **Cambiar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question="¿Por qué una casilla de Por asignatura aparece vacía?">
+    La asignatura no está registrada en la asignación por periodo de ese periodo. Agréguela en **Por periodo** con **Generar** y vuelva a **Por asignatura**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="Marqué una columna completa y los cambios no aparecen en otras pantallas. ¿Qué pasó?">
+    Las selecciones en bloque quedan pendientes hasta hacer clic en **Guardar**. Revise el contador del botón y guarde. Solo las casillas marcadas una por una se guardan al instante.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="¿Puedo tener dos docentes en la misma asignatura y periodo?">
+    No. La asignación personalizada admite un solo docente por asignatura en cada periodo. Para cambiarlo use la columna **Docente** o **Asignar docentes** en **Por periodo**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question="¿Qué pasa con los estudiantes si elimino una asignatura de un periodo?">
+    En **Por periodo**, eliminar el registro de una asignatura en un periodo también quita a los estudiantes asignados a ella en ese periodo. Antes de confirmar, SINAI indica cuántos registros se eliminarán.
+  </GuideFAQItem>
+</GuideFAQ>
