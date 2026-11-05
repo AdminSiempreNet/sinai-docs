@@ -5,11 +5,14 @@ import {
   ArrowUpRight,
   BookOpenCheck,
   Building2,
+  CalendarDays,
   GraduationCap,
   ListTree,
+  Play,
   Presentation,
   Search,
   ShieldCheck,
+  Video,
 } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
 import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
@@ -153,6 +156,31 @@ export default function Home() {
               <strong>Guías <i /> roles <i /> soporte</strong>
             </figcaption>
           </figure>
+        </section>
+
+        <section className="sinai-welcome-webinars" aria-labelledby="sinai-welcome-webinars-title">
+          <Link href="/webinars" className="sinai-welcome-webinars-link">
+            <span className="sinai-welcome-webinars-icon" aria-hidden="true">
+              <Play />
+            </span>
+
+            <span className="sinai-welcome-webinars-copy">
+              <span className="sinai-welcome-webinars-kicker">Webinars SINAI</span>
+              <strong id="sinai-welcome-webinars-title">Reviva nuestros webinars y conozca las próximas fechas</strong>
+              <small>Consulte las grabaciones de cada webinar y la programación de las próximas sesiones.</small>
+            </span>
+
+            <span className="sinai-welcome-webinars-topics" aria-hidden="true">
+              <span><Video /> Grabaciones</span>
+              <i />
+              <span><CalendarDays /> Próximos</span>
+            </span>
+
+            <span className="sinai-welcome-webinars-action">
+              Ver webinars
+              <ArrowRight aria-hidden="true" />
+            </span>
+          </Link>
         </section>
 
         <section className="sinai-welcome-steps" aria-labelledby="sinai-welcome-steps-title">

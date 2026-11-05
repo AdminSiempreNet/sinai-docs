@@ -66,6 +66,7 @@ type HubConfig = {
   subtitle: string;
   description: string;
   cards: HubCard[];
+  extraSections?: { title: string; cards: HubCard[] }[];
 };
 
 const images = {
@@ -92,6 +93,26 @@ const card = (
 ): HubCard => ({ title, description, href, image, imageAlt, icon });
 
 const HUBS: Record<string, HubConfig> = {
+  generales: {
+    title: 'Procesos generales',
+    subtitle: 'Información común para todos los usuarios de SINAI.',
+    description:
+      'En esta sección encontrará los procesos que aplican a cualquier usuario de SINAI, sin importar el rol: cómo ingresar a la plataforma y cómo recuperar su contraseña. También puede ir a las guías de cada rol, donde encontrará toda la información y los procesos disponibles para ese perfil.',
+    cards: [
+      card('¿Cómo ingresar a SINAI?', 'Acceda a SINAI desde el Portal de acceso institucional.', '/docs/generales/como-ingresar-a-sinai', '/images/section-hubs/dedicated/administrativo/primeros-pasos/ingresar-a-sinai.webp', 'Puerta de acceso a SINAI', LogIn),
+      card('Recuperar contraseña', 'Restablezca su contraseña y recupere el acceso a su cuenta.', '/docs/generales/recuperar-contrasena', '/images/section-hubs/dedicated/administrativo/primeros-pasos/recuperar-contrasena.webp', 'Llave y escudo para recuperar el acceso', KeyRound),
+    ],
+    extraSections: [
+      {
+        title: 'Guías por rol',
+        cards: [
+          card('Administrativo', 'Configuración institucional, gestión de personal y estudiantes, calificaciones y cierres.', '/docs/administrativo', '/images/section-hubs/institutional-config/institution.webp', 'Edificio de la institución', School),
+          card('Docente', 'Planeación, calificaciones, asistencia, convivencia y labor diaria.', '/docs/docente', '/images/section-hubs/dedicated/docente/planeacion-y-curriculo/planeacion-de-clases.webp', 'Planeación de clases', Presentation),
+          card('Estudiante', 'Actividad académica, resultados, matrícula y seguimiento escolar.', '/docs/estudiante', '/images/section-hubs/dedicated/estudiante/root/actividad-academica.webp', 'Estudiante con el cuaderno de tareas', GraduationCap),
+        ],
+      },
+    ],
+  },
   administrativo: {
     title: 'Administrativo',
     subtitle: 'Guías para configurar, operar y cerrar los procesos académicos e institucionales de su establecimiento en SINAI.',
@@ -633,7 +654,7 @@ function dedicatedImageFor(item: HubCard) {
     if (explicit) return explicit;
   }
 
-  return publicImageIfExists(`/images/section-hubs/dedicated/${relativePath}.webp`);
+  return transparentImageFor(`/images/section-hubs/dedicated/${relativePath}.webp`);
 }
 
 function generatedImageFor(item: HubCard) {
@@ -695,25 +716,39 @@ export function SectionHub({ section }: { section: string }) {
         </div>
       </header>
 
-      <section className="sinai-institutional-options" aria-labelledby={headingId}>
-        <div className="sinai-institutional-section-heading">
-          <h2 id={headingId}>Contenido de esta sección</h2>
-        </div>
-        <div className="sinai-institutional-card-grid">
-          {hub.cards.map((item, index) => (
-            <Link className="sinai-institutional-card" href={item.href} key={item.href}>
-              <HubIllustration item={item} index={index} />
-              <div className="sinai-institutional-card-copy">
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <span className="sinai-institutional-card-action" aria-hidden="true">
-                  <ArrowRight />
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <HubCardSection headingId={headingId} title="Contenido de esta sección" cards={hub.cards} />
+      {hub.extraSections?.map((extra, index) => (
+        <HubCardSection
+          key={extra.title}
+          headingId={`${headingId}-${index + 1}`}
+          title={extra.title}
+          cards={extra.cards}
+        />
+      ))}
     </div>
+  );
+}
+
+function HubCardSection({ headingId, title, cards }: { headingId: string; title: string; cards: HubCard[] }) {
+  return (
+    <section className="sinai-institutional-options" aria-labelledby={headingId}>
+      <div className="sinai-institutional-section-heading">
+        <h2 id={headingId}>{title}</h2>
+      </div>
+      <div className="sinai-institutional-card-grid">
+        {cards.map((item, index) => (
+          <Link className="sinai-institutional-card" href={item.href} key={item.href}>
+            <HubIllustration item={item} index={index} />
+            <div className="sinai-institutional-card-copy">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <span className="sinai-institutional-card-action" aria-hidden="true">
+                <ArrowRight />
+              </span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
   );
 }

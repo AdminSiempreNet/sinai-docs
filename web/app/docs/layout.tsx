@@ -21,27 +21,27 @@ export default function Layout({ children }: { children: ReactNode }) {
           title: 'Administrativo',
           description: 'Procesos y guías de gestión institucional',
           url: '/docs/administrativo',
-          icon: <BriefcaseBusiness className="sinai-menu-icon sinai-role-icon sinai-role-icon-administrativo" aria-hidden="true" />,
+          icon: <BriefcaseBusiness key="administrativo" className="sinai-menu-icon sinai-role-icon sinai-role-icon-administrativo" aria-hidden="true" />,
         },
         {
           title: 'Docente',
           description: 'Procesos y guías para docentes',
           url: '/docs/docente',
-          icon: <NotebookPen className="sinai-menu-icon sinai-role-icon sinai-role-icon-docente" aria-hidden="true" />,
+          icon: <NotebookPen key="docente" className="sinai-menu-icon sinai-role-icon sinai-role-icon-docente" aria-hidden="true" />,
         },
         {
           title: 'Estudiante',
           description: 'Procesos y guías para estudiantes',
           url: '/docs/estudiante',
-          icon: <Backpack className="sinai-menu-icon sinai-role-icon sinai-role-icon-estudiante" aria-hidden="true" />,
+          icon: <Backpack key="estudiante" className="sinai-menu-icon sinai-role-icon sinai-role-icon-estudiante" aria-hidden="true" />,
         },
       ]}
       sidebar={{
         // Las ramas activas se abren automáticamente; las demás permanecen
         // cerradas hasta que la persona las necesite.
         defaultOpenLevel: 0,
-        banner: <SidebarMenuDecoration />,
-        footer: <SidebarHelp />,
+        banner: <SidebarMenuDecoration key="sinai-sidebar-banner" />,
+        footer: <SidebarHelp key="sinai-sidebar-footer" />,
       }}
       >
         {children}

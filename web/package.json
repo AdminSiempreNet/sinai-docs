@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --disable-source-maps --no-server-fast-refresh -p 3070",
+    "dev": "next dev --webpack --disable-source-maps --no-server-fast-refresh -p 3070",
     "local:stable": "next build && next start",
     "build": "next build",
     "start": "next start",

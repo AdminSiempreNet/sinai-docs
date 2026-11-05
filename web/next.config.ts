@@ -1,9 +1,32 @@
+import path from 'node:path';
 import { createMDX } from 'fumadocs-mdx/next';
 import type { NextConfig } from 'next';
 import docenteRedirects from './lib/docente-redirects.json';
 import estudianteRedirects from './lib/estudiante-redirects.json';
 
 const nextConfig: NextConfig = {
+  experimental: {
+    // Next 16.2 usa procesos de Node separados para cada evaluación de
+    // PostCSS. En este proyecto pueden acumularse cientos de procesos y
+    // agotar la memoria del equipo. Los worker threads comparten el proceso
+    // de Next y evitan esa multiplicación en desarrollo.
+    // En next build los worker threads cruzan transformaciones entre
+    // archivos (PostCSS recibe meta.json), por eso solo aplica en desarrollo.
+    ...(process.env.NODE_ENV !== 'production' && {
+      turbopackPluginRuntimeStrategy: 'workerThreads' as const,
+    }),
+  },
+  // La carpeta padre también tiene un lockfile. Sin esta raíz, Turbopack
+  // toma sinai-docs/ en lugar de esta aplicación.
+  turbopack: {
+    root: path.join(__dirname),
+  },
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'i.ytimg.com' },
+      { protocol: 'https', hostname: 'thumbnails.odycdn.com' },
+    ],
+  },
   async redirects() {
     return [...docenteRedirects, ...estudianteRedirects];
   },
