@@ -1,8 +1,10 @@
 'use client';
 
 import { Children, cloneElement, isValidElement, useId, useState, type ReactElement, type ReactNode } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import './guide-table.css';
-import { AlertTriangle, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, ImageOff, Info, VideoOff } from 'lucide-react';
+import { AlertTriangle, ArrowRight, CheckCircle2, ChevronDown, CircleHelp, Clock3, ExternalLink, ImageOff, Info, VideoOff } from 'lucide-react';
 import { ContentImage, ContentImageSequenceTrigger, ContentImageTrigger, type ImageTriggerVariant } from '@/components/content-image';
 
 export function GuideOverview({ children }: { children: ReactNode }) {
@@ -144,6 +146,19 @@ export function GuideDataTable({ children }: { children: ReactNode }) {
 }
 
 /** Reserva el bloque superior cuando la guía todavía no tiene tutorial. */
+export function GuideLink({ href, seccion, children }: { href: string; seccion?: string; children: ReactNode }) {
+  const pathname = usePathname();
+  const volver = seccion ? `${pathname}#${seccion}` : pathname;
+  const [ruta, ancla] = href.split('#');
+
+  return (
+    <Link href={`${ruta}?volver=${encodeURIComponent(volver)}${ancla ? `#${ancla}` : ''}`} className="inline-flex items-center gap-1.5 font-medium">
+      {children}
+      <ArrowRight className="size-3.5 shrink-0" aria-hidden="true" />
+    </Link>
+  );
+}
+
 export function GuideVideoPending({ children }: { children: ReactNode }) {
   return (
     <div className="not-prose my-4 flex items-start gap-3 rounded-xl border border-dashed border-fd-primary/40 bg-fd-primary/5 px-4 py-3 text-sm text-fd-muted-foreground">

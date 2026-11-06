@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { GuideToc } from '@/components/guide-toc';
+import { GuideBackLink } from '@/components/guide-back-link';
 import { ContentImageModal } from '@/components/content-image-modal';
 import { getGuidePageData } from '@/lib/guide';
 import { GuideFeedback } from '@/components/guide-feedback';
@@ -71,6 +72,7 @@ export default async function Page(props: {
       full={isSectionHub || page.data.full}
       className={pageClassName}
     >
+      <GuideBackLink />
       {isSectionHub ? null : isRoleLanding && role ? (
         <RoleLandingBanner
           role={role}

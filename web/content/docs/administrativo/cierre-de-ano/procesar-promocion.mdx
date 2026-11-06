@@ -4,8 +4,8 @@ description: "Revise la matrícula, los pesos de la asignación, los estudiantes
 guide: true
 wordpressId: 29766
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/procesar-promocion/"
-lastModified: "2026-10-30"
-lastReviewed: "2026-10-30"
+lastModified: "2026-11-05"
+lastReviewed: "2026-11-05"
 ---
 
 ## Video tutorial
@@ -18,128 +18,64 @@ lastReviewed: "2026-10-30"
 
 ### 1. ¿Por qué revisar antes de procesar?
 
-El proceso de promoción define la situación académica final de cada estudiante matriculado: **PROMOVIDO**, **NO PROMOVIDO** o **PENDIENTE**. Para hacerlo usa la matrícula del grupo, las calificaciones consolidadas, los pesos de las asignaturas y los criterios de promoción asignados al grupo. Si alguno de esos datos está incompleto, el resultado también lo estará.
+La promoción define la situación académica final de cada estudiante matriculado: **PROMOVIDO**, **NO PROMOVIDO** o **PENDIENTE**. Si la matrícula, las calificaciones o los criterios están incompletos, el resultado también lo estará.
 
-Revise estos seis puntos en orden, en el calendario que va a cerrar. Todos aplican al calendario seleccionado en la parte superior de SINAI. Cuando termine, procese la promoción en **Promoción → Promoción → Procesar Promoción**, como se explica en [¿Cómo procesar la promoción de los estudiantes?](/docs/administrativo/cierre-de-ano/como-procesar-la-promocion).
+Revise los seis temas en orden, en el calendario que va a cerrar. Cada uno tiene un enlace a su guía. Al abrirla verá el botón **Volver a la guía anterior**, que lo regresa a este mismo punto.
 
-#### 2. Ajuste la matrícula
+#### 2. Ajuste de matrícula
 
-La promoción se procesa para los estudiantes en estado matriculado. Un estudiante que ya salió de la institución y sigue matriculado recibe una situación académica que no le corresponde.
+Actualice el estado de los estudiantes que ya salieron de la institución, como trasladados, retirados o desertores, y elimine las matrículas hechas por error o duplicadas. Un estudiante que ya salió y sigue matriculado recibe una situación académica que no le corresponde.
 
-1. Ingrese a **Matrícula → Ajustes de Matrícula → Ajuste Individual de Matrícula**.
-2. Seleccione la **Sede**, el **Grupo** y el **Estudiante**.
-3. En **Nuevo Estado**, elija el estado que corresponda, por ejemplo **TRASLADADO**, **RETIRADO** o **DESERTOR**. Las opciones dependen del estado actual del estudiante.
-4. Escriba la **Fecha** y haga clic en **Registrar Novedad**.
+<GuideLink seccion="2-ajuste-de-matrícula" href="/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/actualizacion-individual">Ver guía: Ajuste individual de matrícula</GuideLink>
 
-Si un estudiante quedó matriculado por error o duplicado, elija **ELIMINADO** en **Nuevo Estado**: el botón cambia a **Eliminar** y SINAI pide confirmar *¿Cofirrma que desea eliminar esta matricula?* Consulte [Ajuste individual de matrícula](/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/actualizacion-individual).
+#### 3. Asignación académica
 
-#### 3. Revise los pesos de la asignación académica
+Revise los pesos de las asignaturas de cada grupo. Si la institución promueve por áreas, la nota final del área se calcula con esos pesos, y los de cada área deben sumar 100.
 
-Si la institución promueve **por áreas**, la nota final del área sale de las notas de sus asignaturas según el peso de cada una. Los pesos de cada área deben sumar 100.
+<GuideLink seccion="3-asignación-académica" href="/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-por-periodo">Ver guía: Asignación Académica</GuideLink>
 
-1. Ingrese a **Personal → Asignación Académica**.
-2. En **Asignación Académica por Grupo**, seleccione la **Sede** y el **Grupo**.
-3. Revise la columna **Peso** de cada asignatura. La fila del área muestra la suma y se resalta cuando no es 100.
-4. Si corrige un peso, haga clic en **Guardar**.
+#### 4. Estudiantes matriculados sin calificaciones
 
-Repita la revisión en cada grupo. Consulte [Asignación Académica](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-por-periodo).
+Consulte qué estudiantes tienen asignaturas sin calificación y registre las que falten antes de consolidar. Un estudiante sin calificación en una asignatura puede quedar reprobado en ella.
 
-<GuideCallout>
-  **Inicio → Inconsistencias** también detecta **Areas con ponderación diferente de 100%** en todos los grupos a la vez. Elija ese tipo de inconsistencia y haga clic en **Buscar...**.
-</GuideCallout>
+<GuideLink seccion="4-estudiantes-matriculados-sin-calificaciones" href="/docs/administrativo/cierre-academico-periodo/inconsistencias#6-consultar-los-estudiantes-sin-calificaciones">Ver guía: Inconsistencias</GuideLink>
 
-#### 4. Identifique los estudiantes sin calificaciones
+#### 5. Consolidar calificaciones
 
-Un estudiante matriculado sin calificación en una asignatura puede quedar reprobado en ella.
+Consolide cada grupo o sede en el último periodo del calendario y, si la institución usa puestos, calcúlelos. La promoción trabaja con las calificaciones consolidadas, así que debe volver a consolidar un grupo si un docente cambia sus notas.
 
-1. Ingrese a **Inicio → Inconsistencias**.
-2. En el panel izquierdo, debajo de **Reporte de Estudiantes sin Calificaciones**, haga clic en **Descargar**. Se abre **Consulta de Estudiantes Matriculados sin Calificaciones**.
-3. Elija la **Sede** o **[Todas]**, el **Grupo** o **[Todos]** y el **Periodo**: **PRIMERO**, **SEGUNDO**, **TERCERO**, **CUARTO** o **FINAL**.
-4. Haga clic en **Buscar**.
+<GuideLink seccion="5-consolidar-calificaciones" href="/docs/administrativo/cierre-academico-periodo/reportes-consolidados">Ver guía: Consolidar y calcular puestos</GuideLink>
 
-<GuideImageTrigger src="/images/guides/antes-de-procesar-promocion/sin-calificaciones.jpg" alt="Pantalla Consulta de Estudiantes Matriculados sin Calificaciones con los filtros Sede, Grupo y Periodo">
-  Ver ejemplo
-</GuideImageTrigger>
+#### 6. Ajuste de nota final
 
-La tabla muestra, por estudiante, la sede, el grado, el grupo, el estado, el área, la asignatura, el docente, el periodo, la definitiva y el desempeño. **Descargar** exporta la lista a Excel.
+Si la institución lo usa, registre los cambios a la valoración final de una asignatura al cierre del calendario, por ejemplo por decisión del consejo académico. También puede habilitar a los docentes para hacerlo en un rango de fechas.
 
-Registre las calificaciones que falten antes de consolidar. Los casos comunes son estudiantes que llegaron de otra institución con notas de periodos anteriores que no se registraron en SINAI, y asignaturas que estuvieron sin docente en algún periodo. Conviene hacer esta consulta al final de cada periodo.
+<GuideLink seccion="6-ajuste-de-nota-final" href="/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/ajuste-de-nota-final">Ver guía: Ajuste de nota final</GuideLink>
 
-#### 5. Consolide las calificaciones y calcule los puestos
+#### 7. Criterios de promoción
 
-1. Ingrese a **Evaluación → Consolidar**.
-2. Seleccione la **Sede**, el **Grupo** y, en **Periodo**, el último periodo del calendario.
-3. En **Opciones de consolidación**, elija **Grupo seleccionado** o **Sede seleccionada** y haga clic en **Consolidar**.
-4. Revise en la lista que cada grupo termine sin error.
-5. Si la institución usa puestos, en **Calcular puestos** elija **Puestos del Periodo** y haga clic en **Calcular**. Luego repita con **Puestos Finales**.
+Verifique las reglas que deciden si un estudiante reprueba una asignatura o el grado, tanto las de la institución como las asignadas a cada grupo. Estos criterios definen el resultado de todos los estudiantes del grupo.
 
-Si un docente cambia calificaciones después de consolidar, vuelva a consolidar ese grupo. Consulte [Consolidar y calcular puestos](/docs/administrativo/cierre-academico-periodo/reportes-consolidados).
+<GuideLink seccion="7-criterios-de-promoción" href="/docs/administrativo/cierre-de-ano/criterios-de-promocion">Ver guía: Criterios de promoción</GuideLink>
 
-#### 6. Registre los ajustes de nota final
+#### 8. Procesar la promoción
 
-Si la institución lo usa, el ajuste de nota final permite cambiar la valoración final de una asignatura al cierre del calendario, por ejemplo por decisión del consejo académico.
+Cuando termine la revisión, procese la promoción en **Promoción → Promoción → Procesar Promoción**.
 
-1. Ingrese a **Evaluación → Ajuste de Nota Final**. La pantalla se titula **Ajuste a la Valoración Final**.
-2. Seleccione la **Sede**, el **Calendario**, el **Grupo** y la **Asignatura**.
-3. Registre el ajuste del estudiante y haga clic en **Guardar**.
-
-Para que los docentes registren los ajustes desde su módulo:
-
-1. Haga clic en **Opciones**.
-2. Marque **Activo** en **Activar para docentes**.
-3. Escriba las fechas **Desde** y **Hasta**.
-
-Si falta una fecha, SINAI muestra **Debe especificar la fecha de inicio** o **Debe especificar la fecha de finalización**. Si la fecha de inicio es posterior a la final, muestra **La fecha de inicio no puede ser posterior a la fecha de terminación**. Con **Activo** sin marcar, solo el área administrativa registra ajustes. Consulte [Ajuste de nota final](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/ajuste-de-nota-final).
-
-#### 7. Verifique los criterios de promoción
-
-Los criterios de promoción son las reglas que deciden si un estudiante reprueba una asignatura o el grado.
-
-1. Ingrese a **Promoción → Promoción → Criterios de Promoción**.
-2. Lea la **Información Importante** de la izquierda. Explica que hay criterios de asignatura y de estudiante, y que la institución tiene cuatro criterios predeterminados que se aplican si el grupo no tiene reglas propias.
-3. En la pestaña **Criterios Institución**, abra **Detalles** de cada criterio y revise el valor de sus parámetros. Si cambia un valor, haga clic en **Guardar**.
-
-<GuideImageTrigger src="/images/guides/antes-de-procesar-promocion/criterios-promocion.jpg" alt="Pantalla Criterios de promoción con la información importante y la lista de criterios de la institución">
-  Ver ejemplo
-</GuideImageTrigger>
-
-Luego revise qué criterios tiene cada grupo:
-
-1. Haga clic en **Criterios por Grupo**.
-2. En **Asignación de Criterios**, elija **Asignatura** o **Estudiante** y luego el criterio.
-3. Seleccione la **Sede** y marque los grupos. **Todos** y **Ninguno** marcan o desmarcan todos los grupos.
-4. Haga clic en **Asignar criterio** para agregarlo a los grupos marcados, o en **Quitar criterio** para retirarlo.
-
-<GuideImageTrigger src="/images/guides/antes-de-procesar-promocion/criterios-por-grupo.jpg" alt="Pantalla Asignación de Criterios con los grupos de una sede y los criterios asignados a cada grupo">
-  Ver ejemplo
-</GuideImageTrigger>
-
-A la derecha, **Criterios de Promoción Asignados** muestra los criterios de cada grupo, si **DESAPRUEBA ASIGNATURA** o **DESAPRUEBA ESTUDIANTE**, y el valor de sus parámetros, por ejemplo el porcentaje de inasistencias o el número máximo de áreas o asignaturas pendientes. Si cambia un valor en esta lista, haga clic en **Guardar cambios**.
-
-<GuideCallout type="warning">
-  Los criterios definen el resultado de la promoción de todos los estudiantes del grupo. Si la institución necesita un criterio distinto de los que aparecen en la lista, comuníquese con servicio al cliente.
-</GuideCallout>
+<GuideLink seccion="8-procesar-la-promoción" href="/docs/administrativo/cierre-de-ano/como-procesar-la-promocion">Ver guía: ¿Cómo procesar la promoción de los estudiantes?</GuideLink>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué pasa si proceso la promoción sin revisar estos puntos?"}>
-    El resultado puede quedar errado: estudiantes que ya salieron de la institución reciben situación académica, las notas de área se calculan con pesos que no suman 100 y los estudiantes sin calificaciones pueden quedar reprobados. Revise los seis puntos y, si ya procesó, corrija y vuelva a procesar el grupo.
+  <GuideFAQItem index="01" question={"¿Qué pasa si proceso la promoción sin revisar estos temas?"}>
+    El resultado puede quedar errado: estudiantes que ya salieron reciben situación académica, las notas de área se calculan con pesos que no suman 100 y los estudiantes sin calificaciones pueden quedar reprobados. Si ya procesó, corrija los datos y vuelva a procesar el grupo.
   </GuideFAQItem>
 
   <GuideFAQItem index="02" question={"¿Por qué un estudiante matriculado aparece sin calificaciones?"}>
-    Con frecuencia llegó de otra institución y no se registraron en SINAI las notas de sus certificados, o una asignatura estuvo sin docente durante algún periodo. Identifíquelo en **Inicio → Inconsistencias → Descargar** y registre las calificaciones faltantes antes de consolidar.
+    Con frecuencia llegó de otra institución y no se registraron en SINAI las notas de sus certificados, o una asignatura estuvo sin docente durante algún periodo. Registre las calificaciones faltantes antes de consolidar.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Los criterios de promoción tienen que ser iguales para todos los grupos?"}>
-    No. En **Criterios por Grupo** asigna cada criterio solo a los grupos donde aplica y puede cambiar el valor de sus parámetros por grupo. Si un grupo no tiene criterios asignados, SINAI aplica los criterios predeterminados.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="04" question={"¿En qué periodo debo consolidar antes de la promoción?"}>
-    En el último periodo del calendario, para cada grupo o sede. La lista **Periodo** de **Consolidar** no incluye el periodo final. Si ya había consolidado los periodos anteriores, basta con el último; si un docente cambió notas después, vuelva a consolidar ese grupo.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="05" question={"Las áreas de un grupo aparecen resaltadas en la asignación académica. ¿Qué significa?"}>
-    En promoción por áreas, la fila del área se resalta cuando la suma de los pesos de sus asignaturas no es 100. Corrija el **Peso** de las asignaturas y haga clic en **Guardar** antes de consolidar y procesar.
+  <GuideFAQItem index="03" question={"¿En qué periodo debo consolidar antes de la promoción?"}>
+    En el último periodo del calendario, para cada grupo o sede. Si ya había consolidado los periodos anteriores, basta con el último. Si un docente cambió notas después, vuelva a consolidar ese grupo.
   </GuideFAQItem>
 </GuideFAQ>

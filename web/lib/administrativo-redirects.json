@@ -13,5 +13,30 @@
     "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--promocion--promocion-anticipada",
     "destination": "/docs/administrativo/cierre-de-ano/promocion-anticipada",
     "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--inicio--inconsistencias",
+    "destination": "/docs/administrativo/cierre-academico-periodo/inconsistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/procesos-de-temporada--finalizacion-de-periodo--inconsistencias",
+    "destination": "/docs/administrativo/cierre-academico-periodo/inconsistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--promocion--criterios-de-promocion",
+    "destination": "/docs/administrativo/cierre-de-ano/criterios-de-promocion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/procesos-de-temporada--promocion-y-finalizacion-de-calendario--que-debo-hacer-antes-de-procesar-la-promocion",
+    "destination": "/docs/administrativo/cierre-de-ano/procesar-promocion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/anotaciones-internas",
+    "destination": "/docs/administrativo/convivencia-escolar/registro-de-anotaciones-disciplinarias",
+    "permanent": true
   }
 ]

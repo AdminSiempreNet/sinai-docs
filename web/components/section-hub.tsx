@@ -171,13 +171,13 @@ const HUBS: Record<string, HubConfig> = {
     title: 'Gestión de estudiantes',
     subtitle: 'Registre estudiantes, actualice su información, gestione novedades y haga seguimiento.',
     description:
-      'Aquí encontrará el ciclo completo de atención a estudiantes en SINAI. Podrá registrar e importar matrículas, actualizar datos, fotografías y acudientes, gestionar novedades como cambios de grupo o reingresos, organizar validación y electivas, y consultar inasistencias, excusas, anotaciones y el observador.',
+      'Aquí encontrará el ciclo completo de atención a estudiantes en SINAI. Podrá registrar e importar matrículas, actualizar datos, fotografías y acudientes, gestionar novedades como cambios de grupo o reingresos, organizar validación y electivas, y consultar inasistencias, excusas y el observador.',
     cards: [
       card('Registro estudiantes', 'Registro individual, importación, inscripciones y prematrícula.', '/docs/administrativo/gestion-de-estudiantes/registro-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/registro-estudiantes.webp', 'Ficha de estudiante que se incorpora a la matrícula', Contact),
       card('Información de estudiantes', 'Listados, actualización de datos, fotografías y acudientes.', '/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/informacion-de-estudiantes.webp', 'Perfil del estudiante con fotografía y datos de contacto', UserCog),
       card('Novedades de estudiantes', 'Ajustes de matrícula, cambio de grupo y reingresos.', '/docs/administrativo/gestion-de-estudiantes/novedades-de-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/novedades-de-estudiantes.webp', 'Traslado de un estudiante entre grupos', Send),
       card('Validación y electivas', 'Validación, matrícula semestral y modalidades.', '/docs/administrativo/gestion-de-estudiantes/validacion-y-electivas', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/validacion-y-electivas.webp', 'Validación académica y opciones electivas', BadgeCheck),
-      card('Seguimiento a estudiantes', 'Inasistencias, excusas, anotaciones y observador.', '/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes.webp', 'Seguimiento de asistencia y observador del estudiante', ClipboardCheck),
+      card('Seguimiento a estudiantes', 'Inasistencias, excusas y observador.', '/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes', '/images/section-hubs/dedicated/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes.webp', 'Seguimiento de asistencia y observador del estudiante', ClipboardCheck),
     ],
   },
   'administrativo/registro-de-logros-y-calificaciones': {
@@ -209,7 +209,7 @@ const HUBS: Record<string, HubConfig> = {
     cards: [
       card('Calificación Comportamiento', 'Gestione logros y evaluación de comportamiento.', '/docs/administrativo/convivencia-escolar/calificacion-comportamiento', images.adminPersonnel, 'Seguimiento institucional del comportamiento', Scale),
       card('Informes de seguimiento', 'Consulte la ficha y los informes del observador.', '/docs/administrativo/convivencia-escolar/ficha-observador', images.adminPersonnel, 'Acompañamiento y seguimiento de estudiantes', HeartHandshake),
-      card('Anotaciones disciplinarias', 'Registre y gestione anotaciones disciplinarias.', '/docs/administrativo/convivencia-escolar/registro-de-anotaciones-disciplinarias', images.adminPersonnel, 'Registro de alertas y anotaciones', MessageSquareWarning),
+      card('Anotaciones', 'Registre y gestione las anotaciones de los estudiantes.', '/docs/administrativo/convivencia-escolar/registro-de-anotaciones-disciplinarias', images.adminPersonnel, 'Registro de alertas y anotaciones', MessageSquareWarning),
     ],
   },
   'administrativo/cierre-academico-periodo': {
@@ -218,6 +218,7 @@ const HUBS: Record<string, HubConfig> = {
     description:
       'Esta agrupación reúne las tareas necesarias para revisar y cerrar cada periodo académico. Desde aquí podrá consolidar resultados, calcular puestos, gestionar refuerzos y nivelaciones y producir los informes que permiten validar, analizar y comunicar el desempeño de los estudiantes antes del cierre definitivo.',
     cards: [
+      card('Inconsistencias', 'Valide y corrija las inconsistencias antes del cierre.', '/docs/administrativo/cierre-academico-periodo/inconsistencias', images.adminClosing, 'Alerta con lupa sobre un documento', AlertTriangle),
       card('Consolidar y calcular puestos', 'Consolide calificaciones y calcule los puestos del periodo.', '/docs/administrativo/cierre-academico-periodo/reportes-consolidados', images.adminClosing, 'Calendario y reporte de cierre académico', BarChart3),
       card('Refuerzos', 'Gestione las nivelaciones o refuerzos del periodo.', '/docs/administrativo/cierre-academico-periodo/nivelaciones-de-periodo', images.adminClosing, 'Progreso académico y actividades de refuerzo', RefreshCcw),
       card('Nivelaciones finales', 'Procese las nivelaciones finales asociadas al cierre.', '/docs/administrativo/cierre-academico-periodo/nivelaciones-finales', images.adminClosing, 'Cierre de nivelaciones con verificación', BadgeCheck),
@@ -234,6 +235,7 @@ const HUBS: Record<string, HubConfig> = {
       card('Comisión de evaluación', 'Siga el proceso de temporada de la comisión de evaluación.', '/docs/administrativo/cierre-de-ano/comision-de-evaluacion-proceso', images.adminClosing, 'Equipo de evaluación y reporte de cierre', Users),
       card('Notas finales', 'Ajuste y revise las notas finales del año.', '/docs/administrativo/cierre-de-ano/ajuste-de-nota-final', images.adminClosing, 'Libro cerrado con resultados finales', CheckSquare),
       card('Promoción anticipada', 'Registre el acta y promueva estudiantes durante el año.', '/docs/administrativo/cierre-de-ano/promocion-anticipada', images.adminClosing, 'Estudiante avanzando al grado siguiente', Medal),
+      card('Criterios de promoción', 'Revise los criterios y asígnelos a cada grupo.', '/docs/administrativo/cierre-de-ano/criterios-de-promocion', images.adminClosing, 'Balanza de los criterios de promoción', Scale),
       card('Procesos de promoción', 'Ejecute los procesos de promoción de estudiantes.', '/docs/administrativo/cierre-de-ano/procesar-promocion', images.adminClosing, 'Progreso y promoción académica', Trophy),
       card('Cómo procesar la promoción', 'Consulte el paso a paso para promover estudiantes.', '/docs/administrativo/cierre-de-ano/como-procesar-la-promocion', images.adminClosing, 'Ruta guiada para la promoción escolar', BadgeCheck),
       card('Actas de recuperación', 'Gestione recuperaciones finales y sus actas.', '/docs/administrativo/cierre-de-ano/recuperaciones-finales', images.adminClosing, 'Recuperación y validación de resultados', RefreshCcw),

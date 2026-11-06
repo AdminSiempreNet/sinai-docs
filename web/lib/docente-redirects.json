@@ -191,27 +191,27 @@
   },
   {
     "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/caracterizacio/caracterizacion",
-    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/caracterizacion",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
     "permanent": true
   },
   {
     "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/informes-ficha-observador-capacitacion-documentada/informes-ficha-observado",
-    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/informes",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
     "permanent": true
   },
   {
     "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/nueva-version-ficha-observador/nueva-version-ficha-observador-2",
-    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/nueva-version",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=renovada",
     "permanent": true
   },
   {
     "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/registro-de-seguimiento/d-registro-de-seguimiento",
-    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/registro-de-seguimiento",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
     "permanent": true
   },
   {
     "source": "/docs/docente/capacitacion-documentada/ficha-observador-capacitacion-documentada/valoracion/valoracion-por-grupo-e-individual",
-    "destination": "/docs/docente/convivencia-y-observador/ficha-observador/valoracion",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
     "permanent": true
   },
   {
@@ -387,6 +387,31 @@
   {
     "source": "/docs/docente/procesos-de-temporada/planeacion-procesos-de-temporada/registro-de-desempenos-logros",
     "destination": "/docs/docente/planeacion-y-curriculo/registro-de-desempenos",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/convivencia-y-observador/ficha-observador/nueva-version",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=renovada",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/convivencia-y-observador/ficha-observador/caracterizacion",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/convivencia-y-observador/ficha-observador/valoracion",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/convivencia-y-observador/ficha-observador/registro-de-seguimiento",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/convivencia-y-observador/ficha-observador/informes",
+    "destination": "/docs/docente/convivencia-y-observador/ficha-observador?version=clasica",
     "permanent": true
   }
 ]

@@ -1,23 +1,23 @@
 ---
 title: "Foliar libro"
-description: "Asigne los grupos a un libro de calificaciones, defina su orden y numere los folios de los estudiantes."
+description: "Asigne los grupos a un libro de calificaciones, defina su orden, numere los folios y descargue el libro."
 guide: true
 wordpressId: 29772
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/foliar-libro/"
-lastModified: "2026-11-03"
-lastReviewed: "2026-11-03"
+lastModified: "2026-11-05"
+lastReviewed: "2026-11-05"
 ---
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="QBbEm7WKRHo" title="Foliar libro" />
+<YouTube id="QBbEm7WKRHo" title="Foliar libro" odyseeUrl="https://odysee.com/@AndresGoDu:a/Foliar-y-descargar-Libros-de-calificaciones:62c4c222776eb52aee33fc2375ae598f91eac1af" />
 </GuideVideos>
 
 ## Guía paso a paso
 
 ### 1. ¿Qué es Foliar Libro?
 
-**Foliar Libro de Calificaciones** organiza a los estudiantes en libros y les asigna un folio, es decir, un número consecutivo dentro del libro. El proceso tiene tres partes: asignar los grupos al libro, definir el orden de los grupos y foliar. Todo aplica al calendario seleccionado en la parte superior de SINAI.
+**Foliar Libro de Calificaciones** organiza a los estudiantes en libros y les asigna un folio, es decir, un número consecutivo dentro del libro. El proceso tiene tres partes: asignar los grupos al libro, definir el orden de los grupos y foliar. Después puede descargar el libro desde los informes de promoción. Todo aplica al calendario seleccionado en la parte superior de SINAI.
 
 Ingrese a **Promoción → Foliar Libro**.
 
@@ -84,6 +84,39 @@ Los folios empiezan en 1 y continúan por todos los grupos del libro, en el orde
   **Foliar Libro** vuelve a numerar a todos los estudiantes del libro y reemplaza los folios anteriores. No pide confirmación. Si ya imprimió el libro, un nuevo foliado puede cambiar el folio de los estudiantes.
 </GuideCallout>
 
+#### 7. Descargar el libro de calificaciones
+
+Cuando el libro esté foliado, descárguelo desde los informes de promoción. El informe más usado por las instituciones es **991 - Libro de calificaciones para toda la Institución.**, que se genera por libro. Cada hoja muestra el año, el número del libro y el folio del estudiante.
+
+Ingrese a **Promoción → Informes**.
+
+1. En **Tipo de informe**, seleccione **84 - Libros e Indices**.
+2. En **Buscar informe...**, escriba `991` y haga clic en el informe. Si su institución usa otro formato de libro, elíjalo en esta lista.
+3. En **Calendario**, verifique el año.
+4. En **Libro**, seleccione el número del libro. La lista muestra los libros que tienen estudiantes en ese calendario, aunque aún no estén foliados.
+5. Marque **Mostrar membrete personalizado** y **Mostrar firmas digitalizadas** si los necesita en el libro.
+6. Haga clic en **Ver Informe** y revise el libro en **Vista previa del informe**.
+
+<GuideImageTrigger src="/images/guides/foliar-libro/libro-991-filtros.jpg" alt="Pantalla Informes con el informe 991 seleccionado, los filtros Calendario y Libro, las casillas de membrete y firmas, y el botón Ver Informe">
+  Ver ejemplo
+</GuideImageTrigger>
+
+7. Haga clic en el ícono del disquete de la barra del visor y elija **PDF**.
+
+<GuideImageTrigger src="/images/guides/foliar-libro/libro-991-exportar.jpg" alt="Vista previa del informe 991 con el menú del disquete abierto y los formatos Word, Excel, PowerPoint y PDF, entre otros">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si la institución tiene varios libros, repita los pasos con cada **Libro**.
+
+<GuideCallout>
+  Si cambia el **Calendario**, la lista **Libro** no se actualiza sola y sigue mostrando los libros del calendario anterior. Borre la búsqueda, haga clic en otro informe y vuelva a hacer clic en el 991.
+</GuideCallout>
+
+<GuideCallout type="warning">
+  Descargue el libro después del último foliado. Si vuelve a foliar, descárguelo otra vez, porque los folios pueden cambiar.
+</GuideCallout>
+
 ## Preguntas frecuentes
 
 <GuideFAQ>
@@ -113,5 +146,16 @@ Los folios empiezan en 1 y continúan por todos los grupos del libro, en el orde
 
   <GuideFAQItem index="07" question={"Aparece «Error al foliar el libro. Consulte al soporte técnico». ¿Qué hago?"}>
     SINAI no pudo actualizar el folio de uno o más estudiantes. Comuníquese con soporte técnico e indique el número del libro. No asuma que el libro quedó foliado por completo.
+  </GuideFAQItem>
+  <GuideFAQItem index="08" question={"No encuentro el informe 991 en la lista. ¿Qué hago?"}>
+    Verifique que **Tipo de informe** esté en **84 - Libros e Indices** o **8 - Promocion**. Si sigue sin aparecer, cambie la lista de la parte superior de **Asignados** a **Generales**: allí está disponible aunque no esté asignado a la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="09" question={"Hice clic en Ver Informe y la vista previa quedó en blanco. ¿Qué reviso?"}>
+    Confirme que eligió un número en **Libro**. La lista puede traer una opción en blanco, que corresponde a estudiantes sin libro, y con ella SINAI no genera el libro ni muestra aviso. Revise también que el **Calendario** sea el del libro y que el libro esté foliado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="10" question={"El video muestra un botón rojo Descargar PDF y yo no lo veo. ¿Por qué?"}>
+    En el módulo administrativo ese botón no aparece. Genere el libro con **Ver Informe** y descárguelo desde el ícono del disquete del visor.
   </GuideFAQItem>
 </GuideFAQ>
