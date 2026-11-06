@@ -1,14 +1,18 @@
 ---
-title: "Asignación Académica"
-description: "Genere y ajuste la carga académica por grupo o por docente, consulte la intensidad horaria y registre los créditos por asignatura."
+title: "Asignación académica"
+description: "Distinga la asignación estándar de la personalizada, registre la carga académica estándar por grupo o por docente, defina créditos y consulte la intensidad horaria."
 guide: true
 wordpressId: 28489
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/asignacion-academica/"
-lastModified: "2026-10-15"
-lastReviewed: "2026-10-15"
+lastModified: "2026-11-04"
+lastReviewed: "2026-11-04"
 ---
 
 ## Video tutorial
+
+<GuideCallout type="warning">
+  **Videos desactualizados.** Estos videos corresponden a una versión anterior de la asignación académica, que aún no distinguía entre asignación estándar y personalizada. Las pantallas, los menús y los nombres de los botones pueden no coincidir con la versión actual de SINAI. Siga la guía paso a paso, que describe la versión vigente.
+</GuideCallout>
 
 <GuideVideoPlaylist
   title="Ruta de asignación académica"
@@ -21,259 +25,277 @@ lastReviewed: "2026-10-15"
   ]}
 />
 
+<GuideVideoPending>
+  - Asignación estándar por grupo y por docente en la versión actual de la pantalla. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+  - Créditos por asignatura e intensidad horaria por grupo y por docente. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
 ## Guía paso a paso
 
-### 1. ¿Qué es Asignación Académica?
+### 1. ¿Qué es la asignación académica?
 
-**Asignación Académica** define qué docente orienta cada asignatura en cada grupo, con sus horas semanales y su peso dentro del área. Todo lo que guarde aquí aplica al calendario seleccionado en la parte superior de SINAI.
+La **asignación académica** (también llamada carga académica) define qué asignaturas ve cada grupo, qué docente orienta cada una, cuántas horas semanales tiene y qué peso tiene dentro de su área. Es la base de la carga de cada docente en SINAI.
 
-Al calcular la nota de las áreas, SINAI tiene en cuenta solo las asignaturas registradas en esta asignación.
+Lo que registre aquí aplica a la **institución y al calendario** con los que inició sesión.
 
-La pantalla se organiza en cinco pestañas:
+En SINAI cada grupo tiene uno de estos dos **tipos de asignación**:
 
-- **Asignación por Grupo:** genera y ajusta la carga de un grupo.
-- **Asignación por Docente:** agrega asignaturas a un docente en uno o varios grupos.
-- **Intensidad Horaria por Grupo:** resumen de horas semanales de cada grupo, por asignatura.
-- **Intensidad Horaria por Docente:** resumen de horas semanales de cada docente, por grupo y asignatura.
-- **Créditos:** créditos de cada asignatura por grupo. Solo aparece si la institución tiene habilitados los créditos para el calendario.
+<GuideDataTable>
 
-Ingrese a **Personal → Asignación Académica**.
+| | Asignación estándar | Asignación personalizada |
+| --- | --- | --- |
+| **Qué significa** | La misma asignación académica aplica a todos los estudiantes del grupo y a todos los periodos del año. | Se puede definir una asignación distinta para cada periodo, y también puede variar entre los estudiantes de un mismo grupo. |
+| **Cuándo conviene** | Todos los estudiantes del grupo ven las mismas asignaturas durante todo el año. | Las asignaturas o los docentes cambian de un periodo a otro, o no todos los estudiantes cursan las mismas asignaturas (electivas, énfasis, profundización). |
+| **Dónde se registra** | Sección **Asignación estándar**: **Por grupo**, **Por docente** y **Créditos**. | Sección **Asignación personalizada**: **Por periodo**, **Por asignatura** y **Por estudiante**. |
+| **Disponibilidad** | Siempre. Es el tipo con el que inician todos los grupos. | Solo si la institución activa la asignación personalizada en el calendario y cambia el tipo de los grupos que la requieren. |
 
-<GuideImageTrigger src="/images/guides/asignacion-academica/pestanas-asignacion.jpg" alt="Pantalla Asignación Académica con sus cinco pestañas y el botón Asignación por Periodos">
-  Ver ejemplo
-</GuideImageTrigger>
+</GuideDataTable>
 
-El botón **Asignación por Periodos**, a la derecha de las pestañas, abre en otra pestaña del navegador el módulo para asignaciones que cambian de un periodo a otro. Se explica en [Asignación por Periodos](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-por-periodos).
+Cada grupo aparece solo en las pantallas de su tipo. Un grupo con asignación personalizada no aparece en **Por grupo** ni en **Por docente**, y un grupo con asignación estándar no aparece en las pantallas de la asignación personalizada. El tipo de cada grupo se consulta y se cambia en **Configuración de grupos**. Consulte [Tipo de asignación y director de grupo](/docs/administrativo/gestion-de-personal/asignacion-academica/tipo-de-asignacion).
 
-#### 2. Antes de generar la asignación
+Esta guía explica la **asignación estándar** y la **intensidad horaria**, que reúne los dos tipos. La asignación personalizada se explica en [Asignación personalizada](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-personalizada).
 
-El botón **Generar** toma las asignaturas, las horas semanales y los pesos de la **Configuración Académica**. Antes de usarlo, revise que cada asignatura tenga horas mayores que cero en el nivel del grupo. Consulte [Configuración Académica](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/configuracion-de-parametros).
+La pantalla tiene un menú lateral titulado **Asignación académica** con estas secciones:
 
-También deben existir los grupos del calendario y los docentes registrados como funcionarios activos.
+- **Asignación estándar:** **Por grupo**, **Por docente** y **Créditos**. **Créditos** solo aparece si la institución tiene habilitado el manejo de créditos en el calendario.
+- **Asignación personalizada:** **Por periodo**, **Por asignatura** y **Por estudiante**. Solo aparece si la asignación personalizada está activa en el calendario.
+- **Intensidad horaria:** **Por grupo** y **Por docente**.
+- **Configuración de grupos:** director de grupo y tipo de asignación de cada grupo.
 
-#### 3. Generar la asignación de un grupo
+En pantallas pequeñas el menú se reduce a la opción activa. Use el botón de tres líneas (*Mostrar todas las opciones*) para ver las demás.
 
-Abra la pestaña **Asignación por Grupo**.
+Ingrese a **Personal → Asignación Académica**. SINAI abre **Asignación estándar → Por grupo**.
 
-<GuideImageTrigger src="/images/guides/asignacion-academica/asignacion-por-grupo.jpg" alt="Pestaña Asignación por Grupo con Sede, Grupo, Docente, los botones Generar, Guardar y Eliminar, y la tabla por áreas">
-  Ver ejemplo
-</GuideImageTrigger>
+La sede, el nivel, el grupo y el docente que elija en una opción del menú se recuerdan al pasar a las demás, mientras trabaje en el mismo calendario.
 
-1. Seleccione la **Sede** y el **Grupo**.
-2. En **Docente**, elija el docente que quedará en todas las asignaturas generadas, o deje **Sin docente asignado** para elegirlo después fila por fila.
-3. Haga clic en **Generar**.
+<GuideImagePending>
+  **Vista requerida:** Personal → Asignación Académica, opción **Por grupo**, con el menú lateral completo visible (secciones Asignación estándar, Asignación personalizada, Intensidad horaria y Configuración de grupos). La captura ayudará a ubicar cada opción del menú y a reconocer las dos secciones de asignación. Archivo sugerido: `menu-asignacion-academica.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
 
-SINAI busca en la Configuración Académica las asignaturas con horas mayores que cero para el nivel del grupo. En los grupos de adultos y del Programa de Formación Complementaria usa las horas de esos modelos. Cada asignatura nueva queda con las horas semanales, el peso y los créditos de la configuración.
+<GuideCallout>
+  **Permisos.** El rector puede hacer todas las operaciones. Los demás usuarios necesitan los permisos de la asignación académica: **406** para generar o agregar, **407** para guardar cambios y **408** para eliminar. Si falta un permiso, SINAI muestra *No tiene asignado el permiso Nº* seguido del número. Consultar y descargar informes no exige permiso.
+</GuideCallout>
 
-**Generar** solo agrega las asignaturas que todavía no están en el grupo. No cambia las que ya existen.
+#### 2. Generar la asignación estándar de un grupo
+
+Antes de generar, revise que las asignaturas tengan **intensidad horaria** mayor que cero para el nivel o modelo del grupo. Esa intensidad se define en **Establecimiento → Áreas y Asignaturas** (botón de reloj de cada asignatura) o en la configuración académica. Consulte [Áreas y asignaturas](/docs/administrativo/configuracion-institucional/gestion-academica/areas-y-asignaturas).
+
+En **Por grupo** encontrará estos filtros:
+
+- **Sede:** incluye la opción *Todas las sedes*.
+- **Nivel:** solo muestra niveles que tienen grupos activos con asignación estándar.
+- **Grupo:** solo muestra grupos activos con asignación estándar. Si eligió *Todas las sedes*, cada grupo aparece con el nombre de su sede.
+- **Docente:** solo se usa al generar. Es el docente que SINAI pondrá en todas las asignaturas nuevas. Puede dejar *Sin docente asignado* y elegir los docentes después.
+
+1. Ingrese a **Asignación estándar → Por grupo**.
+2. Seleccione la **Sede**, el **Nivel** y el **Grupo**.
+3. Si lo desea, elija un **Docente** para todas las asignaturas nuevas.
+4. Haga clic en **Generar**.
+
+SINAI crea una fila por cada asignatura con intensidad horaria que el grupo todavía no tenga. Las asignaturas que ya estaban en el grupo se conservan sin cambios. Las horas semanales y el peso iniciales salen de la intensidad configurada para el nivel o modelo del grupo, y los créditos se copian de la asignatura.
 
 Los mensajes posibles son:
 
-- **Asignacion generada correctamente para el grupo seleccionado**
-- **La asignación del grupo ya existe. No se generaron registros nuevos.**
-- **No se encontraron asignaturas con intensidad horaria para el nivel/modelo del grupo.**
-- **Debe seleccionar un grupo para generar la asignación.**
+- *Asignacion generada correctamente para el grupo seleccionado*: se crearon filas nuevas.
+- *La asignación del grupo ya existe. No se generaron registros nuevos.*: el grupo ya tenía todas las asignaturas.
+- *No se encontraron asignaturas con intensidad horaria para el nivel/modelo del grupo.*: revise la intensidad horaria de las asignaturas.
+- *Debe seleccionar un grupo para generar la asignación.*: falta elegir el grupo.
 
-Si el grupo no tiene asignación, la pantalla indica: *No existe una asignación generada para el grupo seleccionado. Utilice el botón «Generar» para crearla.*
+Mientras el grupo no tenga asignación, la pantalla muestra *No existe una asignación generada para el grupo seleccionado. Utilice el botón «Generar» para crearla.*
 
-#### 4. Ajustar docentes, horas y pesos del grupo
+#### 3. Ajustar docentes, horas y pesos de un grupo
 
-La tabla agrupa las asignaturas por área. La fila del área muestra la suma de horas y de pesos de sus asignaturas.
+La tabla de **Por grupo** agrupa las asignaturas por área. Use la flecha de cada área para mostrar u ocultar sus asignaturas, o la del encabezado para colapsar todas.
 
 <GuideDataTable>
 
 | Columna | Qué indica |
 | --- | --- |
-| **Área / Asignatura** | Área y, debajo, cada asignatura con su código. La flecha de cada área oculta o muestra sus asignaturas. La flecha del encabezado lo hace con todas. |
-| **Docente** | Docente que orienta la asignatura en el grupo. |
-| **H.Sem** | Horas semanales. Acepta números, coma y punto. |
-| **H.Tot** | Horas totales del año. SINAI las calcula y no se editan. |
-| **Peso** | Peso porcentual de la asignatura dentro del área. |
+| **Área / Asignatura** | Código y nombre del área o de la asignatura. |
+| **Docente** | Docente que orienta la asignatura. Se elige en la lista de la fila. La lista incluye docentes activos e inactivos; los inactivos aparecen con su estado al final del nombre. |
+| **H.Sem** | Horas semanales. Se puede editar. En la fila del área aparece la suma. |
+| **H.Tot** | Horas del año: horas semanales por las semanas del año lectivo del grupo. Se calcula al guardar. |
+| **Peso** | Peso de la asignatura dentro de su área. Se puede editar. En la fila del área aparece la suma. |
 | **Casilla** | Marca la asignatura para eliminarla. |
 
 </GuideDataTable>
 
-La fila **TOTALES** suma las horas semanales y las horas totales del grupo.
+Al final está la fila **TOTALES** con la suma de **H.Sem** y **H.Tot**. Puede moverse entre las casillas de horas y peso con las flechas del teclado.
 
-Las horas totales se calculan con las horas semanales por el número de semanas del grupo: 40 semanas en general, y 20 o 22 en los modelos de adultos y del Programa de Formación Complementaria.
+1. Elija el docente de cada asignatura en la columna **Docente**.
+2. Corrija las horas semanales en **H.Sem** y el peso en **Peso**.
+3. Haga clic en **Guardar**.
 
-Para guardar los cambios:
+SINAI muestra *La asignación académica del grupo ha sido modificada correctamente.* Si no cambió nada, muestra *No hubo cambios en la asignación académica del grupo.*
 
-1. Cambie el docente, las horas semanales o el peso de las filas que necesite. Puede moverse entre casillas con las flechas del teclado.
-2. Haga clic en **Guardar**.
-
-El aviso de éxito es **La asignación académica del grupo ha sido modificada correctamente.**
-
-Si el calendario promueve por áreas, la suma de los pesos de las asignaturas de cada área debe ser 100. Si no lo es, SINAI no guarda y muestra **Si la promoción es por áreas la suma de los pesos de las asignaturas de cada área no puede ser diferente de 100. Por favor verifique**. Además, la fila de un área se resalta en amarillo cuando los pesos guardados de sus asignaturas no suman 100.
-
-La lista de docentes de cada fila incluye a los funcionarios inactivos, para conservar asignaciones antiguas. Si el docente asignado ya no aparece en la lista, la fila lo muestra con su identificación seguida de **(no disponible)**.
-
-#### 5. Eliminar asignaturas del grupo
-
-1. Marque la casilla de las asignaturas que quiere quitar. La casilla del encabezado marca todas.
-2. Haga clic en **Eliminar**.
-3. Confirme *¿Confirma que desea eliminar las asignaturas seleccionadas?*
-
-El aviso indica cuántos registros se eliminaron: **Se eliminaron** seguido de la cantidad y **registros**.
+Al cambiar el docente de una asignatura, SINAI conserva las horas dictadas y los créditos que ya tenía la fila.
 
 <GuideCallout type="warning">
-  Al eliminar una asignatura del grupo, el docente deja de tenerla asignada en ese grupo. Revise antes si ya tiene calificaciones registradas.
+  Si la promoción del calendario es **por áreas**, la suma de los pesos de las asignaturas de cada área debe ser 100. Si alguna área no suma 100, SINAI no guarda ningún cambio y muestra *Si la promoción es por áreas la suma de los pesos de las asignaturas de cada área no puede ser diferente de 100. Por favor verifique*.
 </GuideCallout>
 
-#### 6. Agregar asignaturas a un docente
+<GuideImagePending>
+  **Vista requerida:** Asignación estándar → Por grupo con un grupo seleccionado y su asignación generada. Debe mostrar los filtros, los botones Generar, Guardar, Descargar PDF y Eliminar, un área desplegada con sus asignaturas, la lista de docentes, las columnas H.Sem, H.Tot y Peso, y la fila TOTALES. Archivo sugerido: `asignacion-estandar-por-grupo.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
 
-Abra la pestaña **Asignación por Docente** y seleccione el **Docente**. La lista solo incluye funcionarios activos.
+#### 4. Eliminar asignaturas de un grupo
 
-<GuideImageTrigger src="/images/guides/asignacion-academica/agregar-asignacion-docente.jpg" alt="Ventana Agregar asignación con Asignatura, Sede y la lista de Grupos">
-  Ver ejemplo
-</GuideImageTrigger>
+1. En **Por grupo**, marque la casilla de las asignaturas que desea quitar. La casilla del encabezado marca todas.
+2. Haga clic en **Eliminar**.
+3. Confirme el mensaje *¿Confirma que desea eliminar las asignaturas seleccionadas?*
 
-1. Haga clic en **Agregar Asignación**.
-2. En la ventana, seleccione la **Asignatura** y la **Sede**.
-3. En **Grupos**, marque uno o varios. Mantenga presionada la tecla Ctrl para seleccionar varios.
-4. Haga clic en **Agregar**.
+SINAI muestra *Se eliminaron N registros*, donde N es el número de asignaturas eliminadas.
 
-Cada grupo recibe las horas semanales, el peso y los créditos que la Configuración Académica define para su nivel.
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. Antes de eliminar una asignatura que ya tiene notas registradas, verifique con la coordinación académica el efecto sobre los registros del docente. Para cambiar solo el docente, no elimine la asignatura: cámbielo en la columna **Docente** y guarde.
+</GuideCallout>
 
-Si un grupo ya tiene esa asignatura, SINAI no lo agrega y lo informa en el mensaje: *Grupo* seguido del código, *ya tiene asignación para el área* y *la asignatura* indicadas *en este calendario*. Los demás grupos sí se agregan.
+#### 5. Agregar asignaciones a un docente
 
-Los mensajes de éxito son **Se ha realizado la asignación correctamente.** para un grupo, o **Se realizaron** seguido de la cantidad y **asignaciones correctamente.** para varios.
+**Por docente** muestra la carga estándar de un docente en todos los grupos y permite agregarle una asignatura en varios grupos a la vez.
 
-Si falta información, SINAI muestra **Debe seleccionar un docente.** o **Debe seleccionar al menos un grupo para agregar la asignación.**
+1. Ingrese a **Asignación estándar → Por docente**.
+2. Seleccione el **Docente**. La lista muestra los docentes activos.
+3. Haga clic en **Agregar Asignación**.
+4. En la ventana **Agregar asignación**, complete:
+   - **Asignatura:** lista con todas las asignaturas del calendario.
+   - **Sede:** sede de los grupos.
+   - **Grupos:** marque uno o varios grupos. Solo aparecen grupos activos con asignación estándar.
+5. Haga clic en **Agregar**.
 
-#### 7. Modificar o eliminar la asignación de un docente
+SINAI crea una fila por cada grupo marcado, con las horas semanales y el peso configurados para el nivel o modelo del grupo. Si la asignatura no tiene intensidad para ese nivel, la fila queda con 0 horas y puede corregirla después.
 
-La tabla del docente muestra **Asignatura**, **Grupo**, **Horas Semanales**, **Horas Totales** y **%**. Solo las horas semanales se editan. Al final aparece la fila **TOTALES**.
+Los mensajes posibles son:
 
-Para modificar las horas:
+- *Se ha realizado la asignación correctamente.* o *Se realizaron N asignaciones correctamente.*
+- *Debe seleccionar al menos un grupo para agregar la asignación.*
+- Si algún grupo no se pudo agregar, SINAI indica cuántas asignaciones sí se insertaron y lista los grupos con problema. El caso más común es *Grupo X: ya tiene asignación para el área «…» y la asignatura «…» en este calendario.*
 
-1. Cambie las **Horas Semanales**. El campo es obligatorio: si lo deja vacío, SINAI indica *Debe establecer la intensidad*.
+<GuideCallout>
+  Un grupo solo puede tener la misma asignatura una vez, sin importar el docente. Si la asignatura ya está asignada a otro docente en ese grupo, cambie el docente en **Por grupo** en lugar de agregarla de nuevo.
+</GuideCallout>
+
+<GuideImagePending>
+  **Vista requerida:** Asignación estándar → Por docente con la ventana **Agregar asignación** abierta. Deben verse los campos Asignatura, Sede y la lista Grupos con algunos grupos marcados, y los botones Cancelar y Agregar. Archivo sugerido: `asignacion-estandar-agregar-por-docente.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
+
+#### 6. Ajustar horas o eliminar asignaciones de un docente
+
+La tabla de **Por docente** tiene las columnas **Asignatura**, **Grupo**, **Horas Semanales**, **Horas Totales**, **%** (peso) y la casilla para eliminar. Al final aparece la fila **TOTALES**.
+
+En esta pantalla solo se cambian las horas semanales. El peso y el docente se cambian en **Por grupo**.
+
+Para cambiar horas:
+
+1. Corrija el valor en **Horas Semanales**. El campo es obligatorio; si lo deja vacío, SINAI indica *Debe establecer la intensidad*.
 2. Haga clic en **Guardar**.
 
-El aviso de éxito es **La asignación académica del docente ha sido modificada correctamente.**
+SINAI muestra *La asignación académica del docente ha sido modificada correctamente.* Si no cambió nada, muestra *No hubo cambios en las horas de la asignación del docente.*
 
 Para eliminar asignaciones:
 
-1. Marque las filas.
-2. Haga clic en **Eliminar**.
-3. Confirme *¿Confirma que desea eliminar las asignaciones seleccionadas?*
+1. Marque la casilla de las filas que desea quitar.
+2. Haga clic en **Eliminar** y confirme *¿Confirma que desea eliminar las asignaciones seleccionadas?*
 
-Si el docente no tiene asignaciones, la pantalla indica: *No hay asignaciones para el docente seleccionado. Utilice «Agregar Asignación» para crearlas.*
+SINAI muestra *Se ha eliminado la asignación seleccionada correctamente* o *Se eliminaron N asignaciones correctamente*.
 
-Los cambios de esta pestaña se reflejan de inmediato en **Asignación por Grupo**. Para cambiar el docente o el peso de una asignatura, use esa pestaña.
+Si el docente no tiene asignación estándar, la pantalla indica *No hay asignaciones para el docente seleccionado. Utilice «Agregar Asignación» para crearlas.* Las asignaturas que el docente orienta en grupos con asignación personalizada no aparecen aquí; se consultan en **Intensidad horaria → Por docente**.
 
-#### 8. Intensidad horaria por grupo
+#### 7. Registrar los créditos por asignatura
 
-Abra la pestaña **Intensidad Horaria por Grupo**. Es una pestaña de consulta.
+**Créditos** permite definir los créditos de una asignatura en todos los grupos de una sede y un nivel. La opción solo aparece en el menú si la institución tiene habilitado el manejo de créditos en el calendario. Trabaja con la asignación estándar.
 
-<GuideImageTrigger src="/images/guides/asignacion-academica/intensidad-por-grupo.jpg" alt="Pestaña Intensidad Horaria por Grupo con Sede, Nivel, Descargar Excel y la tabla por asignatura con la columna Total">
-  Ver ejemplo
-</GuideImageTrigger>
+1. Ingrese a **Asignación estándar → Créditos**.
+2. Seleccione la **Sede**, el **Nivel** y la **Asignatura**. La tabla muestra una fila por grupo con **Grupo**, **Docente**, **H.Sem**, **H.Tot**, **Peso** y **Créditos**.
+3. Escriba los créditos de cada grupo en la columna **Créditos**. Acepta números enteros de 0 a 10; 0 equivale a no tener créditos.
+4. Haga clic en **Guardar**.
 
-1. Seleccione la **Sede**.
-2. Seleccione el **Nivel**. Solo aparecen los niveles con grupos activos que ya tienen asignación.
-
-Cada fila es un grupo y cada columna una asignatura, con su abreviatura. Al pasar el puntero sobre la abreviatura se ve el nombre completo.
-
-Cada celda muestra las iniciales del docente y las horas semanales. Al pasar el puntero sobre las iniciales se ve el nombre del docente, o **Sin docente asignado**. La columna **Total** suma las horas semanales del grupo.
-
-**Descargar Excel** genera el archivo con la información de la sede y el nivel seleccionados.
-
-#### 9. Intensidad horaria por docente
-
-Abra la pestaña **Intensidad Horaria por Docente**. También es de consulta.
-
-1. Seleccione la **Sede**.
-2. Seleccione el **Nivel**.
-
-Cada docente aparece con sus grupos debajo. Las columnas son las asignaturas y la columna **Total** suma sus horas semanales. La flecha junto a cada docente oculta o muestra sus grupos, y la del encabezado lo hace con todos.
-
-Las asignaturas sin docente no aparecen en esta pestaña.
-
-Puede descargar la información con **Descargar Excel** o **Descargar PDF**. El PDF presenta la asignación académica de cada docente.
-
-#### 10. Créditos por asignatura
-
-Abra la pestaña **Créditos**.
-
-<GuideImageTrigger src="/images/guides/asignacion-academica/creditos.jpg" alt="Pestaña Créditos con Sede, Nivel, Asignatura, el bloque Aplicar créditos y la tabla por grupo">
-  Ver ejemplo
-</GuideImageTrigger>
-
-1. Seleccione la **Sede**, el **Nivel** y la **Asignatura**.
-2. En la tabla, escriba los créditos de cada grupo. Deben ser números enteros entre 0 y 10.
-3. Haga clic en **Guardar**.
-
-La tabla muestra **Grupo**, **Docente**, **H.Sem**, **H.Tot**, **Peso** y **Créditos**. Este **Guardar** solo cambia los créditos.
-
-Para poner el mismo valor en varias filas:
+Para poner el mismo valor en varios grupos:
 
 1. Escriba el valor en **Aplicar créditos**.
-2. Haga clic en **Aplicar** y elija **A seleccionadas** o **A todas**.
+2. Haga clic en **Aplicar** y elija **A seleccionadas** (solo las filas marcadas) o **A todas**.
 3. Haga clic en **Guardar**.
 
-Para **A seleccionadas**, marque antes las filas. Si no hay ninguna marcada, SINAI indica *Seleccione al menos una fila de grupo.* Si el valor no es válido, indica *Ingrese un entero entre 0 y 10.*
+SINAI muestra *Créditos guardados correctamente (N registro(s)).* o *No hubo cambios en los créditos.* Si algún valor no es válido, indica *Hay valores inválidos de créditos (enteros 0–10).* con los grupos afectados.
 
-El aviso de éxito es **Créditos guardados correctamente** seguido de la cantidad de registros. Si no cambió nada, aparece **No hubo cambios en los créditos.** Si hay un valor fuera de rango, SINAI no guarda y muestra **Hay valores inválidos de créditos (enteros 0–10).**
+Si cambia de sede, nivel o asignatura con cambios sin guardar, SINAI pregunta *Hay cambios de créditos sin guardar. ¿Desea continuar y perderlos?*
 
-Si cambia de sede, nivel, asignatura o pestaña sin guardar, SINAI pregunta *Hay cambios de créditos sin guardar. ¿Desea continuar y perderlos?*
+**Descargar Excel** y **Descargar PDF** generan el informe *Asignación Académica con Créditos* de todas las asignaturas de la sede y el nivel, no solo de la asignatura seleccionada.
 
-**Descargar Excel** y **Descargar PDF** generan la asignación con créditos de todas las asignaturas de la sede y el nivel seleccionados.
+#### 8. Consultar la intensidad horaria
+
+La sección **Intensidad horaria** reúne los grupos de los **dos tipos de asignación**. Es de consulta: no permite cambiar datos.
+
+Filtros comunes:
+
+- **Sede**.
+- **Nivel:** solo niveles con grupos activos que ya tienen asignación.
+
+**Por grupo** muestra una fila por grupo y una columna por asignatura (abreviatura; al pasar el cursor se ve el nombre). Cada celda tiene las iniciales del docente y las horas semanales. Si la asignatura no tiene docente aparece una raya (*Sin docente asignado*). La columna **Total** suma las horas semanales de la fila.
+
+**Por docente** muestra una fila por docente con la suma de sus horas, y debajo una fila por cada grupo donde orienta clases. Use el filtro **Docentes** para elegir qué docentes se ven en la tabla y en los informes.
+
+El tipo de asignación cambia la forma en que aparece cada grupo:
+
+<GuideDataTable>
+
+| Tipo de grupo | Columna Grupo | Columna Periodo |
+| --- | --- | --- |
+| **Estándar** | Código del grupo con la etiqueta *Estándar*. | *Todos*: una sola fila para todo el año. |
+| **Personalizada** | Código del grupo con la etiqueta *Personalizada*. | Una fila por cada periodo que tenga asignación registrada. |
+
+</GuideDataTable>
 
 <GuideCallout>
-  Si no ve la pestaña **Créditos**, la institución no tiene habilitados los créditos para el calendario. Solicite la activación al soporte de SINAI.
+  En **Por docente**, el total de cada docente suma todas sus filas. Si orienta clases en un grupo con asignación personalizada, ese total suma las horas de todos los periodos del grupo (por ejemplo, 3 horas en 4 periodos suman 12). Para conocer la carga semanal en un periodo, revise las filas de ese periodo.
 </GuideCallout>
 
-#### 11. Permisos
+Informes disponibles:
 
-Cada acción que cambia la asignación exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso y no aplica el cambio.
+- **Por grupo:** **Descargar Excel** y **Descargar PDF** generan la tabla de intensidad horaria por grupo, con las convenciones de asignaturas y docentes.
+- **Por docente:** **Descargar Excel** genera la tabla de intensidad horaria por docente. **Descargar PDF** genera otro informe, *Asignación Académica por Docente*, con una tabla por docente (grupo, periodo, asignatura, horas y peso). Ambos respetan el filtro **Docentes**.
 
-- **Generar** y **Agregar Asignación** exigen el permiso para registrar asignación académica.
-- **Guardar**, en cualquier pestaña, exige el permiso para modificarla.
-- **Eliminar** exige el permiso para eliminarla.
+Si no hay datos, SINAI muestra *No hay grupos con asignación académica para la sede y el nivel seleccionados.* o *No hay docentes con asignación académica en grupos de la sede y el nivel seleccionados.*
 
-Las pestañas de intensidad horaria y las descargas no requieren estos permisos. Solicite el permiso faltante al administrador de usuarios de la institución.
+<GuideImagePending>
+  **Vista requerida:** Intensidad horaria → Por grupo con una sede y un nivel que tengan al menos un grupo estándar y uno personalizado. Deben verse las etiquetas Estándar y Personalizada, la columna Periodo con *Todos* y con nombres de periodo, las iniciales de los docentes y la columna Total. Archivo sugerido: `intensidad-horaria-por-grupo.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
+
+#### 9. Descargar la asignación estándar en PDF
+
+- En **Por grupo**, **Descargar PDF** genera *Asignación Académica por Grupo* del grupo seleccionado, con área y asignatura, docente, horas, peso y totales.
+- En **Por docente**, **Descargar PDF** genera *Asignación Académica por Docente* del docente seleccionado, con grupo, asignatura, horas, peso y totales. Si el docente tiene grupos en varias sedes, el informe muestra la sede de cada grupo.
+
+Si el grupo o el docente no tiene asignación, SINAI muestra *El grupo seleccionado no tiene asignación académica para generar el reporte.* o *El docente seleccionado no tiene asignación académica para generar el reporte.*
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Por qué Generar no trae ninguna asignatura?"}>
-    Generar toma de la Configuración Académica las asignaturas con horas semanales mayores que cero en el nivel del grupo. Si ninguna cumple, SINAI muestra que no encontró asignaturas con intensidad horaria para el nivel o modelo del grupo. Revise la Configuración Académica y vuelva a generar.
+  <GuideFAQItem index="01" question="¿Por qué un grupo no aparece en la lista de Por grupo?">
+    **Por grupo** solo muestra grupos activos con asignación estándar. Si el grupo tiene asignación personalizada, adminístrelo en la sección **Asignación personalizada** o cámbielo a estándar en **Configuración de grupos**. Revise también que la sede y el nivel seleccionados correspondan al grupo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"Cambié la Configuración Académica. ¿Generar actualiza la asignación del grupo?"}>
-    No. Generar solo agrega las asignaturas que todavía no están en el grupo. Si la asignación ya existe, SINAI indica que no se generaron registros nuevos. Ajuste las horas y los pesos directamente en la pestaña Asignación por Grupo.
+  <GuideFAQItem index="02" question="¿Por qué Generar no crea ninguna asignatura?">
+    SINAI solo genera las asignaturas con intensidad horaria mayor que cero para el nivel o modelo del grupo. Si aparece *No se encontraron asignaturas con intensidad horaria para el nivel/modelo del grupo.*, defina las horas en **Establecimiento → Áreas y Asignaturas**. Si aparece *La asignación del grupo ya existe. No se generaron registros nuevos.*, el grupo ya tiene todas sus asignaturas.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Puedo generar la asignación sin elegir un docente?"}>
-    Sí. Deje Sin docente asignado en la lista Docente y haga clic en Generar. Después elija el docente de cada asignatura en la tabla y haga clic en Guardar.
+  <GuideFAQItem index="03" question="¿Cómo cambio el docente de una asignatura sin perder lo registrado?">
+    En **Por grupo**, elija el nuevo docente en la columna **Docente** y haga clic en **Guardar**. SINAI conserva las horas dictadas y los créditos de la fila. Para entregar toda la carga de un docente a otro, use **Personal → Trasladar Asignación**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question={"¿Por qué no me deja guardar los pesos?"}>
-    Cuando el calendario promueve por áreas, la suma de los pesos de las asignaturas de cada área debe ser 100. SINAI no guarda y pide verificar. La fila del área se resalta en amarillo mientras sus pesos guardados no sumen 100.
+  <GuideFAQItem index="04" question="¿Por qué no se guardan los pesos del grupo?">
+    Si la promoción del calendario es por áreas, cada área debe sumar 100 en la columna **Peso**. Corrija las áreas que no sumen 100 y guarde de nuevo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="05" question={"¿Cómo se calculan las horas totales?"}>
-    SINAI multiplica las horas semanales por las semanas del grupo: 40 en general, y 20 o 22 en los modelos de adultos y del Programa de Formación Complementaria. Las horas totales no se editan.
+  <GuideFAQItem index="05" question="Al guardar aparece «Debe asignar un docente a cada asignatura…». ¿Qué reviso?">
+    Revise primero que cada asignatura tenga un docente en la columna **Docente**. Este mensaje aparece cuando el guardado falla, y puede incluir al final un detalle técnico con la causa. Si todas las asignaturas tienen docente y el error persiste, comunique ese detalle a soporte.
   </GuideFAQItem>
 
-  <GuideFAQItem index="06" question={"Agregué una asignatura a un docente y un grupo quedó por fuera. ¿Por qué?"}>
-    Ese grupo ya tenía la asignatura asignada en el calendario. SINAI agrega los demás grupos e informa en el mensaje cuáles no se pudieron agregar.
+  <GuideFAQItem index="06" question="¿Por qué no veo la opción Créditos?">
+    La opción solo aparece cuando la institución tiene habilitado el manejo de créditos en el calendario. Si no está habilitado y se entra directamente a la página, SINAI regresa a **Por grupo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="07" question={"¿Por qué un docente no aparece en Intensidad Horaria por Docente?"}>
-    Esa pestaña muestra solo las asignaturas con docente asignado en la sede y el nivel elegidos. Revise que el docente tenga asignaturas en grupos de ese nivel.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="08" question={"¿Qué valores aceptan los créditos?"}>
-    Números enteros entre 0 y 10. Puede dejar la casilla vacía; un 0 se guarda igual que una casilla vacía.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="09" question={"No veo la pestaña Créditos. ¿Qué hago?"}>
-    La pestaña solo aparece cuando la institución tiene habilitados los créditos para el calendario. Solicite la activación al soporte de SINAI.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="10" question={"¿Para qué sirve el botón Asignación por Periodos?"}>
-    Abre el módulo para las asignaturas cuya asignación cambia de un periodo a otro. Úselo solo en ese caso; la asignación normal se registra en esta pantalla. Consulte la guía Asignación por Periodos.
+  <GuideFAQItem index="07" question="¿Dónde veo la carga total de un docente que trabaja con grupos de los dos tipos?">
+    En **Intensidad horaria → Por docente**. Allí aparecen los grupos estándar (periodo *Todos*) y los grupos personalizados (una fila por periodo). **Asignación estándar → Por docente** solo muestra los grupos estándar.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,14 +1,18 @@
 ---
-title: "Trasladar Asignación"
-description: "Traslade la asignación académica, las direcciones de grupo y las tareas en línea de un docente a otro."
+title: "Trasladar asignación"
+description: "Traslade la asignación académica estándar y las direcciones de grupo de un docente que sale a otro docente activo, sin crear la carga desde cero."
 guide: true
 wordpressId: 29313
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/trasladar-asignacion/"
-lastModified: "2026-10-30"
-lastReviewed: "2026-10-30"
+lastModified: "2026-11-04"
+lastReviewed: "2026-11-04"
 ---
 
 ## Video tutorial
+
+<GuideCallout type="warning">
+  **Video desactualizado.** Este video corresponde a una versión anterior de SINAI, antes de que existieran los dos tipos de asignación (estándar y personalizada). Algunas pantallas y menús pueden no coincidir con la versión actual. Siga la guía paso a paso, que describe la versión vigente.
+</GuideCallout>
 
 <GuideVideos compact>
 <YouTube id="MS7AxdULekI" title="Trasladar Asignación" odyseeUrl="https://odysee.com/@AndresGoDu:a/Trasladar-Asignaci%C3%B3n-Academica---Ed:9bc83fe2c8f049a25904250ba901e6987bd81513" />
@@ -18,90 +22,78 @@ lastReviewed: "2026-10-30"
 
 ### 1. ¿Qué es Trasladar Asignación?
 
-**Trasladar Asignación** pasa la asignación académica y las direcciones de grupo de un docente a otro en el calendario seleccionado. Sirve, por ejemplo, cuando un docente reemplaza a otro por traslado o permuta, sin crear la asignación desde cero.
+**Trasladar Asignación** pasa la asignación académica y las direcciones de grupo de un docente que es reemplazado (por traslado, permuta o retiro) a otro docente. Evita crear la carga del nuevo docente desde cero.
 
-El docente que llega debe estar registrado antes como funcionario activo, con una plaza de docente. Consulte [Registro de Funcionarios](/docs/administrativo/gestion-de-personal/funcionarios).
+El traslado aplica al **calendario** con el que inició sesión.
 
-Ingrese a **Personal → Trasladar Asignación**.
+<GuideCallout>
+  Esta pantalla trabaja con la **asignación estándar**. Las asignaturas de grupos con **asignación personalizada** no aparecen en la lista del docente de origen. En esos grupos, cambie el docente en **Asignación Académica → Asignación personalizada → Por periodo**, con la columna **Docente** o el botón **Asignar docentes**. Consulte [Asignación personalizada](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-personalizada).
+</GuideCallout>
 
-<GuideImageTrigger src="/images/guides/trasladar-asignacion/pantalla-trasladar.jpg" alt="Pantalla Trasladar Asignación con el docente de origen, su asignación marcada, Nuevo estado y el bloque Destino">
-  Ver ejemplo
-</GuideImageTrigger>
+Antes de empezar, el nuevo docente debe estar registrado como funcionario **activo** con cargo docente en la planta. Consulte [Registro de Funcionarios](/docs/administrativo/gestion-de-personal/funcionarios).
 
 La pantalla tiene tres partes:
 
-- **Origen:** el docente que entrega la asignación.
-- **Trasladar►** y el recuadro **Definición**, en el centro.
-- **Destino:** el docente que recibe la asignación.
+- **Origen:** el docente que se reemplaza, sus asignaturas por grupo, la opción **Reasignar Tareas en Linea** y sus **Direcciones de grupo**.
+- **Centro:** el botón **Trasladar►** y el recuadro **Definición**.
+- **Destino:** el docente que recibe la asignación, con su asignación y sus direcciones de grupo actuales.
 
-El botón **Ayuda** del bloque **Origen** abre esta guía.
+Ingrese a **Personal → Trasladar Asignación**.
 
-#### 2. Elegir el docente de origen
+<GuideImageTrigger src={"/images/wordpress/2023/11/Trasladar-asignacion-1024x408.png"} alt={"Pantalla Trasladar Asignación con los paneles Origen, Definición y Destino"}>Ver ejemplo</GuideImageTrigger>
 
-En **Docente a reemplazar**, seleccione el docente. La lista muestra los funcionarios con plaza de docente, en cualquier estado; el estado aparece después del nombre, por ejemplo **- ACTIVO** o **- INACTIVO**.
-
-Al elegirlo, el bloque **Origen** muestra:
-
-- **Grupo** y **Asignatura** de cada asignación del docente en el calendario, con una casilla marcada en cada fila.
-- **Reasignar Tareas en Linea**, marcada.
-- **Direcciones de grupo**, con el **Grupo** y el **Código** de los grupos que dirige.
-
-**Nuevo estado** solo aparece si el docente de origen está **ACTIVO**. Define el estado con que queda después del traslado:
-
-- **ACTIVO:** es el valor predeterminado.
-- **INACTIVO:** además, SINAI inactiva el usuario de ese docente en la institución.
-
-#### 3. Elegir el docente de destino
-
-En **Destino**, seleccione el **Docente**. La lista muestra los funcionarios activos con plaza de docente, menos el docente de origen.
-
-Debajo aparecen la asignación y las direcciones de grupo que ya tiene el docente de destino.
-
-#### 4. Trasladar
-
-1. En **Origen**, deje marcadas las asignaturas que va a trasladar y desmarque las que se quedan con el docente de origen.
-2. Deje marcada **Reasignar Tareas en Linea** si las tareas en línea creadas por el docente de origen deben pasar al nuevo docente.
-3. Si el docente de origen está activo, elija el **Nuevo estado**.
-4. Haga clic en **Trasladar►**.
-
-<GuideCallout type="warning">
-  **Trasladar►** no pide confirmación: el traslado se hace al hacer clic. Revise antes las asignaturas marcadas, el docente de destino y el nuevo estado.
+<GuideCallout>
+  **Permiso.** Trasladar exige el permiso **407**. El rector puede hacerlo siempre. Si falta el permiso, SINAI muestra *No tiene asignado el permiso Nº407*.
 </GuideCallout>
 
-Si el traslado termina, SINAI muestra «El traslado de la asignación y la dirección de grupo, se realizo correctamente» y actualiza los dos bloques. Si no hay asignaturas marcadas, muestra «No hay asignaturas seleccionadas» y no traslada nada.
+#### 2. Trasladar la asignación a otro docente
 
-#### 5. Permisos
+En el panel **Origen**:
 
-Trasladar exige el permiso para modificar la asignación académica. Si su usuario no lo tiene, SINAI muestra el aviso del permiso y no hace el traslado. Solicítelo al administrador de usuarios de la institución.
+- **Docente a reemplazar:** lista los docentes de la institución en cualquier estado, con el estado al final del nombre (por ejemplo, *– ACTIVO* o *– INACTIVO*).
+- **Nuevo estado:** solo aparece si el docente de origen está *ACTIVO*. Define el estado en que quedará después del traslado. Viene con el estado activo.
+- **Tabla de asignaturas:** muestra **Grupo** y **Asignatura**, con una casilla marcada en cada fila. Solo se trasladan las filas marcadas.
+- **Reasignar Tareas en Linea:** viene marcada. Pasa al nuevo docente la autoría de las tareas en línea del docente anterior.
+- **Direcciones de grupo:** grupos que dirige el docente de origen.
+
+En el panel **Destino**, **Docente** lista solo docentes activos y excluye al docente de origen.
+
+1. Seleccione el **Docente a reemplazar**.
+2. Si aparece **Nuevo estado**, elija el estado en que quedará ese docente.
+3. Revise la tabla de asignaturas y desmarque las que no desea trasladar.
+4. Deje marcada o desmarque **Reasignar Tareas en Linea**.
+5. En **Destino**, seleccione el **Docente** que recibe la asignación.
+6. Haga clic en **Trasladar►**.
+
+SINAI muestra *El traslado de la asignación y la dirección de grupo, se realizo correctamente* y actualiza las tablas de **Origen** y **Destino**.
+
+<GuideCallout type="warning">
+  - El botón **Trasladar►** no pide confirmación. Revise el docente de origen, el de destino y las asignaturas marcadas antes de hacer clic.
+  - Si no hay ninguna asignatura marcada, SINAI muestra *No hay asignaturas seleccionadas* y no realiza el traslado, tampoco de las direcciones de grupo. Para cambiar solo el director de un grupo, use **Asignación Académica → Configuración de grupos**.
+  - Si elige como **Nuevo estado** uno distinto del activo, también cambia el estado del usuario del docente de origen en la institución.
+</GuideCallout>
+
+#### 3. Verificar el traslado
+
+1. Revise el panel **Destino**: deben aparecer los grupos y asignaturas trasladados y las direcciones de grupo.
+2. Si lo desea, abra **Personal → Asignación Académica → Asignación estándar → Por docente** y seleccione el nuevo docente para ver su carga con horas y pesos.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"Llegó un docente nuevo a reemplazar a otro. ¿Qué debo hacer antes de trasladar la asignación?"}>
-    Registre primero al nuevo docente en **Personal → Funcionarios**, en estado activo y con una plaza de docente. La lista **Docente** del bloque **Destino** solo muestra funcionarios activos con plaza de docente. Consulte [Registro de Funcionarios](/docs/administrativo/gestion-de-personal/funcionarios).
+  <GuideFAQItem index="01" question="¿Qué debo tener listo antes de trasladar?">
+    El nuevo docente debe estar registrado como funcionario activo con cargo docente; de lo contrario no aparece en la lista **Docente** del panel **Destino**. Además, el usuario necesita el permiso 407.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"El docente nuevo no aparece en la lista de Destino. ¿Por qué?"}>
-    El docente no está activo, su plaza no es de docente o es el mismo docente que eligió en **Origen**. Revise su estado y su plaza en **Personal → Funcionarios** y en **Personal → Planta de Cargos**.
+  <GuideFAQItem index="02" question="¿Por qué no aparecen algunas asignaturas del docente que se va?">
+    La tabla del **Origen** solo muestra la asignación estándar del calendario actual. Las asignaturas de grupos con asignación personalizada se cambian en **Asignación personalizada → Por periodo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Puedo trasladar solo algunas asignaturas del docente?"}>
-    Sí. En **Origen**, todas las asignaturas aparecen marcadas. Desmarque las que no quiere trasladar y haga clic en **Trasladar►**. Las asignaturas desmarcadas se quedan con el docente de origen.
+  <GuideFAQItem index="03" question="¿Por qué no se ve la lista Nuevo estado?">
+    Solo aparece cuando el docente de origen está *ACTIVO*. Si ya está inactivo, trasladado o retirado, el traslado no cambia su estado.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question={"¿El traslado también pasa las tareas en línea?"}>
-    Sí, si deja marcada **Reasignar Tareas en Linea**. Las tareas creadas por el docente de origen quedan a nombre del nuevo docente. Si la desmarca, las tareas siguen a nombre del docente de origen.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="05" question={"¿Para qué sirve la lista Nuevo estado?"}>
-    Define el estado en que queda el docente de origen después del traslado. Solo aparece cuando el docente de origen está activo, y por defecto es **ACTIVO**. Con **INACTIVO**, SINAI también inactiva el usuario de ese docente en la institución. Si el docente de origen no está activo, la lista no se muestra.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="06" question={"Al hacer clic en Trasladar aparece «No hay asignaturas seleccionadas». ¿Qué hago?"}>
-    No hay ninguna asignatura marcada en **Origen**, o el docente de origen no tiene asignación en el calendario seleccionado. Marque las asignaturas que quiere trasladar y vuelva a hacer clic en **Trasladar►**.
-  </GuideFAQItem>
-
-  <GuideFAQItem index="07" question={"¿Cómo sé que el traslado quedó bien hecho?"}>
-    SINAI muestra «El traslado de la asignación y la dirección de grupo, se realizo correctamente». Revise el bloque **Destino**: las asignaturas y las direcciones de grupo trasladadas aparecen en las tablas del nuevo docente.
+  <GuideFAQItem index="04" question="El docente de origen solo tiene dirección de grupo y ninguna asignatura. ¿Cómo la paso?">
+    Desde esta pantalla el traslado solo se realiza si hay asignaturas marcadas. Asigne el nuevo director en **Asignación Académica → Configuración de grupos**, en la columna **Director de grupo**.
   </GuideFAQItem>
 </GuideFAQ>

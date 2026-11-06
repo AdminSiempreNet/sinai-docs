@@ -1,10 +1,11 @@
 {
   "title": "Asignación académica",
-  "description": "Asignación por periodo y por estudiante.",
+  "description": "Asignación estándar y personalizada, tipo de asignación y traslado.",
   "defaultOpen": false,
   "pages": [
     "asignacion-por-periodo",
-    "asignacion-por-periodos",
+    "tipo-de-asignacion",
+    "asignacion-personalizada",
     "asignacion-por-estudiante"
   ],
   "icon": "UserRoundCheck"
