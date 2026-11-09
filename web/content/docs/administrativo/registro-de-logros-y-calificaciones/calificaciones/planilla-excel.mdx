@@ -4,14 +4,22 @@ description: "Genere, descargue, cargue e importe las planillas de calificacione
 wordpressId: 33018
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/planilla-de-calificaciones-excel/"
 guide: true
-lastModified: "2026-10-30"
-lastReviewed: "2026-10-30"
+lastModified: "2026-11-06"
+lastReviewed: "2026-11-06"
 ---
 
 ## Video tutorial
 
+<GuideVideos compact>
+<YouTube id="cYh0iYms2aM" title="Planilla de calificaciones Excel (módulo docente)" odyseeUrl="https://odysee.com/planilla-de-calificaciones-excel%3Adbca1693ca70e11e6cba4188fe996d0afbe5dca2" />
+</GuideVideos>
+
+<GuideCallout>
+  Este video muestra el proceso en el módulo docente. En el módulo administrativo el proceso es el mismo, pero primero debe seleccionar el **Docente** en la parte superior.
+</GuideCallout>
+
 <GuideVideoPending>
-  - Planilla de calificaciones Excel desde el módulo administrativo. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+  - Planilla de calificaciones Excel desde el módulo administrativo. Falta grabar el video.
 </GuideVideoPending>
 
 ## Guía paso a paso
@@ -125,7 +133,7 @@ El archivo se rechaza en estos casos:
 
 Cargar el archivo no registra las calificaciones. Para pasarlas a SINAI debe importarlas.
 
-- **Todas las planillas cargadas del docente:** haga clic en **Importar**, en la parte superior, y confirme. SINAI importa las planillas en estado **Cargada** y muestra «Planillas excel importadas correctamente». Si no hay ninguna en ese estado, muestra «Para realizar la importación debe haber al menos una planilla en estado 'Cargada'».
+- **Todas las planillas cargadas del docente:** haga clic en **Importar**, en la parte superior, y confirme. SINAI importa las planillas en estado **Cargada** y muestra «Planillas excel importadas correctamente». Si no hay ninguna en ese estado, muestra «Para realizar la importación debe haber al menos una planilla en estado 'Cargada'». Este botón se desactiva si alguna fila del docente sigue en **Sin Generar**; en ese caso, genere esas filas o importe por fila.
 - **Una planilla:** haga clic en **Importar** en la fila y confirme. SINAI muestra «La importación de datos se ha realizado correctamente.»
 
 <GuideCallout type="warning">
@@ -186,5 +194,9 @@ Aunque el mensaje de confirmación del botón superior dice «todas las planilla
 
   <GuideFAQItem index="07" question={"Aparece «La planilla excel que intenta actualizar es de un tipo diferente al cual se generó por primera vez». ¿Qué hago?"}>
     La configuración de la planilla cambió después de generarla. Descargue una copia si la necesita, elimine la planilla con el ícono rojo de la fila, genérela de nuevo y vuelva a diligenciarla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Por qué está desactivado el botón Importar de la parte superior?"}>
+    El docente tiene filas en **Sin Generar**, o todavía no tiene planillas cargadas. Genere las filas que faltan o use el botón **Importar** de cada fila.
   </GuideFAQItem>
 </GuideFAQ>

@@ -16,7 +16,7 @@ import { GuideFeedback } from '@/components/guide-feedback';
 import { RoleLandingBanner } from '@/components/role-landing-banner';
 import { SectionLandingBanner } from '@/components/section-landing-banner';
 import { SectionHub } from '@/components/section-hub';
-import { StudentGuideReady, StudentGuideScene } from '@/components/student-guide-scene';
+import { StudentGuideReady } from '@/components/student-guide-scene';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -101,9 +101,6 @@ export default async function Page(props: {
           <SectionHub section={sectionKey} />
         ) : (
           <>
-            {isStudentGuide && (
-              <StudentGuideScene slug={sectionKey} title={String(page.data.title)} />
-            )}
             <MDXContent components={getMDXComponents()} />
             {isStudentGuide && <StudentGuideReady slug={sectionKey} />}
           </>
