@@ -1,11 +1,13 @@
 ---
 title: "Gestión de usuarios"
-description: "Aprenda a gestionar usuarios en SINAI."
+description: "Filtre y genere usuarios, restablezca claves y accesos, consulte la auditoría, cambie estados y use cada botón de Gestión de usuarios."
 guide: true
 wordpressId: 29230
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/gestion-de-usuarios/"
-lastModified: "2023-11-14 16:52:50"
+lastModified: "2026-11-05"
+lastReviewed: "2026-11-05"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,96 +18,332 @@ lastModified: "2023-11-14 16:52:50"
 
 ## Guía paso a paso
 
-Todos los procesos para la administración de los datos de usuarios se llevan a cabo en el módulo administrativo, a través del menú principal “Establecimiento”, submenú “Usuarios”. <GuideImageTrigger src={"/images/wordpress/2023/11/Gestion-de-Usuarios-1024x223.png"} alt={"Captura de Gestion de Usuarios"}>Ver ejemplo</GuideImageTrigger>
+### 1. ¿Qué es Gestión de usuarios?
 
+**Gestión de usuarios** reúne en una sola pantalla los usuarios de acceso a SINAI de la institución. Desde aquí puede consultar quién tiene usuario, generar los usuarios que faltan, cambiar su estado, asignarles sistemas de evaluación, restablecer contraseñas y consultar la auditoría de cada usuario.
 
+El estado de la persona en la institución y el estado de su usuario son cosas distintas. Un funcionario puede estar **ACTIVO** en la planta y no tener usuario, o tener el usuario **INACTIVO**. El usuario es lo que le permite ingresar a SINAI.
 
-### Administración de Usuarios
+Ingrese a **Establecimiento → Usuarios → Gestión de Usuarios**.
 
-En primera instancia tenemos la “Gestión de Usuarios”, en cuya ventana se dispone de dos paneles para la administración de usuarios, al lado izquierdo se encuentra el formulario para filtrar las listas de usuarios, contando con un buscador por nombres, filtros por roles y estado del Usuario. Con respecto al estado del usuario, se cuenta con distintivos por color, siendo el verde los usuarios con estado “Activo”, el color rojo para los “Inactivos” y el color naranjado para los usuarios “Bloqueados”. La lista visible al lado derecho de la ventana se actualizará de acuerdo al estado seleccionado. <GuideImageTrigger src={"/images/wordpress/2023/11/Gestion-de-Usuarios%C2%B41.png"} alt={"Captura de Gestion de Usuarios´1"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/generar-usuarios/acceso-gestion-usuarios.jpg" alt="Menú Establecimiento con el submenú Usuarios desplegado y la opción Gestión de Usuarios">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pantalla tiene dos partes:
 
+- **Gestión de usuarios - Filtros**, a la izquierda: búsqueda, rol, estados, **Exportar a Excel** y **Restablecer Accesos**. El botón azul con el signo de interrogación abre esta guía y el botón del engranaje abre las contraseñas por defecto.
+- La barra superior y la lista de usuarios, a la derecha.
 
-### Gestionar el estado de los usuarios
+<GuideImageTrigger src="/images/guides/generar-usuarios/pantalla-gestion-usuarios.jpg" alt="Pantalla Gestión de usuarios con los filtros a la izquierda, la barra de acciones y la lista de funcionarios">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Los administrativos podrán cambiar desde esta instancia el estado de los usuarios, siempre y cuando se cuente con este permiso por parte del rector. Se puede pasar de un estado “Activo” a otro “Inactivo” o “Bloqueado”, del estado Bloqueado se podrá pasar al estado Activo, pero del estado Inactivo NO se podrá pasar al estado Activo cuando este carezca de usuarios, en otras palabras, si se desea pasar a un funcionario de estado inactivo (sin usuario) a activo, se debe generar el usuario del mismo y asignar un sistema de evaluación (Vea la guía instructiva haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-cambiar-el-estado-de-los-usuarios-en-el-modulo-administrativo-de-sinai/)).
+<GuideCallout>
+  El rector puede usar todas las acciones de esta pantalla. Los demás usuarios administrativos necesitan el permiso correspondiente en **Asignación de Permisos**. Si no lo tienen, SINAI muestra un aviso como «No tiene asignado el permiso Nº002».
+</GuideCallout>
 
-### Asignar Usuarios
+#### 2. Filtrar la lista
 
-Para ello se cuenta con controles para generar usuarios a los diferentes roles de la lista con el estado inactivo, es aquí donde se necesita la asignación de un sistema de evaluación, el cual puede ser cambiado en cualquier momento según se requiera, a funcionarios específicos.
+1. Seleccione el rol en **Roles**: **Funcionarios**, **Estudiantes**, **Acudientes** u **Otros Usuarios**.
+2. Ajuste los filtros que aparecen según el rol.
+3. Si busca a alguien en particular, escriba en **Búsqueda** y haga clic en **Buscar**. El botón rojo con el borrador quita la búsqueda.
 
-Vale la pena aclarar que en la columna Usuario de la lista, se muestra el ID y el sistema de evaluación asignado a funcionarios, estudiantes y padres de familia, sin embargo, cuando no se ha asignado el usuarios, en esta columna aparecerá la expresión “Sin Usuario”.
+<GuideDataTable>
 
-Otro aspecto de importancia que se debe tener en cuenta, es que el estado del Funcionario no es el mismo que el del Usuario, o el estado del rol estudiante, ya que al hablar de Usuario, se hace énfasis al acceso a SINAI, por otro lado, los funcionarios, estudiantes o padres de familia, cumplen un rol diferente dentro de la institución.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Búsqueda** | Busca por usuario, nombres, apellidos o identificación. |
+| **Estado Funcionario** | Solo con **Funcionarios**: **ACTIVO**, **INACTIVO**, **RETIRADO** o **TRASLADADO**. |
+| **Estado Matrícula** | Con **Estudiantes** y **Acudientes**: **MATRICULADO**, **TRASLADADO**, **RETIRADO** o **DESERTOR**, en el calendario seleccionado. |
+| **Sedes** y **Grupos** | Con **Estudiantes** y **Acudientes**: limita la lista a una sede y a un grupo. |
+| **Estado Usuario** | **Todos**, **Activo**, **Inactivo** o **Bloqueo**. Con **Estudiantes**, los que no tienen usuario siguen apareciendo en la lista. |
 
-Vea también las guía instructivas para:
+</GuideDataTable>
 
-- ###### [Asignar Usuario](https://ayudasinai.siempre.net.co/como-asignar-usuario-desde-el-modulo-administrativo-de-sinai/)
+<GuideImageTrigger src="/images/guides/generar-usuarios/filtro-estudiantes.jpg" alt="Gestión de usuarios con el rol Estudiantes, los filtros de matrícula, sede y grupo, y estudiantes con y sin usuario">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- ###### [Adicionar Sistema de Evaluación a Usuarios](https://ayudasinai.siempre.net.co/como-adicionar-varios-sistemas-de-evaluacion-para-los-usuarios-de-sinai/)
+SINAI recuerda los filtros que usó la última vez que abrió la pantalla en ese navegador.
 
+#### 3. Leer la lista de usuarios
 
-### Opciones de la lista de Usuarios
+Cada fila muestra:
 
-En las lista de Usuarios verá la columna de opciones al lado derecho, la cual contiene por cada usuario un botón, este permite desplegar una lista de opciones que navegan a otras dependencias dentro de la plataforma, para el diligenciamiento o administración de la información correspondiente al usuario seleccionado. <GuideImageTrigger src={"/images/wordpress/2023/11/Usuarios-Opciones.png"} alt={"Captura de Usuarios Opciones"}>Ver ejemplo</GuideImageTrigger>
+- **Nombre:** foto, nombre completo y el rol del usuario. Debajo, tres íconos en verde cuando el dato está verificado: correo electrónico, teléfono y sincronización del usuario.
+- **Usuario:** un círculo con el color del estado (verde para activo, naranja para bloqueado y rojo para los demás estados o sin usuario), el nombre de usuario y, debajo, el número de sistemas de evaluación asignados con el sistema predeterminado. Si la persona no tiene usuario, aparece **Sin Usuario**.
+- **Acceso:** número de ingresos a SINAI en la institución y la fecha del último ingreso.
+- **Opciones:** menú con las acciones de cada usuario.
 
+La lista muestra 60 usuarios por página.
 
+#### 4. Conocer los botones y acciones
 
-A continuación se muestra el contenido de la lista de opciones:
+Esta tabla resume qué hace cada botón de la pantalla, dónde está y qué permiso exige. Los pasos siguientes explican cada uno.
 
-- Editar Información: Navega a los datos básicos del funcionario permitiendo la actualización de la información (guía instructiva [aquí](https://ayudasinai.siempre.net.co/como-se-actualizan-los-datos-de-funcionarios-en-sinai/)).
-- Editar SIE: Abre una ventana con la lista de los diferentes sistemas de evaluación, en esta se puede generar usuarios y agregar o quitar SIE (guía instructiva [aquí](https://ayudasinai.siempre.net.co/como-editar-el-sie-de-los-usuarios/)).
-- Actividad / Auditoría: Muestra el registro de actividades de los usuarios a través de una lista, esta tiene la fecha y hora de la actividad, la descripción y la IP de acceso (guia instructiva [aquí](https://ayudasinai.siempre.net.co/como-hacer-auditoria-a-las-actividades-que-realizan-los-usuarios-en-sinai/)).
-- Restablecer Clave: Inicia el restablecimiento de la contraseña del funcionario. SINAI envía al correo electrónico registrado un enlace para que el usuario establezca una nueva contraseña.
-- Recordar Clave: Envía al correo electrónico registrado un enlace para modificar la contraseña. No envía la contraseña actual.
+<GuideDataTable>
 
-Vea la guía instructiva para restablecer o recordar la contraseña haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-restablecer-y-recordar-la-clave-de-los-usuarios-en-el-modulo-administrativo-de-sinai/).
+| Botón u opción | Dónde está | Qué hace | Permiso |
+| --- | --- | --- | --- |
+| **Generar usuarios** | Barra superior | Crea el usuario de acceso de las personas marcadas. | 002 |
+| **Actualizar estado** | Barra superior | Cambia el estado del usuario a **ACTIVO**, **INACTIVO**, **BLOQUEADO** o **MIGRADO**. | 007 |
+| **Adicionar SIE** | Barra superior | Agrega un sistema de evaluación a los usuarios marcados. | 005 |
+| **Editar Información** | Menú **Opciones** | Abre los datos de la persona. | No se valida en esta pantalla |
+| **Editar SIE** | Menú **Opciones** | Agrega, elimina o predetermina los sistemas de evaluación de un usuario. | 005 para agregar y 004 para eliminar |
+| **Actividad/Auditoria** | Menú **Opciones** | Muestra lo que el usuario hizo en SINAI. | No se valida en esta pantalla |
+| **Restablecer Clave** | Menú **Opciones** | Asigna la contraseña por defecto a un solo usuario. | 003 |
+| **Restablecer Accesos** | Panel de filtros | Restablece o fuerza el cambio de contraseña de todos los estudiantes. | 003 |
+| **Exportar a Excel** | Panel de filtros | Descarga la lista de usuarios. | No se valida en esta pantalla |
+| **Crear Usuario** | Panel de filtros, con **Otros Usuarios** | Abre el formulario para crear un usuario. | No se valida en esta pantalla |
+| Botón del engranaje | Junto a **Gestión de usuarios - Filtros** | Muestra las contraseñas por defecto. | Solo el rector puede cambiarlas |
 
-### Exportar lista de Usuarios a Excel
+</GuideDataTable>
 
-Por otro lado, en la ventana de “Gestión de Usuarios” también se cuenta con un botón para exportar la lista de funcionarios en formato Excel, el dinamismo de los controles en esta ventana le permitirá organizar la lista de acuerdo con variables como el rol y estado.
+#### 5. Generar usuarios
 
-Clic [aquí](https://ayudasinai.siempre.net.co/como-exportar-a-excel-una-lista-desde-la-gestion-de-usuarios/) para ver la guía instructiva.
+Use esta acción para crear el usuario de acceso de quienes aparecen como **Sin Usuario**.
 
-### Restablecer acceso a todos los estudiantes
+1. Filtre la lista por rol y estado.
+2. Marque las casillas de las personas, o marque **Todos los filtrados** para incluir a todos los que cumplen los filtros, no solo los de la página.
+3. Con **Funcionarios**, seleccione el sistema de evaluación en la lista que está junto a **Generar usuarios**. Con **Estudiantes** y **Acudientes** esa lista no aparece.
+4. Haga clic en **Generar usuarios**.
+5. En la ventana **Generar Usuarios**, revise la **Contraseña por defecto** y haga clic en **Generar Usuarios**.
 
-La opción “Restablecer Accesos” permite iniciar, a través de una ventana emergente, el restablecimiento de la contraseña para todos los estudiantes de la institución. SINAI envía al correo electrónico registrado un enlace para que cada estudiante establezca una nueva contraseña. Antes de realizar esta acción, verifique que todos los estudiantes tengan un usuario y un correo electrónico actualizado.
+<GuideImageTrigger src="/images/guides/generar-usuarios/ventana-generar-usuarios.jpg" alt="Ventana Generar Usuarios con las aclaraciones, la contraseña por defecto oculta y el botón Generar Usuarios">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En esta misma ventana se dispone de la opción “Forzar Cambio de Contraseña” para todos los estudiantes, obligándolos a cambiar de contraseña una vez ingresen a la plataforma.
+Al terminar, el panel izquierdo muestra un resumen con cuántos usuarios se crearon y el resultado de cada persona.
 
-Vea la guía instructiva haciendo clic [aquí](https://ayudasinai.siempre.net.co/como-restablecer-acceso-y-forzar-el-cambio-de-clave-para-todos-los-estudiantes/).
+Tenga en cuenta:
 
-### Otros Usuarios
+- El usuario nuevo queda **ACTIVO** en la institución y debe cambiar la contraseña en su primer ingreso.
+- La contraseña inicial es la contraseña por defecto de la institución: una para funcionarios y otra para estudiantes y acudientes. Si la persona tiene correo registrado, SINAI le envía sus datos de acceso.
+- A los estudiantes y acudientes se les asigna el sistema de evaluación de la institución en el calendario seleccionado.
+- Si la persona ya tiene usuario, SINAI no crea otro: solo le agrega el sistema de evaluación o la institución si le faltan.
+- Con **Todos los filtrados**, SINAI pide confirmar «¿Seguro que desea generar usuarios a todos los filtrados?». Solo genera funcionarios en estado **ACTIVO**, estudiantes en estado **MATRICULADO** y acudientes de estudiantes matriculados.
 
-Entre la lista de roles de los funcionarios se dispone de la opción “Otros Usuarios”, este se relaciona con el botón “Crear Usuario”, el cual aparece con su selección.
+<GuideCallout type="warning">
+  Con **Todos los filtrados** la acción se aplica a todas las personas que cumplen los filtros, aunque no estén en la página visible. Revise los filtros antes de confirmar.
+</GuideCallout>
 
-SINAI cuenta con esta opción debido a que se presentan casos donde las instituciones o establecimiento educativos, no cuentan con el personal administrativo suficiente para desarrollar las diferentes actividades de gestión, por lo cual el rector o directivo acude a otras personas que pueden ser funcionarios o no de la institución, para desarrollar funciones administrativas específicas.
+#### 6. Abrir las opciones de un usuario
 
-Clic [aquí](https://ayudasinai.siempre.net.co/como-generar-otros-usuarios-diferentes-a-los-funcionarios-estudiantes-y-acudientes/) para ver la guía instructiva de “Otros Usuarios”. <GuideImageTrigger src={"/images/wordpress/2023/11/Crear-Otros-Usuarios.gif"} alt={"Captura de Crear Otros Usuarios"}>Ver ejemplo</GuideImageTrigger>
+Haga clic en **Opciones** al final de la fila del usuario. El menú muestra **Editar Información**, **Editar SIE**, **Actividad/Auditoria** y **Restablecer Clave**.
 
+<GuideImageTrigger src="/images/guides/generar-usuarios/opciones-usuario.jpg" alt="Menú Opciones de un funcionario con Editar Información, Editar SIE, Actividad/Auditoria y Restablecer Clave">
+  Ver ejemplo
+</GuideImageTrigger>
 
+#### 7. Editar la información de un usuario
 
-### Autogestión de Usuarios
+**Editar Información** abre la pantalla de datos de la persona, según el rol seleccionado en **Roles**:
 
-Aunque SINAI ya cuenta con herramientas para recordar la contraseña, se presenta el hecho de que algunos usuarios no tienen corro electrónico registrado en el sistema, siendo esto una limitate para ejecutar esta opción.
+- **Funcionarios:** los datos del funcionario.
+- **Estudiantes:** la actualización del estudiante.
+- **Acudientes:** los datos del acudiente.
+- **Otros Usuarios:** el formulario del usuario.
 
-Lo anterior es una de las razones por la que surge la autogestión de usuarios, herramienta a través de la cual se otorga un PIN para el acceso a SINAI a los usuarios docentes y estudiantes, con el fin de que estos puedan actualizar sus datos o incluso para el registro de Usuarios cuando se carece de este.
+Use esta opción para corregir, por ejemplo, el número de documento o el correo al que SINAI envía los datos de acceso.
 
-Una vez que el o los pines son generados, estos pueden ser enviados a través del usuario cuando este lo tienen registrado en el sistema, de lo contrario, el administrativo puede descargar un reporte y a partir de este hacer el envío al docente o estudiante a través de otro mecanismo.
+#### 8. Editar los sistemas de evaluación de un usuario
 
+**Editar SIE** abre la ventana **Sistemas de Evaluación** con los SIE del usuario. No aparece con **Estudiantes** ni con **Acudientes**.
+
+<GuideImageTrigger src="/images/guides/agregar-o-eliminar-sie/ventana-sistemas-evaluacion.jpg" alt="Ventana Sistemas de Evaluación con la lista de SIE del usuario, la casilla Pre y los botones Guardar y Cerrar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Lista y botón verde +:** agregan el SIE seleccionado.
+- **Botón azul con el ícono de persona:** genera el usuario con el SIE seleccionado.
+- **X roja:** elimina el SIE de esa fila, después de confirmar. SINAI no elimina el SIE predeterminado ni el último SIE del usuario.
+- **Pre y Guardar:** dejan como predeterminado el SIE marcado.
+- **Cerrar:** vuelve a la lista.
+
+Vea el detalle en [Agregar o eliminar SIE](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/agregar-o-eliminar-sie).
+
+#### 9. Consultar la actividad o auditoría de un usuario
+
+**Actividad/Auditoria** muestra lo que un usuario hizo en SINAI, como ingresos a páginas y cambios de datos. Úsela para saber qué hizo una persona, cuándo y desde qué dirección IP.
+
+1. Haga clic en **Opciones** en la fila del usuario.
+2. Seleccione **Actividad/Auditoria**. La auditoría se abre en una pestaña nueva del navegador.
+3. Revise los registros. El título muestra el usuario de acceso y el nombre de la persona.
+
+<GuideImageTrigger src="/images/guides/auditoria-usuarios/pantalla-auditoria.jpg" alt="Auditoría de un usuario con el buscador, las columnas FechaHora, Descripcion e IP y el botón Decargar Auditoria">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **FechaHora** | Fecha y hora del registro. El ícono del encabezado abre un filtro por fecha. |
+| **Descripcion** | Acción registrada, por ejemplo el ingreso a una página o el cambio realizado. |
+| **IP** | Dirección IP desde la que se hizo la acción. |
+
+</GuideDataTable>
+
+- **Buscar:** escriba en **Introduzca el texto a buscar...** para filtrar los registros.
+- **Recorrer:** cada página muestra 20 registros, del más reciente al más antiguo.
+- **Descargar:** **Decargar Auditoria** descarga los registros en un archivo de Excel.
+
+La auditoría solo incluye los registros de la institución actual y los que no tienen institución.
+
+<GuideCallout>
+  La auditoría muestra lo que hizo el usuario elegido, no lo que otros hicieron sobre él. Por ejemplo, el cambio de estado de un funcionario queda en la auditoría de quien hizo el cambio. Vea [Auditoría](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/auditoria).
+</GuideCallout>
+
+#### 10. Restablecer la clave de un usuario
+
+**Restablecer Clave** sirve cuando una persona olvidó su contraseña o no puede ingresar. Cambia la contraseña de ese usuario por la contraseña por defecto de la institución.
+
+1. Seleccione el rol en **Roles** y busque a la persona.
+2. Confirme que el usuario esté activo: el círculo de la columna **Usuario** debe estar en verde.
+3. Haga clic en **Opciones** en su fila.
+4. Haga clic en **Restablecer Clave**.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/opcion-restablecer-clave.jpg" alt="Menú Opciones de un usuario con la opción Restablecer Clave">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI no pide confirmación y hace el cambio de inmediato:
+
+- **Contraseña que recibe:** la de funcionarios para funcionarios y otros usuarios, y la de estudiantes y acudientes para esos dos roles.
+- **Próximo ingreso:** el usuario entra con esa contraseña y SINAI le pide cambiarla.
+- **Con correo registrado:** SINAI le envía la contraseña y muestra «La contraseña fue restablecida y se enviara al correo electronico del usuario:» seguido del correo.
+- **Sin correo registrado:** SINAI muestra «La contraseña fue restablecida, pero no fue enviada al correo electronico». Comparta usted la contraseña por defecto, que puede ver con el botón del engranaje.
+
+Si el usuario no está **ACTIVO**, SINAI muestra «No se encontró institución activa para el usuario.» y no cambia la contraseña. Primero actívelo con **Actualizar estado**.
+
+Si la persona aparece como **Sin Usuario**, SINAI muestra «No se puede realizar el proceso porque no tiene usuario». Primero genere su usuario.
+
+Vea el detalle en [Restablecer contraseña](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/restablecer-contrasena).
+
+#### 11. Restablecer los accesos de todos los estudiantes
+
+**Restablecer Accesos** actúa sobre todos los estudiantes con usuario en la institución, sin importar los filtros de la lista. Para una sola persona use **Restablecer Clave**.
+
+1. Haga clic en **Restablecer Accesos**, debajo de los filtros.
+2. En la ventana **Restablecer Accesos de Estudiantes**, elija una de las dos opciones.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/ventana-restablecer-accesos.jpg" alt="Ventana Restablecer Accesos de Estudiantes con las opciones Restablecer Contraseña y Forzar Cambio de Contraseña">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Restablecer Contraseña:** asigna la **Contraseña genérica** que muestra la ventana, obliga a cambiarla al ingresar y marca el correo y el teléfono como no verificados. SINAI no envía correos: copie la contraseña con el botón verde y compártala con los estudiantes. Al terminar muestra «Contraseñas restablecidas».
+- **Forzar Cambio de Contraseña:** conserva la contraseña actual y obliga a cambiarla en el próximo ingreso. La nueva contraseña no puede ser igual a la actual. Al terminar muestra «Forzar cambio de contraseña ejecutado correctamente».
+
+<GuideCallout type="warning">
+  Ambas opciones se aplican de inmediato, sin una segunda confirmación, y no se pueden deshacer. No afectan a los acudientes. Antes de usarlas, confirme que los estudiantes tengan usuario generado.
+</GuideCallout>
+
+#### 12. Consultar las contraseñas por defecto
+
+El botón del engranaje, junto a **Gestión de usuarios - Filtros**, abre la ventana **Configuraciones** con las **Contraseñas por defecto**.
+
+<GuideImageTrigger src="/images/guides/restablecer-contrasena/ventana-contrasenas-defecto.jpg" alt="Ventana Configuraciones con las contraseñas por defecto de funcionarios y de estudiantes o acudientes, ocultas en el ejemplo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Para funcionarios:** contraseña de funcionarios y otros usuarios.
+- **Para estudiantes o acudientes:** contraseña de esos dos roles.
+
+El botón junto a cada campo copia la contraseña. Solo el rector ve **Generar** y **Actualizar** para cambiarlas. Vea [Restablecer contraseña](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/restablecer-contrasena).
+
+#### 13. Cambiar el estado de los usuarios
+
+**Actualizar estado** activa, inactiva o bloquea usuarios. Funciona sobre las filas marcadas o sobre **Todos los filtrados**.
+
+1. Marque los usuarios o **Todos los filtrados**.
+2. En la lista de la barra superior, seleccione **ACTIVO**, **INACTIVO**, **BLOQUEADO** o **MIGRADO**.
+3. Haga clic en **Actualizar estado**.
+4. Si marcó **Todos los filtrados**, confirme «¿Seguro que desea actualizar el estado de todos los usuarios listados?».
+
+<GuideImageTrigger src="/images/guides/cambiar-estado-de-usuarios/actualizar-estado.jpg" alt="Gestión de usuarios con un funcionario marcado y el estado ACTIVO elegido junto al botón Actualizar estado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Debajo de **Exportar a Excel** y **Restablecer Accesos**, SINAI muestra cuántos usuarios se actualizaron y el resultado de cada uno. Este cambio no modifica el estado del funcionario ni la matrícula. Con **Otros Usuarios** no se permite el cambio con **Todos los filtrados**. Vea [Cambiar estado de usuarios](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/cambiar-estado-de-usuarios).
+
+#### 14. Adicionar un sistema de evaluación a varios usuarios
+
+**Adicionar SIE** agrega un sistema de evaluación a las filas marcadas o a **Todos los filtrados**. Solo aparece con **Funcionarios** y **Otros Usuarios**.
+
+1. Marque los usuarios o **Todos los filtrados**.
+2. Seleccione el SIE en la lista junto a **Adicionar SIE**.
+3. Si debe quedar como predeterminado, marque **Predeterminar**.
+4. Haga clic en **Adicionar SIE**.
+
+Vea [Agregar o eliminar SIE](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/agregar-o-eliminar-sie).
+
+#### 15. Otros usuarios
+
+**Otros Usuarios** lista los usuarios que no están relacionados con un funcionario, un estudiante o un acudiente. Sirve para dar acceso a personas que apoyan tareas administrativas sin estar en la planta de personal.
+
+Con este rol aparece el botón **Crear Usuario**, que abre el formulario para crear uno nuevo. **Generar usuarios** no aplica a este rol: SINAI responde «Para el tipo de Rol: Otros Usuarios, no es necesario Generar Usuarios, lo que realmente puede es Crear Usuario».
+
+<GuideImageTrigger src="/images/guides/generar-usuarios/otros-usuarios.jpg" alt="Gestión de usuarios con el rol Otros Usuarios y el botón Crear Usuario">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 16. Exportar la lista a Excel
+
+Aplique los filtros y haga clic en **Exportar a Excel**. SINAI descarga el archivo **ListaUsuarios.xlsx** con los usuarios del rol y los estados seleccionados.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Gestión de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué un funcionario aparece como «Sin Usuario»?"}>
+    El funcionario está registrado en la planta, pero todavía no tiene usuario de acceso en la institución. Selecciónelo, elija un sistema de evaluación y use **Generar usuarios**. Si SINAI responde «No se puede crear usuario para este funcionario.», revise el cargo asignado al funcionario: el cargo debe tener un rol de SINAI definido.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Gestión de usuarios» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Generé usuarios y el resumen dice que no se creó el de algunas personas. ¿Por qué?"}>
+    El resumen del panel izquierdo explica el resultado de cada persona. Por ejemplo, SINAI no crea el usuario cuando la persona no tiene número de documento de identificación o cuando el cargo del funcionario no tiene rol definido. Corrija esos datos con **Editar Información** y vuelva a generar.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Gestión de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Qué significa «Debe seleccionar un Sistema de Evaluación»?"}>
+    Con **Funcionarios** debe elegir el sistema de evaluación en la lista junto a **Generar usuarios** antes de generar. Con **Estudiantes** y **Acudientes** no se pide: SINAI asigna el sistema de evaluación de la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué aparece «No has seleccionado ninguna fila»?"}>
+    Hizo clic en una acción sin marcar ninguna casilla de la lista. Marque las personas o active **Todos los filtrados**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Marqué Todos los filtrados y SINAI dice que solo se puede generar a personas activas o matriculadas. ¿Qué hago?"}>
+    Con **Todos los filtrados** el filtro de estado debe estar en **ACTIVO** para funcionarios y en **MATRICULADO** para estudiantes y acudientes. Cambie el filtro y vuelva a intentarlo. Los mensajes son «Solo se puede generar usuarios a Funcionarios en estado Activo», «Solo se puede generar usuarios a Estudiante en estado Matriculado» y «Solo se puede generar usuarios a Acudientes con Estudiantes en estado Matriculado».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué contraseña recibe el usuario que acabo de generar?"}>
+    La contraseña por defecto de la institución, que se ve en la ventana **Generar Usuarios**. Hay una para funcionarios y otra para estudiantes y acudientes. Al ingresar por primera vez, SINAI le pide al usuario cambiarla. El rector la configura con el botón del engranaje; vea [Restablecer contraseña](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/restablecer-contrasena).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Cómo le restablezco la contraseña a un usuario que la olvidó?"}>
+    Busque a la persona, haga clic en **Opciones** y luego en **Restablecer Clave**. El usuario recibe la contraseña por defecto en su correo, si lo tiene registrado, y SINAI le pide cambiarla al ingresar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Qué diferencia hay entre Restablecer Clave y Restablecer Accesos?"}>
+    **Restablecer Clave** cambia la contraseña de un solo usuario de cualquier rol y le envía correo si lo tiene registrado. **Restablecer Accesos** afecta a todos los estudiantes de la institución y no envía correos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="09" question={"¿Qué diferencia hay entre Restablecer Contraseña y Forzar Cambio de Contraseña?"}>
+    **Restablecer Contraseña** cambia la contraseña de todos los estudiantes por la contraseña genérica. **Forzar Cambio de Contraseña** conserva la contraseña actual y solo obliga a cambiarla en el próximo ingreso.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="10" question={"Aparece «No se encontró institución activa para el usuario.». ¿Qué hago?"}>
+    El usuario no está **ACTIVO** en la institución. Márquelo, seleccione **ACTIVO**, haga clic en **Actualizar estado** y vuelva a usar **Restablecer Clave**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="11" question={"¿Cómo desbloqueo a un usuario?"}>
+    El usuario bloqueado tiene el círculo naranja en la columna **Usuario**. Márquelo, seleccione **ACTIVO** y haga clic en **Actualizar estado**. Necesita el permiso 007.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="12" question={"¿Cómo sé quién restableció una contraseña o cambió un dato?"}>
+    La auditoría guarda cada acción a nombre de quien la hizo. Abra **Actividad/Auditoria** del usuario que pudo hacer el cambio y busque por una palabra de la descripción, por ejemplo «contraseña». **Restablecer Clave** solo queda registrado cuando el usuario restablecido tiene correo. **Restablecer Accesos** siempre queda registrado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="13" question={"La auditoría de un usuario aparece vacía. ¿Por qué?"}>
+    El usuario no tiene actividades registradas en la institución. Si la fila dice **Sin Usuario**, la persona no tiene usuario y no hay actividades que mostrar. Una actividad reciente puede tardar en aparecer, porque el servidor guarda una copia de la página hasta por un día.
   </GuideFAQItem>
 </GuideFAQ>

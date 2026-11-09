@@ -1,11 +1,13 @@
 ---
 title: "Consolidar y calcular puestos"
-description: "Consolide calificaciones y calcule los puestos del período en SINAI."
+description: "Consolide las calificaciones del periodo por grupo o por sede, calcule los puestos del periodo o finales y descargue los informes de puestos."
 guide: true
 wordpressId: 29701
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/consolidar/"
-lastModified: "2026-10-01"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideoPlaylist
@@ -20,114 +22,156 @@ lastModified: "2026-10-01"
 
 ## Guía paso a paso
 
-### Consolidar calificaciones
+### 1. ¿Qué es Consolidar y Calcular Puestos?
 
-En la presente guía se va a encontrar el funcionamiento de la Plataforma SINAI con relación al proceso de consolidar y calcular el puesto de los estudiantes una vez los docentes hayan registrado calificaciones en un periodo determinado, este procedimiento es fundamental para que se puedan descargar los informes consolidados de calificaciones, boletines de periodo, certificados, entre otros.
+**Consolidar y Calcular Puestos** reúne tres procesos del cierre de cada periodo:
 
-El proceso de consolidación se puede realizar las veces que sea necesario para actualizar las calificaciones definitivas de los estudiantes para un periodo determinado, sin embargo, para la descarga e impresión de boletines de calificaciones es importante que el consolidado se realice una vez el periodo se encuentre en estado cerrado, esto garantizará que ningún docente haga modificaciones después de dicha consolidación. El consolidado de calificaciones se puede realizar por sede o por grupo específico.
+- **Consolidar:** calcula las calificaciones definitivas del periodo de un grupo o de todos los grupos de una sede.
+- **Calcular puestos:** ordena a los estudiantes en el periodo seleccionado o en el cierre final del calendario.
+- **Informes:** genera el informe de puestos y los cuadros de honor.
 
-#### Pasos para realizar el consolidado de de calificaciones
+Cada proceso que ejecute queda en la lista de la parte inferior, con su estado. Puede consolidar las veces que necesite; cada vez SINAI vuelve a calcular las definitivas del periodo con las calificaciones registradas en ese momento.
 
-Desde el módulo administrativo ubicamos el menú **Evaluación**, luego se debe seleccionar el submenú **Consolidar.** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-1.png"} alt={"Captura de Consolidar 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Evaluación → Consolidar**.
 
+<GuideImageTrigger src="/images/guides/consolidar-y-calcular-puestos/pantalla-consolidar.jpg" alt="Pantalla Consolidar y Calcular Puestos con los filtros, los botones de consolidar, calcular e informes y la lista de procesos">
+  Ver ejemplo
+</GuideImageTrigger>
 
+En la parte superior derecha están:
 
-#### ¿Cómo realizar el consolidado de calificaciones por sede?
+- El botón del engranaje, que abre las configuraciones de esta pantalla.
+- **Ayuda**, que abre esta guía.
+- **Descargar Informes**, que abre en otra pestaña los informes de consolidados.
 
-- Seleccionar la sede
-- Seleccionar el periodo
-- Seleccionar la opción **“Sede seleccionada”**
-- Dar clic en el botón **“Consolidar”** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-2.png"} alt={"Captura de Consolidar 2"}>Ver ejemplo</GuideImageTrigger>
+<GuideCallout>
+  Consolidar, calcular puestos y abrir las configuraciones exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso y no ejecuta el proceso.
+</GuideCallout>
 
+#### 2. Seleccionar sede, grupo y periodo
 
+<GuideDataTable>
 
-#### ¿Cómo realizar el consolidado de calificaciones por grupo?
+| Filtro | Qué define |
+| --- | --- |
+| **Sede** | Sede de los grupos. Con **[Seleccionar]** la lista **Grupo** muestra los grupos de todas las sedes. |
+| **Grupo** | Grupo que se consolida con la opción **Grupo seleccionado**. |
+| **Periodo** | Periodo que se consolida y cuyos procesos muestra la lista. No incluye el periodo final. |
 
-- Seleccionar la sede
-- Seleccionar el grupo
-- Seleccionar el periodo
-- Seleccionar la opción **“Grupo seleccionado”**
-- Dar clic en el botón **“Consolidar”** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-3.png"} alt={"Captura de Consolidar 3"}>Ver ejemplo</GuideImageTrigger>
+</GuideDataTable>
 
+#### 3. Consolidar las calificaciones
 
+1. Seleccione la **Sede**, el **Grupo** y el **Periodo**.
+2. En **Opciones de consolidación**, elija **Grupo seleccionado** o **Sede seleccionada**.
+3. Haga clic en **Consolidar**.
 
-### Calcular puestos del período
+SINAI agrega a la lista un proceso de tipo **Consolidado** por cada grupo y los procesa en segundo plano. El aviso es «El proceso de consolidación ha sido ejecutado correctamente. Por favor verifique en la lista el resultado de cada grupo.»
 
-El puesto muestra la posición de un estudiante frente a los demás estudiantes del mismo grupo, grado, nivel o institución. Por defecto, SINAI toma el promedio de las calificaciones de todas las asignaturas, pero la institución puede configurar hasta cinco criterios para definir el orden.
+<GuideCallout type="warning">
+  Con **Sede seleccionada**, elija primero una sede en la lista **Sede**. Si deja **[Seleccionar]**, SINAI no consolida ningún grupo, aunque muestre el aviso de proceso ejecutado.
+</GuideCallout>
 
-Para calcular el puesto del período es necesario que todos los grupos hayan sido consolidados. También es recomendable que el período se encuentre en estado cerrado para evitar modificaciones posteriores en las calificaciones.
+Para emitir boletines, consolide cuando el periodo ya esté cerrado para los docentes. Si un docente modifica calificaciones después de consolidar, vuelva a consolidar ese grupo.
 
-#### Alcance del cálculo
+#### 4. Revisar el resultado en la lista
 
-SINAI genera puestos en los siguientes niveles:
+La lista muestra los procesos del periodo seleccionado y los del cierre final. Cada fila tiene **Usuario**, **Tipo** con la fecha de creación, **Sede**, **Grupo**, **Periodo**, **Estado** con su fecha y hora, y **Observaciones**.
 
-1. **En el grupo:** frente a los estudiantes del mismo grupo.
-2. **En el grado:** frente a los estudiantes del mismo grado.
-3. **En el nivel:** frente a los estudiantes del nivel educativo, como preescolar, primaria, secundaria o media.
-4. **En la institución:** frente a los estudiantes de toda la institución.
+- **Procesado** aparece en verde.
+- **Error** aparece en rojo. La observación es «Error al procesar el consolidado. Por favor intente nuevamente».
+- **Iniciado** indica que el proceso aún no termina.
 
-El resultado corresponde al período seleccionado. Si se modifican las calificaciones de estudiantes del mismo grupo, grado, nivel o institución, el puesto puede cambiar cuando se ejecute nuevamente el cálculo.
+La barra de progreso muestra el porcentaje de procesos que ya no están en **Iniciado**. Haga clic en **Actualizar** para ver el estado más reciente.
 
-Para el cálculo de puestos se deben tener en cuenta los criterios definidos y el método de ordenación. Por defecto, todas las instituciones tienen asignado el criterio **“Calificación promedio general del estudiante”**. Los criterios se aplican en el orden establecido: por ejemplo, después del promedio general se puede usar el número de asignaturas con desempeño superior y las inasistencias para resolver empates.
+Use **Filtro** para ver solo una parte de la lista:
 
-#### ¿Cómo verificar los criterios asignados para calcular el puesto de los estudiantes?
+- **Todos**
+- **Generados Hoy**
+- **Sin procesar**
+- **Procesados**
+- **Terminados con error**
 
-Estando en la opción de consolidar desde el menú evaluación, se debe dar clic en el botón **“Criterios”** que se encuentra al lado del botón para calcular los puestos <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-4.png"} alt={"Captura de Consolidar 4"}>Ver ejemplo</GuideImageTrigger>
+En la columna **Opciones** de cada fila:
 
+- **Consolidar** vuelve a procesar ese grupo. SINAI muestra «Proceso terminado. Por favor verifique las observaciones.»
+- El botón verde de Excel abre en otra pestaña el consolidado de calificaciones del grupo en el periodo seleccionado. Solo aparece en los procesos de tipo **Consolidado**.
+- El botón rojo elimina el proceso de la lista. Confirme *¿Confirmar eliminación? Solo se eliminará si está pendiente*. Si el proceso ya terminó, SINAI muestra «No se puede eliminar este proceso porque ya fue procesado».
 
+**Reportes** abre los reportes analíticos de calificaciones.
 
-Aquí se encontrará los criterios asignados y los criterios generales que se encuentran disponibles en la Plataforma SINAI. <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-5.png"} alt={"Captura de Consolidar 5"}>Ver ejemplo</GuideImageTrigger>
+#### 5. Calcular los puestos
 
+Calcule los puestos cuando todos los grupos del periodo estén consolidados. El cálculo se hace para toda la institución, no para el grupo seleccionado.
 
+1. Seleccione el **Periodo**.
+2. En **Calcular puestos**, elija una opción:
+   - **Puestos del Periodo:** calcula los puestos del periodo seleccionado.
+   - **Puestos Finales:** calcula los puestos del cierre final del calendario.
+3. Haga clic en **Calcular**.
 
-#### Métodos de ordenación para calcular el puesto
+SINAI agrega el proceso a la lista y muestra «El proceso ha sido ejecutado. Por favor verifique el frente de cada grupo para verificar el resultado.» Si el cálculo falla, el proceso queda en **Error** con la descripción del error en **Observaciones**.
 
-**¿Para qué sirve el método de ordenación?** El método de ordenación sirve para ordenar los puestos de los estudiantes cuando hayan estudiantes empatados ya sea en su promedio de calificaciones o en otros criterios para el cálculo de puestos.
+**Criterios** abre en otra pestaña los criterios para el cálculo de puestos de la institución. Consulte [Criterios y métodos para el cálculo de puestos](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/cronogramas-y-periodos). El método de ordenación se configura en [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
 
-Para verificar el método de ordenación para calcular el puestos debemos ir al menú **Establecimiento, Calendarios, Configuración** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-7-1024x589.png"} alt={"Captura de Consolidar 7"}>Ver ejemplo</GuideImageTrigger>
+#### 6. Descargar los informes de puestos
 
-La institución puede elegir **orden simple**, **rango simple** o **rango denso**. Consulte [Criterios y métodos para el cálculo de puestos](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/cronogramas-y-periodos) para conocer cómo trata cada método los empates.
+1. En **Informes**, elija el informe:
+   - **Informe de puestos del periodo**
+   - **Cuadro de Honor por grupo**
+   - **Cuadro de Honor por grado**
+   - **Informe de puestos finales**
+   - **Cuadro de honor final por grupo**
+   - **Cuadro de honor final por grado**
+2. Haga clic en **Informes**.
 
+Se abre la ventana **Descargar Informe** con el visor del informe. Los informes del periodo usan el periodo seleccionado y los finales usan el cierre del calendario. Los cuadros de honor muestran los tres primeros puestos.
 
-Una vez definidos los criterios y el método de ordenación, ejecute el cálculo para toda la institución. A diferencia de la consolidación, normalmente se realiza una sola vez; sin embargo, puede repetirlo si se corrigen calificaciones o se ajusta la configuración.
+#### 7. Configuraciones de la pantalla
 
-#### Pasos para realizar el cálculo de puestos del período
+Haga clic en el botón del engranaje. Se abre **Configuraciones**, con el sistema de evaluación actual y dos pestañas.
 
-- Seleccionar el periodo
-- Seleccionar la opción **“Puestos del periodo”**
-- Dar clic en el botón **“Calcular”** <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-8-1024x267.png"} alt={"Captura de Consolidar 8"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/consolidar-y-calcular-puestos/configuraciones-consolidar.jpg" alt="Ventana Configuraciones con la pestaña Consolidación de Nota Final y su advertencia">
+  Ver ejemplo
+</GuideImageTrigger>
 
+- **1. Consolidación de Nota Final:** **Activado** hace que, al consolidar, SINAI calcule automáticamente la nota final del periodo. Aplica al sistema de evaluación seleccionado.
+- **2. Cálculo de Promedio en Puestos:** **Por Asignatura** calcula el promedio con cada asignatura; **Por Áreas** agrupa las asignaturas por áreas. Aplica al calendario para toda la institución.
 
+Haga clic en **Actualizar** para guardar o en **Cancelar** para cerrar. Si el guardado es correcto, SINAI muestra «Las configuraciones se guardaron exitosamente.»
 
-#### Calcular puestos finales
-
-Este procedimiento se realiza finalizando el calendario académico para determinar los puestos finales de los estudiantes durante el año
-
-1. **Pasos para realizar el cálculo de puestos finales:**
-
-- Seleccionar el periodo
-- Seleccionar la opción **“Puestos finales”**
-- Dar clic en el botón **“Calcular”**. <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-9.png"} alt={"Captura de Consolidar 9"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-Una vez realizado el consolidado de calificaciones y calculado el puesto de los estudiantes, encontrará en la parte inferior de la pantalla los resultados generados por el sistema con relación al procedimiento realizado: <GuideImageTrigger src={"/images/wordpress/2025/02/Consolidar-10.png"} alt={"Captura de Consolidar 10"}>Ver ejemplo</GuideImageTrigger>
-
-
-
+<GuideCallout type="warning">
+  Lea la advertencia de la primera pestaña. Al consolidar con la consolidación de nota final activada, SINAI recalcula la nota final del periodo y elimina cualquier ajuste manual previo. La advertencia recomienda desactivarla y no volver a habilitarla.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar antes de consolidar y calcular puestos?"}>
-    Confirme que las calificaciones estén registradas, que todos los grupos del período estén consolidados y que los criterios y el método de ordenación estén definidos. Para emitir resultados definitivos, cierre el período antes de ejecutar el cálculo.
+  <GuideFAQItem index="01" question={"¿Puedo consolidar varias veces el mismo periodo?"}>
+    Sí. Cada vez que hace clic en **Consolidar**, SINAI agrega un proceso nuevo y vuelve a calcular las definitivas con las calificaciones registradas en ese momento. También puede volver a procesar un grupo con el botón **Consolidar** de su fila en la lista.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cuándo debo volver a calcular los puestos?"}>
-    Vuelva a consolidar los grupos afectados y calcule nuevamente los puestos cuando se corrijan calificaciones o se modifiquen los criterios o el método de ordenación.
+  <GuideFAQItem index="02" question={"Hice clic en Consolidar con Sede seleccionada y no aparece ningún proceso. ¿Por qué?"}>
+    La lista **Sede** estaba en **[Seleccionar]**. Con esa opción SINAI no encuentra grupos para consolidar, aunque muestre el aviso de proceso ejecutado. Elija una sede y vuelva a hacer clic en **Consolidar**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿El cálculo de puestos se hace por cada grupo?"}>
-    No. Aunque la consolidación puede ejecutarse por sede o por grupo, el cálculo de puestos procesa toda la institución y genera los resultados para grupo, grado, nivel e institución.
+  <GuideFAQItem index="03" question={"Un grupo quedó en Error. ¿Qué hago?"}>
+    Haga clic en **Consolidar** en la fila de ese grupo para procesarlo de nuevo y luego en **Actualizar**. La observación del error es «Error al procesar el consolidado. Por favor intente nuevamente».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no puedo eliminar un proceso de la lista?"}>
+    Solo se eliminan los procesos que siguen en **Iniciado**. Si ya terminó, SINAI muestra «No se puede eliminar este proceso porque ya fue procesado».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿El cálculo de puestos se hace por cada grupo?"}>
+    No. Aunque la consolidación puede hacerse por grupo o por sede, **Calcular** procesa toda la institución para el periodo seleccionado o para el cierre final. Antes de calcular, consolide todos los grupos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Cuándo debo volver a calcular los puestos?"}>
+    Cuando se corrijan calificaciones, vuelva a consolidar los grupos afectados y calcule de nuevo. Haga lo mismo si cambia los criterios, el método de ordenación o el tipo de promedio en **Cálculo de Promedio en Puestos**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Dónde descargo el consolidado de calificaciones de un grupo?"}>
+    En la lista, use el botón verde de Excel de la fila del grupo. También puede usar **Descargar Informes** en la parte superior, que abre los informes de consolidados en otra pestaña.
   </GuideFAQItem>
 </GuideFAQ>

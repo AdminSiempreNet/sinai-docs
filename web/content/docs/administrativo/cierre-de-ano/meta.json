@@ -6,10 +6,13 @@
     "comision-de-evaluacion",
     "comision-de-evaluacion-proceso",
     "ajuste-de-nota-final",
+    "promocion-anticipada",
+    "criterios-de-promocion",
     "procesar-promocion",
     "como-procesar-la-promocion",
     "recuperaciones-finales",
     "trasladar-matricula",
+    "foliar-libro",
     "informes"
   ],
   "icon": "Award"

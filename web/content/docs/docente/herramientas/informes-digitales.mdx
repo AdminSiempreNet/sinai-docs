@@ -1,41 +1,146 @@
 ---
 title: "Informes Digitales"
-description: "Genere y comparta informes digitales desde SINAI."
+description: "Genere los boletines de un grupo y un periodo, envíelos por WhatsApp a cada estudiante o por correo en un archivo comprimido, y consulte el estado y el historial de envíos."
 guide: true
 wordpressId: 35479
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-informes-digitales/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="A9GGk7F7G14" title="Informes Digitales"
-  odyseeUrl="https://odysee.com/informes-digitales-docente%3A2b7c7520293a63bb233c4e7a50ab3ecea7ddb049"
-/>
+<YouTube id="A9GGk7F7G14" title="Informes Digitales" odyseeUrl="https://odysee.com/informes-digitales-docente%3A2b7c7520293a63bb233c4e7a50ab3ecea7ddb049" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-1. Abra **Herramientas > Informes digitales**.
-2. Seleccione el informe, grupo y período requeridos.
-3. Genere la vista previa y confirme la información.
-4. Descargue o comparta el informe mediante las opciones habilitadas.
+### 1. ¿Qué es Informes Digitales?
 
-Compruebe que el período y los destinatarios sean correctos antes de realizar una distribución digital. Si el informe no muestra información, valide que el registro académico del grupo esté actualizado.
+**Informes Digitales** genera los boletines de los estudiantes de un grupo en un periodo y los entrega de dos formas:
 
+- **Por WhatsApp:** un informe individual para cada estudiante que usted seleccione.
+- **Por correo electrónico:** un enlace para descargar un archivo comprimido (zip) con todos los informes, para los destinatarios que usted escriba. SINAI lo recomienda solo para docentes o directivos.
+
+Ingrese por **Herramientas → Informes Digitales**. La opción aparece en el menú solo si su institución la habilitó; si no la ve, solicítela al área administrativa.
+
+La pantalla tiene dos pestañas: **Generar y enviar** e **Historial**. El botón de actualizar, a la derecha de las pestañas, recarga el estado de los informes.
+
+<GuideCallout>
+  Si la institución no tiene activo el servicio, la lista **Informe** solo muestra la opción «0 - No hay informes asignados, solicite la asignación de informes». Solicite la asignación al área administrativa.
+</GuideCallout>
+
+#### 2. Pestaña Generar y enviar
+
+<GuideImageTrigger src="/images/guides/docente-informes-digitales/generar-y-enviar.jpg" alt="Pestaña Generar y enviar con el grupo, el periodo, el informe y tres estudiantes marcados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+En el panel **Estudiantes**, de la izquierda, defina qué se genera:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Grupo** | Grupos que usted dirige en el calendario. |
+| **Periodo** | Periodo del que se generan los informes. |
+
+</GuideDataTable>
+
+A la derecha:
+
+- **Informe:** boletines que su institución habilitó para entrega digital. Cada uno aparece con su número y su nombre.
+- **Tabla de estudiantes:** los estudiantes matriculados del grupo, con su fotografía y el campo **WhatsApp**.
+
+Para seleccionar estudiantes, marque su casilla o haga doble clic sobre la fila. La casilla del encabezado selecciona o quita a todos. Al cambiar de grupo se limpia la selección.
+
+<GuideCallout type="warning">
+  El campo **WhatsApp** guarda el número en los datos del estudiante: al escribir un número y salir del campo, SINAI lo actualiza en la ficha del estudiante. Solo acepta números. Escriba el número solo en los estudiantes cuyo teléfono falte o esté desactualizado.
+</GuideCallout>
+
+#### 3. Generar y enviar los informes
+
+1. Seleccione el **Grupo** y el **Periodo**.
+2. En **Informe**, elija el boletín. Aunque la lista ya muestre uno, selecciónelo con un clic: si no elige uno, SINAI muestra «Debe seleccionar un Informe, antes de Generar».
+3. Marque los estudiantes.
+4. Haga clic en **Generar**.
+5. En la ventana **Generar informes**, elija cómo enviarlos:
+   - **WhatsApp a cada estudiante:** deje marcada la casilla para enviar los informes por WhatsApp a los estudiantes seleccionados. SINAI avisa que el envío puede tardar varios minutos.
+   - **Correo con el archivo comprimido:** escriba el **correo** de cada destinatario y, si quiere, su **nombre**. Haga clic en **Agregar** para añadir otro y en la papelera para quitar uno.
+6. Haga clic en **Generar y enviar**.
+
+SINAI crea el informe en segundo plano y la pantalla muestra su avance debajo de la lista **Informe**.
+
+- Si no marca estudiantes, SINAI muestra «Debe seleccionar al menos un estudiante» o, si nunca marcó ninguno, «Debe haber al menos un parámetro válido».
+- Solo puede haber un informe por grupo y periodo. Si ya existe, SINAI muestra «Ya existe un reporte para el periodo y grupo seleccionados.» Elimínelo antes de generar otro.
+
+#### 4. Seguir el estado del informe
+
+Cuando hay un informe para el grupo y el periodo, la pantalla muestra un resumen con:
+
+- **Estado:** por ejemplo «Pendiente de envío», «Se inició el procesamiento del informe» o «Informe generado correctamente», con el momento de la última actualización. Haga clic en el botón de actualizar para ver el estado reciente.
+- **Informe y estudiantes:** el boletín elegido y cuántos estudiantes incluye.
+- **Descargar comprimido con boletines:** enlace al archivo zip, disponible cuando el informe está generado.
+- **Historial de envios:** abre la ventana con los envíos hechos.
+
+Los botones de la izquierda del resumen son:
+
+<GuideDataTable>
+
+| Botón | Qué hace |
+| --- | --- |
+| **Reenviar** | Reenvía el informe a los destinatarios iniciales. Debe esperar al menos 60 minutos desde el último envío; si no, SINAI muestra «El reenvío de un informe debe esperar al menos 60 minutos». |
+| **Regenerar** | Vuelve a generar el informe y lo envía a los destinatarios iniciales. No aparece cuando el informe ya está generado. |
+| **Eliminar** | Elimina el informe generado. Si está en procesamiento, SINAI muestra «No se puede eliminar un reporte que ya ha iniciado a procesarse.» |
+
+</GuideDataTable>
+
+#### 5. Pestaña Historial
+
+Lista los informes generados para el grupo y el periodo seleccionados. Si no hay ninguno, muestra «No hay informes generados».
+
+<GuideImageTrigger src="/images/guides/docente-informes-digitales/historial.jpg" alt="Pestaña Historial con los filtros de grupo y periodo y el mensaje No hay informes generados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Cada fila muestra **Fecha** de la última actualización, **Grupo** con el número de estudiantes y el vínculo **Historial de envios**, el **Informe** con su estado y el enlace **Descargar comprimido con boletines**, y los botones **Reenviar**, **Regenerar** y **Eliminar**, que funcionan como en la pestaña anterior.
+
+#### 6. Historial de envíos
+
+**Historial de envios** abre una línea de tiempo agrupada por fecha. Para cada envío muestra quién lo hizo y, por destinatario:
+
+- **Correo:** «Correo enviado» o «Inconvenientes en envío del correo».
+- **WhatsApp:** «Enviado por WhatsApp» o «Inconvenientes al enviar informe por WhatsApp», con el enlace **Descargar** del informe del estudiante.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Informes Digitales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Quién puede usar Informes Digitales?"}>
+    Los usuarios administrativos y los docentes. Los demás roles son enviados a la pantalla de acceso no permitido. El docente trabaja con los grupos que dirige.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Informes Digitales» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Al hacer clic en Generar aparece «Debe seleccionar un Informe, antes de Generar». ¿Qué hago?"}>
+    Elija el boletín en la lista **Informe**. Aunque la lista muestre un informe desde el inicio, selecciónelo con un clic para que SINAI lo tome.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Informes Digitales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué aparece «Ya existe un reporte para el periodo y grupo seleccionados.»?"}>
+    Solo se guarda un informe digital por grupo y periodo. Use **Regenerar** para producirlo de nuevo o **Eliminar** para borrarlo y generar otro informe distinto.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no puedo eliminar el informe?"}>
+    Si el informe está en procesamiento, SINAI muestra «No se puede eliminar un reporte que ya ha iniciado a procesarse.» Espere a que termine y actualice el estado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cuánto tarda el envío por WhatsApp?"}>
+    Puede tardar varios minutos después de generar los informes. La ventana **Generar informes** lo advierte. Consulte el resultado en **Historial de envios**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Un estudiante aparece con «Inconvenientes al enviar informe por WhatsApp». ¿Qué reviso?"}>
+    Verifique el número escrito en el campo **WhatsApp** del estudiante. Corríjalo y use **Reenviar**. Recuerde que el reenvío exige esperar 60 minutos desde el último envío.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Cómo verifico que el informe quedó generado?"}>
+    El estado debe decir «Informe generado correctamente» y debe aparecer el enlace **Descargar comprimido con boletines**. Si no cambia, haga clic en el botón de actualizar.
   </GuideFAQItem>
 </GuideFAQ>

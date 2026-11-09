@@ -1,12 +1,243 @@
 ---
-title: "Configuración de aspectos y criterios"
-description: "Esta guía se consolidó en Ficha observador del estudiante (ficha clásica)."
+title: "Configuración del observador"
+description: "Habilite los módulos de la ficha del observador y defina opciones, tipos de seguimiento, campos personalizados, escala y aspectos y criterios de valoración."
 guide: true
 wordpressId: 29569
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/configuracion-de-aspectos-y-criterios/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-Esta guía forma parte de la **Ficha clásica** en **Ficha observador del estudiante**.
+## Video tutorial
 
-[Ir a Ficha observador (ficha clásica)](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante?version=clasica)
+<GuideVideoPending>
+  - Configuración del observador: módulos, opciones, tipos de seguimiento, campos personalizados, escala y aspectos y criterios. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la configuración del observador?
+
+**Configuración** es la sección del Observador donde la institución define qué módulos usa la ficha del observador del estudiante y cómo funcionan: qué grupos y estudiantes se listan, los tipos de seguimiento, los campos adicionales del formulario de seguimiento, la escala y los aspectos y criterios de la valoración.
+
+En el Observador, abra el menú lateral con el botón de tres líneas, junto al título, y haga clic en **Configuración**. Esta opción no aparece para el rol docente.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-modulos.jpg" alt="Sección Configuración del Observador con el menú lateral y la pestaña Módulos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La sección se organiza en pestañas. Algunas solo aparecen si el módulo correspondiente está habilitado:
+
+- **Módulos**, **Opciones**, **Tipos de seguimiento** y **Campos personalizados:** siempre visibles.
+- **Caracterización:** visible si el módulo **Caracterización** está habilitado.
+- **Escala** y **Aspectos y criterios:** visibles si el módulo **Valoración** está habilitado.
+
+El botón **Ayuda**, en la esquina superior derecha, abre la ayuda de la pestaña activa.
+
+#### 2. Habilitar los módulos
+
+En la pestaña **Módulos**, bajo **Disponibilidad de módulos**, defina qué herramientas estarán disponibles en el Observador para la institución.
+
+1. Haga clic en la tarjeta de cada módulo, o en su casilla, para marcarlo o desmarcarlo.
+2. Haga clic en **Guardar**.
+
+<GuideDataTable>
+
+| Módulo | Qué habilita |
+| --- | --- |
+| **Caracterización** | La sección **Caracterización** del menú lateral y la pestaña **Caracterización** de esta configuración. |
+| **Valoración** | La sección **Valoración** del menú lateral y las pestañas **Escala** y **Aspectos y criterios** de esta configuración. |
+| **Anotaciones disciplinarias** | La pestaña **Anotaciones disciplinarias** de la sección **Seguimiento**. |
+
+</GuideDataTable>
+
+Si el guardado es correcto, SINAI muestra **Configuracion creado correctamente**.
+
+<GuideCallout type="warning">
+  Los módulos se habilitan para toda la institución. Al desmarcar uno, su sección deja de aparecer en el menú del Observador para todos los usuarios.
+</GuideCallout>
+
+#### 3. Definir las opciones generales
+
+La pestaña **Opciones** controla qué grupos y estudiantes aparecen en las listas del Observador.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-opciones.jpg" alt="Pestaña Opciones con Mostrar grupos y Mostrar sólo estudiantes matriculados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Opción | Qué define |
+| --- | --- |
+| **Mostrar grupos** | Qué grupos puede ver el docente: **Direccion** (solo los grupos de los que es director), **Asignacion** (los grupos de su asignación académica) o **Todos**. |
+| **Mostrar sólo estudiantes matriculados** | Si está activa, los usuarios solo ven los estudiantes en estado matriculado. |
+
+</GuideDataTable>
+
+1. Elija el valor de **Mostrar grupos**.
+2. Active o desactive **Mostrar sólo estudiantes matriculados**.
+3. Haga clic en **Guardar**.
+
+Si el guardado es correcto, SINAI muestra **Configuracion guardada con éxito**.
+
+#### 4. Administrar los tipos de seguimiento
+
+Los tipos de seguimiento son las categorías que se eligen al registrar un seguimiento, por ejemplo una felicitación o un llamado de atención. Se administran en la pestaña **Tipos de seguimiento**.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-tipos-seguimiento.jpg" alt="Pestaña Tipos de seguimiento con el campo de nombre y la lista de tipos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para agregar un tipo:
+
+1. Escriba el nombre en el campo **Nombre de la anotacion...**. Debe tener al menos 3 caracteres; si no, SINAI muestra **Debe contener al menos 3 caracteres**.
+2. Haga clic en **Agregar**. SINAI muestra **Se creo correctamente**.
+
+Para cambiar el nombre de un tipo, haga clic sobre el nombre en la lista, escríbalo de nuevo y pulse **Enter** o haga clic fuera del campo. SINAI guarda el cambio de inmediato. Con **Esc** descarta lo escrito.
+
+Para eliminar tipos:
+
+1. Marque la casilla de cada tipo. **Seleccionar todos** marca o desmarca la lista completa.
+2. Haga clic en **Eliminar**.
+3. En la ventana **Confirmar eliminación**, que pregunta *¿Está seguro que desea eliminar los registros seleccionados? Esta operación no se puede revertir*, haga clic en **Si, eliminar**.
+
+Si no marcó ningún tipo, SINAI muestra **Seleccione minimo una opcion para eliminar**. Si la eliminación es correcta, el aviso es **Se elimino con exito**.
+
+Cuando la institución no tiene tipos registrados, junto a **Eliminar** aparece el botón **Predeterminados**. Abre la ventana **Tipo de anotaciones predeterminadas** con los tipos que sugiere SINAI:
+
+- **Agregar seleccionadas:** agrega solo los tipos que marcó en la ventana.
+- **Agregar Todas:** agrega todos los tipos de la lista.
+
+#### 5. Crear campos personalizados
+
+Los campos personalizados son casillas adicionales que aparecen en el formulario de registro de seguimiento, debajo de los campos fijos **Seguimiento**, **Periodo**, **Fecha** y **Tipos seguimientos**. Se administran en la pestaña **Campos personalizados**, donde cada campo se muestra como una tarjeta con su orden, nombre, descripción, tipo de campo, altura y si es obligatorio y editable por el estudiante.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-campos-personalizados.jpg" alt="Pestaña Campos personalizados con un campo registrado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+1. Haga clic en **Agregar**. Se abre la ventana **Guardar campos**.
+2. Diligencie los datos del campo.
+3. Haga clic en **Agregar**, al final de la ventana. SINAI muestra **Se creo correctamente**.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Nombre** | Título del campo en el formulario. Mínimo 3 caracteres. |
+| **Descripción** | Texto de ayuda que se muestra dentro del campo vacío. Mínimo 3 caracteres. |
+| **Orden** | Posición del campo en el formulario. Debe ser 1 o mayor. |
+| **Tipo de componente** | **Campo amplio para texto largo** o **Campo corto para texto simple**. |
+| **Altura** | Número de líneas del campo, hasta 5. Solo se puede cambiar en el campo amplio para texto largo. |
+| **Obligatorio** | Exige diligenciar el campo al registrar el seguimiento. |
+| **Editable por el estudiante** | Marca el campo como editable por el estudiante. |
+
+</GuideDataTable>
+
+Para modificar un campo, haga clic en **Editar** en su tarjeta. La ventana **Editar campos** muestra los datos actuales; cambie lo necesario y haga clic en **Actualizar**. SINAI muestra **Se actualizo correctamente**.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/ventana-editar-campo.jpg" alt="Ventana Editar campos con nombre, descripción, orden, tipo de componente, altura y casillas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para ver cómo queda el formulario de seguimiento con los campos personalizados, haga clic en **Previsualizar**. La ventana **Vista previa** es solo de consulta.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/ventana-vista-previa.jpg" alt="Ventana Vista previa del formulario de seguimiento con un campo personalizado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para eliminar campos, márquelos en su tarjeta, haga clic en **Eliminar** y confirme con **Si, eliminar**. Los avisos son los mismos de los tipos de seguimiento.
+
+#### 6. Configurar la caracterización
+
+La pestaña **Caracterización** no tiene opciones propias. Muestra el aviso *La configuración de la caracterización está disponible en el menú Establecimiento > Institución > Configuración de Caracterización de Estudiantes.*
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-caracterizacion.jpg" alt="Pestaña Caracterización con el aviso y el botón para ir a la configuración">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Haga clic en **Haz clic en el botón para ir a la configuración** para abrir esa pantalla en una pestaña nueva del navegador. Allí se definen las características, sus aspectos y su escala, que luego se registran en la sección **Caracterización** del Observador.
+
+#### 7. Asignar la escala de valoración
+
+En la pestaña **Escala** se elige la escala con la que se valoran los aspectos y criterios del observador en el calendario actual.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-escala.jpg" alt="Pestaña Escala con la lista de escalas y la sección Equivalencias">
+  Ver ejemplo
+</GuideImageTrigger>
+
+1. Seleccione la escala en la lista **Escala**. Si no aparece ninguna, la lista muestra **No hay información disponible**.
+2. Haga clic en **Guardar**. SINAI muestra **Configuracion guardada con éxito**.
+
+La sección **Equivalencias** muestra, para la escala guardada, cada desempeño con su valoración, su **Mínimo** y su **Máximo**.
+
+Para crear una escala nueva, haga clic en **Agregar**. Se abre en una pestaña nueva la pantalla de escalas personalizadas del calendario.
+
+<GuideCallout>
+  La escala se guarda para el calendario con el que ingresó a SINAI. Cada año debe asignarla de nuevo en el calendario correspondiente.
+</GuideCallout>
+
+#### 8. Definir aspectos y criterios
+
+Los aspectos son los temas que se valoran en el observador, como la atención o el respeto, y los criterios son los enunciados que se valoran dentro de cada aspecto. Se definen en la pestaña **Aspectos y criterios**, donde cada aspecto muestra su número de criterios y, debajo, la lista de criterios. La flecha junto al nombre oculta o muestra los criterios.
+
+<GuideImageTrigger src="/images/guides/observador-configuracion/pestana-aspectos-criterios.jpg" alt="Pestaña Aspectos y criterios con aspectos y sus criterios">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para agregar un aspecto:
+
+1. Haga clic en **Agregar aspecto**.
+2. En la ventana **Agregar aspecto**, escriba el **Nombre del aspecto**.
+3. Haga clic en **Guardar**. SINAI muestra **Aspecto creado correctamente**.
+
+Para agregar un criterio:
+
+1. En el aspecto, haga clic en **Criterio**.
+2. En la ventana **Agregar criterio**, que muestra el aspecto elegido, escriba el **Nombre del criterio**.
+3. Haga clic en **Guardar**. SINAI muestra **Criterio creado correctamente**.
+
+<GuideImageRow>
+<GuideImageTrigger src="/images/guides/observador-configuracion/ventana-agregar-aspecto.jpg" alt="Ventana Agregar aspecto con el nombre del aspecto">
+  Ver ejemplo
+</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/observador-configuracion/ventana-agregar-criterio.jpg" alt="Ventana Agregar criterio con el aspecto elegido y el nombre del criterio">
+  Ver ejemplo
+</GuideImageTrigger>
+</GuideImageRow>
+
+Los nombres de aspectos y criterios deben tener al menos 3 caracteres; si no, la ventana muestra **Debe contener al menos 3 caracteres**.
+
+Para modificar o eliminar:
+
+- **Editar** (aspecto) o el botón de lápiz (criterio): abre la ventana **Editar aspecto** o **Editar criterio**. Cambie el nombre y haga clic en **Guardar**.
+- Botón de papelera: pide confirmar con **Sí, eliminar**. SINAI muestra **Aspecto eliminado correctamente** o **Criterio eliminado correctamente**. El botón del aspecto queda inactivo mientras el aspecto tenga criterios; elimine primero sus criterios.
+
+**Generar predeterminados** crea los aspectos y criterios que sugiere SINAI. Confirme con **Sí, generar**. SINAI muestra **Aspectos y criterios predeterminados generados correctamente**. Los que ya existen con el mismo nombre no se duplican; si todos existían, el aviso es **Los aspectos y criterios predeterminados ya estaban registrados**.
+
+<GuideCallout type="warning">
+  Los aspectos y criterios se guardan para el calendario actual y son los que se valoran en la sección **Valoración**. Eliminar un aspecto o un criterio no se puede revertir.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="No veo la opción Configuración en el menú del Observador. ¿Por qué?">
+    La opción **Configuración** no se muestra al rol docente. Ingrese con un usuario administrativo, como el rector o un coordinador.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="¿Por qué no aparecen las pestañas Escala y Aspectos y criterios?">
+    Solo se muestran cuando el módulo **Valoración** está habilitado. Márquelo en la pestaña **Módulos** y haga clic en **Guardar**. Lo mismo ocurre con la pestaña **Caracterización** y el módulo **Caracterización**.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="Elegí otra escala y las equivalencias no cambiaron. ¿Por qué?">
+    **Equivalencias** muestra la escala guardada para el calendario, no la que está elegida en la lista. Haga clic en **Guardar** para asignar la escala y ver sus equivalencias.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="No puedo eliminar un aspecto. ¿Qué hago?">
+    Un aspecto con criterios no se puede eliminar: su botón de papelera queda inactivo. Elimine primero sus criterios y luego el aspecto.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Dónde está el botón Predeterminados de los tipos de seguimiento?">
+    Solo aparece cuando la institución no tiene ningún tipo de seguimiento registrado. Si ya hay tipos, agregue los nuevos con **Agregar**.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Dónde se configuran las características que se registran en Caracterización?">
+    En **Establecimiento > Institución > Configuración de Caracterización de Estudiantes**. La pestaña **Caracterización** de esta sección tiene un botón que abre esa pantalla.
+  </GuideFAQItem>
+</GuideFAQ>

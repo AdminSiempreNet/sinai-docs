@@ -1,58 +1,138 @@
 ---
 title: "Acudientes"
-description: "Conozca las opciones de acudientes y siga el procedimiento correspondiente en SINAI."
+description: "Consulte los acudientes y familiares de los estudiantes, cree o edite un acudiente, asígnele estudiantes y quite relaciones."
 guide: true
 wordpressId: 29395
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/acudientes/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="0pQ_GOPotUY" title="Acudientes"
-  odyseeUrl="https://odysee.com/listado-de-acudientes%3A2d3ecd7e74abcb957d648ba00f7b79237af8bf8c"
-/>
+<YouTube id="0pQ_GOPotUY" title="Acudientes" odyseeUrl="https://odysee.com/listado-de-acudientes%3A2d3ecd7e74abcb957d648ba00f7b79237af8bf8c" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-En esta opción puedes consultar los acudientes asociados a los estudiantes, filtrarlos por sede o grupo y registrar un nuevo acudiente cuando sea necesario.
+### 1. ¿Qué es Gestión de Acudientes?
 
-## 1. Accede a Gestión de Acudientes
+**Gestión de Acudientes** lista las personas relacionadas con los estudiantes: acudientes y otros familiares, con su parentesco. Desde aquí puede buscar un acudiente, crear uno nuevo, editar sus datos, asignarle estudiantes y quitar la relación con un estudiante.
 
-En el módulo **Administrativo**, ingresa a **Matrícula > Listados > Acudientes**.
+Ingrese a **Matrícula → Listados → Acudientes**.
 
-## 2. Consulta la lista de acudientes
+<GuideImageTrigger src="/images/guides/acudientes/acceso-acudientes.jpg" alt="Menú Matrícula con Listados desplegado y la opción Acudientes">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Puedes ubicar un registro de dos formas:
+El botón **Ayuda** del panel izquierdo abre esta guía.
 
-1. Escribe el nombre o documento en **Buscar Acudiente** y ejecuta la búsqueda.
-2. Selecciona la **Sede** y el **Grupo** para cargar los acudientes relacionados con los estudiantes de ese grupo.
+#### 2. Consultar la lista por grupo
 
-Mantén activa la opción **Solo Acudientes** si deseas excluir otros contactos asociados al estudiante. <GuideImageTrigger src={"/images/guides/acudientes/gestion-de-acudientes.png"} alt={"Gestión de acudientes en SINAI"}>Ver ejemplo</GuideImageTrigger>
+En el panel izquierdo, bajo **Lista de Acudientes según:**
 
+1. Seleccione la **Sede**.
+2. Seleccione el **Grupo**.
 
+La tabla **Lista de Acudientes** muestra las personas relacionadas con los estudiantes del grupo, en el calendario seleccionado en la parte superior de SINAI.
 
-## 3. Crea o elimina una relación
+- Con **Solo Acudientes** marcado, que es lo predeterminado, la lista muestra solo a quienes están registrados como acudientes del estudiante.
+- Si desmarca **Solo Acudientes**, aparece la lista **Parentesco** para ver todos los familiares o solo los de un parentesco, por ejemplo **PADRE** o **MADRE**.
+- Si cambia de grupo con **Solo Acudientes** desmarcado, la tabla muestra solo los familiares que no están marcados como acudientes.
 
-- Haz clic en **Nuevo Acudiente** para registrar un acudiente.
-- Selecciona un registro de la lista y usa el botón rojo de eliminar para quitar la relación del acudiente con el estudiante.
+<GuideImageTrigger src="/images/guides/acudientes/todos-los-familiares.jpg" alt="Gestión de Acudientes con Solo Acudientes desmarcado, la lista Parentesco y los familiares del grupo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Antes de eliminar una relación, verifica que el estudiante tenga otro contacto válido cuando corresponda.
+La tabla muestra **Nombre Completo**, **Documento**, **Acudiente**, **Fecha nacimiento**, **Edad**, **Parentescos**, **Teléfono**, **Estudiante Acudido** y el botón **Editar**. Si no hay registros, aparece «No se encontraron acudientes con estudiantes asignados para la lista.».
 
+#### 3. Buscar un acudiente
+
+1. En **Buscar Acudiente**, escriba el nombre, el apellido o el número de documento del acudiente o del estudiante.
+2. Haga clic en el botón de la lupa o presione Enter.
+
+SINAI busca entre las relaciones del calendario seleccionado, sin tener en cuenta la sede ni el grupo. Si no encuentra coincidencias, busca entre todos los acudientes registrados; esos resultados aparecen sin estudiante acudido.
+
+<GuideImageTrigger src="/images/guides/acudientes/lista-acudientes.jpg" alt="Lista de Acudientes con el resultado de una búsqueda">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- Escriba los nombres en mayúsculas o en minúsculas, sin mezclarlas.
+- Si hace clic en la lupa con el cuadro vacío, la tabla muestra todas las relaciones del grupo seleccionado.
+
+#### 4. Crear un acudiente
+
+1. Haga clic en **Nuevo Acudiente**. El formulario **Acudiente** se abre en otra pestaña.
+2. Complete los datos.
+3. Haga clic en **Crear Acudiente**.
+
+<GuideImageTrigger src="/images/guides/acudientes/nuevo-acudiente.jpg" alt="Formulario Acudiente vacío con el botón Crear Acudiente">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Apellidos** y **Nombres** | Nombre del acudiente. Son obligatorios. |
+| **Tipo de Documento** y **Número de Documento** | Identificación del acudiente. Son obligatorios. |
+| **Mun. de Exp Docmento** | Municipio de expedición del documento. Si no elige uno de la lista, SINAI muestra «Debe Seleccionar un municipio valido de la lista.». |
+| **Dirección**, **Teléfono** y **Correo Electrónico** | Datos de contacto. El correo debe tener un formato válido. |
+| **Fecha de nacimiento** | Fecha de nacimiento del acudiente. Con ella SINAI calcula la edad de la lista. |
+
+</GuideDataTable>
+
+SINAI muestra «Acudiente creado correctamente» y deja abierto el acudiente para que le asigne estudiantes. Si ya existe un acudiente con ese número de documento, SINAI abre el registro existente y muestra «Se ha encontrado un acudiente con el número de documento digitado.».
+
+#### 5. Editar el acudiente y asignarle estudiantes
+
+En la fila del acudiente, haga clic en **Editar**. El formulario **Acudiente** muestra sus datos y, a la derecha, el panel **Agregar Estudiantes**.
+
+<GuideImageTrigger src="/images/guides/acudientes/editar-acudiente.jpg" alt="Formulario Acudiente con sus datos, el panel Agregar Estudiantes y la lista de estudiantes del acudiente">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- Para corregir los datos, cámbielos y haga clic en **Guardar Cambios**.
+- Para asignarle un estudiante:
+  1. En **Agregar Estudiantes**, seleccione **Sedes**, **Grupos** y **Estudiantes**.
+  2. Seleccione el **Parentesco**. Es obligatorio.
+  3. Deje marcada **Acudiente** si esta persona es el acudiente del estudiante. Desmárquela si solo es un familiar.
+  4. Haga clic en **Agregar**.
+
+El estudiante aparece en **Lista de estudiante(s) del acudiente**, con su documento, dirección, teléfono, correo, parentesco y la casilla **Acudido**.
+
+**Volver a la lista** regresa a **Gestión de Acudientes**. **Nuevo Acudiente** abre un formulario vacío.
+
+#### 6. Quitar la relación con un estudiante
+
+Puede hacerlo desde la lista o desde el formulario del acudiente:
+
+- **Desde Gestión de Acudientes:** marque la casilla de **Selec.** en las filas que quiere quitar y haga clic en el botón rojo con la papelera, junto a **Nuevo Acudiente**.
+- **Desde el formulario Acudiente:** haga clic en **Quitar** en la fila del estudiante.
+
+En los dos casos, confirme el mensaje *¿Confirma que desea quitar el estudiante al Acudiente seleccionado?* Si no marcó ninguna fila, SINAI muestra «Debe Seleccionar un estudiante en la lista».
+
+<GuideCallout type="warning">
+  Quitar elimina la relación entre el acudiente y el estudiante, no el registro del acudiente. Antes de quitarla, verifique que el estudiante tenga otro acudiente registrado.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Acudientes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué diferencia hay entre acudiente y familiar?"}>
+    Cada relación tiene un parentesco y la casilla **Acudiente**. Si la casilla está marcada, la persona es acudiente del estudiante y aparece con **Solo Acudientes** marcado. Si no, es un familiar registrado y solo aparece al desmarcar **Solo Acudientes**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Acudientes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué la lista sale vacía?"}>
+    Con **Solo Acudientes** marcado, la tabla solo muestra relaciones marcadas como acudiente. Desmarque la casilla para ver los demás familiares, o busque por el nombre o el documento del estudiante.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Acudientes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Qué permisos necesito?"}>
+    El rector no necesita permisos adicionales. Los demás funcionarios necesitan el permiso 502 para crear, editar, asignar estudiantes y quitar relaciones. Sin él, SINAI muestra un mensaje como «No tiene asignado el permiso Nº502».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no aparece la edad del acudiente?"}>
+    SINAI calcula la edad con la **Fecha de nacimiento**. Si el acudiente no la tiene registrada o la fecha es posterior al día de hoy, la edad no se muestra. Corrija la fecha con **Editar**.
   </GuideFAQItem>
 </GuideFAQ>

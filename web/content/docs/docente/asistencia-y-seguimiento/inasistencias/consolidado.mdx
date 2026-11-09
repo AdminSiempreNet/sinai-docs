@@ -1,44 +1,131 @@
 ---
 title: "Registro consolidado de inasistencias"
-description: "Conozca las opciones de registro consolidado de inasistencias y siga el procedimiento correspondiente en SINAI."
+description: "Registre el total de faltas de cada estudiante en el periodo, por grupo y asignatura, sin indicar fechas."
 guide: true
 wordpressId: 30313
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-registro-consolidado-de-inasistencias/"
-lastModified: "2023-11-16 11:36:06"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="GGP8GUsgZPU" title="Registro consolidado de inasistencias"
-  odyseeUrl="https://odysee.com/registro-consolidado-de-inasistencia%3Ab0b3710a7b47969b2ed920b7dedce1d9cee3290d"
-/>
+<YouTube id="GGP8GUsgZPU" title="Registro consolidado de inasistencias" odyseeUrl="https://odysee.com/registro-consolidado-de-inasistencia%3Ab0b3710a7b47969b2ed920b7dedce1d9cee3290d" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-El registro consolidado de inasistencias, consiste en registrar las faltas totales de un periodo determinado para cada asignatura, sin tener en cuenta la fecha exacta en las que ocurrieron .
+### 1. ¿Qué es Registro Consolidado de Inasistencias?
 
-**Pasos para registrar Consolidado de Inasistencia.**
+**Registro Consolidado de Inasistencias** le permite registrar el total de faltas de cada estudiante en un periodo, por grupo y asignatura. No se indica la fecha de cada falta: se escribe solo la cantidad del periodo.
 
-1. Para hacer el registro consolidado de inasistencias de un periodo determinado, debe acceder desde el módulo Docente o Administrativo al Menú principal Seguimiento
-2. En el submenú Inasistencias o en la iconografía seleccione Registro Consolidado de Inasistencias.
-3. En la ventana debe seleccionar el periodo, haga clic en el botón verde “entrar” al frente del área/asignatura que agregará las inasistencias, genere la planilla en el botón azul “Generar Planilla”, finalmente registre las inasistencias para el periodo seleccionado y Guarde los cambios en el botón verde. <GuideImageTrigger src={"/images/wordpress/2023/11/INASISTENCIA-CONSIL-DOCENTE.gif"} alt={"Captura de INASISTENCIA CONSIL DOCENTE"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Seguimiento → Inasistencias → Registro Consolidado de Inasistencias**.
 
+<GuideImageTrigger src="/images/guides/docente-inasistencias-consolidado/acceso-consolidado.jpg" alt="Menú Seguimiento con el submenú Inasistencias desplegado y la opción Registro Consolidado de Inasistencias">
+  Ver ejemplo
+</GuideImageTrigger>
 
+#### 2. Elegir el periodo y la planilla
 
+La pantalla **Planillas de Inasistencias** tiene dos partes:
+
+- **A la izquierda:** la lista **Periodo** y, debajo, la fecha de cierre del registro de inasistencias de ese periodo: «Abierto hasta» o «Cerrado desde», seguido de la fecha. Al entrar, SINAI selecciona el periodo activo.
+- **A la derecha:** la tabla de planillas, una por cada grupo y asignatura de su asignación académica. No incluye la asignatura de comportamiento.
+
+<GuideImageTrigger src="/images/guides/docente-inasistencias-consolidado/planillas-inasistencias.jpg" alt="Pantalla Planillas de Inasistencias con el periodo, la fecha de cierre y la tabla de planillas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Id** | Número de la planilla en la lista. |
+| **Grupo** | Código del grupo. |
+| **Asignatura** | Código y nombre de la asignatura. |
+| **Estado** | **Abierta** o **Cerrada** para el periodo seleccionado. |
+| **Planilla** | Botón **Entrar**, que abre la planilla. |
+
+</GuideDataTable>
+
+1. En **Periodo**, seleccione el periodo que va a registrar.
+2. Haga clic en **Entrar** en la fila del grupo y la asignatura.
+
+Si usted no tiene asignación académica en el calendario, la tabla muestra «No hay asignación académica para mostrar.».
+
+#### 3. Conocer la planilla
+
+La pantalla **Registro de Inasistencias** muestra, a la izquierda, el **Periodo**, el **Grupo** y la **Asignatura** de la planilla, los botones **Anterior** y **Siguiente**, y los botones **Generar Planilla** y **Guardar Cambios**. A la derecha está la lista de estudiantes.
+
+<GuideImageTrigger src="/images/guides/docente-inasistencias-consolidado/planilla-consolidado.jpg" alt="Planilla Registro de Inasistencias con los estudiantes, Faltas del Periodo y Faltas Acumuladas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Foto** y **Nombre Completo** | Fotografía y nombre del estudiante. Debajo del nombre aparece su número de identificación. |
+| **Faltas del Periodo** | Total de faltas del estudiante en el periodo de la planilla. Es el campo que usted edita. Admite hasta dos dígitos, solo números. |
+| **Faltas Acumuladas 1° a 4°** | Faltas registradas en cada periodo. |
+| **Total** | Suma de las faltas de los cuatro periodos. |
+
+</GuideDataTable>
+
+#### 4. Generar la planilla
+
+Si la lista de estudiantes está vacía o falta un estudiante, haga clic en **Generar Planilla**. SINAI agrega a la planilla los estudiantes matriculados del grupo que aún no aparecen en ella.
+
+#### 5. Registrar las faltas
+
+1. En **Faltas del Periodo**, escriba el total de faltas de cada estudiante.
+2. Haga clic en **Guardar Cambios**.
+
+SINAI guarda las faltas de todos los estudiantes de la planilla y actualiza la columna **Total**. Si deja un campo vacío, se guarda como 0.
+
+<GuideCallout>
+  **Faltas del Periodo** reemplaza el total del periodo, no se suma a lo que ya tenía. Escriba siempre el total de faltas del estudiante en el periodo.
+</GuideCallout>
+
+#### 6. Pasar a otra planilla o volver
+
+- **Anterior** y **Siguiente** abren la planilla anterior o la siguiente de su asignación académica, en el mismo periodo.
+- **Volver** regresa a **Planillas de Inasistencias**.
+
+Si el periodo está abierto, los tres botones guardan primero los cambios de la planilla actual. Además, **Anterior** y **Siguiente** generan la planilla que abren.
+
+#### 7. Cuando SINAI no permite registrar
+
+SINAI no genera ni guarda la planilla en estos casos y muestra el mensaje en la parte inferior de la pantalla:
+
+- Si el periodo está cerrado para inasistencias: «El periodo actual está cerrado, no se puede modificar el registro de Inasistencias».
+- Si la institución no tiene habilitado el registro consolidado: «El usuario no tiene permisos para realizar este procedimiento. Para obtener permiso solicite la habilitacion del registro de inasistencias consolidadas al Rector del establecimiento».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Registro consolidado de inasistencias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Abrí la planilla y no aparece ningún estudiante. ¿Qué hago?"}>
+    La planilla aún no se ha generado para ese periodo. Haga clic en **Generar Planilla**. SINAI agrega los estudiantes matriculados del grupo. Si el periodo está cerrado, SINAI no la genera.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Registro consolidado de inasistencias» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Un estudiante nuevo no aparece en la planilla. ¿Cómo lo agrego?"}>
+    Haga clic en **Generar Planilla**. SINAI agrega los estudiantes matriculados en el grupo que todavía no están en la planilla, sin borrar las faltas ya registradas.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Registro consolidado de inasistencias»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no aparece la asignatura de comportamiento?"}>
+    La tabla de **Planillas de Inasistencias** no incluye la asignatura de comportamiento. Las faltas se registran en las demás asignaturas de su asignación académica.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Al guardar aparece «El periodo actual está cerrado». ¿Qué hago?"}>
+    La fecha de cierre del registro de inasistencias de ese periodo ya pasó. La puede ver debajo de **Periodo**, en **Planillas de Inasistencias**. Solicite al área administrativa la ampliación de la fecha o una autorización para la planilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Pierdo los cambios si paso a la planilla siguiente sin guardar?"}>
+    No, si el periodo está abierto. **Anterior**, **Siguiente** y **Volver** guardan los cambios de la planilla actual antes de salir. Si el periodo está cerrado, no se guarda nada.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Al presionar la tecla CTRL aparece un mensaje y no puedo escribir. ¿Por qué?"}>
+    En **Planillas de Inasistencias**, la tecla CTRL deshabilita los campos de la página y SINAI muestra «al presionar la tecla CTRL se desabilitaron todas las funciones de la pagina, presione otra tecla para continuar». Presione cualquier otra tecla para habilitarlos de nuevo.
   </GuideFAQItem>
 </GuideFAQ>

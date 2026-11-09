@@ -1,25 +1,180 @@
 ---
 title: "Importar Matrícula"
-description: "Aprenda a importar matrícula en SINAI."
+description: "Matricule estudiantes nuevos de forma masiva con la plantilla de Excel de SINAI, revise el resultado de cada importación y configure los datos predeterminados."
 wordpressId: 33103
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/importar-matricula/"
-lastModified: "2024-09-18 08:58:59"
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube title="Importar Matrícula" odyseeUrl="https://odysee.com/@AndresGoDu:a/IMPORTAR-MATRCULA:8" />
+</GuideVideos>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Importar Matrícula?
+
+**Importar Matrícula** registra y matricula de una sola vez a muchos estudiantes nuevos a partir de la plantilla de Excel que entrega SINAI. Cada archivo que sube queda como una importación en la lista, con su estado, el número de estudiantes importados, los errores y las advertencias.
+
+Ingrese a **Matrícula → Estudiantes Nuevos → Importar Matricula**. La opción también está en **Herramientas → Importaciones**.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/acceso-importar-matricula.jpg" alt="Menú Matrícula, opción Estudiantes Nuevos con la tarjeta Importar Matricula">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene un panel **Opciones** con tres secciones:
+
+- **Importar Matrícula:** la lista de importaciones y el botón para iniciar una nueva.
+- **Configuraciones:** los datos predeterminados que SINAI usa cuando un campo de la plantilla está vacío.
+- **Códigos SIMAT:** el código de grupo y la sede del SIMAT de cada grupo de la institución.
+
+<GuideCallout>
+  La pantalla solo está disponible para los usuarios administrativos. Iniciar, reanudar o eliminar una importación exige además el permiso 501; si el usuario no lo tiene, SINAI muestra **El usuario no tiene permiso para realizar esta operación. Se requiere el permiso** seguido del número y la descripción del permiso. El rector tiene todos los permisos.
+</GuideCallout>
+
+#### 2. Revisar las configuraciones antes de importar
+
+Antes de la primera importación, revise los datos predeterminados. SINAI los usa para completar los campos que la plantilla traiga vacíos.
+
+1. En el panel **Opciones**, haga clic en **Configuraciones**.
+2. Revise cada sección: **Datos básicos**, **Datos de Contacto y Localización**, **Matrícula** y **Caracterización**.
+3. Haga clic en **Guardar**, debajo del panel **Opciones**.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/configuraciones.jpg" alt="Sección Configuraciones con los datos predeterminados de la matrícula, sección Datos básicos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Algunos datos de la sección **Matrícula**:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Número del libro de matricula** | Número predeterminado para el libro de matrícula. |
+| **Nuevo** | Marca a los estudiantes importados como nuevos. |
+| **Fecha de matricula** | Fecha de matrícula por defecto. Si no la establece, SINAI toma la fecha actual. |
+| **Estado** | Estado de la matrícula por defecto. |
+| **Fecha de estado** | Fecha por defecto del estado. Si no la establece, SINAI toma la fecha actual. |
+| **Situación académica en establecimiento origen** | Valor por defecto de la situación académica en el establecimiento de origen. |
+
+</GuideDataTable>
+
+Si el guardado es correcto, SINAI muestra **Configuaración adicionada correctamente**.
+
+#### 3. Configurar los códigos SIMAT de los grupos
+
+SINAI identifica el grupo de cada estudiante con la columna de grupo de la plantilla. Acepta el código del grupo en SINAI, el nombre del grupo o el código de grupo del SIMAT junto con la sede del SIMAT. Para usar los códigos del SIMAT, regístrelos primero:
+
+1. En el panel **Opciones**, haga clic en **Códigos SIMAT**.
+2. Seleccione la **Sede**.
+3. En cada grupo, escriba el **Grupo SIMAT** y la **Sede SIMAT**.
+4. Haga clic en **Guardar**, debajo del panel **Opciones**.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/codigos-simat.jpg" alt="Sección Códigos SIMAT con la lista de sedes y la tabla de grupos con Grupo SIMAT y Sede SIMAT">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla muestra, por grupo, **Nombre**, **IdGrupo**, **Grado**, **Grupo SIMAT** y **Sede SIMAT**.
+
+#### 4. Importar la matrícula
+
+1. En el panel **Opciones**, haga clic en **Importar Matrícula**.
+2. Haga clic en el botón **Importar Matrícula**, en la parte superior de la lista.
+3. En la ventana **Importar Matrículas**, haga clic en **1. Descargar Plantilla** y diligencie el archivo con los datos de los estudiantes.
+4. En **2. Configuraciones**, revise los datos predeterminados. El enlace **Ir a Configuraciones** lleva a esa sección.
+5. En **3. Seleccionar archivo**, elija la plantilla diligenciada.
+6. Si lo desea, escriba la **Descripción del archivo**. Si la deja vacía, SINAI usa el nombre del archivo.
+7. Marque o desmarque las opciones del proceso.
+8. Haga clic en **Iniciar proceso de Importación**.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/ventana-importar.jpg" alt="Ventana Importar Matrículas con Descargar Plantilla, Configuraciones, Seleccionar archivo y las opciones del proceso">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Las opciones del proceso vienen marcadas:
+
+- **Ignorar Advertencias:** importa también a los estudiantes que tienen advertencias. Si la desmarca, solo se importan los estudiantes sin errores ni advertencias.
+- **Iniciar automaticamente:** el proceso empieza al subir el archivo. Si la desmarca, el archivo queda cargado y la importación queda pendiente hasta que la reanude desde la lista.
+
+Con **Iniciar automaticamente** marcado, SINAI muestra *Proceso de importación iniciado automaticamente, puedes continuar haciendo otras tareas en SINAI, se enviará notificación por correo, al terminar*. El proceso continúa aunque usted siga trabajando en otras pantallas.
+
+SINAI rechaza el archivo en estos casos:
+
+- Si no es `.xls` ni `.xlsx`: *Extensión no valida …, solo se puede importar la plantilla de formato Excel proporcionada por SINAI*.
+- Si pesa más de 10 MB: *El tamaño del archivo es demasiado grande. Excede los 10MB*.
+- Si hace clic en **Iniciar proceso de Importación** sin elegir archivo: *No hay un archivo seleccionado*.
+
+<GuideCallout type="warning">
+  La importación registra estudiantes y matrículas en el calendario seleccionado. Use la plantilla que descarga desde la ventana: si el archivo no tiene su estructura, la importación termina con error y no se importa ningún estudiante.
+</GuideCallout>
+
+#### 5. Revisar el resultado de la importación
+
+Cada importación aparece en la lista con estos datos:
+
+- El número de la importación, la descripción y la fecha y hora en que se creó.
+- El estado, con un indicador de color. Mientras SINAI valida e importa, el indicador parpadea.
+- **Importaciones:** estudiantes importados sobre el total de filas del archivo.
+- **Errores** y **Advertencias:** cantidad encontrada al validar el archivo.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/lista-importaciones.jpg" alt="Lista de importaciones con número, descripción, estado, importaciones, errores, advertencias y botones de opciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Use el botón de actualizar, junto a **Importar Matrícula**, para refrescar la lista. Al terminar, SINAI le envía una notificación.
+
+Los botones de cada importación son:
+
+- **Descargar archivo con datos procesados** (ícono de descarga): aparece cuando la importación terminó. Descarga el archivo con la hoja **Errores_Advertencias**, que lista por estudiante el tipo, el campo y el mensaje de cada error o advertencia.
+- **Detalles de estudiantes** (ícono de lista): aparece cuando hay estudiantes importados. Abre la lista de los estudiantes importados.
+- **Reintentar o reanudar** (ícono de reproducir): aparece en las importaciones pendientes que no se iniciaron automáticamente. Inicia el proceso con el archivo ya cargado.
+- **Eliminar** (ícono rojo): elimina la importación de la lista y su archivo, después de confirmar *¿Seguro que deseas eliminar la importación con número …?*.
+
+En **Detalles de estudiantes**, escriba en **Buscar Estudiante** para filtrar por apellidos, nombres o número de identificación. Al hacer clic en un estudiante, se abre su ficha de actualización en otra pestaña.
+
+<GuideImageTrigger src="/images/guides/importar-matricula/detalle-estudiantes.jpg" alt="Detalle de estudiantes importados con el buscador y las tarjetas de cada estudiante">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Errores que impiden importar a un estudiante:
+
+<GuideDataTable>
+
+| Caso | Mensaje en la hoja de errores |
+| --- | --- |
+| La columna de grupo está vacía. | El campo Grupo es necesario para el registro de datos |
+| El grupo no coincide con ningún grupo del calendario. | El grupo … que intenta ingresar no exite o se encuentra mal escrito |
+| Faltan los apellidos, los nombres o el número de identificación. | El campo Apellidos es necesario para realizar el registro (y los equivalentes de Nombres y Número de identificación) |
+| El número de documento ya existe en la institución. | El número de documento … del estudiante … ya se encuentra registrado |
+| La fecha de nacimiento no es válida. | La Fecha de nacimiento no es válida … |
+
+</GuideDataTable>
+
+Los campos vacíos o con valores que SINAI no reconoce, como el tipo de documento, el municipio o el género, generan advertencias y se completan con los datos predeterminados de **Configuraciones**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Importar Matrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Puedo actualizar con la importación a estudiantes que ya están en SINAI?">
+    No. La importación es para estudiantes nuevos. Si el número de documento ya está registrado en la institución, SINAI marca el error *El número de documento … ya se encuentra registrado* y no importa esa fila.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Importar Matrícula» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué no se importaron todos los estudiantes del archivo?">
+    Las filas con errores no se importan. Si desmarcó **Ignorar Advertencias**, tampoco se importan las filas con advertencias. Descargue el archivo con datos procesados y revise la hoja **Errores_Advertencias**: indica el estudiante, el campo y el mensaje.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Importar Matrícula»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Qué escribo en la columna de grupo?">
+    El código del grupo en SINAI, el nombre del grupo tal como está en SINAI o el código de grupo del SIMAT. Para usar el código del SIMAT, regístrelo antes en **Códigos SIMAT** junto con la sede del SIMAT.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿De dónde salen los datos que no llené en la plantilla?">
+    De **Configuraciones**. SINAI completa los campos vacíos con los datos predeterminados que estén guardados allí y registra una advertencia por cada campo completado.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="Subí el archivo y la importación quedó pendiente. ¿Qué hago?">
+    Se subió con **Iniciar automaticamente** desmarcado. Haga clic en **Reintentar o reanudar** (ícono de reproducir) en esa importación para iniciar el proceso.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Debo esperar en la pantalla hasta que termine?">
+    No. El proceso corre en segundo plano y SINAI le envía una notificación al terminar. Vuelva a la lista y use el botón de actualizar para ver el estado.
   </GuideFAQItem>
 </GuideFAQ>

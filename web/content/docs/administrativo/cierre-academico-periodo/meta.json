@@ -3,6 +3,7 @@
   "description": "Consolidados, nivelaciones, puestos e informes de periodo.",
   "defaultOpen": false,
   "pages": [
+    "inconsistencias",
     "reportes-consolidados",
     "nivelaciones-de-periodo",
     "nivelaciones-finales",

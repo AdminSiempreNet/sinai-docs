@@ -1,11 +1,13 @@
 ---
 title: "Configuración caracterización de estudiantes - PIAR"
-description: "Conozca las opciones de configuración caracterización de estudiantes - PIAR y siga el procedimiento correspondiente en SINAI."
+description: "Configure las preguntas, tipos y opciones de respuesta del formulario de caracterización PIAR y diligéncielo para cada estudiante."
 guide: true
 wordpressId: 28404
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/configuracion-de-caracterizacion-de-estudiantes-piar/"
-lastModified: "2023-11-01 08:50:27"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideoPlaylist
@@ -29,82 +31,155 @@ lastModified: "2023-11-01 08:50:27"
 
 ## Guía paso a paso
 
-### 1\. ¿Qué es el PIAR?
+### 1. ¿Qué es la configuración de caracterización PIAR?
 
-El **PIAR** (Plan Individual de Ajustes Razonables) es un documento que organiza y detalla los ajustes y apoyos necesarios para garantizar la educación inclusiva de estudiantes con necesidades educativas específicas, ya sean transitorias o permanentes. Este plan es utilizado en el ámbito educativo para cumplir con los principios de **equidad e inclusión**, según lo estipulado por normativas nacionales e internacionales, como la **Convención sobre los Derechos de las Personas con Discapacidad**.
+El **PIAR** (Plan Individual de Ajustes Razonables) organiza los ajustes y apoyos que necesita un estudiante con discapacidad o capacidad excepcional. En SINAI, la caracterización del PIAR es un cuestionario que la institución define y que luego se diligencia para cada estudiante.
 
-#### 2\. Cómo Configurar el Formulario
+**Configuración de Caracterización de Estudiantes** es la pantalla donde se define ese cuestionario. La misma pantalla configura otros dos formularios: **Ficha Observador** y **Ficha Seguimiento**. Esta guía trata el formulario **PIAR**.
 
-Para configurar el formulario en la plataforma SINAI, sigue la siguiente ruta: **Menú Establecimiento > Institución > Configuración de Caracterización de Estudiantes**. <GuideImageTrigger src={"/images/wordpress/2025/01/1-Configuracion-caracerizacion-estudiantes.png"} alt={"Captura de Configuracion caracerizacion estudiantes"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Establecimiento → Institución → Configuración Caracterización Estudiantes**.
 
+<GuideImageTrigger src="/images/guides/piar-cuestionario/acceso-configuracion.jpg" alt="Menú Establecimiento con Institución desplegado y la opción Configuración Caracterización Estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
 
+El cuestionario se organiza así:
 
-En esta ruta encontrará un filtro en la parte superior izquierda, donde deberá seleccionar el formulario que desea configurar, en este caso, el formulario del **PIAR**.
+- **Tipo:** grupo de preguntas, por ejemplo **Información General del Estudiante** o **Entorno Salud**. En el formulario del estudiante cada tipo es una sección.
+- **Característica:** cada pregunta, con su número, su descripción y sus opciones de respuesta.
+- **Etiqueta observación:** si la pregunta la tiene, el formulario muestra una casilla de texto con esa etiqueta para ampliar la respuesta.
 
-Una vez seleccionado, podrá visualizar las características predeterminadas de la plataforma SINAI. Si estas no aparecen, haga clic en el botón **Predeterminadas**, ubicado en la parte superior del formulario. <GuideImageTrigger src={"/images/wordpress/2025/01/3-Configuracion-caracerizacion-estudiantes.png"} alt={"Captura de Configuracion caracerizacion estudiantes"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Ver el formulario PIAR
 
+En **Formulario**, seleccione **PIAR**. La tabla muestra las características agrupadas por tipo:
 
+<GuideDataTable>
 
-#### 3\. Estructura del Formulario PIAR
+| Columna | Qué muestra |
+| --- | --- |
+| **Tipo** | Grupo al que pertenece la pregunta. |
+| **Número** | Orden de la pregunta dentro del tipo. |
+| **Caracterizacion** | Texto de la pregunta. |
+| **Descripción** | Explicación que acompaña la pregunta en el formulario. |
+| **Etiqueta Observación** | Título de la casilla de texto adicional. Si está vacía, la pregunta no tiene casilla. |
+| **Opciones** | Botón **Abrir** para ver o editar la pregunta. |
 
-El formulario está compuesto por los siguientes ítems:
+</GuideDataTable>
 
-- **Tipo**
-- **Número**
-- **Caracterización**
-- **Descripción**
-- **Etiqueta de observación**
-- **Opciones**
+<GuideImageTrigger src="/images/guides/piar-cuestionario/formulario-piar.jpg" alt="Configuración de Caracterización de Estudiantes con el formulario PIAR y sus preguntas por tipo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Esta funcionalidad permite a cada institución educativa personalizar su formulario según sus necesidades y parámetros institucionales específicos. <GuideImageTrigger src={"/images/wordpress/2023/11/Estructura-dewl-formulario-PIAR.png"} alt={"Captura de Estructura dewl formulario PIAR"}>Ver ejemplo</GuideImageTrigger>
+#### 3. Generar el formulario predeterminado
 
+Si la institución no tiene el formulario PIAR configurado, haga clic en **Predeterminadas**. SINAI crea los tipos, las preguntas y las opciones de respuesta del PIAR que trae por defecto. Después puede ajustarlos.
 
+Si el formulario ya tiene tipos de características, SINAI no genera nada y muestra «No se pueden generar valores predeterminados porque ya existen características o tipos de características definidas para este formulario. Por favor elimine los tipos de características para generar valores predeterminados, o bien registre cada característica individualmente».
 
-#### 4\. Agregar Nuevas Características
+#### 4. Crear o modificar una característica
 
-- En la parte superior, encontrará el botón **"Nueva Característica"**, que le permitirá agregar una característica adicional a las predeterminadas.
-- Este botón tiene dos opciones:
-    1. **Agregar una nueva característica**.
-    2. **Editar características existentes**.
+Haga clic en **Nueva característica** para crear una pregunta, o en **Abrir** para modificar una existente. Se abre la ventana **Caracteristica**.
 
-Una vez ingresada la información, haga clic en el botón azul **"Guardar"** en la parte inferior.
+<GuideImageTrigger src="/images/guides/piar-cuestionario/ventana-caracteristica.jpg" alt="Ventana Caracteristica con Tipo, Numero, Etiqueta observación, Pregunta, Descripcion y las opciones de respuesta">
+  Ver ejemplo
+</GuideImageTrigger>
 
-. <GuideImageTrigger src={"/images/wordpress/2025/01/4-Configuracion-caracerizacion-estudiantes-1024x504.png"} alt={"Captura de Configuracion caracerizacion estudiantes"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Campo | Qué define |
+| --- | --- |
+| **Tipo** | Grupo de la pregunta. El botón verde edita el tipo elegido y el azul crea un tipo nuevo. |
+| **Numero** | Orden de la pregunta dentro del tipo. Es obligatorio. |
+| **Etiqueta observación** | Título de la casilla de texto adicional, hasta 50 caracteres. Déjela vacía si la pregunta no la necesita. |
+| **Pregunta** | Texto de la pregunta, hasta 100 caracteres. Es obligatoria. |
+| **Descripcion** | Explicación que se muestra debajo de la pregunta en el formulario. |
 
+</GuideDataTable>
 
-#### 5\. Eliminar Características
+Haga clic en **Guardar**. SINAI muestra «Caracteristica adicionada correctamente» o «Caracteristica actualizada correctamente».
 
-En la misma opción **Editar**, encontrará un botón **"Eliminar"** que le permitirá eliminar la característica en caso de que la institución no la vaya a utilizar.
+- Si no escribe la pregunta, SINAI muestra «Debe escribir la pregunta de la caracteristica».
+- Si no escribe el número, muestra «Debe escribir el número de la caracteristica».
 
-#### 6\. Opciones de Respuesta
+Para crear o editar un tipo, use los botones junto a **Tipo**. Se abre **Tipo de Característica** con **Numero** y **Nombre**. Haga clic en **Guardar**. Para eliminar un tipo, ábralo con el botón verde y haga clic en **Eliminar**; el tipo no debe tener características.
 
-En la última columna del formulario, encontrará la columna de **Opciones**.
+#### 5. Configurar las opciones de respuesta
 
-Al hacer clic en el botón **"Abrir"**, podrá editar la información de cada pregunta y crear las opciones de respuesta correspondientes. <GuideImageTrigger src={"/images/wordpress/2025/01/7-Configuracion-caracerizacion-estudiantes.png"} alt={"Captura de Configuracion caracerizacion estudiantes"}>Ver ejemplo</GuideImageTrigger>
+Las opciones de respuesta se agregan a una característica ya guardada. Abra la característica con **Abrir**.
 
+En **Opciones de respuesta**, la tabla muestra cada opción con **Valor**, **Opción**, **Descripcion** y **Predeterminada**:
 
+- Para agregar una opción, haga clic en **Agregar opciones**. Se abre **Escala**: escriba el **Valor**, el **Nombre** y la **Descripcion**, marque **Predeterminada** si corresponde y haga clic en **Agregar**. SINAI muestra «Escala adicionada correctamente» y deja la ventana abierta para agregar otra.
+- Para cambiar una opción, modifique sus casillas en la tabla y haga clic en **Guardar**.
 
-Al configurar el formulario de caracterización de estudiantes, está listo para ser diligenciado por los respectivos usuarios.
+<GuideImageTrigger src="/images/guides/piar-cuestionario/ventana-escala.jpg" alt="Ventana Escala sobre la característica con Valor, Nombre, Predeterminada, Descripcion y Agregar">
+  Ver ejemplo
+</GuideImageTrigger>
 
-si desea conocer como diligenciar este formulario, le invito a leer la guía como diligenciar el formulario PIAR
+Las opciones se ordenan por **Valor** en el formulario. La opción **Predeterminada** aparece elegida cuando el estudiante todavía no tiene respuesta guardada.
 
-- [https://ayudasinai.siempre.net.co/docs/lista-por-grupos-2/](https://ayudasinai.siempre.net.co/docs/lista-por-grupos-2/)
-- [¿Cómo diligenciar el formulario PIAR?](https://youtu.be/jJle84qACMk)
+#### 6. Eliminar opciones o características
 
+- **Opciones:** marque **Chk** en las opciones, haga clic en **Eliminar opciones** y, en la ventana **Eliminar escala**, haga clic en **Eliminar**.
+- **Característica:** ábrala, haga clic en **Eliminar** y confirme *¿Confirma que desea eliminar esta caracteristica?* Si algún estudiante ya tiene respuesta en esa pregunta, SINAI muestra «La caracteristica no debe estar relacionada con estudiantes, por lo cual no se puede eliminar».
+
+<GuideCallout type="warning">
+  Al eliminar opciones, SINAI borra también las respuestas que los estudiantes tengan guardadas en esa pregunta, aunque hayan elegido otra opción. La eliminación no se puede deshacer.
+</GuideCallout>
+
+#### 7. Diligenciar el PIAR de un estudiante
+
+Ingrese a **Matrícula → Listados → Lista de Estudiantes por Grupo**, elija la **Sede** y el **Grupo**, y haga clic en **Piar** en la fila del estudiante. La caracterización se abre en otra pestaña.
+
+<GuideImageTrigger src="/images/guides/piar-cuestionario/lista-estudiantes.jpg" alt="Lista de Estudiantes con el botón Piar en la columna Opciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+También puede abrirla desde **Matrícula → Listados → Estudiantes PIAR**, con el botón **Piar 1**.
+
+La pantalla **Caracterización de Estudiante [Piar]** tiene:
+
+- **Estudiante Seleccionado:** foto, nombre, código, grupo y contacto.
+- **Cambiar Estudiante Seleccionado:** **Sede**, **Grupo** y la lista de estudiantes matriculados, para pasar a otro estudiante sin salir.
+- **El cuestionario**, con una sección por tipo y su botón **Guardar**.
+- **Definir características**, que abre la configuración del formulario.
+
+<GuideImageTrigger src="/images/guides/piar-cuestionario/caracterizacion-piar.jpg" alt="Caracterización de Estudiante Piar con el estudiante seleccionado y la sección Información General del Estudiante">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para diligenciarlo:
+
+1. En cada pregunta, elija la respuesta en **Opciones**.
+2. Si la pregunta tiene casilla de texto, escriba la información adicional.
+3. Haga clic en **Guardar** de cualquier sección. SINAI guarda las respuestas de todas las secciones.
+
+SINAI muestra «Procedimiento de guardar ejecutado correctamente, por favor verifique que todas las preguntas tengan la etiqueta verde OK». Junto a **Opciones** de cada pregunta aparece **OK** en verde si se guardó, o **ERR** en rojo si no. Al pasar el mouse por la etiqueta se ve el detalle.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Configuración caracterización de estudiantes - PIAR»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Al hacer clic en Predeterminadas no se genera el formulario. ¿Por qué?"}>
+    El formulario PIAR ya tiene tipos de características. SINAI solo genera el formulario predeterminado cuando no hay ningún tipo. Ajuste las preguntas existentes o regístrelas una por una.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Configuración caracterización de estudiantes - PIAR» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"No veo el botón Agregar opciones. ¿Qué hago?"}>
+    **Agregar opciones** y **Eliminar opciones** solo aparecen en una característica ya guardada. Guarde la pregunta, ábrala con **Abrir** y agregue las opciones.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Configuración caracterización de estudiantes - PIAR»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"No puedo eliminar una característica. ¿Por qué?"}>
+    Algún estudiante ya tiene respuesta en esa pregunta. SINAI muestra «La caracteristica no debe estar relacionada con estudiantes, por lo cual no se puede eliminar».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo verifico que el PIAR del estudiante quedó guardado?"}>
+    Después de **Guardar**, revise que todas las preguntas tengan la etiqueta verde **OK**. Si alguna muestra **ERR**, pase el mouse por la etiqueta para ver el error y vuelva a guardar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Un docente puede diligenciar el PIAR?"}>
+    Sí, si la institución lo habilita. Si no está habilitado, al guardar SINAI muestra «Los docentes no tienen permiso para realizar este procedimiento. Para que se habilite solicite autorización al Rector del establecimiento». El docente no ve el botón **Definir características**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Dónde registro la discapacidad y las asignaturas de educación inclusiva del estudiante?"}>
+    En **Matrícula → Especialidades → Educación Inclusiva**. Vea [Educación inclusiva](/docs/administrativo/registro-de-logros-y-calificaciones/educacion-inclusiva/piar-pedagogico).
   </GuideFAQItem>
 </GuideFAQ>

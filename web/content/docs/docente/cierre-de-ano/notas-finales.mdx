@@ -1,87 +1,113 @@
 ---
 title: "Notas finales"
-description: "Consulte la valoración final por asignatura y descargue reportes por asignatura o por grupo."
+description: "Consulte la valoración final de sus estudiantes por asignatura y periodo, y descargue el informe en PDF por asignatura o por grupo."
 guide: true
 wordpressId: 30283
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-notas-finales/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="ctTCPd_AwM4" title="Notas finales"
-  odyseeUrl="https://odysee.com/notas-finales%3A9351f5b1ea2fc2abfebe2dc71d393bdf2dedacc6"
-/>
+<YouTube id="ctTCPd_AwM4" title="Notas finales" odyseeUrl="https://odysee.com/notas-finales%3A9351f5b1ea2fc2abfebe2dc71d393bdf2dedacc6" />
 </GuideVideos>
 
-## Notas Finales
+## Guía paso a paso
 
-La opción **Notas Finales** permite a los docentes consultar la valoración final de los estudiantes por asignatura, teniendo en cuenta las calificaciones registradas durante los diferentes periodos académicos.
+### 1. ¿Qué es Notas finales?
 
-Sirve para revisar el resultado final, los ajustes realizados, la valoración requerida y las inasistencias, además de generar reportes por asignatura o por grupo.
+**Valoración Final por Asignaturas** muestra, para un grupo y una asignatura, las valoraciones de cada periodo y la valoración final de cada estudiante hasta el periodo que seleccione. Es una pantalla de consulta: aquí no se registran ni se modifican notas.
 
-**Ruta de acceso:** Evaluación → Notas Finales.
+Ingrese a **Evaluación → Notas Finales**.
 
-## Paso a paso
+#### 2. Consultar las notas
 
-### Consultar la valoración final
+Seleccione los filtros de la parte superior. La tabla se actualiza al cambiar cualquiera de ellos.
 
-1. Ingrese al **Módulo del Docente**.
-2. Diríjase a **Evaluación → Notas Finales**.
-3. Seleccione el **Calendario** correspondiente.
-4. Seleccione el **Grupo**.
-5. Seleccione el **Periodo** que desea consultar.
-6. Seleccione la **Asignatura**.
+<GuideDataTable>
 
-<GuideImageTrigger src="/images/guides/docente-notas-finales/acceso-notas-finales.png" alt="Acceso a Notas Finales desde el menú Evaluación">Referencia visual</GuideImageTrigger>
+| Filtro | Qué muestra |
+| --- | --- |
+| **Calendario** | Calendarios en los que usted tiene asignación académica. |
+| **Grupo** | Grupos de su asignación en el calendario. |
+| **Periodo** | Periodos del grupo. La tabla calcula las valoraciones hasta el periodo seleccionado. |
+| **Asignatura** | Asignaturas que usted tiene asignadas en el grupo para ese periodo. |
 
-En la tabla podrá consultar, para cada estudiante:
+</GuideDataTable>
 
-- **Periodos:** calificaciones obtenidas durante los periodos disponibles.
-- **Final:** resultado final calculado.
-- **Ajuste:** modificación realizada sobre la valoración final, cuando corresponda.
-- **Definitiva:** calificación definitiva obtenida por el estudiante.
-- **Requerida:** valoración que el estudiante requiere, cuando aplique.
-- **Inasistencias:** registro de las faltas o inasistencias del estudiante.
+<GuideImageTrigger src="/images/guides/docente-notas-finales/notas-finales.jpg" alt="Valoración Final por Asignaturas con los filtros, los botones de descarga y la tabla de valoraciones por estudiante">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Si necesita consultar información más detallada de un estudiante, utilice el ícono **Ampliar** ubicado en la fila correspondiente.
+La tabla tiene una fila por estudiante, con su foto, su nombre, su código y el estado de la matrícula. Las columnas **1°**, **2°**, **3°** y **4°** aparecen hasta el periodo seleccionado. Las demás columnas son:
 
-<GuideImageRow>
-<GuideImageTrigger src="/images/guides/docente-notas-finales/step-01.png" alt="Tabla de notas finales por asignatura">Referencia visual</GuideImageTrigger>
-<GuideImageTrigger src="/images/guides/docente-notas-finales/step-02.png" alt="Detalle ampliado del estudiante en Notas Finales">Referencia visual</GuideImageTrigger>
-</GuideImageRow>
+<GuideDataTable>
 
-### Descargar reportes
+| Columna | Qué muestra |
+| --- | --- |
+| **Final** | Valoración final calculada por SINAI a partir de las valoraciones de los periodos. Tiene en cuenta la aproximación cuando aplica. |
+| **Ajuste** | Valoración asignada por ajuste a la valoración final. Modifica la valoración definitiva. |
+| **Definitiva** | Valoración definitiva con la que se determinará la promoción. |
+| **Requerida** | Valoración mínima necesaria para que el desempeño definitivo del estudiante sea por lo menos BASICO. Solo aparece con valoración cuantitativa. |
+| **Inasistencias** | Inasistencias totales del estudiante sumadas hasta el periodo seleccionado. |
+| **Recuperación** | Valoración de la recuperación final o habilitación. |
+| **Situacion Académica** | Si la asignatura fue aprobada o reprobada, y su causa. |
 
-En la parte superior de la consulta encontrará las opciones disponibles para descargar los reportes:
+</GuideDataTable>
 
-- **Por asignatura:** genera el reporte correspondiente a la asignatura seleccionada.
-- **Por grupo:** genera el reporte de los estudiantes pertenecientes al grupo seleccionado.
+Cada columna aparece solo si su institución la habilitó para los docentes. Las valoraciones se muestran con el color del desempeño de la escala.
 
-Para descargar un reporte:
+<GuideCallout>
+  **Final** y **Definitiva** cambian según el periodo seleccionado. Solo al finalizar el calendario se pueden considerar definitivas.
+</GuideCallout>
 
-1. Verifique los filtros seleccionados.
-2. Seleccione el tipo de reporte que desea generar.
-3. Haga clic en la opción correspondiente.
-4. Descargue el archivo generado.
+#### 3. Ver las convenciones
 
-<GuideImageTrigger src="/images/guides/docente-notas-finales/step-03.png" alt="Descargar reportes por asignatura o por grupo">Referencia visual</GuideImageTrigger>
+Haga clic en el botón **i**, a la derecha de **Por grupo**. Se abre la ventana **Convenciones** con el significado de cada columna.
 
-> **Importante:** el reporte se genera tomando como referencia los filtros seleccionados y la información visible en la consulta. Revise cuidadosamente el calendario, grupo, periodo y asignatura antes de descargarlo.
+<GuideImageTrigger src="/images/guides/docente-notas-finales/convenciones.jpg" alt="Ventana Convenciones con la descripción de las columnas Final, Ajuste, Definitiva, Recuperación y Requerida">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La ventana se cierra con la **X** o con la tecla Esc.
+
+#### 4. Descargar el informe
+
+Los botones de la parte superior derecha descargan un PDF:
+
+- **Por asignatura:** informe de notas finales del grupo y el periodo seleccionados, generado con su usuario docente. No depende de la lista **Asignatura**.
+- **Por grupo:** consolidado de notas finales del grupo y el periodo seleccionados.
+
+<GuideCallout>
+  **Por grupo** usa el calendario activo en la parte superior de SINAI, no el de la lista **Calendario**. Si consulta otro calendario, cambie primero el calendario activo.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo consulto las notas finales de un grupo?">
-    Vaya a **Evaluación → Notas Finales** y seleccione calendario, grupo, periodo y asignatura.
+  <GuideFAQItem index="01" question={"¿Puedo cambiar una nota desde esta pantalla?"}>
+    No. **Notas finales** es solo de consulta. Para ajustar la valoración final use **Evaluación → Ajuste de Nota Final**, si su institución tiene habilitado ese proceso.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Qué columnas aparecen en la tabla de Notas Finales?">
-    Periodos, Final, Ajuste, Definitiva, Requerida e Inasistencias. Use **Ampliar** para ver más detalle de un estudiante.
+
+  <GuideFAQItem index="02" question={"¿Por qué no veo las columnas Ajuste, Requerida o Recuperación?"}>
+    Cada columna aparece solo si su institución la habilitó para los docentes. **Requerida** además solo aparece cuando la institución usa valoración cuantitativa.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Qué tipos de reporte puedo descargar?">
-    Puede descargar un reporte **por asignatura** o **por grupo**, según la opción que elija en la parte superior de la consulta.
+
+  <GuideFAQItem index="03" question={"¿Por qué la Definitiva cambia cuando selecciono otro periodo?"}>
+    SINAI calcula **Final** y **Definitiva** con las valoraciones hasta el periodo seleccionado. Seleccione el último periodo para ver la valoración de cierre del año.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Por qué debo revisar los filtros antes de descargar?">
-    Porque el reporte toma como referencia los filtros visibles en pantalla: calendario, grupo, periodo y asignatura.
+
+  <GuideFAQItem index="04" question={"No aparece una asignatura en la lista. ¿Qué pasa?"}>
+    La lista **Asignatura** muestra las asignaturas que usted tiene asignadas en el grupo para el periodo seleccionado. Cambie el periodo o verifique su asignación académica con el área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"El informe Por grupo no coincide con el calendario que consulto. ¿Por qué?"}>
+    **Por grupo** toma el calendario activo en la parte superior de SINAI. Cambie el calendario activo al año que consulta y vuelva a descargar el informe.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Qué significan los colores de las valoraciones?"}>
+    Cada valoración se muestra con el color que tiene su desempeño en la escala de su institución.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,75 +1,153 @@
 ---
 title: "Asignación de permisos"
-description: "Aprenda a asignar permisos en SINAI."
+description: "Asigne, deniegue o restablezca los permisos de los administrativos, coordinadores y auxiliares de la institución."
 guide: true
 wordpressId: 29245
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/asignacion-de-permisos/"
-lastModified: "2023-11-14 17:00:01"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="CtjkXY389uo" title="Asignación de permisos"
+<YouTube id="lN8Opn6dXI8" title="Asignación de permisos"
   odyseeUrl="https://odysee.com/@AndresGoDu:a/ASIGNACION-DE-PERMISOS-ADMIN:e5c7875c52d9330c8d8afab348b437f3d41dce8f"
 />
 </GuideVideos>
 
 ## Guía paso a paso
 
-En la presente guía se va a encontrar el funcionamiento de la Plataforma SINAI con relación a los diferentes tipos de permisos que se encuentran disponibles para ser asignados al personal administrativo y/o directivo de acuerdo con las funciones de cada uno dentro del sistema.
+### 1. ¿Qué es Asignación de permisos?
 
-Es preciso aclarar que, la persona encargada de asignar estos permisos a los funcionarios administrativos y directivos es el rector(a) del establecimiento educativo o la persona designada por el rector(a).
+**Asignación de permisos** controla qué operaciones puede hacer cada funcionario administrativo en SINAI, por ejemplo crear usuarios, restablecer contraseñas o cambiar el sistema de evaluación de un usuario. Los permisos se guardan por usuario y por institución.
 
-A continuación, se explicará el procedimiento para asignar permisos a un usuario administrativo o directivo.
+La pantalla solo lista a los usuarios de la institución con rol **Administrativo**, **Coordinador** o **Auxiliar**. El rector tiene todos los permisos y no aparece en la lista.
 
-Desde el módulo administrativo se debe dirigir al menú **Establecimiento >** **Usuarios** \> **Asignación de permisos.** <GuideImageTrigger src={"/images/wordpress/2025/02/Permisos-1.png"} alt={"Captura de Permisos 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Establecimiento → Usuarios → Asignación de Permisos**.
 
+<GuideImageTrigger src="/images/guides/asignacion-de-permisos/acceso-asignacion-permisos.jpg" alt="Menú Establecimiento con el submenú Usuarios abierto y la opción Asignación de Permisos">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pantalla tiene dos paneles:
 
-Una vez se da clic en la opción indicada, se va a encontrar en la parte izquierda la gestión de los tipos de permisos y en la derecha encontraremos el listado de usuarios administrativos y directivos que pueden acceder al módulo administrativo de la Plataforma SINAI con sus respectivos permisos. <GuideImageTrigger src={"/images/wordpress/2025/02/Permiso-2.png"} alt={"Captura de Permiso 2"}>Ver ejemplo</GuideImageTrigger>
+- **Gestión de permisos**, a la izquierda: el tipo de permiso, el permiso, los botones para aplicarlo y los botones que actúan sobre todos los permisos.
+- **Usuarios y permisos**, a la derecha: la lista de usuarios, su rol y si tienen el permiso seleccionado.
 
+<GuideImageTrigger src="/images/guides/asignacion-de-permisos/pantalla-asignacion-permisos.jpg" alt="Pantalla Asignación de permisos con un usuario seleccionado y el permiso 001 elegido">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideCallout type="warning">
+  Los permisos definen lo que cada funcionario puede cambiar en la institución. Revise el permiso y los usuarios marcados antes de asignar o denegar.
+</GuideCallout>
 
-### ¿Cómo asignar un permiso específico a un usuario administrativo o directivo?
+#### 2. Elegir el permiso y los usuarios
 
-1. Seleccione el tipo de permiso
-2. Seleccione el permiso de acuerdo al tipo
-3. Seleccione el o los usuarios a los que se asignará el permiso
-4. Dar clic en el botón “Asignar” de color verde. <GuideImageTrigger src={"/images/wordpress/2025/02/Permisos-3.png"} alt={"Captura de Permisos 3"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Campo | Qué define |
+| --- | --- |
+| **Tipo de permiso** | Grupo de permisos: **Sistema**, **Institución**, **Personal**, **Matrícula**, **Evaluación**, **Seguimiento**, **Promoción** u **Otros**. |
+| **Permiso** | Permiso del tipo elegido. Al cambiar de tipo, SINAI selecciona el primer permiso del grupo. |
+| **Permiso seleccionado** | Código, nombre y descripción del permiso elegido. |
+| **Estado** | Filtra la lista por estado del usuario: **Todos**, **Activo**, **Inactivo** o **Bloqueado**. Inicia en **Activo**. |
 
+</GuideDataTable>
 
-Del mismo modo en que se asigna un permiso, también se puede denegar un permiso específico, el procedimiento es el mismo, la variante se encuentra en el cuarto punto, no se debe dar clic en asignar sino, en el botón “Denegar”, de este modo podemos eliminar o quitar un permiso a un usuario.
+La lista de **Usuarios y permisos** muestra por cada usuario:
 
-En la parte inferior izquierda de la pantalla también podemos encontrar tres botones que son: **Asignar todos, Denegar Todos y Restablecer.**
+- **Casilla de selección:** marca el usuario para los botones del panel izquierdo.
+- **Usuario:** apellidos y nombres, la etiqueta del estado si no está activo y el usuario de acceso.
+- **Rol:** Administrativo, Coordinador o Auxiliar.
+- **Permiso:** con el código del permiso elegido en el encabezado. El visto indica **Permitido** y el candado indica **Denegado**.
+- **Ver y editar permisos para este usuario:** abre el panel individual del usuario.
 
-- **Asignar todos:** Permite seleccionar uno o varios usuarios para asignar todos los permisos que se encuentran disponibles en la Plataforma SINAI del módulo administrativo.
-- **Denegar todos:** Permite seleccionar uno o varios usuarios para denegar todos los permisos existentes en la Plataforma SINAI del módulo administrativo.
-- **Restablecer:** Permite seleccionar uno o varios usuarios para restablecer los permisos a los que tenía anteriormente asignados.
+Para marcar varios usuarios a la vez, haga clic en el botón de tres puntos del encabezado y marque **TODOS** o un rol.
 
-#### ¿Cómo visualizar los permisos de un usuario administrativo o directivo?
+<GuideImageTrigger src="/images/guides/asignacion-de-permisos/seleccion-por-rol.jpg" alt="Menú de tres puntos con las opciones TODOS, ADMINISTRATIVO, COORDINADOR y AUXILIAR">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Estando en la misma ruta de “asignación de permisos” se encontrará en la parte izquierda de la pantalla la lista de los usuarios administrativos o directivos, al frente de cada uno tendrán una opción para visualizar y editar los permisos asignados. <GuideImageTrigger src={"/images/wordpress/2025/02/Permisos-4.png"} alt={"Captura de Permisos 4"}>Ver ejemplo</GuideImageTrigger>
+<GuideCallout>
+  Los botones **Asignar**, **Denegar**, **Asignar Todos**, **Denegar Todos** y **Restablecer** permanecen deshabilitados hasta que marque al menos un usuario.
+</GuideCallout>
 
+#### 3. Asignar o denegar un permiso
 
+1. Seleccione el **Tipo de permiso**.
+2. Seleccione el **Permiso** y revise su descripción en **Permiso seleccionado**.
+3. Marque los usuarios.
+4. Haga clic en **Asignar** para dar el permiso o en **Denegar** para quitarlo.
 
-Una vez se ha seleccionado al usuario como se muestra en la imagen en la parte superior, se tendrá la siguiente interfaz donde podemos scrollear los diferentes permisos asignados al usuario y eventualmente poder asignar o quitar permisos simplemente seleccionando el permiso correspondiente, el sistema guarda automáticamente los cambios en esta parte. <GuideImageTrigger src={"/images/wordpress/2025/02/Permisos-5.png"} alt={"Captura de Permisos 5"}>Ver ejemplo</GuideImageTrigger>
+SINAI muestra **Permiso asignado correctamente** o **Permiso denegado correctamente** y actualiza la columna **Permiso**.
 
+#### 4. Asignar todos, denegar todos o restablecer
 
+Los botones de la parte inferior del panel **Gestión de permisos** actúan sobre todos los permisos de los usuarios marcados, no solo sobre el permiso elegido.
 
+<GuideDataTable>
+
+| Botón | Qué hace |
+| --- | --- |
+| **Asignar Todos** | Agrega a los usuarios marcados todos los permisos que todavía no tienen. |
+| **Denegar Todos** | Quita a los usuarios marcados todos los permisos que tienen en la institución. |
+| **Restablecer** | Agrega los permisos predeterminados del rol de cada usuario que le falten. No quita los permisos que el usuario ya tiene. |
+
+</GuideDataTable>
+
+1. Marque los usuarios.
+2. Haga clic en el botón.
+3. Confirme el mensaje con **Confirmar**.
+
+Los mensajes de confirmación son:
+
+- **Asignar Todos:** *¿Seguro que deseas restablecer todos los permisos a los usuarios seleccionados?*
+- **Denegar Todos:** *¿Seguro que deseas denegar todos los permisos a los usuarios seleccionados?*
+- **Restablecer:** *¿Seguro que deseas restablecer los permisos a los usuarios seleccionados, por los permisos predeterminados del rol?*
+
+SINAI ejecuta estas acciones en segundo plano y muestra que el proceso inició, por ejemplo **Proceso de asignación de permisos a iniciado correctamente**. Cuando termina, envía el resultado por correo electrónico al usuario que hizo el cambio, si tiene el correo verificado.
+
+<GuideCallout type="warning">
+  **Denegar Todos** deja a los usuarios marcados sin ningún permiso en la institución. Para devolverlos, use **Restablecer** o asígnelos de nuevo.
+</GuideCallout>
+
+#### 5. Ver y editar los permisos de un usuario
+
+1. En la fila del usuario, haga clic en **Ver y editar permisos para este usuario**.
+2. En el panel **Permisos**, revise los permisos agrupados por tipo. La casilla marcada indica que el usuario tiene el permiso.
+3. Marque una casilla para asignar el permiso o desmárquela para quitarlo.
+
+<GuideImageTrigger src="/images/guides/asignacion-de-permisos/panel-permisos-usuario.jpg" alt="Panel Permisos de un usuario con los permisos del tipo Sistema y sus casillas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Cada casilla se guarda al marcarla o desmarcarla. SINAI muestra **Permiso asignado correctamente** o **Permiso denegado correctamente** en la parte inferior izquierda.
+
+#### 6. Permiso necesario
+
+Asignar, denegar, asignar todos, denegar todos y restablecer exigen el permiso **001 - Asignar y quitar permisos**. Si el usuario no lo tiene, SINAI muestra **El usuario no tiene permiso para realizar esta operación. Se requiere el permiso** seguido del código y la descripción del permiso, y no aplica el cambio. El rector tiene todos los permisos.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Asignación de permisos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué no aparecen el rector ni los docentes en la lista?">
+    La pantalla solo lista a los usuarios de la institución con rol **Administrativo**, **Coordinador** o **Auxiliar**. El rector tiene todos los permisos y SINAI no valida estos permisos para el rol docente.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Asignación de permisos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué no aparece un funcionario que sí tiene usuario?">
+    Revise el filtro **Estado**: inicia en **Activo** y oculta a los usuarios inactivos o bloqueados. Seleccione **Todos** para verlos. Si aun así no aparece, verifique que su usuario tenga rol Administrativo, Coordinador o Auxiliar en la institución.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Asignación de permisos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="Los botones Asignar y Denegar no responden. ¿Qué pasa?">
+    Están deshabilitados hasta que marque al menos un usuario en la lista. Marque la casilla del usuario o use el menú de tres puntos para marcar por rol.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Restablecer devuelve los permisos que el usuario tenía antes?">
+    No. **Restablecer** agrega los permisos predeterminados del rol del usuario que le falten. No recupera permisos anteriores ni quita los que el usuario ya tiene.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="Usé Asignar Todos y la lista no cambió de inmediato. ¿Por qué?">
+    **Asignar Todos**, **Denegar Todos** y **Restablecer** se ejecutan en segundo plano. Espere un momento y vuelva a cargar la pantalla. El resultado también llega por correo electrónico al usuario que hizo el cambio, si tiene el correo verificado.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Cómo sé si un usuario tiene un permiso?">
+    Seleccione el permiso en el panel izquierdo y revise la columna **Permiso**: el visto indica **Permitido** y el candado, **Denegado**. Para ver todos los permisos de un usuario, abra **Ver y editar permisos para este usuario**.
   </GuideFAQItem>
 </GuideFAQ>

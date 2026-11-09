@@ -1,11 +1,13 @@
 ---
 title: "Estudiantes en especialidad"
-description: "Conozca las opciones de estudiantes en especialidad y siga el procedimiento correspondiente en SINAI."
+description: "Cree las modalidades de la institución, asígneles asignaturas con sus créditos y registre los estudiantes de cada modalidad."
 guide: true
 wordpressId: 29458
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/estudiantes-en-especialidad/"
-lastModified: "2023-11-14 20:12:55"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,43 +18,145 @@ lastModified: "2023-11-14 20:12:55"
 
 ## Guía paso a paso
 
-Para registrar las especialidades y/o modalidades que ofrece la institución educativa debe seguir las siguientes indicaciones.
+### 1. ¿Qué es Estudiantes en especialidad?
 
-1. Menú principal “Matrícula
-2. En el submenú “Especialidad” o en la iconografía haga clic en la opción Estudiantes en especialidad
-3. Agregue el nombre de la modalidad si aún no ha sido creada en la parte superior izquierda de la ventana.
-4. Clic en el botón ver Asignaturas
-5. Seleccione la modalidad
-6. Seleccione las asignaturas específicas de la modalidad
-7. Clic en el botón agregar del lado derecho.
+**Estudiantes en especialidad** registra las modalidades o especialidades que ofrece la institución, las asignaturas que pertenecen a cada modalidad y los estudiantes que la cursan.
 
+- Las **modalidades** son de la institución y se conservan de un calendario a otro.
+- Las **asignaturas** y los **estudiantes** de cada modalidad se registran en el calendario seleccionado en la parte superior.
 
-### Asignar y desasignar estudiantes a las modalidades
+Ingrese a **Matrícula → Especialidades → Estudiantes en Especialidad**.
 
-Para asignar o desasignar estudiantes a una modalidad debe seguir las indicaciones a continuación.
+<GuideImageTrigger src="/images/guides/estudiantes-en-especialidad/acceso-especialidades.jpg" alt="Menú Matrícula con Especialidades desplegado y la opción Estudiantes en Especialidad">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Clic en el botón azul Estudiantes
-2. Seleccione la sede, el grupo y la modalidad
-3. Seleccione los estudiantes que va a asignar
-4. Finalice haciendo Clic en el Botón azul Asignar Estudiantes. <GuideImageTrigger src={"/images/wordpress/2023/11/Asignar-y-desasignar-estudiantes-a-la-modalidad-1024x517.gif"} alt={"Captura de Asignar y desasignar estudiantes a la modalidad"}>Ver ejemplo</GuideImageTrigger>
+La pantalla tiene dos partes:
 
+- **A la izquierda:** el panel **Modalidades**, con la lista de modalidades y los botones **Asignaturas** y **Estudiantes**.
+- **A la derecha:** el panel que elija con esos botones. Al entrar se muestra **Asignación de Asignaturas a Modalidad**.
 
+El botón azul del panel **Modalidades** abre esta guía.
 
-El registro de matrícula para los estudiantes que se les asigne modalidad se hace con anticipación de manera tradicional, si al momento de asignar modalidad el estudiante no aparece es porque no ha sido matriculado.
+#### 2. Crear una modalidad
 
+1. Escriba el nombre en **Nombre de la Modalidad**. Admite hasta 50 caracteres.
+2. Haga clic en **Agregar**, junto al nombre.
+
+Si el nombre está vacío, SINAI muestra «Debe escribir el nombre de la modalidad que desea crear». Si la creación es correcta, el aviso es «Modalidad creada correctamente» y la modalidad aparece en la tabla **Nombre de Modalidad**.
+
+<GuideImageTrigger src="/images/guides/estudiantes-en-especialidad/pantalla-modalidades.jpg" alt="Panel Modalidades con la lista de modalidades y el panel Asignación de Asignaturas a Modalidad">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para eliminar una modalidad:
+
+1. Haga clic en la equis roja de la fila.
+2. Confirme *¿Confirma que desea eliminar la modalidad seleccionada?*
+
+Solo se elimina una modalidad sin asignaturas ni estudiantes. En otro caso, SINAI muestra:
+
+- «No se puede eliminar una modalidad que tiene asignaturas asignadas. Primero quite las asignaturas»
+- «No se puede eliminar una modalidad que tiene estudiantes asignados. Primero quite los estudiantes»
+
+Si se elimina, el aviso es «Modalidad eliminada correctamente».
+
+#### 3. Asignar asignaturas a la modalidad
+
+Haga clic en **Asignaturas** para ver el panel **Asignación de Asignaturas a Modalidad**.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Modalidad** | Modalidad a la que agrega asignaturas. La tabla de abajo muestra las asignaturas de la modalidad elegida. |
+| **Asignatura** | Asignaturas del calendario, con su código y nombre. |
+| **Créditos** | Número de créditos de la asignatura en la modalidad. Inicia en 0. |
+
+</GuideDataTable>
+
+1. Seleccione la **Modalidad**.
+2. Seleccione la **Asignatura** y escriba los **Créditos**.
+3. Haga clic en **Agregar**, junto a los créditos.
+
+Si se agrega, SINAI muestra «Asignatura agregada correctamente a la modalidad». Una asignatura solo puede estar en una modalidad por calendario: si ya está registrada, el aviso es «La asignatura seleccionada ya se encuentra registrada en otra modalidad.»
+
+La tabla muestra **Modalidad**, **Asignatura**, **Creditos** y el botón **Quitar**. Para retirar una asignatura, haga clic en **Quitar** y confirme *¿Confirma que desea eliminar esta asignatura de la modalidad?* El aviso de éxito es «Asignatura desasignada correctamente de la modalidad».
+
+#### 4. Asignar estudiantes a la modalidad
+
+Haga clic en **Estudiantes** para ver el panel **Asignación de Estudiantes a Modalidad**.
+
+1. Seleccione la **Sede** y el **Grupo**. La lista de grupos muestra el grupo y la jornada.
+2. Seleccione la **Modalidad**.
+3. En **Estudiantes del Grupo**, marque los estudiantes que va a asignar.
+4. Haga clic en **Asignar Estudiantes**.
+
+<GuideImageTrigger src="/images/guides/estudiantes-en-especialidad/estudiantes-modalidad.jpg" alt="Panel Asignación de Estudiantes a Modalidad con sede, grupo, modalidad y estudiantes marcados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Las listas de estudiantes se cargan al seleccionar el grupo. **Estudiantes del Grupo** muestra la matrícula del grupo: si un estudiante no aparece, primero debe matricularlo. **Estudiantes Asignados a la Modalidad** muestra los estudiantes del grupo que ya están en la modalidad elegida.
+
+Al terminar, SINAI indica cuántos estudiantes se adicionaron, por ejemplo «2 estudiantes adicionados a la modalidad».
+
+Un estudiante solo puede estar en una modalidad. Si uno de los marcados ya pertenece a otra, SINAI se detiene y muestra «No se pudo continuar porque el estudiante» con el nombre, «ya está asignado a la modalidad» con el código de la modalidad y «Por favor verifique». Los estudiantes procesados antes de ese quedan asignados.
+
+#### 5. Quitar un estudiante de la modalidad
+
+1. En **Estudiantes Asignados a la Modalidad**, seleccione un estudiante.
+2. Haga clic en **Quitar Estudiantes**.
+3. Confirme *¿Confirma que desea quitar el estudiante seleccionado de esta modalidad?*
+
+El aviso de éxito es «Estuiante desasignado correctamente de la modalidad». Se quita un estudiante por vez.
+
+Si el estudiante tiene calificaciones en asignaturas de la modalidad, SINAI no lo quita y muestra «No se puede desasignar el estudiante de la modalidad porque tiene calificaciones asociadas. Primero elimine las calificaciones del estudiante en las asignaturas de la modalidad».
+
+#### 6. Eliminar las calificaciones de la modalidad
+
+**Eliminar Calificaciones** borra las calificaciones del estudiante seleccionado en las asignaturas de la modalidad, dentro del grupo elegido.
+
+1. En **Estudiantes Asignados a la Modalidad**, seleccione el estudiante.
+2. Haga clic en **Eliminar Calificaciones**.
+3. Confirme *¿Confirma que desea eliminar las calificaciones de los estudiantes seleccionados en asignaturas de la modalidad?*
+
+El aviso de éxito es «Las calificaciones para el estudiante de asignaturas asociadas a la modalidad se eliminaron correctamente».
+
+<GuideCallout type="warning">
+  Las calificaciones eliminadas no se recuperan desde esta pantalla. Use esta opción solo cuando deba retirar al estudiante de la modalidad.
+</GuideCallout>
+
+#### 7. Permisos
+
+- Crear y eliminar modalidades, agregar o quitar asignaturas y asignar o quitar estudiantes exige el permiso para gestionar modalidades.
+- **Eliminar Calificaciones** exige el permiso para modificar calificaciones.
+
+Si su usuario no tiene el permiso, SINAI muestra el aviso del permiso y no hace el cambio. Solicítelo al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Estudiantes en especialidad»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Un estudiante no aparece en Estudiantes del Grupo. ¿Por qué?"}>
+    La lista muestra la matrícula del grupo seleccionado en el calendario actual. Verifique que el estudiante esté matriculado en ese grupo y que haya elegido la sede y el grupo correctos. Si la lista sigue vacía, vuelva a seleccionar el grupo: las listas se cargan al cambiarlo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Estudiantes en especialidad» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Puede una asignatura pertenecer a dos modalidades?"}>
+    No en el mismo calendario. Si la asignatura ya está en una modalidad, SINAI muestra «La asignatura seleccionada ya se encuentra registrada en otra modalidad.» Quítela de la modalidad actual con **Quitar** antes de agregarla a otra.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Estudiantes en especialidad»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Al asignar estudiantes aparece «ya está asignado a la modalidad». ¿Qué hago?"}>
+    Ese estudiante ya pertenece a otra modalidad en el mismo grupo; el mensaje trae el código de esa modalidad. Desmárquelo o quítelo primero de la otra modalidad. Los estudiantes que SINAI procesó antes de detenerse sí quedaron asignados: revise **Estudiantes Asignados a la Modalidad**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"No puedo quitar a un estudiante de la modalidad. ¿Por qué?"}>
+    Tiene calificaciones en asignaturas de la modalidad. Si de verdad debe retirarlo, use **Eliminar Calificaciones** con el estudiante seleccionado y luego **Quitar Estudiantes**. Las calificaciones eliminadas no se recuperan desde esta pantalla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"No puedo eliminar una modalidad. ¿Por qué?"}>
+    La modalidad todavía tiene asignaturas o estudiantes. Quite primero las asignaturas en el panel **Asignaturas** y los estudiantes en el panel **Estudiantes**; luego elimine la modalidad.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Tengo que volver a crear las modalidades en el calendario nuevo?"}>
+    No. Las modalidades son de la institución y aparecen en todos los calendarios. Lo que se registra por calendario son las asignaturas de cada modalidad y los estudiantes asignados; revíselos en el calendario seleccionado en la parte superior.
   </GuideFAQItem>
 </GuideFAQ>

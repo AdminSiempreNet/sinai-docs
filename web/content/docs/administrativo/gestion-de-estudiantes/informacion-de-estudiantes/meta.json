@@ -1,8 +1,9 @@
 {
   "title": "Información de estudiantes",
-  "description": "Actualización de datos, fotografías y acudientes.",
+  "description": "Listados, actualización de datos, fotografías y acudientes.",
   "defaultOpen": false,
   "pages": [
+    "lista-de-estudiantes-por-grupo",
     "actualizacion-individual",
     "actualizacion-de-datos-por-grupo",
     "cargar-fotografia",

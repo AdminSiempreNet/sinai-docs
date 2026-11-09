@@ -1,29 +1,106 @@
 ---
 title: "Escalas"
-description: "Contenido pendiente de documentación para «Escalas»."
+description: "Defina la escala de desempeño del calendario: rangos, valoración, concepto, abreviatura, color, prefijo y descripción de cada nivel nacional."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-## Tutorial
+## Video tutorial
 
 <GuideVideos compact>
-  <YouTube id="ZULZ39HqqrQ" title="Escalas" />
+<YouTube id="ZULZ39HqqrQ" title="Escalas" />
 </GuideVideos>
 
-## Escalas
+## Guía paso a paso
 
-Esta guía escrita está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es la escala de desempeño?
+
+La escala de desempeño define, para el calendario seleccionado en la parte superior de SINAI, la equivalencia entre las calificaciones de la institución y los niveles de la escala nacional. Cada nivel tiene un rango de notas, una valoración, un color y textos propios.
+
+Se configura en la pestaña **Escalas de Desempeño** de la pantalla de calendarios. El título de la pestaña es **Equivalencias con la Escala Nacional de Desempeños**.
+
+1. Ingrese a **Establecimiento → Calendarios**. Si se muestra el submenú, seleccione **Configuración del Calendario**.
+2. Abra la pestaña **Escalas de Desempeño**.
+
+<GuideImageTrigger src="/images/guides/escalas/pestana-escalas.jpg" alt="Pestaña Escalas de Desempeño con los niveles Superior, Alto, Básico y Bajo, sus rangos, colores y los botones Guardar Cambios y Escalas Personalizadas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si el calendario aún no tiene escala, SINAI crea una fila por cada nivel de desempeño nacional, con mínimo, máximo y valoración en cero. Complete esos valores y guarde.
+
+<GuideCallout type="warning">
+  La escala aplica a toda la institución en el calendario seleccionado. Verifique el año en la parte superior antes de guardar.
+</GuideCallout>
+
+#### 2. Campos de cada nivel
+
+El **Nivel de Desempeño** de cada fila es fijo y no se cambia. En la IE de pruebas, los niveles son **SUPERIOR**, **ALTO**, **BASICO** y **BAJO**.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Mínimo** | Nota inicial del rango del nivel. Hasta 5 caracteres: números, punto y coma. |
+| **Máximo** | Nota final del rango del nivel. Hasta 5 caracteres: números, punto y coma. |
+| **Valoración** | Nota que representa al nivel. Hasta 6 caracteres: números, punto y coma. |
+| **Concepto** | Nombre del nivel que usa la institución. Hasta 15 caracteres. |
+| **Abreviatura** | Una letra para el nivel. |
+| **Color** | Color del nivel. Elíjalo en el selector o escriba el código hexadecimal, por ejemplo **#14a807**. |
+| **Prefijo Descriptor** | Texto corto del nivel, de hasta 30 caracteres, por ejemplo **Siempre** o **Casi siempre**. |
+| **Descripción del desempeño** | Texto libre que describe el nivel. |
+
+</GuideDataTable>
+
+En **Mínimo**, **Máximo** y **Valoración** puede escribir el decimal con punto o con coma. SINAI lo guarda con coma.
+
+#### 3. Guardar la escala
+
+1. Complete o ajuste los campos de cada nivel.
+2. Haga clic en **Guardar Cambios**, al final de la tabla.
+
+Si el guardado es correcto, SINAI muestra **Los cambios en la escala de desempeño se guardaron correctamente**. Si ocurre un error, muestra el mensaje del error.
+
+<GuideCallout>
+  SINAI no compara los rangos entre niveles. Revise que el mínimo y el máximo de cada nivel no se crucen con los de otro nivel y que no queden notas sin nivel.
+</GuideCallout>
+
+<GuideCallout>
+  En **Descripción del desempeño**, los puntos que escriba se guardan como comas.
+</GuideCallout>
+
+#### 4. Escalas personalizadas
+
+El botón **Escalas Personalizadas**, junto a **Guardar Cambios**, abre la pantalla de escalas de desempeño personalizadas, para especificar una escala por grupo o por asignaturas.
+
+#### 5. Permisos
+
+**Guardar Cambios** exige el permiso **308**. El rector tiene todos los permisos. Si el usuario no lo tiene, SINAI muestra *No tiene asignado el permiso Nº308* y no guarda. Solicite el permiso al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Escalas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La pestaña muestra todos los niveles con mínimo, máximo y valoración en cero. ¿Por qué?"}>
+    El calendario no tenía escala y SINAI creó una fila por cada nivel nacional con esos valores en cero. Complete los rangos, la valoración y los demás datos, y haga clic en **Guardar Cambios**.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Escalas» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="02" question={"Configuré la escala, pero en otro año no aparece. ¿Qué pasó?"}>
+    La escala pertenece al calendario seleccionado en la parte superior de SINAI. Seleccione el año correcto y revise la pestaña **Escalas de Desempeño** de ese calendario.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Escalas»?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="03" question={"¿Puedo cambiar el nombre del nivel de desempeño?"}>
+    No. El **Nivel de Desempeño** corresponde a la escala nacional y no se edita. Para mostrar otro nombre, use **Concepto**, de hasta 15 caracteres.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Escribí el código del color y el selector no cambió. ¿Por qué?"}>
+    El selector solo se actualiza cuando el texto es un código hexadecimal válido que empieza por **#**, por ejemplo **#d10202**. Corrija el código o elija el color en el selector.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Al guardar aparece «No tiene asignado el permiso Nº308». ¿Qué hago?"}>
+    Su usuario no tiene el permiso para modificar la escala de desempeño. Solicítelo al administrador de usuarios de la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo usar una escala distinta para un grupo o una asignatura?"}>
+    Sí. Haga clic en **Escalas Personalizadas**, junto a **Guardar Cambios**, para definir escalas por grupo o por asignaturas.
   </GuideFAQItem>
 </GuideFAQ>

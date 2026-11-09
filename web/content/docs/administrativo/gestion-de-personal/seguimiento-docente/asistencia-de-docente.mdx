@@ -1,35 +1,97 @@
 ---
 title: "Asistencia Docentes"
-description: "Conozca las opciones de asistencia Docentes y siga el procedimiento correspondiente en SINAI."
+description: "Consulte las horas de clase que registraron los docentes por periodo, grupo y asignatura, véalas en lista o en resumen por mes y día, y expórtelas a Excel."
 guide: true
 wordpressId: 28484
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/asistencia-docentes/"
-lastModified: "2024-07-23 15:50:46"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="b7ykpyW6SFo" title="Asistencia Docentes"
-  odyseeUrl="https://odysee.com/registro-de-asistencias-de-docentes%3A9a5b3dcd46e7d974138e374b87e70e944330d06f"
-/>
+<YouTube id="b7ykpyW6SFo" title="Asistencia Docentes" odyseeUrl="https://odysee.com/registro-de-asistencias-de-docentes%3A9a5b3dcd46e7d974138e374b87e70e944330d06f" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Desde el módulo administrativo, puede acceder a este registro siguiendo la ruta: **Menú Personal > Submenú Funcionarios > Opción Asistencia de Docentes**. <GuideImageSequence images={[ { src: "/images/wordpress/2025/02/1-Asistencia-de-docentes.png", alt: "Captura de Asistencia de docentes" }, { src: "/images/wordpress/2025/02/2-Asistencia-de-docentes.png", alt: "Captura de Asistencia de docentes" }, { src: "/images/wordpress/2025/02/3-Asistencia-de-docentes.png", alt: "Captura de Asistencia de docentes" }, { src: "/images/wordpress/2025/02/4-Asistencia-de-docentes.png", alt: "Captura de Asistencia de docentes" }, { src: "/images/wordpress/2025/02/5-Asistencia-de-docentes.png", alt: "Captura de Asistencia de docentes" }, { src: "/images/wordpress/2025/02/6-asistencia-Docentes.png", alt: "Captura de asistencia Docentes" }, ]} > Ver ejemplos </GuideImageSequence>
+### 1. ¿Qué es Asistencia de Docentes?
+
+**Asistencia de Docentes** muestra los registros de asistencia de los docentes en el calendario actual: qué día dictaron clase, en qué grupo y asignatura, y cuántas horas. Desde aquí los consulta en lista o en resumen y los exporta a Excel. La pantalla no permite crear ni modificar registros.
+
+Los registros los hace cada docente en el módulo docente, con el botón **Registrar Asistencia Docente** de las pantallas **Registro de Inasistencias por día** o **Registro Detallado de Inasistencias**, del menú **Seguimiento**. Allí indica las **Horas Dictadas** de cada asignatura del día.
+
+Ingrese a **Personal → Funcionarios → Asistencia de Docentes**.
+
+<GuideImageTrigger src="/images/guides/asistencia-de-docentes/acceso-asistencia.jpg" alt="Menú Personal con el submenú Funcionarios desplegado y la opción Asistencia de Docentes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Filtrar los registros
+
+En la parte superior de **Registro de Asistencias de Docentes** están los filtros:
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | **[Todos]** o un docente activo del calendario. Al elegir un docente, **Grupo** muestra solo sus grupos. |
+| **Periodo** | **Todos** o un periodo del calendario. |
+| **Grupo** | **Todos** o un grupo. Con un docente elegido, la lista trae solo los grupos de ese docente y no incluye **Todos**. |
+| **Asignatura** | **Todas** o una asignatura. Con un docente elegido, trae solo las asignaturas que dicta en el grupo seleccionado. |
+
+</GuideDataTable>
+
+Los filtros se aplican al hacer clic en **Lista** o en **Resumen**.
+
+<GuideImageTrigger src="/images/guides/asistencia-de-docentes/pantalla-asistencia.jpg" alt="Pantalla Registro de Asistencias de Docentes con los filtros Docente, Periodo, Grupo y Asignatura y los botones Lista y Resumen">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 3. Ver la lista de registros
+
+Haga clic en **Lista**. La tabla muestra un registro por fila, con **Funcionario**, **Periodo**, **Grupo**, **Asignatura**, **Fecha** y **Horas**, 20 registros por página.
+
+- **Buscar:** escriba en el cuadro *Introduzca el texto a buscar...* para filtrar por funcionario, periodo, grupo o asignatura.
+- **Agrupar:** arrastre el título de una columna a la franja *Arrastre una columna aquí para agrupar por dicha columna*, por ejemplo **Funcionario**, para ver los registros agrupados.
+
+Si no hay registros, SINAI muestra «No hay registro de asistencia para los criterios seleccionados.».
+
+#### 4. Ver el resumen por mes y día
+
+Haga clic en **Resumen**. SINAI muestra una tabla dinámica con la suma de **Horas**:
+
+- **Filas:** **Funcionario**, **Grupo** y **Asignatura**.
+- **Columnas:** **Mes** y **Dia**.
+- **Filtros:** **Año** y **Periodo**, en la franja superior.
+
+Cada encabezado tiene un botón de filtro para elegir qué valores mostrar. Los totales aparecen en **Grand Total**.
+
+#### 5. Exportar a Excel
+
+Haga clic en **Exportar a Excel**, en la parte superior derecha. SINAI descarga **Control de Asistencias.xlsx** con la lista de registros según los filtros seleccionados.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Asistencia Docentes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué aparece «No hay registro de asistencia para los criterios seleccionados.»?"}>
+    No hay registros que cumplan los filtros en el calendario actual. Ponga **Docente** en **[Todos]**, **Periodo** en **Todos**, **Grupo** en **Todos** y **Asignatura** en **Todas**, y haga clic en **Lista**. Si sigue vacía, los docentes aún no han registrado su asistencia.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Asistencia Docentes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿De dónde salen las horas que muestra esta pantalla?"}>
+    De lo que registra cada docente con **Registrar Asistencia Docente** en **Registro de Inasistencias por día** o **Registro Detallado de Inasistencias**. SINAI guarda un registro por periodo, grupo, asignatura y fecha con las horas dictadas que el docente escribió.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Asistencia Docentes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Cambié el periodo y la tabla no cambió. ¿Qué pasa?"}>
+    El filtro **Periodo** no actualiza la tabla por sí solo. Después de cambiarlo, haga clic en **Lista** o en **Resumen**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Elegí un docente y ya no aparece la opción Todos en Grupo. ¿Es normal?"}>
+    Sí. Con un docente seleccionado, **Grupo** muestra solo los grupos de ese docente. Para ver todos sus registros, vuelva a **[Todos]** en **Docente** y filtre con el cuadro de búsqueda de la lista.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué incluye el archivo de Excel?"}>
+    La lista de registros con las columnas **Funcionario**, **Periodo**, **Grupo**, **Asignatura**, **Fecha** y **Horas**, según los filtros **Docente**, **Periodo**, **Grupo** y **Asignatura** seleccionados.
   </GuideFAQItem>
 </GuideFAQ>

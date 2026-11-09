@@ -1,23 +1,200 @@
 ---
 title: "Observador docente"
-description: "Contenido pendiente de documentación para «Observador docente»."
+description: "Registre anotaciones de los docentes, como felicitaciones, llamados de atención o seguimientos, y configure sus tipos y campos personalizados."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Registrar anotaciones en el observador docente y configurar sus tipos y campos personalizados. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es Observador docente?
+
+**Observador docente** es el registro de anotaciones de los docentes de la institución: felicitaciones, llamados de atención, seguimientos, capacitaciones u otros tipos que defina la institución. Cada anotación tiene un docente, un tipo, una fecha, el texto de la anotación y, si la institución los configura, campos de información adicional.
+
+Ingrese a **Personal → Funcionarios → Observador Docente**.
+
+<GuideImageTrigger src="/images/guides/observador-docente/acceso-observador-docente.jpg" alt="Menú Personal con el submenú Funcionarios desplegado y la opción Observador Docente">
+  Ver ejemplo
+</GuideImageTrigger>
+
+A la izquierda, el panel **Opciones** tiene tres pantallas:
+
+- **Tipo de anotaciones:** tipos de anotación propios de la institución.
+- **Registro de Anotaciones:** anotaciones de cada docente.
+- **Campos personalizados:** campos de información adicional que acompañan cada anotación.
+
+**Tipo de anotaciones** y **Campos personalizados** solo aparecen para los usuarios administrativos.
+
+#### 2. Consultar las anotaciones
+
+Abra **Registro de Anotaciones**. El título de la pantalla es **Registro de Anotaciones del Docente**.
+
+<GuideDataTable>
+
+| Filtro | Qué define |
+| --- | --- |
+| **Docente** | **Todos** o un funcionario de la institución. |
+| **Desde** | Fecha inicial. Al entrar, SINAI propone la fecha de hace 30 días. |
+| **Hasta** | Fecha final. Al entrar, SINAI propone la fecha de hoy. |
+
+</GuideDataTable>
+
+Ajuste los filtros y haga clic en **Buscar**. Los cambios en los filtros se aplican solo al hacer clic en ese botón.
+
+<GuideImageTrigger src="/images/guides/observador-docente/registro-anotaciones.jpg" alt="Registro de Anotaciones del Docente con los filtros y la tabla de anotaciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla muestra **Docente**, **Fecha**, **Tipo de anotación** y **Acciones**. Las anotaciones se ordenan por nombre del docente y, para un mismo docente, de la más reciente a la más antigua. Si no hay resultados, aparece «No hay anotaciones disponibles».
+
+En **Acciones** están **Editar**, **Eliminar** y **Descargar**.
+
+#### 3. Registrar una anotación
+
+1. Haga clic en **Nuevo**. Se abre la ventana **Anotación Docente**.
+2. Complete los campos.
+3. Haga clic en **Guardar**.
+
+<GuideDataTable>
+
+| Campo | Qué registra |
+| --- | --- |
+| **Funcionario** | Docente al que corresponde la anotación. Es obligatorio. |
+| **Tipo de Anotación** | Uno de los tipos configurados en **Tipo de anotaciones**. Es obligatorio. |
+| **Fecha** | Fecha de la anotación. Es obligatoria y no puede ser posterior a hoy. |
+| **Anotación** | Texto de la anotación. Es obligatorio y admite hasta 2.000 caracteres; el contador aparece debajo. |
+| **Información adicional** | Un cuadro por cada campo personalizado activo, de hasta 500 caracteres. La descripción del campo aparece como texto de ayuda dentro del cuadro. |
+
+</GuideDataTable>
+
+Si la anotación se guarda, SINAI muestra «Anotación creada con éxito». Si la fecha es posterior a hoy, el aviso es «La fecha no puede ser mayor a la fecha actual».
+
+**Cancelar** cierra la ventana sin guardar.
+
+#### 4. Editar una anotación
+
+1. Haga clic en **Editar** en la fila.
+2. Ajuste el tipo, la fecha, el texto o la información adicional. El **Funcionario** no se cambia.
+3. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/observador-docente/editar-anotacion.jpg" alt="Ventana Anotación Docente con el funcionario, el tipo, la fecha, la anotación y la información adicional">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El aviso de éxito es «Anotación actualizada con éxito». En la ventana de edición, **Descargar** genera el reporte de esa anotación.
+
+#### 5. Eliminar una anotación
+
+1. Haga clic en **Eliminar** en la fila.
+2. Lea el aviso *¿Seguro que deseas eliminar esta anotación?* y haga clic en **Confirmar**.
+
+SINAI muestra «Anotación eliminado con éxito».
+
+<GuideCallout type="warning">
+  La anotación eliminada no se puede recuperar.
+</GuideCallout>
+
+#### 6. Descargar reportes
+
+Los reportes se descargan como documento de Word.
+
+- **Una anotación:** haga clic en **Descargar** en la fila.
+- **Varias anotaciones:** ajuste **Docente**, **Desde** y **Hasta**, y haga clic en **Descargar listado**.
+
+**Descargar listado** usa las fechas que estén escritas en los filtros:
+
+- Si eligió un docente, descarga sus anotaciones en ese rango.
+- Si **Docente** está en **Todos**, SINAI pregunta *¿Deseas descargar el reporte de TODOS los docentes?* Haga clic en **Sí, descargar todos** para continuar.
+- Si falta alguna fecha, SINAI muestra «Debes especificar el rango de fechas».
+- Si no hay anotaciones en el rango, SINAI muestra «No se encontraron anotaciones en el rango seleccionado».
+
+Cuando termina, aparece «Reporte descargado correctamente».
+
+#### 7. Configurar los tipos de anotación
+
+Abra **Tipo de anotaciones**. La tabla muestra **Código**, **Nombre**, **Descripción** y **Acciones**.
+
+<GuideImageTrigger src="/images/guides/observador-docente/tipos-anotaciones.jpg" alt="Pantalla Tipo de anotaciones con el código, el nombre y la descripción de cada tipo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para crear un tipo:
+
+1. Haga clic en **Agregar**. Se abre la ventana **Tipo de Anotación**.
+2. Escriba el **Nombre**, de hasta 50 caracteres.
+3. Revise el **Código**. SINAI propone el número siguiente al código más alto. Debe ser mayor que cero.
+4. Escriba la **Descripción**.
+5. Haga clic en **Guardar**.
+
+Si se guarda, SINAI muestra «Tipo de anotación guardado con éxito». Si el código ya existe, muestra «El tipo de anotación con el código» seguido del número y «ya existe en la institución especificada».
+
+Para modificar un tipo, haga clic en **Editar**, ajuste los datos en **Editar Tipo de Anotación** y haga clic en **Guardar Cambios**.
+
+Para eliminarlo, haga clic en **Eliminar** y confirme *¿Seguro que deseas eliminar este tipo de anotación?* Si el tipo ya se usó en anotaciones, SINAI muestra «No se puede eliminar el tipo de anotación, porque tiene datos asociados».
+
+#### 8. Configurar los campos personalizados
+
+Abra **Campos personalizados**. El título de la pantalla es **Campo de Anotaciones**. La tabla muestra **Orden**, **Nombre**, **Descripción**, **Altura**, **Activo** y **Acciones**.
+
+<GuideImageTrigger src="/images/guides/observador-docente/campos-personalizados.jpg" alt="Pantalla Campo de Anotaciones con el orden, el nombre, la descripción, la altura y el estado de cada campo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para crear un campo, haga clic en **Agregar**, complete la ventana **Nuevo Campo** y haga clic en **Guardar**.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Nombre** | Título del cuadro en la anotación. Es obligatorio y admite hasta 50 caracteres. |
+| **Descripción** | Texto de ayuda que aparece dentro del cuadro vacío. Es obligatoria. |
+| **Altura** | Número de líneas del cuadro, de 1 a 5. |
+| **Orden** | Posición del campo, de 1 a 100. SINAI propone el número siguiente al orden más alto. |
+| **Activo** | Si está desmarcado, el campo no aparece en la ventana de la anotación. |
+
+</GuideDataTable>
+
+Si se guarda, SINAI muestra «Campo personalizado guardado con éxito». Para modificar un campo, haga clic en **Editar** y luego en **Guardar Cambios**. Para eliminarlo, haga clic en **Eliminar** y confirme *¿Seguro que deseas eliminar este campo personalizado?*
+
+<GuideCallout>
+  Para dejar de usar un campo sin eliminarlo, desmarque **Activo**.
+</GuideCallout>
+
+#### 9. Vista del docente
+
+El docente también puede abrir **Registro de Anotaciones**. Solo ve sus propias anotaciones, no puede crear, editar ni eliminar, y no ve **Tipo de anotaciones** ni **Campos personalizados**. En cada fila tiene **Detalles**, que abre la anotación en modo de solo lectura, y **Descargar**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Observador docente»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"No veo una anotación que registré. ¿Qué reviso?"}>
+    Revise **Desde** y **Hasta**: al entrar, la pantalla muestra solo los últimos 30 días. Amplíe el rango, verifique el **Docente** y haga clic en **Buscar**. Los cambios en los filtros no se aplican hasta que hace clic en ese botón.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Observador docente» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="02" question={"No aparece el tipo de anotación que necesito. ¿Dónde lo creo?"}>
+    En **Opciones → Tipo de anotaciones**, con **Agregar**. Cada tipo necesita nombre, código mayor que cero y descripción. El código no se puede repetir en la institución.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Observador docente»?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="03" question={"¿Por qué no puedo eliminar un tipo de anotación?"}>
+    Si el tipo ya se usó en alguna anotación, SINAI muestra «No se puede eliminar el tipo de anotación, porque tiene datos asociados». Puede editar su nombre o descripción en lugar de eliminarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Un campo personalizado no aparece al registrar la anotación. ¿Por qué?"}>
+    Solo aparecen los campos marcados como **Activo**. Abra **Campos personalizados**, haga clic en **Editar** en el campo, marque **Activo** y guarde.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo registrar una anotación con fecha futura?"}>
+    No. La fecha no puede ser posterior a hoy; SINAI muestra «La fecha no puede ser mayor a la fecha actual».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿El docente ve las anotaciones que le registran?"}>
+    Sí. Desde **Registro de Anotaciones** el docente ve sus propias anotaciones en modo de solo lectura y puede descargarlas. No puede crearlas, modificarlas ni eliminarlas.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,25 +1,122 @@
 ---
 title: "Verificación de Datos"
-description: "Aprenda a verificar datos en SINAI."
+description: "Revise, corrija y confirme el teléfono y el correo electrónico de funcionarios, estudiantes y acudientes, y configure la actualización obligatoria de esos datos."
 wordpressId: 35542
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/verificacion-de-datos/"
-lastModified: "2025-10-21 11:22:45"
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
+## Video tutorial
+
+<GuideVideoPending>
+  - Verificar los datos de contacto de los usuarios. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Verificación de Datos?
+
+**Verificación de datos** reúne en una sola pantalla el teléfono y el correo electrónico de los funcionarios, los estudiantes y los acudientes de la institución. Desde aquí puede corregirlos y confirmarlos. SINAI solo envía notificaciones a los contactos que están confirmados.
+
+Ingrese a **Establecimiento → Usuarios → Verificación de datos**.
+
+<GuideImageTrigger src="/images/guides/verificacion-de-datos/acceso-verificacion-datos.jpg" alt="Menú Establecimiento, opción Usuarios con la tarjeta Verificación de datos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+En la parte superior hay tres pestañas:
+
+- **Funcionarios:** solo la ven los usuarios administrativos.
+- **Estudiantes**.
+- **Acudientes**.
+
+Cada fila muestra el nombre del usuario, su rol (en **Funcionarios**) o su grupo (en **Estudiantes** y **Acudientes**), el tipo y número de identificación, y dos columnas:
+
+- **Teléfono**, con el ícono de WhatsApp en verde cuando el número está verificado en WhatsApp, y la casilla **¿Confirmar teléfono?**.
+- **Correo electrónico**, con la casilla **¿Confirmar email?**.
+
+<GuideImageTrigger src="/images/guides/verificacion-de-datos/funcionarios.jpg" alt="Pestaña Funcionarios con el buscador, el botón Confirmar datos y las filas con teléfono y correo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La lista muestra 50 usuarios por página. Para buscar, escriba en el filtro. En **Funcionarios** busca por nombres o identificación; en **Estudiantes** y **Acudientes**, también por grupo.
+
+#### 2. Corregir el teléfono o el correo
+
+1. Seleccione la pestaña.
+2. Escriba el dato nuevo en la casilla del teléfono o del correo.
+3. Salga de la casilla. SINAI guarda el cambio en ese momento; no hay botón **Guardar**.
+
+Mientras escribe, la casilla cambia de color si el dato no tiene un formato válido. En ese caso SINAI no lo guarda:
+
+- **Teléfono:** solo acepta números. Debe empezar por 3 y tener entre 9 y 12 dígitos.
+- **Correo electrónico:** debe tener la forma `usuario@dominio.com`.
+
+<GuideCallout type="warning">
+  El cambio se guarda al salir de la casilla y reemplaza el dato del usuario. Si borra el dato, su confirmación se anula.
+</GuideCallout>
+
+#### 3. Confirmar los datos
+
+Para confirmar un solo dato, marque **¿Confirmar teléfono?** o **¿Confirmar email?** en la fila. Para anular la confirmación, desmárquela. La casilla queda inactiva si el dato está vacío.
+
+Para confirmar varios usuarios a la vez:
+
+1. Marque la casilla de cada fila. La casilla junto al filtro marca o desmarca todas las filas de la página.
+2. Haga clic en **Confirmar datos**.
+3. En la ventana **Confirmar Datos**, elija **Confirmar** o **Anular confirmación**.
+4. Marque qué datos aplicar: el teléfono, el correo electrónico o ambos.
+5. Haga clic en **Aceptar**.
+
+<GuideImageTrigger src="/images/guides/verificacion-de-datos/confirmar-datos.jpg" alt="Ventana Confirmar Datos con dos filas seleccionadas, las opciones Confirmar y Anular confirmación y las casillas de teléfono y correo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La ventana indica cuántas filas seleccionó. SINAI solo aplica la confirmación a los datos que no están vacíos y muestra **Teléfonos confirmados correctamente** o **Emails confirmados correctamente**.
+
+Si hace clic en **Confirmar datos** sin marcar filas, SINAI muestra *Por favor, selecciona al menos una fila para confirmar los datos.*
+
+#### 4. Configurar la actualización obligatoria de datos
+
+El botón con el ícono de engranaje, junto a **Confirmar datos**, abre el panel **Configuración**. Solo lo ven los usuarios administrativos.
+
+<GuideImageTrigger src="/images/guides/verificacion-de-datos/configuracion.jpg" alt="Panel Configuración con Restablecer confirmaciones, Forzar actualización, roles y fechas Desde y Hasta">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para pedir a los usuarios que actualicen y verifiquen su información de contacto:
+
+1. Marque **Forzar actualización y verificación de información de contacto.**
+2. En **Forzar actualización para los roles**, marque los roles: **Rector**, **Coordinador**, **Administrativo**, **Docente**, **Estudiante** o **Acudiente**.
+3. En **Fechas**, defina **Desde** y **Hasta**.
+4. Haga clic en **Guardar**, al pie del panel.
+
+Si el guardado es correcto, SINAI muestra **Configuración guardada correctamente** o el mensaje que devuelva el servidor.
+
+El botón **Restablecer confirmaciones** elimina las confirmaciones de todos los funcionarios, estudiantes y acudientes de la institución. Se recomienda cuando quiere forzar que los usuarios vuelvan a actualizar y verificar su información de contacto. SINAI pide confirmar con *¿Estás seguro de que deseas restablecer las confirmaciones, para todos los funcionarios, estudiantes y acudientes de la Institución?* y el botón **Sí, restablecer**.
+
+<GuideCallout type="warning">
+  **Restablecer confirmaciones** afecta a todos los usuarios de la institución y no se puede deshacer. Mientras los contactos no se confirmen de nuevo, SINAI no les envía notificaciones.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Verificación de Datos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué un usuario no recibe notificaciones si tiene teléfono y correo?">
+    SINAI solo envía notificaciones a los contactos confirmados. Revise que la casilla **¿Confirmar teléfono?** o **¿Confirmar email?** esté marcada en la fila del usuario.
   </GuideFAQItem>
-
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Verificación de Datos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="Cambié un teléfono y no se guardó. ¿Por qué?">
+    El número no tiene un formato válido. SINAI solo guarda teléfonos que empiezan por 3 y tienen entre 9 y 12 dígitos. Corrija el número y salga de la casilla.
   </GuideFAQItem>
-
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Verificación de Datos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Por qué no puedo marcar la casilla de confirmar?">
+    La casilla queda inactiva cuando el dato está vacío. Escriba primero el teléfono o el correo y luego confírmelo.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Por qué no veo la pestaña Funcionarios ni el botón de configuración?">
+    Solo los ven los usuarios administrativos. Los directores de grupo que tienen acceso a esta pantalla trabajan con los estudiantes y acudientes de su grupo.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué pasa si hago clic en Restablecer confirmaciones?">
+    Se eliminan las confirmaciones de teléfono y correo de todos los funcionarios, estudiantes y acudientes de la institución. Úselo solo cuando quiera que todos vuelvan a verificar su información de contacto.
   </GuideFAQItem>
 </GuideFAQ>

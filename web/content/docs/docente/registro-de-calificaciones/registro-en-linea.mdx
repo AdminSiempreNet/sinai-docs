@@ -1,80 +1,208 @@
 ---
 title: "Registro de calificaciones en línea"
-description: "Registre notas parciales por actividades, use el autollenado y guarde la planilla en SINAI."
+description: "Registre las notas por actividades de cada componente, autollene una columna, administre las actividades y guarde la planilla del periodo."
 guide: true
 wordpressId: 30061
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/registro-de-calificaciones-en-linea/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
 <YouTube id="xWmmjTgvDFg" title="Registro de calificaciones en línea" odyseeUrl="https://odysee.com/@AndresGoDu:a/Registro-de-Calificaciones-en-L%C3%ADnea---SINAI---M%C3%B3dulo-docente:d180796d4f3f3716d1c72ff2bbd20470a3750ed7" />
 </GuideVideos>
 
-## Registro de calificaciones en línea
+## Guía paso a paso
 
-El **Registro de calificaciones en línea** es la planilla del módulo docente para ingresar las notas parciales de los estudiantes según las actividades del periodo.
+### 1. ¿Qué es el Registro de Calificaciones?
 
-Sirve cuando necesita **poner notas**, **calificar una actividad** o **actualizar la planilla** de un grupo y una asignatura sin salir de SINAI. Al guardar, el sistema calcula el acumulado y la calificación definitiva de cada estudiante.
+El **Registro de Calificaciones del Periodo** es la planilla donde usted registra las notas de sus estudiantes en un grupo, un periodo y una asignatura. Las notas se organizan por componentes, cada uno con su peso porcentual, y dentro de cada componente por actividades. Al guardar, SINAI calcula el acumulado y la definitiva del periodo.
 
-## Paso a paso
+Ingrese a **Evaluación → Calificaciones → Registro de Calificaciones**. En algunas instituciones la opción se llama **Registro de Calificaciones en Línea**.
 
-### Ingresar al registro
+<GuideImageTrigger src="/images/guides/docente-registro-en-linea/acceso-registro.jpg" alt="Menú Evaluación con el submenú Calificaciones desplegado y la opción Registro de Calificaciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En el menú principal, diríjase a la siguiente ruta:
+En la parte superior están los botones **Generar Planilla**, **Actividades**, **Guardar**, **Acumulados**, el ícono rojo para eliminar calificaciones, el botón azul de ayuda y el menú **Opciones**.
 
-**Evaluación → Calificaciones → Registro de Calificaciones en Línea**.
+#### 2. Seleccionar la planilla
 
-<GuideImageTrigger src="/images/guides/registro-de-calificaciones/acceso-registro-calificaciones.png" alt="Acceso a Registro de Calificaciones en Línea desde Evaluación y Calificaciones">Referencia visual</GuideImageTrigger>
+Elija la planilla con los filtros:
 
-### Registrar las calificaciones
+<GuideDataTable>
 
-1. Seleccione el **grupo**, el **periodo** y la **asignatura**.
-2. Ingrese las calificaciones de los estudiantes según las actividades a valorar. Puede usar punto (`.`) o coma (`,`) para los decimales.
-3. Haga clic en **Guardar**.
-4. SINAI calculará automáticamente el **acumulado** y la **calificación definitiva** de cada estudiante.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | Su nombre. Desde el módulo docente no se puede cambiar. |
+| **Grupo** | Los grupos de su asignación académica. |
+| **Periodo** | Los periodos del grupo. Si no ha elegido uno antes, queda seleccionado el periodo activo para calificaciones. |
+| **Asignatura** | Las asignaturas que usted tiene en ese grupo y ese periodo. |
 
-<GuideImageTrigger src="/images/guides/registro-de-calificaciones/planilla-registro-calificaciones.png" alt="Planilla de registro de calificaciones en línea con actividades y notas">Referencia visual</GuideImageTrigger>
+</GuideDataTable>
 
-Puede desplazarse entre celdas con las **teclas direccionales** del teclado para agilizar la digitación.
+SINAI recuerda el grupo, el periodo y la asignatura que usó la última vez en este navegador.
 
-### Autollenar calificaciones
+Si escribió notas sin guardar y cambia un filtro, SINAI pregunta *Hay cambios sin guardar en la planilla actual. ¿Confirma que desea cambiar de planilla sin guardar?* Si confirma, las notas sin guardar se pierden.
 
-Use **Autollenar** cuando la misma nota aplica a todos los estudiantes de una actividad.
+Si el periodo está cerrado para calificaciones, aparece «El periodo actual está cerrado, no se puede modificar la planilla de calificaciones» y SINAI no guarda cambios en esa planilla.
 
-1. Escriba la calificación de la actividad en el **primer estudiante** de la lista.
-2. Haga clic en la **flecha triangular hacia abajo** de la columna donde registró la nota.
-3. En el cuadro de confirmación, seleccione **Aceptar**.
-4. SINAI asignará la misma calificación a todos los estudiantes de la lista.
-5. Haga clic en **Guardar** para confirmar los cambios.
+#### 3. Leer la planilla
 
-### Consideraciones
+<GuideImageTrigger src="/images/guides/docente-registro-en-linea/planilla-calificaciones.jpg" alt="Planilla de calificaciones con un componente, tres actividades con notas de ejemplo y las columnas Acum., Recup., Definitiva y Faltas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-- El autollenado se realiza **una actividad a la vez**.
-- Puede modificar cualquier calificación de forma directa; siempre finalice con **Guardar**.
-- Las actividades resaltadas en **naranja** son de diligenciamiento obligatorio.
+Cada fila es un estudiante y muestra su nombre, su código y su estado de matrícula. Las columnas son:
+
+- **Componentes:** el título muestra el nombre abreviado del componente y su peso, por ejemplo **COGNI 34%**. Debajo hay una columna por cada actividad; al pasar el cursor sobre la celda aparece el nombre de la actividad. La última columna del componente, con el peso en el título, muestra el resultado del estudiante en ese componente después de guardar.
+- **Desempeño Periodo:** **Acum.** (acumulado), **Recup.** (recuperación), **Definitiva**, con el desempeño en color, y **Faltas**.
+
+Algunas filas y celdas se ven diferentes:
+
+- **Fila gris y bloqueada:** el estudiante no está matriculado, por ejemplo **TRASLADADO**, **RETIRADO** o **DESERTOR**.
+- **Fila gris con el nombre como enlace:** el estudiante tiene una valoración de educación inclusiva. El enlace abre esa valoración.
+- **Ícono verde junto al estado:** «Estudiante caracterizado con Necesidades Educativas Especiales».
+- **Fila amarilla clara:** otro usuario modificó por última vez las notas del estudiante. Al pasar el cursor sobre el nombre se ve quién y cuándo.
+- **Celda naranja clara:** actividad obligatoria sin nota. Al pasar el cursor aparece «Actividad Obligatoria» con el nombre de la actividad.
+- **Etiquetas BD, ND o TR:** el registro no se puede modificar en esta planilla porque fue cargado a la base de datos (**BD**), generado por la planilla de nota directa (**ND**) o por la calificación de trasladados (**TR**).
+
+#### 4. Generar las columnas de actividades
+
+Si la planilla muestra los componentes pero no tiene columnas de actividades, haga clic en **Generar Planilla**. SINAI crea las actividades predeterminadas que su institución configuró para cada componente.
+
+- Si ya hay actividades creadas a mano, SINAI muestra «Ya hay actividades generadas de forma manual, por favor termine de realizar la planeación de manualmente.» Complete las actividades desde **Actividades**.
+- Si la institución exige la planeación manual de actividades, el botón **Generar Planilla** no aparece.
+
+#### 5. Administrar las actividades
+
+Haga clic en **Actividades**. Se abre la ventana **Actividades**.
+
+<GuideImageTrigger src="/images/guides/docente-registro-en-linea/ventana-actividades.jpg" alt="Ventana Actividades con el componente ACTITUDINAL elegido y su lista de tres actividades">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para agregar una actividad:
+
+1. En **Componente**, seleccione el componente. La lista muestra el número, el nombre y el peso, por ejemplo **3 - ACTITUDINAL (20%)**.
+2. En **Orden**, seleccione la posición de la actividad.
+3. En **Descripción de la Actividad**, escriba el nombre.
+4. Haga clic en **Agregar**.
+
+La actividad aparece en la lista y **Orden** pasa a la posición siguiente. Si esa posición ya está ocupada, SINAI muestra «La actividad que intenta agregar ya está registrada».
+
+En la lista puede corregir el texto de cada actividad, hasta 500 caracteres, y su **Fecha**, con el formato día/mes/año. Luego haga clic en:
+
+- **Guardar:** guarda los cambios y deja la ventana abierta. SINAI muestra «Actividades guardadas correctamente».
+- **Guardar y Cerrar:** guarda, cierra la ventana y actualiza la planilla.
+
+Para quitar actividades, marque la casilla de cada una, haga clic en **Eliminar Actividades Seleccionadas** y confirme *¿Confirma que desea eliminar las actividades seleccionadas?* SINAI muestra «Actividades eliminadas correctamente».
+
+<GuideCallout>
+  Las actividades obligatorias tienen la casilla bloqueada y no se eliminan, salvo que su institución lo permita. Si seleccionó alguna, SINAI indica cuántas no se eliminaron, por ejemplo «Actividades eliminadas correctamente. 1 actividad(es) obligatoria(s) no fueron eliminadas.»
+</GuideCallout>
+
+#### 6. Registrar y guardar las calificaciones
+
+1. Escriba la nota de cada estudiante en la celda de la actividad. Puede usar punto o coma para los decimales; SINAI cambia el punto por coma.
+2. Muévase entre celdas con las flechas del teclado.
+3. En **Faltas**, escriba el número de inasistencias del periodo. Solo admite números enteros.
+4. Haga clic en **Guardar**.
+
+SINAI muestra un resumen, por ejemplo «Calificaciones guardadas correctamente, de 25 estudiantes, se guardaron 24 y no se modificaron 1», y recalcula el acumulado y la definitiva. Junto a cada estudiante aparece **OK** si se guardó; las etiquetas **BD**, **ND**, **TR** o **NULL** indican que no se pudo guardar. Pase el cursor sobre la etiqueta para ver el motivo.
+
+<GuideCallout type="warning">
+  Cada nota debe estar dentro de la escala de valoración del grupo. Si escribe una nota menor que el mínimo o mayor que el máximo, SINAI no la guarda y la celda queda vacía, sin mostrar un mensaje. Revise la planilla después de guardar.
+</GuideCallout>
+
+Solo se guardan las notas de los estudiantes en estado **MATRICULADO**.
+
+#### 7. Autollenar una columna
+
+Use el autollenado cuando todos los estudiantes tienen la misma nota en una actividad.
+
+1. Escriba la nota en la celda del primer estudiante de la lista.
+2. Haga clic en la flecha **▼** del título de esa columna.
+3. Confirme el mensaje *¿Confirma que desea autollenar esta columna con la calificación del primer estudiante?. Se reemplazarán las calificaciones actuales.*
+
+SINAI guarda esa nota de inmediato en la columna para todos los estudiantes matriculados y muestra un resumen, por ejemplo «Calificaciones Autollenadas correctamente, de 25 estudiantes, se Autollenaron 25 y no se modificaron 0». No necesita hacer clic en **Guardar** para esa columna.
+
+- Si la nota del primer estudiante no es un número, SINAI muestra «El número que esta asignando no es válido.»
+- Si está fuera de la escala, muestra «El número que esta asignando esta por fuera de la escala Institucional.»
+
+<GuideCallout type="warning">
+  Después de autollenar, SINAI vuelve a cargar la planilla con lo guardado. Las notas de otras columnas que escribió y no guardó se pierden. Haga clic en **Guardar** antes de autollenar.
+</GuideCallout>
+
+Si su institución desactivó el autollenado, el título de la columna muestra el nombre de la actividad en lugar de la flecha.
+
+#### 8. Eliminar las calificaciones de estudiantes
+
+1. Marque la casilla de cada estudiante. **Seleccionar Estudiantes** marca o desmarca a todos.
+2. Haga clic en el ícono rojo de eliminar.
+3. Confirme el mensaje *¿Confirma que desea eliminar los estudiantes seleccionados?*
+
+SINAI borra las calificaciones de esos estudiantes en esta planilla y muestra un resumen, por ejemplo «Calificaciones eliminadas correctamente, de 2 estudiantes, se eliminaron 2 y no se modificaron 0». Los estudiantes siguen en la lista, sin notas.
+
+<GuideCallout type="warning">
+  Esta acción borra las notas del grupo, el periodo y la asignatura seleccionados para los estudiantes marcados. No se puede deshacer.
+</GuideCallout>
+
+#### 9. Consultar los acumulados
+
+Haga clic en **Acumulados** para abrir la pantalla **Notas Finales**, donde consulta las notas finales de los estudiantes.
+
+#### 10. Usar el menú Opciones
+
+Haga clic en **Opciones** para ver:
+
+<GuideImageTrigger src="/images/guides/docente-registro-en-linea/menu-opciones.jpg" alt="Menú Opciones desplegado con Configuración, Importar de fuentes externas y las dos opciones de descarga">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Configuración:** abre la ventana **Configuraciones**. Marque **Mostrar solo estudiantes en estado MATRICULADO** para ocultar a los trasladados, retirados y demás estudiantes inactivos, y haga clic en **Guardar**. La preferencia queda en este navegador. **Cerrar** sale sin cambios.
+- **Importar de fuentes externas:** trae notas de una actividad del Aula Virtual a una columna de la planilla. Seleccione el curso, el tipo de ejercicio, la actividad, el **Componente** y la columna en **Importar hacia...**, y haga clic en **Importar Notas**. Las notas importadas reemplazan las de la columna elegida. Requiere que la institución tenga el servicio de Aula Virtual; si no lo tiene, SINAI muestra «La institucion no cuenta con un servicio de Aula virtual. Por favor solicitelo.»
+- **Descargar por Docente:** descarga en Excel la planilla de todos sus grupos y asignaturas del periodo.
+- **Descargar por Grupo y Asignatura:** descarga en Excel la planilla del grupo y la asignatura seleccionados.
+
+<GuideImageTrigger src="/images/guides/docente-registro-en-linea/ventana-configuracion.jpg" alt="Ventana Configuraciones con la casilla Mostrar solo estudiantes en estado MATRICULADO">
+  Ver ejemplo
+</GuideImageTrigger>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo entro a poner las notas o calificar en línea?">
-    En el módulo docente vaya a **Evaluación → Calificaciones → Registro de Calificaciones en Línea**. Luego elija grupo, periodo y asignatura.
+  <GuideFAQItem index="01" question={"Escribí una nota, guardé y la celda quedó vacía. ¿Por qué?"}>
+    La nota estaba fuera de la escala de valoración del grupo o no era un número. SINAI no guarda esas notas y deja la celda vacía. Escriba una nota dentro de la escala y vuelva a guardar.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question="¿Cómo asigno la misma nota a todos los estudiantes de una actividad?">
-    Escriba la nota en el primer estudiante, use la flecha hacia abajo de esa columna, confirme con **Aceptar** y haga clic en **Guardar**. El autollenado aplica una actividad a la vez.
+  <GuideFAQItem index="02" question={"¿Debo hacer clic en Guardar después de autollenar?"}>
+    No para esa columna: el autollenado guarda la nota de inmediato. Sí debe guardar antes de autollenar las notas que haya escrito en otras columnas, porque la planilla se vuelve a cargar y se pierden.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question="¿Qué significa que una actividad aparezca en naranja?">
-    Las actividades resaltadas en naranja son de diligenciamiento obligatorio: debe registrar la calificación correspondiente antes de cerrar el proceso.
+  <GuideFAQItem index="03" question={"La planilla no tiene columnas para escribir notas. ¿Qué hago?"}>
+    La planilla no tiene actividades. Haga clic en **Generar Planilla** para crear las actividades predeterminadas o agréguelas desde **Actividades**. Si **Generar Planilla** no aparece, su institución exige la planeación manual: use **Actividades**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question="¿Puedo usar coma o punto para los decimales?">
-    Sí. Puede ingresar cifras decimales con punto (`.`) o con coma (`,`).
+  <GuideFAQItem index="04" question={"¿Qué significa una celda naranja?"}>
+    Es una actividad obligatoria que todavía no tiene nota para ese estudiante. Al escribir la nota, la celda deja de verse naranja.
   </GuideFAQItem>
 
-  <GuideFAQItem index="05" question="¿Cómo sé que las notas quedaron guardadas?">
-    Después de hacer clic en **Guardar**, SINAI muestra el acumulado y la calificación definitiva de cada estudiante. Si necesita corregir algo, edite la celda y vuelva a guardar.
+  <GuideFAQItem index="05" question={"¿Por qué no puedo escribir notas a un estudiante?"}>
+    La fila está bloqueada porque el estudiante no está matriculado, por ejemplo fue trasladado o retirado, o porque tiene una valoración de educación inclusiva. En ese caso, el nombre es un enlace que abre esa valoración.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «El periodo actual está cerrado, no se puede modificar la planilla de calificaciones». ¿Qué hago?"}>
+    El periodo seleccionado está cerrado para calificaciones y SINAI no guarda cambios. Verifique que eligió el periodo correcto. Si necesita registrar notas en ese periodo, solicite la apertura al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Puedo usar punto o coma para los decimales?"}>
+    Sí. Puede escribir punto o coma; SINAI cambia el punto por coma.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Por qué una fila aparece en amarillo?"}>
+    Otro usuario fue el último en modificar las notas de ese estudiante. Pase el cursor sobre el nombre para ver el usuario y la fecha de la última actualización.
   </GuideFAQItem>
 </GuideFAQ>

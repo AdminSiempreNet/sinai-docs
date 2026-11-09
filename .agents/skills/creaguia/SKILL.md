@@ -1,6 +1,6 @@
 ---
 name: creaguia
-description: Crea o actualiza guías MDX de ayuda SINAI desde el código de la pantalla, con video tutorial arriba, pasos anidados, tablas de campos, capturas en tarjeta y preguntas frecuentes. Úsela cuando pidan creaguia, crear una guía, actualizar una guía o documentar una pantalla de SINAI en sinai-docs.
+description: Crea o actualiza guías MDX de ayuda SINAI desde el código de la pantalla, con video tutorial arriba, pasos anidados, tablas de campos, marcadores de captura y preguntas frecuentes. Úsela cuando pidan creaguia, crear una guía, actualizar una guía o documentar una pantalla de SINAI en sinai-docs.
 ---
 
 # creaguia
@@ -26,7 +26,18 @@ Referencia de estructura: `web/content/docs/administrativo/configuracion-institu
 
 ## Video tutorial
 
-Si hay identificadores de YouTube confirmados, use `GuideVideoPlaylist`. Incluya la URL de Odysee solo cuando ya exista. Puede haber uno o varios videos.
+Incluya la URL de Odysee solo cuando ya exista. El componente depende de cuántos videos tenga la guía:
+
+- **Un solo video:** use `YouTube` dentro de `GuideVideos compact`. No use `GuideVideoPlaylist`, porque la lista sobra con un solo video.
+- **Dos o más videos:** use `GuideVideoPlaylist`.
+
+```mdx
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="7CMKHjTx7AQ" title="Administración de firmas digitales" />
+</GuideVideos>
+```
 
 Si no hay tutorial, deje `GuideVideoPending` en ese mismo lugar, con un ítem por cada tutorial previsto:
 
@@ -38,7 +49,15 @@ Si no hay tutorial, deje `GuideVideoPending` en ese mismo lugar, con un ítem po
 </GuideVideoPending>
 ```
 
-No invente identificadores. Si solo algunos videos existen, publique esos en `GuideVideoPlaylist` y liste los que faltan en un `GuideVideoPending` dentro de la misma sección.
+Si el video solo existe en Odysee, porque no se publicó en YouTube o lo retiraron, use `YouTube` sin `id` y con `odyseeUrl`. El botón de YouTube queda como **YouTube pendiente** y el video se reproduce en la plataforma alternativa:
+
+```mdx
+<GuideVideos compact>
+<YouTube title="Informes Digitales" odyseeUrl="https://odysee.com/@AndresGoDu:a/INFORMES-DIGITALES:6" />
+</GuideVideos>
+```
+
+No invente identificadores. Si solo algunos videos existen, publique esos con la misma regla de uno o varios y liste los que faltan en un `GuideVideoPending` dentro de la misma sección.
 
 ## Pasos
 
@@ -64,11 +83,13 @@ La ruta de menú va en un párrafo, con flecha: **Establecimiento → Calendario
 
 ## Capturas
 
-No invente imágenes ni las genere con un modelo de imagen. Cada captura sale de SINAI abierto.
+Tome las capturas usted mismo en la IE de pruebas **SISTEMAS INFORMATICOS EMPRESARIALES**, con `scripts/shoot.py`, siguiendo [capturas.md](capturas.md). No invente imágenes ni las genere con un modelo de imagen.
 
-Mientras el archivo no exista, deje `GuideImagePending` con la ruta, la pestaña, lo que debe verse y el nombre `.jpg` previsto.
+Primero deje en cada lugar un `GuideImagePending` con la ruta, la pestaña o ventana, lo que debe verse y el nombre `.jpg` previsto. Luego tome la captura y reemplace el marcador. Si la IE de pruebas no tiene los datos o la configuración que la captura necesita, deje el marcador y explique el motivo en el chat.
 
-Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la tarjeta pequeña y abre el visor al hacer clic. No cambie ese tamaño en la guía.
+Si la guía ya tiene un `GuideImageTrigger` y el código confirma que la pantalla no cambió, consérvelo. Si la pantalla cambió, reemplácelo por un `GuideImagePending`.
+
+Cuando la persona entregue el archivo, use `GuideImageTrigger`. El componente ya muestra la tarjeta pequeña y abre el visor al hacer clic. No cambie ese tamaño en la guía.
 
 ```mdx
 <GuideImageTrigger src="/images/guides/calendarios/pestana-configuracion.jpg" alt="Pestaña Configuración del calendario">
@@ -78,10 +99,7 @@ Cuando el archivo exista, use `GuideImageTrigger`. El componente ya muestra la t
 
 Si hay varias capturas seguidas, sin texto entre ellas, envuélvalas en un solo `GuideImageRow`. Se acomodan a la derecha hasta llenar la fila y la siguiente baja. Si hay texto entre dos capturas, cada una queda sola.
 
-Antes de abrir SINAI, pregunte en el chat si puede tomar las capturas en esta ejecución y espere la respuesta.
-
-- Si la respuesta es no, deje las marcas **Captura pendiente** y termine la guía.
-- Si la respuesta es sí, pida la dirección de SINAI si no se la dieron. Siga [capturas.md](capturas.md).
+Al terminar, liste en el chat las capturas que tomó y las que quedaron pendientes, con su nombre de archivo, la carpeta `public/images/guides/<guia>/` y el motivo de cada pendiente.
 
 ## Preguntas frecuentes
 

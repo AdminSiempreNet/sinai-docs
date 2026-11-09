@@ -1,11 +1,13 @@
 ---
 title: "Cambio de grupo"
-description: "Conozca las opciones de cambio de grupo y siga el procedimiento correspondiente en SINAI."
+description: "Traslade uno o varios estudiantes de un grupo a otro dentro del calendario actual, con la fecha del cambio y una observación."
 guide: true
 wordpressId: 29432
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/cambio-de-grupo/"
-lastModified: "2023-11-14 19:39:42"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,81 +18,108 @@ lastModified: "2023-11-14 19:39:42"
 
 ## Guía paso a paso
 
-En esta guía aprenderá cómo cambiar un estudiante de un grupo a otro dentro del mismo grado en la plataforma **SINAI**. Desde el módulo administrativo.
+### 1. ¿Qué es Cambio de grupo?
 
-Importante El cambio de grupo se efectúa dentro del calendario actual, en la misma institución educativa y en el mismo grado. Además, es posible realizarlo entre diferentes sedes de la misma institución.
+**Cambio de Grupo** traslada uno o varios estudiantes de un grupo a otro **dentro del calendario actual**, el que está seleccionado en la parte superior de SINAI. El grupo de destino puede estar en otra sede de la misma institución. El estudiante conserva su estado de matrícula y su información asociada pasa al grupo nuevo.
 
- Para realizar el cambio, diríjase a:
-**Menú Matrícula > Cambio de Grupo**.
+La pantalla tiene dos columnas:
 
-**Recuerde** que el ícono también le redirige a la misma ruta. <GuideImageTrigger src={"/images/wordpress/2025/02/1-Cambio-de-grupo.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+- **Datos de Origen:** sede, grupo y estudiantes que va a trasladar.
+- **Datos de Destino:** sede y grupo al que pasan los estudiantes. La lista **Estudiantes** de esta columna solo muestra quiénes ya están en el grupo de destino.
 
+Debajo de cada **Grupo** aparece, sin opción de cambio, el sistema de evaluación que tiene asignado ese grupo.
 
+Ingrese a **Matrícula → Cambio de Grupo**. También puede entrar desde el ícono **Cambio de Grupo** de la página de Matrícula.
 
-En esta ruta encontrará un formulario con dos paneles:
+<GuideImageTrigger src="/images/guides/cambio-de-grupo/pantalla-cambio-grupo.jpg" alt="Pantalla Cambio de Grupo con el grupo de origen, dos estudiantes seleccionados, el grupo de destino y la observación">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. **Panel izquierdo**: Muestra los datos de origen del grupo.
-2. **Panel derecho**: Contiene la información del grupo de destino. <GuideImageTrigger src={"/images/wordpress/2025/02/3-Cambio-de-grupo.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+El botón azul de la parte superior derecha abre esta guía.
 
+<GuideCallout>
+  Para pasar estudiantes a otro calendario no use esta pantalla. El mensaje de confirmación indica que ese traslado se hace por **Promoción → Trasladar Matrícula**.
+</GuideCallout>
 
+#### 2. Seleccionar el origen
 
-Cada panel incluye un filtro para seleccionar el estudiante o los estudiantes que serán cambiados de grupo. Para ello, debe seleccionar en el panel izquierdo:
+1. En **Datos de Origen**, seleccione la **Sede**.
+2. Seleccione el **Grupo**. La lista muestra los grupos activos de esa sede en el calendario actual.
+3. En **Estudiantes**, haga clic en el nombre del estudiante. Para seleccionar varios, mantenga presionada la tecla **Ctrl** mientras hace clic en cada nombre.
 
-1. la sede de origen
-2. el grupo
-3. el estudiante(s) correspondiente(s). <GuideImageTrigger src={"/images/wordpress/2025/02/4-Cambio-de-grupo.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+La lista de origen muestra solo los estudiantes con matrícula activa en el grupo.
 
+#### 3. Seleccionar el destino
 
+1. En **Datos de Destino**, seleccione la **Sede**.
+2. Seleccione el **Grupo**. La lista no incluye el grupo de origen.
+3. Revise en **Estudiantes** quiénes ya están matriculados en ese grupo.
 
-En el panel derecho seleccione el filtro con los datos de destino:
+#### 4. Completar los datos del cambio
 
-1. Sede
-2. Grupo <GuideImageTrigger src={"/images/wordpress/2025/02/5-Cambio-de-grupo_.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Campo | Qué define |
+| --- | --- |
+| **Fecha** | Fecha en que se produce el cambio de grupo. Trae la fecha del día y es obligatoria. |
+| **Nota editable por el docente** | **No** o **Si**. Indica si las calificaciones que el estudiante trae del grupo de origen quedan editables por el docente. |
+| **Observación** | Motivo del cambio. Es opcional. |
 
+</GuideDataTable>
 
-En la parte inferior de esta sección, encontrará las siguientes opciones:
+#### 5. Ejecutar el cambio
 
-📅 **Fecha del cambio de grupo**: Permite asignar la fecha en la que se realiza la modificación.
-📝 **Casilla de observación**: Para registrar el motivo del cambio de grupo.
-🔄 **Botón "Cambiar Grupo"**: Ejecuta el proceso de cambio de grupo. <GuideImageTrigger src={"/images/wordpress/2025/02/6-Cambio-de-grupo_.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+1. Haga clic en **Cambiar Grupo**.
+2. Lea el mensaje *Este procedimiento traslada el/los estudiantes seleccionados del grupo origen al grupo destino, dentro del calendario actual. Si desea trasladar los estudiantes al nuevo calendario debe ir por Promoción > Trasladar Matrícula* y acéptelo.
 
+SINAI procesa los estudiantes seleccionados uno por uno. En **Resultados** muestra, para cada uno:
 
+- **INICIA TRASLADO DEL ESTUDIANTE** con su nombre.
+- **Cambio de Grupo realizado correctamente**, o **Se ha presentado un error** con el detalle del error.
+- **TERMINA TRASLADO DEL ESTUDIANTE**.
 
-Al hacer clic en **"Cambiar Grupo"**, el sistema mostrará una ventana de confirmación con el siguiente mensaje:
+Al terminar, las listas de estudiantes de origen y de destino se actualizan.
 
-📌 **Este procedimiento trasladará el/los estudiantes seleccionados del grupo de origen al grupo de destino dentro del calendario actual.**
+<GuideCallout type="warning">
+  El cambio se aplica de inmediato a todos los estudiantes seleccionados y no tiene un botón para deshacerlo. Revise el grupo de destino antes de aceptar el mensaje.
+</GuideCallout>
 
-⚠️ Importante: Si desea trasladar a los estudiantes a un nuevo calendario, debe hacerlo a través de la ruta: Promoción > Trasladar Matrícula. [Clic para ver guía](https://ayudasinai.siempre.net.co/docs/administrativos/trasladar-matricula/) <GuideImageTrigger src={"/images/wordpress/2025/02/7-Cambio-de-grupo.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
+#### 6. Mensajes de validación
 
+- **Debe seleccionar al menos un estudiante:** no hay estudiantes seleccionados en la lista de origen.
+- **La fecha es obligatoria:** el campo **Fecha** está vacío.
+- **Debe de asignar un Sistema de Evaluación al grupo de origen y destino:** uno de los dos grupos no tiene sistema de evaluación asignado.
 
-
-Al confirmar el cambio de grupo del estudiante, en la parte inferior derecha se mostrarán los datos del resultado, indicando:
-
-✅ **Inicio del cambio de grupo**⚠️ **Estado del proceso** (en caso de alguna novedad)
-🎯 **Finalización** (confirmando que el proceso se ha ejecutado correctamente) <GuideImageTrigger src={"/images/wordpress/2025/02/8-Cambio-de-grupo_.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-Si al momento de realizar el cambio, el estudiante tenía calificaciones registradas en el grupo de origen, estas serán trasladadas automáticamente al grupo de destino.
-
-📌 **Recuerde**: Puede seleccionar varios estudiantes al mismo tiempo para agilizar el proceso. <GuideImageTrigger src={"/images/wordpress/2025/02/9-Cambio-de-grupo_.png"} alt={"Captura de Cambio de grupo"}>Ver ejemplo</GuideImageTrigger>
-
-
-
+Para ejecutar el cambio, su usuario necesita el permiso de cambio de grupo. Si no lo tiene, SINAI muestra el aviso de permiso y no hace el cambio.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Cambio de grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Puedo cambiar de grupo a varios estudiantes a la vez?"}>
+    Sí. En la lista **Estudiantes** de **Datos de Origen**, mantenga presionada la tecla **Ctrl** y haga clic en cada nombre. SINAI traslada a todos los seleccionados al mismo grupo de destino y muestra el resultado de cada uno en **Resultados**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Cambio de grupo» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Puedo pasar al estudiante a un grupo de otra sede?"}>
+    Sí. En **Datos de Destino** seleccione la otra sede y el grupo. El cambio siempre se hace dentro del calendario actual.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Cambio de grupo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Cómo paso estudiantes a otro calendario?"}>
+    No se hace en **Cambio de Grupo**. El mensaje de confirmación indica que ese traslado se realiza por **Promoción → Trasladar Matrícula**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no aparece un estudiante en la lista de origen?"}>
+    La lista solo muestra estudiantes con matrícula activa en el grupo y la sede seleccionados del calendario actual. Si el estudiante está retirado o pertenece a otro calendario, no aparece.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que el cambio se realizó?"}>
+    Revise **Resultados**: cada estudiante trasladado muestra **Cambio de Grupo realizado correctamente**. Además, el estudiante deja de aparecer en la lista de origen y aparece en la lista **Estudiantes** de **Datos de Destino**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «Debe de asignar un Sistema de Evaluación al grupo de origen y destino». ¿Qué hago?"}>
+    Uno de los dos grupos no tiene sistema de evaluación. Debajo de cada **Grupo** puede ver cuál tiene asignado. Asigne el sistema de evaluación al grupo que no lo tenga y repita el cambio.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"En Resultados aparece «Se ha presentado un error». ¿Qué significa?"}>
+    El proceso no pudo trasladar a ese estudiante. La línea siguiente muestra el detalle del error. Si el mensaje es *Error al realizar el cambio de grupo del estudiante… Por favor consulte al soporte técnico*, comuníquese con soporte con el nombre del estudiante y los grupos de origen y destino.
   </GuideFAQItem>
 </GuideFAQ>

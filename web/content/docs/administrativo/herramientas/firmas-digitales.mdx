@@ -1,23 +1,128 @@
 ---
 title: "Firmas digitales"
-description: "Contenido pendiente de documentación para «Firmas digitales»."
+description: "Registre las firmas digitales de los usuarios y asigne la firma del director a cada grupo."
 guide: true
+lastModified: "2026-10-15"
+lastReviewed: "2026-10-15"
 ---
+
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="7CMKHjTx7AQ" title="Administración de firmas digitales" />
+</GuideVideos>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué son las firmas digitales?
+
+Las firmas digitales son imágenes de la firma de un usuario que SINAI usa en los documentos de la institución. Cada firma tiene un uso: puede servir para todos los documentos o solo para boletines, certificados, libros o constancias.
+
+Ingrese por:
+
+**Herramientas → Firmas Digitales**
+
+A la izquierda, el menú **Firmas digitales** tiene dos opciones:
+
+- **Administrador de firmas digitales:** sección para consultar y gestionar las firmas digitales.
+- **Asignar firmas a grupo:** sección para asignar firmas digitales a documentos de docentes para los grupos.
+
+<GuideImageTrigger src="/images/guides/firmas-digitales/firmas-digitales.jpg" alt="Pantalla Firmas digitales con el menú de opciones a la izquierda y el botón Agregar nueva firma digital">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Con la flecha del menú puede ocultarlo, y con el botón de las tres líneas lo vuelve a mostrar.
+
+#### 2. Consultar sus firmas
+
+En **Administrador de firmas digitales** aparecen las firmas registradas por el usuario con el que inició sesión. Cada tarjeta muestra:
+
+- La imagen de la firma, o **Sin imagen** si no tiene.
+- El uso de la firma, la descripción y la observación.
+- El estado: **Activa** o **Inactiva**.
+- El botón **Editar firma**.
+
+Para activar o inactivar una firma sin abrirla, haga clic en la casilla junto al uso. SINAI muestra «Firma actualizada correctamente».
+
+#### 3. Registrar una nueva firma
+
+1. Haga clic en **Agregar nueva firma digital**.
+2. En **Registrar nueva firma digital**, complete los datos.
+3. Cargue la imagen de la firma o dibújela.
+4. Haga clic en **Crear firma**.
+
+<GuideImageTrigger src="/images/guides/firmas-digitales/registrar-firma.jpg" alt="Ventana Registrar nueva firma digital con Estado, Uso de la firma, Descripción, Observacion, Adjunte un archivo y Vista previa de la firma">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Estado** | **Activo** o **Inactivo**. Solo las firmas activas se pueden asignar a los grupos. |
+| **Uso de la firma** | Documentos en los que se usa: **Todos los usos**, **Boletines**, **Certificados**, **Libros** o **Constancias**. |
+| **Descripción** | Nombre que identifica la firma. Es opcional, pero es el texto que se ve al asignarla a un grupo. |
+| **Observacion** | Nota adicional. Es opcional. |
+
+</GuideDataTable>
+
+La imagen es obligatoria. Si no la agrega, SINAI muestra «Debe seleccionar una imagen o realizar la firma». Hay dos formas de agregarla:
+
+- **Adjuntar:** en **Cargar archivo**, haga clic en **Adjuntar** y elija una imagen JPG o PNG. La imagen se redimensionara a 400px el alto sera proporcional a la imagen. Se recomienda el uso de fondo blanco o transparente para una mejor visualización de la firma.
+- **Capturar:** haga clic en **Capturar**, dibuje la firma en el recuadro con el mouse o con el dedo y haga clic en **Aceptar**. El botón de la flecha borra el trazo para empezar de nuevo.
+
+La firma aparece en **Vista previa de la firma**. Con **Limpiar** quita la imagen y puede elegir otra.
+
+Al crear la firma, SINAI muestra «Firma guardada correctamente».
+
+#### 4. Modificar o eliminar una firma
+
+1. En la tarjeta de la firma, haga clic en **Editar firma**.
+2. En **Modificar firma digital**, cambie los datos o la imagen.
+3. Haga clic en **Editar firma**. SINAI muestra «Firma actualizada correctamente».
+
+Para eliminarla, haga clic en **Eliminar firma** y confirme con **Si, eliminar**. SINAI pregunta «¿Está seguro que desea eliminar los registros seleccionados? Esta operación no se puede revertir».
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. Si la firma ya está en uso, SINAI puede impedir eliminarla y mostrar el motivo. En ese caso, inactívela.
+</GuideCallout>
+
+#### 5. Asignar la firma del director a un grupo
+
+1. En el menú, haga clic en **Asignar firmas a grupo**. Se abre **Relacionar firma al grupo**.
+2. Seleccione la **Sede**. Aparece una tarjeta por cada grupo, con el grado, el **Director de grupo** y el estado de la firma.
+3. En la tarjeta del grupo, haga clic en **Asignar Firma**.
+4. En **Lista de firmas**, marque la firma del director. Solo aparecen las firmas activas del director de ese grupo.
+5. Haga clic en **Guardar**. SINAI muestra «Firma del grupo actualizada correctamente».
+
+<GuideImageTrigger src="/images/guides/firmas-digitales/asignar-firma-grupo.jpg" alt="Pantalla Relacionar firma al grupo con la Sede y las tarjetas de grupos con el director y el botón Asignar Firma">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Solo puede marcar una firma por grupo. Para cambiarla, desmarque la actual y marque otra. Si desmarca todas y guarda, el grupo queda sin firma.
+
+Si el director todavía no tiene firma, use **Agregar nueva firma digital** en la misma ventana. La firma queda registrada a nombre del director del grupo.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Firmas digitales»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué no puedo crear la firma?"}>
+    Falta la imagen. Adjunte un archivo o dibuje la firma con **Capturar**. Sin imagen, SINAI muestra «Debe seleccionar una imagen o realizar la firma».
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Firmas digitales» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="02" question={"¿Por qué no aparece una firma en la Lista de firmas del grupo?"}>
+    La lista solo muestra las firmas **activas** del director de ese grupo. Revise que la firma esté activa y que pertenezca al director.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Firmas digitales»?"}>
-    Respuesta pendiente de completar.
+
+  <GuideFAQItem index="03" question={"¿Qué formato debe tener la imagen?"}>
+    JPG o PNG, preferiblemente con fondo blanco o transparente. SINAI la ajusta a 400 píxeles y conserva la proporción.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué pasa si inactivo una firma?"}>
+    La firma se conserva, pero deja de aparecer para asignarla a los grupos. Puede activarla de nuevo con la casilla de la tarjeta.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo tener varias firmas?"}>
+    Sí. Puede registrar una firma para todos los usos o una distinta para cada tipo de documento.
   </GuideFAQItem>
 </GuideFAQ>

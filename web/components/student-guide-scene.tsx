@@ -1,7 +1,3 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import Image from 'next/image';
-
 const READY: Record<string, string> = {
   'estudiante/primeros-pasos/ingresar-a-sinai': 'Listo cuando veas tu página de inicio.',
   'estudiante/primeros-pasos/cambiar-contrasena': 'Listo cuando SINAI acepte tu contraseña nueva.',
@@ -22,30 +18,6 @@ const READY: Record<string, string> = {
   'estudiante/asistencia-y-convivencia/anotaciones': 'Listo cuando veas tus anotaciones.',
   'estudiante/asistencia-y-convivencia/seguimiento': 'Listo cuando veas tu seguimiento.',
 };
-
-function sceneImage(slug: string) {
-  const candidates = [
-    `/images/section-hubs/dedicated/${slug}-frente-cut.webp`,
-    `/images/section-hubs/dedicated/${slug}-cut.webp`,
-    `/images/section-hubs/dedicated/${slug}-frente.webp`,
-    `/images/section-hubs/dedicated/${slug}.webp`,
-  ];
-  for (const candidate of candidates) {
-    if (fs.existsSync(path.join(process.cwd(), 'public', candidate))) return candidate;
-  }
-  return null;
-}
-
-export function StudentGuideScene({ slug, title }: { slug: string; title: string }) {
-  const image = sceneImage(slug);
-  if (!image) return null;
-
-  return (
-    <figure className="sinai-student-guide-scene">
-      <Image src={image} alt={title} width={960} height={640} sizes="(max-width: 900px) 100vw, 720px" />
-    </figure>
-  );
-}
 
 export function StudentGuideReady({ slug }: { slug: string }) {
   const line = READY[slug];

@@ -1,163 +1,301 @@
 ---
 title: "Preinformes y alertas académicas"
-description: "Registre causas de bajo desempeño, consolide la información y genere reportes de preinformes desde el módulo administrativo."
+description: "Configure las causas de bajo desempeño, consolide el corte, registre preinformes por asignatura o por estudiante y descargue los reportes."
 guide: true
-lastModified: "2026-10-06"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-## Tutoriales
+## Video tutorial
 
 <GuideVideoPlaylist
   title="Gestión administrativa de preinformes"
-  description="Consulte los videos en orden para conocer las vistas de registro, la consolidación y la generación de reportes."
+  description="Consulte los videos en orden: registro por asignatura y por estudiante, consulta por grupo y consolidado, consolidación del corte y reportes."
   videos={[
     { id: 'A96AA_-IcZQ', title: '1. Registro por asignatura', description: 'Registre causas y observaciones para uno o varios estudiantes de una asignatura.' },
-    { id: 'PZsB4HdygAA', title: '2. Registro por estudiante', description: 'Realice el seguimiento de un estudiante en varias asignaturas.' },
-    { id: 'oc-hjwj9KLk', title: '3. Visualización por grupo', description: 'Revise el estado del grupo, los desempeños y los reportes registrados.' },
-    { id: 'YqpTcyC18kQ', title: '4. Consulta del consolidado', description: 'Consulte estudiantes con desempeño bajo por sede, nivel, grupo y asignatura.' },
-    { id: 'NOPeoj1QoD8', title: '5. Corte y consolidación', description: 'Actualice las calificaciones usadas por los preinformes y verifique el estado del proceso.' },
-    { id: 'XKyvNeJ_25k', title: '6. Generación de reportes', description: 'Descargue planillas por asignatura, boletines individuales y consolidados por grupo.' },
+    { id: 'PZsB4HdygAA', title: '2. Registro por estudiante', description: 'Registre causas en varias asignaturas de un mismo estudiante.' },
+    { id: 'oc-hjwj9KLk', title: '3. Consolidado por grupo', description: 'Revise el grupo por estudiante y asignatura, consolide el grupo y descargue el archivo.' },
+    { id: 'YqpTcyC18kQ', title: '4. Preinforme consolidado', description: 'Consulte los estudiantes reportados por sede, nivel, grupo y asignatura.' },
+    { id: 'NOPeoj1QoD8', title: '5. Consolidar', description: 'Calcule el corte por sede y nivel y siga el estado de cada grupo.' },
+    { id: 'XKyvNeJ_25k', title: '6. Reportes', description: 'Descargue planillas por asignatura, boletines individuales y consolidados por grupo.' },
   ]}
 />
 
-## ¿Qué son los preinformes?
+## Guía paso a paso
 
-Los **preinformes**, también llamados **alertas académicas**, permiten identificar durante el período a los estudiantes que requieren seguimiento. La institución puede relacionar causas de bajo desempeño y, de manera opcional, agregar observaciones antes de entregar el informe.
+### 1. ¿Qué es Preinforme - Alerta Académica?
 
-La información académica mostrada corresponde al último corte realizado dentro de este proceso. Por eso, las calificaciones y el porcentaje evaluado pueden cambiar después de una nueva consolidación.
+**Preinforme - Alerta Académica** permite reportar, durante el periodo, a los estudiantes que en un corte académico tienen bajo desempeño. Cada reporte se hace por estudiante y asignatura, con una o varias **causas de bajo desempeño** y una observación opcional. El módulo también calcula, al consolidar, la calificación proyectada de cada asignatura, su desempeño y el porcentaje evaluado.
 
-**Ruta de acceso:** **Seguimiento → Preinforme - Alerta académica**.
+Ingrese a **Seguimiento → Preinforme - Alerta Académica**.
 
-## Antes de comenzar
+<GuideImageTrigger src="/images/guides/preinformes/acceso-preinformes.jpg" alt="Menú Seguimiento con la opción Preinforme - Alerta Académica">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Verifique lo siguiente:
+La pantalla tiene un panel izquierdo, **PREINFORMES**, con estas opciones:
 
-- La institución debe tener configuradas las causas que podrán seleccionar los docentes y administrativos.
-- Los docentes deben haber registrado las calificaciones que se incluirán en el corte.
-- Debe conocer la sede, el nivel, el grupo y el período que va a consultar.
-- Si las calificaciones no están actualizadas, realice la consolidación propia de Preinformes.
+- **Inicio:** abre el **Dashboard** con los indicadores del corte.
+- **Preinformes:** agrupa **Por asignatura**, **Por estudiante**, **Por grupo** y **Consolidado**.
+- **Consolidar:** calcula el corte por sede y nivel.
+- **Reportes:** descarga planillas, boletines y consolidados.
+- **Configuración → Causas:** lista de causas de bajo desempeño de la institución.
 
-> **Importante:** la consolidación de Preinformes es independiente de **Evaluación → Consolidar**. Ejecutar la consolidación de Evaluación no actualiza este proceso.
+El icono que está antes del título de cada vista oculta o muestra el panel izquierdo.
 
-## Registrar un preinforme por asignatura
+<GuideCallout>
+  La institución trabaja con una de tres modalidades de preinforme: **Combinada**, que muestra el reporte por causas y la calificación proyectada con su desempeño; **Descriptiva**, que muestra solo el reporte por causas; y **Numérica**, que muestra solo la calificación proyectada y el desempeño. Según la modalidad, algunas opciones no aparecen. Por ejemplo, en la modalidad Descriptiva no aparecen **Consolidar Grupo** ni el botón **Consolidar**, y en la Numérica no aparecen **Causas** ni **Reporte masivo**, y en lugar de **Reporte** aparece **Observación**, que solo registra una observación informativa. La modalidad la define el usuario super en **Configuración**.
+</GuideCallout>
 
-Use esta vista cuando necesite revisar una materia y registrar alertas para uno o varios estudiantes.
+<GuideCallout>
+  En el menú **Seguimiento** también puede aparecer **Preinforme**, que abre la versión anterior del módulo. Esta guía describe **Preinforme - Alerta Académica**.
+</GuideCallout>
+
+#### 2. Consultar el Dashboard
+
+1. En el panel izquierdo, haga clic en **Inicio**.
+2. Seleccione la **sede**, el **nivel** y el **periodo**.
+
+El Dashboard muestra:
+
+- **Indicadores:** **Matriculados**, **Reportados**, **Riesgo alto** (3 o más asignaturas reportadas), **Cobertura de grupos**, **Causa principal**, **Con 2 o más causas**, **Desempeño bajo** y **% evaluado promedio**.
+- **Estudiantes reportados por cantidad de asignaturas:** cuántos estudiantes tienen 0, 1, 2, 3 o más de 3 asignaturas reportadas. No es reprobación: cuenta asignaturas con reporte de preinforme.
+- **Reportados por asignatura y grado:** cantidad (Q) y porcentaje sobre la matrícula del grado.
+- **Top de causas de bajo desempeño**, **Riesgo por grupo**, **Riesgo por grado** y **Proyección de desempeño**.
+
+Use **Descargar** para obtener el Dashboard en Excel o en PDF.
+
+#### 3. Configurar las causas de bajo desempeño
+
+Las causas son la lista entre la que se elige al reportar un estudiante. Se configuran una vez para la institución.
+
+1. En el panel izquierdo, abra **Configuración → Causas**.
+2. Haga clic en **Agregar causa**.
+3. Complete el formulario y haga clic en **Agregar causa**.
+
+<GuideImageRow>
+<GuideImageTrigger src="/images/guides/preinformes/causas.jpg" alt="Lista de causas de bajo desempeño con los botones Editar y Eliminar">
+  Ver ejemplo
+</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/preinformes/agregar-causa.jpg" alt="Ventana Agregar causa de bajo desempeño con Orden, Nombre y Descripción">
+  Ver ejemplo
+</GuideImageTrigger>
+</GuideImageRow>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Orden** | Posición de la causa en la lista. Debe ser un número positivo. |
+| **Nombre** | Nombre corto de la causa. Entre 10 y 100 caracteres. |
+| **Descripción** | Explicación de la causa, que se ve al reportar. Entre 30 y 500 caracteres. |
+
+</GuideDataTable>
+
+Si el guardado es correcto, SINAI muestra **Causa registrada con correctamente**.
+
+- **Editar:** abre el mismo formulario. Guarde con **Guardar**; el aviso es **Causa actualizada correctamente**.
+- **Eliminar** (icono de papelera): pregunta *¿Estás seguro de eliminar este registro?* y se confirma con **Eliminar**.
+
+Si la institución no tiene causas, la pantalla muestra **No hay causas de bajo desempeño registradas** y el botón **Generar causas predeterminadas**, que agrega a la institución las causas definidas por SINAI. Después puede editarlas o eliminarlas.
+
+<GuideCallout type="warning">
+  Una causa que ya está asignada en algún preinforme no se puede eliminar. En ese caso SINAI no la borra y la ventana de confirmación sigue abierta.
+</GuideCallout>
+
+#### 4. Consolidar el corte
+
+**Consolidar** calcula, para cada grupo de la sede y el nivel, la calificación proyectada de cada estudiante en cada asignatura, su desempeño y el porcentaje evaluado. Las vistas de preinformes muestran los datos del último corte consolidado.
+
+1. En el panel izquierdo, haga clic en **Consolidar**.
+2. Seleccione la **sede**, el **nivel** y el **periodo**.
+3. Haga clic en **Consolidar**.
+4. Siga el avance en el panel de progreso o haga clic en **Actualizar**.
+
+Al iniciar, SINAI muestra **El procesameinto del preinforme se ha iniciado correctamente**. Los grupos se procesan en segundo plano y la tabla se actualiza sola a medida que cambian de estado. El panel de progreso cuenta los grupos **pendientes**, **procesando**, **terminados** y **con error**, y su título cambia a **Consolidación completa** cuando todos terminan sin errores.
+
+La tabla muestra por grupo:
+
+- **Grupo** y **Diregrupo**.
+- **Fecha**, **Hora** y **Estado** de la última consolidación.
+- **0**, **1**, **2**, **3** y **+3:** cuántos estudiantes tienen esa cantidad de asignaturas reportadas.
+- **Total:** estudiantes del grupo. La última fila suma todos los grupos.
+
+**Descargar** genera el consolidado de la sede y el nivel en un archivo de Excel.
+
+<GuideCallout>
+  Puede consolidar las veces que necesite. Cada consolidación vuelve a calcular las calificaciones con las notas registradas en ese momento. Si la configuración tiene activo el reporte automático de estudiantes con desempeño bajo, la consolidación deja reportados a los estudiantes con desempeño bajo.
+</GuideCallout>
+
+#### 5. Registrar preinformes por asignatura
+
+Use esta vista para revisar una asignatura y reportar a uno o varios estudiantes.
 
 1. En el panel izquierdo, abra **Preinformes → Por asignatura**.
-2. Seleccione el **docente**, **grupo**, **período** y **asignatura**.
-3. Revise el listado de estudiantes. Para cada uno se muestra la calificación consolidada, el desempeño y el porcentaje evaluado.
-4. Identifique las calificaciones resaltadas en rojo, que corresponden a desempeño bajo según la escala configurada.
+2. Seleccione el **Docente**, el **Grupo**, el **Periodo** y la **Asignatura**.
 
-### Registrar un reporte individual
+<GuideImageTrigger src="/images/guides/preinformes/por-asignatura.jpg" alt="Vista Por asignatura con docente, grupo, periodo y asignatura seleccionados y la lista de estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Docente** | Docente cuyos grupos y asignaturas se cargan. Con **Todos** se listan todos los grupos. |
+| **Grupo** | Grupo cuyos estudiantes aparecen en la lista. |
+| **Periodo** | Periodo del corte. |
+| **Asignatura** | Asignatura que se reporta. Si eligió un docente, solo lista sus asignaturas en el grupo. |
+
+</GuideDataTable>
+
+Por cada estudiante se ven su foto, su nombre, la calificación con el desempeño (en rojo si es **BAJO**, o **Sin valoración**), el porcentaje evaluado, las causas reportadas y la observación. Si el estudiante no está matriculado, se ve su estado. Los estudiantes reportados tienen el borde rojo.
+
+**Reportar a un estudiante**
 
 1. Haga clic en **Reporte** frente al estudiante.
-2. Seleccione una o varias causas.
-3. Escriba una observación adicional si la necesita. Este campo es opcional.
+2. En la ventana **Preinforme Individual**, haga clic en cada causa que aplique. La ventana indica cuántas causas lleva seleccionadas.
+3. Si lo necesita, escriba una observación.
 4. Haga clic en **Reportar**.
 
-El estudiante quedará resaltado y la vista mostrará las causas asociadas.
+<GuideImageTrigger src="/images/guides/preinformes/reporte-individual.jpg" alt="Ventana Preinforme Individual con dos causas seleccionadas, la observación y los botones Anular reporte y Reportar">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### Registrar un reporte masivo
+**Reportar a varios estudiantes con las mismas causas**
 
-1. Seleccione los estudiantes que compartirán las mismas causas y observación.
-2. Compruebe la cantidad indicada en el botón **Reporte masivo**.
-3. Haga clic en **Reporte masivo**.
-4. Seleccione las causas y agregue una observación opcional.
-5. Confirme con **Reportar**.
+1. Haga clic en el círculo o en el nombre de cada estudiante. **Todos** selecciona la lista completa.
+2. Haga clic en **Reporte masivo**, que muestra entre paréntesis cuántos estudiantes seleccionó.
+3. En la ventana **Preinforme masivo por Asignatura**, seleccione las causas y escriba la observación si la necesita.
+4. Haga clic en **Reportar**.
 
-Para retirar un reporte, abra nuevamente el registro individual y seleccione **Anular reporte**. También puede seleccionar varios estudiantes y usar la anulación masiva.
+<GuideImageRow>
+<GuideImageTrigger src="/images/guides/preinformes/seleccion-estudiantes.jpg" alt="Dos estudiantes seleccionados y los botones Reporte masivo (2), Anular reporte y Descargar">
+  Ver ejemplo
+</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/preinformes/reporte-masivo.jpg" alt="Ventana Preinforme masivo por Asignatura con la lista de causas y 2 estudiantes seleccionados">
+  Ver ejemplo
+</GuideImageTrigger>
+</GuideImageRow>
 
-### Descargar la planilla de la asignatura
+Si no seleccionó causas, SINAI muestra **Debe seleccionar al menos una causa de bajo desempeño**. Si el reporte es correcto, el aviso es **Reporte masivo realizado con éxito**. La observación del reporte masivo reemplaza la que tuviera cada estudiante seleccionado.
 
-Use **Descargar** para generar el informe. La planilla incluye los datos del grupo y del docente, identificación del estudiante, desempeño, nota, porcentaje evaluado, causas y observaciones registradas.
+**Anular reportes**
 
-## Registrar un preinforme por estudiante
+- **Un estudiante:** haga clic en **Reporte** y luego en **Anular reporte**. Se anula de inmediato, sin confirmación.
+- **Varios estudiantes:** selecciónelos y haga clic en **Anular reporte**, en la barra superior. Confirme el mensaje *Se van a anular los reportes de N estudiantes. Esta acción no se puede deshacer. ¿Desea continuar?* con **Confirmar**. El aviso es **Reportes anulados con éxito**.
 
-Esta vista facilita el seguimiento de un alumno en varias asignaturas.
+<GuideCallout type="warning">
+  Anular un reporte borra las causas y la observación del estudiante en esa asignatura y periodo, y no se puede deshacer.
+</GuideCallout>
 
-1. Abra **Preinformes → Por estudiante**.
-2. Seleccione el **docente**, **grupo**, **período** y **estudiante**.
-3. Revise las asignaturas, el docente responsable, la valoración y el porcentaje evaluado.
-4. Use **Reporte** para registrar causas en una asignatura específica.
-5. Para aplicar las mismas causas a varias asignaturas, selecciónelas y utilice **Reporte masivo**.
-6. Para eliminar causas y observaciones, utilice **Anular reporte** de manera individual o masiva.
+**Descargar** genera la planilla de la asignatura en Excel, con el documento y el nombre de cada estudiante, su desempeño, nota y porcentaje evaluado, la observación y las causas de bajo desempeño. Las columnas numéricas y las causas dependen de la modalidad.
 
-El botón **Descargar** genera el preinforme individual del estudiante. El documento presenta cada asignatura con su desempeño, nota, porcentaje evaluado, docente y causas asociadas, además de los espacios de firma.
+#### 6. Registrar preinformes por estudiante
 
-## Consultar la vista por grupo
+Esta vista muestra todas las asignaturas de un estudiante en el grupo, cada una con su docente.
 
-La vista por grupo reúne a los estudiantes en filas y las asignaturas en columnas.
+1. En el panel izquierdo, abra **Preinformes → Por estudiante**.
+2. Seleccione el **Docente**, el **Grupo**, el **Periodo** y el **Estudiante**.
+3. Use **Reporte**, **Reporte masivo** y **Anular reporte** como en la vista por asignatura. Aquí se seleccionan asignaturas en lugar de estudiantes.
 
-1. Abra **Preinformes → Por grupo**.
-2. Seleccione el **docente**, **grupo** y **período**.
-3. Revise la nota, el porcentaje evaluado y el desempeño de cada estudiante por asignatura.
-4. Consulte la columna **Total**, que indica cuántas asignaturas tienen un reporte activo para cada estudiante.
-5. Revise los totales por asignatura al final de la tabla.
+<GuideImageTrigger src="/images/guides/preinformes/por-estudiante.jpg" alt="Vista Por estudiante con la lista de asignaturas, el docente de cada una y la casilla Solo asignaturas con reporte">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Desde el módulo administrativo puede utilizar **Consolidar Grupo** para actualizar el corte del grupo seleccionado. Use **Descargar** para obtener la misma información en un archivo.
+**Descargar** genera el reporte individual del estudiante en Excel, con sus asignaturas, el docente de cada una y los espacios de firma del director de grupo y del estudiante. Marque **Solo asignaturas con reporte** para incluir solo las asignaturas reportadas, con observación o con causas de bajo desempeño.
 
-> **Tenga en cuenta:** el total de la vista por grupo cuenta reportes registrados; no representa únicamente la cantidad de calificaciones en desempeño bajo.
+#### 7. Consultar el consolidado por grupo
 
-## Consultar el consolidado
+**Por grupo** abre **Consolidado por grupo**: los estudiantes en filas y las asignaturas en columnas.
 
-El consolidado es una consulta exclusivamente administrativa que resume los desempeños bajos por sede y nivel.
+1. En el panel izquierdo, abra **Preinformes → Por grupo**.
+2. Seleccione el **Docente**, el **Grupo** y el **Periodo**.
 
-1. Abra **Preinformes → Consolidado**.
-2. Seleccione la **sede**, el **nivel** y el **período**.
-3. Consulte la matrícula de cada grupo.
-4. Revise por asignatura la cantidad y el porcentaje de estudiantes en desempeño bajo.
+<GuideImageTrigger src="/images/guides/preinformes/por-grupo.jpg" alt="Consolidado por grupo con estudiantes en filas, asignaturas en columnas, la columna Total y el botón Consolidar Grupo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Los resultados corresponden al último corte de consolidación. Las calificaciones registradas después de ese corte no aparecerán hasta consolidar nuevamente.
+- Cada celda muestra la calificación, el porcentaje evaluado y el desempeño. En la modalidad Descriptiva muestra el número de causas reportadas. Las celdas reportadas se ven en rojo.
+- **Total**, al final de cada fila, cuenta las asignaturas reportadas del estudiante. La última fila suma los reportes de cada asignatura.
+- **Consolidar Grupo** vuelve a calcular el corte solo para el grupo seleccionado. Si es correcto, SINAI muestra **Consolidado realizado correctamente**.
+- **Descargar** genera el consolidado del grupo en Excel.
 
-## Realizar el corte y la consolidación
+Esta vista no registra ni anula reportes.
 
-1. En el panel izquierdo, seleccione **Consolidar**.
-2. Elija la **sede**, el **nivel** y el **período**.
-3. Haga clic en **Consolidar**.
-4. Use **Actualizar** para consultar el avance.
-5. Espere hasta que todos los grupos aparezcan con estado **Terminado**.
+#### 8. Consultar el Preinforme Consolidado
 
-Durante el proceso verá el grupo, director de grupo, fecha, hora y estado. El resumen clasifica a los estudiantes según tengan reportes en **0**, **1**, **2**, **3** o **más de 3** asignaturas y muestra el total general.
+**Consolidado** muestra el número y el porcentaje de estudiantes reportados en cada grupo y asignatura de una sede y un nivel.
 
-Puede realizar un nuevo corte cuando la institución lo requiera. El botón **Descargar** genera un archivo de Excel con el estado de los grupos y el resumen de estudiantes por número de asignaturas reportadas.
+1. En el panel izquierdo, abra **Preinformes → Consolidado**.
+2. Seleccione la **Sede**, el **Nivel** y el **Periodo**.
 
-## Generar reportes
+<GuideImageTrigger src="/images/guides/preinformes/consolidado-sede-nivel.jpg" alt="Preinforme Consolidado con grupos, matrícula y reportados por asignatura">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Abra **Reportes** en el panel izquierdo. Encontrará tres opciones:
+- **GRUPO:** nombre y director de grupo.
+- **Matricula:** estudiantes matriculados en el grupo.
+- **Una columna por asignatura:** estudiantes reportados y su porcentaje sobre la matrícula. Si el porcentaje supera el 30 %, se ve en rojo. Pase el puntero sobre la abreviatura para ver el nombre de la asignatura.
 
-### Planillas por asignatura
+**Descargar** genera el consolidado en **Excel** o en **PDF**.
 
-Genera una hoja por asignatura con estudiantes, documento, desempeño, nota, porcentaje evaluado, causas y observaciones. Al completar los filtros puede limitar la descarga a las asignaturas que tengan estudiantes reportados.
+#### 9. Descargar reportes
 
-### Boletines individuales
+En el panel izquierdo, haga clic en **Reportes**. Cada reporte tiene un botón **Descargar** que abre una ventana con sus filtros.
 
-Genera una hoja independiente por estudiante con sus asignaturas, desempeños, notas, porcentajes, docentes y causas. Puede limitar la descarga a estudiantes que tengan asignaturas reportadas.
+<GuideImageRow>
+<GuideImageTrigger src="/images/guides/preinformes/reportes.jpg" alt="Vista Reportes con Planillas por Asignatura, Boletines Individuales y Consolidados por Grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/preinformes/boletines-individuales.jpg" alt="Ventana Boletines Individuales con docente, grupo, periodo, casillas de filtro y botones Excel y PDF">
+  Ver ejemplo
+</GuideImageTrigger>
+</GuideImageRow>
 
-### Consolidados por grupo
+<GuideDataTable>
 
-Genera una hoja por cada grupo del nivel seleccionado. Incluye las calificaciones por asignatura, el número de asignaturas reportadas para cada estudiante y el resumen por desempeño.
+| Reporte | Filtros | Qué descarga |
+| --- | --- | --- |
+| **Planillas por Asignatura** | Docente, Grupo, Periodo, **Solo asignaturas con estudiantes reportados** y **Solo estudiantes con reporte** | Un archivo de Excel con una hoja por asignatura del grupo. |
+| **Boletines Individuales** | Docente, Grupo, Periodo, **Solo estudiantes con asignaturas reportadas** y **Solo asignaturas con reporte** | Un boletín por estudiante del grupo. Elija **Descargar en Excel** (una hoja por estudiante) o **Descargar en PDF**. |
+| **Consolidados por Grupo** | Sede, Nivel y Periodo | Un archivo de Excel con una hoja por grupo de la sede y el nivel. No aparece en la modalidad Descriptiva. |
 
-Antes de generar cualquier reporte, confirme que la consolidación corresponda al corte que desea comunicar.
+</GuideDataTable>
+
+Los reportes toman los datos del último corte consolidado y los reportes registrados hasta el momento de la descarga.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Por qué las calificaciones del preinforme no coinciden con las notas actuales?">
-    Los preinformes muestran la información del último corte. Ejecute la consolidación propia de Preinformes y use **Actualizar** hasta que todos los grupos estén en estado **Terminado**.
+  <GuideFAQItem index="01" question="¿Por qué la calificación del preinforme no coincide con las notas actuales?">
+    Las vistas muestran la calificación del último corte consolidado. Las notas registradas después no aparecen hasta que vuelva a consolidar desde **Consolidar** o con **Consolidar Grupo**.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿La consolidación de Evaluación actualiza los preinformes?">
-    No. Ambos procesos son independientes. Para actualizar estas alertas debe ingresar a **Seguimiento → Preinforme - Alerta académica → Consolidar**.
+  <GuideFAQItem index="02" question="¿Por qué un estudiante aparece «Sin valoración» y con 0 % evaluado?">
+    Porque no hay un corte consolidado para ese grupo y periodo, o el cálculo no produjo una calificación para esa asignatura. Consolide la sede y el nivel, o el grupo, y vuelva a consultar.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿La observación es obligatoria?">
-    No. Debe seleccionar al menos la causa que corresponda; la observación adicional es opcional.
+  <GuideFAQItem index="03" question="Quité una causa y le di Reportar, pero la causa sigue apareciendo. ¿Por qué?">
+    **Reportar** agrega las causas seleccionadas a las que el estudiante ya tiene, pero no retira las que desmarca. Para quitar una causa, use **Anular reporte** y vuelva a reportar con las causas correctas.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Puedo registrar o anular varios reportes al mismo tiempo?">
-    Sí. Seleccione los estudiantes o asignaturas y utilice **Reporte masivo** o **Anular reporte**, según corresponda.
+  <GuideFAQItem index="04" question="¿La observación es obligatoria?">
+    No. En el reporte masivo debe seleccionar al menos una causa; si no lo hace, SINAI muestra **Debe seleccionar al menos una causa de bajo desempeño**. La observación siempre es opcional.
   </GuideFAQItem>
-  <GuideFAQItem index="05" question="¿Qué elimina la opción Anular reporte?">
-    Retira del registro seleccionado las causas y la observación que estaban asociadas.
+  <GuideFAQItem index="05" question="Reporté a un estudiante sin causas y después de consolidar ya no aparece reportado. ¿Qué pasó?">
+    Al consolidar, SINAI deja reportado al estudiante si tiene causas asignadas o si tiene desempeño bajo y el reporte automático por desempeño bajo está activo. Un reporte sin causas no se conserva como reportado después de consolidar.
   </GuideFAQItem>
-  <GuideFAQItem index="06" question="¿Qué representa el total de la vista por grupo?">
-    Indica cuántas asignaturas tienen un reporte activo para cada estudiante; no es simplemente un conteo de desempeños bajos.
+  <GuideFAQItem index="06" question="¿Qué cuenta el Preinforme Consolidado?">
+    Cuenta los estudiantes reportados en cada grupo y asignatura, ya sea por causas o por el reporte automático por desempeño bajo. No es solo la cantidad de estudiantes con desempeño bajo. El porcentaje se calcula sobre la matrícula del grupo.
+  </GuideFAQItem>
+  <GuideFAQItem index="07" question="¿Qué representa el Total de la vista por grupo?">
+    El número de asignaturas reportadas del estudiante en el periodo, no el número de asignaturas con desempeño bajo.
+  </GuideFAQItem>
+  <GuideFAQItem index="08" question="¿Por qué no puedo eliminar una causa?">
+    Porque ya está asignada en algún preinforme. SINAI no elimina causas en uso. Puede editar su nombre o su descripción con **Editar**.
+  </GuideFAQItem>
+  <GuideFAQItem index="09" question="Una opción muestra «Sección no disponible». ¿Por qué?">
+    Porque la opción no aplica a la modalidad de preinformes de su institución. Por ejemplo, **Causas** no está disponible en la modalidad Numérica. Si la institución cambia de modalidad, la sección vuelve a estar disponible con sus datos.
+  </GuideFAQItem>
+  <GuideFAQItem index="10" question="¿Quién ve las opciones Consolidado, Consolidar, Reportes y Causas?">
+    El rector, el administrativo, el coordinador y el auxiliar. El docente solo ve **Inicio**, **Por asignatura**, **Por estudiante** y **Por grupo**, y en **Por grupo** no ve **Consolidar Grupo**.
   </GuideFAQItem>
 </GuideFAQ>

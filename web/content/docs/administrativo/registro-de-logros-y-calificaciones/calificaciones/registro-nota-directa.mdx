@@ -1,11 +1,13 @@
 ---
 title: "Calificación definitiva directa"
-description: "Conozca las opciones de calificación definitiva directa y siga el procedimiento correspondiente en SINAI."
+description: "Registre o corrija desde el módulo administrativo la definitiva del periodo de cualquier docente, directamente o con actividades, e importe o elimine calificaciones."
 guide: true
 wordpressId: 29667
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/a-calificacion-definitiva-directa/"
-lastModified: "2023-11-15 00:16:01"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,113 +18,216 @@ lastModified: "2023-11-15 00:16:01"
 
 ## Guía paso a paso
 
-### Calificación Definitiva Directa
+### 1. ¿Qué es Calificación Definitiva Directa?
 
-La **calificación definitiva directa** permite registrar las calificaciones de los estudiantes en una asignatura, a través de una planilla emergente. Es importante recordar que el acceso a esta funcionalidad está controlado por el cronograma asignado al grupo. Si el sistema no está habilitado para el periodo correspondiente, aparecerá un mensaje en una franja amarilla en la parte inferior de la pantalla indicando: **"El ingreso de nota directa no está habilitado para el periodo seleccionado".**
+**Calificación Definitiva Directa** abre la planilla **Valoración de nota directa con actividades**. Allí se registra, por grupo, periodo y asignatura, la nota definitiva del periodo de cada estudiante, sus faltas y sus observaciones. Desde el módulo administrativo puede abrir la planilla de cualquier docente.
 
-Adicionalmente, las calificaciones registradas a través de este módulo quedarán bloqueadas con el código **ND (Nota Directa)** para diferenciarlas de otras calificaciones.
+La planilla funciona de dos formas:
 
-Desde el módulo administrativo ingrese por el menú: **Evaluación  – Calificaciones – Calificación** **Definitiva Directa** <GuideImageTrigger src={"/images/wordpress/2025/02/Calificacion-Definitiva-Directa-1.png"} alt={"Captura de Calificacion Definitiva Directa 1"}>Ver ejemplo</GuideImageTrigger>
+- **Sin actividades:** se escribe la **Definitiva** de cada estudiante.
+- **Con actividades:** se crean hasta 12 actividades con el botón **Actividades**, se registra la nota de cada una y SINAI calcula la **Definitiva**.
 
+Ingrese a **Evaluación → Calificaciones → Calificación Definitiva Directa**.
 
+<GuideImageTrigger src="/images/guides/registro-nota-directa/acceso-nota-directa.jpg" alt="Menú Evaluación con Calificaciones desplegado y la opción Calificación Definitiva Directa">
+  Ver ejemplo
+</GuideImageTrigger>
 
-#### Cómo Registrar la Nota Directa
+En la parte superior están los botones **Actividades**, **Guardar**, el botón de flechas circulares para actualizar la configuración, **Eliminar** y el botón azul de ayuda.
 
-**Seleccionar el Docente, Grupo, Periodo y Asignatura**
+#### 2. Habilitar la nota directa en el periodo
 
-- **Docente**: Facilita la elección del grupo correspondiente.
-- **Grupo**: seleccione el grupo para el cual se registrarán las calificaciones.
-- **Periodo**: Define el periodo académico en el cual se realizará el registro.
-- **Asignatura**: seleccione la asignatura para la que se desea registrar las calificaciones.
+Si el sistema de evaluación con el que trabaja no es **Calificación Final Directa**, el periodo debe tener habilitada la nota directa. Esa opción está en **Establecimiento → Calendarios**, en la columna **Nota Directa** de los periodos. Vea [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
 
-**Registrar la Calificación a cada Estudiante**
+Si el periodo no la tiene habilitada, SINAI muestra «El ingreso de nota directa no está habilitado para el periodo seleccionado» y no guarda.
 
-- Registra la **calificación definitiva** de cada estudiante.
-- Si es necesario, puede registrar la **inasistencia** de los estudiantes o añadir **observaciones** relacionadas con su rendimiento.
+#### 3. Seleccionar la planilla
 
-**Pulsar el Botón "Guardar":** Una vez que hayas ingresado todas las calificaciones y observaciones necesarias, seleccione el botón **"Guardar"** para almacenar los datos ingresados. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificacion-Definitiva-Directa-2-1024x359.png"} alt={"Captura de Calificacion Definitiva Directa 2"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Lista | Qué muestra |
+| --- | --- |
+| **Docente** | **Todos** o un funcionario activo de la institución. |
+| **Grupo** | Grupos con asignación académica del sistema de evaluación con el que trabaja, con el código del grupo y la sede. Si eligió un docente, solo los grupos de su asignación. |
+| **Periodo** | Periodos del grupo. La primera vez queda seleccionado el periodo activo de calificaciones. |
+| **Asignatura** | Asignaturas asignadas en el grupo y el periodo, sin la de comportamiento. Si eligió un docente, solo las suyas. |
 
+</GuideDataTable>
 
-#### Procesos Complementarios en la Planilla
+La pantalla recuerda el docente, el grupo, el periodo y la asignatura que usó por última vez.
 
-##### Botón "Actividades"
+La planilla muestra una fila por estudiante:
 
-Botón **Actividades**: Generalmente se registra una sola calificación, pero si se requiere colocar varias, al pulsar este botón permite registrar una actividad y genera otra casilla de calificación en la planilla.
+- **Casilla de selección:** marca el estudiante para **Eliminar** o **Autollenar**.
+- **TP:** indica si las calificaciones del estudiante vienen de otra planilla. Vea el paso 4.
+- **Foto:** al pasar el mouse se amplía.
+- **Nombre:** con el código del estudiante y su estado de matrícula.
+- **Definitiva**, **Faltas** y **Observaciones**.
 
-**Pasos para Agregar Actividades**
+#### 4. Registrar la definitiva
 
-- Escoge el **orden** en que se debe registrar la actividad.
-- **Escribe el nombre de la actividad**.
-- haga clic en **Agregar**.
-- Si desea **modificar** una actividad, guarda los cambios.
-- Si desea **eliminar** una actividad, marca la actividad y haga clic en **Eliminar** <GuideImageTrigger src={"/images/wordpress/2025/02/Calificacion-Definitiva-Directa-3.png"} alt={"Captura de Calificacion Definitiva Directa 3"}>Ver ejemplo</GuideImageTrigger>
+1. Seleccione el **Docente**, el **Grupo**, el **Periodo** y la **Asignatura**.
+2. En **Definitiva**, escriba la nota de cada estudiante. Puede usar coma o punto para los decimales.
+3. En **Faltas**, escriba el número de inasistencias del periodo.
+4. Si lo necesita, escriba una **Observación**.
+5. Haga clic en **Guardar**.
 
+<GuideImageTrigger src="/images/guides/registro-nota-directa/planilla-nota-directa.jpg" alt="Planilla Valoración de nota directa con actividades con un docente elegido, definitivas de ejemplo, su desempeño y las faltas">
+  Ver ejemplo
+</GuideImageTrigger>
 
+Al salir de la casilla, SINAI muestra debajo de la nota el desempeño según la escala de la institución. Si el valor no está en la escala, SINAI borra la casilla, la marca en rojo y al pasar el mouse muestra «Valor no válido. Por favor verifique la escala». En **Faltas** solo se aceptan números enteros.
 
-##### Botón Importar
+Si el guardado es correcto, SINAI muestra «Datos guardados correctamente».
 
-proceso de **importación de notas** permite traer las calificaciones registradas previamente desde fuentes externas a la planilla de calificación definitiva directa. Esta opción facilita la actualización de las calificaciones sin necesidad de ingresarlas manualmente.
+<GuideCallout>
+  Lo que escriba en la planilla no queda registrado hasta que haga clic en **Guardar**.
+</GuideCallout>
 
-Las fuentes externas disponibles para la importación de calificaciones son:
+SINAI no tiene en cuenta al guardar las filas de estos estudiantes:
 
-1. **Tareas en Línea**
-2. **Autoevaluación del módulo estudiante**
-3. **Aula virtual Chamilo**
+- Estudiantes con estado de matrícula diferente de **MATRICULADO** o **PROM. SEMESTRAL**.
+- Estudiantes con una marca en **TP**, porque sus calificaciones vienen de otra planilla:
 
-A continuación se detallan los pasos para realizar la importación de notas
+<GuideDataTable>
 
-##### Pasos para Importar las Notas
+| TP | Qué indica |
+| --- | --- |
+| **BD** | No se puede modificar, generado por base de datos. |
+| **PG** | No se puede modificar, generado por planilla de calificaciones detalladas. |
+| **TR** | No se puede modificar, generado por calificación de trasladados. |
+| **EX** | No se puede modificar, generado por planilla de excel. |
 
-1. **Seleccione el Origen de las Notas:**
+</GuideDataTable>
 
-    - Al pulsar el botón **"Importar"**, se abrirá un menú donde podrá seleccionar el origen de las notas que desea importar.
-    - Las opciones disponibles son:
-        - **Tareas en Línea**
-        - **Autoevaluación del módulo estudiante**
-        - **Aula virtual Chamilo**
-2. **Seleccione la Tarea:**
+- Estudiantes con necesidades educativas especiales que se valoran aparte. Su nombre aparece como enlace y abre su planilla de valoración en otra pestaña.
 
-    - Después de seleccionar el origen, el siguiente paso es elegir la **tarea** donde se encuentran las calificaciones.
-    - En este paso, se desplegarán las tareas disponibles dentro del origen seleccionado.
-    - Escoge la tarea cuyo contenido desea importar.
-3. **Seleccione la Actividad:**
+Según cómo registre la institución las inasistencias, la columna **Faltas** puede no aparecer. En ese caso la columna **Inasis.** muestra el total de inasistencias registradas y no se edita.
 
-    - Una vez seleccionada la tarea, debe elegir la **actividad** asociada con las calificaciones que desea importar.
-    - Asegúrate de seleccionar la actividad correcta para importar las notas que desea transferir a la planilla.
-4. **Importar las Notas:**
+#### 5. Registrar la definitiva con actividades
 
-    - Después de seleccionar la tarea y la actividad, haga clic en la opción **"Importar Notas"**.
-    - El sistema transferirá automáticamente las calificaciones desde la fuente seleccionada a la planilla de **Calificación Definitiva Directa**. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificacion-Definitiva-Directa-4.png"} alt={"Captura de Calificacion Definitiva Directa 4"}>Ver ejemplo</GuideImageTrigger>
+Haga clic en **Actividades**. Se abre **Planeación de Actividades Evaluativas**.
 
+<GuideImageTrigger src="/images/guides/registro-nota-directa/ventana-actividades.jpg" alt="Ventana Planeación de Actividades Evaluativas con Orden, Actividad, Agregar, Eliminar y Guardar">
+  Ver ejemplo
+</GuideImageTrigger>
 
+Para crear una actividad:
 
-#### Botón Eliminar y Actualizar Configuración
+1. En **Orden**, elija el número de la actividad, de 1 a 12.
+2. En **Actividad**, escriba el nombre. Si lo deja vacío, SINAI muestra «Campo requerido».
+3. Haga clic en **Agregar**.
 
-##### **Eliminar:**
+La actividad aparece en la lista de la ventana y como columna en la planilla. En la lista puede:
 
-- -   Si necesitas eliminar alguna calificación, inasistencia o observación registrada, puede seleccionar el registro correspondiente y hacer clic en **"Eliminar"** para eliminarlo permanentemente.
+- Cambiar el nombre, la **Fecha** y el **Peso** de las actividades y hacer clic en **Guardar**.
+- Marcar actividades y hacer clic en **Eliminar**. SINAI pregunta «¿Confirma que desea eliminar las actividades seleccionadas?».
 
-##### **Actualizar Configuración"**
+Cuando la asignatura tiene actividades en el periodo:
 
-- -   Si has realizado cambios en la configuración de la planilla, como la adición de nuevas actividades o la modificación del orden de las calificaciones, es necesario pulsar **"Actualizar configuración"**.
-    - Esto asegurará que los cambios realizados se reflejen en la planilla. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificacion-Definitiva-Directa-5.png"} alt={"Captura de Calificacion Definitiva Directa 5"}>Ver ejemplo</GuideImageTrigger>
+1. Escriba la nota de cada estudiante en la columna de cada actividad.
+2. Haga clic en **Guardar**.
 
+La columna **Definitiva** deja de ser editable y muestra la nota calculada a partir de las actividades. Si la valoración es cuantitativa y la institución calcula el periodo por suma ponderada, el encabezado de cada actividad muestra su peso.
 
+Si la institución permite ajustar la nota del periodo, aparecen además la columna **Final**, con el desempeño estimado, y la columna **Ajuste**, donde se escribe la nota de ajuste.
 
+#### 6. Autollenar valoraciones
+
+El botón **Autollenar**, junto a **Asignatura**, aparece solo cuando la asignatura tiene actividades en el periodo. Asigna la misma valoración a varios estudiantes en las actividades que elija.
+
+1. Marque los estudiantes en la planilla.
+2. Haga clic en **Autollenar**. Se abre **Asignar Valoración**.
+3. Marque las actividades.
+4. En **Valoración**, escriba la nota o, si la valoración no es numérica, elija el desempeño.
+5. Haga clic en **Asignar**.
+
+SINAI registra las notas de inmediato y muestra «Valoración asignada correctamente».
+
+- Si no marcó estudiantes, muestra «Debe seleccionar al menos un estudiante para asignar calificaciones».
+- Si no marcó actividades, muestra «Debe seleccionar al menos una actividad para asignar calificaciones».
+
+#### 7. Importar calificaciones
+
+**Importar** trae calificaciones registradas en otra herramienta y las copia en una columna de actividad de la planilla.
+
+1. Haga clic en **Importar**. Se abre **Importar Calificaciones Externas**.
+2. En **Origen**, seleccione **Tareas en línea SINAI**, **Aula virtual chamilo** o **Autoevaluación SINAI**.
+3. Seleccione la tarea, la actividad o la autoevaluación de donde vienen las calificaciones.
+4. En **Importar hacia...**, seleccione la actividad de la planilla que recibe las calificaciones, o **Crear Actividad** para crear una actividad nueva con el nombre del elemento importado.
+5. Haga clic en **Importar Notas**.
+
+<GuideImageTrigger src="/images/guides/registro-nota-directa/ventana-importar.jpg" alt="Ventana Importar Calificaciones Externas con Origen, Tareas, aviso Importante, Importar hacia e Importar Notas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si la importación es correcta, SINAI muestra «Calificaciones importadas correctamente».
+
+- Si no hay elemento de origen seleccionado, muestra «Debe seleccionar el elemento del cual desea importar las calificaciones».
+- Si no hay columna destino, muestra «Debe seleccionar la columna destino para importar las calificaciones».
+
+<GuideCallout type="warning">
+  Las calificaciones que se importan reemplazan las que tenga la columna destino.
+</GuideCallout>
+
+#### 8. Eliminar calificaciones
+
+1. Marque los estudiantes cuyas calificaciones quiere eliminar.
+2. Haga clic en **Eliminar**. Se abre **Eliminar calificaciones**.
+3. Haga clic en **Confirmar eliminación**.
+
+<GuideImageTrigger src="/images/guides/registro-nota-directa/ventana-eliminar.jpg" alt="Ventana Eliminar calificaciones con dos estudiantes marcados y el botón Confirmar eliminación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI muestra, por ejemplo, «Se eliminaron 3 registros correctamente.». Si los estudiantes no tenían calificaciones, muestra «La operacion ha terminado correctamente, pero no hay nada para eliminar.». Si no marcó estudiantes, muestra «Debe seleccionar al menos un estudiante para eliminar las calificaciones».
+
+<GuideCallout type="warning">
+  Esta acción no se puede revertir. Se eliminan todas las calificaciones de los estudiantes marcados para el periodo, el grupo y la asignatura visibles: las notas de las actividades, los ajustes y la definitiva.
+</GuideCallout>
+
+#### 9. Actualizar la configuración
+
+El botón con las flechas circulares, junto a **Guardar**, recarga la configuración de la planilla, como la escala de desempeño. Antes pregunta: «Esta acción recargará la configuración. La información no guardada se perderá. Por favor guarde los cambios primero».
+
+Úselo si cambió la configuración de evaluación mientras tenía la planilla abierta.
+
+#### 10. Permisos
+
+En el módulo administrativo, guardar, autollenar, eliminar y gestionar actividades exige el permiso 604. El rector tiene todos los permisos. Para asignarlo a otro usuario, vea **Establecimiento → Usuarios → Asignación de Permisos**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Calificación definitiva directa»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Aparece «El ingreso de nota directa no está habilitado para el periodo seleccionado». ¿Qué hago?"}>
+    El periodo no tiene habilitada la nota directa. En **Establecimiento → Calendarios**, habilite **Nota Directa** para ese periodo y guarde. En el sistema **Calificación Final Directa** este aviso no aparece.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Calificación definitiva directa» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Puedo modificar la planilla de un periodo cerrado?"}>
+    Sí. Desde el módulo administrativo SINAI valida la nota directa del periodo y el permiso 604, pero no el cierre del periodo. El docente, en cambio, necesita una autorización para modificar un periodo cerrado.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Calificación definitiva directa»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no aparece un grupo en la lista?"}>
+    La lista muestra los grupos con asignación académica del sistema de evaluación con el que trabaja, el que aparece en la parte superior de SINAI. Si eligió un docente, solo verá sus grupos. Elija **Todos** en **Docente** o verifique la asignación académica del grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué no se guardó la nota de un estudiante?"}>
+    SINAI omite al guardar a los estudiantes que no están **MATRICULADO** ni en **PROM. SEMESTRAL**, a los que tienen una marca en **TP** porque sus notas vienen de otra planilla y a los que se valoran aparte por necesidades educativas especiales. En ese último caso, haga clic en su nombre para abrir su planilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Escribí una nota y la casilla quedó vacía y en rojo. ¿Por qué?"}>
+    El valor no está dentro de la escala de desempeño de la institución. Pase el mouse por la casilla para ver «Valor no válido. Por favor verifique la escala» y escriba un valor de la escala.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Por qué no puedo escribir en la columna Definitiva?"}>
+    La asignatura tiene actividades en ese periodo y la **Definitiva** se calcula con las notas de las actividades. Para escribirla directamente, la asignatura no debe tener actividades en el periodo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"No aparece el botón Autollenar. ¿Por qué?"}>
+    **Autollenar** solo aparece cuando la asignatura tiene actividades en el periodo. Cree las actividades con el botón **Actividades**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Puedo recuperar las calificaciones que eliminé?"}>
+    No. **Confirmar eliminación** borra las notas de las actividades, los ajustes y la definitiva de los estudiantes marcados, y la acción no se puede revertir. Debe registrarlas de nuevo.
   </GuideFAQItem>
 </GuideFAQ>

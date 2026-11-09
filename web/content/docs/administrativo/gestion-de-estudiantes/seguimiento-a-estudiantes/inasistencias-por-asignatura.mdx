@@ -1,11 +1,13 @@
 ---
 title: "Consolidado de inasistencias por asignaturas"
-description: "Conozca las opciones de consolidado de inasistencias por asignaturas y siga el procedimiento correspondiente en SINAI."
+description: "Consulte las faltas por periodo de todos los estudiantes de un grupo en una asignatura, con el total del grupo."
 guide: true
 wordpressId: 29510
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/consolidado-de-inasistencia-por-asignatura/"
-lastModified: "2023-11-14 20:48:03"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,47 +16,60 @@ lastModified: "2023-11-14 20:48:03"
 
 ## Guía paso a paso
 
-### Consolidado de Inasistencias por Asignaturas
+### 1. ¿Qué es el Consolidado de inasistencias por asignaturas?
 
-Este procedimiento permite consultar las inasistencias consolidadas de una asignatura en un grupo específico.
+El **Consolidado de inasistencias por asignaturas** muestra, para un grupo y una asignatura, las faltas de cada estudiante en el 1°, 2°, 3° y 4° periodo y su total. Al final suma las faltas de todo el grupo. Es una consulta: en esta pantalla no se registran ni se modifican faltas.
 
-#### Ruta de acceso
+Ingrese a **Seguimiento → Inasistencias → Consol. de Inasistencias por Asignatura**.
 
-Ingrese por la siguiente Ruta:
+<GuideImageTrigger src="/images/guides/inasistencias-por-asignatura/acceso-por-asignatura.jpg" alt="Menú Seguimiento con el submenú Inasistencias desplegado y la opción Consol. de Inasistencias por Asignatura">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. **Seguimiento**
-2. **Inasistencias**
-3. **Control de inasistencias por asignaturas**
+El botón azul del panel **Consulta de Inasistencias** abre esta guía.
 
-**Seguimiento – Inasistencias – Control de inasistencias por asignaturas** <GuideImageTrigger src={"/images/wordpress/2025/02/C.-Inaistencias-por-Asignatura-1.png"} alt={"Captura de C. Inaistencias por Asignatura 1"}>Ver ejemplo</GuideImageTrigger>
+#### 2. Consultar una asignatura
 
+En el panel **Consulta de Inasistencias**:
 
+1. En **Sede**, seleccione la sede.
+2. En **Grupo**, seleccione el grupo.
+3. En **Asignatura**, haga clic en la asignatura. La lista muestra las asignaturas que tienen docente asignado en ese grupo.
 
-#### Cómo Consultar las Inasistencias Consolidadas
+<GuideImageTrigger src="/images/guides/inasistencias-por-asignatura/consolidado-por-asignatura.jpg" alt="Consulta de Inasistencias con un grupo y una asignatura seleccionados y la tabla de faltas por estudiante con la fila TOTAL FALTAS">
+  Ver ejemplo
+</GuideImageTrigger>
 
-En la ventana principal, se debe seleccionar lo siguiente:
+A la derecha, la tabla muestra una fila por estudiante, ordenada por nombre:
 
-- **Sede**: El lugar donde se imparte la asignatura.
-- **Grupo**: El grupo específico dentro de la sede.
-- **Asignatura**: La materia correspondiente a la consulta.
+<GuideDataTable>
 
-Una vez seleccionados los datos correspondientes, se podrá observar las inasistencias consolidadas de cada **estudiante** por **período**. También se puede visualizar el total de inasistencias de todo el año lectivo. <GuideImageTrigger src={"/images/wordpress/2025/02/C.-Inaistencias-por-Asignatura-2.png"} alt={"Captura de C. Inaistencias por Asignatura 2"}>Ver ejemplo</GuideImageTrigger>
+| Columna | Qué muestra |
+| --- | --- |
+| **Estudiante** | Nombre del estudiante matriculado en el grupo. |
+| **1° Periodo** a **4° Periodo** | Faltas registradas en cada periodo en la asignatura. |
+| **TOTAL** | Total de faltas guardado del estudiante en la asignatura. |
 
+</GuideDataTable>
 
-
+Debajo, la fila **TOTAL FALTAS** suma las faltas de todos los estudiantes del grupo en esa asignatura, por periodo y en total.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Consolidado de inasistencias por asignaturas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La lista de asignaturas está vacía. ¿Por qué?"}>
+    La lista muestra las asignaturas con docente asignado en el grupo. Si el grupo no tiene asignación académica en el calendario seleccionado, no aparece ninguna. Revise la asignación académica del grupo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Consolidado de inasistencias por asignaturas» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Seleccioné la asignatura y la tabla no muestra estudiantes. ¿Qué pasa?"}>
+    La tabla muestra a los estudiantes que tienen registro en esa asignatura. Si la planilla de la asignatura aún no se ha generado para el grupo, no aparecen. Puede generarla desde el [Registro consolidado de inasistencias](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/inasistencias).
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Consolidado de inasistencias por asignaturas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo modificar las faltas desde esta consulta?"}>
+    No. Para registrar o corregir el total de faltas de un periodo use el [Registro consolidado de inasistencias](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/inasistencias).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo veo todas las asignaturas de un solo estudiante?"}>
+    Use [Consolidado individual de inasistencias](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/inasistencias-individual).
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,11 +1,13 @@
 ---
-title: "Refuerzos"
-description: "Conozca las opciones de refuerzos y siga el procedimiento correspondiente en SINAI."
+title: "Refuerzos o recuperaciones del periodo"
+description: "Registre las recuperaciones o refuerzos de los estudiantes en cada periodo, revise el método de cálculo y genere el acta de recuperación."
 guide: true
 wordpressId: 29695
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/refuerzos/"
-lastModified: "2023-11-15 00:33:13"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,38 +18,123 @@ lastModified: "2023-11-15 00:33:13"
 
 ## Guía paso a paso
 
-los administrativos como los docentes pueden realizar el proceso de registro de recuperación de períodos o refuerzo (Plan de Mejora) desde sus respectivos módulos.
+### 1. ¿Qué es el registro de recuperaciones o refuerzos?
 
-1. Ingrese a través del menú principal “Evaluación”, submenú “Refuerzo”.
-2. Seleccione el grupo, período y asignatura.
-3. Ingrese la nota de recuperación en el espacio correspondiente para cada estudiante.
-4. Haga clic en el botón “Guardar”. <GuideImageTrigger src={"/images/wordpress/2023/11/REFUERZO-1024x517.gif"} alt={"Captura de REFUERZO"}>Ver ejemplo</GuideImageTrigger>
+En **Registro de Recuperaciones o Refuerzos** se registra la nota de recuperación del periodo de cada estudiante en una asignatura. Con esa nota, SINAI calcula la nueva definitiva del periodo según el método de recuperación de la institución.
 
+Los administrativos registran las recuperaciones de cualquier docente. Los docentes usan la misma pantalla desde su módulo, solo con sus grupos y asignaturas.
 
+Ingrese a **Evaluación → Refuerzos**. Según el sistema de evaluación, la opción del menú puede llamarse **Recuperaciones**.
 
-### RECUPERACIONES DEL PERÍODO
+<GuideImageTrigger src="/images/guides/nivelaciones-de-periodo/pantalla-refuerzos.jpg" alt="Pantalla Registro de Recuperaciones o Refuerzos con los filtros, los botones y la tabla de recuperación del periodo">
+  Ver ejemplo
+</GuideImageTrigger>
 
-Para el registro de recuperaciones o refuerzos, se debe ingresar a través del menú principal “Evaluación”, en la opción “Refuerzos”, tanto en el módulo docente como en el administrativo.
+El botón **Ayuda** abre esta guía.
 
-Desde esta ventana se accede a la lista de estudiantes con desempeño bajo, obviamente aplicando debidamente los filtros por grupo, periodo y asignatura.
+<GuideCallout>
+  Registrar recuperaciones desde el módulo administrativo exige un permiso del usuario. Si no lo tiene, SINAI muestra el aviso del permiso. Si su institución registra las recuperaciones por actas, SINAI abre en su lugar la lista de actas de recuperación.
+</GuideCallout>
 
-Los docentes podrán ver por cada estudiante su nota final del período seleccionado, disponiendo de forma continua una casilla para ingresar la nota de recuperación, información con la que SINAI calculará la nota definitiva para estos estudiantes.
+#### 2. Seleccionar el docente, el grupo, el periodo y la asignatura
 
-Hay que tener en cuenta que el cálculo que realiza SINAI para obtener la nota definitiva dependerá del método que la institución haya establecido, lo cual se hace a través del módulo administrativo en el menú principal “Establecimiento”, submenú “Calendarios”.
+<GuideDataTable>
 
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | **Todos** o un docente activo con asignación académica en el calendario. Para el docente, la lista muestra solo su nombre. |
+| **Grupo** | Grupos del docente seleccionado, o todos los grupos con **Todos**. |
+| **Periodo** | Periodos del grupo. Al abrir, SINAI selecciona el periodo que corresponde al registro de recuperaciones. |
+| **Asignatura** | Asignaturas del grupo, sin la de comportamiento. |
+
+</GuideDataTable>
+
+Si el periodo no permite registrar recuperaciones, SINAI muestra «No se pueden registrar recuperaciones porque el periodo está abierto o la fecha límite para el registro de recuperaciones ya caducó.» Las fechas del registro de recuperaciones se configuran en la pestaña **Periodos** de [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
+
+#### 3. Revisar la tabla de recuperación
+
+La tabla tiene tres bloques:
+
+- **Estudiante:** casilla de selección, **Foto**, **Nombre Completo** y número de identificación.
+- **Recuperación del Periodo:** **Final Periodo** con su desempeño, **Recuperación** y **Defintiva** con su desempeño.
+- **Desempeño Acumulado del Año:** la nota de cada periodo hasta el seleccionado, con su peso, **Final Acumulada** y **Minima Requerida**.
+
+Según la configuración de la institución, la tabla muestra solo a los estudiantes con nota del periodo por debajo del límite de recuperación, o a todos los estudiantes del grupo en esa asignatura. Los estudiantes sin nota del periodo también aparecen.
+
+**Generar planilla** prepara la planilla de recuperación del grupo, el periodo y la asignatura. Si el periodo no permite el registro, SINAI muestra el mensaje de la fecha límite. Si la planilla se genera, el aviso es «planilla generada correctamente».
+
+#### 4. Registrar las notas de recuperación
+
+1. Escriba la nota en **Recuperación** de cada estudiante. Acepta números con coma o punto.
+2. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/nivelaciones-de-periodo/planilla-recuperaciones.jpg" alt="Tabla de recuperación del periodo con las notas escritas en Recuperación, el botón Guardar y el mensaje Recuperaciones guardadas correctamente">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Al guardar, SINAI:
+
+- Registra la nota de cada estudiante. Si la nota supera la calificación máxima de recuperaciones del periodo, registra esa calificación máxima. Si el texto no es un número, deja la recuperación vacía.
+- Calcula la definitiva según el método de recuperación de la institución.
+- Vuelve a consolidar la asignatura en ese periodo.
+
+El aviso es «Recuperaciones guardadas correctamente.» Si algo falla, SINAI muestra «Se han presentado algunos errores.»
+
+Si la institución valora con desempeños y no con números, la nota no se escribe en la tabla. En su lugar:
+
+1. Marque la casilla de los estudiantes.
+2. Elija el desempeño en la lista junto al botón **Valorar**.
+3. Haga clic en **Valorar**.
+
+#### 5. Consultar el método de recuperación
+
+Haga clic en **Método**. Se abre **Metodo para la recuperación del periodo** con el método que tiene el calendario.
+
+<GuideImageTrigger src="/images/guides/nivelaciones-de-periodo/metodo-recuperacion.jpg" alt="Ventana Metodo para la recuperación del periodo con el método La mas alta">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **No aplica:** la recuperación no afecta la definitiva.
+- **Promedio:** la definitiva es el promedio de la nota final del periodo y la recuperación.
+- **Reemplazo:** la recuperación reemplaza la definitiva, sea menor, igual o mayor.
+- **La mas alta:** la recuperación reemplaza la definitiva solo si es mayor.
+
+**Cerrar** cierra la ventana. El método se cambia en **Ajustes y recuperaciones** de la configuración del calendario.
+
+#### 6. Generar el acta de recuperación
+
+Haga clic en **Acta**. SINAI crea el acta de recuperación del grupo, el periodo y la asignatura, o actualiza la que ya existe, y abre la pantalla del acta.
+
+<GuideCallout type="warning">
+  Si el periodo permite registrar recuperaciones, **Acta** guarda primero las notas que estén en la tabla, igual que **Guardar**. Revise las notas antes de hacer clic.
+</GuideCallout>
+
+Si hay más de un acta para el mismo grupo, periodo y asignatura, SINAI muestra «Existe mas de un acta, no se puede modificar».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Refuerzos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué aparece «No se pueden registrar recuperaciones porque el periodo está abierto o la fecha límite para el registro de recuperaciones ya caducó.»?"}>
+    El registro de recuperaciones de ese periodo no está habilitado en este momento: el periodo sigue abierto para calificaciones o ya pasó la fecha de cierre de recuperaciones. Revise las fechas de **Recuperaciones** en la pestaña **Periodos** de **Establecimiento → Calendarios**. Si el grupo pertenece a un cronograma especial, revise las fechas de ese cronograma.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Refuerzos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué no aparecen todos los estudiantes del grupo?"}>
+    Según la configuración de la institución, la tabla puede mostrar solo a los estudiantes cuya nota del periodo está por debajo del límite de recuperación. Los estudiantes que ya aprobaron no aparecen. Verifique también que eligió el grupo, el periodo y la asignatura correctos.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Refuerzos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Registré una nota mayor a la permitida. ¿Qué pasa?"}>
+    SINAI no rechaza la nota: al guardar, registra la calificación máxima de recuperaciones del periodo configurada en el calendario.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo calcula SINAI la definitiva después de la recuperación?"}>
+    Con el método de recuperación del calendario: **No aplica**, **Promedio**, **Reemplazo** o **La mas alta**. Haga clic en **Método** para ver cuál tiene configurado. Después de guardar, SINAI vuelve a consolidar la asignatura del periodo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que las recuperaciones quedaron guardadas?"}>
+    Después de **Guardar**, SINAI muestra «Recuperaciones guardadas correctamente.» y la tabla vuelve a cargar con la nueva **Defintiva** de cada estudiante. Si ve «Se han presentado algunos errores.», revise las notas y vuelva a guardar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿El botón Acta guarda las notas?"}>
+    Sí, cuando el periodo permite registrar recuperaciones. Antes de crear o actualizar el acta, SINAI guarda las notas de la tabla.
   </GuideFAQItem>
 </GuideFAQ>

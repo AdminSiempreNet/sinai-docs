@@ -1,11 +1,13 @@
 ---
 title: "Anotaciones"
-description: "Lee cada anotación con su fecha y el motivo registrado."
+description: "Consulte las anotaciones en las que usted es responsable o está vinculado, abra su detalle y coméntelas si la institución lo permite."
 guide: true
 wordpressId: 30578
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/e-anotaciones/"
-lastModified: "2023-11-17 08:29:28"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,35 +16,74 @@ lastModified: "2023-11-17 08:29:28"
 
 ## Guía paso a paso
 
-### Anotaciones
+### 1. ¿Qué es Anotaciones?
 
-En la siguiente guía se encontrará la forma de cómo los estudiantes y acudientes pueden visualizar las anotaciones disciplinarias que han sido registradas por los docentes de la Institución Educativa de acuerdo con las faltas disciplinarias cometidas por el estudiante.
+**Anotaciones** le muestra las anotaciones que los docentes y directivos registraron en las que usted aparece como estudiante responsable o como estudiante vinculado. Por ejemplo: felicitaciones, observaciones, recomendaciones, llamados de atención o amonestaciones, según los tipos que use la institución.
 
-#### Pasos para Visualizar las Anotaciones Disciplinarias
+La pantalla es de consulta. Si la institución lo permite, usted puede comentar cada anotación.
 
-Se debe seleccionar el menú **“Seguimiento”** (Icono de cámara), seguidamente ingresar a la opción **“Anotaciones”**. <GuideImageTrigger src={"/images/wordpress/2025/02/Anotacion-1.png"} alt={"Captura de Anotacion 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Seguimiento → Anotaciones**. **Seguimiento** es el ícono de la cámara en la parte superior; la opción **Anotaciones** está en el panel de la izquierda.
 
+#### 2. Consultar la lista de anotaciones
 
+La tabla **Lista de Anotaciones** muestra todas sus anotaciones, de todos los años, diez por página.
 
-Seleccionar el calendario que desea conocer para ver el registro de la información registrada en cada anotación disciplinaria. <GuideImageTrigger src={"/images/wordpress/2025/02/Anotacion-2.png"} alt={"Captura de Anotacion 2"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
+| Columna | Qué muestra |
+| --- | --- |
+| **Anotación** | Asunto en mayúsculas, **Fecha de Registro** y descripción. |
+| **Registrado por** | Docente o directivo que registró la anotación. |
+| **Actualización** | Fecha de la última modificación. |
+| **Vinculación** | **Responsable** si la anotación es suya, o el tipo de vinculación con el que lo relacionaron. |
 
+</GuideDataTable>
 
-Los estudiantes pueden realizar el registro de los descargos, todo lo que el estudiante escriba en esta parte quedará guardado automáticamente.
+Use la fila de filtro debajo de los títulos para buscar por cualquier columna.
 
+#### 3. Ver el detalle de una anotación
+
+Haga clic en el botón azul del ojo y el comentario, al final de la fila. Se abre la pantalla **Anotación**.
+
+La pantalla muestra:
+
+- **Grupo**, **Estudiante Responsable** y **Fecha**.
+- **Tipo de Anotacion**, **Asunto**, **Periodo** y **Norma**.
+- **Descripción**.
+- Los campos adicionales que la institución definió para las anotaciones, cuando el registro los tiene diligenciados.
+
+Los datos son de consulta: la pantalla no tiene botón para guardar cambios en la anotación. **Lista de Anotaciones**, en la parte superior derecha, lo devuelve a la lista.
+
+#### 4. Comentar una anotación
+
+La pestaña **Comentarios** lista los comentarios de la anotación con el nombre de quien comenta y la **Fecha de Registro**. Si no hay, muestra «No hay comentarios resgistrados».
+
+Si la institución permite que los estudiantes comenten, la pestaña muestra el formulario:
+
+1. Escriba en **Comentario**.
+2. En **Enviar a**, seleccione uno o varios usuarios vinculados a la anotación, o marque **Enviar a todos**.
+3. Haga clic en **Comentar**.
+
+SINAI muestra «Comentario agregado correctamente» y el comentario aparece en la lista. Los usuarios elegidos reciben un correo con el asunto de la anotación y su comentario. Si no elige a nadie, el comentario queda registrado sin enviar correo.
+
+Si la institución no permite comentar, el formulario no aparece.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Anotaciones»?"}>
-    Entra a Anotaciones dentro de tu seguimiento.
+  <GuideFAQItem index="01" question={"¿Qué anotaciones aparecen en la lista?"}>
+    Las anotaciones en las que usted es el estudiante responsable y aquellas en las que lo vincularon, de todos los años. La columna **Vinculación** indica si es **Responsable** o el tipo de vinculación.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Anotaciones» quedó listo?"}>
-    Las ves cuando aparece la lista con la fecha y el motivo.
+  <GuideFAQItem index="02" question={"No veo el formulario para comentar. ¿Por qué?"}>
+    La institución no ha habilitado que los estudiantes comenten las anotaciones. Esa opción la configura la institución en la configuración de anotaciones.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Anotaciones»?"}>
-    Si no entiendes una anotación, pregúntale a tu director de grupo.
+  <GuideFAQItem index="03" question={"¿Puedo cambiar el asunto o la descripción de una anotación?"}>
+    No. Aunque los datos aparecen en campos, la pantalla no guarda cambios. Si no está de acuerdo con una anotación, escriba un comentario, si la institución lo permite, o hable con quien la registró o con su director de grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Quién se entera de mi comentario?"}>
+    El comentario queda en la pestaña **Comentarios** de la anotación. Además, SINAI envía un correo a los usuarios que elija en **Enviar a**, o a todos los vinculados si marca **Enviar a todos**.
   </GuideFAQItem>
 </GuideFAQ>

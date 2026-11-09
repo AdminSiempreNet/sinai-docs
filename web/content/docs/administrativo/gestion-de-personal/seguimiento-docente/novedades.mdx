@@ -1,37 +1,189 @@
 ---
 title: "Novedades de personal"
-description: "Conozca las opciones de novedades de personal y siga el procedimiento correspondiente en SINAI."
+description: "Registre permisos, incapacidades, licencias y otras novedades de los funcionarios, con su evidencia, autorización y reportes."
 guide: true
 wordpressId: 28478
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/novedades-de-personal/"
-lastModified: "2023-11-01 14:44:17"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="yu9Ii23ymEU" title="Novedades de personal"
-  odyseeUrl="https://odysee.com/novedades-de-personal%3Aad231d77ce50ebca323907eeb3d08a965f3fc7f6"
-/>
+<YouTube id="yu9Ii23ymEU" title="Novedades de personal" odyseeUrl="https://odysee.com/novedades-de-personal%3Aad231d77ce50ebca323907eeb3d08a965f3fc7f6" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-En esta guía, aprenderá a registrar las novedades del personal en la plataforma **SINAI**.
+### 1. ¿Qué es Novedades de personal?
 
-Para realizar este proceso, diríjase al menú **Personal >** **Funcionarios >** **Novedades del Personal**. <GuideImageSequence images={[ { src: "/images/wordpress/2025/02/1-Novedades-del-personal.png", alt: "Captura de Novedades del personal" }, { src: "/images/wordpress/2025/02/2-Novedades-del-personal.png", alt: "Captura de Novedades del personal" }, { src: "/images/wordpress/2025/02/3-Novedades-del-personal.png", alt: "Captura de Novedades del personal" }, { src: "/images/wordpress/2025/02/4-Novedades-del-personal.png", alt: "Captura de Novedades del personal" }, { src: "/images/wordpress/2025/02/5-Novedades-del-persoonal.png", alt: "Captura de Novedades del persoonal" }, ]} > Ver ejemplos </GuideImageSequence>
+**Novedades de personal** lleva el registro de las ausencias y novedades de los funcionarios: citas médicas, incapacidades, permisos, licencias y otros tipos. Cada novedad tiene un número de solicitud, fechas, duración, autorización, observaciones y una evidencia adjunta.
+
+Ingrese a **Personal → Funcionarios → Novedades de Personal**.
+
+<GuideImageTrigger src="/images/guides/novedades-de-personal/acceso-novedades.jpg" alt="Menú Personal con el submenú Funcionarios desplegado y la opción Novedades de Personal">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla se divide en dos partes:
+
+- **A la izquierda:** **Lista de Funcionarios**, con el buscador, la lista y los botones **Agregar Novedad** e **Ir a Reportes**. El botón **Ayuda** abre esta guía.
+- **A la derecha:** **Lista de Novedades** del funcionario seleccionado.
+
+#### 2. Consultar las novedades
+
+1. Escriba parte del nombre en **¿Cúal funcionario?** para filtrar la lista.
+2. Seleccione el funcionario. **Todos** muestra las novedades de todos los funcionarios.
+
+La lista incluye funcionarios activos e inactivos; cada nombre termina con su estado, por ejemplo **- ACTIVO**.
+
+**Lista de Novedades** muestra las novedades cuya fecha de solicitud está en el año del calendario seleccionado en la parte superior. Las más recientes en actualizarse aparecen primero.
+
+<GuideImageTrigger src="/images/guides/novedades-de-personal/lista-novedades.jpg" alt="Pantalla Novedades de personal con la lista de funcionarios y la lista de novedades">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué indica |
+| --- | --- |
+| **#** | Número de la solicitud. |
+| **Foto** y **Funcionario** | Funcionario de la novedad. |
+| **Fecha de Solicitud** | Fecha en que se solicitó la novedad. |
+| **Tipo** | Tipo de novedad. |
+| **Descripción** | Descripción y, si existe, el enlace **Adjunto** a la evidencia. |
+| **Autorizado** | Casilla marcada si la novedad fue autorizada. |
+| **Fecha de Inicio** | Fecha y hora en que empieza la novedad. |
+| **Duración** | Días y horas. |
+| **Opciones** | Eliminar (rojo), editar (verde) y descargar el reporte (azul). |
+
+</GuideDataTable>
+
+#### 3. Agregar una novedad
+
+1. Seleccione un funcionario en la lista. No puede ser **Todos**.
+2. Haga clic en **Agregar Novedad**.
+3. Complete la ventana **Registro de Ausencias**, como se explica en el paso siguiente.
+4. Haga clic en **Aceptar**.
+
+- Si no hay un funcionario seleccionado, SINAI muestra «Debe seleccionar un funcionario».
+- Si el funcionario no está activo, SINAI muestra «No se puede adicionar novedades para el funcionario seleccionado porque no se encuentra en estado activo.»
+
+<GuideCallout>
+  **Agregar Novedad** crea la solicitud con el número siguiente y la fecha de hoy antes de abrir la ventana. Si cierra la ventana con **Cancelar** o con la equis, SINAI borra esa solicitud nueva.
+</GuideCallout>
+
+#### 4. Completar el registro
+
+La misma ventana **Registro de Ausencias** se abre al editar una novedad con el botón verde. En la parte superior muestra el funcionario y el **Solicitud N°**.
+
+<GuideImageTrigger src="/images/guides/novedades-de-personal/editar-novedad.jpg" alt="Ventana Registro de Ausencias con el funcionario, el número de solicitud, el tipo, las fechas, la duración y la autorización">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué registra |
+| --- | --- |
+| **Tipo** | Tipo de novedad, por ejemplo **Cita médica**, **Incapacidad por enfermedad general**, **Calamidad doméstica**, **Permiso remunerado** o **Licencia de maternidad**. Es obligatorio. |
+| **Fecha** | Fecha de la solicitud, en formato día/mes/año. Es obligatoria. |
+| **Descripcion** | Descripción de la solicitud. |
+| **Inicio: Fecha** | Fecha en que empieza la novedad. Es obligatoria y no puede ser anterior a la fecha de la solicitud. |
+| **Inicio: Hora** | Hora en que empieza la novedad. Es obligatoria. Admite números, dos puntos y las letras A, M y P. |
+| **Número de días** | Duración en días. Es obligatorio y admite hasta tres dígitos. |
+| **Número de horas** | Horas adicionales, entre 0 y 7. Es obligatorio y admite decimales con coma. |
+| **Autorizado** | Marque la casilla cuando la novedad esté autorizada. |
+| **Observación** | Observaciones sobre la novedad. |
+| **Agregar evidencia** | Archivo de soporte. |
+
+</GuideDataTable>
+
+Debajo de la observación, la tabla **Registro** muestra el usuario y la fecha y hora de la última actualización. **Evidencia** muestra el enlace al archivo guardado.
+
+Mensajes de validación:
+
+- «Debe seleccionar el tipo».
+- «Escriba la fecha de la solicitud».
+- «La fecha no puede ser anterior a la fecha de solicitud».
+- «Escriba la fecha de salida o fecha de inicio del permiso».
+- «Escriba la hora de salida».
+- «Escriba el numero de dias que dura la ausencia».
+- «Escriba el numero de horas, entre 0 y 7 horas» o «Debe establecer un valor entre 0 y 7 horas».
+
+Al hacer clic en **Aceptar**, SINAI muestra «Datos guardados correctamente.» Si falla, muestra «Error al guardar los cambios. Por favor verifique.»
+
+La evidencia debe ser **docx**, **pdf**, **zip**, **rar**, **jpg** o **png**, pesar entre 10 KB y 5 MB y tener la extensión en minúscula. Si el archivo no cumple, la novedad se guarda igual y el mensaje agrega el motivo:
+
+- «Archivo no valido, debe ser un archivo con extensiones: docx, pdf, zip, rar, jpg, png».
+- «No puede adjuntar archivos de tamaño superior a 5MB».
+- «No puede adjuntar archivos de tamaño inferior a 10kb, posiblemente el archivo está corrupto».
+
+Si sube una evidencia nueva, reemplaza la anterior.
+
+#### 5. Descargar el registro de una novedad
+
+Para descargar el formato de la novedad en PDF, use cualquiera de estas opciones:
+
+- El botón azul de descarga en la fila de la novedad.
+- **Descargar**, en la ventana **Registro de Ausencias**.
+
+#### 6. Eliminar una novedad
+
+1. Haga clic en el botón rojo de la fila.
+2. Confirme *¿Confirma que desea eliminar la ausencia?*
+
+Si se elimina, SINAI muestra «Novedad eliminada correctamente».
+
+<GuideCallout type="warning">
+  El rector puede eliminar novedades. Los demás usuarios necesitan el permiso para eliminar novedades; si no lo tienen, SINAI no elimina la novedad. La eliminación no se puede deshacer.
+</GuideCallout>
+
+#### 7. Reportes de novedades
+
+Haga clic en **Ir a Reportes**.
+
+1. En **Seleccione el informe**, elija el reporte.
+2. En **Seleccione el mes**, elija **Hasta el mes actual** o un mes.
+3. Si eligió **Histórico de novedades por funcionario**, seleccione el funcionario o **Todos los funcionarios**. Puede filtrar la lista con **Buscar funcionario**.
+4. Haga clic en **Ver informe**.
+
+<GuideImageTrigger src="/images/guides/novedades-de-personal/reportes-novedades.jpg" alt="Pantalla de reportes con el Resumen de Novedades de Personal por mes y tipo de ausencia">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Los reportes disponibles son:
+
+- **Resumen Novedades de Personal:** cantidad y duración de las novedades por mes y tipo.
+- **Reporte Mensual de Novedades**.
+- **Histórico de novedades por funcionario**.
+
+Los reportes usan el calendario seleccionado en la parte superior. Desde la barra del informe puede imprimir o exportar. **Ir al registro** regresa a la lista de novedades.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Novedades de personal»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Registré una novedad y no aparece en la lista. ¿Por qué?"}>
+    La lista solo muestra las novedades cuya **fecha de solicitud** está en el año del calendario seleccionado en la parte superior. Si la fecha de solicitud es de otro año, cambie el calendario. Revise también que en la lista de funcionarios esté seleccionado el funcionario correcto o **Todos**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Novedades de personal» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"No me deja agregar una novedad. ¿Qué reviso?"}>
+    Seleccione un funcionario en la lista; con **Todos** aparece «Debe seleccionar un funcionario». Además, el funcionario debe estar activo. Si está inactivo, SINAI muestra «No se puede adicionar novedades para el funcionario seleccionado porque no se encuentra en estado activo.»
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Novedades de personal»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Abrí Agregar Novedad por error. ¿Queda una solicitud vacía?"}>
+    No, si cierra la ventana con **Cancelar** o con la equis: SINAI borra la solicitud nueva. Si hace clic en **Aceptar**, la novedad queda registrada.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Guardé la novedad, pero la evidencia no quedó. ¿Por qué?"}>
+    El mensaje «Datos guardados correctamente.» indica el motivo al final. La evidencia debe ser docx, pdf, zip, rar, jpg o png, con la extensión en minúscula, y pesar entre 10 KB y 5 MB. Corrija el archivo, edite la novedad y vuelva a adjuntarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cuántas horas puedo registrar en Número de horas?"}>
+    Entre 0 y 7, con decimales separados por coma. Para ausencias más largas, registre los días completos en **Número de días** y el resto en horas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"No puedo eliminar una novedad. ¿Qué pasa?"}>
+    El rector puede eliminarlas. Los demás usuarios necesitan el permiso para eliminar novedades; sin él, la novedad no se elimina. Solicite el permiso al administrador de usuarios de la institución.
   </GuideFAQItem>
 </GuideFAQ>

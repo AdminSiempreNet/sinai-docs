@@ -1,74 +1,88 @@
 ---
 title: "Horas dictadas"
-description: "Conozca las opciones de horas dictadas y siga el procedimiento correspondiente en SINAI."
+description: "Registre las horas que cada docente ha dictado por asignatura y grupo, y compárelas con las horas programadas en su asignación estándar."
 guide: true
 wordpressId: 32520
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/horas-dictadas/"
-lastModified: "2024-08-09 16:06:30"
+lastModified: "2026-11-04"
+lastReviewed: "2026-11-04"
 ---
+
 ## Video tutorial
 
+<GuideCallout type="warning">
+  **Video desactualizado.** Este video corresponde a una versión anterior de SINAI, antes de que existieran los dos tipos de asignación académica (estándar y personalizada). Algunas pantallas y menús pueden no coincidir con la versión actual. Siga la guía paso a paso, que describe la versión vigente.
+</GuideCallout>
+
 <GuideVideos compact>
-<YouTube id="ChE_jzU_yTM" title="Horas dictadas"
-  odyseeUrl="https://odysee.com/horas-dictadas-por-docente%3A57fe0a897d731c5ddd0dc3be479bdb09cdcff11a"
-/>
+<YouTube id="ChE_jzU_yTM" title="Horas dictadas" odyseeUrl="https://odysee.com/horas-dictadas-por-docente%3A57fe0a897d731c5ddd0dc3be479bdb09cdcff11a" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-### Horas Dictadas
+### 1. ¿Qué es Horas Dictadas?
 
-El formulario **"Horas Dictadas"** permite llevar un control detallado de la asignación horaria de cada docente.
+**Horas Dictadas** permite a los directivos registrar cuántas horas ha dictado cada docente en cada asignatura y grupo, y compararlas con las horas programadas en la asignación académica. Sirve para hacer seguimiento a las horas pendientes por dictar.
 
-📌 **En este formulario podrá visualizar:**
+Los datos corresponden al **calendario** con el que inició sesión.
 
-✔️ Horas semanales asignadas
+<GuideCallout>
+  Esta pantalla trabaja con la **asignación estándar**. Los grupos con **asignación personalizada** (asignación por periodo) no aparecen en la lista de grupos del docente. Consulte [Asignación académica](/docs/administrativo/gestion-de-personal/asignacion-academica/asignacion-por-periodo) para conocer la diferencia entre los dos tipos.
+</GuideCallout>
 
-✔️ Total de horas asignadas
+Ingrese a **Personal → Horas Dictadas**.
 
-✔️ Horas dictadas
+<GuideImageTrigger src={"/images/wordpress/2025/02/1-Horas-dictadas.png"} alt={"Menú Personal con la opción Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
 
-✔️ Total de horas pendientes
+#### 2. Registrar las horas dictadas
 
- Esta información permite a los directivos realizar un seguimiento estadístico de las horas pendientes por dictar de cada docente.
+En el panel **Registro Horas Dictadas por Docente**:
 
-Para acceder a este seguimiento, diríjase a: **Menú Personal > Submenú Horas Dictadas**. <GuideImageTrigger src={"/images/wordpress/2025/02/1-Horas-dictadas.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
+- **Docente:** lista los funcionarios activos de la institución.
+- **Grupo:** lista los grupos en los que el docente tiene asignación estándar en el calendario.
 
+La tabla muestra, por cada asignatura del docente en el grupo:
 
+<GuideDataTable>
 
-En esta ruta encontrará un panel a la izquierda que le permitirá filtrar por docente y registrar las horas correspondientes, considerando la asignación académica de cada uno. <GuideImageTrigger src={"/images/wordpress/2025/02/2-Horas-dictadas.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
+| Columna | Qué indica |
+| --- | --- |
+| **Asignatura** | Código y nombre de la asignatura. |
+| **Grupo** | Grupo de la asignación. |
+| **Horas Semanales** | Horas semanales registradas en la asignación académica. |
+| **Horas Totales** | Horas programadas para el año en la asignación académica. |
+| **Horas Dictadas** | Campo editable para registrar las horas que el docente ya dictó. |
+| **Horas Pendientes** | Diferencia entre **Horas Totales** y **Horas Dictadas**. Si **Horas Dictadas** está vacía, muestra 0. |
 
+</GuideDataTable>
 
+1. Seleccione el **Docente**.
+2. Seleccione el **Grupo**.
+3. Escriba las horas en la columna **Horas Dictadas** de cada asignatura.
+4. Haga clic en **Guardar Horas Dictadas**.
 
-Al seleccionar al docente, deberá elegir el grupo correspondiente. En el panel derecho, podrá ver las diferentes asignaturas asignadas a ese docente para ese grupo. <GuideImageTrigger src={"/images/wordpress/2025/02/3-Horas-dictadas_.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
+SINAI muestra *Las horas dictadas se registraron correctamente*. Si ocurre un error, muestra *ERROR! El proceso de registro fallo, por favor intentelo nuevamente*.
 
+<GuideImageTrigger src={"/images/wordpress/2025/02/4-Horas-dictadas.png"} alt={"Tabla de horas dictadas con las columnas de horas semanales, totales, dictadas y pendientes"}>Ver ejemplo</GuideImageTrigger>
 
+<GuideCallout>
+  Guardar exige el permiso **407** de la asignación académica. El rector puede hacerlo siempre. Escriba solo números en **Horas Dictadas**: la pantalla no valida el formato antes de guardar.
+</GuideCallout>
 
-En el panel derecho, encontrará la siguiente información: el nombre de la asignatura, el grupo, las horas semanales asignadas, el total de horas, las horas dictadas y las horas pendientes. <GuideImageTrigger src={"/images/wordpress/2025/02/4-Horas-dictadas.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-La columna **"Horas Dictadas"** es editable, lo que permitirá al directivo registrar las horas confirmadas como dictadas. <GuideImageTrigger src={"/images/wordpress/2025/02/5-Horas-dictadas.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
-
-
-
-En el panel izquierdo, encontrará el botón **"Guardar Horas Dictadas"**. Al hacer clic en él, se mostrará un mensaje en la parte inferior de la ventana confirmando que las horas dictadas se registraron correctamente. <GuideImageTrigger src={"/images/wordpress/2025/02/6-Horas-dictadas_.png"} alt={"Captura de Horas dictadas"}>Ver ejemplo</GuideImageTrigger>
-
-
-
+Las horas dictadas se conservan si después se cambia el docente de la asignatura en **Asignación estándar → Por grupo**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Horas dictadas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué no aparece un grupo en la lista del docente?">
+    La lista solo incluye los grupos donde el docente tiene asignación estándar en el calendario actual. Si el grupo tiene asignación personalizada, no aparece en esta pantalla. Revise el tipo del grupo en **Asignación Académica → Configuración de grupos**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Horas dictadas» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿De dónde salen las Horas Totales?">
+    Salen de la asignación académica estándar: son las horas semanales por las semanas del año lectivo del grupo. Si no coinciden con lo esperado, corrija las horas semanales en **Asignación estándar → Por grupo** o **Por docente**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Horas dictadas»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Cómo verifico que las horas quedaron guardadas?">
+    Después de guardar, vuelva a seleccionar el docente y el grupo. La columna **Horas Dictadas** debe mostrar los valores registrados.
   </GuideFAQItem>
 </GuideFAQ>

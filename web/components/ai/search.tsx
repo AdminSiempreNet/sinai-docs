@@ -551,7 +551,7 @@ export function AISearchPanelList({ className, style, ...props }: ComponentProps
           {chat.error && (
             <div className="p-2 bg-fd-secondary text-fd-secondary-foreground border rounded-lg">
               <p className="text-xs text-fd-muted-foreground mb-1">
-                Request Failed: {chat.error.name}
+                No se pudo obtener la respuesta
               </p>
               <p className="text-sm">{chat.error.message}</p>
             </div>

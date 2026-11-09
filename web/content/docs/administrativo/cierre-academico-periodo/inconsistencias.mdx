@@ -1,0 +1,131 @@
+---
+title: "Inconsistencias"
+description: "Valide las inconsistencias académicas de la institución, vea dónde corregir cada una y consulte los estudiantes matriculados sin calificaciones."
+guide: true
+wordpressId: 28804
+legacyUrl: "https://ayudasinai.siempre.net.co/docs/inconsistencias/"
+lastModified: "2026-11-05"
+lastReviewed: "2026-11-05"
+---
+
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="UbBLrtgcfWg" title="Inconsistencias" odyseeUrl="https://odysee.com/@AndresGoDu:a/Modulo-Inconsistencias---Estudiantes-sin-calificaciones---SINAI---M%C3%B3dulo-A:5888a81ed4ef4d99f64abb6391a7bffcacc803c7" />
+</GuideVideos>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Inconsistencias?
+
+**Validación de Inconsistencias** muestra las situaciones que debe corregir para asegurar un cierre correcto del calendario académico, como pesos mal configurados o estudiantes sin calificaciones. Cada resultado indica qué sucede y en qué pantalla se resuelve.
+
+Ingrese a **Inicio → Inconsistencias**.
+
+<GuideImageTrigger src="/images/guides/inconsistencias/validacion-inconsistencias.jpg" alt="Pantalla Validación de Inconsistencias con los filtros Calendario y Tipo de Inconsistencia, y la tabla de resultados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+A la izquierda están estos filtros:
+
+<GuideDataTable>
+
+| Filtro | Qué define |
+| --- | --- |
+| **Calendario** | Año que consulta. Lista los calendarios de la institución, del más reciente al más antiguo. |
+| **Tipo de Inconsistencia** | Situación que desea revisar. |
+| **Periodo** | **Primero**, **Segundo**, **Tercero**, **Cuarto** o **Todos**. Aparece al cambiar el tipo y aplica a los tipos 7 y 8. |
+
+</GuideDataTable>
+
+#### 2. Conocer los tipos de inconsistencia
+
+<GuideDataTable>
+
+| Tipo | Qué revisa |
+| --- | --- |
+| **Todas las Generales** | Reúne las inconsistencias generales en una sola consulta. No incluye el tipo 7, que se consulta aparte. |
+| **1. General - Asignaturas con Intensidad Horaria 0** | Asignaturas sin intensidad horaria. |
+| **2. General - Peso Mayor que 100% en Asignatura** | Asignaturas con un peso superior a 100%. |
+| **3. General - Comportamiento con mas de 0 horas semanales** | Asignaturas de comportamiento que tienen horas semanales. |
+| **4. General - Mas de una asignatura de comportamiento** | Más de una asignatura de comportamiento. |
+| **5. General - Areas con ponderación diferente de 100%** | Áreas cuyas asignaturas no suman 100%. Aplica cuando la promoción es por áreas. |
+| **7. Estudiantes matriculados sin calificaciones** | Asignaturas de cada grupo con estudiantes matriculados sin calificaciones en el periodo. |
+| **8. Estudiantes regulares con calificaciones en Modalidad** | Estudiantes regulares que tienen calificaciones registradas en una modalidad. |
+| **9. Estudiantes Matriculados sin calificaciones (IE.TAPARTÓ)** | Consulta propia de esa institución. |
+
+</GuideDataTable>
+
+#### 3. Consultar las inconsistencias
+
+1. Seleccione el **Calendario**.
+2. Seleccione el **Tipo de Inconsistencia**.
+3. Si eligió el tipo 7 u 8, seleccione el **Periodo**.
+4. Haga clic en **Buscar...**.
+
+**Resultados** muestra 20 filas por página, con estas columnas:
+
+- **Tipo:** nombre de la inconsistencia.
+- **Descripción de la Inconsistencia:** qué ocurre y dónde, por ejemplo el área, el grupo y el peso actual.
+- **Ruta de resolución:** pantalla donde se corrige.
+
+Si no hay resultados, SINAI muestra «Felicidades, no tiene inconsistencias para el tipo seleccionado!!!». Al cambiar el tipo, la tabla se limpia y debe hacer clic de nuevo en **Buscar...**.
+
+#### 4. Corregir las inconsistencias
+
+1. Lea la **Descripción de la Inconsistencia**.
+2. Vaya a la pantalla que indica **Ruta de resolución**, por ejemplo **Personal > Asignacion Académica** o **Evaluacion > Calificaciones**.
+3. Haga la corrección y vuelva a **Inicio → Inconsistencias**.
+4. Haga clic en **Buscar...** para confirmar que la inconsistencia ya no aparece.
+
+#### 5. Exportar la lista a Excel
+
+Elija el tipo y, si aplica, el periodo. Luego haga clic en **Exportar**.
+
+<GuideCallout type="warning">
+  **Exportar** usa el calendario seleccionado en la parte superior de SINAI, no el de la lista **Calendario**. Si consulta otro año, cambie primero el calendario en la parte superior para que el archivo coincida con la pantalla.
+</GuideCallout>
+
+#### 6. Consultar los estudiantes sin calificaciones
+
+El tipo 7 resume la situación por asignatura y grupo. Para ver cada estudiante, use el **Reporte de Estudiantes sin Calificaciones**:
+
+1. En la parte inferior del panel izquierdo, debajo de **Reporte de Estudiantes sin Calificaciones**, haga clic en **Descargar**. Se abre **Consulta de Estudiantes Matriculados sin Calificaciones**.
+2. Elija la **Sede** o **[Todas]**, el **Grupo** o **[Todos]** y el **Periodo**: **PRIMERO**, **SEGUNDO**, **TERCERO**, **CUARTO** o **FINAL**.
+3. Haga clic en **Buscar**.
+
+<GuideImageTrigger src="/images/guides/antes-de-procesar-promocion/sin-calificaciones.jpg" alt="Pantalla Consulta de Estudiantes Matriculados sin Calificaciones con los filtros Sede, Grupo y Periodo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla usa el calendario seleccionado en la parte superior de SINAI y muestra, por estudiante, la sede, el grado, el grupo, el estado, el área, la asignatura, el docente, el periodo, la definitiva, el desempeño y la fecha. **Descargar**, junto a **Buscar**, exporta la lista a Excel.
+
+Registre las calificaciones que falten antes de consolidar. Los casos comunes son estudiantes que llegaron de otra institución con notas que no se registraron en SINAI y asignaturas que estuvieron sin docente en algún periodo. Conviene hacer esta consulta al final de cada periodo.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"Elegí Todas las Generales y no veo los estudiantes sin calificaciones. ¿Por qué?"}>
+    **Todas las Generales** no incluye ese tipo. Seleccione **7. Estudiantes matriculados sin calificaciones**, elija el **Periodo** y haga clic en **Buscar...**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Qué diferencia hay entre el tipo 7 y el Reporte de Estudiantes sin Calificaciones?"}>
+    El tipo 7 indica cuántos estudiantes sin calificaciones tiene cada asignatura por grupo. El reporte lista cada estudiante con su asignatura, docente y periodo, y se puede descargar en Excel.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"El archivo de Exportar no coincide con lo que veo en pantalla. ¿Qué pasó?"}>
+    **Buscar...** usa la lista **Calendario**, pero **Exportar** usa el calendario de la parte superior de SINAI. Seleccione ese mismo año en la parte superior y exporte de nuevo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «Tiempo de espera agotado». ¿Qué hago?"}>
+    La consulta de estudiantes sin calificaciones tardó demasiado. Intente de nuevo. Si el problema persiste, filtre una sola sede o un grupo específico.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Aparece «No se han encontrado registros para los filtros especificados». ¿Qué significa?"}>
+    No hay estudiantes sin calificaciones con esos filtros en el calendario seleccionado en la parte superior de SINAI. Si esperaba resultados, revise ese calendario, la sede, el grupo y el periodo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Ya corregí un dato y la inconsistencia sigue apareciendo. ¿Qué reviso?"}>
+    Haga clic en **Buscar...** para actualizar la lista y confirme que corrigió el grupo y el calendario que indica la descripción. Las descripciones pueden repetir la misma situación en varios grupos.
+  </GuideFAQItem>
+</GuideFAQ>

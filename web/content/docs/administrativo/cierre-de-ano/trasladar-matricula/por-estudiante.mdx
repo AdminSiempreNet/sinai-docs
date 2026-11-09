@@ -1,64 +1,147 @@
 ---
-title: "Trasladar Matrícula por Estudiante"
-description: "Aprenda a trasladar matrícula por Estudiante en SINAI."
+title: "Trasladar matrícula por estudiante"
+description: "Traslade al calendario siguiente la matrícula de uno o varios estudiantes de un grupo, elija su grupo de destino y revierta los traslados hechos por error."
 guide: true
 wordpressId: 29789
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/trasladar-matricula-por-estudiante/"
-lastModified: "2023-11-15 01:24:43"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="wjbVDvk3q04" title="Trasladar Matrícula por Estudiante"
-  odyseeUrl="https://odysee.com/trasladar-matr%C3%ADcula-por-estudiante%3A8e7af3905966e389b7def34f02a030fcfb847529"
-/>
+<YouTube id="wjbVDvk3q04" title="Trasladar Matrícula por Estudiante" odyseeUrl="https://odysee.com/trasladar-matr%C3%ADcula-por-estudiante%3A8e7af3905966e389b7def34f02a030fcfb847529" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Este procedimiento permite trasladar la matrícula de un estudiante del **calendario actual** al **calendario siguiente** (Calendario destino).
+### 1. ¿Qué es el traslado de matrícula por estudiante?
 
-**En el módulo administrativo haga clic en el menú** **Promoción >** **Trasladar matrícula,** (_se puede hacer uso del submenú o del ícono)._
+El **traslado de matrícula por estudiante** crea la matrícula de los estudiantes que usted elija en el calendario siguiente. A diferencia del [traslado por grupo](/docs/administrativo/cierre-de-ano/trasladar-matricula/por-grupo), aquí marca los estudiantes uno por uno y escoge el grupo de destino de todos ellos.
 
-✅ Consideraciones previas: Se debe tener activo el calendario origen, es decir, el período en el que se encuentra matriculado el estudiante antes del traslado.
-Es importante verificar que el grupo en el calendario destino esté correctamente configurado antes del traslado. <GuideImageTrigger src={"/images/wordpress/2025/02/TRASLADAR-MATRICULA-POR-ESTUDIANTE-1.png"} alt={"Captura de TRASLADAR MATRICULA POR ESTUDIANTE 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Promoción → Trasladar Matrícula** y abra la pestaña **Traslado de Matrícula por Estudiante**. La pantalla abre en la pestaña **Traslado de Matrícula por Grupo**.
 
+<GuideImageTrigger src="/images/guides/trasladar-matricula-por-estudiante/pantalla-traslado-estudiante.jpg" alt="Pestaña Traslado de Matrícula por Estudiante con el calendario origen, los estudiantes marcados y el calendario destino">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pestaña tiene dos paneles:
 
-### Proceso Principal: Traslado de Matrícula por Estudiante
+- **Calendario Origen:** el calendario seleccionado en la parte superior de SINAI. Lista los estudiantes matriculados del grupo elegido.
+- **Calendario Destino:** el año siguiente al calendario origen. Lista los estudiantes que ya tienen matrícula en el grupo de destino.
 
-1. Ingrese al módulo de traslado de matrícula y seleccionar la pestaña **"Traslado de matrícula por Estudiante"**.
-2. En la franja izquierda, seleccionar la **Sede y Grupo** del estudiante en el **calendario origen**.
-3. Seleccione al estudiante o, si es necesario trasladar a todo el grupo, utilizar el botón **"Seleccionar Todos"**.
-4. En la franja derecha, elegir la **Sede y Grupo** del **calendario destino**.
-5. Seleccione el botón **"Trasladar Estudiantes Seleccionados"** para completar el proceso. <GuideImageTrigger src={"/images/wordpress/2025/02/TRASLADAR-MATRICULA-POR-ESTUDIANTE-2.png"} alt={"Captura de TRASLADAR MATRICULA POR ESTUDIANTE 2"}>Ver ejemplo</GuideImageTrigger>
+Los años de los dos paneles no se editan. Para trasladar desde otro año, cambie el calendario en la parte superior de SINAI.
 
+<GuideCallout>
+  El calendario destino debe existir y tener sus grupos creados. Si la lista **Grupo** del panel **Calendario Destino** aparece vacía, cree primero el calendario nuevo en **Establecimiento → Calendarios**, pestaña **Crear Nuevo Calendario**. Consulte [Calendarios](/docs/administrativo/configuracion-institucional/calendarios-cronogramas-periodos/calendarios).
+</GuideCallout>
 
+#### 2. Elegir los estudiantes del calendario origen
 
-#### Revertir Matrícula
+1. En el panel **Calendario Origen**, seleccione la **Sede**.
+2. Seleccione el **Grupo**. La lista muestra los grupos de esa sede en el calendario origen.
 
-Si es necesario **anular el traslado** de uno o varios estudiantes, se puede utilizar la opción **"Revertir Matrícula"** dentro del mismo módulo.
+La tabla muestra solo los estudiantes en estado matriculado, con estas columnas:
 
-1. Seleccione al estudiante que se desea revertir o utilizar el botón **"Seleccionar Todos"** si se requiere aplicar la acción a varios estudiantes.
-2. Seleccione el botón **"Revertir Matrícula"**. <GuideImageTrigger src={"/images/wordpress/2025/02/TRASLADAR-MATRICULA-POR-ESTUDIANTE-3.png"} alt={"Captura de TRASLADAR MATRICULA POR ESTUDIANTE 3"}>Ver ejemplo</GuideImageTrigger>
+<GuideDataTable>
 
-✅ Esto eliminará el registro del estudiante en el calendario destino, manteniéndolo en su matrícula original. 📌 Notas importantes: ✔ El traslado de matrícula no afecta la información académica del estudiante, solo cambia su asignación en el nuevo calendario.
-✔ Si el estudiante no debe continuar en la institución, en lugar de trasladarlo, se recomienda realizar el retiro oficial en el sistema [Clic para ver guía](https://ayudasinai.siempre.net.co/docs/ajuste-individual-de-matricula/).
-✔ En caso de errores en el traslado, se puede revertir la acción siguiendo los pasos descritos.
+| Columna | Qué muestra |
+| --- | --- |
+| **Estudiante** | Casilla de selección, apellidos y nombres. |
+| **Situación Académica** | Resultado de la promoción en el calendario origen, por ejemplo **PROMOVIDO**, **NO PROMOVIDO**, **PENDIENTE** o **SIN PROCESAR**. |
+| **Grupo** y el año destino | Grupo en el que el estudiante ya está matriculado en el calendario destino. Vacío si aún no tiene matrícula allí. |
 
+</GuideDataTable>
+
+El color de la fila indica la situación académica:
+
+- **Verde:** promovido.
+- **Naranja:** no promovido.
+- **Amarillo:** pendiente.
+
+3. Marque la casilla de cada estudiante que va a trasladar. **Seleccionar Todos** recarga la lista y marca todos los estudiantes del grupo.
+
+#### 3. Elegir el grupo de destino y trasladar
+
+1. En el panel **Calendario Destino**, seleccione la **Sede**.
+2. Seleccione el **Grupo** de destino. La tabla muestra los estudiantes que ya están en ese grupo, con su **Estado** y la fecha de ese estado.
+3. Haga clic en **Trasladar Estudiantes Seleccionados**.
+
+La lista de grupos de destino depende del grado del grupo de origen:
+
+- Muestra los grupos del mismo grado y del grado siguiente. En algunos modelos educativos incluye un grado más.
+- Incluye también los grupos CLEI y de modelos flexibles que corresponden al grado de origen.
+- Si el grupo de origen es de preescolar, muestra todos los grupos de la sede.
+
+SINAI no pide confirmación. Todos los estudiantes marcados quedan en el mismo grupo de destino; si van para grupos distintos, haga un traslado por cada grupo.
+
+#### 4. Revisar el resultado de cada estudiante
+
+Después del traslado, cada fila del panel **Calendario Origen** muestra una etiqueta. Pase el cursor sobre ella para ver el detalle.
+
+<GuideDataTable>
+
+| Etiqueta | Qué significa |
+| --- | --- |
+| **OK** | *Matricula trasladada correctamente*. La columna del grupo destino muestra el grupo asignado. |
+| **RECHAZADO** | *El estudiante ya se encuentra matriculado en el calendario destino*. |
+| **NO PROCESADO** | El estudiante no estaba marcado o *El estudiante no tiene situación académica definida para el calendario actual*. |
+| **ERROR** | El traslado falló. El detalle incluye el mensaje de error para el soporte técnico. |
+
+</GuideDataTable>
+
+La matrícula nueva queda en estado matriculado, marcada como estudiante antiguo y con la situación académica sin procesar en el calendario destino. La matrícula del calendario origen no cambia.
+
+<GuideCallout>
+  Un estudiante cuya situación académica no está definida en el calendario origen no se traslada. Procese antes la promoción de su grupo en **Promoción → Promoción → Procesar Promoción**. Los estudiantes **NO PROMOVIDO** y **PENDIENTE** sí se pueden trasladar; elija para ellos el grupo que corresponda.
+</GuideCallout>
+
+#### 5. Revertir un traslado hecho por error
+
+**Revertir Matrícula** elimina la matrícula del estudiante en el grupo de destino seleccionado. Úselo solo para corregir matrículas trasladadas por error.
+
+1. En el panel **Calendario Destino**, seleccione la **Sede** y el **Grupo** donde quedó el estudiante.
+2. Marque los estudiantes. **Seleccionar Todos** invierte la selección actual de la lista.
+3. Haga clic en **Revertir Matrícula**.
+
+SINAI muestra **Proceso realizado correctamente**. Solo se eliminan las matrículas de estudiantes antiguos; la de un estudiante registrado como nuevo en el calendario destino no se borra.
+
+<GuideCallout type="warning">
+  **Revertir Matrícula** no pide confirmación y no se puede deshacer. Si el estudiante no tiene matrícula en ningún otro calendario, SINAI también elimina su registro de estudiante.
+</GuideCallout>
+
+#### 6. Permisos
+
+- **Trasladar Estudiantes Seleccionados** exige el permiso de traslado de matrícula.
+- **Revertir Matrícula** exige el permiso de eliminación de matrícula.
+
+Si no tiene el permiso, SINAI muestra el aviso en la parte superior y no hace el cambio. Solicítelo al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Trasladar Matrícula por Estudiante»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La lista Grupo del calendario destino está vacía. ¿Por qué?"}>
+    El calendario destino es el año siguiente al calendario seleccionado en la parte superior de SINAI, y la lista solo muestra sus grupos del grado correspondiente en la sede elegida. Si está vacía, el calendario siguiente no existe o no tiene grupos de ese grado en esa sede. Cree el calendario en **Establecimiento → Calendarios**, pestaña **Crear Nuevo Calendario**, o elija otra sede de destino.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Trasladar Matrícula por Estudiante» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Un estudiante quedó como RECHAZADO. ¿Qué pasó?"}>
+    El estudiante ya tiene matrícula en el calendario destino, en cualquier grupo. La columna del grupo destino del panel **Calendario Origen** muestra ese grupo. Si está en un grupo equivocado, revierta esa matrícula con **Revertir Matrícula** y vuelva a trasladarlo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Trasladar Matrícula por Estudiante»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Un estudiante quedó como NO PROCESADO aunque lo marqué. ¿Por qué?"}>
+    El estudiante no tiene situación académica definida en el calendario origen. Procese la promoción de su grupo y vuelva a intentarlo. Consulte [¿Cómo procesar la promoción de los estudiantes?](/docs/administrativo/cierre-de-ano/como-procesar-la-promocion).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿El traslado cambia la información del calendario actual?"}>
+    No. El traslado crea una matrícula nueva en el calendario destino; la matrícula, las calificaciones y la situación académica del calendario origen se conservan.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué no veo un estudiante en el panel Calendario Origen?"}>
+    El panel muestra solo los estudiantes en estado matriculado del grupo. Los retirados, trasladados u otros estados no aparecen. Si el estudiante no debe continuar en la institución, registre la novedad en [Ajuste individual de matrícula](/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/actualizacion-individual) en lugar de trasladarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo deshacer Revertir Matrícula?"}>
+    No. La matrícula del calendario destino se elimina y, si el estudiante no tenía otra matrícula, también su registro. Para volver a matricularlo, haga de nuevo el traslado desde el calendario origen.
   </GuideFAQItem>
 </GuideFAQ>

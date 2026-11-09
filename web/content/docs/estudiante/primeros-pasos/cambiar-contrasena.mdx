@@ -4,7 +4,8 @@ description: "Escribe la contraseña actual, crea una nueva de al menos 14 carac
 guide: true
 wordpressId: 30543
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/e-como-cambiar-mi-contrasena/"
-lastModified: "2023-11-17 08:18:48"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 ## Video tutorial
 
@@ -14,38 +15,96 @@ lastModified: "2023-11-17 08:18:48"
 
 ## Guía paso a paso
 
-### Cómo Cambiar mi Contraseña
+### 1. ¿Qué es Cambiar contraseña?
 
-#### Pasos para Cambiar la Contraseña
+**Cambiar contraseña** es la ventana donde usted reemplaza la contraseña con la que ingresa a SINAI. Necesita conocer la contraseña actual. Si no la recuerda, use **Recuperar contraseña** en la pantalla de inicio de sesión (vea las preguntas frecuentes).
 
-Desde el módulo del estudiante, ubicamos el perfil del usuario en la parte superior derecha, damos clic y luego se debe seleccionar la opción contraseña <GuideImageTrigger src={"/images/wordpress/2025/02/Cambio-1.png"} alt={"Captura de Cambio 1"}>Ver ejemplo</GuideImageTrigger>
+Ingrese desde el nombre de usuario, en la esquina superior derecha:
 
+1. Haga clic en su nombre de usuario.
+2. En el menú que se abre, haga clic en **Contraseña**.
 
+También puede llegar desde **Perfil**, con el botón **Cambiar contraseña**.
 
-A continuación ingresamos los siguientes datos para modificar la contraseña:
+#### 2. Completar el formulario
 
-- Contraseña actual
-- Nueva contraseña
-- Confirmamos la contraseña
-- Por ultimo damos clic en el botón **Cambiar Contraseña**
+<GuideDataTable>
 
-La nueva contraseña debe tener una longitud mínima de **14 caracteres** e incluir al menos una **letra mayúscula**, una **letra minúscula** y un **número**.
+| Campo | Qué escribir |
+| --- | --- |
+| **Contraseña Actual** | La contraseña con la que ingresa hoy a SINAI. |
+| **Nueva Contraseña** | La contraseña nueva. Debe cumplir las reglas del paso 3. |
+| **Confirmar Contraseña** | La misma contraseña nueva, escrita otra vez. |
 
-Si no recuerda la contraseña actual, seleccione **Recuperar contraseña** en la pantalla de inicio. SINAI enviará al correo electrónico registrado un enlace para modificarla directamente. La contraseña inicial ya no es la palabra **"sinai"**; los administrativos de la institución asignan una contraseña institucional al crear el usuario y envían esta información al correo registrado. <GuideImage src="/images/guides/inicio-sesion/cambiar-contrasena.png" alt="Formulario para establecer una nueva contraseña en SINAI" caption="Ingrese y confirme la nueva contraseña antes de guardarla." size="medium" />
+</GuideDataTable>
 
+Cada campo tiene un botón de ojo para mostrar u ocultar lo que escribe. En **Nueva Contraseña** también encuentra:
+
+- **Generar:** crea una contraseña aleatoria que cumple las reglas, la escribe en **Nueva Contraseña** y **Confirmar Contraseña**, y la muestra durante tres segundos.
+- **Copiar en el portapapeles:** copia la nueva contraseña para que la guarde en un lugar seguro.
+
+#### 3. Reglas de la contraseña nueva
+
+Mientras escribe, SINAI le avisa debajo del campo si la contraseña no cumple. La nueva contraseña debe tener:
+
+- Mínimo 14 caracteres.
+- Al menos una letra mayúscula.
+- Al menos una letra minúscula.
+- Al menos un número.
+- Ningún espacio.
+
+Además, SINAI no acepta una contraseña nueva que sea:
+
+- **sinai** o **12345**, que son contraseñas asignadas por el sistema.
+- Igual a su usuario.
+- Igual a la contraseña actual.
+
+#### 4. Guardar el cambio
+
+1. Revise que los tres campos estén completos y sin avisos en rojo.
+2. Haga clic en **Cambiar Contraseña**.
+
+Si el cambio es correcto, aparece el aviso verde **Exito!** con el mensaje *Contraseña actualizada correctamente*. Si algo falla, aparece el aviso amarillo **Error!** con el motivo:
+
+- *Debe escribir la contraseña actual, por favor verifique*
+- *La contraseña actual no coincide, por favor verifique*
+- *Debe escribir la nueva contraseña, por favor verifique*
+- *Debe escribir la confirmación de la nueva contraseña, por favor verifique*
+- *La nueva contraseña no coincide con la confirmación, por favor verifique*
+- *La nueva contraseña no debe ser igual a la asignada por el sistema, por favor verifique*
+- *La nueva contraseña no debe ser igual al IdUsuario, por favor verifique*
+- *La nueva contraseña no debe ser igual a la contraseña actual, por favor verifique*
+
+<GuideCallout type="warning">
+  El cambio reemplaza de inmediato la contraseña con la que ingresa. Desde ese momento debe usar la nueva en su próximo inicio de sesión. Anótela en un lugar seguro y no la comparta.
+</GuideCallout>
+
+Si tiene un correo válido registrado, SINAI le envía un mensaje con el asunto **Cambio de contraseña**. Incluye un enlace que restaura la contraseña anterior si usted no reconoce la actividad.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Cómo cambiar mi contraseña»?"}>
-    Ten a mano tu contraseña actual. La nueva necesita 14 caracteres, una mayúscula, una minúscula y un número.
+  <GuideFAQItem index="01" question="No recuerdo mi contraseña actual. ¿Cómo la cambio?">
+    Esta ventana pide la contraseña actual, así que no le sirve. En la pantalla de inicio de sesión haga clic en **Recuperar contraseña**, escriba su usuario o su correo y haga clic en **Restablecer contraseña**. SINAI envía un enlace al correo asociado para crear una contraseña nueva. Si no le llega, comuníquese con el personal administrativo de su institución.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Cómo cambiar mi contraseña» quedó listo?"}>
-    SINAI guarda el cambio cuando el botón Cambiar contraseña termina sin un aviso de error.
+  <GuideFAQItem index="02" question="Aparece «La contraseña actual no coincide, por favor verifique». ¿Qué hago?">
+    La contraseña que escribió en **Contraseña Actual** no es la que SINAI tiene registrada. Revise mayúsculas y minúsculas con el botón de ojo. Si no la recuerda, use **Recuperar contraseña**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Cómo cambiar mi contraseña»?"}>
-    Si no recuerdas la contraseña actual, usa Recuperar contraseña en la pantalla de inicio.
+  <GuideFAQItem index="03" question="El campo Nueva Contraseña muestra un aviso rojo. ¿Qué significa?">
+    La contraseña aún no cumple una regla. El aviso dice cuál: *Debe tener al menos 14 caracteres*, *Debe contener al menos una letra mayúscula*, *una letra minúscula*, *un número* o *No debe contener espacios*. Corríjala hasta que el aviso desaparezca.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Cómo sé que mi contraseña cambió?">
+    SINAI muestra el aviso verde **Exito!** con *Contraseña actualizada correctamente*. Si tiene un correo válido registrado, recibe además el mensaje **Cambio de contraseña**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="Recibí un correo de cambio de contraseña y yo no lo hice. ¿Qué hago?">
+    El correo trae un enlace para restaurar los cambios en su cuenta si usted no reconoce la actividad. Al abrirlo, SINAI restaura la contraseña anterior.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question="SINAI me pidió una contraseña nueva al ingresar. ¿Es lo mismo?">
+    No. Cuando SINAI exige el cambio al iniciar sesión, abre otra pantalla, **Establecer nueva contraseña**, que no pide la contraseña actual. Las reglas son las mismas. Vea la guía [¿Cómo ingresar a SINAI?](/docs/estudiante/primeros-pasos/ingresar-a-sinai).
   </GuideFAQItem>
 </GuideFAQ>

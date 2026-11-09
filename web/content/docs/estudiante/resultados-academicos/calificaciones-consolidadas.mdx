@@ -1,11 +1,13 @@
 ---
 title: "Calificaciones consolidadas"
-description: "Elige el periodo y mira la nota de cada asignatura."
+description: "Consulte sus calificaciones por asignatura o por área, hasta el periodo que elija."
 guide: true
 wordpressId: 30553
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/calificaciones-consolidadas/"
-lastModified: "2023-11-17 08:22:12"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,38 +16,103 @@ lastModified: "2023-11-17 08:22:12"
 
 ## Guía paso a paso
 
-### Calificaciones Consolidadas
+### 1. ¿Qué es Calificaciones consolidadas?
 
-Cada estudiante en su módulo puede visualizar las calificaciones consolidadas individuales, por áreas o asignaturas.
+**Calificaciones Consolidadas** muestra sus calificaciones de un calendario, por asignatura o por área, acumuladas hasta el periodo que elija. También incluye un resumen de su desempeño relativo frente al grupo.
 
-Menú **Evaluación,** Opción **Calificaciones Consolidadas, (**_se puede escoger desde el panel izquierdo o del ícono)._ <GuideImageTrigger src={"/images/wordpress/2025/02/Calificaciones-Consolidadas-1.png"} alt={"Captura de Calificaciones Consolidadas 1"}>Ver ejemplo</GuideImageTrigger>
+En la barra superior, haga clic en el ícono **EVALUACIÓN** y seleccione **Calificaciones Consolidadas**, en el centro de la pantalla o en el panel izquierdo. La pantalla se titula **Valoración Individual**.
 
+<GuideCallout>
+  Las opciones de **Evaluación** dependen del sistema de evaluación y del menú de su institución. Algunas instituciones muestran aquí **Calificaciones Detalladas** u otra pantalla propia en lugar de esta. Si en su menú no aparece **Calificaciones Consolidadas**, consulte [Boletín final](/docs/estudiante/resultados-academicos/boletin-final) o pregunte en su institución.
+</GuideCallout>
 
+#### 2. Elegir qué consultar
 
-#### Visualizar Calificaciones Consolidadas
+En la parte superior hay tres listas. Al cambiar cualquiera, la tabla se actualiza sin necesidad de pulsar un botón.
 
-1. Se escoge Calendario. _Por defecto, se visualiza el calendario actual o predeterminado, pero se puede elegir otro calendario cuando sea necesario._
-2. Seleccione el periodo. _Se visualizarán las calificaciones de los periodos hasta el seleccionado._
-3. Seleccione la opción de cómo desea visualizar sus calificaciones: por asignaturas o por áreas.
-4. Muestra las calificaciones de cada asignatura en los periodos, incluyendo la calificación final, si se ha registrado una nota de ajuste, la definitiva, la requerida y las inasistencias. (Ver cuadro anterior).
+<GuideDataTable>
 
-En la parte final de la ventana se visualiza el Resumen de Desempeño Relativo del Estudiante. <GuideImageTrigger src={"/images/wordpress/2025/02/Calificaciones-Consolidadas-2-1.png"} alt={"Captura de Calificaciones Consolidadas 2 1"}>Ver ejemplo</GuideImageTrigger>
+| Campo | Qué muestra |
+| --- | --- |
+| **Calendario** | Años en los que usted tiene matrícula en la institución, del más reciente al más antiguo. Al abrir la pantalla queda el calendario con el que ingresó, o el último que usted eligió. |
+| **Grupo** | Grupo en el que estuvo matriculado en el calendario elegido. |
+| **Periodo** | Periodos del grupo. Al abrir la pantalla queda el periodo activo, o el último que usted eligió. |
 
+</GuideDataTable>
 
+SINAI recuerda en su navegador el último calendario, grupo, periodo y opción de vista que usó.
 
+#### 3. Ver por asignaturas o por áreas
+
+A la derecha de **Valoración por Asignaturas o Áreas** elija cómo ver las calificaciones:
+
+- **Asignaturas:** una fila por asignatura, con la columna **Área** si su institución la muestra.
+- **Áreas:** una fila por área.
+
+Las columnas **1°**, **2°**, **3°** y **4°** (**1° Periodo** a **4° Periodo** en la vista por áreas) muestran el periodo elegido y los anteriores. Si elige el segundo periodo, verá el primero y el segundo.
+
+Si su institución califica con números, cada celda muestra la nota y el desempeño; si califica por conceptos, solo el desempeño.
+
+#### 4. Qué significa cada columna
+
+Pase el cursor sobre el encabezado de la columna para leer su descripción. El ícono de información de la esquina superior derecha abre la ventana **Convenciones** con la misma explicación.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Final** | Valoración final calculada por SINAI a partir de las valoraciones de los periodos, con la aproximación cuando aplica. |
+| **Ajuste** | Valoración asignada por ajuste a la valoración final. Modifica la definitiva. |
+| **Definitiva** | Valoración definitiva con la que se determina la promoción. |
+| **Requerida** | Valoración mínima que necesita para que su desempeño definitivo sea por lo menos Básico. Solo aparece si la institución califica con números. |
+| **Inasistencias** | Inasistencias totales sumadas hasta el periodo seleccionado. |
+| **Recuperación** | Recuperación final o habilitación. |
+| **Situación Académica** | Si la asignatura fue aprobada o reprobada. Si no se indica, es posible que aún no se haya procesado la promoción. |
+
+</GuideDataTable>
+
+La vista por áreas muestra **Final**, **Requerida** e **Inasistencias**.
+
+<GuideCallout>
+  Algunas columnas pueden no estar visibles según la configuración de su institución. Las valoraciones **Final** y **Definitiva** cambian según el periodo seleccionado y solo se consideran definitivas cuando termina el calendario.
+</GuideCallout>
+
+#### 5. Resumen de desempeño relativo
+
+Debajo de la tabla, **Resumen de Desempeño Relativo del Estudiante** muestra una fila por periodo con el **Periodo**, el **Promedio** (solo si la institución califica con números), el **Desempeño Promedio** y su puesto en **Grupo**. Según la configuración de la institución también puede mostrar el porcentaje del periodo, los puestos en **Grado**, **Nivel** e **Institución**, la fecha de **Cierre del Periodo** y la **Fecha de Cálculo**.
+
+Esta sección aparece solo si su institución la habilita para estudiantes.
+
+#### 6. Acceso restringido
+
+La institución puede restringir esta pantalla a un estudiante. En ese caso SINAI muestra **Acceso denegado!** con el mensaje *El accesso a esta funcionalidad esta restringido por parte de la Institución Educativa. Para más información comuniquese con el personal Administrativo o Directivo de su Institución.*
+
+El enlace **Información de Contacto de la Institución Aquí.** abre los datos de contacto de su institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Calificaciones consolidadas»?"}>
-    Entra a Calificaciones consolidadas y elige el periodo.
+  <GuideFAQItem index="01" question={"No veo la columna Definitiva, Ajuste o Recuperación. ¿Por qué?"}>
+    Cada institución decide qué columnas ve el estudiante. Si una columna no aparece, su institución no la habilitó para estudiantes. Consulte en la institución si necesita esa información.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Calificaciones consolidadas» quedó listo?"}>
-    Ves tus notas cuando carga la lista de asignaturas.
+  <GuideFAQItem index="02" question={"Elegí el periodo 3 y veo también los periodos 1 y 2. ¿Es normal?"}>
+    Sí. La tabla muestra el periodo elegido y los anteriores, hasta un máximo de cuatro columnas de periodo. Las columnas **Final** y **Definitiva** se calculan hasta el periodo seleccionado.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Calificaciones consolidadas»?"}>
-    Si una nota no coincide con lo que te dijo tu docente, consúltaselo a esa persona.
+  <GuideFAQItem index="03" question={"¿Cómo veo mis calificaciones de un año anterior?"}>
+    Seleccione el año en **Calendario**. La lista solo incluye los años en los que usted estuvo matriculado. Revise después el **Grupo** y el **Periodo**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"La columna Situación Académica aparece vacía. ¿Qué significa?"}>
+    La descripción de la columna indica que, si no se muestra la situación, es posible que aún no se haya procesado la promoción.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué significa Requerida?"}>
+    Es la valoración mínima que necesita para que su desempeño definitivo sea por lo menos Básico. Solo se muestra cuando la institución califica con números y la habilita para estudiantes.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Al abrir la pantalla aparece «Acceso denegado!». ¿Qué hago?"}>
+    La institución restringió esta función para su usuario. Use el enlace **Información de Contacto de la Institución Aquí.** y comuníquese con el personal administrativo o directivo para solicitar el acceso.
   </GuideFAQItem>
 </GuideFAQ>
