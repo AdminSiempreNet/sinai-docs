@@ -1,11 +1,13 @@
 ---
 title: "Comunidad educativa MORCE"
-description: "Conozca las opciones de comunidad educativa MORCE y siga el procedimiento correspondiente en SINAI."
+description: "Exporte en Excel los funcionarios y estudiantes del calendario para cargarlos en MORCE, el Módulo de Orientación y Convivencia Escolar."
 guide: true
 wordpressId: 29255
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/comunidad-educativa-morce/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,45 +18,80 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Desde esta funcionalidad puedes generar el archivo Excel que se importa en el Módulo de Orientación y Convivencia Escolar (**MORCE**). Este proceso aplica únicamente a las instituciones que cuentan con los derechos de uso de la plataforma MORCE.
+### 1. ¿Qué es Comunidad Educativa - MORCE?
 
-## 1. Accede a Comunidad Educativa - MORCE
+**Comunidad Educativa - MORCE** genera un archivo Excel con los funcionarios y los estudiantes de la institución. Ese archivo se carga en MORCE, el Módulo de Orientación y Convivencia Escolar, para registrar de una vez a la comunidad educativa.
 
-En el módulo **Administrativo**, ingresa a **Establecimiento > Usuarios > Comunidad Educativa - MORCE**. <GuideImageTrigger src={"/images/guides/comunidad-educativa-morce/acceso-comunidad-educativa-morce.png"} alt={"Acceso a Comunidad Educativa - MORCE desde el menú Usuarios"}>Ver ejemplo</GuideImageTrigger>
+Esta opción es para las instituciones que adquirieron los derechos de uso de MORCE.
 
+Ingrese a **Establecimiento → Usuarios → Comunidad Educativa - MORCE**.
 
+<GuideImageTrigger src="/images/guides/comunidad-educativa-morce/acceso-morce.jpg" alt="Menú Establecimiento con Usuarios desplegado y la opción Comunidad Educativa - MORCE">
+  Ver ejemplo
+</GuideImageTrigger>
 
-## 2. Revisa la información de exportación
+#### 2. Exportar la comunidad educativa
 
-La pantalla indica el propósito del proceso y presenta el botón **Exportar Comunidad Educativa**. Al usarlo, SINAI genera un archivo en formato Excel con la información de funcionarios y estudiantes que se cargará posteriormente en MORCE. <GuideImageTrigger src={"/images/guides/comunidad-educativa-morce/exportar-comunidad-educativa-morce.png"} alt={"Pantalla para exportar la Comunidad Educativa a MORCE"}>Ver ejemplo</GuideImageTrigger>
+La pantalla **Exportar Comunidad Educativa - MORCE** explica el proceso y tiene un solo botón.
 
+<GuideImageTrigger src="/images/guides/comunidad-educativa-morce/exportar-morce.jpg" alt="Pantalla Exportar Comunidad Educativa - MORCE con el recuadro de información y el botón Exportar Comunidad Educativa">
+  Ver ejemplo
+</GuideImageTrigger>
 
+1. Verifique en la parte superior que esté seleccionado el calendario que necesita.
+2. Haga clic en **Exportar Comunidad Educativa**.
+3. Espere a que el navegador descargue el archivo **Carga_Masiva.xlsx**.
 
-## 3. Exporta el archivo
+El archivo trae la información del calendario seleccionado, ordenada por apellido y nombre.
 
-1. Haz clic en **Exportar Comunidad Educativa**.
-2. Espera a que el navegador descargue el archivo Excel.
-3. Conserva el archivo descargado para el proceso de carga en MORCE.
+#### 3. Contenido del archivo
 
-## 4. Carga la información en MORCE
+El Excel tiene una tabla llamada **Comunidad** con estas columnas:
 
-Ingresa a la plataforma MORCE y selecciona la opción **Registro Masivo de la Comunidad Educativa**. Allí adjunta el archivo Excel exportado desde SINAI para cargar los datos de funcionarios y estudiantes.
+<GuideDataTable>
 
-> **Importante:** esta guía cubre la generación del archivo desde SINAI. La carga y validación final se realiza dentro de MORCE.
+| Columna | Qué contiene |
+| --- | --- |
+| **Nombre** y **Apellido** | Nombres y apellidos de la persona. |
+| **Documento** y **TipoDocumento** | Número y tipo de documento de identidad. |
+| **FechaNacimiento** | Fecha de nacimiento, en formato día/mes/año. Si la persona no la tiene registrada, el archivo trae la fecha del día de la exportación. |
+| **Telefono** y **Email** | Datos de contacto registrados en SINAI. |
+| **Sexo** | Código numérico del sexo registrado. |
+| **IdExterno** | Identificador de la persona en SINAI para la carga. |
+| **Tipo Persona** | Código numérico que distingue a los funcionarios de los estudiantes. |
+| **Grupo** | Grupo del estudiante, seguido de un guion y el año del calendario. |
+| **Guardado** y **Resultados** | Columnas vacías para el resultado de la carga en MORCE. |
 
+</GuideDataTable>
+
+#### 4. Cargar el archivo en MORCE
+
+Ingrese a MORCE y abra la opción **Registro Masivo de la Comunidad Educativa**. Adjunte allí el archivo Excel que descargó de SINAI.
+
+<GuideCallout>
+  La carga y su resultado se hacen dentro de MORCE. SINAI solo genera el archivo y no cambia ningún dato al exportarlo.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Comunidad educativa MORCE»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué personas trae el archivo?"}>
+    Trae los funcionarios y los estudiantes de la institución para el calendario seleccionado en la parte superior. La columna **Tipo Persona** distingue, con un código, las filas de funcionarios de las de estudiantes.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Comunidad educativa MORCE» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Necesito los estudiantes de otro año. ¿Cómo los exporto?"}>
+    Seleccione ese calendario en la lista de la parte superior y vuelva a hacer clic en **Exportar Comunidad Educativa**. El archivo siempre toma el calendario que está seleccionado.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Comunidad educativa MORCE»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Varias personas tienen como fecha de nacimiento el día de hoy. ¿Por qué?"}>
+    Esas personas no tienen fecha de nacimiento registrada en SINAI. En ese caso el archivo pone la fecha del día de la exportación. Corrija el dato en SINAI o en el Excel antes de cargarlo en MORCE.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué el grupo aparece con el año al final?"}>
+    La columna **Grupo** une el código del grupo con el año del calendario, separados por un guion, para que MORCE distinga los grupos de cada año.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Dónde cargo el archivo descargado?"}>
+    En MORCE, en la opción **Registro Masivo de la Comunidad Educativa**. Adjunte el archivo **Carga_Masiva.xlsx** que descargó de SINAI.
   </GuideFAQItem>
 </GuideFAQ>

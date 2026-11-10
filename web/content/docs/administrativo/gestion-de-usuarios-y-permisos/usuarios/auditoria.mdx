@@ -1,23 +1,74 @@
 ---
 title: "Auditoría"
-description: "Contenido pendiente de documentación para «Auditoría»."
+description: "Consulte y descargue el registro de actividades que un usuario realizó en SINAI, con fecha, descripción e IP."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Consultar la auditoría de un usuario. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es la auditoría de un usuario?
+
+La **Auditoría/Registro de actividades del usuario** muestra las acciones que SINAI registró a nombre de un usuario, como ingresos a páginas y cambios de datos. Cada registro tiene la fecha y hora, la descripción y la IP desde la que se hizo. Solo incluye los registros de la institución actual y los que no tienen institución.
+
+Ingrese a **Establecimiento → Usuarios → Gestión de Usuarios**.
+
+<GuideImageTrigger src="/images/guides/auditoria-usuarios/acceso-gestion-usuarios.jpg" alt="Menú Establecimiento con el submenú Usuarios abierto y la opción Gestión de Usuarios">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Abrir la auditoría de un usuario
+
+1. En **Roles**, seleccione el tipo de usuario y ajuste los filtros o la **Búsqueda** hasta ver a la persona.
+2. En la fila del usuario, haga clic en **Opciones**.
+3. Seleccione **Actividad/Auditoria**.
+
+<GuideImageTrigger src="/images/guides/auditoria-usuarios/opciones-usuario.jpg" alt="Menú Opciones de un usuario con la opción Actividad/Auditoria">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La auditoría se abre en una pestaña nueva del navegador. El título muestra el usuario de acceso y el nombre de la persona.
+
+<GuideImageTrigger src="/images/guides/auditoria-usuarios/pantalla-auditoria.jpg" alt="Auditoría de un usuario con el buscador, las columnas FechaHora, Descripcion e IP y el botón Decargar Auditoria">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **FechaHora** | Fecha y hora del registro. El ícono del encabezado abre un filtro por fecha. |
+| **Descripcion** | Acción registrada, por ejemplo el ingreso a una página o el cambio realizado. |
+| **IP** | Dirección IP desde la que se hizo la acción. |
+
+</GuideDataTable>
+
+#### 3. Buscar y descargar
+
+- Escriba en **Introduzca el texto a buscar...** para filtrar los registros por su texto.
+- Use la paginación de la parte inferior para recorrer los registros. Cada página muestra 20.
+- Haga clic en **Decargar Auditoria** para descargar los registros en un archivo de Excel.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Auditoría»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿La auditoría muestra lo que otros hicieron sobre este usuario?">
+    No. Muestra las acciones registradas a nombre del usuario elegido, es decir, lo que ese usuario hizo en SINAI. Por ejemplo, el cambio de estado de un funcionario queda en la auditoría de quien hizo el cambio.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Auditoría» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué la auditoría aparece vacía?">
+    El usuario no tiene actividades registradas en la institución. Si la fila del usuario dice **Sin Usuario**, la persona no tiene usuario y no hay actividades que mostrar.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Auditoría»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="No veo una actividad muy reciente. ¿Por qué?">
+    El servidor guarda una copia de la página de auditoría de cada usuario hasta por un día, así que una actividad reciente puede no aparecer de inmediato.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Cómo encuentro una acción concreta entre muchos registros?">
+    Escriba una palabra de la descripción en **Introduzca el texto a buscar...** o use el filtro del encabezado **FechaHora**. También puede descargar el archivo de Excel con **Decargar Auditoria** y buscar allí.
   </GuideFAQItem>
 </GuideFAQ>

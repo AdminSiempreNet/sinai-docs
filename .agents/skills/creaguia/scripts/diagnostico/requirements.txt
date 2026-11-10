@@ -1,0 +1,6 @@
+yt-dlp
+imageio-ffmpeg
+imagehash
+pillow
+numpy
+openpyxl

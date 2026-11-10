@@ -1,11 +1,13 @@
 ---
 title: "Reingreso de validantes"
-description: "Conozca las opciones de reingreso de validantes y siga el procedimiento correspondiente en SINAI."
+description: "Matricule en otro grupo del calendario actual a un estudiante que validó un grado, sin quitarle la matrícula del grupo de origen."
 guide: true
 wordpressId: 29442
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/reingreso-de-validantes/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,41 +18,68 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-El reingreso de validantes aplica cuando un estudiante regresa a matricularse en la institución en condición de validante y debe quedar registrado en el calendario vigente.
+### 1. ¿Qué es Reingreso de validantes?
 
-## 1. Accede a la opción
+**Reingreso de Validantes** matricula a un estudiante en un segundo grupo **del calendario actual**. Se usa con estudiantes que validaron un grado y deben continuar en otro grupo de la misma sede.
 
-En el módulo **Administrativo**, ingresa a **Matrícula > Reingreso > Reingreso de Validantes**.
+A diferencia de [Reingreso](/docs/administrativo/gestion-de-estudiantes/novedades-de-estudiantes/reingresos), aquí no se elige calendario: el origen y el destino son siempre del calendario actual. La matrícula del grupo de origen no cambia; SINAI agrega una matrícula nueva en el grupo de destino.
 
-## 2. Selecciona los datos de origen
+La pantalla tiene dos bloques:
 
-1. Elige la **Sede** donde se encontraba el estudiante.
-2. Selecciona el **Grupo** de origen.
-3. Selecciona el **Estudiante** que realizará el reingreso.
+- **Datos Origen:** sede, grupo y estudiante.
+- **Grupo Destino:** grupo y observaciones. El título muestra el calendario en el que queda la matrícula.
 
-## 3. Define el destino y matrícula
+Ingrese a **Matrícula → Reingreso → Reingreso de Validantes**.
 
-1. En **Grupo Destino**, selecciona el grupo en el que quedará matriculado el estudiante en el calendario vigente.
-2. Registra una observación cuando sea necesario.
-3. Haz clic en **Matricular** para confirmar el reingreso. <GuideImageTrigger src={"/images/guides/reingreso-de-validantes/reingreso-de-validantes.png"} alt={"Reingreso de estudiantes validantes en SINAI"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/reingreso-de-validantes/pantalla-reingreso-validantes.jpg" alt="Menú Reingreso con la opción Reingreso de Validantes y la pantalla con el estudiante y el grupo de destino">
+  Ver ejemplo
+</GuideImageTrigger>
 
+El botón azul de **Datos Origen** abre esta guía.
 
+#### 2. Seleccionar al estudiante
 
-> **Importante:** revisa la sede, el grupo de origen y el grupo destino antes de confirmar, ya que la acción crea la matrícula del estudiante en el calendario actual.
+1. En **Sede**, seleccione la sede donde está matriculado el estudiante.
+2. Seleccione el **Grupo** de origen.
+3. En **Estudiante**, seleccione el nombre.
 
+La lista **Estudiante** muestra todos los estudiantes que tienen matrícula en ese grupo en el calendario actual, sin importar su estado.
+
+#### 3. Elegir el grupo de destino y matricular
+
+1. En **Grupo Destino**, seleccione el **Grupo**. La lista muestra los grupos de la misma sede en el calendario actual, sin el grupo de origen.
+2. Si lo necesita, escriba las **Observaciones**, por ejemplo el grado que validó.
+3. Haga clic en **Matricular**.
+4. Confirme el mensaje *¿Confirma que desea matricular el estudiante seleccionado en el grupo destino?*
+
+Si todo es correcto, SINAI muestra «El Estudiante *nombre* ha sido matriculado en el grupo *grupo*». La matrícula nueva queda activa, con el estudiante como antiguo.
+
+<GuideCallout type="warning">
+  La matrícula se crea en cuanto confirma el mensaje y el estudiante queda con dos matrículas en el calendario actual: la del grupo de origen y la del grupo de destino. Si lo que necesita es pasarlo de un grupo a otro, use **Matrícula → Cambio de Grupo**.
+</GuideCallout>
+
+Para matricular, su usuario necesita el permiso de reingreso. Si no lo tiene, SINAI muestra el aviso de permiso y no crea la matrícula.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Reingreso de validantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿En qué se diferencia de Reingreso?"}>
+    **Reingreso** trae al estudiante desde un calendario anterior al calendario actual. **Reingreso de validantes** trabaja solo con el calendario actual: matricula al estudiante en otro grupo de la misma sede y conserva su matrícula en el grupo de origen.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Reingreso de validantes» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿En qué se diferencia de Cambio de grupo?"}>
+    **Cambio de Grupo** traslada al estudiante: deja de estar en el grupo de origen. **Reingreso de validantes** agrega una matrícula en el grupo de destino y la del grupo de origen sigue igual.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Reingreso de validantes»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no aparece el grupo que necesito en Grupo Destino?"}>
+    La lista muestra solo los grupos de la sede elegida en **Datos Origen**, en el calendario actual, y no incluye el grupo de origen. Si el grupo está en otra sede, no aparece en esta pantalla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «El estudiante seleccionado no se pudo matricular porque ya está matriculado en el grupo seleccionado». ¿Por qué?"}>
+    El estudiante ya tiene matrícula en el grupo de destino. Revise el grupo que eligió en **Grupo Destino**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que la matrícula se creó?"}>
+    SINAI muestra «El Estudiante *nombre* ha sido matriculado en el grupo *grupo*». Después puede buscar al estudiante en la lista del grupo de destino.
   </GuideFAQItem>
 </GuideFAQ>

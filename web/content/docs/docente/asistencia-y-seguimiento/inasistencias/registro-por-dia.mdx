@@ -1,47 +1,118 @@
 ---
 title: "Registro de inasistencia por día"
-description: "Aprenda a registrar inasistencia por día en SINAI."
+description: "Registre las faltas de los estudiantes en todas las asignaturas de su horario de clases para una fecha."
 guide: true
 wordpressId: 30301
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/registro-de-inasistencia-por-dia/"
-lastModified: "2023-11-16 11:27:42"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="iL7K5X7nGh0" title="Registro de inasistencia por día"
-  odyseeUrl="https://odysee.com/inasistencias-por-d%C3%ADa%3A932757de5b78de4e4bd28619ddc500706b78b7d3"
-/>
+<YouTube id="iL7K5X7nGh0" title="Registro de inasistencia por día" odyseeUrl="https://odysee.com/inasistencias-por-d%C3%ADa%3A932757de5b78de4e4bd28619ddc500706b78b7d3" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-El registro de inasistencias por día consiste en registrar las faltas en cada asignatura y el número de horas con la fecha, según las tenga definidas en su horario de clases, indicando si la falta es justificada o no. Además puede adicionar una observación y notificar al acudiente si lo considera pertinente.
+### 1. ¿Qué es Registro de Inasistencias por día?
 
-IMPORTANTE! _Para registrar las inasistencias por día antes ha debido configurar su horario de clases según su asignación académica._
+**Registro de Inasistencias por día** le permite registrar las faltas de los estudiantes de un grupo en una fecha, en todas las asignaturas que usted dicta ese día según su horario de clases. SINAI toma del horario las asignaturas y el número de horas de cada una.
 
-Pasos para registrar las inasistencias por día
+Ingrese a **Seguimiento → Inasistencias → Registro de Inasistencias por día**.
 
-1. Para registrar las faltas de asistencias desde el modulo docente debe ingresar al menú Seguimiento
-2. En el submenú Inasistencias o en la iconografia haga clic en Registro de Inasistencias por día.
-3. En la parte izquierda de la ventana Registro de Inasistencias por día seleccione el grupo, periodo y la fecha en la que hará el registro.
-4. En la parte inferior izquierda verá las áreas/Asignaturas y el número de horas que tiene registrado en su horario de clases para ese día en especifico. Finalmente seleccione los estudiantes que tienen la inasistencia y haga clic en el botón verde “Registrar Inasistencias Estudiantes” ubicado en la parte inferior izquierda de la ventana. <GuideImageTrigger src={"/images/wordpress/2023/11/REGISTRO-INAS-POR-DIA.gif"} alt={"Captura de REGISTRO INAS POR DIA"}>Ver ejemplo</GuideImageTrigger>
+<GuideImageTrigger src="/images/guides/docente-inasistencias-por-dia/acceso-por-dia.jpg" alt="Menú Seguimiento con el submenú Inasistencias desplegado y la opción Registro de Inasistencias por día">
+  Ver ejemplo
+</GuideImageTrigger>
 
+<GuideCallout type="warning">
+  Antes de usar esta opción, su horario de clases debe estar registrado para el grupo. Si el horario no tiene clases suyas en el grupo para el día de la fecha elegida, la tabla de asignaturas queda vacía y SINAI no registra las faltas.
+</GuideCallout>
 
+La pantalla tiene dos partes:
 
+- **Registro de Inasistencias por Día**, a la izquierda: grupo, periodo, fecha, asignaturas del horario y botones. El botón azul de la esquina abre esta guía.
+- **Lista de Estudiantes**, a la derecha: los estudiantes matriculados en el grupo.
+
+#### 2. Elegir el grupo, el periodo y la fecha
+
+1. En **Grupo**, seleccione uno de los grupos de su asignación académica.
+2. En **Periodo**, seleccione el periodo de la falta.
+3. En **Fecha**, deje la fecha de hoy o haga clic en el campo y elija el día en el calendario. El formato es dd/mm/aaaa.
+
+Al cambiar la fecha, SINAI actualiza la tabla de asignaturas con las clases de su horario para ese día de la semana. El enlace **Ir al Horario de Clases** abre su horario en otra pestaña.
+
+<GuideImageTrigger src="/images/guides/docente-inasistencias-por-dia/registro-por-dia.jpg" alt="Registro de Inasistencias por Día con la asignatura del horario y dos estudiantes marcados, uno con falta justificada y observación">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla muestra cada **Asignatura** del horario y, en **Horas Dictadas**, las horas que tiene ese día en el grupo.
+
+<GuideCallout>
+  Las faltas se registran con las horas del horario, aunque cambie el número en **Horas Dictadas**. Ese campo solo se usa con **Registrar Asistencia Docente**. Si necesita registrar otras horas o solo algunas asignaturas, use el [registro detallado](/docs/docente/asistencia-y-seguimiento/inasistencias/registro-detallado).
+</GuideCallout>
+
+#### 3. Marcar los estudiantes
+
+En **Lista de Estudiantes**, por cada estudiante que faltó:
+
+<GuideDataTable>
+
+| Columna | Qué hace |
+| --- | --- |
+| **Estudiante** | Marque la casilla junto al nombre para registrarle la falta. |
+| **Notificar Acudiente** | Muestra el correo del acudiente. Si hay correo, la casilla viene marcada y SINAI le envía la notificación. Si no hay correo, la casilla está deshabilitada. |
+| **Justificada** | Marque la casilla si el estudiante justificó la falta. |
+| **Observacion** | Texto opcional de hasta 250 caracteres. Se guarda en cada falta del estudiante en esa fecha. |
+
+</GuideDataTable>
+
+#### 4. Registrar las inasistencias
+
+Haga clic en **Registrar Inasistencias Estudiantes**. SINAI registra, a cada estudiante marcado, una falta en cada asignatura de la tabla, con la fecha, las horas del horario, la justificación y la observación. Al terminar muestra «Registro de inasistencias realizado correctamente.».
+
+SINAI no registra en estos casos:
+
+- Si no marcó ningún estudiante: «Debe seleccionar por lo menos un estudiante para registrar inasistencias».
+- Si la tabla de asignaturas está vacía: «Para registrar inasistencias por día debe registrar el horario de clases para el grupo seleccionado.».
+- Si el periodo está cerrado para inasistencias: «El periodo actual está cerrado, no se puede modificar el registro de Inasistencias».
+- Si la institución no tiene habilitado el registro detallado: «El usuario no tiene permisos para realizar este procedimiento. Para obtener permiso solicite la habilitacion del registro de inasistencias detlladas al Rector del establecimiento».
+
+Si un estudiante ya tiene una falta registrada en esa fecha, SINAI muestra «No se pudo registrar inasistencias para el estudiante … Por favor verifique si el estudiante tiene inasistencias registradas para esta fecha.» y se detiene en ese estudiante. Las faltas registradas antes del mensaje quedan guardadas.
+
+Para revisar, corregir o eliminar lo registrado, use [Consultar o modificar inasistencia](/docs/docente/asistencia-y-seguimiento/inasistencias/consultar-o-modificar).
+
+#### 5. Registrar su asistencia como docente
+
+**Registrar Asistencia Docente** registra las clases que usted dictó en la fecha, no las faltas de los estudiantes. Usa todas las asignaturas de la tabla, con las horas de **Horas Dictadas** y el texto de **Observaciones**.
+
+1. Revise las horas de cada asignatura.
+2. Si quiere, escriba en **Observaciones** una nota sobre la clase.
+3. Haga clic en **Registrar Asistencia Docente**.
+
+SINAI muestra «Asistencia del docente registrada correctamente en» y el número de asignaturas registradas.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Registro de inasistencia por día»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"La tabla de asignaturas sale vacía. ¿Por qué?"}>
+    Su horario de clases no tiene clases suyas en ese grupo para el día de la semana de la fecha elegida. Revise la fecha y el grupo, y consulte su horario con **Ir al Horario de Clases**. Si el horario no está registrado, solicítelo al área administrativa o use el [registro detallado](/docs/docente/asistencia-y-seguimiento/inasistencias/registro-detallado).
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Registro de inasistencia por día» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Cambié las horas en Horas Dictadas y la falta quedó con otras horas. ¿Por qué?"}>
+    En el registro por día, las faltas siempre toman las horas del horario de clases. **Horas Dictadas** solo se usa al registrar su asistencia como docente. Para registrar otras horas, use el registro detallado o corrija la falta en **Consultar o Modificar Inasistencias**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Registro de inasistencia por día»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Puedo registrar la falta en una sola de las asignaturas del día?"}>
+    No en esta pantalla. La falta se registra en todas las asignaturas de la tabla. Para elegir asignaturas, use el registro detallado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «No se pudo registrar inasistencias para el estudiante…». ¿Qué hago?"}>
+    El estudiante ya tiene una falta registrada en esa fecha en una de las asignaturas. Desmárquelo y vuelva a registrar a los demás estudiantes que no alcanzaron a guardarse. Revise sus faltas en **Consultar o Modificar Inasistencias**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Por qué la casilla Notificar Acudiente está deshabilitada?"}>
+    SINAI no encontró un correo de acudiente para ese estudiante. Sin correo no se envía la notificación. La falta se registra igual.
   </GuideFAQItem>
 </GuideFAQ>

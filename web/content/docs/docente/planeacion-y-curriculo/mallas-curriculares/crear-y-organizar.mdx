@@ -1,138 +1,197 @@
 ---
 title: "Crear y organizar mallas curriculares"
-description: "Cree y organice unidades curriculares, componentes y contenidos por período, grado y asignatura en SINAI."
+description: "Cree las unidades de la malla curricular por periodo, grado y asignatura, y registre sus contenidos en cada componente."
 guide: true
 wordpressId: 30242
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/curriculo-estandar/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-## Tutorial
+## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="K17V4HqgMBM" title="Currículo estándar"
-  odyseeUrl="https://odysee.com/planeaci%C3%B3n-curricular-modulo-docente%3A408c2db2744715af4603bd4b9c31d18a27786e6f"
-/>
+<YouTube id="K17V4HqgMBM" title="Currículo estándar" odyseeUrl="https://odysee.com/planeaci%C3%B3n-curricular-modulo-docente%3A408c2db2744715af4603bd4b9c31d18a27786e6f" />
 </GuideVideos>
 
-## Mallas Curriculares
+## Guía paso a paso
 
-La opción **Mallas Curriculares** permite crear y organizar unidades curriculares para estructurar los contenidos que se desarrollarán durante un período académico.
+### 1. ¿Qué es Mallas curriculares?
 
-En esta funcionalidad puede definir unidades, organizar componentes y contenidos, asignar usuarios con permisos de edición y consultar o descargar la información registrada.
+**Mallas curriculares** le permite registrar las unidades de la malla curricular por periodo, grado y asignatura. Cada unidad tiene un orden, un nombre y contenidos organizados por componentes, por ejemplo eje generador, pregunta problematizadora o competencias. Los componentes los define su institución.
 
-Las unidades creadas también estarán disponibles en la **Planeación de clases**, facilitando la relación entre la planeación curricular y las clases que desarrolla el docente.
+Las unidades se usan después en **Planeación de clases**: cada clase que planee queda asociada a una unidad de la malla.
 
-> **Importante:** antes de crear una unidad, verifique que el período, nivel, grado y asignatura seleccionados correspondan a la planeación que desea realizar.
+Ingrese a **Planeación → Currículo Std → Mallas Curriculares**.
 
-**Ruta de acceso:** Planeación → Currículo Std → Mallas curriculares.
+<GuideImageTrigger src="/images/guides/docente-mallas-curriculares/acceso-mallas.jpg" alt="Menú Planeación con Currículo Std desplegado y la opción Mallas Curriculares">
+  Ver ejemplo
+</GuideImageTrigger>
 
-## Paso a paso
+A la izquierda, el panel **Opciones** lleva también a **Planeación de clases**, **Consolidado de Planeación** y **Todas mis clases**. El botón azul de la parte superior derecha abre esta guía.
 
-### Crear una unidad curricular
+#### 2. Consultar las unidades
 
-1. Ingrese al módulo del docente.
-2. Diríjase a **Planeación → Currículo Std → Mallas curriculares**.
-3. Seleccione el **Período**.
-4. Seleccione el **Nivel**.
-5. Seleccione el **Grado**.
-6. Seleccione la **Asignatura**.
-7. Seleccione el **Usuario editor**.
-8. Escriba el nombre o título de la unidad.
-9. Haga clic en **Agregar unidad**.
-10. La unidad creada aparecerá en la lista de unidades curriculares.
+Use los filtros de la parte superior para ver las unidades de un grado y una asignatura.
 
-<GuideImageRow>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/acceso-mallas.png" alt="Acceso a Mallas curriculares desde Planeación Currículo Std">Referencia visual</GuideImageTrigger>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/crear-unidad.png" alt="Formulario para crear una unidad curricular">Referencia visual</GuideImageTrigger>
-</GuideImageRow>
+<GuideDataTable>
 
-### Configurar la unidad curricular
+| Filtro | Qué muestra |
+| --- | --- |
+| **Periodo** | **Todos** o el número de un periodo del calendario. |
+| **Nivel** | Niveles en los que usted tiene grupos con asignación académica. |
+| **Grado** | Grados del nivel en los que usted tiene asignación, con el modelo, por ejemplo **PRIMERO - TRADICIONAL**. |
+| **Asignatura** | Asignaturas de su asignación académica. |
 
-1. Una vez creada la unidad, seleccione **Editar** para ingresar a su configuración.
-2. Dentro de la unidad podrá:
-   - Ajustar el **Período**.
-   - Definir el **Orden** de la unidad.
-   - Modificar el **Nombre** de la unidad.
-   - Seleccionar el tipo de **Componente**.
-   - Registrar el **Contenido** correspondiente.
-   - Hacer clic en **Agregar** para incorporar el contenido.
+</GuideDataTable>
 
-> **Nota:** si necesita consultar los componentes disponibles para la malla curricular, use la opción **Configuración**.
+<GuideImageTrigger src="/images/guides/docente-mallas-curriculares/lista-unidades.jpg" alt="Pantalla Mallas curriculares con los filtros, el título de una unidad nueva y la lista de unidades">
+  Ver ejemplo
+</GuideImageTrigger>
 
-<GuideImageRow>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/editar-unidad.png" alt="Pantalla de edición de una unidad curricular">Referencia visual</GuideImageTrigger>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/agregar-contenido.png" alt="Agregar componente y contenido a la unidad">Referencia visual</GuideImageTrigger>
-</GuideImageRow>
+La primera tabla lista las unidades del grado y la asignatura seleccionados, ordenadas por periodo y número. Muestra **Periodo**, **#**, **Nombre de la unidad**, **Usuario editor** y el botón **Editar**. Incluye las unidades de otros usuarios editores del mismo grado y asignatura.
 
-### Agregar varios contenidos
+La tabla **Unidades asignadas** muestra las unidades en las que usted es usuario editor y que no hacen parte de su asignación académica. Esta tabla solo tiene en cuenta el filtro **Periodo**.
 
-Cuando necesite registrar varios contenidos de manera simultánea:
+#### 3. Crear una unidad
 
-1. Active la opción **Agregar varios elementos (uno por línea)**.
-2. Escriba cada contenido en una línea diferente.
-3. Verifique la información registrada.
-4. Agregue los contenidos a la unidad.
+1. Seleccione un **Periodo** específico, el **Nivel**, el **Grado** y la **Asignatura**.
+2. En **Usuario editor** aparece su nombre. Desde el módulo docente no puede elegir otro usuario.
+3. En **Título**, escriba el nombre de la unidad.
+4. Haga clic en **Agregar unidad**.
 
-Esta opción agiliza el registro cuando una unidad contiene varios contenidos.
+SINAI le asigna a la unidad el número siguiente al de la última unidad de la lista y abre la pantalla de la unidad para que registre sus contenidos.
 
-Después de realizar modificaciones en la unidad:
+- Si **Periodo** está en **Todos**, SINAI muestra «Debe seleccionar el periodo».
+- Si no escribe el título, SINAI muestra «Debe escribir el título».
 
-1. Revise el período, el orden y el nombre de la unidad.
-2. Verifique los componentes y contenidos registrados.
-3. Haga clic en **Guardar**.
+#### 4. Abrir y modificar la unidad
 
-> **Importante:** verifique la información antes de guardar, especialmente el grado, la asignatura y el período, para que la unidad quede asociada correctamente.
+Haga clic en **Editar** en la fila de la unidad. La pantalla **Malla Curricular** se divide en dos partes:
 
-<GuideImageRow>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/varios-contenidos.png" alt="Opción para agregar varios contenidos uno por línea">Referencia visual</GuideImageTrigger>
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/guardar-unidad.png" alt="Guardar cambios de la unidad curricular">Referencia visual</GuideImageTrigger>
-</GuideImageRow>
+- **A la izquierda:** los datos de la unidad, el formulario para agregar contenidos, los botones **Agregar**, **Guardar** y **Eliminar**, y el **Usuario editor**.
+- **A la derecha:** **Componentes de la unidad**, con un título por cada componente y sus contenidos. El ícono de pregunta junto al componente muestra su descripción.
 
-### Asignar un usuario editor
+<GuideImageTrigger src="/images/guides/docente-mallas-curriculares/detalle-unidad.jpg" alt="Pantalla Malla Curricular con los datos de la unidad y los componentes con sus contenidos">
+  Ver ejemplo
+</GuideImageTrigger>
 
-La plataforma permite asignar otro usuario para que pueda editar la unidad.
+**Asignatura** y **Grado** no se cambian. Puede modificar:
 
-1. Seleccione el **Usuario editor**.
-2. Haga clic en **Asignar**.
-3. Verifique que el usuario haya quedado asociado correctamente.
+<GuideDataTable>
 
-Esta opción facilita el trabajo colaborativo en la construcción de la malla curricular.
+| Campo | Qué define |
+| --- | --- |
+| **Periodo** | Periodo al que pertenece la unidad. |
+| **Orden** | Número de la unidad. Define su posición en la lista. |
+| **Nombre** | Nombre de la unidad. Es obligatorio: si lo deja vacío, SINAI muestra «Debe escribir el nombre de la unidad». |
 
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/asignar-editor.png" alt="Asignar un usuario editor a la unidad curricular">Referencia visual</GuideImageTrigger>
+</GuideDataTable>
 
-### Descargar la información
+Para guardar los cambios:
 
-Para obtener un informe de la información registrada:
+1. Ajuste el periodo, el orden, el nombre o el texto de los contenidos.
+2. Haga clic en **Guardar** o en el botón verde de guardar de cualquier componente. Los dos guardan toda la unidad.
 
-1. Ingrese a la sección correspondiente de la malla curricular.
-2. Verifique los filtros seleccionados.
-3. Haga clic en **Descargar**.
+SINAI muestra «Cambios gardados correctamente». Si un contenido quedó vacío, muestra «Debe escribir un texto para el elemento».
 
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/descargar-malla.png" alt="Descargar informe de la malla curricular">Referencia visual</GuideImageTrigger>
+El botón con la flecha de regreso vuelve a la lista de unidades.
 
-### Eliminar una unidad curricular
+#### 5. Agregar contenidos a un componente
 
-Si necesita eliminar una unidad:
+1. En **Componente**, seleccione dónde va el contenido.
+2. En **Contenido**, escriba el texto.
+3. Haga clic en **Agregar**.
 
-1. Seleccione la opción **Eliminar**.
-2. Revise el mensaje de confirmación mostrado por SINAI.
-3. Confirme la eliminación.
+El contenido se registra de inmediato y aparece debajo del componente, a la derecha. El aviso es «Elementos agregados correctamente».
 
-> **Importante:** la eliminación no se puede revertir. Si la unidad tiene clases relacionadas, SINAI permitirá indicar si estas también deben incluirse en la eliminación. Verifique cuidadosamente la información antes de confirmar.
+Para agregar varios contenidos al mismo componente de una vez:
 
-<GuideImageTrigger src="/images/guides/mallas-curriculares-std/eliminar-unidad.png" alt="Confirmación al eliminar una unidad curricular">Referencia visual</GuideImageTrigger>
+1. Marque **Agregar varios elementos (uno por linea)**.
+2. Escriba cada contenido en una línea diferente. Pase a la línea siguiente con la tecla Enter.
+3. Haga clic en **Agregar**.
+
+<GuideImageTrigger src="/images/guides/docente-mallas-curriculares/agregar-contenido.jpg" alt="Formulario de la unidad con un componente elegido, la casilla Agregar varios elementos marcada y tres contenidos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI crea un contenido por cada línea y omite las líneas vacías.
+
+- Cada contenido admite hasta 500 caracteres. Si uno los supera, SINAI muestra «Máximo 500 caracteres por elemento» y no agrega ninguno.
+- Si el cuadro está vacío, SINAI muestra «Debe escribir el contenido para el elemento que desea agregar».
+
+<GuideCallout>
+  La lista **Componente** y los títulos de la derecha muestran los componentes que su institución configuró para la malla. **Configuración** abre esa configuración en otra pestaña; desde el módulo docente puede consultarla, pero los cambios los hace el área administrativa.
+</GuideCallout>
+
+#### 6. Corregir o quitar un contenido
+
+- **Corregir:** cambie el texto en el cuadro del contenido y haga clic en **Guardar**.
+- **Quitar:** haga clic en **Eliminar**, en la esquina del cuadro del contenido. SINAI lo quita de inmediato, sin pedir confirmación, y muestra «Elemento eliminado correctamente».
+
+#### 7. Descargar la unidad
+
+En **Componentes de la unidad**, haga clic en **Descargar**. SINAI genera un PDF con la unidad que tiene abierta.
+
+#### 8. Usuario editor
+
+El usuario editor es quien puede modificar la unidad. Cuando usted crea una unidad, queda como su usuario editor.
+
+- Desde el módulo docente puede agregar, guardar y eliminar solo en las unidades en las que usted es el usuario editor. En las demás, SINAI muestra «El usuario no tiene permisos para modificar la malla curricular».
+- Deje en la lista **Usuario editor** el usuario que aparece al abrir la unidad. Si la cambia, SINAI no permite guardar.
+- El botón **Asignar** no cambia el editor desde el módulo docente: SINAI muestra «Solo un usuario administrativo puede reasignar el usuario editor». Para cambiarlo, solicítelo al área administrativa.
+
+#### 9. Eliminar la unidad
+
+1. Haga clic en **Eliminar**, debajo del formulario.
+2. A la derecha se abre **Confirmar eliminación** con el mensaje *¿Está seguro de eliminar esta unidad?*
+3. Si la unidad tiene clases planeadas y también quiere eliminarlas, marque **¿Desea eliminar las clases relacionadas a esta unidad?**
+4. Haga clic en **Confirmar**.
+
+<GuideImageTrigger src="/images/guides/docente-mallas-curriculares/eliminar-unidad.jpg" alt="Panel Confirmar eliminación con la casilla para eliminar las clases relacionadas">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Al terminar, SINAI vuelve a la lista de unidades. La **X** del panel lo cierra sin eliminar.
+
+Si la unidad tiene clases y no marcó la casilla, SINAI muestra «No se puede eliminar la unidad por que tiene clases relacionadas.» y no elimina nada.
+
+<GuideCallout type="warning">
+  Esta acción no se puede revertir. Se elimina la unidad con todos sus componentes y, si marcó la casilla, también las clases planeadas en esa unidad.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Dónde creo las unidades de la malla curricular?">
-    En **Planeación → Currículo Std → Mallas curriculares**. Seleccione período, nivel, grado, asignatura y usuario editor; luego agregue la unidad.
+  <GuideFAQItem index="01" question={"Al crear la unidad aparece «Debe seleccionar el periodo». ¿Qué hago?"}>
+    El filtro **Periodo** está en **Todos**. Seleccione el periodo al que pertenece la unidad y vuelva a hacer clic en **Agregar unidad**.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Cómo registro varios contenidos de una vez?">
-    Active **Agregar varios elementos (uno por línea)**, escriba cada contenido en una línea distinta y agréguelos a la unidad; luego guarde.
+
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un grado o una asignatura en los filtros?"}>
+    Los filtros **Nivel**, **Grado** y **Asignatura** muestran solo lo que tiene en su asignación académica del calendario actual. Si falta un grado o una asignatura, solicite la asignación al área administrativa.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Qué ocurre si elimino una unidad con clases relacionadas?">
-    La eliminación no se puede revertir. SINAI pedirá confirmación y permitirá incluir también las clases relacionadas; revise bien antes de confirmar.
+
+  <GuideFAQItem index="03" question={"¿Por qué aparece «El usuario no tiene permisos para modificar la malla curricular»?"}>
+    Usted no es el usuario editor de esa unidad, o cambió la lista **Usuario editor** antes de guardar. La lista de unidades también muestra unidades de otros editores del mismo grado y asignatura; puede abrirlas, pero solo su usuario editor las modifica.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Puedo asignar la unidad a otro docente?"}>
+    No desde el módulo docente. Al hacer clic en **Asignar**, SINAI muestra «Solo un usuario administrativo puede reasignar el usuario editor». Solicite el cambio al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Debo hacer clic en Guardar después de agregar contenidos?"}>
+    No. **Agregar** registra los contenidos de inmediato. **Guardar** se usa para los cambios en el periodo, el orden, el nombre o el texto de los contenidos que ya existen.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Agregué varios contenidos y no se registró ninguno. ¿Por qué?"}>
+    Si una de las líneas supera los 500 caracteres, SINAI muestra «Máximo 500 caracteres por elemento» y no agrega ninguna. Divida ese texto en líneas más cortas. Verifique también que la casilla **Agregar varios elementos (uno por linea)** esté marcada.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"No puedo eliminar la unidad. ¿Qué pasa?"}>
+    Si aparece «No se puede eliminar la unidad por que tiene clases relacionadas.», la unidad tiene clases planeadas. Para eliminarla junto con esas clases, marque **¿Desea eliminar las clases relacionadas a esta unidad?** y haga clic en **Confirmar**. La eliminación no se puede revertir.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿Dónde veo la unidad que me asignaron si no es de mi asignatura?"}>
+    En la tabla **Unidades asignadas**, debajo de la lista principal. Allí aparecen las unidades en las que usted es usuario editor y que no hacen parte de su asignación académica. Si **Periodo** tiene un periodo seleccionado, solo verá las de ese periodo.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,64 +1,114 @@
 ---
 title: "Observaciones"
-description: "Registre observaciones de seguimiento académico por estudiante, asignatura y periodo."
+description: "Registre, por asignatura y periodo, la observación de cada estudiante que se muestra en el boletín."
 guide: true
 wordpressId: 30271
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/observaciones/"
-lastModified: "2026-09-11"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
-## Tutorial
+
+## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="8VSbVj_bUtg" title="Observaciones"
-  odyseeUrl="https://odysee.com/registro-de-observaciones-a-estudiantes%3Adfcd4f17671e91d19a8d1f2c6e5d42a76dc10e03"
-/>
+<YouTube id="8VSbVj_bUtg" title="Observaciones" odyseeUrl="https://odysee.com/registro-de-observaciones-a-estudiantes%3Adfcd4f17671e91d19a8d1f2c6e5d42a76dc10e03" />
 </GuideVideos>
 
-## Observaciones
+## Guía paso a paso
 
-La opción **Observaciones** permite a los docentes registrar comentarios relacionados con el desempeño y el seguimiento académico de los estudiantes durante un periodo determinado.
+### 1. ¿Qué es Observaciones?
 
-Facilita dejar constancia de aspectos relevantes del proceso académico de cada estudiante que requieren seguimiento.
+**Observaciones** abre la pantalla **Registro de Observaciones**. Allí escribe una observación para cada estudiante en una asignatura y un periodo. Según el texto de ayuda de la pantalla, estas observaciones «se verán en el boletin del estudiante en la asignatura correspondiente».
 
-**Ruta de acceso:** Evaluación → Observaciones.
+Ingrese a **Evaluación → Observaciones**.
 
-## Paso a paso
+<GuideImageTrigger src="/images/guides/docente-observaciones/acceso-observaciones.jpg" alt="Menú Evaluación con la opción Observaciones activa y la pantalla Registro de Observaciones">
+  Ver ejemplo
+</GuideImageTrigger>
 
-### Ingresar a Observaciones
+<GuideCallout>
+  El menú depende de la configuración de su institución. Si no encuentra la opción en **Evaluación**, consulte con el área administrativa.
+</GuideCallout>
 
-1. Ingrese al **Módulo del Docente**.
-2. Diríjase al menú **Evaluación**.
-3. Seleccione la opción **Observaciones**.
+#### 2. Seleccionar el grupo, el periodo y la asignatura
 
-<GuideImageTrigger src="/images/guides/observaciones/acceso-observaciones.png" alt="Acceso a Observaciones desde el menú Evaluación">Referencia visual</GuideImageTrigger>
+Use los filtros de la parte superior. Cada cambio recarga la lista de estudiantes.
 
-### Registrar la observación
+<GuideDataTable>
 
-1. Seleccione el **Grupo** correspondiente.
-2. Seleccione la **Asignatura**.
-3. Seleccione el **Periodo** que desea consultar.
-4. Ubique en la lista al estudiante al que desea registrar la observación.
-5. Ingrese la **observación general** correspondiente.
-6. Haga clic en **Guardar** para registrar la observación.
-7. Confirme que la observación haya quedado registrada correctamente en la lista.
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | Su nombre. Desde el módulo docente no se puede cambiar. |
+| **Grupo** | Grupos en los que usted tiene asignación académica en el calendario actual. |
+| **Periodo** | Periodos del grupo. Al abrir la pantalla, SINAI selecciona el periodo activo. |
+| **Asignatura** | Asignaturas que usted dicta en el grupo. No incluye la de comportamiento. |
 
-<GuideImageTrigger src="/images/guides/observaciones/step-01.png" alt="Registrar observación del estudiante por grupo, asignatura y periodo">Referencia visual</GuideImageTrigger>
+</GuideDataTable>
 
-> **Recomendación:** utilice una redacción clara, respetuosa y pertinente. La observación debe corresponder a situaciones relacionadas con el proceso y el seguimiento académico del estudiante.
+#### 3. Revisar la lista de estudiantes
+
+La lista muestra a los estudiantes de la planilla de calificaciones de la asignatura en ese periodo, en orden alfabético. Si no aparece ningún estudiante, esa planilla todavía no tiene registros.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Foto** | Fotografía del estudiante. |
+| **Apellidos y Nombres** | Nombre del estudiante y, debajo, su número de identificación. |
+| **Nota** | Nota acumulada del periodo. |
+| **Refuerzo** | Nota de refuerzo o recuperación, si la tiene. |
+| **Definitiva** | Nota definitiva del periodo y, debajo, el desempeño. |
+| **Faltas** | Inasistencias del periodo. |
+| **Observación** | Cuadro para escribir la observación del estudiante. |
+
+</GuideDataTable>
+
+Las columnas de notas y faltas son de consulta. Solo se edita **Observación**.
+
+#### 4. Registrar las observaciones
+
+1. En la fila de cada estudiante, escriba la observación en el cuadro **Observación**.
+2. Haga clic en **Guardar Cambios**, en la parte superior derecha.
+
+<GuideImageTrigger src="/images/guides/docente-observaciones/registro-observaciones.jpg" alt="Lista de estudiantes con notas, faltas y una observación de ejemplo escrita">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI guarda el texto de todas las filas de la lista y muestra «Cambios guardados correctamente».
+
+- Cada observación admite hasta 300 caracteres. Si una los supera, SINAI muestra «La observación que intenta registrar para el estudiante [nombre] es demasiado larga. Maximo 300 caracteres» y se detiene en ese estudiante.
+- Si falla el registro de un estudiante, SINAI muestra «Error al guardar los cambios. Por favor verifique los datos del estudiante [nombre]».
+
+<GuideCallout type="warning">
+  SINAI guarda las filas en orden. Si se detiene en un estudiante, las observaciones de los estudiantes anteriores ya quedaron guardadas y las siguientes no. Corrija el texto y vuelva a hacer clic en **Guardar Cambios**.
+</GuideCallout>
+
+Para quitar una observación, borre el texto del cuadro y haga clic en **Guardar Cambios**.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Cómo registro una observación a un estudiante?">
-    Vaya a **Evaluación → Observaciones**, elija grupo, asignatura y periodo, ubique al estudiante, escriba la observación y haga clic en **Guardar**.
+  <GuideFAQItem index="01" question={"¿Dónde se ven las observaciones que registro?"}>
+    Según el texto de ayuda de la pantalla, se verán en el boletín del estudiante, en la asignatura correspondiente.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Qué filtros debo seleccionar antes de escribir la observación?">
-    Debe seleccionar el grupo, la asignatura y el periodo correspondiente al seguimiento que desea registrar.
+
+  <GuideFAQItem index="02" question={"¿Por qué no aparecen estudiantes en la lista?"}>
+    La lista sale de la planilla de calificaciones de la asignatura en el periodo seleccionado. Si esa planilla no tiene registros, la lista queda vacía. Verifique el grupo, el periodo y la asignatura.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Cómo sé que la observación quedó guardada?">
-    Después de hacer clic en **Guardar**, confirme que el texto aparezca correctamente en la lista del estudiante.
+
+  <GuideFAQItem index="03" question={"¿Por qué no aparece un grupo o una asignatura en los filtros?"}>
+    **Grupo** y **Asignatura** muestran solo lo que tiene en su asignación académica del calendario actual. Si falta un grupo o una asignatura, solicite la asignación al área administrativa.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Cómo debo redactar las observaciones?">
-    Use una redacción clara, respetuosa y pertinente, referida al proceso y seguimiento académico del estudiante.
+
+  <GuideFAQItem index="04" question={"Aparece «... es demasiado larga. Maximo 300 caracteres». ¿Qué hago?"}>
+    La observación de ese estudiante supera los 300 caracteres. Acórtela y haga clic de nuevo en **Guardar Cambios**. Las observaciones de los estudiantes anteriores en la lista ya quedaron guardadas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo cambiar las notas o las faltas desde esta pantalla?"}>
+    No. **Nota**, **Refuerzo**, **Definitiva** y **Faltas** son de consulta. Esta pantalla solo guarda la observación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Cómo borro una observación?"}>
+    Borre el texto del cuadro **Observación** del estudiante y haga clic en **Guardar Cambios**.
   </GuideFAQItem>
 </GuideFAQ>

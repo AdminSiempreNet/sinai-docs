@@ -1,12 +1,8 @@
 {
   "title": "Ficha observador",
-  "description": "Consulte la caracterización, valoración y seguimiento del estudiante.",
+  "description": "Identifique la versión de la ficha que usa su institución y consulte la guía correspondiente.",
   "defaultOpen": false,
-  "pages": [
-    "nueva-version",
-    "caracterizacion",
-    "valoracion",
-    "registro-de-seguimiento",
-    "informes"
-  ]
+  "pages": [],
+  "collapsible": false,
+  "icon": "Eye"
 }

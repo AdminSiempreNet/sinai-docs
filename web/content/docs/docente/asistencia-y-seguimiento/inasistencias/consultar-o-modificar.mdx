@@ -1,47 +1,122 @@
 ---
 title: "Consultar o modificar inasistencia"
-description: "Consulte las inasistencias detalladas por estudiante, asignatura o fecha en SINAI."
+description: "Consulte las inasistencias registradas en sus asignaturas por estudiante, asignatura o fecha, y corrija o elimine las de un estudiante."
 guide: true
 wordpressId: 30308
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/consultar-o-modificar-inasistencia/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="bH4dWOfFq5A" title="Consultar o modificar inasistencia"
-  odyseeUrl="https://odysee.com/modificar-inasistencias%3A73b71cb77aa2a1097bf8c186c85633c36f082ff7"
-/>
+<YouTube id="bH4dWOfFq5A" title="Consultar o modificar inasistencia" odyseeUrl="https://odysee.com/modificar-inasistencias%3A73b71cb77aa2a1097bf8c186c85633c36f082ff7" />
 </GuideVideos>
 
-## Consultar inasistencias
+## Guía paso a paso
 
-1. Abra **Seguimiento > Inasistencias > Consultar o Modificar Inasistencias**.
-2. En **Parámetros de consulta**, seleccione el **Grupo** y el **Periodo**.
-3. En **Tipo de consulta**, elija una de las opciones disponibles: **Por estudiante**, **Por asignatura** o **Por fecha**.
-4. Seleccione el dato correspondiente en **Filtro**.
-5. Revise el detalle que aparece en **Resultado de la consulta**.
+### 1. ¿Qué es Consultar o Modificar Inasistencias?
 
-## Modificar un registro
+**Consultar o Modificar Inasistencias** muestra las inasistencias registradas en las asignaturas de su asignación académica. Puede consultarlas por estudiante, por asignatura o por fecha. En la consulta por estudiante también puede corregir la fecha, las horas, la justificación y la observación, o eliminar una inasistencia.
 
-Cuando el resultado habilite la edición, abra únicamente el registro que deba corregir, actualice la información permitida y guarde. Después, repita la consulta para verificar que el cambio se refleje en el detalle.
+Ingrese a **Seguimiento → Inasistencias → Consultar o Modificar Inasistencias**.
 
-> Las inasistencias afectan el seguimiento académico. Confirme siempre el grupo, periodo y filtro antes de guardar una modificación.
+<GuideImageTrigger src="/images/guides/docente-consultar-inasistencias/acceso-inasistencias.jpg" alt="Menú Seguimiento con el submenú Inasistencias desplegado y la opción Consultar o Modificar Inasistencias">
+  Ver ejemplo
+</GuideImageTrigger>
 
+La pantalla tiene dos partes:
+
+- **Parametros de Consulta**, a la izquierda: grupo, periodo, tipo de consulta y filtro. El botón azul de la esquina abre esta guía.
+- **Resultado de la Consulta**, a la derecha: la tabla de inasistencias del filtro elegido.
+
+<GuideImageTrigger src="/images/guides/docente-consultar-inasistencias/parametros-consulta.jpg" alt="Pantalla Consultar o Modificar Inasistencias con Parametros de Consulta y la lista de estudiantes del grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Elegir el grupo, el periodo y el tipo de consulta
+
+1. En **Grupo**, seleccione uno de los grupos de su asignación académica.
+2. En **Periodo**, seleccione un periodo del grupo.
+3. En **Tipo de consulta**, elija cómo quiere ver las inasistencias.
+4. En **Filtro**, haga clic en el estudiante, la asignatura o la fecha.
+
+<GuideDataTable>
+
+| Tipo de consulta | Qué lista el Filtro | Qué muestra el resultado |
+| --- | --- | --- |
+| **Por estudiante** | Los estudiantes matriculados en el grupo. | **Fecha**, **Asignatura**, **Horas**, **Justificada** y **Observacion** de cada inasistencia del estudiante en sus asignaturas. Se puede modificar. |
+| **Por Asignatura** | Las asignaturas que usted dicta en el grupo, sin la de comportamiento. | **Fecha**, **Estudiante**, **Horas**, **Justificada** y **Observacion**. Solo consulta. |
+| **Por Fecha** | Las fechas con inasistencias en sus asignaturas, de la más reciente a la más antigua. | **Estudiante**, **Asignatura**, **Horas**, **Justificada** y **Observacion**. Solo consulta. |
+
+</GuideDataTable>
+
+El título del resultado cambia según el filtro: **Inasistencias del Estudiante**, **Inasistencias de la Asignatura** o **Inasistencias de la fecha**, seguido del nombre elegido.
+
+En las consultas por estudiante y por asignatura, la tabla va de la fecha más reciente a la más antigua. La consulta por estudiante y la consulta por fecha solo muestran inasistencias de las asignaturas que usted tiene asignadas en el grupo.
+
+#### 3. Modificar las inasistencias de un estudiante
+
+Use **Tipo de consulta: Por estudiante** y haga clic en el estudiante. Cada fila del resultado se edita directamente:
+
+<GuideDataTable>
+
+| Campo | Qué permite |
+| --- | --- |
+| **Fecha** | Cambiar el día de la inasistencia. Formato dd/mm/aaaa; al hacer clic se abre el calendario. Solo acepta números y la barra. |
+| **Asignatura** | Solo se muestra. No se cambia. |
+| **Horas** | Cantidad de horas de inasistencia. Admite un solo carácter. |
+| **Justificada** | Marque la casilla si la inasistencia está justificada. |
+| **Observacion** | Texto de hasta 250 caracteres. |
+
+</GuideDataTable>
+
+Para guardar:
+
+1. Corrija las filas que necesite.
+2. Haga clic en **Guardar Cambios**, debajo de la tabla.
+
+**Guardar Cambios** guarda todas las filas del estudiante. Si el guardado es correcto, SINAI muestra «Cambios guardados correctamente».
+
+SINAI no guarda en estos casos:
+
+- Si el periodo está cerrado para inasistencias, muestra «El periodo actual está cerrado, no se puede modificar el registro de Inasistencias».
+- Si no tiene habilitado el registro de inasistencias consolidadas, muestra «El usuario no tiene permisos para realizar este procedimiento. Para obtener permiso solicite la habilitacion del registro de inasistencias consolidadas al Rector del establecimiento».
+
+#### 4. Eliminar una inasistencia
+
+En la consulta **Por estudiante**:
+
+1. Haga clic en la **X** roja de la fila.
+2. Acepte el mensaje *Confirmar eliminacion*.
+
+La inasistencia se elimina de inmediato, sin pulsar **Guardar Cambios**. Después, SINAI vuelve a consolidar las inasistencias de las asignaturas que quedan en la tabla del estudiante.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer. Si se equivoca, registre de nuevo la inasistencia desde el registro de inasistencias.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Consultar o modificar inasistencia»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"No veo la columna para editar ni el botón Guardar Cambios. ¿Por qué?"}>
+    Solo la consulta **Por estudiante** permite modificar y eliminar. **Por Asignatura** y **Por Fecha** son de consulta. Cambie **Tipo de consulta** a **Por estudiante** y haga clic en el estudiante en **Filtro**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Consultar o modificar inasistencia» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Elegí un estudiante y la tabla sale vacía. ¿Por qué?"}>
+    El estudiante no tiene inasistencias en el periodo seleccionado en las asignaturas que usted dicta en el grupo. Las inasistencias registradas por otros docentes no aparecen en su consulta por estudiante ni por fecha. Revise también el **Periodo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Consultar o modificar inasistencia»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Al guardar aparece «El periodo actual está cerrado, no se puede modificar el registro de Inasistencias». ¿Qué hago?"}>
+    La fecha de cierre del registro de inasistencias de ese periodo ya pasó. Solicite al área administrativa la ampliación de la fecha o una autorización para el grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué significa el mensaje sobre el registro de inasistencias consolidadas?"}>
+    Para guardar cambios en esta pantalla, SINAI exige que esté habilitado el registro de inasistencias consolidadas. Si no lo está, muestra «El usuario no tiene permisos para realizar este procedimiento. Para obtener permiso solicite la habilitacion del registro de inasistencias consolidadas al Rector del establecimiento». Solicite la habilitación al rector.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Debo hacer clic en Guardar Cambios después de eliminar?"}>
+    No. La **X** elimina la inasistencia en cuanto acepta *Confirmar eliminacion*. **Guardar Cambios** solo guarda las correcciones de fecha, horas, justificación y observación.
   </GuideFAQItem>
 </GuideFAQ>

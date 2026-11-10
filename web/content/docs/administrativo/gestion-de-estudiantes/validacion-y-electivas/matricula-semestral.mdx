@@ -1,11 +1,13 @@
 ---
 title: "Matrícula semestral"
-description: "Conozca las opciones de matrícula semestral y siga el procedimiento correspondiente en SINAI."
+description: "Matricule en el siguiente grupo, dentro del mismo calendario, a los estudiantes de grupos semestralizados como los CLEI de adultos."
 guide: true
 wordpressId: 29448
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/matricula-semestral/"
-lastModified: "2023-11-14 19:46:09"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,30 +18,89 @@ lastModified: "2023-11-14 19:46:09"
 
 ## Guía paso a paso
 
-Pasos para Registrar la matrícula semestral
+### 1. ¿Qué es Matrícula semestral?
 
-1. Haga clic en el menú Matrícula
-2. Clic en submenú Matrícula semestral o en la iconografía.
-3. Seleccione la sede y el grupo de CLEI 5 en el que se encuentran los estudiantes promocionados.
-4. En el campo Opciones seleccione la casilla Matricular.
-5. Seleccione el nuevo grupo CLEI 6 en el que desea matricular. Si no aparece el grupo de CLEI 6 en la lista, esto se debe a que el grupo no ha sido creado.
-6. Finalmente debe hacer clic en el botón verde “Matricular”. Se matricularan los estudiantes que estén seleccionados en la casilla de verificación Matricular. <GuideImageTrigger src={"/images/wordpress/2023/11/matricula-semestral.gif"} alt={"Captura de matricula semestral"}>Ver ejemplo</GuideImageTrigger>
+**Matrícula semestral** pasa a los estudiantes de un grupo semestralizado al grupo siguiente sin cambiar de calendario. Según la descripción del menú, sirve para los grupos del modelo de adultos (CLEI 5 y 6) y para el programa de formación complementaria de las normales superiores.
 
+Por cada estudiante que matricule, SINAI:
 
+- crea una matrícula nueva en el grupo de destino, en estado **MATRICULADO**, con el libro, el folio y los datos de contrato de la matrícula de origen;
+- deja la matrícula del grupo de origen en estado **PROM. SEMESTRAL**;
+- registra la novedad **Matricula Semestral**.
 
+Ingrese a **Matrícula → Matrícula Semestral**. La pantalla se titula **Matrícula Semestralizada**.
+
+<GuideImageTrigger src="/images/guides/matricula-semestral/pantalla-matricula-semestral.jpg" alt="Pantalla Matrícula Semestralizada con dos estudiantes marcados para matricular en el grupo CLEI 5">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El botón azul junto al título abre esta guía.
+
+#### 2. Seleccionar el grupo de origen
+
+1. Seleccione la **Sede**.
+2. Seleccione el **Grupo** en el que están los estudiantes.
+
+La lista **Grupo** solo muestra los grupos activos de la sede que pertenecen a los modelos semestralizados. Si el grupo no aparece, revise que esté creado, activo y con el modelo correcto.
+
+La tabla **Estudiantes** lista los estudiantes del grupo en estado **MATRICULADO**, **PROM. ANTICIPADA** o **PROM. SEMESTRAL**.
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Estudiante** | Nombre y número de identificación. |
+| **Estado** | Estado de la matrícula y la fecha de ese estado. |
+| **Situación Académica** | Situación académica del estudiante en el grupo. |
+| **Opciones** | Casilla **Matricular**. |
+| **Nuevo Grupo** | Grupo de destino. Lista los grupos activos de los mismos modelos, de todas las sedes, menos el grupo de origen. |
+| **Mensaje** | Resultado del proceso para el estudiante. Inicia en **Sin procesar**. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  La pantalla no comprueba la promoción. Revise la columna **Situación Académica** antes de matricular y marque solo a los estudiantes que deben pasar al grupo siguiente.
+</GuideCallout>
+
+#### 3. Matricular en el nuevo grupo
+
+1. En cada estudiante que va a pasar, marque **Matricular**.
+2. En **Nuevo Grupo**, elija el grupo de destino. Puede elegir un grupo distinto para cada estudiante.
+3. Haga clic en **Matricular**.
+4. Confirme *¿Confirma que desea matricular los estudiantes seleccionados en los grupos correspondientes?*
+
+SINAI procesa cada fila y escribe el resultado en **Mensaje**:
+
+- **Matriculado en** y el nombre del grupo, con fondo verde: la matrícula quedó creada.
+- **No procesado**: la casilla **Matricular** no estaba marcada.
+- **Por favor selecciona un grupo.**: marcó **Matricular** sin elegir **Nuevo Grupo**.
+- **Error, el estudiante ya tiene Prom. Semestral en el grupo** y el grupo: el estudiante ya pasó por una matrícula semestral en este calendario.
+- **Error, el estudiante ya está matriculado en** y el grupo: SINAI no pudo crear la matrícula en el grupo de destino.
+
+<GuideCallout type="warning">
+  La matrícula se crea al confirmar y el estado del grupo de origen cambia a **PROM. SEMESTRAL**. Esta pantalla no tiene una opción para deshacerlo.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Matrícula semestral»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"El grupo CLEI 6 no aparece en Nuevo Grupo. ¿Por qué?"}>
+    **Nuevo Grupo** solo lista grupos activos de los modelos semestralizados, en el calendario seleccionado, y no incluye el grupo de origen. Cree el grupo en el calendario actual, con el modelo correspondiente y en estado activo, y vuelva a abrir la pantalla.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Matrícula semestral» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Los estudiantes pasan a otro calendario?"}>
+    No. La matrícula nueva queda en el mismo calendario que está seleccionado en la parte superior. En ese calendario el estudiante conserva la matrícula del grupo de origen en estado **PROM. SEMESTRAL** y tiene una matrícula nueva en estado **MATRICULADO** en el grupo de destino.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Matrícula semestral»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Cómo verifico que la matrícula semestral quedó hecha?"}>
+    La columna **Mensaje** muestra «Matriculado en» y el grupo, con fondo verde. Si vuelve a consultar el grupo de origen, el **Estado** del estudiante aparece como **PROM. SEMESTRAL**. En el grupo de destino el estudiante figura como **MATRICULADO**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «Error, el estudiante ya tiene Prom. Semestral en el grupo». ¿Qué significa?"}>
+    El estudiante ya tiene en este calendario una matrícula en estado **PROM. SEMESTRAL** y otra en estado **MATRICULADO**: la matrícula semestral ya se hizo. SINAI no crea una segunda. Revise en qué grupo quedó matriculado antes de hacer cualquier ajuste.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué pasa con los estudiantes que no marco?"}>
+    No cambian. Su fila muestra **No procesado** y su matrícula sigue igual en el grupo de origen.
   </GuideFAQItem>
 </GuideFAQ>

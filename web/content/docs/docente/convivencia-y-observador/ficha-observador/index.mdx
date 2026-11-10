@@ -1,17 +1,671 @@
 ---
 title: "Ficha observador"
-description: "Consulte la caracterización, valoración y seguimiento del estudiante."
-section: true
+description: "Identifique la versión de la ficha observador que usa su institución y consulte cómo registrar seguimientos, caracterización, valoración e informes."
+guide: true
+lastModified: "2026-11-05"
+lastReviewed: "2026-11-05"
 ---
 
-Consulte la caracterización, valoración y seguimiento del estudiante.
+En SINAI **coexisten dos versiones** de la Ficha Observador. Cada institución usa una según su configuración. Abra la imagen de cada opción, confirme cuál coincide con lo que ve en su plataforma y selecciónela para consultar la guía de esa versión.
 
-## Contenido de esta sección
+<PlanillaGuideSwitcher
+  storageKey="sinai-docente-observador-version"
+  queryKey="version"
+  cardLayout="detailed"
+  eyebrow="Versiones disponibles"
+  title="Elija la versión que tiene configurada su institución"
+  introPrimary="La Ficha Observador puede presentarse en la interfaz clásica o en la interfaz renovada, según lo que tenga configurado su institución. Ambas están activas."
+  introSecondary="Revise las imágenes y confirme cuál coincide con su plataforma. Así verá únicamente la documentación de la versión que usted usa."
+  previewKicker="Vista de la ficha"
+  confirmLabel="Esta es mi versión"
+  selectLabel="Seleccionar esta versión"
+  changeLabel="Cambiar versión"
+  selectedLabel="Versión seleccionada"
+>
 
-<Cards>
-  <Card title={"Nueva versión Ficha Observador"} href="/docs/docente/convivencia-y-observador/ficha-observador/nueva-version" description={"Conozca las opciones de nueva versión Ficha Observador y siga el procedimiento correspondiente en SINAI."} />
-  <Card title={"Caracterización"} href="/docs/docente/convivencia-y-observador/ficha-observador/caracterizacion" description={"Conozca las opciones de caracterización y siga el procedimiento correspondiente en SINAI."} />
-  <Card title={"Valoración por grupo e individual"} href="/docs/docente/convivencia-y-observador/ficha-observador/valoracion" description={"Conozca las opciones de valoración por grupo e individual y siga el procedimiento correspondiente en SINAI."} />
-  <Card title={"Registro de seguimiento"} href="/docs/docente/convivencia-y-observador/ficha-observador/registro-de-seguimiento" description={"Aprenda a registrar seguimiento en SINAI."} />
-  <Card title={"Informes del observador"} href="/docs/docente/convivencia-y-observador/ficha-observador/informes" description={"Consulte y descargue informes de la ficha observador en SINAI."} />
-</Cards>
+<PlanillaGuide
+  id="clasica"
+  title="Ficha clásica"
+  description="Interfaz clásica de la ficha observador, con opciones separadas en el menú para registro de seguimiento, caracterización, valoración e informes."
+  image="/images/guides/docente-registro-de-seguimiento/registro-seguimiento.jpg"
+  status="ready"
+>
+
+## Tutorial
+
+<GuideVideoPlaylist
+  title="Ruta de aprendizaje: Ficha observador (interfaz clásica)"
+  description="Seleccione el tema que necesita gestionar desde el módulo docente."
+  videos={[
+    { id: 'zJGHqpxdUWM', title: '1. Registro de seguimiento', description: 'Registre y consulte los seguimientos de un estudiante.' },
+    { id: 'WpQ1BUa7YwE', title: '2. Caracterización', description: 'Registre las características adicionales de los estudiantes.', odyseeUrl: 'https://odysee.com/caracterizaci%C3%B3n%3Ab9e792c93a091c6c93f149230d7bf059e33eab24' },
+    { id: 'UEQgzczKboE', title: '3. Valoración por grupo e individual', description: 'Registre la valoración periódica de los estudiantes.' },
+    { id: 'N3ta1AuF8t8', title: '4. Informes', description: 'Consulte los informes de la ficha observador.', odyseeUrl: 'https://odysee.com/informes-ficha-observador-2%3A51880c3ee50a5ca6f5d98059749f90ed7931fd9a' },
+  ]}
+/>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la ficha clásica?
+
+En la **ficha clásica**, cada proceso tiene su propia opción dentro del menú **Ficha Observador**:
+
+- **Registro Seguimiento:** registra los seguimientos de cada estudiante y consulta el resto de su ficha.
+- **Caracterización:** registra las características adicionales de los estudiantes de su grupo.
+- **Valoración:** registra la valoración periódica de los aspectos y criterios de convivencia, por estudiante o por grupo.
+- **Informes:** consulta los informes de valoración, de seguimiento y la ficha observador individual.
+
+### 2. Registro de seguimiento
+
+**Registro Seguimiento** abre la pantalla **Ficha Observador**, donde se registran los seguimientos de cada estudiante: eventos o anotaciones sobre su proceso de formación, con los compromisos del estudiante, del acudiente y de la institución. En la misma pantalla se consulta el resto de la ficha observador del estudiante.
+
+Ingrese a **Ficha Observador → Registro Seguimiento**, desde el submenú o desde el ícono **Registro Seguimiento**.
+
+<GuideImageTrigger src="/images/guides/docente-registro-de-seguimiento/registro-seguimiento.jpg" alt="Pantalla Ficha Observador con el grupo y el estudiante elegidos y la pestaña Seguimiento con un seguimiento registrado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El panel izquierdo, **Ficha Observador**, tiene los filtros:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Calendario** | Año cuya información se consulta. Inicia en el calendario en el que ingresó a SINAI. |
+| **Docente** | Su nombre. En el módulo docente no se puede cambiar. |
+| **Grupo y estudiante** | Primero el grupo, en la lista, y debajo el estudiante. Al lado del nombre aparece la inicial del estado de la matrícula, por ejemplo **M**. Debajo se ve la foto del estudiante. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  La institución define qué grupos ve el docente en esta pantalla: los grupos de los que es director, los grupos de su asignación académica o todos los grupos. También puede limitar la lista a los estudiantes matriculados.
+</GuideCallout>
+
+A la derecha están las pestañas de la ficha del estudiante seleccionado:
+
+- **Seguimiento:** los seguimientos registrados en la ficha observador. Es la única pestaña donde se registra información.
+- **Valoración Individual:** la valoración de cada aspecto y criterio por periodo.
+- **Caracterización:** las características adicionales registradas para el estudiante.
+- **Anotaciones:** las anotaciones de comportamiento del estudiante.
+- **Ficha Observador:** el informe de la ficha, que se genera con **Ver Informe**.
+
+#### 2.1. Consultar los seguimientos
+
+1. Seleccione el **Grupo**.
+2. Haga clic en el estudiante.
+3. Abra la pestaña **Seguimiento**.
+
+Cada seguimiento muestra:
+
+- **Registro:** la **Fecha del seguimiento**, el **Usuario que registra** y la **Fecha y Hora de Registro**.
+- **Seguimiento:** el **Tipo de seguimiento** y la **Descripción**, con los botones **Editar** y **Eliminar**.
+
+Los seguimientos se ordenan del más reciente al más antiguo.
+
+#### 2.2. Registrar un seguimiento
+
+1. Seleccione el **Grupo** y el estudiante.
+2. En la pestaña **Seguimiento**, haga clic en **Seguimiento**, el botón con el signo más.
+3. En la ventana **Nuevo seguimiento**, complete los campos.
+4. Haga clic en **Guardar**.
+
+<GuideImageTrigger src="/images/guides/docente-registro-de-seguimiento/nuevo-seguimiento.jpg" alt="Ventana Nuevo seguimiento con tipo de anotación, fecha, descripción y compromisos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Tipo de Anotación** | Tipo del seguimiento, de la lista de tipos de anotación. |
+| **Fecha:** | Día del evento. Propone la fecha del día; se escribe con el formato día/mes/año o se elige en el calendario. |
+| **Descripción del Evento** | Lo que ocurrió. |
+| **Compromiso del Estudiante** | Compromiso que asume el estudiante. Es opcional. |
+| **Compromiso del Acudiente** | Compromiso que asume el acudiente. Es opcional. |
+| **Compromiso de la Institución** | Compromiso que asume la institución. Es opcional. |
+
+</GuideDataTable>
+
+Si el registro es correcto, SINAI muestra «La anotación se ha guardado correctamente.».
+
+<GuideCallout>
+  Si la institución activó la notificación de anotaciones a los acudientes, SINAI envía un correo al acudiente del estudiante con el tipo, la fecha, la descripción y los compromisos del seguimiento. El correo solo llega si el acudiente tiene un correo registrado.
+</GuideCallout>
+
+<GuideCallout>
+  Los seguimientos nuevos quedan en el calendario en el que ingresó a SINAI. Use la lista **Calendario** solo para consultar la información de otros años.
+</GuideCallout>
+
+#### 2.3. Editar un seguimiento
+
+1. Haga clic en **Editar** en el seguimiento.
+2. En la ventana, que muestra el nombre del estudiante y el número del seguimiento, cambie los datos. Revise que el **Tipo de Anotación** sea el correcto.
+3. Haga clic en **Guardar**.
+
+SINAI muestra «Se han guardado los cambios correctamente.».
+
+#### 2.4. Eliminar un seguimiento
+
+1. Haga clic en **Eliminar** en el seguimiento.
+2. En la ventana **Eliminar seguimiento**, que pregunta *¿Está seguro?*, haga clic en **Eliminar**.
+
+SINAI muestra «Se ha eliminado el seguimiento No.» seguido del número y del nombre del estudiante.
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer.
+</GuideCallout>
+
+#### 2.5. Consultar el resto de la ficha
+
+Las demás pestañas solo muestran información; no se registra nada en ellas.
+
+- **Valoración Individual:** cada aspecto, en azul, con sus criterios y la valoración de cada periodo del grupo. Haga clic en el nombre del aspecto para mostrar u ocultar sus criterios. La valoración se registra en **Ficha Observador → Valoración**.
+- **Caracterización:** la **Caracteristica**, la **Descripción** y el **Nombre** de la opción registrada para el estudiante. Se registra en **Ficha Observador → Caracterización**.
+- **Anotaciones:** las anotaciones de comportamiento del estudiante, de todos los años, que no hacen parte de la ficha observador. Muestran el año y el grupo, la fecha, la norma, la descripción, los descargos, las acciones y quién las registró.
+
+<GuideImageTrigger src="/images/guides/docente-registro-de-seguimiento/valoracion-individual.jpg" alt="Pestaña Valoración Individual con los aspectos y los cuatro periodos">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2.6. Ver la ficha observador del estudiante
+
+1. Seleccione el **Calendario**, el **Grupo** y el estudiante.
+2. Haga clic en **Ver Informe**, debajo de la foto.
+
+SINAI genera la ficha observador del estudiante y la muestra en la pestaña **Ficha Observador**. Use la barra del visor para recorrer las páginas, exportarla o imprimirla.
+
+<GuideImageTrigger src="/images/guides/docente-registro-de-seguimiento/ficha-observador-informe.jpg" alt="Pestaña Ficha Observador con el informe de la ficha generado y la barra del visor">
+  Ver ejemplo
+</GuideImageTrigger>
+
+### 3. Caracterización
+
+**Caracterización** es la pantalla **Caracterización Adicional de Estudiantes**, donde el director de grupo registra características de sus estudiantes que no se toman al momento de la matrícula. Cada característica tiene sus propias opciones, por ejemplo niveles o respuestas, y para cada estudiante se elige una opción y, si se necesita, se escribe una observación.
+
+Ingrese a **Ficha Observador → Caracterización**, desde el submenú o desde el ícono **Caracterización**.
+
+La columna izquierda tiene los filtros, los botones y un resumen:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Docente** | Su nombre. En el módulo docente no se puede cambiar. |
+| **Grupo** | Grupos de los que usted es director de grupo en el calendario en el que ingresó. |
+| **Características** | Primero la categoría, en la lista, y debajo la característica de esa categoría que va a registrar. |
+
+</GuideDataTable>
+
+Debajo de los botones, el resumen muestra cuántos estudiantes del grupo tienen cada **Opción** de la característica, con su **Porcentaje%**.
+
+A la derecha aparece el nombre de la característica elegida y la lista de estudiantes con estas columnas: casilla de selección, **Foto**, **Apellidos y Nombres**, **Opciones** y **Observación**.
+
+<GuideCallout>
+  Las categorías, las características y sus opciones las define el área administrativa de la institución. Desde el módulo docente no se pueden crear.
+</GuideCallout>
+
+#### 3.1. Generar la lista de estudiantes
+
+La primera vez que trabaje una característica con un grupo, la lista aparece vacía. Debe generarla:
+
+1. Seleccione el **Grupo**.
+2. Seleccione la categoría y la característica en **Características**.
+3. Haga clic en **Generar**.
+
+SINAI agrega a la lista a los estudiantes con matrícula activa en el grupo que aún no tienen esa característica. Si la característica tiene una opción predeterminada, la asigna a cada estudiante agregado.
+
+- Si agregó estudiantes, SINAI muestra «Se ha generado la caracterizacion correctamente.».
+- Si todos los estudiantes ya estaban en la lista, muestra «No hay registros por generar.».
+- Si la categoría no tiene características, muestra «No existen caracteristicas, primero debe agregarlas.».
+
+#### 3.2. Registrar la caracterización
+
+1. Con el **Grupo** y la característica seleccionados, revise la lista de estudiantes.
+2. En la columna **Opciones**, elija la opción de cada estudiante.
+3. Si lo necesita, escriba en **Observación**. El campo indica «Escriba aquí la observación si es necesario».
+4. Haga clic en **Guardar**.
+
+SINAI guarda la opción y la observación de todos los estudiantes de la lista y muestra cuántos se actualizaron, por ejemplo «30 estudiantes actualizados correctamente, 0 errores.».
+
+<GuideCallout>
+  Lo que elija en la lista no queda registrado hasta que haga clic en **Guardar**. Si cambia de grupo o de característica antes de guardar, se pierden los cambios.
+</GuideCallout>
+
+#### 3.3. Quitar estudiantes de la caracterización
+
+1. Marque la casilla de los estudiantes que desea quitar de la característica.
+2. Haga clic en **Eliminar**.
+
+SINAI elimina la opción y la observación de esos estudiantes en la característica y muestra, por ejemplo, «2 estudiantes eliminados correctamente, 0 errores.». Si no marcó ningún estudiante, el aviso es «Se ha presentado un problema al eliminar, por favor intente nuevamente.».
+
+<GuideCallout type="warning">
+  **Eliminar** no pide confirmación y no se puede deshacer. Para volver a registrar a esos estudiantes, haga clic en **Generar** y elija de nuevo su opción.
+</GuideCallout>
+
+### 4. Valoración por grupo e individual
+
+La valoración periódica le permite registrar, por periodo, con qué frecuencia cada estudiante cumple los **criterios** de cada **aspecto** de convivencia que su institución definió para el calendario, por ejemplo «Atención y motivación» o «Respeto». Para cada criterio y periodo se elige una frecuencia: **Nunca**, **Algunas veces**, **Casi siempre** o **Siempre**.
+
+Hay dos pantallas, según cómo prefiera trabajar:
+
+- **Valoración Individual:** muestra todos los aspectos y criterios de un estudiante.
+- **Valoración por Grupo:** muestra todos los estudiantes del grupo para un aspecto y un criterio.
+
+Ingrese por **Ficha Observador → Valoración** y elija una de las dos opciones del submenú.
+
+<GuideImageTrigger src="/images/guides/docente-valoracion-observador/acceso-valoracion.jpg" alt="Menú Ficha Observador con el submenú Valoración desplegado: Valoración Individual y Valoración por Grupo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout>
+  Como docente, usted valora los grupos que dirige. Si su institución definió una fecha límite para registrar la valoración periódica y hoy está fuera de ella, SINAI muestra «La fecha limite para el registro de la valoración periódica es entre: ... y .... Si desea activar esta funcionalidad comuniquese con el personal Administrativo de la institución.» y deshabilita los botones. En ese caso solo puede consultar.
+</GuideCallout>
+
+#### 4.1. Valoración individual
+
+Ingrese por **Ficha Observador → Valoración → Valoración Individual**. La pantalla tiene el panel **Seguimiento Periódico** a la izquierda y el **Registro de Valoración Periódica** a la derecha.
+
+<GuideImageTrigger src="/images/guides/docente-valoracion-observador/valoracion-individual.jpg" alt="Pantalla Valoración Individual con el estudiante seleccionado y las frecuencias elegidas en los periodos 1 y 2">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Calendario** | Año de la valoración. Por defecto es el calendario en que está trabajando. |
+| **Docente** | Su nombre. No se puede cambiar. |
+| **Grupo** | Grupos que usted dirige en el calendario. |
+| **Estudiante** | Estudiantes matriculados del grupo, con su fotografía debajo. |
+
+</GuideDataTable>
+
+Para registrar la valoración:
+
+1. Seleccione el **Grupo** y el **Estudiante**. La tabla de la derecha muestra los aspectos con sus criterios y una lista por cada periodo.
+2. Si no aparece ningún aspecto, haga clic en **Generar**. SINAI crea la ficha de valoración del estudiante, con todas las frecuencias en blanco, y muestra «La planilla se generó correctamente». Si la ficha ya existe, no se modifica lo registrado.
+3. En cada criterio, elija la frecuencia del periodo que va a valorar.
+4. Haga clic en **Guardar**. SINAI muestra «Los datos se guardaron correctamente».
+
+- La columna **Periodo 4** solo aparece si el grupo tiene más de tres periodos.
+- Para cambiar de estudiante, guarde antes de elegir otro: al seleccionar a otro, la pantalla se actualiza y no conserva los cambios sin guardar.
+
+#### 4.2. Valoración por grupo
+
+Ingrese por **Ficha Observador → Valoración → Valoración por Grupo**. Aquí valora un criterio a la vez para todos los estudiantes del grupo.
+
+<GuideImageTrigger src="/images/guides/docente-valoracion-observador/valoracion-grupo.jpg" alt="Pantalla Valoración por Grupo con los paneles de grupo, aspecto y criterio, y el mensaje de ficha de valoración sin generar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+1. En **Grupo**, seleccione el grupo. Como docente ve los grupos que dirige.
+2. En **Aspecto**, seleccione el aspecto. Al abrir la pantalla queda marcado el primero de la lista.
+3. En **Criterio**, seleccione el criterio. Al pasar el cursor sobre la lista aparece el texto completo del criterio elegido.
+4. Haga clic en **Generar**. SINAI crea la fila de cada estudiante matriculado que aún no la tenga y muestra «La planilla se generó correctamente».
+5. En la tabla **Registro de Valoración Periódica**, elija la frecuencia de cada estudiante en el periodo que corresponda.
+6. Haga clic en **Guardar**. SINAI muestra «Los datos se guardaron correctamente». Si algo falla, muestra «Error al guardar, por favor verifique».
+
+Mientras no haya generado la ficha de un aspecto y un criterio, la tabla muestra «Señor Usuario, usted no ha seleccionado un ASPECTO y un CRITERIO, o no ha generado la ficha de valoración.» con los pasos para hacerlo.
+
+<GuideCallout>
+  Si hace clic en **Generar** sin elegir el aspecto o el criterio, SINAI muestra «Debe seleccionar el aspecto» o «Debe seleccionar el criterio» y no genera la ficha.
+</GuideCallout>
+
+#### 4.3. Autollenar un periodo
+
+**Autollenar** asigna la misma frecuencia a varios estudiantes a la vez, en un periodo.
+
+1. Marque los estudiantes a los que desea asignarla. La casilla **Seleccionar todos** del encabezado marca todo el grupo.
+2. Haga clic en **Autollenar**.
+3. En la ventana **Autollenar Periodo**, elija el periodo en **Autollenar** (**1° Periodo** a **4° Periodo**) y la frecuencia en **Asignar Valoración**.
+4. Haga clic en **Aceptar**.
+
+<GuideImageTrigger src="/images/guides/docente-valoracion-observador/autollenar-periodo.jpg" alt="Ventana Autollenar Periodo con las listas de periodo y de valoración y el botón Aceptar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La ventana se cierra y la tabla se actualiza con el valor asignado a los estudiantes marcados. Los estudiantes sin marcar no cambian. Puede ajustar casos individuales y luego hacer clic en **Guardar**.
+
+<GuideCallout type="warning">
+  **Aceptar** guarda de inmediato la frecuencia en los estudiantes marcados, sin pasar por **Guardar**, y recarga la tabla: los cambios que tuviera sin guardar se pierden. Use **Autollenar** primero y haga después los ajustes individuales.
+</GuideCallout>
+
+### 5. Informes del observador
+
+**Informes** es la pantalla del módulo docente donde se consultan los informes de la ficha observador de los estudiantes de su grupo: la valoración periódica, los seguimientos y la ficha observador individual.
+
+Ingrese a **Ficha Observador → Informes**, desde el submenú o desde el ícono **Informes**.
+
+<GuideImageTrigger src="/images/guides/docente-informes-del-observador/informes-observador.jpg" alt="Pantalla Informes con los parámetros a la izquierda y la Ficha Observador Individual de un estudiante en Visualización del informe">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene dos paneles:
+
+- **Parámetros del Informe:** a la izquierda, con las listas para elegir el informe y el botón **Ver Informe**. El botón azul de la esquina abre esta guía.
+- **Visualización del informe:** a la derecha, donde aparece el informe generado.
+
+#### 5.1. Elegir el informe
+
+La lista **Informe** ofrece seis informes. Cada uno habilita las listas que necesita:
+
+<GuideDataTable>
+
+| Informe | Listas que usa |
+| --- | --- |
+| **Informe de Valoración Periódica por Grupo** | **Periodo** y **Grupo**. |
+| **Informe de Valoración Periódica por Estudiante** | **Periodo**, **Grupo** y **Estudiante**. |
+| **Informe de Seguimiento Periódico por Grupo** | **Periodo** y **Grupo**. |
+| **Informe de Seguimiento Periódico por Estudiante** | **Periodo**, **Grupo** y **Estudiante**. |
+| **Ficha Observador Individual** | **Grupo** y **Estudiante**. La lista **Periodo** queda desactivada. |
+| **Formato Vacio de Valoración Periódica por Grupo** | **Periodo** y **Grupo**. |
+
+</GuideDataTable>
+
+Las listas muestran:
+
+- **Periodo:** los periodos del calendario en el que ingresó a SINAI.
+- **Grupo:** los grupos de los que usted es director de grupo en ese calendario.
+- **Estudiante:** los estudiantes con matrícula en el grupo elegido.
+
+#### 5.2. Generar el informe
+
+1. En **Informe**, seleccione el informe.
+2. Seleccione el **Periodo**, si el informe lo usa.
+3. Seleccione el **Grupo**.
+4. Seleccione el **Estudiante**, si el informe es individual.
+5. Haga clic en **Ver Informe**.
+
+SINAI genera el informe y lo muestra en **Visualización del informe**. Use la barra del visor para recorrer las páginas, exportar el informe o imprimirlo.
+
+<GuideCallout>
+  SINAI solo envía el periodo elegido a los informes de seguimiento periódico, por grupo y por estudiante. Los informes de valoración periódica y el formato vacío no se filtran por la lista **Periodo**.
+</GuideCallout>
+
+<GuideCallout type="warning">
+  Los informes contienen datos personales y de seguimiento de los estudiantes. Revíselos antes de compartirlos y entréguelos solo a quien corresponda.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"¿Cómo sé si mi institución usa la ficha clásica?"}>
+    Si al ingresar a **Ficha Observador** ve la pantalla **Caracterización Adicional de Estudiantes** o la pantalla **Ficha Observador** con las pestañas **Seguimiento**, **Valoración Individual**, **Caracterización**, **Anotaciones** y **Ficha Observador**, su institución usa la ficha clásica. Si ve un panel con **Seguimiento**, **Caracterización**, **Valoración** e **Informes**, haga clic en **Cambiar versión** y elija la ficha renovada.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un grupo en Registro Seguimiento?"}>
+    La institución define qué grupos ve el docente en esta pantalla: los de su dirección de grupo, los de su asignación académica o todos. Si necesita registrar seguimientos en un grupo que no aparece, consulte con el área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"¿Qué significa la letra al final del nombre del estudiante?"}>
+    Es la inicial del estado de la matrícula del estudiante, por ejemplo **M** para matriculado. La institución puede configurar que la lista solo muestre estudiantes matriculados.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Son obligatorios los compromisos?"}>
+    No. **Compromiso del Estudiante**, **Compromiso del Acudiente** y **Compromiso de la Institución** son opcionales. Complete el tipo, la fecha y la descripción del evento.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Elegí otro año en Calendario y registré un seguimiento. ¿Dónde quedó?"}>
+    Los seguimientos nuevos siempre quedan en el calendario en el que ingresó a SINAI. Para registrar en otro año, cambie el año de trabajo en la parte superior de SINAI.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Puedo registrar la valoración o la caracterización desde esta pantalla?"}>
+    No. Las pestañas **Valoración Individual** y **Caracterización** solo consultan. Regístrelas en **Ficha Observador → Valoración** y en **Ficha Observador → Caracterización**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Las anotaciones de la pestaña Anotaciones son seguimientos?"}>
+    No. Son las anotaciones de comportamiento del estudiante, que se registran en otra parte de SINAI. Aquí se muestran como referencia y no hacen parte de la ficha observador.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question={"¿El acudiente se entera del seguimiento?"}>
+    Solo si la institución activó la notificación de anotaciones a los acudientes y el acudiente del estudiante tiene un correo registrado. En ese caso SINAI le envía un correo con el seguimiento.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="09" question={"¿Por qué no aparece mi grupo en Caracterización?"}>
+    La lista **Grupo** solo muestra los grupos de los que usted es director de grupo en el calendario en el que ingresó a SINAI. Si debe caracterizar un grupo que no dirige, solicite la asignación de la dirección de grupo al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="10" question={"Seleccioné la característica y no aparecen estudiantes. ¿Qué hago?"}>
+    Haga clic en **Generar**. La lista solo muestra a los estudiantes que ya tienen un registro de esa característica, y **Generar** crea el registro de los estudiantes con matrícula activa en el grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="11" question={"Llegó un estudiante nuevo al grupo y no está en la lista. ¿Cómo lo agrego?"}>
+    Haga clic en **Generar** con el grupo y la característica seleccionados. SINAI solo agrega a los estudiantes que faltan; los que ya estaban conservan su opción y su observación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="12" question={"¿Puedo crear una característica o una opción nueva?"}>
+    No desde el módulo docente. Las categorías, las características y sus opciones las configura el área administrativa de la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="13" question={"¿Qué muestra la tabla Opción, Cantidad y Porcentaje%?"}>
+    Es el resumen de la característica en el grupo: cuántos estudiantes tienen cada opción y qué porcentaje del grupo representan.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="14" question={"¿Dónde consulto la caracterización de un estudiante?"}>
+    En **Ficha Observador → Registro Seguimiento**, pestaña **Caracterización**, con el estudiante seleccionado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="15" question={"¿Cuándo uso la valoración individual y cuándo la de grupo?"}>
+    Use la individual cuando va a valorar a un estudiante en todos los aspectos y criterios. Use la de grupo cuando va a valorar un criterio para todos los estudiantes. Las dos guardan la misma información, así que puede combinarlas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="16" question={"¿Por qué no aparece un grupo en Valoración?"}>
+    Como docente, la lista **Grupo** muestra solo los grupos que usted dirige en el calendario seleccionado. Si cambió el **Calendario**, la lista corresponde a ese año. Si dirige un grupo y no aparece, solicite al área administrativa que verifique la dirección de grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="17" question={"Aparece «La fecha limite para el registro de la valoración periódica es entre...». ¿Qué hago?"}>
+    Su institución definió un rango de fechas para registrar la valoración periódica y hoy está fuera de él. Los botones **Generar**, **Guardar** y **Autollenar** quedan deshabilitados. Solicite al personal administrativo que habilite la fecha.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="18" question={"La tabla de valoración por grupo dice que no he generado la ficha. ¿Qué falta?"}>
+    Seleccione el grupo, el aspecto y el criterio, y haga clic en **Generar**. La ficha se crea por criterio: si valora otro criterio o aspecto, genere también su ficha.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="19" question={"¿Generar borra lo que ya valoré?"}>
+    No. **Generar** solo crea las filas que aún no existen, con las frecuencias en blanco. Las valoraciones ya registradas no se modifican.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="20" question={"¿Por qué no veo la columna Periodo 4 en la valoración?"}>
+    La columna aparece solo si el grupo tiene más de tres periodos. Si su institución trabaja con tres periodos, solo verá **Periodo 1** a **Periodo 3**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="21" question={"Al hacer clic en Autollenar aparece «Usted no puede registrar anotaciones porque no es director del grupo...». ¿Qué significa?"}>
+    El docente solo puede autollenar los grupos que dirige. El mensaje completo es «Usted no puede registrar anotaciones porque no es director del grupo al cual pertenece el estudiante. Por favor solicite a un usuario administrativo la autorización correspondiente.»
+  </GuideFAQItem>
+
+  <GuideFAQItem index="22" question={"¿Se guarda la valoración cuando elijo la frecuencia en la lista?"}>
+    No. Las listas solo cambian la pantalla. Haga clic en **Guardar** para registrar la valoración. La única excepción es **Aceptar** en la ventana **Autollenar Periodo**, que registra de inmediato.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="23" question={"¿Por qué la lista Grupo de Informes está vacía o no aparece mi grupo?"}>
+    La lista solo muestra los grupos de los que usted es director de grupo en el calendario en el que ingresó. Si no tiene dirección de grupo, solicite al área administrativa que la asigne o consulte los informes desde el módulo administrativo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="24" question={"¿Por qué la lista Estudiante de Informes está desactivada?"}>
+    Se activa con los informes individuales: **Informe de Valoración Periódica por Estudiante**, **Informe de Seguimiento Periódico por Estudiante** y **Ficha Observador Individual**. Seleccione uno de ellos en **Informe**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="25" question={"¿Para qué sirve el Formato Vacio de Valoración Periódica por Grupo?"}>
+    Genera el formato de valoración periódica del grupo sin valoraciones registradas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="26" question={"Cambié el periodo y el informe de valoración no cambió. ¿Por qué?"}>
+    SINAI solo envía el periodo a los informes de seguimiento periódico. Los informes de valoración periódica y el formato vacío no se filtran por la lista **Periodo**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="27" question={"¿Cómo descargo el informe?"}>
+    Después de hacer clic en **Ver Informe**, use la opción de exportar de la barra del visor, en **Visualización del informe**, y elija el formato.
+  </GuideFAQItem>
+</GuideFAQ>
+
+</PlanillaGuide>
+
+<PlanillaGuide
+  id="renovada"
+  title="Ficha renovada"
+  description="Interfaz renovada de la ficha observador, con un panel de opciones que reúne Seguimiento, Caracterización, Valoración e Informes."
+  image="/images/guides/docente-nueva-version-ficha-observador/panel-opciones.jpg"
+  status="ready"
+>
+
+## Tutorial
+
+<GuideVideoPlaylist
+  title="Ruta de aprendizaje: Ficha del Observador"
+  description="Seleccione el tema que necesita gestionar desde el módulo docente."
+  videos={[
+    { id: 'js_GNLLNqqg', title: '1. Registro de seguimientos', description: 'Registre seguimientos desde el módulo docente.', odyseeUrl: 'https://odysee.com/registro-de-seguimientos-modulo-docente%3A43bb92f55874e53209133391222b7610025f42a7' },
+    { id: 'gavUk0isNqM', title: '2. Caracterización adicional', description: 'Gestione la caracterización adicional de los estudiantes.', odyseeUrl: 'https://odysee.com/caracterizaci%C3%B3n-adicional-modulo%3A1a253fb40fbc3eb83a0678f988fe14120072aaba' },
+    { id: '39PDyG-7y_w', title: '3. Valoración individual', description: 'Registre o consulte la valoración individual.', odyseeUrl: 'https://odysee.com/valoraci%C3%B3n-individual-ficha-observador%3A7b241b6acba8be5aa2483909c3dffe2f6405c56a' },
+    { id: 'CwGV_G5rspA', title: '4. Valoración por grupo', description: 'Gestione la valoración por grupo.', odyseeUrl: 'https://odysee.com/valoraci%C3%B3n-por-grupo-ficha-observador%3A15a36f9b50ca98332f0474eeeb092d899083174b' },
+    { id: 'AAdkXD7lInA', title: '5. Informes', description: 'Genere los informes de la Ficha del Observador.', odyseeUrl: 'https://odysee.com/informes-ficha-observador%3A217fddf4e0b1a7ef96b44bec5d412eab113092fc' },
+  ]}
+/>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la ficha renovada?
+
+La **ficha renovada** reúne en un solo módulo los procesos de la ficha de cada estudiante: los seguimientos, la caracterización adicional, la valoración por aspectos y criterios y los informes. Cada proceso es una sección, y todas comparten el mismo panel de opciones a la izquierda.
+
+<GuideImageTrigger src="/images/guides/docente-nueva-version-ficha-observador/panel-opciones.jpg" alt="Sección Seguimiento con el panel de opciones a la izquierda y las pestañas Seguimientos, Seguimientos individuales y Anotaciones disciplinarias">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Reconocerá la ficha renovada porque la pantalla muestra, a la izquierda, el panel con **Seguimiento**, **Caracterización**, **Valoración** e **Informes**, y a la derecha las pestañas de la sección.
+
+<GuideCallout>
+  Si al ingresar a **Ficha Observador** ve la pantalla **Caracterización Adicional de Estudiantes** o la pantalla **Ficha Observador** con las pestañas **Seguimiento**, **Valoración Individual**, **Caracterización**, **Anotaciones** y **Ficha Observador**, su institución usa la ficha clásica. Haga clic en **Cambiar versión** y elija esa opción.
+</GuideCallout>
+
+#### 2. Moverse entre las secciones
+
+Haga clic en una sección del panel para abrirla:
+
+<GuideDataTable>
+
+| Sección | Qué permite |
+| --- | --- |
+| **Seguimiento** | Consultar, gestionar y descargar los seguimientos de los estudiantes. |
+| **Caracterización** | Consultar y gestionar la caracterización adicional, individual y sus reportes. |
+| **Valoración** | Consultar y gestionar la valoración de los estudiantes, individual y por grupo. |
+| **Informes** | Descargar la ficha individual del estudiante y el reporte de seguimiento. |
+
+</GuideDataTable>
+
+- **Caracterización** y **Valoración** solo aparecen si la institución habilitó esos módulos.
+- La sección **Configuración** no se muestra al docente; la maneja el área administrativa.
+- El botón de tres líneas, a la izquierda del título, muestra u oculta el panel. En pantallas angostas, como tabletas y celulares, el panel se abre sobre el contenido y se cierra al elegir una sección.
+- Cada sección se divide en pestañas. El botón **Ayuda**, a la derecha del título, abre la ayuda de la pestaña activa.
+
+#### 3. Filtros en el módulo docente
+
+Las secciones usan los filtros **Docente**, **Grupo**, **Estudiante** y **Periodo**. En el módulo docente:
+
+- **Docente** muestra solo su nombre.
+- **Grupo** no tiene la opción **Todos**. Muestra sus grupos de dirección, los de su asignación académica o todos, según lo que defina la institución.
+- **Estudiante** muestra al lado del nombre la inicial del estado de la matrícula, por ejemplo **M**.
+
+Los filtros se conservan al pasar de una sección o pestaña a otra.
+
+#### 4. Seguimiento
+
+La sección **Seguimiento** tiene las pestañas **Seguimientos**, **Seguimientos individuales** y, si la institución habilitó el módulo, **Anotaciones disciplinarias**.
+
+Para registrar un seguimiento:
+
+1. En la pestaña **Seguimientos**, seleccione el **Grupo** y el **Estudiante**.
+2. Haga clic en **Agregar anotación**.
+3. En la ventana **Crear seguimiento**, escriba el texto en **Seguimiento** y revise el **Periodo**, la **Fecha** y el tipo.
+4. Complete los campos personalizados de la institución. Los que tienen asterisco son obligatorios.
+5. Si lo necesita, agregue las firmas del docente, del estudiante y del acudiente.
+6. Haga clic en **Agregar**.
+
+<GuideImageTrigger src="/images/guides/docente-nueva-version-ficha-observador/crear-seguimiento.jpg" alt="Ventana Crear seguimiento con el texto, el periodo, la fecha, el tipo, un campo personalizado y la firma del docente">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Cada seguimiento muestra si las firmas del **Docente**, el **Estudiante** y el **Acudiente** están **Firmado** o **Pendiente**, y tiene los botones **Editar** y **Eliminar**. **Descargar PDF** descarga los seguimientos del estudiante o, con **Estudiante** en **Todos**, los del grupo.
+
+El detalle de la ventana, las firmas, las descargas y los mensajes está en [Seguimientos del observador](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante/seguimientos).
+
+#### 5. Caracterización
+
+La sección **Caracterización** tiene tres pestañas:
+
+- **Caracterización adicional:** registra un aspecto de una característica para todos los estudiantes del grupo.
+- **Caracterización individual:** registra todos los aspectos para un solo estudiante.
+- **Reportes:** resume cuántos estudiantes tienen cada valoración en un aspecto, con un gráfico.
+
+Para registrar la caracterización del grupo:
+
+1. En **Caracterización adicional**, seleccione el **Grupo**, la **Características** y el **Aspecto**.
+2. En la fila de cada estudiante, elija la valoración y, si lo necesita, escriba la **Observación**.
+
+<GuideImageTrigger src="/images/guides/docente-nueva-version-ficha-observador/caracterizacion-adicional.jpg" alt="Pestaña Caracterización adicional con grupo, característica y aspecto elegidos y la lista de estudiantes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI guarda cada valoración al elegirla y cada observación al salir del campo; no hay botón **Guardar**. **Autollenar** aplica la misma valoración u observación a los estudiantes marcados.
+
+El detalle está en [Caracterización](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante/caracterizacion).
+
+#### 6. Valoración
+
+La sección **Valoración** tiene dos pestañas:
+
+- **Valoración individual:** todos los aspectos y criterios de un estudiante.
+- **Valoración por grupo:** cada criterio con la lista de estudiantes del grupo.
+
+Para valorar:
+
+1. Seleccione el **Calendario**, el **Grupo**, el **Estudiante**, si está en **Valoración individual**, y el **Periodo**.
+2. En cada criterio, elija la valoración en la lista del periodo.
+
+<GuideImageTrigger src="/images/guides/docente-nueva-version-ficha-observador/valoracion-individual.jpg" alt="Pestaña Valoración individual con calendario, docente, grupo, estudiante y periodo, y los criterios de un aspecto">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La valoración se guarda al elegirla. Para dar la misma valoración a varios criterios o estudiantes, márquelos y use **Autollenar**: en la ventana **Autollenar Periodo**, elija el periodo y la valoración.
+
+El detalle está en [Valoración del observador](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante/valoracion).
+
+#### 7. Informes
+
+La sección **Informes** tiene dos pestañas:
+
+- **Ficha individual del estudiante:** la hoja de vida del estudiante en el observador, en Word o en PDF. En **Contenido opcional del reporte** puede incluir la caracterización adicional, la caracterización PIAR y la valoración periódica.
+- **Seguimiento de los docentes:** el informe de los seguimientos que usted registró, filtrado por grupo, estudiante, periodo y tipo de seguimiento.
+
+<GuideImageTrigger src="/images/guides/docente-nueva-version-ficha-observador/informes.jpg" alt="Pestaña Ficha individual del estudiante con docente, grupo, estudiante y el contenido opcional del reporte">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Seleccione los filtros y haga clic en **Descargar Word** o en **Descargar PDF**. El detalle está en [Informes del observador](/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/observador-del-estudiante/informes).
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué no veo Caracterización o Valoración en el panel?">
+    Esas secciones solo aparecen cuando la institución habilitó los módulos de caracterización y valoración del observador. Consulte con el área administrativa.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="¿Por qué no veo la sección Configuración?">
+    La sección **Configuración** no se muestra al rol docente. Los tipos de seguimiento, los campos personalizados, la escala y los aspectos y criterios los define el área administrativa.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="¿Por qué la lista Docente solo tiene mi nombre?">
+    En el módulo docente, los seguimientos, la caracterización, la valoración y los informes se trabajan con su usuario. La lista no tiene la opción **Todos**.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Por qué no aparece un grupo?">
+    La institución define si el docente ve sus grupos de dirección, los de su asignación académica o todos los grupos. Si le falta un grupo, consulte con el área administrativa.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Tengo que guardar la caracterización y la valoración?">
+    No. Cada valoración se guarda en el momento en que la elige, y cada observación de la caracterización se guarda al salir del campo. Los seguimientos, en cambio, se guardan con **Agregar** o **Guardar** en su ventana.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="Oculté el panel de opciones. ¿Cómo lo vuelvo a mostrar?">
+    Haga clic en el botón de tres líneas, a la izquierda del título de la sección.
+  </GuideFAQItem>
+</GuideFAQ>
+
+</PlanillaGuide>
+
+</PlanillaGuideSwitcher>

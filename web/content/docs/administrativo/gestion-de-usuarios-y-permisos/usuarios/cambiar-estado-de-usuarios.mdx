@@ -1,23 +1,95 @@
 ---
 title: "Cambiar estado de usuarios"
-description: "Contenido pendiente de documentación para «Cambiar estado de usuarios»."
+description: "Active, inactive o bloquee el usuario de funcionarios, estudiantes, acudientes y otros usuarios en la institución."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Cambiar el estado de los usuarios desde Gestión de Usuarios. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es cambiar el estado de un usuario?
+
+El estado del usuario indica si la persona tiene su acceso a SINAI activo en la institución. Se cambia en **Gestión de Usuarios**, para uno o varios usuarios a la vez. El estado del usuario es distinto del estado del funcionario o de la matrícula del estudiante.
+
+Ingrese a **Establecimiento → Usuarios → Gestión de Usuarios**.
+
+<GuideImageTrigger src="/images/guides/cambiar-estado-de-usuarios/acceso-gestion-usuarios.jpg" alt="Menú Establecimiento con el submenú Usuarios abierto y la opción Gestión de Usuarios">
+  Ver ejemplo
+</GuideImageTrigger>
+
+En la columna **Usuario** de la lista, el círculo de color muestra el estado actual:
+
+- **Verde:** activo.
+- **Naranja:** bloqueado.
+- **Rojo:** inactivo u otro estado.
+
+La lista de la barra superior, junto a **Actualizar estado**, ofrece **ACTIVO**, **INACTIVO**, **BLOQUEADO** y **MIGRADO**.
+
+#### 2. Filtrar los usuarios
+
+En el panel **Gestión de usuarios - Filtros**:
+
+1. En **Roles**, seleccione **Funcionarios**, **Estudiantes**, **Acudientes** u **Otros Usuarios**.
+2. Para funcionarios, elija el **Estado Funcionario**. Para estudiantes y acudientes, elija el **Estado Matrícula**, **Sedes** y **Grupos**.
+3. En **Estado Usuario**, elija **Todos**, **Activo**, **Inactivo** o **Bloqueo**.
+4. Si lo necesita, escriba un nombre o un usuario en **Búsqueda** y haga clic en **Buscar**.
+
+**Otros Usuarios** son los usuarios sin relación con un funcionario, estudiante o acudiente.
+
+#### 3. Cambiar el estado de usuarios seleccionados
+
+1. Marque la casilla de cada usuario. La casilla del encabezado invierte la selección de las filas de la página.
+2. En la lista de la barra superior, seleccione el nuevo estado.
+3. Haga clic en **Actualizar estado**.
+
+<GuideImageTrigger src="/images/guides/cambiar-estado-de-usuarios/actualizar-estado.jpg" alt="Gestión de usuarios con un funcionario marcado y el estado ACTIVO elegido junto al botón Actualizar estado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Debajo de los botones **Exportar a Excel** y **Restablecer Accesos**, SINAI muestra un resumen: **De** N **usuarios, se actualizaron correctamente** M, seguido del resultado de cada usuario. Si el cambio es correcto, la línea del usuario dice **Cambio de estado realizado correctamente**.
+
+#### 4. Cambiar el estado de todos los filtrados
+
+1. Ajuste los filtros.
+2. Marque **Todos los filtrados**.
+3. Seleccione el nuevo estado.
+4. Haga clic en **Actualizar estado**.
+5. Confirme el mensaje *¿Seguro que desea actualizar el estado de todos los usuarios listados?*
+
+<GuideCallout type="warning">
+  Con **Todos los filtrados**, el cambio aplica a todos los usuarios que cumplen los filtros, no solo a los de la página visible. Revise los filtros antes de confirmar. Para **Otros Usuarios** no se permite el cambio masivo.
+</GuideCallout>
+
+#### 5. Permiso necesario
+
+**Actualizar estado** exige el permiso **007 - Modificar Usuarios**. Si el usuario no lo tiene, SINAI muestra **No tiene asignado el permiso Nº007** y no aplica el cambio. El rector tiene todos los permisos. Los permisos se asignan en [Asignación de permisos](/docs/administrativo/gestion-de-usuarios-y-permisos/permisos/gestionar-permisos-de-personal).
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Cambiar estado de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="Hice clic en Actualizar estado y aparece «Debe seleccionar un estado». ¿Qué hago?">
+    Seleccione el nuevo estado en la lista de la barra superior, junto a **Actualizar estado**. La lista inicia en **Seleccione**.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Cambiar estado de usuarios» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Qué significa «No has seleccionado ninguna fila»?">
+    No marcó ningún usuario y la casilla **Todos los filtrados** está desmarcada. Marque los usuarios o use **Todos los filtrados**.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Cambiar estado de usuarios»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Puedo activar a una persona que aparece como «Sin Usuario»?">
+    No. Si la persona no tiene usuario, el cambio de estado falla. Primero genere su usuario con un sistema de evaluación, como se explica en [Gestión de usuarios](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/generar-usuarios), y luego cambie el estado.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿El estado del usuario cambia el estado del funcionario o la matrícula?">
+    No. **Actualizar estado** cambia solo el estado del usuario en la institución. El estado del funcionario y el de la matrícula se manejan en sus propios módulos y aquí solo sirven de filtro.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué pasa si el usuario también trabaja en otra institución?">
+    El estado se guarda por institución. Si inactiva o bloquea al usuario aquí y él está activo en otra institución, SINAI cambia su institución y su rol predeterminados a esa otra institución. Si lo activa aquí, esta institución y su rol quedan como predeterminados.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Por qué no puedo cambiar el estado de Otros Usuarios con Todos los filtrados?">
+    SINAI no permite el cambio masivo para ese rol y muestra **Para el tipo de Rol: Otros Usuarios, no se puede cambiar el estado del usuario de forma masiva**. Marque los usuarios uno por uno y use **Actualizar estado**.
   </GuideFAQItem>
 </GuideFAQ>

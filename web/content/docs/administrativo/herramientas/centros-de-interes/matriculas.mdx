@@ -1,32 +1,93 @@
 ---
 title: "Matrículas"
-description: "Asigne estudiantes de distintos grupos a un centro de interés."
+description: "Agregue estudiantes de distintos grupos a un centro de interés o retírelos de él."
 guide: true
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/matricula-de-centros-de-interes/"
-lastModified: "2024-06-07"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
 ## Video tutorial
 
 <GuideVideos compact>
-  <YouTube id="ryh3tIyVrkg" title="Matrícula de estudiantes en centros de interés" />
+<YouTube id="ryh3tIyVrkg" title="Matrícula de estudiantes en centros de interés" />
 </GuideVideos>
 
-La matrícula permite asignar estudiantes de distintos grupos a un centro de interés para que el docente responsable pueda registrar sus valoraciones.
+## Guía paso a paso
 
-## Asignar un estudiante al centro de interés
+### 1. ¿Qué es Matrículas?
 
-1. En el módulo administrativo, abra **Evaluación → Centros de interés → Matrículas**.
-2. Seleccione la sede y el grupo para consultar su lista de estudiantes.
-3. Seleccione el centro de interés al que desea asignarlos.
-4. Haga clic en **Asignar**, el botón azul que aparece a la derecha de cada estudiante.
+**Matrículas** permite agregar estudiantes de distintos grupos a un centro de interés, para que el docente responsable registre sus valoraciones en la planilla del centro.
 
-> **Nota:** no se permite asignar un estudiante que ya pertenezca a otro centro de interés.
+Ingrese a **Evaluación → Centros de Interés** y, en el panel **Opciones**, seleccione **Matrículas**.
 
-## Quitar un estudiante de un centro de interés
+<GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/acceso-matriculas.jpg" alt="Menú Evaluación, submenú Centros de Interés y panel Opciones con Matrículas">
+  Ver ejemplo
+</GuideImageTrigger>
 
-1. Abra **Centros de interés → Matrículas**.
-2. Seleccione el centro de interés del que desea retirar al estudiante.
-3. Haga clic en **Eliminar**, el botón rojo junto al estudiante.
+La pantalla se divide en dos listas:
 
-> **Precaución:** al retirar un estudiante se eliminan sus valoraciones en ese centro de interés. Las calificaciones que ya se hayan enviado a las planillas de asignaturas no se eliminan.
+- **Izquierda:** estudiantes del grupo elegido, cada uno con el botón **Agregar**.
+- **Derecha:** estudiantes matriculados en el centro de interés elegido, de cualquier grupo, con la columna **Grupo** y el botón rojo para quitarlos.
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Sede** | Sede cuyos grupos se cargan en **Grupo**. |
+| **Grupo** | Grupo cuyos estudiantes aparecen en la lista de la izquierda. |
+| **Centro de interés** | Centro al que se agregan los estudiantes y cuyos matriculados aparecen en la lista de la derecha. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  Los centros de interés se crean en la opción **Asignación** del mismo panel. Si la lista **Centro de interés** está vacía, cree primero el centro allí.
+</GuideCallout>
+
+#### 2. Agregar estudiantes al centro de interés
+
+1. Seleccione la **Sede** y el **Grupo**.
+2. Seleccione el **Centro de interés**.
+3. En la lista de la izquierda, haga clic en **Agregar** junto a cada estudiante que desea matricular.
+4. Verifique que el estudiante aparezca en la lista de la derecha, con su grupo.
+
+Para matricular estudiantes de otros grupos, cambie la **Sede** o el **Grupo** y repita el procedimiento. El centro de interés seleccionado se mantiene.
+
+<GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/agregar-estudiantes.jpg" alt="Matrículas con sede, grupo y centro de interés seleccionados y estudiantes matriculados a la derecha">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout>
+  Si el estudiante ya está matriculado en el centro de interés seleccionado, SINAI muestra el mensaje **El estudiante ya se encuentra asignado al centro de interés** seguido del nombre del centro, y no lo agrega de nuevo.
+</GuideCallout>
+
+#### 3. Quitar un estudiante del centro de interés
+
+1. Seleccione el **Centro de interés** del que desea retirar al estudiante.
+2. En la lista de la derecha, haga clic en el botón rojo con el ícono de papelera junto al estudiante. Al pasar el cursor se lee **Quitar estudiante del centro de interés**.
+3. En la ventana **¿Confirmar eliminación?**, haga clic en **Sí, eliminar**.
+
+<GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/confirmar-eliminacion.jpg" alt="Ventana Confirmar eliminación con los botones Sí, eliminar y Cancelar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout type="warning">
+  Al quitar un estudiante se eliminan las valoraciones que tenga registradas en la planilla de ese centro de interés, y no se pueden recuperar. Las calificaciones que ya se enviaron a las planillas de las asignaturas no se modifican.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Dónde encuentro la opción Matrículas?">
+    En **Evaluación → Centros de Interés**, dentro del panel **Opciones** de la izquierda, junto a **Asignación** y **Valoración**.
+  </GuideFAQItem>
+  <GuideFAQItem index="02" question="¿Puedo matricular estudiantes de varios grupos en el mismo centro de interés?">
+    Sí. Con el centro de interés seleccionado, cambie la **Sede** o el **Grupo** y agregue los estudiantes. La lista de la derecha muestra el grupo de cada matriculado.
+  </GuideFAQItem>
+  <GuideFAQItem index="03" question="¿Por qué aparece «El estudiante ya se encuentra asignado al centro de interés»?">
+    Porque el estudiante ya está matriculado en el centro de interés seleccionado. Revise la lista de la derecha.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="¿Qué pasa con las valoraciones si quito a un estudiante?">
+    Se eliminan las valoraciones registradas en la planilla del centro de interés. Las calificaciones ya enviadas a las planillas de asignaturas se conservan.
+  </GuideFAQItem>
+</GuideFAQ>

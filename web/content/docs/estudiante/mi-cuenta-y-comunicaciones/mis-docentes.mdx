@@ -4,7 +4,8 @@ description: "Consulta el nombre de quien dicta cada asignatura de tu grupo."
 guide: true
 wordpressId: 30604
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/mis-docentes/"
-lastModified: "2023-11-17 08:41:52"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 ## Video tutorial
 
@@ -14,37 +15,64 @@ lastModified: "2023-11-17 08:41:52"
 
 ## Guía paso a paso
 
-El módulo **Mis Docentes** permite a los estudiantes consultar información sobre los docentes que atienden cada asignatura en el calendario actual y en los anteriores.
+### 1. ¿Qué es Mis docentes?
 
-En el módulo del estudiante, haga clic en el menú **Inicio** > **Mis Docentes** (disponible en el panel izquierdo o a través del ícono correspondiente). <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-DOCENTES-1.png"} alt={"Captura de MIS DOCENTES 1"}>Ver ejemplo</GuideImageTrigger>
+**Mis docentes** muestra quién dicta cada asignatura de su grupo. La pantalla se titula **Asignacion Académica** y es solo de consulta: no tiene botones que guarden o cambien datos.
 
+Ingrese a **Inicio → Mis Docentes**. La opción está en el panel izquierdo y como ícono en la página de **Inicio**.
 
+<GuideCallout>
+  Su institución puede tener un menú de Inicio propio. Si no ve **Mis Docentes**, consulte con el personal administrativo de su institución.
+</GuideCallout>
 
-### Elementos principales:
+#### 2. Elegir calendario y grupo
 
-Al ingresar a **Mis Docentes**, se despliega una interfaz con la información organizada de la siguiente manera: <GuideImageTrigger src={"/images/wordpress/2025/02/MIS-DOCENTES-2.png"} alt={"Captura de MIS DOCENTES 2"}>Ver ejemplo</GuideImageTrigger>
+Arriba de la tabla hay dos listas:
 
+- **Calendario:** trae los calendarios en los que usted tiene matrícula en su institución, del más reciente al más antiguo.
+- **Grupo:** trae los grupos en los que está matriculado en el calendario elegido. Al cambiar el calendario, la lista de grupos se actualiza.
 
+Al seleccionar cada valor, la tabla se actualiza sola.
 
-1. Selección del **calendario** (por defecto, aparece el predeterminado) y visualización del **grupo** al que pertenece el estudiante.
-2. Listado de **asignaturas** del grupo del estudiante.
-3. **Intensidad horaria semanal** de cada asignatura.
-4. **Docente asignado** a cada asignatura. En algunos casos, un mismo docente puede atender varias materias.
-5. **Correo electrónico** del docente, visible junto a su nombre.
+#### 3. Leer la tabla de asignaturas
 
+La tabla lista las asignaturas del grupo elegido, ordenadas por el código de la asignatura. Cada fila tiene:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Asignatura** | Nombre de la asignatura. |
+| **Horas Semanales** | Horas semanales asignadas al docente en esa asignatura. |
+| **Docente** | Apellidos y nombres del docente asignado. |
+| **Email Docente** | Correo del docente registrado en la institución. |
+
+</GuideDataTable>
+
+Un mismo docente puede aparecer en varias asignaturas. Si el grupo no tiene asignaciones registradas, la tabla no se muestra.
+
+Para escribirle a un docente desde SINAI, use la guía de [Mensajes](/docs/estudiante/mi-cuenta-y-comunicaciones/mensajes).
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué necesitas tener listo para «Mis docentes»?"}>
-    Entra a tu módulo y abre Mis docentes.
+  <GuideFAQItem index="01" question="¿Puedo ver los docentes de años anteriores?">
+    Sí. En **Calendario** aparecen todos los calendarios en los que tuvo matrícula en la institución. Elija el año y luego el grupo en el que estuvo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo sabes que «Mis docentes» quedó listo?"}>
-    Ves el nombre de quien dicta cada asignatura.
+  <GuideFAQItem index="02" question="La tabla no muestra ninguna asignatura. ¿Por qué?">
+    La tabla muestra las asignaciones de docentes registradas para su grupo en el calendario elegido. Si no hay asignaciones, no se muestra. Revise que **Calendario** y **Grupo** sean los correctos y, si es así, consulte con la coordinación de su institución.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué haces si tienes un problema con «Mis docentes»?"}>
-    Si falta un docente, cuéntaselo a la coordinación de tu colegio.
+  <GuideFAQItem index="03" question="¿Por qué la columna Email Docente aparece vacía?">
+    El correo viene del registro del funcionario en la institución. Si no lo tiene registrado, el campo queda vacío.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Qué significan las horas semanales?">
+    Son las horas semanales que la institución asignó al docente en esa asignatura para su grupo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="¿Puedo cambiar un docente desde esta pantalla?">
+    No. La pantalla es de consulta. Las asignaciones las registra la institución.
   </GuideFAQItem>
 </GuideFAQ>

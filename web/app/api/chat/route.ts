@@ -93,7 +93,14 @@ export async function POST(req: Request) {
   });
 
   return createUIMessageStreamResponse({
-    stream: toUIMessageStream({ stream: result.stream }),
+    stream: toUIMessageStream({
+      stream: result.stream,
+      // El detalle queda en el log del servidor; al usuario no se le exponen datos internos.
+      onError(error) {
+        console.error('[api/chat] Error al generar la respuesta:', error);
+        return 'El asistente no está disponible en este momento. Inténtelo de nuevo más tarde.';
+      },
+    }),
   });
 }
 

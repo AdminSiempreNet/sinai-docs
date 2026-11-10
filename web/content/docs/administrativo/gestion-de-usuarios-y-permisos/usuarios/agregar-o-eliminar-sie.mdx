@@ -1,23 +1,129 @@
 ---
 title: "Agregar o eliminar SIE"
-description: "Contenido pendiente de documentación para «Agregar o eliminar SIE»."
+description: "Agregue sistemas de evaluación a los usuarios, elimínelos o cambie el predeterminado desde Gestión de Usuarios."
 guide: true
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Agregar, eliminar y predeterminar sistemas de evaluación de los usuarios. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
 
 ## Guía paso a paso
 
-Esta guía está pendiente de completar. Pronto encontrará aquí el procedimiento paso a paso.
+### 1. ¿Qué es el SIE de un usuario?
+
+Cada usuario puede tener uno o varios sistemas de evaluación (SIE) asignados en la institución. Uno de ellos es el **predeterminado**. Desde **Gestión de Usuarios** puede agregar un SIE a varios usuarios a la vez o editar los SIE de un usuario.
+
+Ingrese a **Establecimiento → Usuarios → Gestión de Usuarios**.
+
+<GuideImageTrigger src="/images/guides/agregar-o-eliminar-sie/acceso-gestion-usuarios.jpg" alt="Menú Establecimiento con el submenú Usuarios abierto y la opción Gestión de Usuarios">
+  Ver ejemplo
+</GuideImageTrigger>
+
+En la columna **Usuario** de la lista, debajo del usuario de acceso, aparecen:
+
+- El número de SIE asignados al usuario, en un círculo gris.
+- El nombre del SIE predeterminado, en verde.
+
+Las listas de SIE muestran los sistemas de evaluación de la institución en el calendario seleccionado.
+
+<GuideCallout>
+  Las opciones de SIE solo se muestran con **Funcionarios** y **Otros Usuarios** en **Roles**. Con **Estudiantes** o **Acudientes**, SINAI oculta **Adicionar SIE** y **Editar SIE**.
+</GuideCallout>
+
+#### 2. Agregar un SIE a varios usuarios
+
+1. En **Roles**, seleccione **Funcionarios** u **Otros Usuarios** y ajuste los filtros.
+2. Marque la casilla de cada usuario, o marque **Todos los filtrados** para aplicar el cambio a todos los que cumplen los filtros.
+3. En la lista junto a **Adicionar SIE**, seleccione el sistema de evaluación.
+4. Si quiere que ese SIE quede como predeterminado, marque **Predeterminar**.
+5. Haga clic en **Adicionar SIE**.
+6. Si marcó **Todos los filtrados**, confirme *¿Seguro que desea asignar el sistema de evaluación seleccionado a todos los filtrados?*
+
+<GuideImageTrigger src="/images/guides/agregar-o-eliminar-sie/adicionar-sie.jpg" alt="Gestión de usuarios con un funcionario marcado, un SIE elegido y la casilla Predeterminar marcada junto a Adicionar SIE">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Debajo de los botones **Exportar a Excel** y **Restablecer Accesos**, SINAI muestra cuántos usuarios se modificaron y el resultado de cada uno:
+
+- **Sistema de evaluacion agregado exitosamente:** el SIE se agregó.
+- **Sistema de evaluación agregado exitosamente y establecido como predeterminado:** se agregó y quedó como predeterminado.
+- **Sistema de evaluacion agregado correctamente:** el usuario ya tenía ese SIE.
+
+Si no eligió un SIE, SINAI muestra **Debe seleccionar un Sistema de Evaluación**. Si no marcó usuarios ni **Todos los filtrados**, muestra **No has seleccionado ninguna fila**.
+
+#### 3. Editar los SIE de un usuario
+
+1. En la fila del usuario, haga clic en **Opciones**.
+2. Seleccione **Editar SIE**.
+
+<GuideImageTrigger src="/images/guides/agregar-o-eliminar-sie/opciones-usuario.jpg" alt="Menú Opciones de un usuario con Editar Información, Editar SIE, Actividad/Auditoria y Restablecer Clave">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La ventana **Sistemas de Evaluación** lista los SIE del usuario con su **Id**, el nombre del **Sistema de evaluación** y la casilla **Pre**, marcada en el predeterminado.
+
+<GuideImageTrigger src="/images/guides/agregar-o-eliminar-sie/ventana-sistemas-evaluacion.jpg" alt="Ventana Sistemas de Evaluación con la lista de SIE del usuario, la casilla Pre y los botones Guardar y Cerrar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para agregar un SIE:
+
+1. Seleccione el SIE en la lista de la parte superior de la ventana.
+2. Haga clic en el botón verde **+** (**Agregar Sistema de Evaluación**).
+
+El SIE se agrega sin quedar como predeterminado.
+
+Para eliminar un SIE:
+
+1. Haga clic en la **X** roja de la fila.
+2. Confirme *¿Seguro que deseas eliminar el Sistema de Evaluación?*
+
+Si la eliminación es correcta, SINAI muestra **Sistema de evaluación del usuario eliminado correctamente**.
+
+Para cambiar el SIE predeterminado:
+
+1. Marque **Pre** en el SIE que debe quedar como predeterminado.
+2. Haga clic en **Guardar**.
+
+SINAI muestra **Sistema de Evaluación predeterminado correctamente**. Haga clic en **Cerrar** para volver a la lista.
+
+<GuideCallout type="warning">
+  SINAI no elimina el SIE predeterminado ni el último SIE del usuario. Primero predetermine otro SIE y luego elimine el que ya no necesita.
+</GuideCallout>
+
+El botón azul con el ícono de persona, junto al **+**, genera el usuario con el SIE elegido. Ese proceso se explica en [Gestión de usuarios](/docs/administrativo/gestion-de-usuarios-y-permisos/usuarios/generar-usuarios).
+
+#### 4. Permisos necesarios
+
+- **Adicionar SIE** y el botón **+** de la ventana exigen el permiso **005 - Agregar sistema de evaluación**.
+- La **X** para eliminar un SIE exige el permiso **004 - Cambiar sistema de evaluación de un usuario**.
+
+Si el usuario no tiene el permiso, SINAI muestra **No tiene asignado el permiso Nº** seguido del código, y no aplica el cambio. El rector tiene todos los permisos. Los permisos se asignan en [Asignación de permisos](/docs/administrativo/gestion-de-usuarios-y-permisos/permisos/gestionar-permisos-de-personal).
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Agregar o eliminar SIE»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question="¿Por qué no veo Editar SIE ni Adicionar SIE?">
+    SINAI oculta esas opciones cuando en **Roles** está seleccionado **Estudiantes** o **Acudientes**. Seleccione **Funcionarios** u **Otros Usuarios**.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Agregar o eliminar SIE» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question="¿Por qué aparece «No se puede eliminar el Sistema de Evaluación predeterminado»?">
+    El SIE que intenta eliminar es el predeterminado del usuario. Marque **Pre** en otro SIE, haga clic en **Guardar** y vuelva a eliminarlo.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Agregar o eliminar SIE»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question="¿Qué significa «Dede quedar asignado al menos un Sistema de Evaluación»?">
+    El usuario solo tiene un SIE en la institución y SINAI no permite dejarlo sin ninguno. Agregue otro SIE antes de eliminar este.
+  </GuideFAQItem>
+  <GuideFAQItem index="04" question="Marqué Pre en varios SIE. ¿Cuál queda como predeterminado?">
+    SINAI recorre la lista de arriba abajo y predetermina cada SIE marcado, así que queda el último marcado. Marque **Pre** solo en uno.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="El SIE que necesito no aparece en la lista. ¿Por qué?">
+    Las listas solo muestran los sistemas de evaluación de la institución en el calendario seleccionado. Revise el calendario activo en la parte superior de SINAI.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿Cómo agrego el mismo SIE a todos los funcionarios?">
+    En **Roles** seleccione **Funcionarios**, filtre por el estado y la búsqueda que necesite, marque **Todos los filtrados**, elija el SIE y haga clic en **Adicionar SIE**. El cambio aplica a todos los usuarios que cumplen los filtros, no solo a los de la página visible.
   </GuideFAQItem>
 </GuideFAQ>

@@ -1,85 +1,96 @@
 ---
 title: "Cargar fotografía"
-description: "Registre o actualice la fotografía de los estudiantes desde el Módulo del Docente."
+description: "Cargue o reemplace la fotografía de los estudiantes de los grupos en los que usted es director de grupo."
 guide: true
 wordpressId: 30510
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-cargar-fotografias/"
-lastModified: "2026-09-07"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
-## Tutorial
+## Video tutorial
 
 <GuideVideos compact>
-  <YouTube
-    id="nRq3UdN8pSA"
-    title="Cargar fotografía"
-    odyseeUrl="https://odysee.com/cargar-fotograf%C3%ADas%3A19bcba86cc61a5d7e8339b616de570658021e14b"
-  />
+<YouTube id="nRq3UdN8pSA" title="Cargar fotografía" odyseeUrl="https://odysee.com/cargar-fotograf%C3%ADas%3A19bcba86cc61a5d7e8339b616de570658021e14b" />
 </GuideVideos>
 
-## Cargar fotografía
+## Guía paso a paso
 
-La funcionalidad **Cargar fotografía** permite al docente registrar o actualizar la fotografía de los estudiantes desde el Módulo del Docente.
+### 1. ¿Qué es Cargar Fotografías?
 
-La fotografía registrada puede utilizarse en diferentes procesos y documentos de la plataforma, como el carné estudiantil, la ficha del observador, las planillas de calificaciones y el registro de anotaciones.
+**Cargar Fotografías** le permite registrar o reemplazar la fotografía de los estudiantes de sus grupos. Desde el módulo docente solo aparecen los grupos en los que usted es **director de grupo**, y en cada grupo solo los estudiantes en estado matriculado.
 
-Generalmente, esta funcionalidad está disponible para el docente director de grupo, quien puede cargar o actualizar las fotografías de los estudiantes pertenecientes a los grupos que tiene asignados.
+La fotografía se muestra en otras pantallas del módulo, por ejemplo en **Lista por Grupos**, en la ficha del estudiante y en las planillas de calificaciones.
 
-Ruta de acceso: **Docente → Estudiantes → Cargar fotografía**.
+Ingrese a **Estudiantes → Cargar Fotografías**.
 
-## Paso a paso
-
-### Seleccionar el grupo
-
-Para cargar o actualizar la fotografía de un estudiante:
-
-1. Ingrese al Módulo del Docente.
-2. Diríjase a **Docente → Estudiantes → Cargar fotografía**.
-3. En el campo **Grupo**, seleccione el grupo al que pertenece el estudiante.
-4. Espere a que el sistema cargue los estudiantes correspondientes al grupo seleccionado.
-5. Ubique en el listado al estudiante cuya fotografía desea cargar o actualizar.
-6. Seleccione el estudiante correspondiente.
-7. Haga clic en **Seleccionar archivo**.
-8. Se abrirá el explorador de archivos del dispositivo.
-9. Ubique la carpeta donde se encuentra almacenada la fotografía.
-10. Seleccione la imagen correspondiente al estudiante.
-11. Verifique que la fotografía haya quedado seleccionada.
-12. Haga clic en **Cargar**.
-
-Una vez realizada la carga, la fotografía podrá visualizarse en el panel derecho, donde se muestra el mosaico de fotografías de los estudiantes del grupo.
-
-<GuideImageTrigger src="/images/guides/cargar-fotografias/cargar-fotografias.png" alt="Acceso a Cargar fotografías desde el módulo docente">
-  Referencia visual
+<GuideImageTrigger src="/images/guides/docente-cargar-fotografias/pantalla-cargar-fotografias.jpg" alt="Pantalla Cargar Fotografías con un grupo, un estudiante seleccionado y el mosaico de fotografías del grupo">
+  Ver ejemplo
 </GuideImageTrigger>
 
-### Actualizar una fotografía
+La pantalla tiene dos partes:
 
-La misma funcionalidad permite reemplazar una fotografía que ya se encuentre registrada.
+- **A la izquierda, Cargar Fotografías:** la lista **Grupo**, la lista **Estudiantes**, el campo para elegir el archivo, el botón **Cargar** y la vista previa de la foto del estudiante seleccionado.
+- **A la derecha, Fotografías de Estudiantes del Grupo Seleccionado:** el mosaico con la foto, el nombre y el código de cada estudiante del grupo.
 
-Para actualizarla:
+#### 2. Seleccionar el grupo y el estudiante
 
-1. Seleccione el grupo correspondiente.
-2. Seleccione el estudiante cuya fotografía desea actualizar.
-3. Haga clic en **Seleccionar archivo**.
-4. Ubique y seleccione la nueva fotografía.
-5. Confirme la selección del archivo.
-6. Haga clic en **Cargar**.
-7. Verifique en el panel derecho que la nueva fotografía haya quedado registrada.
+1. En **Grupo**, seleccione el grupo. El mosaico de la derecha muestra las fotografías de sus estudiantes.
+2. En **Estudiantes**, haga clic en el nombre del estudiante. Su fotografía actual aparece en la vista previa, debajo del botón **Cargar**.
 
-> **Importante:** Al cargar una nueva fotografía, esta reemplazará la imagen que se encontraba registrada anteriormente.
+Si el estudiante no tiene foto, la vista previa muestra la silueta gris predeterminada.
+
+#### 3. Cargar la fotografía
+
+1. En **Carga la foto aquí**, haga clic en el botón para elegir el archivo y seleccione la imagen en su equipo.
+2. Haga clic en **Cargar**.
+
+SINAI guarda la imagen, la ajusta de tamaño y la muestra en la vista previa y en el mosaico del grupo.
+
+- El tamaño máximo es 5 MB. Si la imagen lo supera, SINAI muestra «El tamaño de la foto del estudiante sobre pasa el valor de 5 MBs».
+- Si no eligió un estudiante, SINAI muestra «Debe seleccionar el estudiante».
+- Si no eligió un archivo, SINAI muestra «Debe seleccionar una foto para el estudiante».
+
+<GuideCallout>
+  Si el estudiante ya tenía fotografía, la nueva la reemplaza y la anterior se borra del servidor.
+</GuideCallout>
+
+#### 4. Quitar una fotografía
+
+En el mosaico de la derecha, haga clic en la **X** roja junto al código del estudiante. SINAI quita la foto de inmediato, sin pedir confirmación, y el estudiante vuelve a mostrar la silueta gris predeterminada.
+
+<GuideCallout type="warning">
+  La foto quitada se borra del servidor y no se puede recuperar. Para volver a mostrarla debe cargar de nuevo el archivo.
+</GuideCallout>
+
+#### 5. Restricción de fechas
+
+La institución puede limitar la carga de fotografías por parte de los docentes a un rango de fechas. Fuera de ese rango, al hacer clic en **Cargar**, SINAI muestra «La carga de fotografías por parte de docentes está restringida. Solicite la autorización a la dirección de la institución».
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Quién puede cargar o actualizar fotografías de estudiantes?">
-    Generalmente, esta opción está disponible para el docente director de grupo y aplica a los estudiantes de los grupos que tiene asignados.
+  <GuideFAQItem index="01" question={"¿Por qué no aparece uno de mis grupos en la lista?"}>
+    Desde el módulo docente, la lista **Grupo** muestra solo los grupos del calendario actual en los que usted es director de grupo. Los grupos en los que solo dicta clase no aparecen. Si debe cargar fotos de otro grupo, solicítelo al director de ese grupo o al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question="¿Cómo confirmo que la fotografía se cargó correctamente?">
-    Después de seleccionar el archivo y hacer clic en **Cargar**, verifique que la imagen aparezca en el panel derecho, dentro del mosaico de fotografías del grupo.
+  <GuideFAQItem index="02" question={"¿Por qué no aparece un estudiante del grupo?"}>
+    La lista **Estudiantes** y el mosaico muestran solo los estudiantes en estado matriculado. Los estudiantes retirados, trasladados o en otro estado no aparecen.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question="¿Qué ocurre si cargo una fotografía nueva para un estudiante?">
-    La nueva imagen reemplaza la fotografía que estaba registrada previamente para ese estudiante.
+  <GuideFAQItem index="03" question={"Aparece «La carga de fotografías por parte de docentes está restringida». ¿Qué hago?"}>
+    La institución configuró un rango de fechas para la carga de fotografías y hoy está fuera de ese rango. Solicite la autorización a la dirección de la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Qué tamaño puede tener la foto?"}>
+    Hasta 5 MB. Si la supera, SINAI muestra «El tamaño de la foto del estudiante sobre pasa el valor de 5 MBs». Reduzca el tamaño de la imagen y vuelva a cargarla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Puedo reemplazar una foto que ya está cargada?"}>
+    Sí. Seleccione el estudiante, elija la nueva imagen y haga clic en **Cargar**. La nueva foto reemplaza a la anterior.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Hice clic en la X por error. ¿Puedo recuperar la foto?"}>
+    No. La **X** quita la foto sin pedir confirmación y borra el archivo. Cargue de nuevo la imagen desde su equipo.
   </GuideFAQItem>
 </GuideFAQ>

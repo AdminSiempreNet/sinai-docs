@@ -1,11 +1,13 @@
 ---
 title: "Notas aula virtual"
-description: "Importe calificaciones de Aula Virtual Chamilo a SINAI."
+description: "Consulte las calificaciones de las actividades del Aula Virtual Chamilo e impórtelas a una columna de la planilla de calificaciones."
 guide: true
 wordpressId: 30198
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/notas-aula-virtual/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -14,27 +16,104 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-1. Abra **Herramientas > Notas aula virtual**.
-2. Seleccione el curso, grupo, asignatura y período relacionados.
-3. Consulte las calificaciones disponibles en Aula Virtual Chamilo.
-4. Revise la correspondencia de estudiantes y notas antes de importar.
-5. Confirme la importación y valide las calificaciones en la planilla de SINAI.
+### 1. ¿Qué es Notas aula virtual?
 
-Corrija cualquier diferencia de identificación o grupo antes de volver a importar.
+**Notas aula virtual** trae las calificaciones que sus estudiantes obtuvieron en las actividades del Aula Virtual Chamilo y las lleva a una actividad de la planilla de calificaciones de SINAI. Así no tiene que digitar de nuevo las notas.
 
+La pantalla funciona si su institución tiene el servicio de Aula Virtual y si usted tiene usuario en el aula virtual. Si no lo tiene, SINAI muestra «El usuario no posee un usuario asociado al Aula Virtual. Por favor soliciteló.».
+
+Ingrese a **Herramientas → Notas Aula virtual**. También puede abrirla con el botón **Calificaciones PV** de la pantalla [Gestión de usuarios](/docs/docente/aula-virtual/gestion-de-usuarios).
+
+<GuideImageTrigger src="/images/guides/docente-notas-aula-virtual/notas-aula-virtual.jpg" alt="Pantalla Notas aula virtual con los paneles Origen y Destino de notas a importar y la lista de calificaciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene tres paneles: **Origen de Notas a Importar**, **Destino de notas a Importar** y **Lista de calificaciones del aula virtual**.
+
+#### 2. Elegir el origen de las notas
+
+En **Origen de Notas a Importar**, indique de dónde salen las notas en el aula virtual:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Grupo** | Grupo de su asignación académica. Debe estar relacionado con un grupo del aula virtual. |
+| **Cursos** | Cursos del aula virtual asociados al grupo. |
+| **Tipos** | Tipo de actividad del aula virtual: **Ejercicicos**, **Tareas** o **Examenes Presenciales**. |
+| **Actividades** | Actividades del curso del tipo elegido. |
+
+</GuideDataTable>
+
+Cada vez que cambia el grupo, el curso, el tipo o la actividad, SINAI vuelve a consultar el aula virtual y actualiza la lista de calificaciones.
+
+#### 3. Elegir el destino en la planilla
+
+En **Destino de notas a Importar**, indique dónde quedan las notas en SINAI:
+
+<GuideDataTable>
+
+| Campo | Qué define |
+| --- | --- |
+| **Asignatura** | Asignatura del grupo en la que usted tiene asignación. |
+| **Periodo** | Periodo de la planilla. |
+| **Componente** | Componente de evaluación, con su porcentaje, por ejemplo **1 - COGNITIVO (34%)**. |
+| **Actividad** | Actividad o columna de la planilla que recibe las notas. |
+
+</GuideDataTable>
+
+Si la lista **Actividad** está vacía, el botón **+** se habilita y genera las actividades de la planilla para la asignatura, el periodo y el componente elegidos. SINAI muestra «Actividades generadas correctamente».
+
+#### 4. Revisar las calificaciones del aula virtual
+
+El panel **Lista de calificaciones del aula virtual** depende de la configuración de su institución:
+
+- Si la importación está habilitada, muestra una tabla con **UsuarioChamilo**, **Nombre**, **Actividades** y **Notas** de la actividad elegida, y aparece el botón **Importar Notas**.
+- Si la institución importa las notas desde la planilla, muestra «Esta lista no está accesible desde este formulario, podrá importar las notas directamente desde la planilla de calificaciones.».
+- Si la estructura de la planilla no es compatible, muestra «La importación de notas no es compatible con la estructura de planilla utilizado, el traslado de notas a la planilla de calificaciones se debe realizar manualmente.».
+
+#### 5. Importar las notas
+
+1. Elija el origen y el destino.
+2. Revise las notas en la lista de calificaciones.
+3. Haga clic en **Importar Notas**.
+
+SINAI busca a cada estudiante del grupo por su usuario del aula virtual y registra su nota en la actividad elegida de la planilla. Si la institución trabaja con desempeños, convierte la nota según la escala de valoración. Al terminar muestra «Notas exportadas correctamente. Por favor verifiqué la planilla de calificaciones y guarde los cambios para recalcular las notas».
+
+<GuideCallout type="warning">
+  Las notas importadas se escriben en la columna de la planilla que eligió en **Actividad**. Después de importar, abra la planilla con **Ver calificaciones** y guarde para que SINAI recalcule las definitivas.
+</GuideCallout>
+
+#### 6. Otros botones
+
+- **Ir a Aula virtual:** abre el aula virtual en otra pestaña con su sesión iniciada. No aparece si SINAI no logra conectarse con el aula.
+- **Ver calificaciones:** abre en otra pestaña la planilla de calificaciones.
+- **Gestion de Usuarios:** abre en otra pestaña la pantalla [Gestión de usuarios](/docs/docente/aula-virtual/gestion-de-usuarios).
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Notas aula virtual»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Por qué no veo el botón Importar Notas?"}>
+    El botón solo aparece cuando la institución tiene habilitada la importación desde esta pantalla. Si el panel de la derecha dice que la lista no está accesible, importe las notas desde la planilla de calificaciones. Si dice que la importación no es compatible, el traslado se hace manualmente.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Notas aula virtual» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Aparece «El periodo actual está cerrado, no se puede modificar la planilla de calificaciones». ¿Qué hago?"}>
+    El periodo elegido en **Periodo** está cerrado para la planilla de ese grupo y asignatura. Elija un periodo abierto o solicite la apertura al área administrativa.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Notas aula virtual»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Aparece «El grupo actual no posee grupos asociados al Aula Virtual». ¿Por qué?"}>
+    El grupo de SINAI todavía no tiene un grupo relacionado en el aula virtual. Genere y asocie los usuarios del grupo en [Gestión de usuarios](/docs/docente/aula-virtual/gestion-de-usuarios). Si el grupo existe pero no tiene cursos, SINAI muestra «El grupo actual no posee cursos asociados al Aula Virtual».
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué aparece «El usuario no tiene permiso para realizar esta acción» al abrir la pantalla?"}>
+    SINAI no logró conectarse con el aula virtual de la institución, por lo que no puede consultar los cursos ni las notas. Verifique que el aula esté en línea y, si continúa, comuníquese con soporte técnico.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Importé y aparece «No se encontraron notas para guardar. Por favor verifiqué.». ¿Qué revisé?"}>
+    Ninguna nota de la actividad elegida coincidió con un estudiante del grupo. Verifique que el tipo y la actividad sean los correctos y que los estudiantes tengan su usuario del aula virtual asociado en SINAI.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"La lista Actividad del destino está vacía. ¿Cómo la lleno?"}>
+    Haga clic en el botón **+** junto a **Actividad**. SINAI genera las actividades de la planilla para la asignatura, el periodo y el componente elegidos.
   </GuideFAQItem>
 </GuideFAQ>

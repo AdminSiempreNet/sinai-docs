@@ -1,0 +1,153 @@
+---
+title: "Recuperaciones finales"
+description: "Abra sus actas de recuperación final, registre la nota de cada estudiante y descargue el acta."
+guide: true
+wordpressId: 30102
+legacyUrl: "https://ayudasinai.siempre.net.co/docs/recuperaciones-finales/"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
+---
+
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="gBix2k8AydM" title="Recuperaciones finales" odyseeUrl="https://odysee.com/recuperaciones-finales%3A1be9dd0b3039ccdfcdbc632bc627a07911ccf9e2" />
+</GuideVideos>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Recuperaciones finales?
+
+**Recuperaciones finales** reúne las actas de recuperación final que el área administrativa generó para sus grupos y asignaturas. Cada acta lista los estudiantes que deben presentar la recuperación de una asignatura. En el acta usted registra la nota de cada estudiante y SINAI actualiza su situación académica.
+
+Ingrese a **Evaluación → Recuperaciones Finales**. En el menú la opción puede aparecer recortada como **Recuperaciones Fin...**
+
+#### 2. Consultar sus actas
+
+En el panel **Filtros**:
+
+1. Seleccione el **Calendario**.
+2. En **Docente** aparece su nombre. No se puede cambiar.
+3. Seleccione el **Grupo** y la **Asignatura**, o deje **Todos** para ver todas sus actas.
+
+La tabla **Actas de recuperación final** se actualiza al cambiar cualquier filtro. El botón **Actualizar** vuelve a cargarla.
+
+<GuideImageTrigger src="/images/guides/docente-recuperaciones-finales/lista-actas.jpg" alt="Panel Filtros con el docente fijo y tabla Actas de recuperación final con el progreso y el botón Abrir">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Grupo** | Grupo del acta. |
+| **Asignatura** | Asignatura que se recupera. |
+| **N° Acta** | Número del acta. |
+| **Progreso** | Recuperaciones presentadas sobre el total de estudiantes del acta, por ejemplo 2/7. |
+| **Opciones** | Botón **Abrir**, que abre el acta en otra pestaña. |
+
+</GuideDataTable>
+
+Si la tabla muestra «Sin datos para mostrar», no hay actas a su nombre con esos filtros. Las actas las genera el área administrativa.
+
+#### 3. Abrir el acta
+
+Haga clic en **Abrir** en la fila del acta. La pantalla tiene dos partes:
+
+- **Acta recuperación**, a la izquierda: **Acta N°**, **Fecha**, **Grupo**, **Asignatura**, **Docente**, **Observaciones** del acta y las fechas de registro y modificación.
+- **Registro de recuperaciones**, a la derecha: una fila por estudiante y los botones **Guardar**, **Acta**, **Método** y **Opciones**.
+
+<GuideImageTrigger src="/images/guides/docente-recuperaciones-finales/acta-recuperacion.jpg" alt="Acta de recuperación abierta con los datos del acta a la izquierda y el registro de recuperaciones por estudiante a la derecha">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideDataTable>
+
+| Columna | Qué muestra o define |
+| --- | --- |
+| **Estudiante** | Foto, nombre, código y situación académica del estudiante. |
+| **Fecha** | Fecha de la recuperación. Si la deja vacía, SINAI guarda la fecha del día. |
+| **Definitiva** | Nota y desempeño definitivos del estudiante en la asignatura. |
+| **Situación académica** | Situación de la asignatura y su causa, por ejemplo **NO PROMOVIDO** y «1. Desempeño final BAJO». |
+| **Nota** | Nota de la recuperación. Aparece cuando la institución usa valoración cuantitativa. |
+| **Valoración** | Desempeño de la recuperación. Aparece en lugar de **Nota** cuando la institución usa valoración valorativa. |
+| **Presentó** | Indica si el estudiante presentó la recuperación. |
+| **Observaciones** | Observación de la recuperación del estudiante. |
+
+</GuideDataTable>
+
+Solo puede abrir las actas que están a su nombre. Si abre otra, SINAI lo devuelve a la lista de actas.
+
+#### 4. Registrar las recuperaciones
+
+1. En cada estudiante que presentó la recuperación, escriba la **Nota** o seleccione la **Valoración**.
+2. Ajuste la **Fecha** y escriba las **Observaciones**, si lo necesita.
+3. Si corresponde, complete **Acta N°**, **Fecha** y **Observaciones** del acta, en el panel izquierdo.
+4. Haga clic en **Guardar**.
+
+SINAI muestra «Cambios guardados correctamente». Al guardar, SINAI:
+
+- Marca **Presentó** en los estudiantes con una nota válida.
+- Quita la nota y desmarca **Presentó** en los estudiantes sin nota o con una nota menor que la mínima de la escala.
+- Vuelve a procesar la promoción de cada estudiante del acta, con lo que se actualizan su **Definitiva** y su **Situación académica** según el método de la institución.
+
+Si una nota supera la máxima permitida, SINAI no la guarda y muestra «La nota de recuperación para el estudiante [código] está por fuera de los límites permitidos por la institución. Por favor verifique.»
+
+<GuideCallout type="warning">
+  Guardar el acta cambia la situación académica de los estudiantes y puede definir si aprueban la asignatura. Registre solo resultados validados por la institución.
+</GuideCallout>
+
+#### 5. Consultar el método de recuperación
+
+Haga clic en **Método**. Se abre **Información de configuración** con la nota máxima de recuperación, el método que usa su institución y si el registro de recuperaciones por los docentes está **Habilitado** o **Deshabilitado**.
+
+<GuideImageTrigger src="/images/guides/docente-recuperaciones-finales/metodo.jpg" alt="Ventana Información de configuración con la nota máxima, el método y el estado del registro por los docentes">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El método define cómo la recuperación cambia la **Definitiva**:
+
+- **No aplica:** la recuperación no afecta la calificación definitiva.
+- **Promedio:** la definitiva es el promedio de la calificación final con la recuperación.
+- **Reemplazo:** la recuperación reemplaza la definitiva, sin importar si es menor, igual o mayor.
+- **La mas alta:** la recuperación reemplaza la definitiva solo si es mayor.
+
+#### 6. Descargar el acta
+
+Haga clic en **Acta**. Se abre la ventana **Acta de Recuperación** con el documento del acta. Ciérrela con **Cerrar** o con la **X**.
+
+<GuideCallout type="warning">
+  La lista y el botón **Generar** del panel **Acta recuperación**, y el botón **Opciones**, cambian la configuración del proceso para toda la institución. **Generar** vuelve a generar el acta del grupo y la asignatura con la opción de la lista. Úselos solo si el área administrativa se lo indica.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"No aparece ninguna acta. ¿Qué hago?"}>
+    Verifique el **Calendario** y deje **Grupo** y **Asignatura** en **Todos**. Si la tabla sigue en «Sin datos para mostrar», el área administrativa no ha generado actas a su nombre para ese calendario. Solicite que las genere o que le asigne las actas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"¿Por qué aparece «El registro de recuperaciones no está habiliado»?"}>
+    La institución tiene deshabilitado el registro de recuperaciones por parte de los docentes para ese calendario. El mensaje completo es «El registro de recuperaciones no está habiliado. Para obtener permiso solicite autorización al rector del establecimiento». Mientras esté deshabilitado, **Guardar** no registra cambios.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"Marqué Presentó, pero al guardar se desmarcó. ¿Por qué?"}>
+    SINAI define **Presentó** a partir de la nota: lo marca cuando la nota es válida y lo desmarca cuando no hay nota o es menor que la mínima de la escala. Escriba la nota del estudiante y vuelva a guardar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cuál es la nota máxima que puedo registrar?"}>
+    Haga clic en **Método**: la ventana muestra la **Nota máxima de recuperación** de su institución. Si registra una nota mayor, SINAI no la guarda y muestra que está por fuera de los límites permitidos.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que la recuperación quedó registrada?"}>
+    Después de guardar, revise en el acta las columnas **Definitiva** y **Situación académica** del estudiante. En la lista de actas, la columna **Progreso** suma las recuperaciones presentadas; haga clic en **Actualizar** para verla al día.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Un estudiante aparece como «No definido». ¿Qué significa?"}>
+    El estudiante está en el acta, pero no tiene matrícula en el grupo para ese calendario. Consulte el caso con el área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"¿Puedo eliminar un estudiante del acta?"}>
+    No desde el módulo docente. Si un estudiante no debe estar en el acta, solicite el cambio al área administrativa.
+  </GuideFAQItem>
+</GuideFAQ>

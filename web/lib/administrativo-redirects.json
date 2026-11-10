@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/docs/administrativo/cierre-de-ano",
+    "destination": "/docs/administrativo/cierre-anual",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/cierre-de-ano/:path*",
+    "destination": "/docs/administrativo/cierre-anual/:path*",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--matricula--listados--lista-de-estudiantes-por-grupo",
+    "destination": "/docs/administrativo/gestion-de-estudiantes/informacion-de-estudiantes/lista-de-estudiantes-por-grupo",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--foliar-libro--foliar-libro",
+    "destination": "/docs/administrativo/cierre-anual/foliar-libro",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--promocion--promocion-anticipada",
+    "destination": "/docs/administrativo/cierre-anual/promocion-anticipada",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--inicio--inconsistencias",
+    "destination": "/docs/administrativo/cierre-academico-periodo/inconsistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/procesos-de-temporada--finalizacion-de-periodo--inconsistencias",
+    "destination": "/docs/administrativo/cierre-academico-periodo/inconsistencias",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/capacitacion-documentada--promocion--promocion--criterios-de-promocion",
+    "destination": "/docs/administrativo/cierre-anual/criterios-de-promocion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/_archivo/procesos-de-temporada--promocion-y-finalizacion-de-calendario--que-debo-hacer-antes-de-procesar-la-promocion",
+    "destination": "/docs/administrativo/cierre-anual/procesar-promocion",
+    "permanent": true
+  },
+  {
+    "source": "/docs/administrativo/gestion-de-estudiantes/seguimiento-a-estudiantes/anotaciones-internas",
+    "destination": "/docs/administrativo/convivencia-escolar/registro-de-anotaciones-disciplinarias",
+    "permanent": true
+  }
+]

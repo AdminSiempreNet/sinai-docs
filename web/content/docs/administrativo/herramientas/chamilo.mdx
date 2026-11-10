@@ -1,11 +1,13 @@
 ---
 title: "Usuarios Aula Virtual"
-description: "Consulte y gestione los usuarios vinculados al Aula Virtual desde SINAI."
+description: "Genere en el Aula Virtual Chamilo los usuarios de funcionarios y estudiantes, actívelos o inactívelos, actualice sus datos y matricule a los estudiantes en el curso de su grupo."
 guide: true
 wordpressId: 33114
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/usuarios-aula-virtual/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
@@ -16,35 +18,144 @@ lastModified: "2026-07-24"
 
 ## Guía paso a paso
 
-Esta herramienta permite revisar los usuarios vinculados al Aula Virtual y comprobar que su información de acceso corresponda a los registros de SINAI.
+### 1. ¿Qué es Usuarios Aula Virtual?
 
-### 1. Ingrese a Usuarios Aula Virtual
+**Usuarios Aula Virtual** relaciona los usuarios de SINAI con el Aula Virtual Chamilo de la institución. Desde esta pantalla puede:
 
-Desde **Herramientas**, abra la opción **Usuarios Aula Virtual**.
+- crear en el Aula Virtual los usuarios de funcionarios y estudiantes;
+- activarlos o inactivarlos en el Aula Virtual;
+- actualizar sus datos con la información registrada en SINAI;
+- matricular a los estudiantes en el curso de su grupo.
 
-### 2. Consulte los usuarios
+El usuario del Aula Virtual es el mismo usuario de SINAI. Al crearlo, SINAI le asigna la misma contraseña que el usuario tiene en SINAI.
 
-Use los filtros disponibles para localizar el usuario o el grupo que necesita revisar. Verifique la identificación, el nombre y el rol mostrado antes de realizar una gestión.
+La pantalla solo funciona si la institución tiene el servicio de Aula Virtual. Si no lo tiene, SINAI muestra «La institución no cuenta con un servicio de Aula virtual. Por favor solicitelo.»
 
-### 3. Realice la gestión permitida
+Ingrese a **Herramientas → Usuarios Aula Virtual**.
 
-Seleccione el usuario y use las opciones que habilite la pantalla para actualizar o sincronizar su acceso al Aula Virtual. Guarde los cambios y vuelva a consultar el registro para confirmarlos.
+<GuideImageTrigger src="/images/guides/usuarios-aula-virtual/acceso-usuarios-aula-virtual.jpg" alt="Menú Herramientas con la opción Usuarios Aula Virtual y la lista de funcionarios">
+  Ver ejemplo
+</GuideImageTrigger>
 
-> La disponibilidad de acciones depende de la configuración del Aula Virtual y de los permisos asignados a su cuenta administrativa.
+La pantalla se divide en dos partes:
 
+- **Generar usuarios en el Aula virtual**, a la izquierda: los filtros, el botón **Ir al Aula Virtual** y un enlace alterno al Aula Virtual.
+- **Lista de usuarios del Aula Virtual**, a la derecha: los usuarios, el botón **Generar usuarios** y el menú **Más opciones**.
+
+#### 2. Filtrar la lista
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Roles** | **Funcionarios** o **Estudiantes**. Al cambiar la opción, la lista se actualiza. |
+| **Estado** | Aparece con **Funcionarios**. La lista muestra los funcionarios con estado activo en la institución. |
+| **Sedes** y **Grupos** | Aparecen con **Estudiantes**. La lista muestra los estudiantes con matrícula activa en el grupo, en el calendario seleccionado. |
+| **Estado Usuario** | **Todos**, **Activo** o **Inactivo**, según el estado del usuario en SINAI. |
+
+</GuideDataTable>
+
+La lista tiene estas columnas:
+
+- **Nombre:** nombre del usuario y, debajo, su rol.
+- **Usuario Sinai:** usuario de SINAI. El punto verde indica que el usuario está activo y el rojo, que está inactivo.
+- **Usuario Chamilo:** usuario en el Aula Virtual. El punto verde indica activo y el rojo, inactivo. **Sin usuario**, con punto gris, indica que aún no se ha generado.
+- **Matriculado:** solo con **Estudiantes**. Aparece marcada si el estudiante está matriculado en el curso de su grupo en el Aula Virtual.
+- **Opciones:** botones para trabajar con un solo usuario.
+
+<GuideImageTrigger src="/images/guides/usuarios-aula-virtual/lista-estudiantes.jpg" alt="Lista de estudiantes de un grupo con las columnas Usuario Sinai, Usuario Chamilo y Matriculado">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La lista muestra 50 usuarios por página.
+
+#### 3. Generar los usuarios
+
+1. En **Roles**, elija **Funcionarios** o **Estudiantes**.
+2. Si eligió **Estudiantes**, seleccione la sede y el grupo.
+3. Haga clic en **Generar usuarios**.
+
+Lo que hace SINAI depende del rol:
+
+- **Funcionarios:** crea en el Aula Virtual a los funcionarios activos que aún no tienen usuario allí. Si el usuario ya existe en el Aula Virtual, lo relaciona con SINAI.
+- **Estudiantes:** crea el curso del grupo en el Aula Virtual si aún no existe, crea los usuarios de los estudiantes del grupo y los matricula en ese curso. Solo se tienen en cuenta los estudiantes con usuario activo en SINAI.
+
+Al terminar, SINAI muestra «Se ha generado los usuarios correctamente» y vuelve a cargar la lista. Si no hay usuarios para crear, muestra «No se encontraron usuarios para la creación. Por favor generarlos».
+
+<GuideCallout>
+  Los estudiantes necesitan un usuario activo en SINAI para que se creen en el Aula Virtual. Si un estudiante no aparece en el Aula Virtual, revise primero su usuario en **Establecimiento → Usuarios → Gestión de Usuarios**.
+</GuideCallout>
+
+#### 4. Trabajar con un usuario
+
+En la columna **Opciones** de cada fila:
+
+- **Botón azul con el disquete:** crea el usuario en el Aula Virtual. Queda deshabilitado cuando el usuario ya tiene usuario en el Aula Virtual.
+- **Botón rojo con la papelera (Inactivar):** inactiva el usuario en el Aula Virtual. Si el usuario está inactivo, el botón cambia a verde con el texto **Activar** y lo vuelve a activar.
+- **Botón verde con las flechas (Asociar):** solo con **Estudiantes**. Matricula al estudiante en el curso del grupo seleccionado. Si el estudiante aún no tiene usuario en el Aula Virtual, lo crea.
+
+Si el usuario no tiene usuario en el Aula Virtual, **Inactivar** muestra «El usuario seleccionado no posee un usuario asociado a la plataforma virtual».
+
+#### 5. Trabajar con varios usuarios
+
+1. Marque la casilla de los usuarios. La casilla del encabezado marca todos los de la página.
+2. Abra **Más opciones**.
+3. Elija la acción.
+
+<GuideImageTrigger src="/images/guides/usuarios-aula-virtual/mas-opciones.jpg" alt="Menú Más opciones abierto con Activar Seleccionados y Actualizar Seleccionados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Activar Seleccionados:** cambia el estado de cada usuario marcado en el Aula Virtual. Activa los inactivos e inactiva los activos.
+- **Actualizar Seleccionados:** lleva al Aula Virtual los nombres, los apellidos, el correo, el teléfono y la dirección registrados en SINAI para cada usuario marcado.
+- **Asociar Seleccionados:** solo con **Estudiantes**. Matricula a los estudiantes marcados en el curso del grupo.
+
+SINAI omite los usuarios marcados que no tienen usuario en el Aula Virtual. Si no marcó ninguno, muestra «No has seleccionado ninguna fila». Al terminar, el aviso indica cuántos usuarios se procesaron.
+
+<GuideCallout type="warning">
+  **Activar Seleccionados** invierte el estado de cada usuario marcado. Si marca usuarios activos, quedarán inactivos en el Aula Virtual. Marque solo los usuarios que necesita cambiar.
+</GuideCallout>
+
+#### 6. Entrar al Aula Virtual
+
+Haga clic en **Ir al Aula Virtual**. El Aula Virtual se abre en otra pestaña con su usuario de SINAI.
+
+Si hay un problema con la conexión, el botón muestra el motivo en lugar de **Ir al Aula Virtual**, por ejemplo **url no encontrada** o **Token inválido**.
+
+En ese caso, use el enlace **Ir a Chamilo** de la nota inferior. Ingrese con su usuario y contraseña de SINAI, siempre que no haya cambiado la contraseña en Chamilo. Si la cambió, use la contraseña de Chamilo.
+
+#### 7. Permisos
+
+Generar, activar, inactivar, actualizar y asociar usuarios exige un permiso del usuario administrativo. Si no lo tiene, SINAI muestra el aviso del permiso y no hace el cambio. Solicítelo al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Usuarios Aula Virtual»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Con qué usuario y contraseña se ingresa al Aula Virtual?"}>
+    El usuario del Aula Virtual es el mismo usuario de SINAI. Al generarlo, SINAI le asigna la contraseña que el usuario tiene en SINAI. Si después la persona cambia la contraseña dentro de Chamilo, debe ingresar con la contraseña de Chamilo.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Usuarios Aula Virtual» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Generé los usuarios de un grupo y algunos estudiantes no quedaron en el Aula Virtual. ¿Por qué?"}>
+    Solo se crean los estudiantes con matrícula activa en el grupo y con usuario activo en SINAI. Revise el usuario del estudiante en **Establecimiento → Usuarios → Gestión de Usuarios** y vuelva a hacer clic en **Generar usuarios**. Si ningún estudiante cumple, SINAI muestra «No se encontraron usuarios para la creación. Por favor generarlos».
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Usuarios Aula Virtual»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"El estudiante tiene usuario en el Aula Virtual, pero no ve el curso de su grupo. ¿Qué hago?"}>
+    Revise la columna **Matriculado**. Si no está marcada, haga clic en **Asociar**, el botón verde con las flechas, o marque varios estudiantes y use **Más opciones → Asociar Seleccionados**. SINAI matricula al estudiante en el curso del grupo seleccionado.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Cambié el nombre o el correo de un usuario en SINAI. ¿Cómo lo paso al Aula Virtual?"}>
+    Marque el usuario y use **Más opciones → Actualizar Seleccionados**. SINAI envía al Aula Virtual los nombres, apellidos, correo, teléfono y dirección que tiene registrados.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué significa «El usuario seleccionado no posee un usuario asociado a la plataforma virtual»?"}>
+    El usuario aún no existe en el Aula Virtual, por eso no se puede activar ni inactivar. La columna **Usuario Chamilo** muestra **Sin usuario**. Créelo primero con el botón del disquete o con **Generar usuarios**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «No se ha podido establecer conexión con la plataforma Chamilo». ¿Qué pasa?"}>
+    SINAI no logró conectarse con el Aula Virtual de la institución. El mensaje incluye la dirección que intentó usar. Verifique que el Aula Virtual esté en línea e intente de nuevo. Si el problema sigue, comuníquese con soporte.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"El botón Ir al Aula Virtual dice «Token inválido» o «url no encontrada». ¿Cómo entro?"}>
+    El botón no pudo preparar el ingreso directo. Use el enlace **Ir a Chamilo** de la nota inferior e ingrese con su usuario y contraseña. «url no encontrada» indica que la institución no tiene configurada la dirección del Aula Virtual.
   </GuideFAQItem>
 </GuideFAQ>

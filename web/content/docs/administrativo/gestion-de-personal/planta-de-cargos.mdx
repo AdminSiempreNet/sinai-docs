@@ -1,68 +1,117 @@
 ---
 title: "Planta de cargos"
-description: "Aprenda a crear las plazas del establecimiento educativo y a asignar los funcionarios correspondientes."
+description: "Cree las plazas de la institución con su cargo, sede, nivel y área, y asigne a cada funcionario activo la plaza que ocupa."
 guide: true
 wordpressId: 28466
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/planta-de-cargos/"
-lastModified: "2023-11-01 14:23:35"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="aSVY6uRY99o" title="Planta de cargos"
-  odyseeUrl="https://odysee.com/planta-de-cargos%3A9c569ec70fd7f56318dedea845a847569b7e18c9"
-/>
+<YouTube id="aSVY6uRY99o" title="Planta de cargos" odyseeUrl="https://odysee.com/planta-de-cargos%3A9c569ec70fd7f56318dedea845a847569b7e18c9" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Ingrese al menú principal **Personal** y seleccione la opción **Planta de cargos**. Allí encontrará dos pestañas para gestionar la planta de personal del establecimiento educativo:
+### 1. ¿Qué es Planta de cargos?
 
-- **Creación de plazas:** permite registrar en SINAI las plazas disponibles en el establecimiento educativo.
-- **Asignación de funcionarios:** permite vincular los funcionarios registrados con las plazas creadas.
+**Planta de cargos** registra las plazas de la institución. Cada plaza tiene un código, un acto administrativo, un cargo, una sede, un nivel y un área de nombramiento. Cada funcionario ocupa una plaza, y el cargo de la plaza define el rol de su usuario en SINAI.
 
-Si necesita ampliar la información relacionada con la gestión de funcionarios, consulte la guía de [Funcionarios](https://ayudasinai.siempre.net.co/docs/funcionarios/#0-toc-title).
+La pantalla tiene dos pestañas:
 
-### Creación de plazas
+- **Creación de Plazas:** crear plazas y corregir las existentes.
+- **Asignación de Funcionarios:** cambiar la plaza que ocupa cada funcionario activo.
 
-En esta pestaña encontrará, en el lado izquierdo de la pantalla, el formulario para crear una plaza. Complete los campos de la siguiente manera:
+El botón **Ayuda** abre esta guía.
 
-1. Ingrese el código que identificará la nueva plaza.
-2. Registre el acto administrativo correspondiente.
-3. Seleccione el cargo asociado a la plaza.
-4. Seleccione la sede a la que pertenece.
-5. Seleccione el nivel correspondiente al cargo del funcionario.
-6. Seleccione el área definida en el acto administrativo.
-7. Haga clic en **Agregar plaza** para completar el registro. <GuideImageTrigger src={"/images/wordpress/2023/11/Creacion-de-Plaza.gif"} alt={"Formulario para crear una plaza en SINAI"}>Ver ejemplo</GuideImageTrigger>
+Ingrese a **Personal → Planta de Cargos**.
 
+<GuideImageTrigger src="/images/guides/planta-de-cargos/creacion-plazas.jpg" alt="Menú Personal con Planta de Cargos activa y la pestaña Creación de Plazas con el formulario y la lista de plazas">
+  Ver ejemplo
+</GuideImageTrigger>
 
+#### 2. Crear una plaza
 
-En el lado derecho de la pantalla se muestra la lista de plazas registradas. Puede modificar sus datos directamente en esta lista; después de realizar un cambio, haga clic en **Guardar cambios**.
+En la pestaña **Creación de Plazas**, complete el formulario de la izquierda:
 
-### Asignación de funcionarios
+<GuideDataTable>
 
-Para vincular los funcionarios con las plazas registradas, siga estos pasos:
+| Campo | Qué define |
+| --- | --- |
+| **Código** | Identificador de la plaza. Es obligatorio y admite hasta 3 caracteres, por ejemplo **021**. Si lo deja vacío, SINAI muestra «Este campo es obligatorio». |
+| **Acto Administrativo** | Acto con el que se creó la plaza. Admite hasta 100 caracteres. |
+| **Cargo** | Cargo de la plaza, por ejemplo **RECTOR**, **COORDINADOR** o **DOCENTE**. Define el rol del usuario del funcionario. |
+| **Sede** | Sede a la que pertenece la plaza. |
+| **Nivel** | Nivel del cargo, por ejemplo **DIRECTIVO**, **ADMINISTRATIVO** o **DOCENTE PRIMARIA**. |
+| **Área** | Área de nombramiento, por ejemplo **BASICA PRIMARIA** o **CIENCIAS NATURALES**. |
 
-1. Abra la pestaña **Asignación de funcionarios**.
-2. Seleccione la sede y el nivel en las listas desplegables correspondientes.
-3. Ubique cada funcionario en la lista y seleccione la plaza que desea asignarle.
-4. Haga clic en **Guardar cambios** para confirmar las asignaciones. <GuideImageTrigger src={"/images/wordpress/2023/11/Asignacion-de-Funcionarios-1024x557.gif"} alt={"Asignación de funcionarios a las plazas registradas en SINAI"}>Ver ejemplo</GuideImageTrigger>
+</GuideDataTable>
 
+Haga clic en **Agregar Plaza**. La plaza aparece en la lista de la derecha. Si el código ya existe, SINAI muestra el error en rojo y no crea la plaza.
 
+<GuideCallout>
+  SINAI solo valida el código. Antes de agregar, confirme que eligió el **Cargo** y el **Área**: si los deja en **Seleccione el Cargo** o **Seleccione el área**, la plaza se crea con esos valores. Puede corregirlos después en la lista.
+</GuideCallout>
 
+#### 3. Corregir las plazas existentes
+
+La lista de la derecha muestra **Código**, **Sede**, **Cargo**, **Nivel**, **Área de Nombramiento** y **Acto Administrativo** de cada plaza. El código y la sede no se cambian.
+
+1. Cambie el **Cargo**, el **Nivel**, el **Área de Nombramiento** o el **Acto Administrativo** en las filas que necesite.
+2. Haga clic en **Guardar Cambios**, debajo del formulario.
+
+SINAI guarda todas las filas de la lista y muestra «Información guardada correctamente».
+
+<GuideCallout type="warning">
+  Los cambios de una plaza aplican a todos los funcionarios que la ocupan. Si cambia el cargo, revise también el rol de esos usuarios.
+</GuideCallout>
+
+#### 4. Asignar funcionarios a las plazas
+
+1. Abra la pestaña **Asignación de Funcionarios**.
+2. En **Niveles**, seleccione la **Sede** y el **Nivel**.
+3. En la tabla **Funcionarios**, cambie la **Plaza** de cada funcionario que lo requiera.
+4. Haga clic en **Guardar Cambios**.
+
+<GuideImageTrigger src="/images/guides/planta-de-cargos/asignacion-funcionarios.jpg" alt="Pestaña Asignación de Funcionarios con la sede y el nivel seleccionados y la plaza de cada funcionario">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La tabla muestra los funcionarios en estado activo, con usuario activo, cuya plaza actual pertenece a la sede y el nivel seleccionados. Cada plaza aparece como código, cargo, área y sede, por ejemplo **001-RECTOR-DIRECTIVO-LOS PINOS**.
+
+Al guardar, SINAI cambia la plaza del funcionario y la de su asignación académica, y muestra «La asignación de plazas ha sido realizada correctamente.». Si el funcionario pasa a una plaza de otra sede o nivel, deja de aparecer en la tabla actual.
+
+<GuideCallout>
+  Esta pestaña no cambia el rol del usuario. Si el funcionario pasa a una plaza con otro cargo, cambie la plaza desde su ficha en [Funcionarios](/docs/administrativo/gestion-de-personal/funcionarios): al guardar allí, SINAI actualiza el rol y los permisos predeterminados.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Planta de cargos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"¿Qué debo crear primero, la plaza o el funcionario?"}>
+    La plaza. Al registrar un funcionario, SINAI exige seleccionar la plaza que ocupará. También puede crearla desde el formulario del funcionario con **Agregar**, en el panel **Plaza**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Planta de cargos» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Puedo cambiar el código o la sede de una plaza?"}>
+    No. En la lista de plazas el código y la sede no se editan. Si necesita otra sede, cree una plaza nueva y asigne a los funcionarios con la pestaña **Asignación de Funcionarios**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Planta de cargos»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Hice clic en Agregar Plaza y aparece un error en rojo. ¿Qué pasa?"}>
+    SINAI no pudo crear la plaza. Lo más común es que el código ya exista en la institución. Revise la lista de la derecha, use un código diferente y vuelva a intentarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Por qué un funcionario no aparece en Asignación de Funcionarios?"}>
+    La tabla solo muestra funcionarios activos, con usuario activo, cuya plaza actual pertenece a la sede y el nivel seleccionados. Pruebe con otra sede o nivel, y revise el estado del funcionario en **Funcionarios**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Cómo verifico que la asignación quedó guardada?"}>
+    Después de **Guardar Cambios**, SINAI muestra «La asignación de plazas ha sido realizada correctamente.». En la lista de **Funcionarios**, el filtro **Sede** y la columna **Cargo** reflejan la nueva plaza.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"Aparece «No tiene asignado el permiso Nº401». ¿Qué significa?"}>
+    Su usuario no tiene el permiso para esa acción: 401 para crear plazas, 402 para guardar cambios en las plazas y 403 para asignar funcionarios. Solicítelo al rector o al administrador de SINAI de su institución.
   </GuideFAQItem>
 </GuideFAQ>

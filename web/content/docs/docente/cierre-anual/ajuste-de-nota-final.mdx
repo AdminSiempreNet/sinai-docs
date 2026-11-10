@@ -1,0 +1,122 @@
+---
+title: "Ajuste de nota final"
+description: "Registre el ajuste a la valoración final de sus estudiantes por asignatura mientras la institución tenga habilitado el proceso."
+guide: true
+wordpressId: 30097
+legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-ajuste-de-nota-final/"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
+---
+
+## Video tutorial
+
+<GuideVideos compact>
+<YouTube id="BHfJWOsydG4" title="Ajuste de nota final" />
+</GuideVideos>
+
+## Guía paso a paso
+
+### 1. ¿Qué es Ajuste de nota final?
+
+**Ajuste a la Valoración Final** le permite asignar una valoración de ajuste a la nota final de sus estudiantes en una asignatura. El ajuste reemplaza la valoración final calculada por SINAI y cambia la **Definitiva**, que es la valoración con la que se determina la promoción.
+
+El área administrativa habilita el proceso para los docentes entre una fecha de inicio y una fecha de finalización. Fuera de ese rango puede consultar la planilla, pero no guardar cambios.
+
+Ingrese a **Evaluación → Ajuste de Nota Final**.
+
+#### 2. Seleccionar la planilla
+
+Seleccione el **Calendario**, el **Grupo** y la **Asignatura**. Las listas muestran los calendarios, grupos y asignaturas de su asignación académica. La planilla se carga al cambiar cualquiera de ellas.
+
+<GuideImageTrigger src="/images/guides/docente-ajuste-nota-final/planilla-ajuste.jpg" alt="Planilla Ajuste a la Valoración Final con un ajuste de ejemplo y su observación en la fila de un estudiante">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La planilla tiene una fila por estudiante con estas columnas:
+
+<GuideDataTable>
+
+| Columna | Qué muestra |
+| --- | --- |
+| **Apellidos y Nombres** | Nombre, código y estado de la matrícula del estudiante. |
+| **Foto** | Fotografía del estudiante. Al pasar el puntero se amplía. |
+| **1°, 2°, 3°, 4°** | Valoración de cada periodo, hasta el último periodo del grupo. |
+| **Final** | Valoración final calculada por SINAI a partir de los periodos, con la aproximación cuando aplica. |
+| **Ajuste** | Casilla para escribir la valoración de ajuste. |
+| **Valoración** | Valoración del ajuste. |
+| **Observación** | Texto que sustenta el ajuste. Admite hasta 500 caracteres. |
+| **Definitiva** | Valoración definitiva con la que se determinará la promoción. |
+
+</GuideDataTable>
+
+Si su institución usa valoración cuantitativa, cada columna muestra la nota y el desempeño. Si usa valoración valorativa, solo muestra el desempeño.
+
+<GuideCallout>
+  Si su institución lo configuró, la planilla muestra solo los estudiantes con desempeño final **BAJO** en la asignatura.
+</GuideCallout>
+
+#### 3. Registrar el ajuste
+
+1. Ubique la fila del estudiante.
+2. En **Ajuste**, escriba la valoración:
+   - **Valoración cuantitativa:** la nota, por ejemplo 3,8.
+   - **Valoración valorativa:** la abreviatura del desempeño de la escala de su institución.
+3. En **Observación**, escriba la justificación del ajuste.
+4. Repita con los demás estudiantes que necesite.
+5. Haga clic en **Guardar**, junto a la lista **Asignatura**.
+
+SINAI guarda todas las filas de la planilla y muestra «Cambios guardados correctamente». La planilla se vuelve a cargar con la **Definitiva** recalculada.
+
+Al salir de la casilla **Ajuste**, SINAI revisa el valor:
+
+- Si está por fuera de la escala, borra el valor, marca la casilla en rojo y, al pasar el puntero, muestra «Valor no válido. Por favor verifique la escala».
+- Si su institución solo permite valoraciones superiores a la obtenida por el estudiante, SINAI borra sin aviso cualquier ajuste igual o menor que la **Final**.
+
+Si la observación supera los 500 caracteres, SINAI guarda solo los primeros 500.
+
+<GuideCallout type="warning">
+  El ajuste cambia la **Definitiva** del estudiante, que es la que se usa para la promoción. Antes de guardar, verifique el grupo, la asignatura y la fila de cada estudiante.
+</GuideCallout>
+
+#### 4. Quitar un ajuste
+
+1. Borre el valor de la casilla **Ajuste** del estudiante.
+2. Haga clic en **Guardar**.
+
+SINAI elimina el ajuste y su observación, y la **Definitiva** vuelve a tomar la valoración **Final**.
+
+#### 5. Cuando el proceso está cerrado
+
+Si hace clic en **Guardar** cuando el proceso no está habilitado o la fecha actual está por fuera del rango definido, SINAI no guarda y muestra:
+
+«No se puede realizar cambios porque el proceso de ajuste a la valoración final se encuentra deshabilitado por el personal administrativo de la institución.»
+
+Para registrar el ajuste, solicite al área administrativa que habilite el proceso.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question={"Al guardar aparece que el proceso se encuentra deshabilitado. ¿Qué hago?"}>
+    El área administrativa no ha habilitado el ajuste para los docentes, o la fecha actual está por fuera del rango que definió. Solicite que lo habilite. Mientras tanto puede consultar la planilla, pero no guardar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question={"Escribí el ajuste y la casilla quedó vacía. ¿Por qué?"}>
+    El valor no es válido para la escala. Si la casilla quedó en rojo, el valor está por fuera de la escala o la abreviatura no existe: al pasar el puntero verá «Valor no válido. Por favor verifique la escala». Si la casilla no quedó en rojo, su institución solo permite ajustes superiores a la valoración **Final** del estudiante.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question={"¿Por qué no aparecen todos los estudiantes del grupo?"}>
+    Su institución puede haber configurado la planilla para mostrar solo los estudiantes con desempeño final **BAJO** en la asignatura.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"¿Cómo elimino un ajuste que registré por error?"}>
+    Borre el valor de la casilla **Ajuste** y haga clic en **Guardar**. SINAI elimina el ajuste y su observación.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Debo guardar estudiante por estudiante?"}>
+    No. **Guardar** registra todas las filas de la planilla de una vez.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Dónde veo el ajuste después de guardarlo?"}>
+    En la misma planilla, en las columnas **Valoración** y **Definitiva**. También en **Evaluación → Notas Finales**, en las columnas **Ajuste** y **Definitiva**, si su institución las tiene visibles para los docentes.
+  </GuideFAQItem>
+</GuideFAQ>

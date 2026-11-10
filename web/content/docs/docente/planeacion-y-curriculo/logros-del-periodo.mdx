@@ -1,41 +1,158 @@
 ---
 title: "Logros del periodo"
-description: "Gestione los logros y desempeños del período para la planeación docente."
+description: "Asigne a sus grupos los logros o desempeños del periodo, ajuste su redacción y quite los que no aplican."
 guide: true
 wordpressId: 30224
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-logros-periodo/"
-lastModified: "2026-07-24"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
+
 ## Video tutorial
 
 <GuideVideos compact>
-<YouTube id="tIv_km_5rTY" title="Logros periodo"
-  odyseeUrl="https://odysee.com/desempe%C3%B1o-del-periodo%3Ac343ea60fcf3dde7b4510a24b215f67714f24ed0"
-/>
+<YouTube id="tIv_km_5rTY" title="Logros periodo" odyseeUrl="https://odysee.com/desempe%C3%B1o-del-periodo%3Ac343ea60fcf3dde7b4510a24b215f67714f24ed0" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-1. Abra **Planeación > Logros del período**.
-2. Seleccione grupo, asignatura y período.
-3. Consulte, agregue o ajuste los logros de acuerdo con la planeación institucional.
-4. Guarde y verifique que los logros queden disponibles para las actividades y evaluaciones.
+### 1. ¿Qué es Logros del periodo?
 
-Revise la redacción, los criterios de desempeño y la relación con la planeación antes de publicar los cambios. Los logros deben corresponder al período y a la asignatura seleccionados.
+Esta pantalla le permite tomar los logros generales de un grado y una asignatura y asignarlos a sus grupos en un periodo. Los logros asignados son los que después se usan en la evaluación del periodo.
 
+El título de la pantalla y de sus paneles lo define cada institución. En el ejemplo se llama **Desempeño del periodo**, **Desempeño generales** y **Desempeño asignados**; en su institución puede decir **Logro** u otro nombre.
+
+Ingrese a **Planeación → Logros del periodo**. El nombre de la opción también puede variar según la institución, por ejemplo **Logros Periodos** o **Desempeños Periodo**.
+
+<GuideImageTrigger src="/images/guides/docente-logros-del-periodo/pantalla-desempenos.jpg" alt="Pantalla Desempeño del periodo con los filtros, la lista de desempeños generales con dos seleccionados y el panel de desempeños asignados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+La pantalla tiene tres zonas:
+
+- **Arriba:** los filtros **Docente**, **Periodo**, **Grado** y **Asignatura**.
+- **Abajo a la izquierda:** los logros generales del grado y la asignatura, de donde usted escoge.
+- **Abajo a la derecha:** los logros ya asignados a cada grupo en el periodo.
+
+#### 2. Elegir periodo, grado y asignatura
+
+Los filtros se actualizan al cambiarlos.
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Docente** | Su nombre. Como docente no puede elegir a otro. |
+| **Periodo** | Los periodos del calendario. Empieza en **SELECCIONE PERIODO...** |
+| **Grado** | Los grados de sus grupos. |
+| **Asignatura** | Las asignaturas que usted tiene en el grado elegido. |
+
+</GuideDataTable>
+
+El panel de la izquierda se llena con los logros del grado y la asignatura. En **Grupo** aparecen los grupos de ese grado en los que usted tiene la asignatura, y el panel de la derecha lista cada uno de esos grupos con los logros que ya tiene asignados en el periodo elegido.
+
+#### 3. Asignar logros a los grupos
+
+1. Seleccione el **Periodo**, el **Grado** y la **Asignatura**.
+2. Haga clic en **Grupo** y elija uno o varios grupos. Cada grupo queda como una etiqueta, que se quita con su **X**.
+3. En la lista de la izquierda, marque los logros que quiere asignar. La casilla del encabezado marca todos los de la página, y el buscador bajo el encabezado **Descripción** filtra por texto.
+4. Si su institución usa componentes, elija el **Componente** en el que quedan los logros.
+5. Haga clic en **Asignar**.
+
+Los logros aparecen en el panel de la derecha, dentro de cada grupo elegido. Al terminar, SINAI muestra «Agregado correctamente».
+
+Si algo falta o no se puede asignar, SINAI muestra uno de estos mensajes:
+
+<GuideDataTable>
+
+| Mensaje | Qué ocurre |
+| --- | --- |
+| «Debe seleccionar un período» | **Periodo** está en **SELECCIONE PERIODO...** |
+| «Debe seleccionar una asignatura» | No hay asignatura elegida. |
+| «Debe seleccionar por lo menos un grupo» | No eligió grupos en **Grupo**. |
+| «Debe seleccionar logros» | No marcó ningún logro de la lista. |
+| «Uno o varios grupos puede que sobrepasen el limite de criterios permitidos» | Con los logros marcados, algún grupo supera el máximo de logros por grupo que definió la institución. |
+| «No se puede agregar este criterio por que ya existe.» | El grupo ya tiene un logro con ese mismo texto en el periodo. |
+| «El período actual está cerrado, no se puede realizar ninguna modificación» o «El periodo actual está cerrado, no se puede modificar la planeación del periodo» | Para ese grupo y periodo la planeación ya no admite cambios. |
+
+</GuideDataTable>
+
+#### 4. Corregir los logros asignados
+
+En el panel de la derecha, cada grupo se despliega con el **Código**, la **Descripción** y el **Componente** de sus logros.
+
+1. Cambie el texto de la **Descripción** o el **Componente**.
+2. Haga clic en **Guardar Cambios**.
+
+SINAI guarda todos los logros de todos los grupos de la lista y muestra «Se ha guardado correctamente». Si dejó una descripción vacía, muestra «No deben existir campos vacios».
+
+La columna **Componente** no aparece si su institución la ocultó.
+
+#### 5. Quitar logros de los grupos
+
+1. En el panel de la derecha, marque la casilla de cada logro que quiere quitar.
+2. Haga clic en **Eliminar** y acepte el mensaje «¿Seguro que desea eliminar estos criterios?»
+
+SINAI muestra «La eliminación se realizo correctamente». Esto quita el logro del grupo en el periodo; el logro general sigue en la lista de la izquierda.
+
+#### 6. Crear o editar un logro general
+
+Los botones **Nuevo** y **Editar** solo aparecen si su institución permite a los docentes crear y modificar logros.
+
+Para crear uno:
+
+1. Haga clic en **Nuevo**.
+2. En la ventana **Registro de Desempeño**, escriba la **Descripción**.
+3. Deje marcada **Asignar al periodo seleccionado** si quiere asignarlo de una vez a los grupos que eligió, o desmárquela para crearlo sin asignarlo.
+4. Haga clic en **Aceptar**.
+
+<GuideImageTrigger src="/images/guides/docente-logros-del-periodo/nuevo-desempeno.jpg" alt="Ventana Registro de Desempeño con una descripción escrita y la casilla Asignar al periodo seleccionado marcada">
+  Ver ejemplo
+</GuideImageTrigger>
+
+El logro se crea para el grado y la asignatura que tiene elegidos. Si no hay asignatura, SINAI muestra «Debe seleccionar una asignatura»; si deja la descripción vacía, «Debe diligenciar la descripcion». Con la casilla marcada, elija antes el periodo y los grupos.
+
+Para modificar o borrar un logro general:
+
+1. Haga clic en **Editar**, en su fila.
+2. Cambie la **Descripción** y haga clic en **Aceptar**, o haga clic en **Eliminar** y acepte el mensaje «¿Confirma que desea realizar esta accion?»
+
+<GuideImageTrigger src="/images/guides/docente-logros-del-periodo/editar-desempeno.jpg" alt="Ventana Editar con la descripción de un desempeño general, y los botones Aceptar y Eliminar">
+  Ver ejemplo
+</GuideImageTrigger>
+
+<GuideCallout type="warning">
+  La lista de la izquierda es del grado y la asignatura, no solo suya. Un cambio en la descripción de un logro general o su eliminación se ve en esa lista para quien use el mismo grado y asignatura.
+</GuideCallout>
+
+<GuideCallout>
+  El botón **Configuración**, que define el nombre de los logros, el máximo por grupo, si los docentes pueden crear y editar y si se oculta el componente, solo lo ve el personal administrativo.
+</GuideCallout>
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Logros periodo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"Al asignar aparece «Debe seleccionar un período». ¿Qué hago?"}>
+    El filtro **Periodo** está en **SELECCIONE PERIODO...** Elija el periodo en el que quiere asignar los logros y haga clic de nuevo en **Asignar**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Logros periodo» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"¿Por qué la lista de logros generales está vacía?"}>
+    La lista muestra los logros del grado y la asignatura elegidos. Si no hay ninguno, la tabla muestra «Sin datos para mostrar». Pruebe con otra asignatura o, si su institución lo permite, cree uno con **Nuevo**.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Logros periodo»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"¿Por qué no veo los botones Nuevo y Editar?"}>
+    Su institución no permite a los docentes crear ni modificar los logros generales. Solicite los cambios al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"Aparece «Uno o varios grupos puede que sobrepasen el limite de criterios permitidos»."}>
+    La institución define un número máximo de logros por grupo y periodo. Con los logros que marcó, al menos uno de los grupos elegidos lo superaría. Marque menos logros o quite alguno de los ya asignados con **Eliminar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"Aparece que el periodo está cerrado. ¿Puedo modificar los logros?"}>
+    No. Mientras el periodo esté cerrado para ese grupo y asignatura, SINAI no permite asignar, guardar ni eliminar logros. Solicite la apertura al área administrativa.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"¿Cómo verifico que los logros quedaron asignados?"}>
+    En el panel de la derecha, el grupo muestra los logros con su código, descripción y componente. Elija el mismo periodo en **Periodo** para ver los del periodo.
   </GuideFAQItem>
 </GuideFAQ>

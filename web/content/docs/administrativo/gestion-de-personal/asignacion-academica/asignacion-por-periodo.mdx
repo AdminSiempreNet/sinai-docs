@@ -16,17 +16,14 @@ lastReviewed: "2026-11-04"
 
 <GuideVideoPlaylist
   title="Ruta de asignación académica"
-  description="Seleccione el tutorial según realice la asignación por grupo o por docente."
+  description="Seleccione el tutorial según realice la asignación por grupo o por docente, consulte la intensidad horaria total o registre los créditos por asignatura."
   videos={[
-    { id: 'BXBJVE3v2w8', title: '1. Asignación académica por grupo', description: 'Configure la asignación académica para un grupo.', odyseeUrl: 'https://odysee.com/asignaci%C3%B3n-acad%C3%A9mica-por-grupo%3A9b5227eb721ff9ee8f3b036198184f64886fdd58' },
-    { id: 'QczQCpz5Y5Q', title: '2. Asignación académica por docente', description: 'Configure la asignación académica para un docente.', odyseeUrl: 'https://odysee.com/asignaci%C3%B3n-acad%C3%A9mica-por-docente%3Afa759633b4edab3b1ea7883ed815713e5549a81b' },
+    { id: 'TLUJVtOLbQ8', title: '1. Asignación académica por grupo', description: 'Configure la asignación académica para un grupo.' },
+    { id: 'CkeznXkAJuw', title: '2. Asignación académica por docente', description: 'Configure la asignación académica para un docente.' },
+    { id: 'pj5OOQsdE-g', title: '3. Intensidad horaria', description: 'Consulte la intensidad horaria semanal por grupo y por docente.' },
+    { id: 'bZm4Qi61FUQ', title: '4. Créditos por asignatura', description: 'Registre los créditos de cada asignatura en la asignación académica.' },
   ]}
 />
-
-<GuideVideoPending>
-  - Asignación estándar por grupo y por docente en la versión actual de la pantalla. Falta el identificador de YouTube y, si existe, la URL de Odysee.
-  - Créditos por asignatura e intensidad horaria por grupo y por docente. Falta el identificador de YouTube y, si existe, la URL de Odysee.
-</GuideVideoPending>
 
 ## Guía paso a paso
 
@@ -65,10 +62,6 @@ En pantallas pequeñas el menú se reduce a la opción activa. Use el botón de 
 Ingrese a **Personal → Asignación Académica**. SINAI abre **Asignación estándar → Por grupo**.
 
 La sede, el nivel, el grupo y el docente que elija en una opción del menú se recuerdan al pasar a las demás, mientras trabaje en el mismo calendario.
-
-<GuideImagePending>
-  **Vista requerida:** Personal → Asignación Académica, opción **Por grupo**, con el menú lateral completo visible (secciones Asignación estándar, Asignación personalizada, Intensidad horaria y Configuración de grupos). La captura ayudará a ubicar cada opción del menú y a reconocer las dos secciones de asignación. Archivo sugerido: `menu-asignacion-academica.jpg`. Evite nombres reales de docentes.
-</GuideImagePending>
 
 <GuideCallout>
   **Permisos.** El rector puede hacer todas las operaciones. Los demás usuarios necesitan los permisos de la asignación académica: **406** para generar o agregar, **407** para guardar cambios y **408** para eliminar. Si falta un permiso, SINAI muestra *No tiene asignado el permiso Nº* seguido del número. Consultar y descargar informes no exige permiso.
@@ -132,10 +125,6 @@ Al cambiar el docente de una asignatura, SINAI conserva las horas dictadas y los
   Si la promoción del calendario es **por áreas**, la suma de los pesos de las asignaturas de cada área debe ser 100. Si alguna área no suma 100, SINAI no guarda ningún cambio y muestra *Si la promoción es por áreas la suma de los pesos de las asignaturas de cada área no puede ser diferente de 100. Por favor verifique*.
 </GuideCallout>
 
-<GuideImagePending>
-  **Vista requerida:** Asignación estándar → Por grupo con un grupo seleccionado y su asignación generada. Debe mostrar los filtros, los botones Generar, Guardar, Descargar PDF y Eliminar, un área desplegada con sus asignaturas, la lista de docentes, las columnas H.Sem, H.Tot y Peso, y la fila TOTALES. Archivo sugerido: `asignacion-estandar-por-grupo.jpg`. Evite nombres reales de docentes.
-</GuideImagePending>
-
 #### 4. Eliminar asignaturas de un grupo
 
 1. En **Por grupo**, marque la casilla de las asignaturas que desea quitar. La casilla del encabezado marca todas.
@@ -172,10 +161,6 @@ Los mensajes posibles son:
 <GuideCallout>
   Un grupo solo puede tener la misma asignatura una vez, sin importar el docente. Si la asignatura ya está asignada a otro docente en ese grupo, cambie el docente en **Por grupo** en lugar de agregarla de nuevo.
 </GuideCallout>
-
-<GuideImagePending>
-  **Vista requerida:** Asignación estándar → Por docente con la ventana **Agregar asignación** abierta. Deben verse los campos Asignatura, Sede y la lista Grupos con algunos grupos marcados, y los botones Cancelar y Agregar. Archivo sugerido: `asignacion-estandar-agregar-por-docente.jpg`. Evite nombres reales de docentes.
-</GuideImagePending>
 
 #### 6. Ajustar horas o eliminar asignaciones de un docente
 
@@ -254,10 +239,6 @@ Informes disponibles:
 - **Por docente:** **Descargar Excel** genera la tabla de intensidad horaria por docente. **Descargar PDF** genera otro informe, *Asignación Académica por Docente*, con una tabla por docente (grupo, periodo, asignatura, horas y peso). Ambos respetan el filtro **Docentes**.
 
 Si no hay datos, SINAI muestra *No hay grupos con asignación académica para la sede y el nivel seleccionados.* o *No hay docentes con asignación académica en grupos de la sede y el nivel seleccionados.*
-
-<GuideImagePending>
-  **Vista requerida:** Intensidad horaria → Por grupo con una sede y un nivel que tengan al menos un grupo estándar y uno personalizado. Deben verse las etiquetas Estándar y Personalizada, la columna Periodo con *Todos* y con nombres de periodo, las iniciales de los docentes y la columna Total. Archivo sugerido: `intensidad-horaria-por-grupo.jpg`. Evite nombres reales de docentes.
-</GuideImagePending>
 
 #### 9. Descargar la asignación estándar en PDF
 

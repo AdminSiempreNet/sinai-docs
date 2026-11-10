@@ -1,76 +1,132 @@
 ---
 title: "Recuperar contraseña"
-description: "Aprenda a recuperar su contraseña y restablecer el acceso a SINAI."
+description: "Solicite un enlace de recuperación a su correo, defina una contraseña nueva o pida el restablecimiento a su institución."
 guide: true
 wordpressId: 150
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/d-recuperar-contrasena/"
-lastModified: "2024-07-23 15:50:44"
+lastModified: "2026-10-30"
+lastReviewed: "2026-10-30"
 ---
 
 ## Video tutorial
 
 <GuideVideos compact>
-  <YouTube id="h74ox36HTUg" title="Recuperar contraseña" odyseeUrl="https://odysee.com/@AndresGoDu:a/Cambiar-Mi-clave:d94d1126c0ec375bb5e61fc95d78182a991ef058" />
+<YouTube id="h74ox36HTUg" title="Cambiar mi clave" odyseeUrl="https://odysee.com/@AndresGoDu:a/Cambiar-Mi-clave:d94d1126c0ec375bb5e61fc95d78182a991ef058" />
 </GuideVideos>
 
 ## Guía paso a paso
 
-Si olvidó su contraseña de acceso a SINAI, puede restablecerla mediante una de las siguientes alternativas.
+### 1. ¿Cómo recuperar la contraseña?
 
-### 1. Recuperación automática desde SINAI
+Si olvidó la contraseña con la que ingresa a SINAI como docente, tiene tres alternativas:
 
-1. En la pantalla de inicio de sesión de SINAI, seleccione **Recuperar contraseña**.
+- **Recuperar contraseña:** SINAI envía a su correo electrónico registrado un enlace para definir una contraseña nueva.
+- **SNET CORE:** si ingresa con **Iniciar con SNET CORE**, la contraseña de esa cuenta se recupera en la pantalla de SNET CORE.
+- **Restablecimiento por la institución:** el personal administrativo de su institución le asigna de nuevo la contraseña genérica para funcionarios.
 
-<GuideScreenshot
-  src="/images/wordpress/2024/09/1.-Recuperar-contrasena.png"
-  alt="Opción Recuperar contraseña en la pantalla de inicio de SINAI"
-  caption="Seleccione Recuperar contraseña para iniciar el proceso."
-/>
+La opción **Recuperar contraseña** está en la página de inicio de sesión, debajo de los botones de ingreso.
 
-2. Ingrese el correo electrónico registrado en SINAI y seleccione **Restablecer contraseña**. El sistema indicará a qué dirección se enviaron las instrucciones.
+<GuideImageTrigger src="/images/guides/docente-recuperar-contrasena/acceso-recuperar-contrasena.jpg" alt="Página de inicio de sesión de SINAI con el enlace Recuperar contraseña debajo de los botones de ingreso">
+  Ver ejemplo
+</GuideImageTrigger>
 
-<GuideScreenshot
-  src="/images/guides/inicio-sesion/ingresar-correo.png"
-  alt="Campo para ingresar el correo electrónico registrado al recuperar la contraseña"
-  caption="Ingrese el correo electrónico registrado en SINAI."
-/>
+#### 2. Solicitar el enlace de recuperación
 
-3. Revise el correo electrónico recibido y siga el enlace para crear una nueva contraseña.
+1. En la página de inicio de sesión, haga clic en **Recuperar contraseña**.
+2. Se abre **Restablecer Contraseña**. En **Usuario o Correo electrónico**, escriba su usuario de SINAI o el correo registrado.
+3. Haga clic en **Restablecer contraseña**.
+
+<GuideImageTrigger src="/images/guides/docente-recuperar-contrasena/recuperar-contrasena.jpg" alt="Pantalla Restablecer Contraseña con el campo Usuario o Correo electrónico y el botón Restablecer contraseña">
+  Ver ejemplo
+</GuideImageTrigger>
+
+SINAI responde con uno de estos mensajes:
+
+<GuideDataTable>
+
+| Mensaje | Qué significa |
+| --- | --- |
+| «Si el usuario existe, se envió un mensaje a su correo.» | La solicitud se recibió. Revise su correo. |
+| «El correo electrónico ..., encuentra sin confirmar. ¿Estás seguro de que esta es tu dirección de correo electrónico?» | El correo registrado no está confirmado. Si es el suyo, haga clic en **Sí, usar este correo** para recibir el enlace. |
+| «El usuario no tiene un correo electrónico asociado» | SINAI no encontró un correo al cual enviar el enlace: su usuario no tiene correo registrado o lo que escribió no corresponde a ningún usuario. |
+| «Por favor ingrese un Usuario o Correo electrónico para hacer la búsqueda» | El campo quedó vacío. |
+| «Ha realizado demasiados intentos. Espere un minuto e inténtelo de nuevo.» | Se superó el límite de solicitudes por minuto. |
+
+</GuideDataTable>
+
+**Volver al Inicio** y la **X** de la ventana regresan a la página de inicio de sesión.
+
+#### 3. Definir la contraseña nueva
+
+1. Abra el correo **SINAI - Restablecimiento de credenciales** y haga clic en el botón del mensaje.
+2. Se abre **Establecer nueva contraseña**. Escriba la contraseña en **Nueva Contraseña**. Si prefiere, haga clic en **Generar** y SINAI crea una contraseña que cumple las condiciones y la escribe en los dos campos.
+3. Escríbala de nuevo en **Confirmar Contraseña**.
+4. Haga clic en **Guardar contraseña**.
+
+La contraseña nueva debe cumplir estas condiciones. Mientras escribe, SINAI le indica debajo del campo cuál falta:
+
+- Mínimo **14 caracteres**.
+- Al menos una **letra mayúscula**, una **letra minúscula** y un **número**.
+- Sin espacios.
+- Diferente de su contraseña actual y de la contraseña genérica de la institución.
+
+El botón del ojo muestra u oculta la contraseña, y el botón de copiar la copia al portapapeles.
+
+Si todo está bien, SINAI muestra «Contraseña actualizada con éxito.» Haga clic en **Ir al Login** e ingrese con la contraseña nueva.
+
+Si el enlace ya no sirve, SINAI muestra **Enlace no válido** con el mensaje «El enlace de recuperación no es válido, ya fue usado o expiró.» Según la pantalla, los enlaces vencen 30 minutos después de enviados y solo se pueden usar una vez. Haga clic en **Solicitar un nuevo enlace** para volver al paso 2, o en **Ir al inicio de sesión**.
+
+<GuideImageTrigger src="/images/guides/docente-recuperar-contrasena/enlace-no-valido.jpg" alt="Pantalla Enlace no válido con los botones Solicitar un nuevo enlace e Ir al inicio de sesión">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 4. Recuperar la contraseña de SNET CORE
+
+El botón **Iniciar con SNET CORE** aparece solo si está habilitado en SINAI y lo lleva a la pantalla de SNET CORE, que maneja su propia contraseña. Si ingresa por ese botón y no recuerda la contraseña:
+
+1. En la página de inicio de sesión, haga clic en **Iniciar con SNET CORE**.
+2. En la pantalla de SNET CORE, haga clic en **¿Olvidaste tu contraseña?** y siga las instrucciones.
 
 <GuideCallout>
-  Si no tiene acceso al correo registrado, solicite apoyo a un rector, coordinador, secretario o administrador autorizado de su institución.
+  **Iniciar con Google** usa su cuenta de Google. La contraseña de esa cuenta se recupera en Google, no en SINAI.
 </GuideCallout>
 
-### 2. Recuperación mediante SNET CORE
+#### 5. Solicitar el restablecimiento a su institución
 
-SNET CORE centraliza los accesos a otras plataformas con una sola cuenta. Use esta alternativa cuando ingresa a SINAI con una cuenta de SNET CORE.
+Si no tiene correo registrado o no recibe el enlace, comuníquese con el personal administrativo autorizado de su institución. Un usuario con permiso usa **Restablecer Clave** en la gestión de usuarios:
 
-1. Desde SINAI, seleccione **Iniciar con SNET CORE**. <GuideImage src="/images/wordpress/2024/09/5-Recuperar-contrasena.png" alt="Acceso a SNET CORE desde SINAI" />
-
-2. En la pantalla de inicio de SNET CORE, abra **¿Olvidaste tu contraseña?**. <GuideImageSequence images={[ { src: "/images/wordpress/2024/09/6-Recuperar-contrasena.png", alt: "Seleccione ¿Olvidaste tu contraseña? para iniciar la recuperación." }, { src: "/images/wordpress/2024/09/7-Recuperar-contrasena.png", alt: "Escriba el correo electrónico registrado en SNET CORE." }, ]} > Ver ejemplos </GuideImageSequence>
-
-3. Escriba el correo electrónico usado durante el registro.
-4. Abra el mensaje recibido y siga el enlace para definir una nueva contraseña. <GuideImageSequence images={[ { src: "/images/wordpress/2024/09/8-Recuperar-contrasena.png", alt: "SNET CORE confirma el envío de las instrucciones." }, { src: "/images/wordpress/2024/09/9-Recuperar-contrasena.png", alt: "Abra el enlace recibido para asignar una contraseña nueva." }, ]} > Ver ejemplos </GuideImageSequence>
-
-### 3. Restablecimiento por un usuario directivo o administrativo
-
-Si no puede recuperar la contraseña con las opciones anteriores, contacte a un rector, coordinador, secretario o administrador autorizado. SINAI enviará un enlace de restablecimiento al correo electrónico registrado.
-
-La nueva contraseña debe tener mínimo **14 caracteres** e incluir una letra mayúscula, una letra minúscula y un número.
-
+- Su contraseña pasa a ser la contraseña genérica que la institución configuró para funcionarios.
+- Si tiene correo registrado, SINAI le envía esa contraseña al correo.
+- Al ingresar con ella, SINAI le pide definir una contraseña nueva, con las mismas condiciones del paso 3.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"¿Qué requisitos debo revisar para completar «Recuperar contraseña»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="01" question={"No me llega el correo de recuperación. ¿Qué hago?"}>
+    El enlace llega al correo registrado en SINAI para su usuario, que puede ser distinto del que usted revisa. Verifique que escribió bien su usuario o su correo y, si hizo varias solicitudes, use el último correo recibido. Si no tiene acceso al correo registrado, solicite el restablecimiento al personal administrativo de su institución.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"¿Cómo verifico que «Recuperar contraseña» se realizó correctamente?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="02" question={"Aparece que mi correo «encuentra sin confirmar». ¿Qué hago?"}>
+    Si el correo que muestra el mensaje es el suyo, haga clic en **Sí, usar este correo** y SINAI le envía el enlace. Al abrir el enlace, SINAI marca ese correo como verificado. Si no es su correo, no lo use: solicite al personal administrativo de su institución que lo actualice o que restablezca su contraseña.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué debo hacer si encuentro un inconveniente con «Recuperar contraseña»?"}>
-    Respuesta pendiente de completar.
+  <GuideFAQItem index="03" question={"Aparece «El usuario no tiene un correo electrónico asociado». ¿Por qué?"}>
+    SINAI no encontró un correo para enviar el enlace. Puede que su usuario no tenga correo registrado o que el usuario o el correo que escribió no exista en SINAI. Revise lo que escribió; si el mensaje se repite, solicite el restablecimiento a su institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question={"El enlace dice «Enlace no válido». ¿Por qué?"}>
+    El enlace ya se usó, venció o no corresponde a la última solicitud. Cada solicitud genera un enlace nuevo y el anterior deja de servir, así que use siempre el último correo recibido. Haga clic en **Solicitar un nuevo enlace** para pedir otro.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question={"¿Qué condiciones debe cumplir la contraseña nueva?"}>
+    Mínimo 14 caracteres, al menos una mayúscula, una minúscula y un número, y sin espacios. Tampoco puede ser igual a su contraseña actual ni a la contraseña genérica de la institución; en esos casos SINAI muestra «La nueva contraseña no puede ser igual a la actual.» o «La contraseña no puede ser igual a la contraseña genérica de la institución.» Si no quiere inventarla, haga clic en **Generar**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question={"La institución restableció mi contraseña. ¿Cuál uso?"}>
+    La contraseña genérica para funcionarios que su institución configuró. Si tiene correo registrado, SINAI se la envía. Ingrese con ella y SINAI le pedirá definir una contraseña nueva antes de continuar.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question={"Recuerdo mi contraseña y solo quiero cambiarla. ¿Uso esta opción?"}>
+    No es necesario. Ingrese a SINAI y cambie la contraseña desde su perfil, como se explica en [Cómo actualizar el perfil](/docs/docente/primeros-pasos/actualizar-perfil).
   </GuideFAQItem>
 </GuideFAQ>
