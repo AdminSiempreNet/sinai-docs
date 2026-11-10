@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Base de conocimiento SINAI",
     template: "%s | SINAI",
   },
-  description: "Guías y procesos de la plataforma SINAI de SIEMPRE.NET.",
+  description: "Guías y procesos de la plataforma SINAI de SIEMPRE.NET S.A.S.",
   icons: {
     icon: [{ url: "/images/brand/sinai-iso.png", type: "image/png" }],
     apple: [{ url: "/images/brand/sinai-iso.png", type: "image/png" }],
