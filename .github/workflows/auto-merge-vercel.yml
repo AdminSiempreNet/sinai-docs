@@ -1,0 +1,116 @@
+
+name: Auto Merge y Deploy Vercel
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: auto-merge-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  merge-and-deploy:
+    name: Merge y despliegue a produccion
+
+    if: >-
+      ${{
+        github.event.pull_request.draft == false &&
+        contains(
+          fromJSON(vars.VERCEL_ALLOWED_USERS || '[]'),
+          github.event.pull_request.user.login
+        )
+      }}
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Verificar y fusionar PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Fusionando PR #${PR_NUMBER}"
+
+          gh pr merge "$PR_NUMBER" \
+            --repo "$GITHUB_REPOSITORY" \
+            --squash \
+            --match-head-commit "$HEAD_SHA"
+
+      - name: Obtener commit fusionado
+        id: merged
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SHA=$(gh pr view "$PR_NUMBER" \
+            --repo "$GITHUB_REPOSITORY" \
+            --json mergeCommit \
+            --jq '.mergeCommit.oid')
+
+          if [[ ! "$SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "No se pudo verificar el merge"
+            exit 1
+          fi
+
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Obtener codigo fusionado
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.merged.outputs.sha }}
+          persist-credentials: false
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Desplegar a produccion
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          GIT_COMMIT_SHA: ${{ steps.merged.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Desplegando commit $GIT_COMMIT_SHA"
+
+          URL=$(vercel deploy --prod --yes)
+
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "Produccion: $URL"
+
+      - name: Comentar resultado en PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+        run: |
+          gh pr comment "$PR_NUMBER" \
+            --repo "$GITHUB_REPOSITORY" \
+            --body "Despliegue a produccion completado: $DEPLOY_URL"
