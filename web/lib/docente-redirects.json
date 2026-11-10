@@ -1,5 +1,15 @@
 [
   {
+    "source": "/docs/docente/cierre-de-ano",
+    "destination": "/docs/docente/cierre-anual",
+    "permanent": true
+  },
+  {
+    "source": "/docs/docente/cierre-de-ano/:path*",
+    "destination": "/docs/docente/cierre-anual/:path*",
+    "permanent": true
+  },
+  {
     "source": "/docs/docente/capacitacion-documentada/app-sinai-desktop/evaluacion-desktop/donde-visualizar-las-escalas-de-desempeno-en-desktop",
     "destination": "/docs/docente/sinai-desktop/evaluacion/donde-visualizar-las-escalas-de-desempeno-en-desktop",
     "permanent": true
@@ -131,7 +141,7 @@
   },
   {
     "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/ajuste-de-nota-final-evaluacion-capacitacion-documentada/d-ajuste-de-nota-final",
-    "destination": "/docs/docente/cierre-de-ano/ajuste-de-nota-final",
+    "destination": "/docs/docente/cierre-anual/ajuste-de-nota-final",
     "permanent": true
   },
   {
@@ -171,7 +181,7 @@
   },
   {
     "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/notas-finales-evaluacion-capacitacion-documentada/d-notas-finales",
-    "destination": "/docs/docente/cierre-de-ano/notas-finales",
+    "destination": "/docs/docente/cierre-anual/notas-finales",
     "permanent": true
   },
   {
@@ -181,7 +191,7 @@
   },
   {
     "source": "/docs/docente/capacitacion-documentada/evaluacion-capacitacion-documentada/recuperaciones-finales/recuperaciones-finales",
-    "destination": "/docs/docente/cierre-de-ano/recuperaciones-finales",
+    "destination": "/docs/docente/cierre-anual/recuperaciones-finales",
     "permanent": true
   },
   {
