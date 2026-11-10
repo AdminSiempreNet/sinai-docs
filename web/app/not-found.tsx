@@ -8,7 +8,7 @@ export default function NotFound() {
       <header className="sinai-not-found-header">
         <Link href="/" className="sinai-welcome-brand" aria-label="Inicio del centro de ayuda SINAI">
           <SinaiBrandLogo />
-          <span>Centro de ayuda</span>
+          <span>Centro de Ayuda de la Plataforma SINAI</span>
         </Link>
         <nav aria-label="Navegación de recuperación">
           <Link href="/docs/generales">Guías generales</Link>
