@@ -117,7 +117,7 @@ const HUBS: Record<string, HubConfig> = {
     title: 'Administrativo',
     subtitle: 'Guías para configurar, operar y cerrar los procesos académicos e institucionales de su establecimiento en SINAI.',
     description:
-      'Aquí encontrará el recorrido completo del rol Administrativo: desde el primer ingreso y la configuración de la institución, hasta la gestión de personal y estudiantes, el registro de calificaciones, la convivencia escolar, los cierres de periodo y de año, los permisos de usuarios y las herramientas de apoyo.',
+      'Aquí encontrarás el recorrido completo del rol Administrativo: desde el primer ingreso y la configuración de la institución, hasta la gestión de personal y estudiantes, el registro de calificaciones, la convivencia escolar, los cierres de periodo y de año, los permisos de usuarios y las herramientas de apoyo.',
     cards: [
       card('Primeros pasos', 'Acceso a la plataforma y configuración inicial de su cuenta.', '/docs/administrativo/primeros-pasos', '/images/section-hubs/dedicated/administrativo/primeros-pasos/ingresar-a-sinai.webp', 'Puerta de acceso a SINAI', LogIn),
       card('Configuración Institucional', 'Datos de la institución, calendarios y configuración académica.', '/docs/administrativo/configuracion-institucional', '/images/section-hubs/institutional-config/institution.webp', 'Edificio de la institución', School),
