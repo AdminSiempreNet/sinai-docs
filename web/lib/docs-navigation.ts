@@ -8,7 +8,7 @@ const ADMIN_SECTION_BY_NAME: Record<string, string> = {
   Currículo: '/docs/administrativo/curriculo',
   'Convivencia escolar': '/docs/administrativo/convivencia-escolar',
   'Cierre académico (periodo)': '/docs/administrativo/cierre-academico-periodo',
-  'Cierre de año': '/docs/administrativo/cierre-de-ano',
+  'Cierre de año': '/docs/administrativo/cierre-anual',
   'Gestión de usuarios y permisos':
     '/docs/administrativo/gestion-de-usuarios-y-permisos',
   Herramientas: '/docs/administrativo/herramientas',
@@ -24,7 +24,7 @@ const DOCENTE_SECTION_BY_NAME: Record<string, string> = {
   "Asistencia y seguimiento": "/docs/docente/asistencia-y-seguimiento",
   "Convivencia y observador": "/docs/docente/convivencia-y-observador",
   "Cierre académico (periodo)": "/docs/docente/cierre-academico-periodo",
-  "Cierre de año": "/docs/docente/cierre-de-ano",
+  "Cierre de año": "/docs/docente/cierre-anual",
   "Aula virtual": "/docs/docente/aula-virtual",
   "Herramientas": "/docs/docente/herramientas",
   "SINAI Desktop": "/docs/docente/sinai-desktop",
