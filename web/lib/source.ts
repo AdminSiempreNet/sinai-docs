@@ -63,7 +63,7 @@ function getSemanticMetaIcon(metaPath: string) {
   // Carpetas de sección / fallbacks amplios.
   if (/app-sinai-desktop|desktop/.test(path)) return 'MonitorCog';
   if (/primeros-pasos/.test(path)) return 'House';
-  if (/cierre-de-ano|promocion/.test(path)) return 'Award';
+  if (/cierre-anual|promocion/.test(path)) return 'Award';
   if (/cierre-academico|calendario|periodo/.test(path)) return 'CalendarDays';
   if (/gestion-de-estudiantes|matricula|prematricula|inscripcion|reingreso|especialidades|cambio-de-grupo/.test(path)) return 'UsersRound';
   if (/estudiantes|piar|fotografias|lista-por-grupo/.test(path)) return 'UsersRound';

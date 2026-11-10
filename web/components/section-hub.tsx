@@ -127,7 +127,7 @@ const HUBS: Record<string, HubConfig> = {
       card('Currículo', 'Currículo estándar y por archivo adjunto.', '/docs/administrativo/curriculo', '/images/section-hubs/dedicated/administrativo/curriculo/curriculo-estandar.webp', 'Planeación curricular', BookOpen),
       card('Convivencia escolar', 'Comportamiento, ficha observador y anotaciones disciplinarias.', '/docs/administrativo/convivencia-escolar', '/images/section-hubs/dedicated/administrativo/convivencia-escolar/calificacion-comportamiento.webp', 'Seguimiento de convivencia', Scale),
       card('Cierre académico (periodo)', 'Consolidados, nivelaciones, puestos e informes de periodo.', '/docs/administrativo/cierre-academico-periodo', '/images/section-hubs/dedicated/administrativo/cierre-academico-periodo/reportes-consolidados.webp', 'Cierre del periodo académico', BarChart3),
-      card('Cierre de año', 'Comisión, promoción, recuperaciones y traslado de matrícula.', '/docs/administrativo/cierre-de-ano', '/images/section-hubs/dedicated/administrativo/cierre-de-ano/procesar-promocion.webp', 'Promoción de fin de año', Trophy),
+      card('Cierre de año', 'Comisión, promoción, recuperaciones y traslado de matrícula.', '/docs/administrativo/cierre-anual', '/images/section-hubs/dedicated/administrativo/cierre-anual/procesar-promocion.webp', 'Promoción de fin de año', Trophy),
       card('Gestión de usuarios y permisos', 'Usuarios, permisos y verificación de datos.', '/docs/administrativo/gestion-de-usuarios-y-permisos', '/images/section-hubs/dedicated/administrativo/gestion-de-usuarios-y-permisos/usuarios.webp', 'Cuentas y permisos de usuario', Users),
       card('Herramientas', 'Autoevaluación, Chamilo, reuniones, informes y más.', '/docs/administrativo/herramientas', '/images/section-hubs/dedicated/administrativo/herramientas/autoevaluacion.webp', 'Herramientas de apoyo institucional', Wrench),
       card('Ayuda', 'Políticas y preguntas frecuentes.', '/docs/administrativo/ayuda', '/images/section-hubs/dedicated/administrativo/ayuda/preguntas-frecuentes.webp', 'Ayuda y preguntas frecuentes', CircleHelp),
@@ -225,23 +225,23 @@ const HUBS: Record<string, HubConfig> = {
       card('Informes de evaluación', 'Consulte los informes de evaluación del periodo.', '/docs/administrativo/cierre-academico-periodo/informes', images.adminClosing, 'Carpeta con informes académicos consolidados', FileText),
     ],
   },
-  'administrativo/cierre-de-ano': {
+  'administrativo/cierre-anual': {
     title: 'Cierre de año',
     subtitle: 'Procese promoción, recuperaciones, traslado de matrícula e informes de fin de año.',
     description:
       'En este espacio encontrará el recorrido completo para finalizar el calendario académico. Incluye las comisiones de evaluación, la revisión de notas finales, los procesos de promoción y recuperación, los traslados de matrícula y los informes necesarios para verificar que cada estudiante quede correctamente ubicado para el siguiente año.',
     cards: [
-      card('Actas de la comisión de evaluación', 'Elabore y gestione las actas de la comisión.', '/docs/administrativo/cierre-de-ano/comision-de-evaluacion', images.adminClosing, 'Documentos oficiales del cierre anual', ClipboardList),
-      card('Comisión de evaluación', 'Siga el proceso de temporada de la comisión de evaluación.', '/docs/administrativo/cierre-de-ano/comision-de-evaluacion-proceso', images.adminClosing, 'Equipo de evaluación y reporte de cierre', Users),
-      card('Notas finales', 'Ajuste y revise las notas finales del año.', '/docs/administrativo/cierre-de-ano/ajuste-de-nota-final', images.adminClosing, 'Libro cerrado con resultados finales', CheckSquare),
-      card('Promoción anticipada', 'Registre el acta y promueva estudiantes durante el año.', '/docs/administrativo/cierre-de-ano/promocion-anticipada', images.adminClosing, 'Estudiante avanzando al grado siguiente', Medal),
-      card('Criterios de promoción', 'Revise los criterios y asígnelos a cada grupo.', '/docs/administrativo/cierre-de-ano/criterios-de-promocion', images.adminClosing, 'Balanza de los criterios de promoción', Scale),
-      card('Procesos de promoción', 'Ejecute los procesos de promoción de estudiantes.', '/docs/administrativo/cierre-de-ano/procesar-promocion', images.adminClosing, 'Progreso y promoción académica', Trophy),
-      card('Cómo procesar la promoción', 'Consulte el paso a paso para promover estudiantes.', '/docs/administrativo/cierre-de-ano/como-procesar-la-promocion', images.adminClosing, 'Ruta guiada para la promoción escolar', BadgeCheck),
-      card('Actas de recuperación', 'Gestione recuperaciones finales y sus actas.', '/docs/administrativo/cierre-de-ano/recuperaciones-finales', images.adminClosing, 'Recuperación y validación de resultados', RefreshCcw),
-      card('Trasladar matrícula', 'Traslade matrícula por grupo o por estudiante.', '/docs/administrativo/cierre-de-ano/trasladar-matricula', images.adminClosing, 'Traslado de registros entre grupos', Send),
-      card('Foliar libro', 'Asigne grupos al libro y numere los folios.', '/docs/administrativo/cierre-de-ano/foliar-libro', images.adminClosing, 'Libro de calificaciones foliado', BookOpen),
-      card('Informes de promoción', 'Consulte los informes asociados a la promoción.', '/docs/administrativo/cierre-de-ano/informes', images.adminClosing, 'Reporte final de promoción académica', BarChart3),
+      card('Actas de la comisión de evaluación', 'Elabore y gestione las actas de la comisión.', '/docs/administrativo/cierre-anual/comision-de-evaluacion', images.adminClosing, 'Documentos oficiales del cierre anual', ClipboardList),
+      card('Comisión de evaluación', 'Siga el proceso de temporada de la comisión de evaluación.', '/docs/administrativo/cierre-anual/comision-de-evaluacion-proceso', images.adminClosing, 'Equipo de evaluación y reporte de cierre', Users),
+      card('Notas finales', 'Ajuste y revise las notas finales del año.', '/docs/administrativo/cierre-anual/ajuste-de-nota-final', images.adminClosing, 'Libro cerrado con resultados finales', CheckSquare),
+      card('Promoción anticipada', 'Registre el acta y promueva estudiantes durante el año.', '/docs/administrativo/cierre-anual/promocion-anticipada', images.adminClosing, 'Estudiante avanzando al grado siguiente', Medal),
+      card('Criterios de promoción', 'Revise los criterios y asígnelos a cada grupo.', '/docs/administrativo/cierre-anual/criterios-de-promocion', images.adminClosing, 'Balanza de los criterios de promoción', Scale),
+      card('Procesos de promoción', 'Ejecute los procesos de promoción de estudiantes.', '/docs/administrativo/cierre-anual/procesar-promocion', images.adminClosing, 'Progreso y promoción académica', Trophy),
+      card('Cómo procesar la promoción', 'Consulte el paso a paso para promover estudiantes.', '/docs/administrativo/cierre-anual/como-procesar-la-promocion', images.adminClosing, 'Ruta guiada para la promoción escolar', BadgeCheck),
+      card('Actas de recuperación', 'Gestione recuperaciones finales y sus actas.', '/docs/administrativo/cierre-anual/recuperaciones-finales', images.adminClosing, 'Recuperación y validación de resultados', RefreshCcw),
+      card('Trasladar matrícula', 'Traslade matrícula por grupo o por estudiante.', '/docs/administrativo/cierre-anual/trasladar-matricula', images.adminClosing, 'Traslado de registros entre grupos', Send),
+      card('Foliar libro', 'Asigne grupos al libro y numere los folios.', '/docs/administrativo/cierre-anual/foliar-libro', images.adminClosing, 'Libro de calificaciones foliado', BookOpen),
+      card('Informes de promoción', 'Consulte los informes asociados a la promoción.', '/docs/administrativo/cierre-anual/informes', images.adminClosing, 'Reporte final de promoción académica', BarChart3),
     ],
   },
   'administrativo/gestion-de-usuarios-y-permisos': {
@@ -300,7 +300,7 @@ const HUBS: Record<string, HubConfig> = {
       card('Asistencia y seguimiento', 'Registre inasistencias, consulte consolidados y gestione excusas.', '/docs/docente/asistencia-y-seguimiento', '/images/section-hubs/dedicated/docente/asistencia-y-seguimiento/inasistencias.webp', 'Control de asistencia', CalendarDays),
       card('Convivencia y observador', 'Documente el comportamiento, las anotaciones y el seguimiento del estudiante.', '/docs/docente/convivencia-y-observador', '/images/section-hubs/dedicated/docente/convivencia-y-observador/ficha-observador.webp', 'Ficha del observador', HeartHandshake),
       card('Cierre académico (periodo)', 'Consulte refuerzos, observaciones e informes al finalizar el periodo.', '/docs/docente/cierre-academico-periodo', '/images/section-hubs/dedicated/docente/cierre-academico-periodo/informes-de-evaluacion.webp', 'Informes de cierre del periodo', FileText),
-      card('Cierre de año', 'Revise notas finales, ajustes y recuperaciones de cierre anual.', '/docs/docente/cierre-de-ano', '/images/section-hubs/dedicated/docente/cierre-de-ano/notas-finales.webp', 'Notas finales del año', Trophy),
+      card('Cierre de año', 'Revise notas finales, ajustes y recuperaciones de cierre anual.', '/docs/docente/cierre-anual', '/images/section-hubs/dedicated/docente/cierre-anual/notas-finales.webp', 'Notas finales del año', Trophy),
       card('Aula virtual', 'Gestione tareas, usuarios y calificaciones del aula virtual.', '/docs/docente/aula-virtual', '/images/section-hubs/dedicated/docente/aula-virtual/tareas-en-linea.webp', 'Tareas del aula virtual', Monitor),
       card('Herramientas', 'Consulte mensajes, reuniones, informes y utilidades de apoyo.', '/docs/docente/herramientas', '/images/section-hubs/dedicated/docente/herramientas/mensajes.webp', 'Mensajes y herramientas docentes', MessageSquare),
       card('SINAI Desktop', 'Instale la aplicación y consulte sus procesos y opciones de sincronización.', '/docs/docente/sinai-desktop', '/images/section-hubs/dedicated/docente/sinai-desktop/inicio-y-configuracion.webp', 'Aplicación SINAI Desktop', Monitor),
@@ -403,15 +403,15 @@ const HUBS: Record<string, HubConfig> = {
       card('Cuadro de Honor', 'Consulte los estudiantes con mejor rendimiento.', '/docs/docente/cierre-academico-periodo/cuadro-de-honor', images.teacherClosing, 'Reconocimiento al rendimiento académico', Trophy),
     ],
   },
-  'docente/cierre-de-ano': {
+  'docente/cierre-anual': {
     title: 'Cierre de año',
     subtitle: 'Revise notas finales, ajustes y recuperaciones del cierre anual.',
     description:
       'En este espacio encontrará las tareas que completan el calendario académico desde el rol Docente. Podrá consultar las valoraciones finales, realizar ajustes autorizados y gestionar las recuperaciones pendientes, verificando que los resultados de cada estudiante queden correctamente registrados antes del cierre anual.',
     cards: [
-      card('Notas finales', 'Consulte valoraciones y descargue reportes.', '/docs/docente/cierre-de-ano/notas-finales', images.teacherClosing, 'Libro de resultados finales', CheckSquare),
-      card('Ajuste de nota final', 'Ajuste una valoración con autorización institucional.', '/docs/docente/cierre-de-ano/ajuste-de-nota-final', images.teacherClosing, 'Ajuste controlado de resultados', Calculator),
-      card('Recuperaciones finales', 'Genere y complete las actas de recuperación.', '/docs/docente/cierre-de-ano/recuperaciones-finales', images.teacherClosing, 'Acta de recuperación académica', RefreshCcw),
+      card('Notas finales', 'Consulte valoraciones y descargue reportes.', '/docs/docente/cierre-anual/notas-finales', images.teacherClosing, 'Libro de resultados finales', CheckSquare),
+      card('Ajuste de nota final', 'Ajuste una valoración con autorización institucional.', '/docs/docente/cierre-anual/ajuste-de-nota-final', images.teacherClosing, 'Ajuste controlado de resultados', Calculator),
+      card('Recuperaciones finales', 'Genere y complete las actas de recuperación.', '/docs/docente/cierre-anual/recuperaciones-finales', images.teacherClosing, 'Acta de recuperación académica', RefreshCcw),
     ],
   },
   'docente/aula-virtual': {
