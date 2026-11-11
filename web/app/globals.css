@@ -26,6 +26,23 @@
   --sinai-font-scale: 1;
 }
 
+/* Modo oscuro: fondo azul noche (mismo de siemprenet-docs) en lugar del negro
+   neutro de Fumadocs. El color primario lo sigue definiendo cada rol. */
+html.dark {
+  color-scheme: dark;
+  --color-fd-background: #07131f;
+  --color-fd-foreground: #e8f4fb;
+  --color-fd-muted: #123044;
+  --color-fd-muted-foreground: #93b8cc;
+  --color-fd-card: #0d2133;
+  --color-fd-popover: #0d2133;
+  --color-fd-border: #1d4a66;
+  --color-fd-accent: #123044;
+  --color-fd-accent-foreground: #e8f4fb;
+  --color-fd-secondary: #0d2133;
+  --color-fd-secondary-foreground: #e8f4fb;
+}
+
 /* Escala tipográfica global (pequeña / mediana / grande). */
 html {
   font-size: calc(100% * var(--sinai-font-scale));
