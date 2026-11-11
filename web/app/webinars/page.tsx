@@ -1,34 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowDown, ArrowLeft, CalendarDays } from 'lucide-react';
+import { ArrowDown, ArrowLeft } from 'lucide-react';
 import { SinaiBrandLogo } from '@/components/sinai-brand-logo';
 import { SinaiFontSizeSwitch } from '@/components/sinai-font-size-switch';
 import { SinaiSiteFooter } from '@/components/sinai-site-footer';
 import { SinaiThemeSwitch } from '@/components/sinai-theme-switch';
 import { WebinarGallery } from '@/components/webinar-gallery';
-import { WebinarSchedule, type UpcomingWebinar } from '@/components/webinar-schedule';
 import './webinars.css';
 
 export const metadata: Metadata = {
   title: 'Webinars SINAI',
   description: 'Transmisiones en vivo, programación y grabaciones de los webinars de SINAI.',
 };
-
-const LIVE_CHANNEL_URL = 'https://www.twitch.tv/sinai_academico';
-
-/** Ordenados por fecha: el primero es la próxima transmisión. */
-const upcomingWebinars: UpcomingWebinar[] = [
-  {
-    day: '10',
-    month: 'NOV',
-    weekday: 'Martes',
-    isoDate: '2026-11-10',
-    title: 'Finalización de calendario',
-    objective: 'Conocer e identificar en la Plataforma SINAI los diferentes procesos que se deben ejecutar para procesar la promoción de los estudiantes de manera exitosa en el calendario 2026.',
-    platform: 'Twitch',
-    accessUrl: LIVE_CHANNEL_URL,
-  },
-];
 
 export default function WebinarsPage() {
   return (
@@ -57,32 +40,30 @@ export default function WebinarsPage() {
             <div className="sinai-live-hero-copy sinai-standby-copy">
               <span className="sinai-standby-badge">
                 <span aria-hidden="true" />
-                Sala de espera
+                Calendario 2026
               </span>
-              <h1 id="sinai-live-hero-title">Todo listo para el próximo encuentro.</h1>
+              <h1 id="sinai-live-hero-title">Gracias por acompañarnos este año.</h1>
               <p>
-                Prepare a su equipo y consulte la agenda. Al comenzar, encontrará aquí el acceso para acompañar el
-                webinar de SINAI.
+                El ciclo de webinars de este calendario ha finalizado. Ya puede consultar la grabación de
+                <strong> Finalización de calendario</strong> y las demás sesiones realizadas.
               </p>
 
               <div className="sinai-live-hero-actions">
-                <a href="#sinai-webinar-agenda" className="sinai-live-primary">
-                  <CalendarDays aria-hidden="true" />
-                  Consultar agenda
-                </a>
                 <a href="#sinai-webinar-library-title" className="sinai-live-secondary">
-                  Ver grabaciones
+                  Ver webinars realizados
                   <ArrowDown aria-hidden="true" />
                 </a>
               </div>
             </div>
 
-            <section className="sinai-standby-agenda" id="sinai-webinar-agenda" aria-labelledby="sinai-live-panel-title">
+            <section className="sinai-standby-agenda" aria-labelledby="sinai-live-panel-title">
               <div className="sinai-live-panel-heading">
-                <p>Agenda</p>
-                <h2 id="sinai-live-panel-title">Próxima transmisión</h2>
+                <p>Próximamente</p>
+                <h2 id="sinai-live-panel-title">La nueva agenda se anunciará en 2027</h2>
               </div>
-              <WebinarSchedule webinars={upcomingWebinars} />
+              <p className="sinai-live-empty">
+                No hay webinars programados para el calendario actual. Siga este espacio para conocer las nuevas fechas.
+              </p>
             </section>
           </div>
         </section>

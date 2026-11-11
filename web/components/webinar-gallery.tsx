@@ -34,6 +34,20 @@ const INITIAL_VISIBLE = 6;
 /** Ordenados del más reciente al más antiguo: el primero ocupa la primera tarjeta. */
 const webinars: Webinar[] = [
   {
+    id: 'finalizacion-de-calendario',
+    title: 'Finalización de calendario',
+    summary: 'Procesos para procesar la promoción de los estudiantes y cerrar el calendario 2026.',
+    description: 'Conocer e identificar en la Plataforma SINAI los diferentes procesos que se deben ejecutar para procesar la promoción de los estudiantes de manera exitosa en el calendario 2026: revisión de las notas finales, procesamiento de la promoción y verificación de sus resultados para cerrar el año escolar.',
+    date: '10 de noviembre de 2026',
+    isoDate: '2026-11-10',
+    duration: '2 h 14 min',
+    audience: 'Directivos y administrativos',
+    topic: 'Cierre de año',
+    accent: 'indigo',
+    odyseePath: '@AndresGoDu:a/2925172063-1508357822-537e28ac-1955-4111-a91a-95e78b802e01:c',
+    thumbnailUrl: 'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/589a5793ae64ed8a80d4f58959a86079.webp',
+  },
+  {
     id: 'preparacion-para-la-promocion',
     title: 'Preparación para la promoción de estudiantes',
     summary: 'Ajustes de matrícula, asignación académica y criterios de promoción antes de procesarla.',
