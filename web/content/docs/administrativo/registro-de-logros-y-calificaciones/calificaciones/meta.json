@@ -4,6 +4,7 @@
   "defaultOpen": false,
   "pages": [
     "registro-por-actividades",
+    "componentes-y-actividades",
     "registro-nota-directa",
     "planilla-excel",
     "calificaciones-trasladados",

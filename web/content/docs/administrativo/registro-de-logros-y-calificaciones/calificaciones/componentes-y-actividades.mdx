@@ -1,0 +1,329 @@
+---
+title: "Planilla Componentes y Actividades"
+description: "Nueva generación de planillas 2027: revise y registre las calificaciones por componentes e instrumentos de evaluación de cualquier grupo, administre la planeación periódica, copie instrumentos y notas, y conozca las funciones reservadas al usuario Súper."
+guide: true
+lastModified: "2026-11-11"
+lastReviewed: "2026-11-11"
+---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Recorrido general de la planilla Componentes y Actividades desde el módulo administrativo. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+  - Planeación periódica: crear, editar, restaurar y eliminar instrumentos de evaluación. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+  - Copiar instrumentos y notas entre planillas. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la planilla Componentes y Actividades?
+
+<GuideCallout>
+  **Nueva generación de planillas 2027.** Esta planilla hace parte de la nueva generación de planillas de calificaciones de SINAI. Su pantalla, sus botones y su forma de guardar son distintos a los de la planilla **TRADICIONAL**. Si su pantalla no coincide con esta guía, consulte [Registro de calificaciones](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/registro-por-actividades) y elija la planilla de su institución.
+</GuideCallout>
+
+La **planilla Componentes y Actividades** es la planilla de notas de un grupo, un periodo y una asignatura. Las notas se organizan en **componentes**, que son los grandes aspectos que se evalúan en la asignatura (por ejemplo, cognitivo, procedimental o actitudinal), cada uno con su peso dentro de la asignatura. Dentro de cada componente se registran los **instrumentos de evaluación**, también llamados actividades: talleres, evaluaciones, exposiciones, autoevaluaciones y similares. Con esas notas SINAI calcula la valoración de cada componente, la nota final (**NF**) y la definitiva (**DEF**) del periodo.
+
+Desde el módulo administrativo, rectores, coordinadores y demás usuarios administrativos pueden abrir la planilla de cualquier grupo del calendario, revisar las notas de los docentes y registrar o corregir calificaciones cuando el periodo lo permite. Los cambios que usted guarde quedan en la planilla del docente: él los ve al abrir el mismo grupo, periodo y asignatura.
+
+La planilla trabaja con las reglas que el usuario Súper configuró en **Configuración de planillas**: tipo de valoración (numérica o cualitativa), método de cálculo, método de ajuste y de recuperación, escala, autollenado, observaciones y si se permite generar la planeación automáticamente. Usted puede consultar esas reglas, pero no cambiarlas desde la planilla.
+
+La pantalla tiene dos vistas:
+
+- **Vista grupal:** una tabla con todos los estudiantes y todos los instrumentos de la asignatura. Es la vista con la que abre la planilla.
+- **Vista individual:** el detalle de un solo estudiante, con sus notas por componente, el ajuste, las inasistencias, la observación y sus estadísticas.
+
+Ingrese a **Evaluación → Planilla de Calificaciones**.
+
+La dirección de la página en el navegador termina en `Index.aspx/evaluacion/calificaciones/componentes-con-actividades`. En la parte superior de la pantalla aparece la etiqueta **Componentes y Actividades**, que confirma que está en la planilla correcta.
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/vista-grupal.jpg" alt="Planilla Componentes y Actividades en vista grupal con los filtros, el botón Planeación, el menú de tres puntos y los componentes Cognitiva, Laboral y Ciudadana; los nombres de los estudiantes están difuminados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 2. Seleccionar el grupo, el periodo y la asignatura
+
+La planilla se carga con tres filtros en cascada: primero el grupo, luego el periodo y por último la asignatura.
+
+<GuideDataTable>
+
+| Filtro | Qué muestra |
+| --- | --- |
+| **Grupo** | Todos los grupos del calendario. Puede escribir para buscar el grupo. Al cambiarlo, SINAI vuelve a elegir el periodo y la asignatura. |
+| **Período** | Los periodos del grupo elegido. Junto al nombre aparece el estado del registro de calificaciones: **Abierto** o **Cerrado**. |
+| **Asignatura** | Las asignaturas del grupo en el periodo elegido. La lista se recarga cada vez que cambia el periodo. |
+
+</GuideDataTable>
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/filtros.jpg" alt="Filtros Grupo, Período y Asignatura con el indicador Cerrado junto a Período">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si un filtro está vacío, SINAI selecciona automáticamente la primera opción disponible. SINAI también recuerda en este navegador el último grupo, periodo y asignatura que usó.
+
+Para saber qué procesos están abiertos en el periodo, pase el mouse sobre el ícono de ayuda que está junto a **Abierto** o **Cerrado**. Se abre el cuadro **Estado del período** con las fechas y el estado de cuatro procesos:
+
+- **Planeación:** permite crear, editar y eliminar instrumentos de evaluación.
+- **Calificaciones:** permite registrar y guardar notas.
+- **Recuperaciones:** fechas del proceso de recuperación.
+- **Inasistencias:** permite registrar la columna **IN**.
+
+Estas fechas vienen del cronograma del periodo y de las autorizaciones que tenga el usuario para ese grupo, periodo y asignatura.
+
+Si tiene notas sin guardar y cambia un filtro, SINAI muestra *Hay notas sin guardar en esta planilla. Si cambias el filtro, se perderán. ¿Deseas continuar?* Haga clic en **Cancelar** para volver y guardar, o en **Continuar sin guardar** para descartar los cambios.
+
+<GuideCallout>
+  Cuando el periodo está **Cerrado** para calificaciones, la planilla queda en consulta: puede revisar las notas y abrir la planeación, pero el botón **Guardar** no guarda cambios. Para registrar fuera de fechas, gestione la autorización correspondiente en [Autorizaciones](/docs/administrativo/registro-de-logros-y-calificaciones/calificaciones/autorizaciones).
+</GuideCallout>
+
+#### 3. Leer la planilla
+
+Cada componente aparece como un bloque de columnas con su nombre, su peso en la asignatura y su método de cálculo, por ejemplo *30% · Promedio ponderado*. Debajo están las columnas de sus instrumentos y, al final del bloque, las columnas de resumen del componente.
+
+<GuideDataTable>
+
+| Columna | Qué indica |
+| --- | --- |
+| **Instrumentos** | Una columna por instrumento de evaluación, con su nombre corto. Si el componente usa pesos, se muestra el peso de cada instrumento. |
+| **Porcentaje del componente** (por ejemplo **30%**) | Aporte acumulado del componente a la nota de la asignatura. No aparece cuando el componente usa el método **Suma**. |
+| **Valor...** | Valoración del componente calculada con las notas registradas. |
+| **%** | Acumulado final: suma de lo que aportan todos los componentes. |
+| **NF** | Nota Final calculada a partir de los componentes. |
+| **AJ** | Ajuste. Su descripción indica el método configurado: **Promedio**, **Reemplaza**, **La más alta** o **Suma puntos**. Solo aparece si el método de ajuste no es **No aplica**. |
+| **REC** | Recuperación registrada. Es de consulta y solo aparece si la institución tiene un método de recuperación configurado. |
+| **DEF** | Definitiva del periodo, después de aplicar ajuste y recuperación. |
+| **IN** | Inasistencias no justificadas del estudiante en la asignatura. |
+
+</GuideDataTable>
+
+Los métodos de cálculo que puede ver en un componente son **Promedio lineal**, **Promedio ponderado**, **Ponderado al 100%** y **Suma**. En la **Planeación periódica**, el método **Ponderado al 100%** aparece con el nombre **Promedio Ponderado Agrupado**. En los métodos ponderados, cada instrumento tiene un peso y el promedio se calcula según esos pesos.
+
+Algunos estudiantes aparecen bloqueados y no se pueden calificar en esta planilla:
+
+- estudiantes que no están en estado matriculado;
+- estudiantes con una condición de necesidades educativas especiales (NEE), según el método de inclusión configurado;
+- estudiantes cuya nota llegó por otro medio, marcados con **BD** (base de datos), **ND** (nota directa) o **TR** (trasladado).
+
+Si un estudiante tiene otras notas registradas y deja vacía una actividad **obligatoria**, la celda puede mostrar *Se asumirá* seguido de una nota. Esa es la nota que la institución configuró como valoración obligatoria predeterminada (mínima o máxima de la escala).
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/columnas.jpg" alt="Encabezado de la planilla con los instrumentos y su peso en cada componente, las columnas VALOR..., %, NF, REC, DEF e IN">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 4. Registrar y guardar calificaciones
+
+Antes de registrar, compruebe que el periodo esté **Abierto** para calificaciones y que la asignatura tenga instrumentos creados en la **Planeación**.
+
+1. Haga clic en la celda del estudiante y del instrumento.
+2. Escriba la nota. Use **Enter** para pasar a la siguiente celda. Si la planilla usa valoración cualitativa, escriba la abreviatura de la valoración de la escala, por ejemplo *A*.
+3. Si aplica, registre el ajuste en **AJ** y las inasistencias en **IN**.
+4. Haga clic en **Guardar**.
+
+SINAI valida cada nota contra la escala de valoración del grupo y corrige o rechaza las notas fuera de rango según el método de corrección configurado. Mientras haya cambios pendientes, el botón **Guardar** indica cuántos hay, por ejemplo *Guardar 3 cambios pendientes*. Al guardar, SINAI recalcula la definitiva de los estudiantes modificados.
+
+Si el método de ajuste es **Suma puntos**, SINAI no permite que la nota final más el ajuste supere la nota máxima de la escala.
+
+Si el guardado falla, el botón cambia a **Reintentar**. Haga clic en él para intentarlo de nuevo.
+
+<GuideCallout type="warning">
+  Si los pesos de algún componente no suman lo requerido, el botón cambia a **Corregir** y no guarda notas: al hacer clic, abre la **Planeación periódica** para que ajuste los pesos. Pase el mouse sobre el botón para ver el mensaje *Hay pesos inválidos. Clic para ir a corregir las actividades.*
+</GuideCallout>
+
+**Guardado automático**
+
+En **Configuraciones → Preferencias** puede activar **Guardado automático** y elegir la **Frecuencia de guardado**: **30 s**, **1 min** o **2 min**. El guardado automático se pausa si hay pesos inválidos o si hay notas traídas de otra planilla pendientes de revisión.
+
+#### 5. Autollenar varias celdas
+
+El autollenado permite poner la misma nota en varias celdas a la vez. Solo está disponible si la institución lo tiene habilitado en la configuración de la planilla y si la planilla es editable.
+
+1. Haga clic en el encabezado de un instrumento para seleccionar toda la columna, o seleccione las celdas que desea llenar.
+2. En la parte superior aparece **Autorrellenar** con el total de celdas a rellenar.
+3. Escriba la nota y haga clic en **Rellenar**.
+4. Revise el resultado y haga clic en **Guardar**.
+
+Si se equivoca, use **Deshacer** antes de guardar para restaurar los valores anteriores.
+
+#### 6. Administrar la planeación periódica
+
+La **Planeación periódica** es la lista de instrumentos de evaluación de la asignatura en el grupo y el periodo. Abra la ventana con el botón **Planeación** o con doble clic sobre el encabezado de un instrumento. También puede usar el botón **+** de un componente para ir directo a él.
+
+En la ventana, cada componente muestra su peso, su método de cálculo y la cantidad de actividades. Cada instrumento puede tener estas reglas, que vienen de la rúbrica configurada por la institución:
+
+- **Actividad obligatoria:** el docente debe diligenciar este instrumento y no puede eliminarlo.
+- **Nombre y peso bloqueados:** el nombre y el peso están protegidos; solo se pueden editar la fecha y la descripción.
+- **Autoevaluación:** la calificación la registra el estudiante.
+- **Nota editable** o **Nota bloqueada — se genera automáticamente:** indica si la nota se puede escribir en la planilla.
+
+Pase el mouse sobre cada ícono para ver la regla.
+
+**Crear instrumentos**
+
+Según la configuración **Permitir Generar Planeación Periódica**, la ventana funciona de una de estas formas:
+
+- **Generación permitida:** debajo de cada componente aparecen los instrumentos predeterminados que aún no existen. Haga clic en uno para agregarlo, o use **Generar todas** para crear todos los que faltan. SINAI muestra *Actividades predeterminadas generadas*.
+- **Generación no permitida:** el encabezado del componente indica cuántas actividades se han creado, por ejemplo *2 de 4 creadas*. Haga clic en **+**, complete **Nombre del instrumento**, **Peso** (si el componente usa pesos), **Fecha** y la descripción, y haga clic en **Crear instrumento**. SINAI muestra *Instrumento creado*.
+
+El peso debe estar entre 0 y 100, con máximo dos decimales. Cuando un componente tiene actividades obligatorias pendientes, SINAI las genera automáticamente después de agregar un instrumento.
+
+<GuideImageTrigger src="/images/guides/docente-componentes-y-actividades/planeacion-periodica.jpg" alt="Planeación periódica sin instrumentos creados: cada componente muestra los instrumentos sugeridos con el botón más y las actividades obligatorias resaltadas con un escudo">
+  Ver ejemplo
+</GuideImageTrigger>
+
+**Editar, restaurar y eliminar instrumentos**
+
+1. Haga clic en la fila del instrumento.
+2. Cambie el nombre, el peso, la fecha o la descripción, según lo que permita la rúbrica.
+3. Haga clic en **Guardar cambios**. SINAI muestra *Actividad actualizada*.
+
+Use el botón de restaurar para devolver el instrumento a su valor predeterminado. Para eliminar, use el ícono de papelera de la fila o marque varios instrumentos (puede usar **Seleccionar todos**) y haga clic en **Eliminar**. SINAI pide confirmación antes de eliminar.
+
+Si cambia, agrega o elimina un instrumento con peso y la planilla ya tiene notas, SINAI recalcula las calificaciones con los nuevos pesos. Si los pesos aún no suman lo requerido, muestra *Los pesos de la rúbrica aún no están completos. Las calificaciones se recalcularán cuando los pesos sumen lo requerido.*
+
+<GuideCallout type="warning">
+  Un instrumento con notas registradas no se puede eliminar: SINAI muestra *Este instrumento tiene notas registradas y no se puede eliminar.* Primero elimine las notas de todos los estudiantes en ese instrumento. Las actividades obligatorias tampoco se pueden eliminar. Solo el usuario Súper puede hacerlo (vea el bloque 11).
+</GuideCallout>
+
+Si la planeación del periodo está cerrada, la ventana muestra **Planeación cerrada** y queda en modo consulta.
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/planeacion-periodica.jpg" alt="Ventana Planeación periódica en modo consulta con el aviso Planeación cerrada y los instrumentos de cada componente con su peso y fecha">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 7. Copiar instrumentos y notas a otra planilla
+
+Esta opción copia los instrumentos de evaluación de una planilla a otra y, si ambas son del mismo grupo, también las notas. Ábrala en el menú de tres puntos con **Copiar instrumentos y notas…**.
+
+La ventana tiene dos paneles: **Origen** y **Destino**. Una de las dos es la planilla actual (**Esta planilla**) y en la otra usted elige **Grupo**, **Período** y **Asignatura**. Use **Intercambiar** para cambiar el sentido: enviar desde esta planilla hacia otra o traer desde otra hacia esta.
+
+1. Elija el grupo, el periodo y la asignatura de la otra planilla.
+2. Haga clic en **Relacionar** para emparejar automáticamente cada instrumento del origen con el que corresponde en el destino, o arrastre los instrumentos uno por uno.
+3. Revise el estado de cada instrumento: **Nuevo** (se creará en el destino), **Existente** (se actualizará con los datos del origen), **Incompatible** o **No copiar**.
+4. Si origen y destino son del mismo grupo, marque los instrumentos de los que desea traer notas.
+5. Si va a enviar, decida si marca **Al copiar, abrir la planilla del destino**. Es obligatorio cuando trae notas.
+6. Haga clic en **Copiar instrumentos** o **Copiar instrumentos y notas** y confirme con **Copiar**.
+
+Si los pesos del destino no cierran con la rúbrica, aparece un aviso con las opciones **Usar pesos de la rúbrica** y **Autoajustar**.
+
+Las notas copiadas llegan como **borrador**: aparecen en amarillo en la planilla del destino, el guardado automático se pausa y un aviso indica cuántas celdas quedaron *por revisar*. Revíselas y haga clic en **Guardar**, o use **Deshacer** para dejar la planilla como estaba.
+
+<GuideCallout>
+  La copia solo es posible si la **Planeación** está abierta en la planilla de destino. Si no lo está, SINAI muestra *El periodo está cerrado para el registro de planeación y el usuario no cuenta con autorización* o el mensaje de estado del periodo.
+</GuideCallout>
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/copiar-instrumentos.jpg" alt="Ventana Copiar instrumentos y notas con el origen, el destino, el botón Relacionar y los instrumentos del origen y del destino">
+  Ver ejemplo
+</GuideImageTrigger>
+
+#### 8. Trabajar en la vista individual
+
+La vista individual muestra el detalle de un estudiante. Ábrala desde el menú de tres puntos con **Vista individual**; para volver use **Vista grupal**.
+
+1. Elija el estudiante en **Estudiante**. Puede buscar por nombre o código.
+2. Revise o registre las notas de cada instrumento, agrupadas por componente.
+3. Registre, si aplica, el ajuste y las inasistencias.
+4. Escriba la observación del estudiante, si la institución tiene habilitadas las observaciones.
+5. Haga clic en **Guardar**.
+
+La vista individual también muestra la nota final, la recuperación, la definitiva y las estadísticas del estudiante.
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/vista-individual.jpg" alt="Vista individual con los instrumentos de cada componente, las métricas por componente y la escala de valoración; los datos del estudiante están difuminados">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Si tiene notas sin guardar y cambia de vista, SINAI muestra *Hay notas sin guardar en la vista actual. Si cambias de vista, se perderán. ¿Deseas continuar?*
+
+#### 9. Registrar observaciones
+
+Esta opción solo aparece si la configuración **Observaciones en la planilla de calificaciones** está en **Permitidas**. Cada observación admite hasta 500 caracteres.
+
+- **Para un estudiante:** en la vista grupal, haga clic en el ícono de observación junto al nombre, escriba el texto y haga clic en **Guardar observación**. SINAI muestra *Observación guardada*.
+- **Para varios estudiantes:** selecciónelos, haga clic en el botón de observación del encabezado, escriba el texto y haga clic en **Guardar observación**. SINAI guarda la misma observación para todos y muestra *Observación guardada para los estudiantes seleccionados*.
+
+Los estudiantes bloqueados no reciben observaciones.
+
+#### 10. Descargar, respaldar y eliminar registros
+
+En el menú de tres puntos encontrará estas opciones:
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/menu-opciones.jpg" alt="Menú de tres puntos abierto con las opciones Copiar instrumentos y notas, Copia de seguridad, Vista individual, Descargar planilla y Configuraciones">
+  Ver ejemplo
+</GuideImageTrigger>
+
+- **Descargar planilla:** abre una ventana para elegir **Asignatura actual** o **Todas las planillas**. La segunda descarga todas las planillas de la asignación académica en un solo archivo Excel.
+- **Copia de seguridad:** abre **Copias de respaldo**, donde puede hacer clic en **Generar** para guardar una copia de las calificaciones de este grupo, periodo y asignatura, y descargar las copias anteriores. La tabla indica la fecha, el tipo (**Manual**, **Automático (pre-restauración)**, **Restauración** o **Rollback**) y si la generó usted u otro usuario.
+- **Configuraciones:** abre el panel con las pestañas **Preferencias**, **Configuración de planilla** y **Escala**. En **Preferencias** puede activar el guardado automático, el encabezado fijo y elegir qué columnas ver (**Inasistencias (IN)**, **Resumen por componente** y **Acumulado final**). Estas preferencias se guardan solo en su navegador. Las otras dos pestañas son de consulta.
+
+<GuideImageTrigger src="/images/guides/componentes-y-actividades/configuraciones.jpg" alt="Panel Configuraciones en la pestaña Preferencias con Guardado automático, Encabezado fijo y las columnas visibles">
+  Ver ejemplo
+</GuideImageTrigger>
+
+Para eliminar las notas de uno o varios estudiantes:
+
+1. Seleccione los estudiantes en la vista grupal.
+2. Haga clic en **Eliminar** en la parte superior.
+3. En **Eliminar registros de la planilla**, marque los datos adicionales que también desea borrar: **Desempeño final**, **Ajuste o recuperación**, **Inasistencias** y **Observaciones**.
+4. Haga clic en **Confirmar eliminación**.
+
+SINAI muestra *Se eliminaron las calificaciones detalladas seleccionadas.* o, si marcó datos adicionales, *Se eliminaron las calificaciones detalladas y los datos complementarios seleccionados.*
+
+<GuideCallout type="warning">
+  Las calificaciones detalladas de los estudiantes seleccionados se eliminan siempre; las casillas solo controlan los datos adicionales. Antes de eliminar, genere una **Copia de seguridad**.
+</GuideCallout>
+
+#### 11. Configuraciones y funciones exclusivas del usuario Súper
+
+Algunas acciones de esta planilla solo están disponibles para el usuario con rol **Súper**. Rectores, coordinadores y demás usuarios administrativos no las ven o no pueden ejecutarlas. Si necesita alguna, solicítela al soporte de SINAI.
+
+<GuideDataTable>
+
+| Función | Qué permite al usuario Súper |
+| --- | --- |
+| **Configuración de planillas** | Asignar esta planilla a la institución o a un periodo, sede, nivel, grupo o asignatura, y definir sus variables: tipo de valoración, método de cálculo, método de ajuste, método de recuperación, valoración obligatoria predeterminada, formato de valoración, método de inclusión, corrección de nota en escala, tipo de escala, autollenar, preinforme, observaciones y generación de la planeación periódica. |
+| **Registrar con fechas cerradas** | Registrar calificaciones, inasistencias y planeación aunque el cronograma del periodo esté cerrado. En la planeación ve el aviso *Como usuario Súper puedes consultar y ejecutar las acciones permitidas con precaución.* |
+| **Recalcular planilla** | En el menú de tres puntos, volver a calcular las notas de **Solo** la asignatura actual o de **Todas las asignaturas del grupo y período**. Los valores guardados se sobrescriben con el resultado del recálculo. |
+| **Eliminar instrumentos con notas** | Eliminar instrumentos que ya tienen notas, junto con todas sus notas, y eliminar actividades obligatorias. SINAI advierte *Eliminación como Súper. Ten cuidado con esta acción.* La acción no se puede deshacer. |
+| **Copiar códigos** | Copiar el código interno del grupo, la asignatura o el estudiante desde los filtros, para soporte técnico. |
+| **Ver todas las variables** | En **Configuraciones → Configuración de planilla**, ver también las variables marcadas solo para administración, como **Observaciones en la planilla de calificaciones**. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  Cualquier usuario puede hacer clic en la etiqueta flotante **Componentes y Actividades** para copiar el contexto de soporte: institución, calendario, planilla, periodo, grupo, asignatura y enlace. Pegue ese texto en su solicitud a soporte y describa la novedad.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Cómo sé si mi institución usa esta planilla y no la TRADICIONAL?">
+    En esta planilla aparece la etiqueta flotante **Componentes y Actividades**, los filtros están en una barra superior y las acciones son **Guardar**, **Planeación** y el menú de tres puntos. La planilla que usa cada grupo la define el usuario Súper en **Configuración de planillas**.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question="¿Por qué el botón Guardar no guarda mis cambios?">
+    Puede haber tres causas: el periodo está **Cerrado** para calificaciones, los pesos de un componente no suman lo requerido (el botón dice **Corregir**) o el guardado falló (el botón dice **Reintentar**). Revise el estado del periodo junto al filtro **Período** y pase el mouse sobre el botón para ver el motivo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question="¿Por qué no puedo calificar a algunos estudiantes?">
+    La planilla bloquea a los estudiantes que no están matriculados, a los que tienen una condición NEE según el método de inclusión configurado y a los que tienen la nota registrada por otro medio: **BD** (base de datos), **ND** (nota directa) o **TR** (trasladado).
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Por qué no puedo eliminar un instrumento de evaluación?">
+    Porque tiene notas registradas o es una actividad obligatoria. Elimine primero las notas de todos los estudiantes en ese instrumento. Las actividades obligatorias y los instrumentos con notas solo los puede eliminar el usuario Súper.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="¿Por qué no aparece el botón Generar todas?">
+    Porque la configuración **Permitir Generar Planeación Periódica** está en **No**. En ese caso cree cada instrumento con el botón **+** del componente.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question="Copié notas desde otra planilla. ¿Ya quedaron guardadas?">
+    No. Las notas traídas llegan como borrador, en amarillo, y el guardado automático se pausa. Revíselas y haga clic en **Guardar**, o use **Deshacer** para descartarlas.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="07" question="¿Puedo cambiar el método de cálculo, la escala o los pesos de los componentes desde la planilla?">
+    No. Esas reglas las define el usuario Súper en **Configuración de planillas** y en la rúbrica de la institución. Desde la planilla puede consultarlas en **Configuraciones → Configuración de planilla** y **Escala**. Solo puede cambiar los pesos de los instrumentos cuando la rúbrica lo permite.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="08" question="¿Cómo recupero notas que eliminé por error?">
+    Si generó una **Copia de seguridad** antes de eliminar, puede descargarla desde **Copias de respaldo**. Para restaurarla en la planilla, comuníquese con soporte y adjunte el contexto que se copia con la etiqueta **Componentes y Actividades**.
+  </GuideFAQItem>
+</GuideFAQ>
