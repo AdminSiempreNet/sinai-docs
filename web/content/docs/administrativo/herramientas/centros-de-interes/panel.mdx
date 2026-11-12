@@ -1,0 +1,149 @@
+---
+title: "Panel de centros de interés"
+description: "Consulte por periodo cuántos estudiantes están inscritos en los centros de interés, cuántos tienen valoración y qué docentes tienen registros pendientes."
+guide: true
+lastModified: "2026-11-12"
+lastReviewed: "2026-11-12"
+---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Consultar el panel de centros de interés: indicadores, gráficos y avance por docente. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es el Panel de centros de interés?
+
+El **Panel de Centros de Interés** es la primera pantalla del módulo. Resume, para el periodo elegido, cómo va el trabajo de los centros de interés: cuántos centros tienen docente, cuántos estudiantes están inscritos, cuántos ya tienen valoración y cuántas valoraciones ya quedaron registradas en las planillas de las asignaturas.
+
+El panel solo consulta información; no permite modificar datos. Lo pueden abrir los roles super, administrador, rector, administrativo y coordinador. Muestra la información del calendario seleccionado en la parte superior de SINAI.
+
+Los docentes ven en la misma ruta su propio panel, **Mis centros de interés**, limitado a los estudiantes de los grupos que tienen asignados. Ese panel se explica en la guía [Valoración de centros de interés](/docs/docente/herramientas/valoracion-centros-de-interes) del módulo docente.
+
+Ingrese a **Evaluación → Centros de Interés**. Si está en otra opción del módulo, seleccione **Panel** en el panel **Opciones** de la izquierda.
+
+<GuideImagePending>
+  **Vista requerida:** Panel de Centros de Interés con un periodo seleccionado. Debe mostrar el panel **Opciones** con todas sus opciones, los filtros **Centro de interés**, **Periodo**, **Sede** y **Nivel**, las cuatro tarjetas de indicadores y la primera fila de gráficos. La captura ayudará a reconocer la organización de la pantalla. Archivo sugerido: `panel-centros-de-interes.jpg`. Evite nombres reales de estudiantes y docentes.
+</GuideImagePending>
+
+El panel **Opciones** reúne todas las pantallas del módulo:
+
+<GuideDataTable>
+
+| Opción | Para qué sirve |
+| --- | --- |
+| **Panel** | Resumen general de los centros de interés. |
+| **Centros de interés** | Registro y edición de los centros de interés. |
+| **Asignación** | Asignación de docentes, grupos y asignaturas. |
+| **Matrículas** | Inscripción de estudiantes en los centros de interés. |
+| **Valoración** | Planilla para el registro de las valoraciones. |
+
+</GuideDataTable>
+
+<GuideCallout>
+  El rol super ve además la opción **Configuración**, donde se define en qué lugar de la planilla de la asignatura queda la valoración del centro de interés.
+</GuideCallout>
+
+#### 2. Filtrar la información
+
+La parte superior del panel tiene cuatro filtros:
+
+<GuideDataTable>
+
+| Filtro | Qué define |
+| --- | --- |
+| **Centro de interés** | Muestra un solo centro o **Todos los centros**. |
+| **Periodo** | Periodo cuyas valoraciones se cuentan. Es obligatorio. |
+| **Sede** | Limita los estudiantes a los grupos de una sede, o **Todas las sedes**. |
+| **Nivel** | Limita los estudiantes a los grupos de un nivel, o **Todos los niveles**. |
+
+</GuideDataTable>
+
+1. Seleccione el **Periodo**.
+2. Si lo necesita, elija un **Centro de interés**, una **Sede** o un **Nivel**.
+
+El panel se actualiza al cambiar cualquier filtro. Mientras no haya periodo, muestra *Seleccione un periodo.*
+
+<GuideCallout>
+  **Sede** y **Nivel** filtran a los estudiantes según su grupo, pero no cambian las tarjetas **Centros activos** ni el número de docentes asignados. El filtro **Centro de interés** no cambia la tarjeta **Sin centro asignado**.
+</GuideCallout>
+
+#### 3. Leer los indicadores
+
+Las cuatro tarjetas de la parte superior resumen el periodo:
+
+<GuideDataTable>
+
+| Tarjeta | Qué muestra |
+| --- | --- |
+| **Centros activos** | Centros de interés que tienen al menos una asignación en el calendario, y debajo el número de docentes asignados. |
+| **Estudiantes inscritos** | Estudiantes distintos inscritos en algún centro, con matrícula activa, y qué porcentaje representan frente al total de matriculados. |
+| **Avance de valoración** | Porcentaje de inscripciones con valoración en el periodo, la cantidad (por ejemplo, *45 de 60*) y cuánto falta para el cierre del periodo. |
+| **Sin centro asignado** | Estudiantes matriculados que no están inscritos en ningún centro de interés del calendario (*estudiantes por ubicar*). |
+
+</GuideDataTable>
+
+Para entender las cifras, tenga en cuenta:
+
+- **Inscripción:** cada vez que un estudiante está en un centro. Un estudiante inscrito en dos centros cuenta como dos inscripciones, pero como un solo estudiante inscrito.
+- **Valorado:** la inscripción tiene una valoración con nota en el periodo. Una observación sin nota no cuenta como valoración.
+- **Color del avance:** rojo por debajo del 50 %, amarillo entre el 50 % y el 80 %, y verde desde el 80 %.
+- **Cierre del periodo:** se toma la fecha de cierre del periodo o, si no tiene, su fecha de terminación. El texto puede ser *Cierra en N días*, *Cierra mañana*, *Cierra hoy* o *Periodo cerrado*.
+
+#### 4. Revisar el avance por centro y la distribución de valoraciones
+
+Debajo de las tarjetas aparecen dos secciones:
+
+- **Avance de valoración por centro:** una barra por centro de interés, ordenada de mayor a menor avance. La barra gruesa (**Valorados**) muestra el porcentaje de estudiantes con valoración y usa los colores del avance. La barra delgada (**Registrados en asignaturas**) muestra el porcentaje cuya valoración ya quedó en la planilla de la asignatura. En la esquina de la sección se lee cuántos estudiantes están registrados en asignaturas y qué porcentaje de los valorados representan.
+- **Distribución de valoraciones:** gráfico circular con la cantidad y el porcentaje de valoraciones por nivel de desempeño, de mayor a menor nota. El segmento **Pendiente** reúne las inscripciones sin valoración. Los desempeños bajos se muestran en rojo.
+
+Pase el cursor sobre una barra o un segmento para ver las cantidades exactas.
+
+<GuideImagePending>
+  **Vista requerida:** fila de secciones **Avance de valoración por centro** y **Distribución de valoraciones** con al menos tres centros y el cuadro emergente de una barra visible. La captura ayudará a distinguir la barra de valorados de la de registrados en asignaturas. Archivo sugerido: `panel-avance-por-centro.jpg`. Evite nombres reales de estudiantes.
+</GuideImagePending>
+
+#### 5. Revisar los inscritos por grado y el avance por docente
+
+La última fila tiene otras dos secciones:
+
+- **Inscritos por centro y grado:** una barra por centro, dividida por grados. Al pasar el cursor se ve cuántos estudiantes de cada grado hay y el total del centro.
+- **Avance de registro por docente:** tabla con **Docente**, **Centro**, **Avance** y **Valorados** (por ejemplo, *12/30 · 40 %*). Cada fila es un docente en un centro, y cuenta solo a los estudiantes de los grupos que tiene asignados. Los docentes con menor avance aparecen primero.
+
+La tabla muestra ocho filas al inicio. Haga clic en **Ver los N docentes** para verlas todas y en **Ver menos** para volver.
+
+Si un docente tiene la asignación pero ningún estudiante de sus grupos está inscrito en el centro, la columna **Avance** dice *Sin estudiantes en sus grupos*.
+
+<GuideCallout>
+  Use esta tabla para identificar a qué docentes recordar el registro antes del cierre del periodo. Las valoraciones se registran en la opción **Valoración** del panel **Opciones**.
+</GuideCallout>
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué aparece «No tiene acceso al panel de centros de interés»?">
+    El panel solo está disponible para los roles super, administrador, rector, administrativo, coordinador y docente, y el usuario debe estar activo en la institución. Si su usuario tiene otro rol, solicite el ajuste al administrador de usuarios de la institución.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question="¿Qué cuenta como «Sin centro asignado»?">
+    Los estudiantes con matrícula activa en el calendario que no están inscritos en ningún centro de interés, según la sede y el nivel elegidos. Para ubicarlos, inscríbalos en la opción **Matrículas**. El informe **Listado por grupo** de esa opción permite descargar solo a estos estudiantes.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question="Un docente ya escribió las notas y el panel no las cuenta. ¿Por qué?">
+    El panel solo cuenta las valoraciones guardadas que tienen nota en el periodo seleccionado. Verifique que el docente haya hecho clic en **Guardar** y que el periodo del panel sea el mismo de la planilla.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Cuándo una valoración aparece como «registrada en asignaturas»?">
+    Cuando, después de enviarla desde la opción **Valoración**, la nota quedó en la planilla de la asignatura asignada al grupo del estudiante, en el lugar que indica la configuración vigente. Si esa configuración cambia después del envío, los registros anteriores pueden dejar de contarse hasta que se vuelvan a enviar las valoraciones.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="05" question="¿Por qué «Centros activos» no cambia al elegir una sede?">
+    Porque cuenta los centros que tienen asignaciones de docentes en el calendario, y las asignaciones no dependen de la sede ni del nivel. Los filtros **Sede** y **Nivel** solo cambian el conteo de estudiantes.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="06" question="El panel muestra «No fue posible cargar el panel. Intente de nuevo.». ¿Qué hago?">
+    Hubo un error al calcular la información. Vuelva a seleccionar el periodo o recargue la página. Si el mensaje persiste, comuníquese con soporte técnico.
+  </GuideFAQItem>
+</GuideFAQ>

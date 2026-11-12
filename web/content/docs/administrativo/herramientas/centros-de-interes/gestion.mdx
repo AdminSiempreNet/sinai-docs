@@ -1,0 +1,99 @@
+---
+title: "Gestión de centros de interés"
+description: "Registre los centros de interés de la institución, corrija su nombre o elimínelos, y consulte cuántos estudiantes tiene cada uno en el calendario."
+guide: true
+lastModified: "2026-11-12"
+lastReviewed: "2026-11-12"
+---
+
+## Video tutorial
+
+<GuideVideoPending>
+  - Registrar, editar y eliminar centros de interés. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
+## Guía paso a paso
+
+### 1. ¿Qué es la gestión de centros de interés?
+
+Un **centro de interés** es un espacio de formación en el que participan estudiantes de distintos grupos alrededor de un tema, por ejemplo, música, danza o robótica. En esta opción se registra la lista de centros de interés de la institución. Después, cada centro se asigna a docentes, grupos y asignaturas, se le inscriben estudiantes y se valoran por periodo.
+
+Los centros de interés son de la institución y no de un calendario: los mismos centros aparecen en todos los años lectivos.
+
+Ingrese a **Evaluación → Centros de Interés** y, en el panel **Opciones**, seleccione **Centros de interés**.
+
+<GuideImagePending>
+  **Vista requerida:** pantalla **Centros de Interés** con el panel **Opciones** a la izquierda, el botón **Nuevo centro de interés** y la tabla con las columnas **Centro de interés**, **Estudiantes** y **Opciones**, incluida la fila **Total**. La captura ayudará a ubicar la opción dentro del módulo. Archivo sugerido: `gestion-centros-de-interes.jpg`.
+</GuideImagePending>
+
+La tabla muestra:
+
+- **Centro de interés:** nombre del centro.
+- **Estudiantes:** estudiantes asignados al centro en el calendario actual.
+- **Opciones:** botón verde **Editar centro de interés**.
+- **Total:** suma de los estudiantes de todos los centros de la tabla.
+
+Si la institución no tiene centros, la tabla dice *No hay centros de interés registrados*.
+
+#### 2. Crear un centro de interés
+
+1. Haga clic en **Nuevo centro de interés**.
+2. En la ventana **Nuevo centro de interés**, escriba el **Nombre**.
+3. Haga clic en **Guardar**.
+
+SINAI muestra *Centro de interes registrado correctamente* y agrega el centro a la tabla. Si el nombre está vacío, muestra *El nombre del centro de interés no puede estar vacío*.
+
+<GuideCallout>
+  SINAI no revisa si ya existe un centro con el mismo nombre. Revise la tabla antes de crear uno nuevo para no duplicarlo.
+</GuideCallout>
+
+#### 3. Cambiar el nombre de un centro
+
+1. En la fila del centro, haga clic en el botón verde **Editar centro de interés**.
+2. En la ventana **Editar centro de interés**, corrija el **Nombre**.
+3. Haga clic en **Guardar**.
+
+SINAI muestra *Cambios guardados correctamente*. El nuevo nombre aparece en todas las opciones del módulo y en todos los calendarios. Para cerrar la ventana sin cambios, haga clic en **Cancelar**.
+
+#### 4. Eliminar un centro de interés
+
+Antes de eliminar un centro, quite sus asignaciones en la opción **Asignación** y sus estudiantes en **Matrículas**.
+
+1. En la fila del centro, haga clic en **Editar centro de interés**.
+2. En la ventana, haga clic en **Eliminar**.
+3. En la ventana **Eliminar centro de interés**, lea *¿Está seguro de eliminar el centro de interés [nombre] y la información relacionada?* y *Esta acción no se puede deshacer.*
+4. Haga clic en **Sí, eliminar**, o en **Cancelar** para volver.
+
+Si la eliminación es correcta, SINAI muestra *Centro de Interés eliminado correctamente*.
+
+Si el centro tiene asignaciones en cualquier calendario, SINAI no lo elimina y muestra *El Centro de Interés tiene asignaciones dependientes. Elimine las asignaciones antes de proceder.*
+
+<GuideCallout type="warning">
+  La eliminación no se puede deshacer y afecta a todos los calendarios, porque el centro es de la institución.
+</GuideCallout>
+
+#### 5. Permisos
+
+**Guardar** y **Eliminar** exigen el permiso **614**. El rector tiene todos los permisos. Si el usuario no lo tiene, SINAI muestra *El usuario no tiene permiso para realizar esta operación. Se requiere el permiso 614* seguido de la descripción del permiso, y no aplica el cambio.
+
+Solicite el permiso faltante al administrador de usuarios de la institución.
+
+## Preguntas frecuentes
+
+<GuideFAQ>
+  <GuideFAQItem index="01" question="¿Por qué no puedo eliminar un centro de interés?">
+    Si aparece «El Centro de Interés tiene asignaciones dependientes. Elimine las asignaciones antes de proceder.», el centro todavía tiene asignaciones, aunque sean de otro año lectivo. Elimínelas en la opción **Asignación** de cada calendario. Si aparece «Error al eliminar el Centro de Interés», quite también los estudiantes del centro en la opción **Matrículas** y vuelva a intentarlo.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="02" question="¿El número de la columna Estudiantes es de todos los años?">
+    No. Corresponde a los estudiantes asignados al centro en el calendario seleccionado en la parte superior de SINAI.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="03" question="Si cambio el nombre de un centro, ¿se pierden sus estudiantes o valoraciones?">
+    No. Solo cambia el nombre. Las asignaciones, los estudiantes y las valoraciones del centro se conservan.
+  </GuideFAQItem>
+
+  <GuideFAQItem index="04" question="¿Qué hago después de crear un centro de interés?">
+    Asígnelo a los docentes, grupos y asignaturas en la opción **Asignación**, inscriba a los estudiantes en **Matrículas** y registre las notas en **Valoración**, del mismo panel **Opciones**.
+  </GuideFAQItem>
+</GuideFAQ>

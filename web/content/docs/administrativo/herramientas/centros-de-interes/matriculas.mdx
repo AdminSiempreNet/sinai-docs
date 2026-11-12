@@ -1,10 +1,10 @@
 ---
 title: "Matrículas"
-description: "Agregue estudiantes de distintos grupos a un centro de interés o retírelos de él."
+description: "Inscriba estudiantes de distintos grupos en un centro de interés, retírelos y descargue en PDF la matrícula por centro o el listado por grupo."
 guide: true
 legacyUrl: "https://ayudasinai.siempre.net.co/docs/matricula-de-centros-de-interes/"
-lastModified: "2026-10-30"
-lastReviewed: "2026-10-30"
+lastModified: "2026-11-12"
+lastReviewed: "2026-11-12"
 ---
 
 ## Video tutorial
@@ -13,81 +13,139 @@ lastReviewed: "2026-10-30"
 <YouTube id="ryh3tIyVrkg" title="Matrícula de estudiantes en centros de interés" />
 </GuideVideos>
 
+<GuideVideoPending>
+  - Agregar varios estudiantes con la ventana **Agregar estudiantes**, filtrar la lista y descargar los informes en PDF de la matrícula. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
 ## Guía paso a paso
 
 ### 1. ¿Qué es Matrículas?
 
-**Matrículas** permite agregar estudiantes de distintos grupos a un centro de interés, para que el docente responsable registre sus valoraciones en la planilla del centro.
+**Matrículas** permite inscribir en un centro de interés a estudiantes de distintos grupos, para que el docente responsable registre sus valoraciones en la planilla del centro. Un mismo estudiante puede estar inscrito en varios centros de interés. La matrícula se guarda en el calendario seleccionado en la parte superior de SINAI.
 
 Ingrese a **Evaluación → Centros de Interés** y, en el panel **Opciones**, seleccione **Matrículas**.
 
-<GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/acceso-matriculas.jpg" alt="Menú Evaluación, submenú Centros de Interés y panel Opciones con Matrículas">
-  Ver ejemplo
-</GuideImageTrigger>
+<GuideImagePending>
+  **Vista requerida:** pantalla **Matrículas** con un centro de interés seleccionado. Deben verse el panel **Opciones**, los filtros **Centro de interés**, **Sede**, **Nivel** y **Buscar**, los botones **Agregar estudiantes**, **Descargar PDF** y **Eliminar**, el contador de estudiantes y la tabla agrupada por grupo. La captura ayudará a reconocer la organización de la vista. Archivo sugerido: `matriculas-centros-de-interes.jpg`. Oculte o difumine nombres, documentos y fotos de estudiantes reales.
+</GuideImagePending>
 
-La pantalla se divide en dos listas:
-
-- **Izquierda:** estudiantes del grupo elegido, cada uno con el botón **Agregar**.
-- **Derecha:** estudiantes matriculados en el centro de interés elegido, de cualquier grupo, con la columna **Grupo** y el botón rojo para quitarlos.
+La parte superior tiene estos campos:
 
 <GuideDataTable>
 
 | Campo | Qué define |
 | --- | --- |
-| **Sede** | Sede cuyos grupos se cargan en **Grupo**. |
-| **Grupo** | Grupo cuyos estudiantes aparecen en la lista de la izquierda. |
-| **Centro de interés** | Centro al que se agregan los estudiantes y cuyos matriculados aparecen en la lista de la derecha. |
+| **Centro de interés** | Centro cuyos estudiantes inscritos aparecen en la tabla y al que se agregan los nuevos. |
+| **Sede** | Muestra solo los inscritos de una sede, o **Todas**. Lista únicamente las sedes que tienen estudiantes en el centro. |
+| **Nivel** | Muestra solo los inscritos de un nivel, o **Todos**. Depende de la sede elegida. |
+| **Buscar** | Filtra por nombre, documento, código o grupo. |
 
 </GuideDataTable>
 
+La tabla agrupa a los inscritos por grupo y muestra **Foto**, **Apellidos y nombres** con el código, **Documento**, **Estado** de la matrícula y **Opciones**. Junto a los botones se lee cuántos estudiantes tiene el centro o, si hay filtros, cuántos coinciden.
+
+- Haga clic en la fila del grupo, o en su flecha, para mostrar u ocultar sus estudiantes.
+- La tabla muestra 20 estudiantes por página. Puede cambiar a 10, 50 o 100 en la parte inferior.
+- Al cambiar de centro de interés se limpian la búsqueda, los filtros y la selección.
+
 <GuideCallout>
-  Los centros de interés se crean en la opción **Asignación** del mismo panel. Si la lista **Centro de interés** está vacía, cree primero el centro allí.
+  Los centros de interés se registran en la opción **Centros de interés** del mismo panel. Si la lista **Centro de interés** está vacía, cree primero el centro allí.
 </GuideCallout>
 
 #### 2. Agregar estudiantes al centro de interés
 
-1. Seleccione la **Sede** y el **Grupo**.
-2. Seleccione el **Centro de interés**.
-3. En la lista de la izquierda, haga clic en **Agregar** junto a cada estudiante que desea matricular.
-4. Verifique que el estudiante aparezca en la lista de la derecha, con su grupo.
+1. Seleccione el **Centro de interés**.
+2. Haga clic en **Agregar estudiantes**.
+3. En la ventana **Agregar estudiantes**, seleccione la **Sede** y el **Grupo**.
+4. Inscriba a los estudiantes de una de estas formas:
+   - Haga clic en **Agregar** junto a un estudiante para inscribirlo de inmediato.
+   - Marque varios estudiantes, o marque **Seleccionar todos**, y haga clic en **Asignar**. El botón muestra entre paréntesis cuántos marcó.
+5. Para inscribir estudiantes de otros grupos, cambie la **Sede** o el **Grupo** y repita el paso 4.
+6. Haga clic en **Cerrar**.
 
-Para matricular estudiantes de otros grupos, cambie la **Sede** o el **Grupo** y repita el procedimiento. El centro de interés seleccionado se mantiene.
+<GuideImagePending>
+  **Vista requerida:** ventana **Agregar estudiantes** con sede y grupo seleccionados. Deben verse la casilla **Seleccionar todos** con su contador, el botón **Asignar** con una cantidad, varios estudiantes marcados, al menos uno con la etiqueta **Asignado** y los botones **Agregar** de cada fila. La captura ayudará a distinguir las dos formas de inscribir. Archivo sugerido: `ventana-agregar-estudiantes.jpg`. Oculte o difumine datos de estudiantes reales.
+</GuideImagePending>
 
-<GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/agregar-estudiantes.jpg" alt="Matrículas con sede, grupo y centro de interés seleccionados y estudiantes matriculados a la derecha">
-  Ver ejemplo
-</GuideImageTrigger>
+La ventana muestra a todos los estudiantes del grupo. Los que ya están en el centro aparecen con la etiqueta **Asignado** y no se pueden marcar. **Seleccionar todos** indica cuántos están disponibles frente al total del grupo. Si un estudiante no tiene la matrícula activa, se muestra su estado junto al nombre.
+
+Al usar **Asignar**, SINAI muestra *N estudiante(s) asignado(s) al centro de interés* y, si alguno ya estaba inscrito, agrega cuántos se omitieron. Al usar **Agregar** de una fila, el estudiante pasa a **Asignado** y aparece en la tabla de la pantalla.
 
 <GuideCallout>
-  Si el estudiante ya está matriculado en el centro de interés seleccionado, SINAI muestra el mensaje **El estudiante ya se encuentra asignado al centro de interés** seguido del nombre del centro, y no lo agrega de nuevo.
+  Si el estudiante ya está inscrito en ese centro y grupo, SINAI muestra *El estudiante ya se encuentra asignado al centro de interés* seguido del nombre del centro, y no lo agrega de nuevo.
 </GuideCallout>
 
-#### 3. Quitar un estudiante del centro de interés
+#### 3. Quitar estudiantes del centro de interés
 
-1. Seleccione el **Centro de interés** del que desea retirar al estudiante.
-2. En la lista de la derecha, haga clic en el botón rojo con el ícono de papelera junto al estudiante. Al pasar el cursor se lee **Quitar estudiante del centro de interés**.
-3. En la ventana **¿Confirmar eliminación?**, haga clic en **Sí, eliminar**.
+Para quitar a un solo estudiante:
+
+1. En su fila, haga clic en el botón rojo con el ícono de papelera (**Quitar estudiante del centro de interés**).
+2. En la ventana **¿Confirmar eliminación?**, haga clic en **Sí, eliminar**.
 
 <GuideImageTrigger src="/images/guides/centros-de-interes-matriculas/confirmar-eliminacion.jpg" alt="Ventana Confirmar eliminación con los botones Sí, eliminar y Cancelar">
   Ver ejemplo
 </GuideImageTrigger>
 
+Para quitar a varios estudiantes:
+
+1. Marque la casilla de cada estudiante, o haga clic en su fila. La casilla de la fila del grupo marca a sus estudiantes de la página, y la del encabezado marca a todos los de la página.
+2. Haga clic en **Eliminar**. El botón muestra entre paréntesis cuántos estudiantes marcó.
+3. En la ventana *¿Quitar N estudiante(s) del centro de interés?*, haga clic en **Sí, quitar**.
+
+SINAI muestra *N estudiante(s) quitado(s) del centro de interés*.
+
 <GuideCallout type="warning">
-  Al quitar un estudiante se eliminan las valoraciones que tenga registradas en la planilla de ese centro de interés, y no se pueden recuperar. Las calificaciones que ya se enviaron a las planillas de las asignaturas no se modifican.
+  Al quitar un estudiante se eliminan las valoraciones que tenga registradas en la planilla de ese centro de interés, en todos los periodos, y no se pueden recuperar. Las calificaciones que ya se enviaron a las planillas de las asignaturas no se modifican.
 </GuideCallout>
+
+#### 4. Descargar los informes en PDF
+
+El botón **Descargar PDF** ofrece dos informes.
+
+**Matrícula por centro de interés**
+
+1. Haga clic en **Descargar PDF → Matrícula por centro de interés**.
+2. En la ventana **Informe de la matrícula**, elija:
+   - **El centro de interés actual:** estudiantes del centro seleccionado, por grupo, con la asignatura y el docente de cada grupo.
+   - **Todos los centros de interés:** una tabla por cada centro con sus estudiantes por grupo.
+3. Revise la línea de filtros (**Sede** y **Nivel**) y haga clic en **Descargar PDF**.
+
+El informe aplica los filtros **Sede** y **Nivel** de la pantalla, pero no la búsqueda. Incluye la foto, el nombre con el código, el documento y el estado de cada estudiante. Si un grupo no tiene asignatura ni docente para el centro, el informe lo indica con *Sin asignatura ni docente asignados en el grupo*.
+
+**Listado por grupo**
+
+1. Haga clic en **Descargar PDF → Listado por grupo**.
+2. En la ventana **Listado por grupo**, elija si lo necesita **Sede**, **Nivel** y **Grupo**. Estos filtros incluyen todos los grupos del calendario y no dependen del centro seleccionado en la pantalla.
+3. Si solo necesita a los estudiantes que aún no tienen centro, marque **Solo los estudiantes sin centro de interés asignado**.
+4. Haga clic en **Descargar PDF**.
+
+El listado muestra, por grupo, a cada estudiante con sus centros de interés, la asignatura y el docente. Cada grupo inicia en una página nueva y los estudiantes sin centro de interés salen con las celdas vacías. Con **Solo los estudiantes sin centro de interés asignado**, el informe incluye solo a los estudiantes en estado matriculado que no tienen ningún centro, y los grupos van seguidos.
+
+<GuideImagePending>
+  **Vista requerida:** ventana **Listado por grupo** con los filtros **Sede**, **Nivel** y **Grupo**, la casilla **Solo los estudiantes sin centro de interés asignado** y el botón **Descargar PDF**. La captura ayudará a ubicar la opción para ubicar estudiantes pendientes. Archivo sugerido: `ventana-listado-por-grupo.jpg`.
+</GuideImagePending>
+
+Si no hay datos con los filtros elegidos, SINAI muestra *No hay estudiantes matriculados con los filtros seleccionados.* o, con la casilla marcada, *No hay estudiantes matriculados sin centro de interés con los filtros seleccionados.*
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question="¿Dónde encuentro la opción Matrículas?">
-    En **Evaluación → Centros de Interés**, dentro del panel **Opciones** de la izquierda, junto a **Asignación** y **Valoración**.
+  <GuideFAQItem index="01" question="¿Puedo inscribir a un estudiante en más de un centro de interés?">
+    Sí. SINAI solo impide inscribirlo dos veces en el mismo centro. Cada centro lo verá en su propia planilla de valoración.
   </GuideFAQItem>
-  <GuideFAQItem index="02" question="¿Puedo matricular estudiantes de varios grupos en el mismo centro de interés?">
-    Sí. Con el centro de interés seleccionado, cambie la **Sede** o el **Grupo** y agregue los estudiantes. La lista de la derecha muestra el grupo de cada matriculado.
+  <GuideFAQItem index="02" question="¿Cómo sé qué estudiantes todavía no tienen centro de interés?">
+    Descargue **Descargar PDF → Listado por grupo** con la casilla **Solo los estudiantes sin centro de interés asignado**. El **Panel** muestra además la cantidad en la tarjeta **Sin centro asignado**.
   </GuideFAQItem>
-  <GuideFAQItem index="03" question="¿Por qué aparece «El estudiante ya se encuentra asignado al centro de interés»?">
-    Porque el estudiante ya está matriculado en el centro de interés seleccionado. Revise la lista de la derecha.
+  <GuideFAQItem index="03" question="La lista Sede no muestra todas las sedes. ¿Por qué?">
+    Los filtros **Sede** y **Nivel** de la pantalla solo listan las sedes y niveles que tienen estudiantes inscritos en el centro elegido. Para inscribir estudiantes de otra sede, use **Agregar estudiantes**, donde aparecen todas las sedes.
   </GuideFAQItem>
-  <GuideFAQItem index="04" question="¿Qué pasa con las valoraciones si quito a un estudiante?">
-    Se eliminan las valoraciones registradas en la planilla del centro de interés. Las calificaciones ya enviadas a las planillas de asignaturas se conservan.
+  <GuideFAQItem index="04" question="Un estudiante aparece en la tabla pero no en la planilla de valoración. ¿Por qué?">
+    La tabla de **Matrículas** muestra a todos los inscritos con su estado de matrícula, mientras que la planilla de **Valoración** solo incluye a los estudiantes con matrícula activa. Revise la columna **Estado**.
+  </GuideFAQItem>
+  <GuideFAQItem index="05" question="¿Qué pasa con las valoraciones si quito a un estudiante?">
+    Se eliminan las valoraciones registradas en la planilla del centro de interés en todos los periodos. Las calificaciones ya enviadas a las planillas de las asignaturas se conservan.
+  </GuideFAQItem>
+  <GuideFAQItem index="06" question="¿El informe en PDF respeta la búsqueda que escribí?">
+    No. El informe **Matrícula por centro de interés** aplica solo los filtros **Sede** y **Nivel** de la pantalla. El **Listado por grupo** usa los filtros de su propia ventana.
   </GuideFAQItem>
 </GuideFAQ>

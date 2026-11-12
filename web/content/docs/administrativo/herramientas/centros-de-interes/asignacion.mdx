@@ -1,11 +1,11 @@
 ---
 title: "Asignación"
-description: "Cree, renombre o elimine centros de interés y asígnelos a un docente, un grupo y una asignatura."
+description: "Asigne cada centro de interés a un docente, un grupo y una asignatura, uno por uno o para todos los grupos de una sede, y descargue el informe en PDF."
 guide: true
 wordpressId: 31708
 legacyUrl: "https://ayudasinai.siempre.net.co/base/docs/creacion-y-asignacion-de-centros-de-interes/"
-lastModified: "2026-10-30"
-lastReviewed: "2026-10-30"
+lastModified: "2026-11-12"
+lastReviewed: "2026-11-12"
 ---
 
 ## Video tutorial
@@ -14,125 +14,152 @@ lastReviewed: "2026-10-30"
 <YouTube id="O4isFn-cSEQ" title="Creación y asignación de centros de interés" />
 </GuideVideos>
 
+<GuideVideoPending>
+  - Asignar un centro de interés a los grupos de una sede con la ventana **Asignar** y descargar el informe en PDF. Falta el identificador de YouTube y, si existe, la URL de Odysee.
+</GuideVideoPending>
+
 ## Guía paso a paso
 
 ### 1. ¿Qué es Asignación?
 
-**Asignación** es la opción donde se registran los centros de interés de la institución y se asigna cada uno a un docente, un grupo y una asignatura. La asignación se guarda en el calendario seleccionado en la parte superior de SINAI.
+**Asignación** es la opción donde se define qué docente orienta cada centro de interés, en qué grupo y en qué asignatura. La asignatura es la que recibe la valoración del centro de interés cuando el docente la envía desde **Valoración**. Cada asignación se guarda en el calendario seleccionado en la parte superior de SINAI.
+
+Los centros de interés se registran antes en la opción **Centros de interés** del mismo panel. Si no hay ninguno, la pantalla muestra *No hay centros de interés registrados.* con el enlace *Registre los centros de interés aquí*.
 
 Ingrese a **Evaluación → Centros de Interés** y, en el panel **Opciones**, seleccione **Asignación**.
 
-<GuideImageTrigger src="/images/guides/centros-de-interes-asignacion/acceso-asignacion.jpg" alt="Menú Evaluación, submenú Centros de Interés, panel Opciones y la pantalla Asignacion del Centro de Interés con las asignaciones de Literatura">
-  Ver ejemplo
-</GuideImageTrigger>
+<GuideImagePending>
+  **Vista requerida:** pantalla **Asignacion del Centro de Interés** con el panel **Opciones**, los cuatro filtros, los botones **Agregar**, **Asignar**, **Descargar PDF** y **Eliminar**, y la tabla con dos centros desplegados y sus asignaciones. La captura ayudará a reconocer la organización de la vista. Archivo sugerido: `asignacion-centros-de-interes.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
 
-La parte superior de la pantalla tiene cuatro listas:
+La parte superior tiene cuatro listas. Sirven como filtros de la tabla y, cuando todas tienen un valor específico, como datos para agregar una asignación:
 
 <GuideDataTable>
 
 | Campo | Qué define |
 | --- | --- |
-| **Centro de interés** | Centro que se asigna. La tabla muestra las asignaciones de este centro. |
-| **Docente** | Docente que tendrá a cargo el centro de interés. |
-| **Grupo** | Grupo de la asignación. |
-| **Asignatura** | Asignatura del grupo elegido. Cambia al cambiar el grupo. |
+| **Centro de interés** | Centro que se muestra o se asigna. **Todos** muestra todos los centros. |
+| **Grupo** | Grupo de la asignación. **Todos** muestra todos los grupos. |
+| **Asignatura** | Asignatura del grupo elegido. Solo tiene opciones cuando hay un grupo seleccionado y vuelve a **Todas** al cambiar el grupo. |
+| **Docente** | Docente que orienta el centro de interés. **Todos** muestra todos los docentes. |
 
 </GuideDataTable>
 
-La tabla muestra **Centro de interés**, **Docente**, **Grupo**, **Asignatura** y el botón **Eliminar** de cada asignación. Las asignaciones del docente elegido aparecen primero.
+La tabla agrupa las asignaciones por centro de interés. Cada fila de centro muestra el nombre, la cantidad de asignaciones y cuántos estudiantes están matriculados en el centro, en todos sus grupos. Debajo aparecen sus asignaciones con **Grupo**, **Asignatura** y **Docente**.
 
-<GuideCallout>
-  Después de asignar, agregue los estudiantes en la opción **Matrículas** y registre las notas en **Valoración**, del mismo panel **Opciones**.
-</GuideCallout>
+- Haga clic en la fila del centro, o en su flecha, para mostrar u ocultar sus asignaciones. La flecha del encabezado contrae o despliega todos los centros.
+- La tabla muestra 20 asignaciones por página. Puede cambiar a 10, 50 o 100 en la parte inferior. Al cambiar un filtro, la tabla vuelve a la primera página.
 
-#### 2. Crear un centro de interés
+#### 2. Agregar una asignación
 
-1. Haga clic en el botón verde junto a la lista **Centro de interés** (*Agregar o eliminar centros de interés*).
-2. En la ventana **Centros de interes**, escriba el **Nombre**.
-3. Haga clic en **Agregar**.
-
-<GuideImageTrigger src="/images/guides/centros-de-interes-asignacion/ventana-centros-interes.jpg" alt="Ventana Centros de interes con el nombre de un centro nuevo, los botones Agregar y Guardar y la lista de centros">
-  Ver ejemplo
-</GuideImageTrigger>
-
-Si el centro se crea, SINAI muestra **Centro de interes registrado correctamente** y lo agrega a la lista. Si el nombre está vacío, muestra **El nombre del centro de interés no puede estar vacío**.
-
-Los centros de interés son de la institución y no de un calendario: los mismos centros aparecen en todos los años.
-
-#### 3. Cambiar el nombre de los centros
-
-1. En la ventana **Centros de interes**, corrija el nombre en la lista.
-2. Haga clic en **Guardar**.
-
-**Guardar** registra los nombres de toda la lista. Si el guardado es correcto, SINAI muestra **Cambios guardados correctamente**.
-
-#### 4. Eliminar un centro de interés
-
-1. En la ventana **Centros de interes**, haga clic en el botón rojo del centro.
-2. Lea *¿Está seguro de eliminar el centro de interés y la información relacionada?* y *No podrá revertir esta acción*.
-3. Haga clic en **Eliminar**, o en **Cancelar** para volver.
-
-Si el centro tiene asignaciones, SINAI no lo elimina y muestra **El Centro de Interés tiene asignaciones dependientes. Elimine las asignaciones antes de proceder.** Si no las tiene, el aviso es **Centro de Interés eliminado correctamente**.
-
-#### 5. Asignar un centro de interés
+Use esta forma para asignar un centro a un grupo y una asignatura específicos.
 
 1. Seleccione el **Centro de interés**.
-2. Seleccione el **Docente**.
-3. Seleccione el **Grupo**.
-4. Seleccione la **Asignatura**.
+2. Seleccione el **Grupo**.
+3. Seleccione la **Asignatura**.
+4. Seleccione el **Docente**.
 5. Haga clic en **Agregar**.
 
-Si la asignación se registra, SINAI muestra **Asignación del centro de intere exitosa** y la agrega a la tabla.
+El botón **Agregar** solo se activa cuando las cuatro listas tienen un valor distinto de **Todos**. Si la asignación se registra, SINAI muestra *Asignación del centro de intere exitosa* y la agrega a la tabla.
 
-Un mismo centro de interés no se puede asignar dos veces al mismo grupo y asignatura, aunque cambie el docente. En ese caso SINAI muestra **La asignación que intenta agregar ya se encuentra asignada a otro docnete**.
+Un centro de interés no se puede asignar dos veces al mismo grupo y la misma asignatura, aunque cambie el docente. En ese caso SINAI muestra *La asignación que intenta agregar ya se encuentra asignada al docente* seguido del nombre del docente, o *La asignación que intenta agregar ya se encuentra asignada a este docente* si es el mismo.
 
-<GuideCallout>
-  Al abrir la ventana **Centros de interes**, la lista **Centro de interés** vuelve al primer centro. Al cerrarla, revise el centro seleccionado antes de hacer clic en **Agregar**.
-</GuideCallout>
+#### 3. Asignar un centro a los grupos de una sede
 
-#### 6. Eliminar una asignación
+La ventana **Asignar** permite asignar un centro de interés, en una asignatura, a varios grupos de una sede al mismo tiempo, cada uno con su docente. También sirve para cambiar el docente o quitar grupos.
 
-1. Seleccione el **Centro de interés** para ver sus asignaciones.
-2. En la fila de la asignación, haga clic en **Eliminar**.
-3. Lea *¿Está seguro de eliminar la asignación y la información relacionada?* y *Esta acción no se puede deshacer*.
-4. Haga clic en **Si, eliminar**, o en **Cancelar** para volver.
+1. Haga clic en **Asignar**.
+2. En la ventana, seleccione el **Centro de interés**, la **Asignatura** y la **Sede**. Si había un centro y una asignatura elegidos en los filtros, la ventana los toma por defecto; la sede inicia en la primera de la lista.
+3. En la tabla, marque los grupos en los que se dictará el centro de interés.
+4. Elija el **Docente** de cada grupo marcado. Elegir un docente marca el grupo automáticamente.
+5. Desmarque los grupos que ya no deben tener la asignación.
+6. Revise la línea de resumen y haga clic en **Aceptar**.
 
-Si la eliminación es correcta, SINAI muestra **Asignación eliminada correctamente**.
+<GuideImagePending>
+  **Vista requerida:** ventana **Asignar** con centro, asignatura y sede seleccionados. Deben verse grupos con los estados **Asignada**, **Nueva**, **Modificada** y **Se eliminará**, un grupo con el aviso *Sin asignación académica* si es posible, la línea *Al aceptar: …* y los botones **Aceptar** y **Cancelar**. La captura ayudará a interpretar los estados antes de guardar. Archivo sugerido: `ventana-asignar-sede.jpg`. Evite nombres reales de docentes.
+</GuideImagePending>
+
+La tabla de la ventana lista los grupos de la sede en los que la asignatura tiene asignación académica. Al final aparecen los grupos que ya tienen la asignación del centro aunque la asignatura ya no tenga asignación académica en ellos; estos muestran el aviso *Sin asignación académica*.
+
+La columna **Estado** indica qué pasará con cada grupo al aceptar:
+
+<GuideDataTable>
+
+| Estado | Significado |
+| --- | --- |
+| **Asignada** | El grupo ya tiene la asignación y no cambia. |
+| **Nueva** | Se creará la asignación con el docente elegido. |
+| **Modificada** | Se cambiará el docente de la asignación existente. |
+| **Se eliminará** | La asignación existente se quitará porque el grupo se desmarcó o quedó sin docente. |
+
+</GuideDataTable>
+
+Debajo de la tabla, SINAI resume los cambios: *Al aceptar: N nueva(s), N modificada(s), N a eliminar.* Si marcó grupos nuevos sin docente, avisa *N grupo(s) marcado(s) sin docente no se guardarán.*
+
+Al hacer clic en **Aceptar**:
+
+- Si no hay cambios, SINAI muestra *No hay cambios para guardar*.
+- Si hay asignaciones para quitar, pide confirmar *¿Está seguro de eliminar la asignación desmarcada y la información relacionada?* (o la cantidad de asignaciones desmarcadas) con **Sí, guardar** o **Cancelar**.
+- Si el guardado es correcto, muestra *Asignaciones guardadas:* seguido de las asignaciones agregadas, actualizadas y eliminadas, y cierra la ventana.
+
+Si la asignatura no tiene asignación académica en ningún grupo de la sede, la tabla dice *La asignatura no tiene asignación académica en ningún grupo de la sede*.
 
 <GuideCallout type="warning">
-  Eliminar la asignación quita al docente ese grupo y esa asignatura del centro de interés. La eliminación no se puede deshacer.
+  Los grupos desmarcados que tenían asignación pierden el centro de interés en esa asignatura al aceptar. El cambio no se puede deshacer.
 </GuideCallout>
 
-#### 7. Permisos
+#### 4. Descargar el informe en PDF
 
-**Agregar**, **Guardar** y **Eliminar**, tanto de centros como de asignaciones, exigen el permiso **614**. El rector tiene todos los permisos. Si el usuario no lo tiene, SINAI muestra *El usuario no tiene permiso para realizar esta operación. Se requiere el permiso 614* seguido de la descripción del permiso, y no aplica el cambio.
+1. Ajuste los filtros **Centro de interés**, **Grupo**, **Asignatura** y **Docente** según lo que necesite.
+2. Haga clic en **Descargar PDF**.
+
+El informe **Asignación de Centros de Interés** incluye todas las asignaciones que cumplen los filtros, no solo las de la página visible. Presenta una tabla por centro de interés con la cantidad de grupos, asignaciones, docentes y estudiantes, y dentro de cada grupo las asignaturas y los docentes. El encabezado muestra la institución y los filtros aplicados.
+
+El botón se desactiva cuando la tabla no tiene asignaciones. Si no hay datos con los filtros, SINAI muestra *No hay asignaciones con los filtros seleccionados.*
+
+#### 5. Eliminar asignaciones
+
+1. Marque la casilla de cada asignación que desea eliminar. También puede hacer clic en la fila. La casilla de la fila del centro marca todas sus asignaciones de la página, y la del encabezado marca todas las de la página.
+2. Haga clic en **Eliminar**. El botón muestra entre paréntesis cuántas asignaciones están marcadas.
+3. Lea *¿Está seguro de eliminar la asignación seleccionada y la información relacionada?* (o la cantidad de asignaciones seleccionadas) y *Esta acción no se puede deshacer*.
+4. Haga clic en **Sí, eliminar**, o en **Cancelar** para volver.
+
+SINAI muestra *Asignación eliminada correctamente* o *N asignaciones eliminadas correctamente*. Si alguna no se pudo eliminar, muestra *No se pudieron eliminar N asignación(es):* seguido del motivo.
+
+<GuideCallout type="warning">
+  Eliminar la asignación quita al docente ese grupo y esa asignatura del centro de interés. La asignatura deja de recibir las valoraciones del centro. La eliminación no se puede deshacer.
+</GuideCallout>
+
+#### 6. Permisos
+
+**Agregar**, **Aceptar** en la ventana **Asignar** y **Eliminar** exigen el permiso **614**. El rector tiene todos los permisos. Si el usuario no lo tiene, SINAI muestra *El usuario no tiene permiso para realizar esta operación. Se requiere el permiso 614* seguido de la descripción del permiso, y no aplica el cambio.
 
 Solicite el permiso faltante al administrador de usuarios de la institución.
 
 ## Preguntas frecuentes
 
 <GuideFAQ>
-  <GuideFAQItem index="01" question={"La tabla de asignaciones está vacía. ¿Se borraron?"}>
-    La tabla solo muestra las asignaciones del centro elegido en **Centro de interés** y del calendario seleccionado en la parte superior. Elija el centro correcto o verifique el año.
+  <GuideFAQItem index="01" question="¿Por qué el botón Agregar está desactivado?">
+    Porque alguna de las listas **Centro de interés**, **Grupo**, **Asignatura** o **Docente** está en **Todos** o **Todas**. Elija un valor específico en las cuatro.
   </GuideFAQItem>
 
-  <GuideFAQItem index="02" question={"No encuentro la asignatura en la lista. ¿Por qué?"}>
-    La lista **Asignatura** muestra las asignaturas del grupo elegido. Seleccione primero el **Grupo** correcto.
+  <GuideFAQItem index="02" question="No encuentro la asignatura en la lista. ¿Por qué?">
+    La lista **Asignatura** de los filtros muestra solo las asignaturas del grupo elegido y queda vacía si el grupo está en **Todos**. En la ventana **Asignar**, en cambio, aparecen todas las asignaturas del calendario.
   </GuideFAQItem>
 
-  <GuideFAQItem index="03" question={"¿Qué significa «La asignación que intenta agregar ya se encuentra asignada a otro docnete»?"}>
-    Ese centro de interés ya está asignado al mismo grupo y asignatura. Revise la tabla: si el docente es otro y debe cambiarlo, elimine esa asignación y agregue la nueva.
+  <GuideFAQItem index="03" question="En la ventana Asignar no aparece un grupo de la sede. ¿Por qué?">
+    La ventana solo lista los grupos de la sede en los que la asignatura elegida tiene asignación académica, además de los que ya tenían la asignación del centro. Revise la asignación académica del grupo o elija otra asignatura.
   </GuideFAQItem>
 
-  <GuideFAQItem index="04" question={"No puedo eliminar un centro de interés. ¿Qué hago?"}>
-    Si aparece «El Centro de Interés tiene asignaciones dependientes. Elimine las asignaciones antes de proceder.», el centro todavía tiene asignaciones. Elimine primero cada asignación de la tabla y luego el centro.
+  <GuideFAQItem index="04" question="¿Cómo cambio el docente de un grupo?">
+    Abra **Asignar**, elija el centro, la asignatura y la sede, cambie el docente del grupo y haga clic en **Aceptar**. El grupo aparece como **Modificada** antes de guardar. También puede eliminar la asignación y agregarla de nuevo con el otro docente.
   </GuideFAQItem>
 
-  <GuideFAQItem index="05" question={"Cambié el nombre de un centro y no quedó. ¿Por qué?"}>
-    El cambio de nombre se registra al hacer clic en **Guardar**, en la ventana **Centros de interes**. Si cierra la ventana sin guardar, el cambio no queda registrado, aunque la lista lo siga mostrando hasta que vuelva a cargar la página.
+  <GuideFAQItem index="05" question="La tabla está vacía. ¿Se borraron las asignaciones?">
+    La tabla muestra *No hay asignaciones con los filtros seleccionados* cuando ningún registro cumple los filtros. Ponga las listas en **Todos** y verifique el calendario seleccionado en la parte superior de SINAI.
   </GuideFAQItem>
 
-  <GuideFAQItem index="06" question={"¿Dónde agrego los estudiantes del centro de interés?"}>
+  <GuideFAQItem index="06" question="¿Dónde agrego los estudiantes del centro de interés?">
     En la opción **Matrículas** del panel **Opciones**. Las notas se registran en **Valoración**.
   </GuideFAQItem>
 </GuideFAQ>
